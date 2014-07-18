@@ -1,38 +1,38 @@
 {
-     "repositories": [
-          {
-                        "type": "vcs",
-                "url": "http://clearfw.googlecode.com/svn/branches/taoClearFw"
-      },
-     {
+	"repositories": [
+	{
+		"type": "vcs",
+			"url": "http://clearfw.googlecode.com/svn/branches/taoClearFw"
+	},
+	{
 		"type": "vcs",
 		"url": "git@github.com:oat-sa/oatbox-extension-installer.git"
-		},
-      {
+	},
+	{
 		"type": "vcs",
 		"url": "git@github.com:oat-sa/tao-core.git"
-	  },
-      {
+	},
+	{
 		"type": "vcs",
 		"url": "git@github.com:oat-sa/generis.git"
-	  },
-	  {
+	},
+	{
 		"type": "vcs",
 		"url": "git@github.com:oat-sa/extension-tao-testtaker.git"
-	  },
-	  {
+	},
+	{
 		"type": "vcs",
 		"url": "git@github.com:oat-sa/extension-generis-hard.git"
-	  }
-     ],
+	}
+	],
 
-    "name": "oat-sa/tao",
-    "require": {
-        "oat-sa/tao-core": "dev-remove_vendor",
-        "oat-sa/generis": "dev-remove_vendor",
-        "oat-sa/extension-tao-testtaker": "dev-master",
-        "oat-sa/extension-generis-hard": "dev-master"
-        
-    },
-    "minimum-stability" : "dev"
+		"name": "oat-sa/tao",
+		"require": {
+			"oat-sa/tao-core": "dev-remove_vendor",
+			"oat-sa/generis": "dev-remove_vendor",
+			"oat-sa/extension-tao-testtaker": "dev-master",
+			"oat-sa/extension-generis-hard": "dev-master"
+
+		},
+		"minimum-stability" : "dev"
 }
