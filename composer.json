@@ -1,12 +1,13 @@
 {
 
-		"name": "oat-sa/tao",
+	"name": "oat-sa/tao",
 		"require": {
 			"oat-sa/generis": "dev-remove_vendor",
-            "oat-sa/tao-core": "dev-remove_vendor",
-            "oat-sa/extension-generis-hard": "dev-master",
+			"oat-sa/tao-core": "dev-remove_vendor",
+			"oat-sa/extension-generis-hard": "dev-master",
 			"oat-sa/extension-tao-testtaker": "dev-master",
 			"oat-sa/extension-tao-item": "dev-master",
+			"oat-sa/extension-tao-itemqti": "dev-master",
 			"oat-sa/extension-tao-test": "dev-master",
 			"oat-sa/extension-tao-resultserver" : "dev-master",
 			"oat-sa/extension-tao-group" : "dev-master",
