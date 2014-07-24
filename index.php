@@ -1,0 +1,9 @@
+<?php
+include_once('tao/install/init.php');
+if(!tao_install_utils_System::isTAOInstalled()){
+	header("location:tao/install");
+}
+else{
+	header("location:tao/Main/entry");
+}
+?>
