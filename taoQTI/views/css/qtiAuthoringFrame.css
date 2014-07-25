@@ -1,0 +1,85 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2013 (original work) Open Assessment Techonologies SA (under the project TAO-PRODUCT);
+ *               
+ * 
+ */
+body.wysiwyg{
+    margin: 5px 2px;
+}
+
+input{
+    cursor: pointer;
+}
+
+div.qti_math_block, div.qti_object_box, div.qti_interaction_block{
+    display:block;
+    width:99%;
+    text-align:center;
+    height:75px;
+    border: solid #999999 2px;
+    margin:0;
+    padding:0;
+    position:relative;
+    cursor: pointer;
+    background-color: #F5F5F5;
+}
+div.qti_math_block, div.qti_object_box{height:60px;}
+
+p.qti_interaction_info{
+    height: 100%;
+    cursor: pointer;
+    margin: 0;
+}
+
+span.qti_math_inline, span.qti_interaction_inline{
+    display:inline;
+    text-align:center;
+    border: solid #999999 1px;
+    margin:0;
+    padding:1px;
+    position:relative;
+    cursor: default;
+    background-color: #E9E9E9;
+}
+
+span.qti_math_inline:hover, span.qti_interaction_inline:hover{
+    padding-right: 20px;
+}
+
+div.qti-menu-item a{color:#D1043B;font-weight:bold;text-decoration:none;}
+div.qti-menu-item:hover a, div.qti-menu-item a:hover{color:#FF8C8C;}
+
+input.qti_math_link, input.qti_object_link, input.qti_interaction_link{font-family: Verdana,Arial,sans-serif; font-size: 0.9em;border:none; background-color: #E9E9E9; font-weight: bold; color: #D1043B; position: absolute; left: 0;}
+input.qti_math_link:hover, input.qti_object_link:hover, .qti_interaction_box input.qti_interaction_link:hover{background-color: #F5F5F5; color:#FF8C8C;}
+
+.qti_math_block input.qti_math_link, .qti_object_box input.qti_object_link, .qti_interaction_block input.qti_interaction_link {width:100%; height:100%;}
+.qti_math_inline input.qti_math_link, .qti_interaction_inline input.qti_interaction_link {margin: 1px; position: relative;}
+
+span.qti_interaction_box_delete, span.qti_object_delete{position: absolute;	right: 1px;	top: 1px; cursor: pointer; height: 16px; width: 16px; background-image: url("images/ui-icons_222222_256x240.png"); background-position: -32px -192px; background-repeat: no-repeat;}
+span.qti_interaction_box_delete:hover, span.qti_object_delete:hover{opacity: 0.8;}
+
+div.qti_math_block span.qti_object_delete, div.qti_object_box span.qti_object_delete, div.qti_interaction_block span.qti_interaction_box_delete{right: 10px; top: 10px;}
+
+span.qti_choice_box {display:inline; text-align:center;	border: solid #999999 2px; margin:0; padding:0;	position:relative; cursor: pointer;}
+
+input.qti_choice_link{padding:0 6px;border:0;background-color:#F5F5F5;}
+input.qti_choice_link:hover{font-weight:bold;background-color:#E9E9E9;}
+
+div.qti-wysiwyg-mediabox{border:medium solid black; position:relative; height:30px; width:30px; text-align:center}
+
+.qti_interaction_box br {display: none;}
+.qti_interaction_box h1, .qti_interaction_box h2, .qti_interaction_box h3 {margin:0; padding: 0;}

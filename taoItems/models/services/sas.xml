@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE services SYSTEM "../../tao/doc/sas.dtd">
+<services>
+	<description>Items services</description>
+	<service>
+		<name>Item class selection</name>
+		<description>Select an item (sub)class</description>
+		<location url="/taoItems/SaSItems/sasSelect">
+			<param key="selectInstance" value="false" />
+		</location>
+		<return>
+			<param key="itemClassUri" />
+		</return>
+	</service>
+	<service>
+		<name>Item selection</name>
+		<description>Select an item</description>
+		<location url="/taoItems/SaSItems/sasSelect">
+			<param key="selectInstance" value="true" />
+		</location>
+		<return>
+			<param key="itemClassUri" />
+			<param key="itemUri" />
+		</return>
+	</service>
+	<service>
+		<name>Item add</name>
+		<description>Add a new item and redirect to the edit form</description>
+		<location url="/taoItems/SaSItems/sasAddInstance">
+			<param key="classUri" value="^itemClassUri" />
+		</location>
+		<return>
+			<param key="itemUri" />
+		</return>
+	</service>
+	<service>
+		<name>Item editor</name>
+		<description>edit item properties</description>
+		<location url="/taoItems/SaSItems/sasEditInstance">
+			<param key="uri" value="^itemUri" />
+			<param key="classUri" value="^itemClassUri" />
+		</location>
+	</service>
+	<service>
+		<name>Item class editor</name>
+		<description>Edit a Item (sub)class: add/edit/delete class properties</description>
+		<location url="/taoItems/SaSItems/editItemClass">
+			<param key="classUri" value="^itemClassUri" />
+		</location>
+	</service>
+	<service>
+		<name>Item preview</name>
+		<description>Preview an item</description>
+		<location url="/taoItems/SaSItems/preview">
+			<param key="uri" value="^itemUri" />
+			<param key="classUri" value="^itemClassUri" />
+		</location>
+	</service>
+	<service>
+		<name>Item authoring</name>
+		<description>Open the authoring tool of the selected item</description>
+		<location url="/taoItems/SaSItems/authoring">
+			<param key="uri" value="^itemUri" />
+			<param key="classUri" value="^itemClassUri" />
+		</location>
+	</service>
+	<service>
+		<name>Item translation</name>
+		<description>Translate the value of the item properties</description>
+		<location url="/taoItems/SaSItems/translateInstance">
+			<param key="uri" value="^itemUri" />
+			<param key="classUri" value="^itemClassUri" />
+			<param key="target_lang" value="^itemTargetLang" />
+		</location>	
+	</service>
+	<service>
+		<name>Items searching</name>
+		<description>Search items instances</description>
+		<location url="/taoItems/SaSItems/search" />
+		<return>
+			<param key="itemUris" />
+		</return>
+	</service>	
+	<service>
+		<name>Item removing</name>
+		<description>Delete an item instance</description>
+		<location url="/taoItems/SaSItems/sasDeleteInstance">
+			<param key="uri" value="^itemUri" />
+			<param key="classUri" value="^itemClassUri" />
+		</location>
+	</service>
+</services>

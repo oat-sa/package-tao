@@ -1,0 +1,291 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO v2.4-beta3\n"
+"PO-Revision-Date: 2013-04-05T18:37:45\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: sv-SE\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "A QTI item file is an XML file following the version 2.0 of the QTI standard."
+msgstr "En QTI-frågefil är en XML-fil som följer QTI-standarden version 2.0"
+
+msgid "A QTI package is a Zip archive containing a imsmanifest.xml file and the QTI resources to import."
+msgstr "Ett QTI-paket är ett ziparkiv som innehåller en imsmanifest.xml-fil och QTI-resurserna för att importera."
+
+msgid "A series of different templates are provided to the Item authors such as multiple choice questions, puzzle design, text with gaps, etc."
+msgstr "En rad olika mallar finns tillgängliga för frågans skapare, så som flervalsfrågor, puzzel, text med ifyllningsrutor etc."
+
+msgid "Add the source file"
+msgstr "Lägg till källfilen"
+
+msgid "An error occured during the import"
+msgstr "Ett fel uppstod under importen"
+
+msgid "An error occured while loading the item: "
+msgstr ""
+
+msgid "An error occured while saving the item"
+msgstr "Ett fel uppstod medan frågan sparades"
+
+msgid "An error occurs during the import"
+msgstr "Ett fel uppstod under importen"
+
+msgid "An Open Web Item package is a Zip archive containing an index.html file with the XHTML 1.0 Transitional Doctype and resources (images, scripts, css, video, etc.)."
+msgstr ""
+
+#, tao-public
+msgid "Authoring"
+msgstr "Skapa"
+
+msgid "Back"
+msgstr "Bakåt"
+
+msgid "Class saved"
+msgstr "Klass sparad"
+
+msgid "clean up"
+msgstr "städa upp"
+
+msgid "Client"
+msgstr "Klient"
+
+msgid "close"
+msgstr "stäng"
+
+msgid "Content"
+msgstr "Innehåll"
+
+#, tao-public
+msgid "Create and design items and exercises."
+msgstr ""
+
+msgid "Debug Mode"
+msgstr "Felsök metod"
+
+msgid "delete"
+msgstr "ta bort"
+
+msgid "Disabled"
+msgstr "Avaktivera"
+
+msgid "Download item content"
+msgstr "Ladda ner frågeinnehåll"
+
+msgid "duplicate"
+msgstr "dublett"
+
+msgid "Edit Item"
+msgstr "Redigera fråga"
+
+msgid "Edit item"
+msgstr "Redigera fråga"
+
+msgid "Edit item class"
+msgstr ""
+
+msgid "Enabled"
+msgstr "Aktiverad"
+
+msgid "Enables you to export a ZIP archive containing one folder for each exported item. Each  folder is composed by a main XML file (the item's data) and  by externals resources (media, manifests, etc.)"
+msgstr "Aktiverar att kunna exportera ett Ziparkiv innehållandes en mapp per exporterad fråga. Varje frågas mapp innehåller en huvudsaklig XML-fil (momentdatan) samt de yttre resurserna (media, specifikationer etc.)."
+
+msgid "Enables you to export an IMS QTI Package."
+msgstr ""
+
+msgid "export"
+msgstr "export"
+
+msgid "Export Options"
+msgstr "Exporteringsalternativ"
+
+msgid "Fake delivery"
+msgstr "Simulerad leverans"
+
+msgid "Fake process"
+msgstr "Simulerad process"
+
+msgid "Fake test"
+msgstr "Simulerat test"
+
+msgid "File name"
+msgstr "Filnamn"
+
+msgid "import"
+msgstr "importera"
+
+msgid "Item content saved"
+msgstr "Frågeinnehåll sparat"
+
+msgid "item content successfully imported"
+msgstr ""
+
+msgid "Item imported successfully"
+msgstr "Fråga framgångsrikt importerad"
+
+msgid "item imported successfully"
+msgstr "fråga framgångsrikt importerat"
+
+msgid "Item saved"
+msgstr "Fråga sparad"
+
+msgid "Item saving failed"
+msgstr ""
+
+msgid "Item successfully saved"
+msgstr ""
+
+msgid "item versioned content deleted"
+msgstr ""
+
+msgid "item versioned content saved"
+msgstr ""
+
+#, tao-public
+msgid "Items"
+msgstr "Frågor"
+
+msgid "items imported successfully"
+msgstr "frågor framgångsrikt importerat"
+
+msgid "Items library"
+msgstr ""
+
+msgid "lists"
+msgstr "listor"
+
+msgid "Manage item content"
+msgstr "Hantera frågeinnehåll"
+
+#, tao-public
+msgid "Manage items"
+msgstr "Hantera frågor"
+
+msgid "Manage the item versioned content"
+msgstr ""
+
+msgid "Matching side"
+msgstr "Matchsida"
+
+msgid "Max filesize"
+msgstr ""
+
+msgid "MB"
+msgstr ""
+
+msgid "meta data"
+msgstr "metadata"
+
+msgid "move"
+msgstr "flytta"
+
+msgid "new class"
+msgstr "ny klass"
+
+msgid "new item"
+msgstr "ny fråga"
+
+msgid "No item type selected for the current item."
+msgstr ""
+
+msgid "No items of could be imported successfuly"
+msgstr ""
+
+msgid "No user is logged in"
+msgstr "Ingen användare är inloggad"
+
+msgid "Not yet available"
+msgstr "Inte tillgänglig än"
+
+msgid "Open Web Item Package"
+msgstr ""
+
+msgid "Options"
+msgstr "Alternativ"
+
+msgid "Paper-based Item"
+msgstr ""
+
+msgid "Please select first the item type!"
+msgstr "Var vänlig välj först frågetyp!"
+
+#, tao-public
+msgid "Preview"
+msgstr "Förhandsvisning"
+
+msgid "preview"
+msgstr "förhandsvisning"
+
+msgid "PREVIEW BOX"
+msgstr "FÖRHANDSVISNINGSBOX"
+
+msgid "Preview Console"
+msgstr "Förhandsvisningsbord"
+
+msgid "QTI Item"
+msgstr ""
+
+msgid "QTI Package"
+msgstr ""
+
+msgid "Recovery context"
+msgstr "Återställandesammanhang"
+
+msgid "revision restored : "
+msgstr ""
+
+msgid "search"
+msgstr "sök"
+
+msgid "Server"
+msgstr "Server"
+
+msgid "show/hide"
+msgstr "visa/dölj"
+
+msgid "the file was not uploaded successfully"
+msgstr ""
+
+msgid "The Items module enables the creation and design of items and exercises."
+msgstr "Frågemodulen låter dig skapa och designa frågor och övningar"
+
+msgid "Unable to copy the resources"
+msgstr "Resurserna kan inte kopieras"
+
+msgid "unable to extract archive content, please check your tmp dir"
+msgstr "går ej att hämta arkivinnehållet, var vänlig kontrollera ditt tmp dir"
+
+msgid "Unable to move"
+msgstr "Kan inte flyttas"
+
+msgid "Upload a QTI Package File"
+msgstr "Ladda upp QTI-paketfil"
+
+msgid "Upload an Open Web Item Package File"
+msgstr ""
+
+msgid "Upload an paper-based Item"
+msgstr ""
+
+msgid "Upload QTI File"
+msgstr "Ladda upp QTI-fil"
+
+msgid "Upload the item content"
+msgstr "Ladda upp frågeinnehåll"
+
+msgid "Validation failed"
+msgstr ""
+
+msgid "Validation has failed"
+msgstr "Verifierande misslyckades"
+
+msgid "Validation of the imported file has failed"
+msgstr "Bekräftande av den importerade filen misslyckades"
+
+msgid "VersionedContent"
+msgstr ""
+
+msgid "wrong file format"
+msgstr ""
+

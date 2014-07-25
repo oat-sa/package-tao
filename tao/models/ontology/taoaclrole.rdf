@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xml:base="http://www.tao.lu/Ontologies/TAO.rdf#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:funcacl="http://www.tao.lu/Ontologies/taoFuncACL.rdf#"
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#"
+	xmlns:tao="http://www.tao.lu/Ontologies/TAO.rdf#"
+>
+	<rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#BaseAccessRole">
+    	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#AbstractRole"/>
+    	<rdfs:label xml:lang="en-US"><![CDATA[Anonymous]]></rdfs:label>
+		<rdfs:comment xml:lang="en-US"><![CDATA[Anonymous Role]]></rdfs:comment>
+		<generis:includesRole rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#GenerisRole"/>
+		<funcacl:grantAccessAction rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#a_tao_Main_entry"/>
+		<funcacl:grantAccessAction rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#a_tao_Main_login"/>
+		<funcacl:grantAccessAction rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#a_tao_Main_logout"/>
+		<funcacl:grantAccessModule rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#m_tao_AuthApi"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#BackOfficeRole">
+		<funcacl:grantAccessAction rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#a_tao_Main_index"/>
+		<funcacl:grantAccessAction rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#a_tao_Main_getSectionActions"/>
+		<funcacl:grantAccessAction rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#a_tao_Main_getSectionTrees"/>
+		<funcacl:grantAccessAction rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#a_tao_Users_checkLogin"/>
+		<funcacl:grantAccessModule rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#m_tao_UserSettings"/>
+		<funcacl:grantAccessModule rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#m_tao_GenerisTree"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#BaseUserRole">
+    	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#AbstractRole"/>
+    	<rdfs:label xml:lang="en-US"><![CDATA[Base User]]></rdfs:label>
+		<rdfs:comment xml:lang="en-US"><![CDATA[Base User Role]]></rdfs:comment>
+		<generis:includesRole rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#BaseAccessRole"/>
+		<funcacl:grantAccessModule rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#m_tao_ServiceModule"/>
+	</rdf:Description>
+</rdf:RDF>

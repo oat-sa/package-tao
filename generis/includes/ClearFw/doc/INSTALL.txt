@@ -1,0 +1,32 @@
+1- créer l'arborescence du projet :
+	* actions -> controleurs, traitements de formulaires
+	* doc -> documentation
+	* includes -> librairies externes et internes
+	* locales -> fichiers de traduction
+		* en
+		* fr
+		* ...
+	* models -> classes du modèle 
+	* plugins -> plugins, si nécessaire
+	* views -> fichiers de vues, templates, exécutés après chaque action
+		* default -> thème par défaut
+			* img
+			* css
+
+2- copier certains fichiers par défaut
+	- PHP-Framework/dispatcher/index.php -> leprojet/index.php (index.php principal de l'application)
+	- PHP-Framework/sample/common.php -> leprojet/includes/common.php (chargement de toutes les librairies)
+	- PHP-Framework/sample/config.php -> leprojet/includes/config.php (fichier de config principal)
+	- PHP-Framework/sample/Defaut.class.php -> leprojet/actions/Defaut.class.php (page d'index)
+	- PHP-Framework/sample/error404.tpl -> leprojet/views/default/error404.tpl
+
+
+
+3- charger les librairies du framework dans includes via svn:externals
+	- core svn://citi-gs/PHP-Framework/trunk/core
+	- clearbricks svn://citi-gs/PHP-Framework/trunk/clearbricks
+	si nécessaire
+	- db svn://citi-gs/PHP-Framework/trunk/db (accès à la base de données)
+	- log svn://citi-gs/PHP-Framework/trunk/log (librairie de log)
+
+	

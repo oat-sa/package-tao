@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+ xmlns:m="http://www.w3.org/1998/Math/MathML" identifier="Template_FIB_001"
+ title="Product of a fraction by a number" adaptive="false" timeDependent="false">
+ <responseDeclaration identifier="REPONSE0" cardinality="multiple" baseType="identifier">
+  <correctResponse>
+   <value>Item1</value>
+  </correctResponse>
+ </responseDeclaration>
+ <outcomeDeclaration identifier="FEEDBACK1" cardinality="single" baseType="identifier"/>
+ <outcomeDeclaration identifier="FEEDBACK0" cardinality="single" baseType="identifier"/>
+ <outcomeDeclaration identifier="FEEDBACK2" cardinality="single" baseType="identifier"/>
+ <outcomeDeclaration identifier="FEEDBACK3" cardinality="single" baseType="identifier"/>
+ <outcomeDeclaration identifier="SCORE0" cardinality="single" baseType="float"/>
+ <templateDeclaration identifier="a" cardinality="single" baseType="integer" mathVariable="true"
+  paramVariable="true"/>
+ <templateDeclaration identifier="b" cardinality="single" baseType="integer" mathVariable="true"
+  paramVariable="true"/>
+ <templateDeclaration identifier="c" cardinality="single" baseType="integer" mathVariable="true"
+  paramVariable="true"/>
+ <templateDeclaration identifier="p" cardinality="single" baseType="integer" mathVariable="true"
+  paramVariable="true"/>
+ <templateDeclaration identifier="Choix0" cardinality="single" baseType="integer"
+  mathVariable="true" paramVariable="true"/>
+ <templateDeclaration identifier="Choix1" cardinality="single" baseType="integer"
+  mathVariable="true" paramVariable="true"/>
+ <templateDeclaration identifier="Choix2" cardinality="single" baseType="integer"
+  mathVariable="true" paramVariable="true"/>
+ <templateDeclaration identifier="Choix3" cardinality="single" baseType="integer"
+  mathVariable="true" paramVariable="true"/>
+ <templateProcessing>
+  <setTemplateValue identifier="a">
+   <randomInteger min="1" max="10"/>
+  </setTemplateValue>
+  <setTemplateValue identifier="b">
+   <randomInteger min="2" max="20"/>
+  </setTemplateValue>
+  <setTemplateValue identifier="c">
+   <randomInteger min="-20" max="-10"/>
+  </setTemplateValue>
+  <setTemplateValue identifier="p">
+   <product>
+    <variable identifier="a"/>
+    <variable identifier="c"/>
+   </product>
+  </setTemplateValue>
+  <setTemplateValue identifier="Choix0">
+   <subtract>
+    <baseValue baseType="integer">0</baseValue>
+    <product>
+     <variable identifier="a"/>
+     <variable identifier="c"/>
+    </product>
+   </subtract>
+  </setTemplateValue>
+  <setTemplateValue identifier="Choix1">
+   <subtract>
+    <baseValue baseType="integer">0</baseValue>
+    <product>
+     <variable identifier="b"/>
+     <variable identifier="c"/>
+    </product>
+   </subtract>
+  </setTemplateValue>
+  <setTemplateValue identifier="Choix2">
+   <round>
+    <divide>
+     <product>
+      <variable identifier="a"/>
+      <variable identifier="c"/>
+     </product>
+     <variable identifier="b"/>
+    </divide>
+   </round>
+  </setTemplateValue>
+  <setTemplateValue identifier="Choix3">
+   <subtract>
+    <baseValue baseType="integer">0</baseValue>
+    <round>
+     <divide>
+      <product>
+       <variable identifier="a"/>
+       <variable identifier="c"/>
+      </product>
+      <variable identifier="b"/>
+     </divide>
+    </round>
+   </subtract>
+  </setTemplateValue>
+  <templateConstraint>
+   <equal toleranceMode="exact">
+    <gcd>
+     <variable identifier="a"/>
+     <variable identifier="b"/>
+    </gcd>
+    <baseValue baseType="integer">1</baseValue>
+   </equal>
+  </templateConstraint>
+  <templateConstraint>
+   <lt>
+    <variable identifier="a"/>
+    <variable identifier="b"/>
+   </lt>
+  </templateConstraint>
+  <templateConstraint>
+   <equal toleranceMode="exact">
+    <integerModulus>
+     <variable identifier="p"/>
+     <variable identifier="b"/>
+    </integerModulus>
+    <baseValue baseType="integer">0</baseValue>
+   </equal>
+  </templateConstraint>
+ </templateProcessing>
+ <itemBody>
+  <div>
+   <em> </em>
+   <choiceInteraction responseIdentifier="REPONSE0" shuffle="true" maxChoices="1">
+    <prompt>
+     <m:math>
+      <m:mfrac>
+       <m:mi>a</m:mi>
+       <m:mi>b</m:mi>
+      </m:mfrac>
+     </m:math> of <m:math>
+      <m:mi>c</m:mi>
+     </m:math>
+     <br/> is equal to:<br/>
+    </prompt>
+    <simpleChoice identifier="Item0" fixed="false"> - <m:math>
+      <m:mfrac>
+       <m:mi> Choix0</m:mi>
+       <m:mi> Choix1</m:mi>
+      </m:mfrac>
+     </m:math>
+    </simpleChoice>
+    <simpleChoice identifier="Item1" fixed="false">
+     <m:math>
+      <m:mi> Choix2</m:mi>
+     </m:math>
+    </simpleChoice>
+    <simpleChoice identifier="Item2" fixed="false">
+     <m:math>
+      <m:mi> Choix3</m:mi>
+     </m:math>
+    </simpleChoice>
+   </choiceInteraction>
+  </div>
+ </itemBody>
+ <responseProcessing>
+  <responseCondition>
+   <responseIf>
+    <match>
+     <variable identifier="REPONSE0"/>
+     <correct identifier="REPONSE0"/>
+    </match>
+    <setOutcomeValue identifier="FEEDBACK1">
+     <baseValue baseType="identifier">FEEDBACK1</baseValue>
+    </setOutcomeValue>
+    <setOutcomeValue identifier="SCORE0">
+     <baseValue baseType="float">4</baseValue>
+    </setOutcomeValue>
+   </responseIf>
+   <responseElseIf>
+    <match>
+     <multiple>
+      <baseValue baseType="identifier">Item0</baseValue>
+     </multiple>
+     <variable identifier="REPONSE0"/>
+    </match>
+    <setOutcomeValue identifier="FEEDBACK0">
+     <baseValue baseType="identifier">FEEDBACK0</baseValue>
+    </setOutcomeValue>
+    <setOutcomeValue identifier="SCORE0">
+     <baseValue baseType="float">0</baseValue>
+    </setOutcomeValue>
+   </responseElseIf>
+   <responseElseIf>
+    <match>
+     <multiple>
+      <baseValue baseType="identifier">Item2</baseValue>
+     </multiple>
+     <variable identifier="REPONSE0"/>
+    </match>
+    <setOutcomeValue identifier="FEEDBACK2">
+     <baseValue baseType="identifier">FEEDBACK2</baseValue>
+    </setOutcomeValue>
+    <setOutcomeValue identifier="SCORE0">
+     <baseValue baseType="float">0</baseValue>
+    </setOutcomeValue>
+   </responseElseIf>
+   <responseElse>
+    <setOutcomeValue identifier="FEEDBACK3">
+     <baseValue baseType="identifier">FEEDBACK3</baseValue>
+    </setOutcomeValue>
+    <setOutcomeValue identifier="SCORE0">
+     <baseValue baseType="float">0</baseValue>
+    </setOutcomeValue>
+   </responseElse>
+  </responseCondition>
+ </responseProcessing>
+ <modalFeedback outcomeIdentifier="FEEDBACK1" identifier="FEEDBACK1" showHide="show"> Good answer. </modalFeedback>
+ <modalFeedback outcomeIdentifier="FEEDBACK0" identifier="FEEDBACK0" showHide="show"> We must
+  multiply the numerator only. </modalFeedback>
+ <modalFeedback outcomeIdentifier="FEEDBACK2" identifier="FEEDBACK2" showHide="show"> Pay attention
+  to the sign! </modalFeedback>
+ <modalFeedback outcomeIdentifier="FEEDBACK3" identifier="FEEDBACK3" showHide="show"> No comment.
+ </modalFeedback>
+</assessmentItem>

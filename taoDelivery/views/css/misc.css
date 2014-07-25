@@ -1,0 +1,136 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+/* PNG Activiation with links in IE hack. */
+a
+{
+	position: relative;
+	z-index: 1;
+}
+
+input
+{
+	position: relative;
+	z-index: 2;
+}
+
+/* Reset */
+/* End of correction */
+
+/* Reset Default Style, search =STYLE for begin Style */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td 
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+/* Bullet and numbered lists */
+ol, ul 
+{
+	list-style: none;
+}
+
+/* Unordered lists */
+ul 
+{
+	margin-left: 15px;
+	margin-bottom: 20px;
+}
+
+/* Tables, tables still need 'cellspacing="0"' in the markup */
+table 
+{
+	margin-bottom: 20px;
+	
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+/* Table captions, headers and cells*/
+caption, th, td 
+{
+	text-align: left;
+	font-weight: normal;
+}
+
+/* Table cells and headers */
+table td, table th
+{
+	text-align: left;
+	vertical-align: top;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after 
+{
+	content: "";
+}
+blockquote, q 
+{
+	quotes: "" "";
+}
+
+.clear
+{
+	clear:both;
+}  
+
+/* Links and visited links */
+
+a 
+{
+	text-decoration: none;
+}
+
+a:link, a:visited
+{
+	text-decoration:none;
+}
+
+/* Active links */
+a:hover, a:active 
+{ 
+	text-decoration: underline; 
+}
+
+.debugTimeProfileWorkFlow
+{
+	visibility: visible;
+	font-style: italic;
+	color: grey;
+	position: fixed;
+	font-size: 7px;
+	top: 98%;
+	left: 78%;
+}

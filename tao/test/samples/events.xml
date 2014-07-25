@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit-events>
+	<item-events item="{ITEM_URI}">
+		<filter type="catch" where="server"><![CDATA[click]]></filter>
+		<filter type="catch" where="client"><![CDATA[click,keyup,keypress]]></filter>
+	</item-events>
+</unit-events>

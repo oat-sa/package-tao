@@ -1,0 +1,1 @@
+Qti.FeedbackBlock = Qti.Feedback.extend({});

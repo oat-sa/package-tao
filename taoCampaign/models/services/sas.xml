@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE services SYSTEM "../../tao/doc/sas.dtd">
+<services>
+	<description>Campaign services</description>
+	<service>
+		<name>Delivery related campaigns</name>
+		<description>Select delivery campaigns</description>
+		<location url="/taoCampaign/SaSCampaign/selectDeliveryCampaigns">
+			<param key="uri" value="^deliveryUri" />
+			<param key="classUri" value="^deliveryClassUri" />
+		</location>
+		<return>
+			<param key="campaignUris" />
+		</return>
+	</service>
+	<service>
+		<name>Campaign class selection</name>
+		<description>Select a campaign (sub)class</description>
+		<location url="/taoCampaign/SaSCampaign/sasSelect">
+			<param key="selectInstance" value="false" />
+		</location>
+		<return>
+			<param key="campaignClassUri" />
+		</return>
+	</service>
+	<service>
+		<name>Campaign selection</name>
+		<description>Select a campaign</description>
+		<location url="/taoCampaign/SaSCampaign/sasSelect">
+			<param key="selectInstance" value="true" />
+		</location>
+		<return>
+			<param key="campaignClassUri" />
+			<param key="campaignUri" />
+		</return>
+	</service>
+	<service>
+		<name>Campaigns searching</name>
+		<description>Search campaigns instances</description>
+		<location url="/taoCampaign/SaSCampaign/search" />
+		<return>
+			<param key="campaignUris" />
+		</return>
+	</service>
+	<service>
+		<name>Campaign add</name>
+		<description>Add a new campaign and redirect to the edit form</description>
+		<location url="/taoCampaign/SaSCampaign/sasAddInstance">
+			<param key="classUri" value="^campaignClassUri" />
+		</location>
+		<return>
+			<param key="campaignUri" />
+		</return>
+	</service>
+	<service>
+		<name>Campaign editor</name>
+		<description>Edit campaign properties</description>
+		<location url="/taoCampaign/SaSCampaign/sasEditInstance">
+			<param key="uri" value="^campaignUri" />
+			<param key="classUri" value="^campaignClassUri" />
+		</location>
+	</service>
+	<service>
+		<name>Campaign full editor</name>
+		<description>Full edit form: edit campaign properties and select related deliveries</description>
+		<location url="/taoCampaign/SaSCampaign/editCampaign">
+			<param key="uri" value="^campaignUri" />
+			<param key="classUri" value="^campaignClassUri" />
+		</location>
+	</service>
+	<service>
+		<name>Campaign class editor</name>
+		<description>Edit a campaign (sub)class: add/edit/delete class properties</description>
+		<location url="/taoCampaign/SaSCampaign/editCampaignClass">
+			<param key="classUri" value="^campaignClassUri" />
+		</location>
+	</service>
+	<service>
+		<name>Campaign related delivery</name>
+		<description>Select campaign deliveries</description>
+		<location url="/taoCampaign/SaSCampaign/selectDeliveries">
+			<param key="uri" value="^campaignUri" />
+			<param key="classUri" value="^campaignClassUri" />
+		</location>
+	</service>
+	<service>
+		<name>Campaign removing</name>
+		<description>Delete a campaign instance</description>
+		<location url="/taoCampaign/SaSCampaign/sasDeleteInstance">
+			<param key="uri"  value="^campaignUri" />
+			<param key="classUri" value="^campaignClassUri" />
+		</location>
+	</service>
+</services>

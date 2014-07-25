@@ -1,0 +1,229 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO v2.5-alpha\n"
+"PO-Revision-Date: 2013-09-02T11:40:22\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: sv-SE\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "A delivery must to be compiled before being executed. The compilation can be done here."
+msgstr "En leverans måste sammanställas innan verkställande. Sammanställningen kan göras här."
+
+msgid "A recompilation is also required after modification on the tests composing a delivery."
+msgstr "En ny sammanställning krävs efter förändring av ett test under sammanställningen av en leverans."
+
+msgid "Access denied. Please renew your authentication!"
+msgstr "Åtkomst nekad. Var vänlig och förnya din verifikation!"
+
+msgid "Actions"
+msgstr "Handlingar"
+
+msgid "Active Deliveries"
+msgstr "Aktiva leveranser"
+
+msgid "An error occured during history deletion"
+msgstr "Ett fel uppstod under raderandet av historia"
+
+msgid "An undefined error has occured"
+msgstr ""
+
+msgid "Back"
+msgstr "Bakåt"
+
+msgid "Change..."
+msgstr ""
+
+msgid "Compilation"
+msgstr "Sammanställande"
+
+msgid "Compilation of the delivery"
+msgstr "Sammanställande av leveransen"
+
+msgid "Compile"
+msgstr "Sammanställ"
+
+msgid "complete!"
+msgstr "färdig!"
+
+msgid "delete"
+msgstr "radera"
+
+msgid "Delete"
+msgstr "Radera"
+
+msgid "Delete History"
+msgstr "Radera historia"
+
+#, tao-public
+msgid "Deliveries"
+msgstr "Leverans"
+
+msgid "Deliveries library"
+msgstr "Leveransarkiv"
+
+msgid "Delivery Class saved"
+msgstr "Leveransklass sparad"
+
+msgid "delivery executions"
+msgstr ""
+
+msgid "Delivery properties"
+msgstr "Leveransegenskaper"
+
+msgid "Delivery saved"
+msgstr "Leverans sparad"
+
+msgid "Delivery Type"
+msgstr ""
+
+msgid "duplicate"
+msgstr "dublett"
+
+msgid "Edit delivery class"
+msgstr "Redigera leveransklass"
+
+msgid "Editing a delivery involves setting the tests composing the delivery and their sequence, as well as the delivery executing parameters: the maximum number of execution per subject, the delivery period, the result server."
+msgstr "Att redigera en leverans involverar att fastställa testet genom att arrangera leveransen och dess innehålls ordningsföljd: det maximala antalet verkställande per ämne, leveransperiod, resultatserver."
+
+msgid "Execution History"
+msgstr "Utförandehistoria"
+
+msgid "export"
+msgstr "exportera"
+
+msgid "Finished Test"
+msgstr "Avslutat test"
+
+msgid "Forward"
+msgstr "Framåt"
+
+msgid "Generating the delivery process, please wait"
+msgstr "Framställer leveransprocessen, var vänlig vänta"
+
+msgid "History"
+msgstr "Historia"
+
+msgid "History deleted successfully"
+msgstr "Historia framgångsrikt raderad"
+
+msgid "import"
+msgstr "importera"
+
+msgid "Initialize new test"
+msgstr "Initialisera nytt test"
+
+msgid "Invalid login or password. Please try again."
+msgstr "Inget konto matchar den angivna inloggningen/lösenordet"
+
+msgid "Loading next item..."
+msgstr "Laddar nästa moment..."
+
+msgid "Login to the TAO Delivery Server"
+msgstr ""
+
+msgid "Logout"
+msgstr "Logga ut"
+
+msgid "LTI export"
+msgstr ""
+
+#, tao-public
+msgid "Manage deliveries"
+msgstr "Hantera leveranser"
+
+msgid "move"
+msgstr "flytta"
+
+msgid "new class"
+msgstr "ny klass"
+
+msgid "new delivery"
+msgstr "ny leverans"
+
+msgid "Note: please make sure that all tests that make up the delivery are well defined and set to \"active\" in the test extension before compiling the delivery."
+msgstr ""
+
+msgid "Participating groups"
+msgstr ""
+
+msgid "Pause"
+msgstr "Paus"
+
+msgid "Please confirm history deletion"
+msgstr "Var vänlig bekräfta raderandet av historia"
+
+msgid "Please select a valid result server in the delivery editing section then try again.<br/>(No valid wsdl contract found for the defined result server)"
+msgstr "Var vänlig välj en giltig resultatserver i leveransredigeringssektionen, försök sedan igen.(Inget giltigt wsdl-kontrakt hittades för den definierade resultatservern)"
+
+#, tao-public
+msgid "Prepare, publish deliveries sessions."
+msgstr ""
+
+msgid "Recompile"
+msgstr "Återsammanställ"
+
+msgid "Recompile the delivery"
+msgstr "Återsammanställ leveransen"
+
+msgid "search"
+msgstr "sök"
+
+msgid "Select a test"
+msgstr "Välj ett test"
+
+msgid "Select test takers to be <b>excluded</b>"
+msgstr "Välj testtagare som ska exkluderas"
+
+msgid "Start/Resume the test"
+msgstr "Starta/återuppta testet"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "TAO - An Open and Versatile Computer-Based Assessment Platform"
+msgstr "TAO - En öppen, smidig och mångsidig datorbaserad utvärderingsplattform"
+
+msgid "TAO Delivery Server"
+msgstr "TAO leversansserver"
+
+msgid "Test Taker"
+msgstr ""
+
+msgid "Test Takers"
+msgstr ""
+
+msgid "The Deliveries module allows users to define tests deliveries parameters."
+msgstr "Leveransmodulen låter alla användare definiera testleveransparametrar"
+
+msgid "The delivery is not compiled yet"
+msgstr "Leveransen är inte sammanställd än"
+
+msgid "The delivery was last compiled on"
+msgstr "Leveransen sammanställdes senast"
+
+msgid "the login must not be empty"
+msgstr "inloggningen får inte vara tom"
+
+msgid "the password must not be empty"
+msgstr "lösenordet får inte vara tomt"
+
+msgid "There are currently"
+msgstr ""
+
+msgid "There is currently no delivery execution."
+msgstr ""
+
+msgid "This Deliveries Management Section allows to add and delete deliveries and to edit their properties values."
+msgstr "Denna leveranshanteringssektion låter dig lägga till och ta bort leveranser samt redigera deras egenskapsvärden."
+
+msgid "Time"
+msgstr "Tid"
+
+msgid "User name:"
+msgstr "Användarnamn"
+
+msgid "View History"
+msgstr ""
+

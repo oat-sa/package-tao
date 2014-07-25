@@ -1,0 +1,1626 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta charset="utf-8"></meta>
+		<meta name="generator" content="JsDoc Toolkit"></meta>
+		<title>EventTracer | JsDoc Reference</title>
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"></meta>
+		<meta name="mobileoptimized" content="0"></meta>
+	
+		<link rel="stylesheet" href="../css/all.css" media="all"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="only screen and (max-width: 660px)"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="handheld"></link>
+		<link rel="stylesheet" href="../css/screen.css" media="screen and (min-width: 661px)"></link>
+        <link rel="stylesheet" href="../css/jstree.css" media="screen and (min-width: 661px)"></link>
+
+		<script src="../javascript/all.js"></script>
+		<script src="../javascript/jquery-1.5.min.js"></script>
+		<script src="../javascript/jquery.jstree.js"></script>
+        <script type="application/javascript">
+        $(function(){
+            // Get the menu reference in the url
+            var ref = null;
+            var regexS = "ref=(.*)[#&]*";
+            var regex = new RegExp( regexS );
+            var results = regex.exec( window.location.href );
+            if (results!=null){
+                ref = results[1];
+            }
+
+            
+            // Load the jstree menu
+            $('#ClassMenu').jstree({
+        		"plugins" : [ "themes", "html_data", "ui" ] 
+			    , "themes" : {
+				    "theme" : "default",
+				    "dots" : true,
+				    "icons" : false
+			    }
+            })
+            // When an element is selected
+            .bind("select_node.jstree", function (e, ui) {
+                // same ref, ref null
+                if (($(ui.args[0]).parent())[0].id == ref 
+                    || ($(ui.args[0]).parent())[0].id == ''){ 
+                    return; 
+                }
+                // Redirect
+                window.location.href = $(ui.args[0])
+                    .attr('href')+"?ref="
+                    +($(ui.args[0]).parent())[0].id;
+            })
+            // When the jstree is loaded
+            .bind("loaded.jstree", function (event, data) {
+                // If a reference has been found in the url, select it on the jstree
+                if (ref!=null){
+                    $.jstree._reference($('#ClassMenu'))
+                        .select_node ($('#'+ref)[0]);
+                }
+            });
+    	});
+        </script>
+		<!--[if lt IE 9]>
+			<script src="../javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+
+
+<div class="index">
+	<div class="menu">
+        
+        <div style="width:100px; height:69px; background-image:url('../css/taoLogo.png');">&nbsp;</div>
+		<div class="indexLinks">
+			<a href="../index.html">Classes</a>
+			<a href="../files.html">Files</a>
+		</div>
+	
+		<h2 class="heading1">Classes</h2>
+		
+		<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+		
+		<nav id="ClassMenu" style="width:100%; overflow-x:auto;">
+			<ul class="classList" id="ClassList">
+                <li>
+                    <a href="#">main</a>
+                    <ul>
+				        
+					        <li id="menuRef0"><a href="../symbols/_global_.html">_global_</a>
+                                <ul>
+                                    
+                                        
+                                    
+                                        
+                                    
+                                </ul>
+                            </li>
+				        
+                        
+                            <li id=menuRef1><a href="../symbols/EventTracer.html">EventTracer</a></li>
+                        
+                            <li id=menuRef2><a href="../symbols/TaoStack.html">TaoStack</a></li>
+                        
+                    </ul>
+                </li>
+			</ul>
+		</nav>
+	</div>
+	<div class="fineprint" style="clear:both">
+		
+		Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.3.2<br />
+		Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 1.2<br />
+		Generated on: 2011-2-11 17:21
+	</div>
+</div>
+
+<div class="index indexStatic"></div>
+
+<div class="content">
+	<div class="innerContent">
+		<h1 class="classTitle">
+			
+			Class <span>EventTracer</span>
+		</h1>
+		
+		<div class="intro">
+			<p class="description summary">
+				EventTracer
+			</p>
+				
+			
+				<ul class="summary">
+					
+					
+					
+						<li>Defined in: <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_events.js.html">events.js</a></li>
+					
+						
+				</ul>
+			
+		</div>
+		
+		
+			<div class="props">
+				<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class EventTracer.">
+					<caption class="sectionTitle">Class Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Constructor Attributes</th>
+							<th scope="col">Constructor Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription" >
+								<div class="fixedFont">
+									<b><a href="../symbols/EventTracer.html#constructor">EventTracer</a></b>(options)
+								</div>
+								<div class="description"></div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		
+		
+		
+			
+			
+				<div class="props">
+					<table class="summaryTable" cellspacing="0" summary="A summary of the fields documented in the class EventTracer.">
+						<caption class="sectionTitle">Field Summary</caption>
+						
+						<thead>
+							<tr>
+								<th scope="col">Field Attributes</th>
+								<th scope="col">Field Name and Description</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										EventTracer.<b><a href="../symbols/EventTracer.html#.ATTRIBUTES_TO_CATCH">ATTRIBUTES_TO_CATCH</a></b>
+										</div>
+										<div class="description">the list of attributes to be catched</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										EventTracer.<b><a href="../symbols/EventTracer.html#.destinationService">destinationService</a></b>
+										</div>
+										<div class="description">The parameters defining how and where to send the events</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										EventTracer.<b><a href="../symbols/EventTracer.html#.eventPool">eventPool</a></b>
+										</div>
+										<div class="description">array of events arrays</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										EventTracer.<b><a href="../symbols/EventTracer.html#.EVENTS_TO_CATCH">EVENTS_TO_CATCH</a></b>
+										</div>
+										<div class="description">the list of events to be catched</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										EventTracer.<b><a href="../symbols/EventTracer.html#.eventsToBeSend">eventsToBeSend</a></b>
+										</div>
+										<div class="description">array of strings</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										EventTracer.<b><a href="../symbols/EventTracer.html#.options">options</a></b>
+										</div>
+										<div class="description"></div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										EventTracer.<b><a href="../symbols/EventTracer.html#.opts">opts</a></b>
+										</div>
+										<div class="description">The tracer common options</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										EventTracer.<b><a href="../symbols/EventTracer.html#.sourceService">sourceService</a></b>
+										</div>
+										<div class="description">The parameters defining how and where to load the events list to catch</div>
+									</td>
+								</tr>
+							
+						</tbody>
+					</table>
+				</div>
+			
+			
+			
+		
+<!--
+#### METHODS SUMMARY
+-->
+		
+			
+			
+			<div class="props">
+				<h2 class="sectionTitle">Method Summary</h2>
+				
+				
+					<table class="summaryTable" id="MethodsList" cellspacing="0" summary="A summary of the methods documented in the class EventTracer.">
+						<thead>
+							<tr>
+								<th scope="col">Method Attributes</th>
+								<th scope="col">Method Name and Description</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							
+							
+								<tr
+									 class='item0'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.bind_platform">bind_platform</a></b>()
+										</div>
+										<div class="description">bind platform events</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item1'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.describeElement">describeElement</a></b>(e, pload)
+										</div>
+										<div class="description">set all information from the target dom element to the pLoad</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item2'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.describeEvent">describeEvent</a></b>(e, pload)
+										</div>
+										<div class="description">set all information from the event to the pLoad</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item3'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.eventStation">eventStation</a></b>(e)
+										</div>
+										<div class="description">controler that send events to feedtrace</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item4'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.feedTrace">feedTrace</a></b>(target_tag, event_type, pLoad, pLoad)
+										</div>
+										<div class="description">in the API to allow the unit creator to send events himself to the event log record events of interaction between interviewee and the test</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item5'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.hooks">hooks</a></b>(e)
+										</div>
+										<div class="description">return true if the event passed is a business event</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item6'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.increaseEventsPoolSize">increaseEventsPoolSize</a></b>()
+										</div>
+										<div class="description">the request took too much time, we increase the size of traces package, to have less frequent requests</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item7'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.initDestinationService">initDestinationService</a></b>(environment)
+										</div>
+										<div class="description">Initialize the service interface forthe destination service:  
+how and where we send the catched events</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item8'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.initSourceService">initSourceService</a></b>(environment)
+										</div>
+										<div class="description">Initialize the service interface for the source service: 
+how and where we retrieve the events to catch</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item9'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.jQuery.fn.bindDom">jQuery.fn.bindDom</a></b>(eventTracer)
+										</div>
+										<div class="description">bind every non bubbling events to dom elements.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item10'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.jQuery.fn.unBindDom">jQuery.fn.unBindDom</a></b>(eventTracer)
+										</div>
+										<div class="description">unbind platform events</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item11'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.prepareFeedTrace">prepareFeedTrace</a></b>()
+										</div>
+										<div class="description">prepare one block of stored traces for being sent</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item12'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.reduceEventsPoolSize">reduceEventsPoolSize</a></b>()
+										</div>
+										<div class="description">the request was fast enough, we increase the frequency of requests by reducing the size of traces package</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item13'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.sendAllFeedTrace_now">sendAllFeedTrace_now</a></b>()
+										</div>
+										<div class="description">send all traces with a blocking function</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item14'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.sendFeedTrace">sendFeedTrace</a></b>()
+										</div>
+										<div class="description">send one block of traces (non blocking)
+Does send the content of eventsToBeSend[0] to the server</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item15'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.sendFeedTraceFail">sendFeedTraceFail</a></b>(xhr, errorString, exception, events)
+										</div>
+										<div class="description">callback function after request failed (TODO)</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item16'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.sendFeedTraceSucceed">sendFeedTraceSucceed</a></b>(data, textStatus, sent_timeStamp)
+										</div>
+										<div class="description">success callback after traces sent.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item17'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.setEventParameters">setEventParameters</a></b>(e, pload)
+										</div>
+										<div class="description">set wanted information from the event to the pLoad</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item18'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.setEventsToCatch">setEventsToCatch</a></b>(data)
+										</div>
+										<div class="description">record events of interaction between interviewee and the test</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item19'
+								>
+									<td class="attributes">&lt;static&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">EventTracer.<b><a href="../symbols/EventTracer.html#.unbind_platform">unbind_platform</a></b>()
+										</div>
+										<div class="description">unbind platform events</div>
+									</td>
+								</tr>
+							
+						</tbody>
+					</table>
+				
+			
+				
+			</div>
+		
+		
+<!--
+#### EVENTS SUMMARY
+-->
+		
+<!--
+#### CONSTRUCTOR DETAILS
+-->
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle" id="constructor">
+						Class Detail
+					</h2>
+					
+					<div class="fixedFont">
+						<b>EventTracer</b>(options)
+					</div>
+					
+					<div class="description">
+						
+						
+					</div>
+					
+					
+				
+					
+						<dl class="detailList params">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									 <b>options</b>
+									
+								</dt>
+								<dd></dd>
+							
+						</dl>
+					
+					
+					
+				</div>
+			</div>
+		
+<!--
+#### FIELD DETAILS
+-->
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle">
+						Field Detail
+					</h2>
+					
+					
+						<div class="fixedFont heading" id=".ATTRIBUTES_TO_CATCH">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							
+							
+							<span class="light">EventTracer.</span><b>ATTRIBUTES_TO_CATCH</b>							
+						</div>
+						
+						<div class="description">
+							the list of attributes to be catched
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".destinationService">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							
+							
+							<span class="light">EventTracer.</span><b>destinationService</b>							
+						</div>
+						
+						<div class="description">
+							The parameters defining how and where to send the events
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".eventPool">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							
+							
+							<span class="light">EventTracer.</span><b>eventPool</b>							
+						</div>
+						
+						<div class="description">
+							array of events arrays
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".EVENTS_TO_CATCH">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							
+							
+							<span class="light">EventTracer.</span><b>EVENTS_TO_CATCH</b>							
+						</div>
+						
+						<div class="description">
+							the list of events to be catched
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".eventsToBeSend">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							
+							
+							<span class="light">EventTracer.</span><b>eventsToBeSend</b>							
+						</div>
+						
+						<div class="description">
+							array of strings
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".options">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							<span class="light">{Object}</span>
+							
+							<span class="light">EventTracer.</span><b>options</b>							
+						</div>
+						
+						<div class="description">
+							
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".opts">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							
+							
+							<span class="light">EventTracer.</span><b>opts</b>							
+						</div>
+						
+						<div class="description">
+							The tracer common options
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id=".sourceService">
+							<span class='lighter'>
+							&lt;static&gt; 
+							</span>
+							
+							
+							
+							<span class="light">EventTracer.</span><b>sourceService</b>							
+						</div>
+						
+						<div class="description">
+							The parameters defining how and where to load the events list to catch
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						
+					
+				</div>
+			</div>
+		
+<!--
+#### METHOD DETAILS
+-->		
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle">
+						Method Detail
+					</h2>
+					
+					<ul class="methodDetail" id="MethodDetail">
+						
+						
+							<li 
+								 class='item0'
+							>
+								<div class="fixedFont heading" id=".bind_platform">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">EventTracer.</span><b>bind_platform</b>()
+								</div>
+								
+								<div class="description">
+									bind platform events
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item1'
+							>
+								<div class="fixedFont heading" id=".describeElement">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">EventTracer.</span><b>describeElement</b>(e, pload)
+								</div>
+								
+								<div class="description">
+									set all information from the target dom element to the pLoad
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{event}</span> <b>e</b>
+												
+											</dt>
+											<dd>dom event triggered</dd>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>pload</b>
+												
+											</dt>
+											<dd>callback function called when 'ok' clicked</dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item2'
+							>
+								<div class="fixedFont heading" id=".describeEvent">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">EventTracer.</span><b>describeEvent</b>(e, pload)
+								</div>
+								
+								<div class="description">
+									set all information from the event to the pLoad
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{event}</span> <b>e</b>
+												
+											</dt>
+											<dd>dom event triggered</dd>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>pload</b>
+												
+											</dt>
+											<dd>callback function called when 'ok' clicked</dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item3'
+							>
+								<div class="fixedFont heading" id=".eventStation">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">EventTracer.</span><b>eventStation</b>(e)
+								</div>
+								
+								<div class="description">
+									controler that send events to feedtrace
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{event}</span> <b>e</b>
+												
+											</dt>
+											<dd>dom event triggered</dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item4'
+							>
+								<div class="fixedFont heading" id=".feedTrace">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">EventTracer.</span><b>feedTrace</b>(target_tag, event_type, pLoad, pLoad)
+								</div>
+								
+								<div class="description">
+									in the API to allow the unit creator to send events himself to the event log record events of interaction between interviewee and the test
+									
+									
+									
+									
+								</div>
+								
+								
+									
+										<pre class="code">feedTrace('BUSINESS','start_drawing',getGlobalTime(), {'unitTime':getUnitTime()});</pre>
+									
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>target_tag</b>
+												
+											</dt>
+											<dd>element type receiving the event.</dd>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>event_type</b>
+												
+											</dt>
+											<dd>type of event being catched</dd>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>pLoad</b>
+												
+											</dt>
+											<dd>object containing various information about the event. you may put whatever you need in it.</dd>
+										
+											<dt>
+												<b>pLoad</b>
+												
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item5'
+							>
+								<div class="fixedFont heading" id=".hooks">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{boolean}</span>
+									
+									<span class="light">EventTracer.</span><b>hooks</b>(e)
+								</div>
+								
+								<div class="description">
+									return true if the event passed is a business event
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{event}</span> <b>e</b>
+												
+											</dt>
+											<dd>dom event triggered</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{boolean}</span> </dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item6'
+							>
+								<div class="fixedFont heading" id=".increaseEventsPoolSize">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">EventTracer.</span><b>increaseEventsPoolSize</b>()
+								</div>
+								
+								<div class="description">
+									the request took too much time, we increase the size of traces package, to have less frequent requests
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item7'
+							>
+								<div class="fixedFont heading" id=".initDestinationService">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">EventTracer.</span><b>initDestinationService</b>(environment)
+								</div>
+								
+								<div class="description">
+									Initialize the service interface forthe destination service:  
+how and where we send the catched events
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>environment</b>
+												
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item8'
+							>
+								<div class="fixedFont heading" id=".initSourceService">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">EventTracer.</span><b>initSourceService</b>(environment)
+								</div>
+								
+								<div class="description">
+									Initialize the service interface for the source service: 
+how and where we retrieve the events to catch
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>environment</b>
+												
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item9'
+							>
+								<div class="fixedFont heading" id=".jQuery.fn.bindDom">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">EventTracer.</span><b>jQuery.fn.bindDom</b>(eventTracer)
+								</div>
+								
+								<div class="description">
+									bind every non bubbling events to dom elements.
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<b>eventTracer</b>
+												
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item10'
+							>
+								<div class="fixedFont heading" id=".jQuery.fn.unBindDom">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">EventTracer.</span><b>jQuery.fn.unBindDom</b>(eventTracer)
+								</div>
+								
+								<div class="description">
+									unbind platform events
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<b>eventTracer</b>
+												
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item11'
+							>
+								<div class="fixedFont heading" id=".prepareFeedTrace">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">EventTracer.</span><b>prepareFeedTrace</b>()
+								</div>
+								
+								<div class="description">
+									prepare one block of stored traces for being sent
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item12'
+							>
+								<div class="fixedFont heading" id=".reduceEventsPoolSize">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">EventTracer.</span><b>reduceEventsPoolSize</b>()
+								</div>
+								
+								<div class="description">
+									the request was fast enough, we increase the frequency of requests by reducing the size of traces package
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item13'
+							>
+								<div class="fixedFont heading" id=".sendAllFeedTrace_now">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">EventTracer.</span><b>sendAllFeedTrace_now</b>()
+								</div>
+								
+								<div class="description">
+									send all traces with a blocking function
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item14'
+							>
+								<div class="fixedFont heading" id=".sendFeedTrace">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">EventTracer.</span><b>sendFeedTrace</b>()
+								</div>
+								
+								<div class="description">
+									send one block of traces (non blocking)
+Does send the content of eventsToBeSend[0] to the server
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item15'
+							>
+								<div class="fixedFont heading" id=".sendFeedTraceFail">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">EventTracer.</span><b>sendFeedTraceFail</b>(xhr, errorString, exception, events)
+								</div>
+								
+								<div class="description">
+									callback function after request failed (TODO)
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{ressource}</span> <b>xhr</b>
+												
+											</dt>
+											<dd>ajax request ressource</dd>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>errorString</b>
+												
+											</dt>
+											<dd>error message</dd>
+										
+											<dt>
+												<span class="light fixedFont">{exception}</span> <b>exception</b>
+												<i>Optional</i>
+											</dt>
+											<dd>exception object thrown</dd>
+										
+											<dt>
+												<b>events</b>
+												
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item16'
+							>
+								<div class="fixedFont heading" id=".sendFeedTraceSucceed">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">EventTracer.</span><b>sendFeedTraceSucceed</b>(data, textStatus, sent_timeStamp)
+								</div>
+								
+								<div class="description">
+									success callback after traces sent. does affinate the size of traces package sent
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>data</b>
+												
+											</dt>
+											<dd>response from server</dd>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>textStatus</b>
+												
+											</dt>
+											<dd>status of request</dd>
+										
+											<dt>
+												<span class="light fixedFont">{int}</span> <b>sent_timeStamp</b>
+												
+											</dt>
+											<dd>time the request was sent</dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item17'
+							>
+								<div class="fixedFont heading" id=".setEventParameters">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">EventTracer.</span><b>setEventParameters</b>(e, pload)
+								</div>
+								
+								<div class="description">
+									set wanted information from the event to the pLoad
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{event}</span> <b>e</b>
+												
+											</dt>
+											<dd>dom event triggered</dd>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>pload</b>
+												
+											</dt>
+											<dd>callback function called when 'ok' clicked</dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item18'
+							>
+								<div class="fixedFont heading" id=".setEventsToCatch">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									<span class="light">{Object}</span>
+									
+									<span class="light">EventTracer.</span><b>setEventsToCatch</b>(data)
+								</div>
+								
+								<div class="description">
+									record events of interaction between interviewee and the test
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>data</b>
+												
+											</dt>
+											<dd>event type list</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{Object}</span> the events to catch</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item19'
+							>
+								<div class="fixedFont heading" id=".unbind_platform">
+									<span class='lighter'>
+									&lt;static&gt; 
+									</span>
+									
+									
+									
+									<span class="light">EventTracer.</span><b>unbind_platform</b>()
+								</div>
+								
+								<div class="description">
+									unbind platform events
+									
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+								
+							</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+		
+<!--
+#### EVENT DETAILS
+-->		
+		
+	</div>
+</div>
+		<script type="text/javascript">
+			wbos.CssTools.MediaQueryFallBack.LoadCss('../css/screen.css', '../css/handheld.css', 660)
+			codeview.classFilter.Init()
+		</script>
+	</body>
+</html>
+

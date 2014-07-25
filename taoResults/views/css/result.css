@@ -1,0 +1,193 @@
+/* 
+    Document    : result
+    Created on  : Mar 15, 2013, 2:25:29 PM
+    Author      : Patrick Plichart, <patrick@taotesting.com>
+    Description : Purpose of the stylesheet follows.
+*/
+
+body {
+	background-color: #eee;
+	font-family: Verdana, Arial, sans-serif;
+	color: #3A3A3A;
+}
+/*
+h1 {
+	text-align: center;
+	font-size: 22px;
+	margin-bottom: 35px;
+}
+*/
+#main {
+	background-color: white;
+	background-position: 530px 30px;
+	min-height: 320px;
+	width: 740px;
+	padding: 40px;
+	background-repeat: no-repeat;
+	margin: 100px auto;
+}
+
+#content {	
+	padding : 20px;
+}
+
+#TestTakerIdentificationBox {
+    padding:3px;
+    float:left;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color:#eeeeee;
+    width:45%;
+    font-size:14px;
+   /* box-shadow: 3px 3px 5px #aaa;*/
+}
+.userMail{
+    font-style: italic;
+}
+.variableIdentifierField{
+    width: 20%;
+}
+
+#ScoresSummaryBox {
+    display:block;
+
+    padding:0px;
+    float:right;
+     -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /*background-color:#eeeeee;*/
+    width:40%;
+}
+#scoresTable{
+    padding:0px;
+    margin:0px;
+    padding-left:0px;
+
+}
+#respEval{
+    
+    padding-left:0px;
+    padding-top:0px;
+    padding-bottom:0px;
+   
+}
+.valid{
+    /*color:green;*/
+}
+.invalid{
+    /*color:#FF0000;*/
+   
+}
+.uneval{
+    /*color:#0061aC;*/
+}
+.respEvalHeader{
+    font-weight: normal;
+}
+
+#resultsBox {
+    display:block;
+    float:center;
+    padding-top: 20px;
+}
+
+
+table.mini tr td{
+    padding:2px;
+    padding-left:10px;
+}
+.field{
+
+}
+.fieldValue{
+
+}
+
+.itemName {
+    font-size:15px;
+    font-weight: bold;
+}
+.itemModel {
+	font-style:italic;
+}
+.dataResult {
+    font-weight:bold;
+    text-align:left;
+    width: 50%;
+}
+
+.resultsTable {
+	padding-top:10px;
+	border-collapse: collapse;
+
+
+}
+#testTakerHeader{
+    padding-left: 15px;
+    vertical-align: top;
+}
+.resultsTable .headerRow {
+    background-color:#dddddd;
+    text-align:left;
+}
+.resultsTable .subHeaderRow {
+    background-color:#efefef;
+    text-align:left;
+}
+/* classes used for the layout of responses based on their evaluation*/
+.correct{
+   float:right;
+   
+    background-image: url(../../views/img/tick.png);
+    background-repeat:no-repeat;
+    width: 24px;
+    height: 24px;
+    background-position: 0px 0px;
+    
+}
+.incorrect{
+    float:right;
+    background-image: url(../../views/img/cross.png);
+    background-repeat:no-repeat;
+    width: 24px;
+    height: 24px;
+    align:center;
+       background-position: 0px 0px;
+}
+.unscored{
+    float:right;
+    background-image: url(../../views/img/tag_purple.png);
+    background-repeat:no-repeat;
+    width: 24px;
+    height: 24px;
+    align:center;
+       background-position: 0px 0px;
+}
+.headerColumn{
+	align:center;
+	background-color:#efefef;
+}
+
+tr td {
+    padding:5px;
+}
+
+.epoch {
+    font-style:italic;
+}
+.traceDownload{
+    cursor:pointer;
+    padding:5px;
+}
+.traceDownload:hover{
+     background-color:#D00239 ;
+    color:#fff;
+}
+
+/*Select:hover, Select option:hover{
+	background-color:#D00239 ;
+	color:#fff;
+	cursor:pointer;
+}*/
