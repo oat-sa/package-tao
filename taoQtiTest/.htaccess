@@ -1,0 +1,9 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+#usual behavior for resources calls
+RewriteCond %{REQUEST_URI} !/views/  [NC]
+RewriteCond %{REQUEST_URI} !/test/  [NC]
+RewriteCond %{REQUEST_URI} !/locales/  [NC]
+#url resolving  
+RewriteRule ^(.*)$ index.php [L]

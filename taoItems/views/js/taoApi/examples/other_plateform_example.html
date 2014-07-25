@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+	<title>TAO Api: an example of configuring the API for an other platform (or a other extention of TAO)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="../lib/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../taoApi.min.js"></script>
+	<script type="text/javascript">
+
+	/*
+	 * We configure were the data will be loaded
+	 * (the settigns are incorrect, replace them with yours!)  
+	 */
+	initDataSource({
+		type    : 'sync',
+		url 	: '/myserver/context/get',
+		params  : {'itemType' : "1"}
+	}, {
+		format	: 'json',
+		method 	: 'get',
+		load	: 'onInit'
+	});
+	
+	/*
+	 * We configure were and how the collected data are sent
+	 */
+	initPush({
+		url 		: '/myserver/context/save',
+		params		: {'itemType' : "1"}
+	}, {
+		format		: 'json',	
+		method 		: 'post',	
+		async		: true, 
+		clearAfter	: true
+	});
+
+	/*
+	 * You can begin directly to use the taoApi, 
+	 */
+	
+	//...
+	
+	setUserVar('test1', 1);
+	setUserVar('test2', 2);
+
+	//...
+	
+	setEndorsement(true);
+
+	//...
+	
+	//
+	push();
+	
+	
+	</script>
+</head>
+<body>
+	<div>
+		<h2>AN ITEM</h2>
+	</div>
+</body>
+</html>

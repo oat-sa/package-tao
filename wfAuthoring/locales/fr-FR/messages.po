@@ -1,0 +1,308 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO v2.4-beta3\n"
+"PO-Revision-Date: 2013-09-03 14:49+0000\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: fr-FR\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "(still undefined)"
+msgstr "(encore indéfini)"
+
+msgid "Access Control Mode"
+msgstr "Mode de contrôle d'accès"
+
+msgid "Activity"
+msgstr "Activité"
+
+msgid "Activity Editor"
+msgstr "Editeur d'activités"
+
+msgid "Activity or Connector"
+msgstr "Activité"
+
+msgid "Activity Variables"
+msgstr "Variables de l'activité"
+
+msgid "Back"
+msgstr "Retour"
+
+msgid "Browse Tests"
+msgstr "Naviguer dans les tests"
+
+#, tao-public
+msgid "Build processes to drive activities into a workflow."
+msgstr "Créer des processus pour assembler des activités dans un workflow."
+
+msgid "cancel"
+msgstr "annuler"
+
+msgid "check code"
+msgstr "vérifier le code"
+
+msgid "checking the code..."
+msgstr "vérification du code..."
+
+msgid "Close all"
+msgstr "Tout fermer"
+
+msgid "Code"
+msgstr "Code"
+
+msgid "Code already used"
+msgstr "Code déjà en cours d'utilisation"
+
+msgid "Compilation"
+msgstr "Compilation"
+
+msgid "Connector"
+msgstr "Connecteur"
+
+msgid "Connector Type"
+msgstr "Type de connecteur"
+
+msgid "Constant"
+msgstr "Constante"
+
+msgid "Country"
+msgstr "Pays"
+
+msgid "create new activity"
+msgstr "créer une nouvelle activité"
+
+msgid "create new connector"
+msgstr "créer un nouveau connecteur"
+
+msgid "Current Activities"
+msgstr "Activités courantes"
+
+msgid "Current activities"
+msgstr "Activités courantes"
+
+msgid "Current User"
+msgstr "Utilisateur courant"
+
+msgid "delete"
+msgstr "supprimer"
+
+msgid "Do you want to change the connector type? \n"
+" THe child connectors will be deleted."
+msgstr "Voulez vous changer le type du connecteur? \n"
+"Les connecteurs enfants seront supprimés."
+
+msgid "Edit"
+msgstr "Modifier"
+
+msgid "Else"
+msgstr "Autrement"
+
+msgid "export"
+msgstr "exporter"
+
+msgid "Filter"
+msgstr "Filtrer"
+
+msgid "Formal Parameter"
+msgstr "Paramètre formel"
+
+msgid "History"
+msgstr "Historique"
+
+msgid "IF"
+msgstr "SI"
+
+msgid "If"
+msgstr "Si"
+
+msgid "Input Parameters"
+msgstr "Paramètres d'entrée"
+
+msgid "interactive service saved"
+msgstr "service interactif enregistré"
+
+msgid "Label"
+msgstr "Étiquette"
+
+msgid "Language"
+msgstr "Langue"
+
+msgid "loading..."
+msgstr "chargement..."
+
+#, tao-public
+msgid "Manage processes"
+msgstr "Gestion des processus"
+
+msgid "Merge to "
+msgstr "Fusionner vers"
+
+msgid "meta data"
+msgstr "méta-données"
+
+#, tao-public
+msgid "Monitor processes"
+msgstr "Suivi des processus"
+
+msgid "Monitoring processes"
+msgstr "Monitoring des processus"
+
+msgid "More detailed description here."
+msgstr "Description plus détaillée ici."
+
+msgid "new process"
+msgstr "nouveau processus"
+
+msgid "newly edited"
+msgstr "nouvellement édité"
+
+msgid "ok"
+msgstr "ok"
+
+msgid "Open all"
+msgstr "Tout ouvrir"
+
+msgid "Output Parameters"
+msgstr "Paramètres de sortie"
+
+msgid "please choose another one"
+msgstr "veuillez en choisir un autre"
+
+msgid "Please confirm deletion"
+msgstr "Veuilez confirmer la suppression"
+
+msgid "Please confirm deletion.\n"
+" Warning: related resources might be affected."
+msgstr "Veuillez confirmer la suppression.\n"
+" Attention : les ressources liées pourraient en être affectées."
+
+msgid "Please confirm the deletion of the connector: \n"
+" child connectors will be delete at the same time"
+msgstr "Veuillez confirmer la suppression du connecteur : \n"
+" les connecteurs enfant seront supprimés en même temps"
+
+msgid "Please select a delivery before authoring it"
+msgstr "Veuillez sélectionner une délivrance afin de l'éditer."
+
+msgid "Please select a process before authoring it"
+msgstr "Veuillez sélectionner un processus afin de l'éditer"
+
+msgid "Positionning"
+msgstr "Positionnement"
+
+msgid "Processes"
+msgstr "Processus"
+
+#, tao-public
+msgid "Process authoring"
+msgstr "Éditeur de processus"
+
+msgid "Process Definition"
+msgstr "Définition de processus"
+
+msgid "Process Execution"
+msgstr "Exécution de processus"
+
+msgid "Process History"
+msgstr "Historique de processus"
+
+msgid "Process Property"
+msgstr "Propriété de processus"
+
+msgid "Process saved"
+msgstr "Processus enregistré"
+
+msgid "Process Tree:"
+msgstr "Arbre des processus:"
+
+msgid "Process Variable"
+msgstr "Variable de processus"
+
+msgid "Process Variables"
+msgstr "Variables de processus"
+
+#, tao-public
+msgid "Processes"
+msgstr "Processus"
+
+msgid "Processes library"
+msgstr "Bibliothèque de processus"
+
+msgid "reload"
+msgstr "rafraichir"
+
+msgid "reloading form..."
+msgstr "rechargement du formulaire..."
+
+msgid "Restricted to"
+msgstr "limité à"
+
+msgid "Role"
+msgstr "Rôle"
+
+msgid "save"
+msgstr "enregistrer"
+
+msgid "search"
+msgstr "recherche"
+
+msgid "Select a test"
+msgstr ""
+
+msgid "Service Definition"
+msgstr "Définition de service"
+
+msgid "Set the activity as a final one will delete its following connector. \n"
+" Are you sure?"
+msgstr "Placer l'activité en tant que finale supprimera les connecteurs suivants.\n"
+"Etes vous sûr?"
+
+msgid "Started Time"
+msgstr "Démarrage"
+
+msgid "Status"
+msgstr "Statut"
+
+msgid "Sure?"
+msgstr "Sûr?"
+
+msgid "the chosen code has already been used for the process variable"
+msgstr "le code choisi est déjà en cours d'utilisation pour une autre variable"
+
+msgid "The Processes module allows to create Processes."
+msgstr "Le module des processus vous permet de créer des processus organisés sous forme d'activités liées par des connecteurs."
+
+msgid "Then"
+msgstr "Alors"
+
+msgid "type??"
+msgstr "type??"
+
+msgid "Unable to delete the process execution.\n"
+"Close process before delete it."
+msgstr "Impossible de supprimer l'exécution du processus tant qu'il est ouvert."
+
+msgid "Unit"
+msgstr "Unité"
+
+msgid "Use the * character to replace any string"
+msgstr "Utilisez le caractère (*) pour remplacer n'importe quelle chaîne"
+
+msgid "Value"
+msgstr "Valeur"
+
+msgid "Variables"
+msgstr "Variables"
+
+msgid "VFF"
+msgstr "VFF"
+
+msgid "VFF version"
+msgstr "Version VFF"
+
+msgid "XLIFF"
+msgstr "XLIFF"
+
+msgid "XLIFF version"
+msgstr "Version XLIFF"

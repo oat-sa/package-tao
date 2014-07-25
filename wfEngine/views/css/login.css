@@ -1,0 +1,107 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2007-2010 (original work) Public Research Centre Henri Tudor & University of Luxembourg) (under the project TAO-QUAL);
+ *               2008-2010 (update and modification) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+@import url(frontend_user.css);
+
+#welcome_message
+{
+	margin:15px auto 50px auto;
+	font-size: 24px;
+	font-weight: bold;
+	padding-left: 20px;
+	color: #255581;
+	line-height:28px;
+	text-align:center;
+}
+#login-box{
+	width: 380px;
+	margin: auto;
+}
+.error-message{
+	padding:5px;
+	font-weight:bold;	
+}
+/* Login form. */
+#login-form
+{
+	margin:  0px;
+	padding: 5px 0px 0px 5px;
+}
+#login-title
+{
+	margin:  0px;
+	padding: 5px 0px 0px 5px;
+	height: 20px;
+	font-weight:bold;
+	font-size: 14px;
+}
+
+/* Labels relevant to input fields of the login form. */
+#login_form label 
+{
+	font-size: 14px;
+}
+ 
+/* Items items (lines) of the login form. Each of them
+   contains a label, and an input element. */
+#login_form .item
+{
+	position: relative;
+	margin: 0px 0px 10px 0px;
+	line-height: 20px;
+	
+	clear: both;
+}
+
+/* Input elements contained in items (lines) of the 
+   login form */
+#login_form .item .input
+{
+	position: absolute;
+	display: block;
+	width: 170px;
+	top: 2px;	
+	right: 0px;
+	
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	
+	border: 1px solid #A5ACB2;
+}
+
+/* Validation container of the login form containing the confirmation
+   input element. */
+#login_form .validation
+{
+	position: relative;
+	padding: 10px 0px 0px 0px;
+	line-height: 20px;
+	
+	text-align: right;
+	
+	clear: both;	
+}
+
+/* Confirmation input button for the login form. */
+#login_form .validation .confirm
+{
+	color: #000000;
+}

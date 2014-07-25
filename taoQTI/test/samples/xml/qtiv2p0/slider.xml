@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p0 imsqti_v2p0.xsd"
+    identifier="slider" title="Jedi Knights" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="integer">
+        <correctResponse>
+            <value>16</value>
+        </correctResponse>
+        <mapping defaultValue="0">
+            <mapEntry mapKey="12" mappedValue="0.5"/>
+            <mapEntry mapKey="13" mappedValue="0.5"/>
+            <mapEntry mapKey="14" mappedValue="1.0"/>
+            <mapEntry mapKey="15" mappedValue="1.0"/>
+            <mapEntry mapKey="16" mappedValue="1.0"/>
+            <mapEntry mapKey="17" mappedValue="1.0"/>
+            <mapEntry mapKey="18" mappedValue="1.0"/>
+            <mapEntry mapKey="19" mappedValue="0.5"/>
+            <mapEntry mapKey="20" mappedValue="0.5"/>
+        </mapping>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+    <itemBody>
+        <p>Much to the dismay of Star Wars fans, the 2001 UK national census classified people who
+            identified themselves as <i>Jedi Knights</i> as having no religion. In fact, the
+            <i>Jedi</i> accounted for more than 4% of this group!</p>
+        <sliderInteraction responseIdentifier="RESPONSE" lowerBound="0" upperBound="100" step="1" stepLabel="false">
+            <prompt>In total, what percentage of the UK population do you think were eventually classifed as
+                having no religion?</prompt>
+        </sliderInteraction>
+    </itemBody>
+    <responseProcessing template="http://www.imsglobal.org/question/qti_v2p0/rptemplates/map_response"/>
+</assessmentItem>

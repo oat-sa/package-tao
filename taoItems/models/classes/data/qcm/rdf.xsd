@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/TR/1999/PR-rdf-schema-19990303#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:tao="http://www.tao.lu/tao.rdfs#">
+  <xs:import schemaLocation="qcm.xsd"/>
+  <xs:import namespace="http://www.tao.lu/tao.rdfs#" schemaLocation="tao.xsd"/>
+  <xs:import namespace="http://www.w3.org/TR/1999/PR-rdf-schema-19990303#" schemaLocation="rdfs.xsd"/>
+  <xs:attribute name="ID" type="xs:anyURI"/>
+</xs:schema>

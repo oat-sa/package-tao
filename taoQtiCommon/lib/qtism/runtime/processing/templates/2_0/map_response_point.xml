@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<responseProcessing xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p0 imsqti_v2p0.xsd">
+    <responseCondition>
+        <responseIf>
+            <isNull>
+                <variable identifier="RESPONSE"/>
+            </isNull>
+            <setOutcomeValue identifier="SCORE">
+                <baseValue baseType="integer">0</baseValue>
+            </setOutcomeValue>
+        </responseIf>
+        <responseElse>
+            <setOutcomeValue identifier="SCORE">
+                <mapResponsePoint identifier="RESPONSE"/>
+            </setOutcomeValue>
+        </responseElse>
+    </responseCondition>
+</responseProcessing>

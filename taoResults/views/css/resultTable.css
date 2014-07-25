@@ -1,0 +1,39 @@
+.main-container {
+    padding:0px;
+    margin:0px;
+}
+.result-table-container{
+    padding:0px;
+    margin:0px;
+    padding-bottom: 25px;
+}
+
+.ui-jqgrid .ui-jqgrid-htable th div{
+    overflow: hidden;
+    height:40px;
+    vertical-align:text-top;
+}
+
+.ui-jqgrid .ui-jqgrid-pager .ui-pg-div span.ui-icon {
+	margin-top: -3px
+}
+
+#results-custom-table-actions {
+	margin: 15px 0;
+}
+
+#results-custom-table-actions > div {
+	margin-bottom: 15px;
+}
+
+#results-custom-table-tools {
+	margin-top: 15px;
+}
+
+#result-table-container {
+	margin: 4px;
+}
+
+#result-table-grid {
+	border: none;
+}

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage sv-SE
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/taoFuncACL.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#Module">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sv-SE
+    @source A module
+    @subject http://www.tao.lu/Ontologies/taoFuncACL.rdf#Module
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="sv-SE"><![CDATA[A module]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sv-SE
+    @source A MVC Controller Module
+    @subject http://www.tao.lu/Ontologies/taoFuncACL.rdf#Module
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="sv-SE"><![CDATA[A MVC Controller Module]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#Action">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sv-SE
+    @source An action
+    @subject http://www.tao.lu/Ontologies/taoFuncACL.rdf#Action
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="sv-SE"><![CDATA[An action]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sv-SE
+    @source A MVC Controller Action
+    @subject http://www.tao.lu/Ontologies/taoFuncACL.rdf#Action
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="sv-SE"><![CDATA[A MVC Controller Action]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#grantAccessAction">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sv-SE
+    @source Give access to an action
+    @subject http://www.tao.lu/Ontologies/taoFuncACL.rdf#grantAccessAction
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="sv-SE"><![CDATA[Give access to an action]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sv-SE
+    @source Give access to an action
+    @subject http://www.tao.lu/Ontologies/taoFuncACL.rdf#grantAccessAction
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="sv-SE"><![CDATA[Give access to an action]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#grantAccessModule">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sv-SE
+    @source Give access to a module
+    @subject http://www.tao.lu/Ontologies/taoFuncACL.rdf#grantAccessModule
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="sv-SE"><![CDATA[Give access to a module]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sv-SE
+    @source Give access to a module
+    @subject http://www.tao.lu/Ontologies/taoFuncACL.rdf#grantAccessModule
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="sv-SE"><![CDATA[Give access to a module]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#actionIdentifier">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sv-SE
+    @source Identifier
+    @subject http://www.tao.lu/Ontologies/taoFuncACL.rdf#actionIdentifier
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="sv-SE"><![CDATA[Identifier]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sv-SE
+    @source Identifier of the action
+    @subject http://www.tao.lu/Ontologies/taoFuncACL.rdf#actionIdentifier
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="sv-SE"><![CDATA[Identifier of the action]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#actionMemberOf">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sv-SE
+    @source Member of
+    @subject http://www.tao.lu/Ontologies/taoFuncACL.rdf#actionMemberOf
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="sv-SE"><![CDATA[Member of]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sv-SE
+    @source Member of a module
+    @subject http://www.tao.lu/Ontologies/taoFuncACL.rdf#actionMemberOf
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="sv-SE"><![CDATA[Member of a module]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#moduleIdentifier">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sv-SE
+    @source Identifier
+    @subject http://www.tao.lu/Ontologies/taoFuncACL.rdf#moduleIdentifier
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="sv-SE"><![CDATA[Identifier]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sv-SE
+    @source Identifier of the module
+    @subject http://www.tao.lu/Ontologies/taoFuncACL.rdf#moduleIdentifier
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="sv-SE"><![CDATA[Identifier of the module]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#moduleExtension">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sv-SE
+    @source Extension
+    @subject http://www.tao.lu/Ontologies/taoFuncACL.rdf#moduleExtension
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="sv-SE"><![CDATA[Extension]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sv-SE
+    @source Extension of the module
+    @subject http://www.tao.lu/Ontologies/taoFuncACL.rdf#moduleExtension
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="sv-SE"><![CDATA[Extension of the module]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

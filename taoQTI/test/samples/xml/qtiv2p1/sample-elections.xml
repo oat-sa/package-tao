@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  imsqti_v2p1.xsd"
+	identifier="elections-in-the-united-states-2004" title="Elections in the United States, 2004" adaptive="false" timeDependent="false">
+	<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="integer">
+		<correctResponse>
+			<value>51</value>
+		</correctResponse>
+		<mapping defaultValue="0">
+			<mapEntry mapKey="42" mappedValue="0.1"/>
+			<mapEntry mapKey="43" mappedValue="0.2"/>
+			<mapEntry mapKey="44" mappedValue="0.3"/>
+			<mapEntry mapKey="45" mappedValue="0.4"/>
+			<mapEntry mapKey="46" mappedValue="0.5"/>
+			<mapEntry mapKey="47" mappedValue="0.6"/>
+			<mapEntry mapKey="48" mappedValue="0.7"/>
+			<mapEntry mapKey="49" mappedValue="0.8"/>
+			<mapEntry mapKey="50" mappedValue="0.9"/>
+			<mapEntry mapKey="51" mappedValue="1.0"/>
+			<mapEntry mapKey="52" mappedValue="0.9"/>
+			<mapEntry mapKey="53" mappedValue="0.8"/>
+			<mapEntry mapKey="54" mappedValue="0.7"/>
+			<mapEntry mapKey="55" mappedValue="0.6"/>
+			<mapEntry mapKey="56" mappedValue="0.5"/>
+			<mapEntry mapKey="57" mappedValue="0.4"/>
+			<mapEntry mapKey="58" mappedValue="0.3"/>
+			<mapEntry mapKey="59" mappedValue="0.2"/>
+			<mapEntry mapKey="60" mappedValue="0.1"/>
+		</mapping>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+	<stylesheet href="style.css" type="text/css" media="screen" title="Elections in the United States, 2004"/>
+	<itemBody id="itemBody">
+		<p id="stimulus">
+			The 4th of November 2004, Georges W. Bush (Republican) wins the US elections against John Kerry
+			(Democrat). After a first mandate leading the United States of America, Bush remains president for 4
+			more years. During these elections, 114.3 million votes were counted.
+		</p>
+		<sliderInteraction id="interaction" responseIdentifier="RESPONSE" lowerBound="0" upperBound="100" step="1" stepLabel="false">
+			<prompt>
+				In your opinion, what was the percentage (%) of Republican voters during the 2004 US elections? If needed,
+				help yourself with the map below.
+			</prompt>
+		</sliderInteraction>
+		<p id="mapContainer">
+			<img id="map" src="img/map.jpg" alt="Presidential popular votes by county."/>
+		</p>
+	</itemBody>
+	<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response"/>
+</assessmentItem>
+<!-- These images are released under Creative Commons Attribution 2.0 Generic licence -->
+<!-- American flag image by Vic Lustinec, Wikipedia http://commons.wikimedia.org/wiki/File:American_flag.jpg -->
+<!-- Elections map image by Michael Gastner, Cosma Shalizi, and Mark Nudeman (University of Michigan) http://fr.wikipedia.org/wiki/Fichier:2004_US_elections_purple_counties.png -->

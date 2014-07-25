@@ -1,0 +1,179 @@
+{
+    "identifier": "IMS00004_StemError",
+    "serial": "item_52137daf38f3d213557952",
+    "type": "assessmentItem",
+    "attributes": {
+        "identifier": "IMS00004_StemError",
+        "title": "Identifying Sentence Errors",
+        "adaptive": false,
+        "toolName": "TAO",
+        "toolVersion": "2.5-alpha",
+        "timeDependent": "false"
+    },
+    "body": {
+        "serial": "container_containerinteractive_52137daf38f4b364170160",
+        "body": "\n\t\t<rubricBlock view=\"candidate\">\n\t\t\t<p>Select the error in the following passage of text (or <em>No Error<\/em> if there is\n\t\t\t\tnone).<\/p>\n\t\t<\/rubricBlock>\n\t\t{{interaction_hottextinteraction_52137daf39330659093944}}\n\t",
+        "elements": {
+            "interaction_hottextinteraction_52137daf39330659093944": {
+                "identifier": "interaction_hottextinteraction_1",
+                "serial": "interaction_hottextinteraction_52137daf39330659093944",
+                "type": "hottextInteraction",
+                "attributes": {
+                    "identifier": "interaction_hottextinteraction_1",
+                    "responseIdentifier": "RESPONSE",
+                    "maxChoices": 1,
+                    "minChoices": 0
+                },
+                "body": {
+                    "serial": "container_containerhottext_52137daf39419978970674",
+                    "body": "\n\t\t\t<p>Sponsors of the Olympic Games {{choice_hottext_52137daf394ed217821983}}\n\t\t\t\tadvertising time on United States television {{choice_hottext_52137daf3958a254913360}}\n\t\t\t\t{{choice_hottext_52137daf39619431219459}} a dozen international firms {{choice_hottext_52137daf396a5403680191}} names are familiar to American consumers.\n\t\t\t\t\t{{choice_hottext_52137daf39731556996077}}\n\t\t\t<\/p>\n\t\t",
+                    "elements": {
+                        "choice_hottext_52137daf394ed217821983": {
+                            "identifier": "A",
+                            "serial": "choice_hottext_52137daf394ed217821983",
+                            "type": "hottext",
+                            "attributes": {
+                                "identifier": "A",
+                                "fixed": false,
+                                "templateIdentifier": null,
+                                "showHide": null
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_52137daf394ff164779067",
+                                "body": "who bought",
+                                "elements": {
+                                }
+                            }
+                        },
+                        "choice_hottext_52137daf3958a254913360": {
+                            "identifier": "B",
+                            "serial": "choice_hottext_52137daf3958a254913360",
+                            "type": "hottext",
+                            "attributes": {
+                                "identifier": "B",
+                                "fixed": false,
+                                "templateIdentifier": null,
+                                "showHide": null
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_52137daf3959b861874485",
+                                "body": "includes",
+                                "elements": {
+                                }
+                            }
+                        },
+                        "choice_hottext_52137daf39619431219459": {
+                            "identifier": "C",
+                            "serial": "choice_hottext_52137daf39619431219459",
+                            "type": "hottext",
+                            "attributes": {
+                                "identifier": "C",
+                                "fixed": false,
+                                "templateIdentifier": null,
+                                "showHide": null
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_52137daf3962a356912568",
+                                "body": "at least",
+                                "elements": {
+                                }
+                            }
+                        },
+                        "choice_hottext_52137daf396a5403680191": {
+                            "identifier": "D",
+                            "serial": "choice_hottext_52137daf396a5403680191",
+                            "type": "hottext",
+                            "attributes": {
+                                "identifier": "D",
+                                "fixed": false,
+                                "templateIdentifier": null,
+                                "showHide": null
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_52137daf396b7548759589",
+                                "body": "whose",
+                                "elements": {
+                                }
+                            }
+                        },
+                        "choice_hottext_52137daf39731556996077": {
+                            "identifier": "E",
+                            "serial": "choice_hottext_52137daf39731556996077",
+                            "type": "hottext",
+                            "attributes": {
+                                "identifier": "E",
+                                "fixed": false,
+                                "templateIdentifier": null,
+                                "showHide": null
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_52137daf39741689983514",
+                                "body": "No error.",
+                                "elements": {
+                                }
+                            }
+                        }
+                    }
+                },
+                "prompt": {
+                    "serial": "container_containerstatic_52137daf3934f156932274",
+                    "body": "",
+                    "elements": {
+                    }
+                }
+            }
+        }
+    },
+    "namespaces": {
+        "xml": "http:\/\/www.w3.org\/XML\/1998\/namespace",
+        "xsi": "http:\/\/www.w3.org\/2001\/XMLSchema-instance",
+        "": "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1"
+    },
+    "stylesheets": {
+    },
+    "outcomes": {
+        "outcomedeclaration_52137daf3918f800812358": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_52137daf3918f800812358",
+            "type": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "float",
+                "view": null,
+                "interpretation": null,
+                "longInterpretation": null,
+                "normalMaximum": null,
+                "normalMinimum": null,
+                "masteryValue": null
+            },
+            "defaultValue": "0",
+            "scale": null
+        }
+    },
+    "responses": {
+        "responsedeclaration_52137daf390d4220853032": {
+            "identifier": "RESPONSE",
+            "serial": "responsedeclaration_52137daf390d4220853032",
+            "type": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE",
+                "cardinality": "single",
+                "baseType": "identifier"
+            },
+            "correctResponses": {
+                "0": "B"
+            },
+            "mapping": {
+            },
+            "areaMapping": {
+            },
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "howMatch": "http:\/\/www.imsglobal.org\/question\/qti_v2p1\/rptemplates\/match_correct"
+        }
+    },
+    "feedbacks": {
+    }
+}

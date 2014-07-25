@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p0 imsqti_v2p0.xsd" identifier="astronomy" title="Planets and moons" timeDependent="false" adaptive="false" lang="en-US" toolName="TAO" toolVersion="2.4.7">
+  <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="pair">
+    <correctResponse>
+      <value>Ea Mo</value>
+      <value>Ju Ga</value>
+      <value>Ne Tr</value>
+    </correctResponse>
+    <mapping defaultValue="0">
+      <mapEntry mapKey="Ea Mo" mappedValue="2"/>
+      <mapEntry mapKey="Ju Ga" mappedValue="1"/>
+      <mapEntry mapKey="Ne Tr" mappedValue="1"/>
+    </mapping>
+  </responseDeclaration>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <itemBody>
+    <div>
+      <div>
+        <associateInteraction responseIdentifier="RESPONSE" shuffle="true" maxAssociations="3">
+          <prompt><b>Make pairs.</b><br/>
+Each pair is composed by a planet of the Solar System and one of
+it's moon.<br/>
+<br/></prompt>
+          <simpleAssociableChoice identifier="Ea" matchMax="1" matchGroup="Mo Ga Tr"><img src="img/earth.png" alt="Earth"/><br/>
+Earth</simpleAssociableChoice>
+          <simpleAssociableChoice identifier="Mo" matchMax="1" matchGroup="Ea Ju Ne"><img src="img/moon.png" alt="Moon"/><br/>
+Moon</simpleAssociableChoice>
+          <simpleAssociableChoice identifier="Ju" matchMax="1" matchGroup="Mo Ga Tr"><img src="img/jupiter.png" alt="Jupiter"/><br/>
+Jupiter</simpleAssociableChoice>
+          <simpleAssociableChoice identifier="Ga" matchMax="1" matchGroup="Ea Ju Ne"><img src="img/ganymede.png" alt="Ganymede"/><br/>
+Ganymede</simpleAssociableChoice>
+          <simpleAssociableChoice identifier="Ne" matchMax="1" matchGroup="Mo Ga Tr"><img src="img/neptune.png" alt="Neptune"/><br/>
+Neptune</simpleAssociableChoice>
+          <simpleAssociableChoice identifier="Tr" matchMax="1" matchGroup="Ea Ju Ne"><img src="img/triton.png" alt="triton"/><br/>
+Triton</simpleAssociableChoice>
+        </associateInteraction>
+      </div>
+    </div>
+  </itemBody>
+  <responseProcessing template="http://www.imsglobal.org/question/qti_v2p0/rptemplates/map_response"/>
+</assessmentItem>
