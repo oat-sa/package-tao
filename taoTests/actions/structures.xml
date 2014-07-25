@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+	<structure id="tests" name="Tests" level="1" visible="true">
+		<description>Combine a selection of items into tests.</description>
+		<sections>
+			<section  id="manage_tests" name="Manage tests" url="/taoTests/Tests/index">
+				<trees>
+					<tree name="Tests library"
+						className="Test"
+						dataUrl="/taoTests/Tests/getOntologyData"
+						editClassUrl="/taoTests/Tests/editTestClass"
+						editInstanceUrl="/taoTests/Tests/editTest"
+						addInstanceUrl="/taoTests/Tests/addInstance"
+						addSubClassUrl="/taoTests/Tests/addTestClass"
+						deleteUrl="/taoTests/Tests/delete"
+						duplicateUrl="/taoTests/Tests/cloneInstance"
+						moveInstanceUrl="/taoTests/Tests/moveInstance"
+					/>
+				</trees>
+				<actions>
+					<action name="search" url="/taoTests/Tests/search" context="*" />
+					<action name="new class" js="generisActions.subClass" url="/taoTests/Tests/addTestClass" context="class" />
+					<action name="new test" js="generisActions.instanciate" url="/taoTests/Tests/addInstance" context="class" />
+					<action name="delete" js="generisActions.removeNode" url="/taoTests/Tests/delete" context="resource" />
+					<action name="duplicate" js="generisActions.duplicateNode" url="/taoTests/Tests/cloneInstance" context="instance" />
+					<action name="move" js="generisActions.moveNode" url="" context="instance" />
+					<!--<action name="preview" js="generisActions.fullScreen" url="/taoTests/Tests/preview" context="instance" />-->
+					<action name="lists"  url="/tao/Lists/index"  context="*" />
+					<action name="meta data" js="generisActions.loadMetaData" url="/tao/MetaData/getMetaData"  context="resource" />
+					<action name="export" url="/tao/Export/index"  context="resource" />
+					<action name="import" url="/tao/Import/index"  context="class" />
+				</actions>
+			</section>
+		</sections>
+	</structure>
+</structures>

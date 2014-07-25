@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+	<structure id="delivery" name="Deliveries" level="4" visible="true">
+		<description>Prepare, publish deliveries sessions.</description>
+		<sections>
+			<section id="manage_deliveries" name="Manage deliveries" url="/taoDelivery/Delivery/index">
+				<trees>
+					<tree name="Deliveries library"
+						className="Delivery"
+						dataUrl="/taoDelivery/Delivery/getDeliveries"
+						editClassUrl="/taoDelivery/Delivery/editDeliveryClass"
+						editInstanceUrl="/taoDelivery/Delivery/editDelivery"
+						addInstanceUrl="/taoDelivery/Delivery/addDelivery"
+						addSubClassUrl="/taoDelivery/Delivery/addDeliveryClass"
+						deleteUrl="/taoDelivery/Delivery/delete"
+						duplicateUrl="/taoDelivery/Delivery/cloneInstance"
+						moveInstanceUrl="/taoDelivery/Delivery/moveInstance"
+					/>
+				</trees>
+				<actions>
+					<action name="search" url="/taoDelivery/Delivery/search" context="*" />
+					<action name="new class" js="generisActions.subClass" url="/taoDelivery/Delivery/addDeliveryClass" context="class" />
+					<action name="new delivery" js="generisActions.instanciate" url="/taoDelivery/Delivery/addDelivery" context="class" />
+					<action name="delete" js="generisActions.removeNode" url="/taoDelivery/Delivery/delete" context="resource" />
+					<action name="duplicate" js="generisActions.duplicateNode" url="/taoDelivery/Delivery/cloneInstance" context="instance" />
+					<action name="move" js="generisActions.moveNode" url="" context="instance" />
+					<action name="export" url="/tao/Export/index"  context="resource" />
+					<action name="import" url="/tao/Import/index"  context="class" />
+					<action name="LTI" url="/ltiDeliveryProvider/DeliveryLinks/index" context="instance" />
+				</actions>
+			</section>
+
+	
+
+		</sections>
+	</structure>
+</structures>

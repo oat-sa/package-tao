@@ -1,0 +1,264 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2013 (original work) Open Assessment Techonologies SA (under the project TAO-PRODUCT);
+ *               
+ * 
+ */
+/*the loading element*/
+#qtiAuthoring_loading{position:absolute; width:100%; height:100%; z-index:1000; background-color:#FFFFFF;}
+#qtiAuthoring_loading_message{position:relative; top:45%; left:45%; width:150px;z-index:1000;}
+
+/*confirm box*/
+#dialog-confirm span.ui-icon{float: left; margin: 0 8px 70px 0;}
+#dialog-confirm p#dialog-confirm-message{margin:0;}
+span.ui-icon:hover{opacity: 0.7;}
+
+/*top menu*/
+/*placing top menu*/
+#qtiAuthoring_title_container{text-align: center;padding: 3px 0px;font-weight:bold;border-bottom-width: 0px;}
+#qtiAuthoring_menu_container{position: relative; height:70px; top:0%; left:0%; border-width: 1px; margin-top: 5px;}
+
+#qtiAuthoring_menu_left_container{position:absolute;width:25%;padding:0px;border-width: 0px;height: 100%; overflow: hidden;}
+#qtiAuthoring_menu_left_container>div{float:left;margin-right:15px;}
+#qtiAuthoring_menu_right_container{position:absolute;left:25%;padding:0px;width: 75%;border-width: 1px;height: 100%;}
+
+#qtiAuthoring_menu_interactions_overlay{display: none;}
+
+div.qti-menu-item{float:right;text-align:center;cursor:pointer;padding: 1px 5px;width: 60px;margin-top: 3px;}
+div.qti-menu-item a{color:#D1043B;font-weight:bold;text-decoration:none;}
+div.qti-menu-item:hover a, div.qti-menu-item a:hover{color:#FF8C8C;}
+div.qti-menu-item:hover{opacity:0.7;padding:0 6px 2px 4px;}
+div.qti-menu-item:click{padding:2px 4px 0 6px;}
+div.qti-menu-item-wide{width: 100px;}
+
+/*for save and preview button*/
+#qtiAuthoring_menu_left_container div.qti-menu-item {width: 60px; height: 100%; margin:0 10px;min-width: 60px;}
+
+/*carousel*/
+#qti-carousel-prev{float:left;}
+#qti-carousel-next{float:right;}
+#qti-carousel-container{float:left;width:95%;}
+#qti-carousel-container div {float:left;}
+div.qti-carousel-button {height:100%;width:2%;padding: 1px;}
+div.qti-carousel-button:hover {padding:0 2px 2px 1px;opacity:0.7;}
+div.qti-carousel-button img{top:23px; cursor:pointer; position:relative;}
+
+#tabs-qti{padding:0px;border:0 none;}
+
+ul#cssFiles li {padding-right:10%;}
+ul#cssFiles li span.cssFile-title{width:80%;}
+ul#cssFiles li span.cssFile-title a {}
+ul#cssFiles li span.cssFile-title a:hover{color:#BDBDBD;}
+ul#cssFiles a.cssFile-button{float:right;margin-right:5px;cursor:pointer;}
+a#a_cssFormToggleButton{float:left;margin-left:5px;cursor:pointer;}
+
+/*remove border*/
+div.xhtml_form div, div.xhtml_form div.form-group div div{border:0 none;}
+div.xhtml_form div.wysiwyg, div#canvas_formInteraction_object, div.xhtml_form div.qti-img-preview{border:1px solid #CCCCCC;}
+
+/*uploadify made smaller*/
+div.xhtml_form div.file-uploader .uploadifyQueueItem, .uploadifyQueueItem {width: auto;padding:auto;}
+div.xhtml_form div.file-uploader .uploadifyProgress, .uploadifyProgress {width: auto;}
+
+/*accordion sizing*/
+.ui-accordion .ui-accordion-header {cursor:pointer; height:16px; position:relative; overflow:hidden;}
+.ui-accordion .ui-accordion-header a {padding: 0 0 0 2.2em;font-weight: bold;}
+
+/*html area for the prompt input fields*/
+div.xhtml_form div textarea{width: 63%; vertical-align: top;}
+div.xhtml_form div div.wysiwyg{	width: 98%;}
+div.xhtml_form div div.wysiwyg iframe, div.xhtml_form div div.wysiwyg iframe html{width: 100% !important;}
+
+div.wysiwyg iframe.wysiwyg-item{width: 100%; min-height: 500px; height: 100%; margin: 4px 0 0;}
+div.wysiwyg iframe.wysiwyg-htmlarea{min-height: 100px; height: 100px;}
+div.wysiwyg iframe.wysiwyg-interaction{width: 100%; min-height: 100px; height: 200px;}
+
+/*choice buttons*/
+span.choice-button-delete, span.choice-button-advanced, span.choice-button-up, span.choice-button-down{float: left;}
+
+/*advanced choice properties group offset*/
+div.formContainer_choice div.xhtml_form div.form-group{	position:relative;left:20px;top:15px;width:85%;}
+
+div#formContainer_choices div.xhtml_form form{margin-bottom: 30px;}
+span.form-group-control{cursor:pointer;}
+
+/*sizing the main containers*/
+#qtiAuthoring_itemEditor{height: 580px;overflow:auto;padding-left:3px;}
+#qtiAuthoring_itemEditor > div.wysiwyg{height: 95%;padding: 0px 0px;border: none;}
+#qtiAuthoring_itemEditor > div.wysiwyg > ul.panel {width:98%;}
+
+#itemEditor_wysiwyg{position: relative;width:90%;}
+#interactionEditor_wysiwyg{position: relative;width:90%;}
+#qtiAuthoring_itemEditor li.add_qti_interaction{display:none !important;}
+
+/*placing item container*/
+div#qtiAuthoring_item_container.ui-tabs-panel.ui-widget-content{width: 100%;height: 100%;position: relative;top:0;left:0;padding:0;}
+#qtiAuthoring_item_left_container{float:left;height:584px;width:25%;padding:0px;}
+#qtiAuthoring_item_right_container{float:left;width:75%;padding:0px 0 0;}
+
+/*placing interaction container*/
+div#qtiAuthoring_interaction_container.ui-tabs-panel.ui-widget-content{width: 100%;height: 100%;position: relative;left:0;margin-top: 10px;padding:0;}
+
+#qtiAuthoring_interaction_left_container{float:left;width:60%;}
+
+#item_option_accordion > h3:first-child {margin: 0px;}
+
+#qtiAuthoring_interaction_right_container{float:left; width:40%; position:relative; top:0;}
+
+#qtiAuthoring_interactionEditor{padding-right: 10px;}
+
+div.qti-authoring-form-container{padding: 8px;}
+
+/*add choice & feedback buttons*/
+div.add_choice_button, div.add_feedback_button{min-height: 30px;margin: 10px 8px;}
+div.add_feedback_button {margin: 20px 8px 10px 10px;}
+div.add_choice_button a, div.add_feedback_button a{border-color:#CCCCCC #AAAAAA #AAAAAA #CCCCCC;	border-style:solid;border-width:1px;margin-left:0;margin-right:5px;padding:3px 6px;text-decoration:none;}
+div.add_choice_button a:hover, div.add_feedback_button a:hover{color:#D00239;}
+div.add_choice_button input{width:1em;}
+
+/*inputs sizing*/
+input#matchMax, input#object_width, input#object_height, input#maxPlays, input#minPlays {width:3em;}
+
+div.qti-authoring-form-container-column{float:left; width:48%; margin-left:4px;}
+
+/*response grid*/
+a.ui-jqgrid-titlebar-close{visibility: hidden;}
+
+/*response editor:*/
+#qtiAuthoring_responseEditor {min-height:300px;}
+#qtiAuthoring_response_title_fixed {position: absolute; right: 0; font-style: italic; font-weight: normal;}
+#qtiAuthoring_interaction_right_container.fixed {position:fixed; right:7px;}
+span.qti-response-button{float:right; margin:1px; cursor:pointer; opacity:0.6; border-width: 0;}
+span.qti-response-button:hover{margin:0px; border:1px solid #999999; opacity:1;}
+
+/*jwysiwyg action buttons: */
+div.wysiwyg ul.panel li.addInteraction{ background: url('../img/qtiAuthoring/application_view_gallery.png'); }
+div.wysiwyg ul.panel li.addGap{ background: url('../img/qtiAuthoring/add_gap.png'); }
+div.wysiwyg ul.panel li.addHottext{ background: url('../img/qtiAuthoring/add_hottext.png'); }
+div.wysiwyg ul.panel li.addMedia{ background: url('../img/qtiAuthoring/media-add.png'); }
+div.wysiwyg ul.panel li.addObject{ background: url('../img/qtiAuthoring/object-add.png'); }
+div.wysiwyg ul.panel li.addMath{ background: url('../img/qtiAuthoring/math-add.png'); }
+object div.qti-wysiwyg-mediabox{background: url('../img/qtiAuthoring/media-display.png');}
+
+/*style of the img inserting modal box*/
+#simplemodal-container{border: none;background-color: #BBBBBB;color: black;}
+
+form.wysiwyg label{text-align: left;margin: 10px 0px;}
+form#InteractionForm input#maxChoices{width:2em;}
+
+/*experimenting no save button at all*/
+form#InteractionForm div.form-toolbar{display: none;}
+form#Response_Form div.form-toolbar{display: none;}
+div#formInteraction_content_form_bottom{display: none;}
+
+#formInteraction_object_container {overflow:auto;}
+#formInteraction_object {margin:auto;position:relative;}
+#formInteraction_preview_container{overflow:auto;padding: 10px;}
+div#qtiAuthoring_interactionEditor #formInteraction_preview_container{margin-bottom: 20px;}
+
+#formInteraction_object_preview {margin:auto;position:relative;}
+#formInteraction_object_preview div.mejs-container{margin:auto;}
+#formInteraction_preview_container_title {font-size:1.3em; margin:20px 16px 5px;}
+
+img.shapeEditorPencil {cursor:pointer;margin:2px;position:relative;top:5px;}
+img.shapeEditorPencil:hover{opacity:0.7;margin:3px 3px 1px 1px;}
+
+div.xhtml_form div.form-toolbar a.form-submitter-emphasis {color:#D1043B; border-width:1px 3px 3px 1px;}
+div.xhtml_form div.form-toolbar a.form-submitter-emphasis:hover{color:red; border-color:#69E9FA #99E6F0 #99E6F0 #69E9FA;}
+
+/*Add space before mapped wysiwyg editor*/
+div#formContainer_interaction div.wysiwyg{margin-top:10px;}
+
+/*Adjust padding to add spaces in the accordion form*/
+div#item_option_accordion.ui-accordion div.ui-accordion-content{padding:1em;}
+form#ResponseProcessingForm div label {width:45%;}
+form#ResponseProcessingForm div.form-toolbar {top:10px;}
+
+div.wysiwyg div{padding:0;margin:0;}
+div.wysiwyg iframe{margin:0;}
+
+/*overwrite the xhmlt_form placement:*/
+div.xhtml_form div.form-toolbar {margin: 5px 5px 15px 2px;}
+
+div.choices-column-header, div#formInteraction_object_container_title {font-size:1.5em;padding:10px 0px;text-align:center;}
+
+div.qti-img-preview{text-align:center;min-height:150px;}
+div.qti-img-resize-slider{height: 5px;}
+div.qti-img-resize-slider>div.ui-slider-range{height:0px;}
+div.qti-img-resize-slider>a.ui-slider-handle{height:0.5em;width:0.1em;margin-left:-0.6em;top:-3px;}
+div#formInteraction_object_container>div.qti-img-resize-slider{top:3px;}
+
+span.qti-img-preview-label{font-style: italic;}
+div#formInteraction_object_container_title > span.qti-img-preview-label{font-size: 0.8em;}
+
+.qti-form-tip{font-style: italic;font-size:0.8em;}
+p.qti-form-tip{margin-left:30%;}
+span.qti-form-tip{margin-left: 1em;}
+
+div#qtiAuthoring_response_gridContainer p.qti-form-tip{margin:10px 10px 5px;}
+div#qtiAuthoring_response_gridContainer > span.ui-icon{float: left; margin: 10px 8px 20px 5px;}
+/*the object editor*/
+div#editObjectForm, div#editImageForm, div#modalFeedbackForm{height:100%;padding: 0;}
+div#editImageForm div.ui-widget-content, div#editObjectForm div.ui-widget-content, div#modalFeedbackForm div.ui-widget-content {border-width: 0;}
+div#editObjectForm label {width:15%;}
+div#editObjectForm input {width:3em;}
+div#editObjectForm input#data {margin-bottom: 16px;width:70%;}
+div#editObjectForm p.qti-form-tip{margin-left: 15%; margin-bottom: 5px;}
+
+form#Math_Form .form_desc{width:20%;}
+form#Math_Form input#tex {width:70%;}
+form#Math_Form textarea#mathML {height:200px;width:75%;}
+form#Math_Form p.qti-form-tip{margin-left: 20%; margin-bottom: 5px;}
+
+div#formObject_content_image div.ext-home-container {padding: 10px;}
+form#EditImageForm .form_desc{display: block; margin:10px 0;}
+form#EditImageForm input {width:85% !important;}
+div.form-error.ui-state-error {padding-left: 10px;}
+
+/*feedback editor*/
+div#qtiAuthoring_feedback_formContainer{margin-top: 10px;}
+div#qtiAuthoring_feedback_title{font-size: 12px;}
+div#qtiAuthoring_feedback_content{padding-top: 10px;}
+
+div#qtiAuthoring_feedback_list div{border: solid #AAAAAA 1px;max-width: 500px;}
+div#qtiAuthoring_feedback_list div.feedback-rule-if{border:none;margin-bottom: 20px;}
+
+div#qtiAuthoring_feedback_list div.feedback-rule-container {padding: 15px 10px;margin:10px; position:relative;background-color: #FCFCFC;border-color: #DDDDDD;}
+div.feedback-rule-container div{margin: 5px 0;}
+div.feedback-rule-container div.feedback-rule-then-else {position:relative; margin: 0 10%;background-color: #F8F8F8;}
+div.feedback-rule-container div.feedback-rule-then-else span.feedback-desc{margin: 0 10px;}
+
+input.qtiAuthoring-feedback-link{font-family: Verdana,Arial,sans-serif; font-size: 1em;margin:20px 0;padding: 1px;text-align:center;border: solid #999999 1px; background-color: #E9E9E9; font-weight: bold; color: #D1043B;}
+input.qtiAuthoring-feedback-link:hover{opacity: 0.7;}
+input.feedback-compared-value{width:2em;}
+
+span.feedback-desc{font-style: italic;margin: 0 5px;}
+
+a.feedback-button-add-else{position: absolute; right: 10px; bottom: 8px; font-size: 0.9em;color: #0000FF;}
+a.feedback-button-add-else:hover{text-decoration: underline;color: #D1043B;}
+span.feedback-button-delete{position: absolute; right:16px; top:16px;}
+span.feedback-button-delete:hover{opacity: 0.7;cursor: pointer;}
+
+div.feedback-rule-then-else span.feedback-button-delete{top:24px;}
+
+div#modalFeedbackForm iframe.wysiwyg-feedback{height:400px;min-height: 100px;width: 100%;}
+div#modalFeedbackForm input#title{width:70%;}
+div#formObject_errors a:hover{opacity:0.5;}
+
+div.qti-form-container{background-color: #FCFCFC;border: solid #DDDDDD 1px;}
+
+/*media element js*/
+div.mejs-controls div.mejs-time-rail .mejs-time-loaded {background: linear-gradient(rgba(208, 2, 57, 0.8), rgba(217, 37, 85, 0.8)) repeat scroll 0 0 transparent;}

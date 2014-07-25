@@ -1,0 +1,291 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO v2.4-beta3\n"
+"PO-Revision-Date: 2013-04-05T18:37:42\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: ar-arb\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "A QTI item file is an XML file following the version 2.0 of the QTI standard."
+msgstr ""
+
+msgid "A QTI package is a Zip archive containing a imsmanifest.xml file and the QTI resources to import."
+msgstr "Un paquet QTI est une archive Zip contenant un fichier imsmanifest.xml et les ressources QTI à importer."
+
+msgid "A series of different templates are provided to the Item authors such as multiple choice questions, puzzle design, text with gaps, etc."
+msgstr "Un ensemble de différents modèles est fourni aux auteurs d'items comme les questions à choix multiple, l'éditeur de puzzle, les textes à trou, etc."
+
+msgid "Add the source file"
+msgstr "إضافة الملف المصدر"
+
+msgid "An error occured during the import"
+msgstr "حدث خطأ أثناء الاستيراد"
+
+msgid "An error occured while loading the item: "
+msgstr ""
+
+msgid "An error occured while saving the item"
+msgstr "حدث خطأ أثناء تحميل الاختبار"
+
+msgid "An error occurs during the import"
+msgstr "حدث خطأ أثناء الاستيراد"
+
+msgid "An Open Web Item package is a Zip archive containing an index.html file with the XHTML 1.0 Transitional Doctype and resources (images, scripts, css, video, etc.)."
+msgstr ""
+
+#, tao-public
+msgid "Authoring"
+msgstr "التأليف"
+
+msgid "Back"
+msgstr "الرجوع"
+
+msgid "Class saved"
+msgstr "Classe enregistrée"
+
+msgid "clean up"
+msgstr "تنظيف"
+
+msgid "Client"
+msgstr "الزبون"
+
+msgid "close"
+msgstr "اغلاق"
+
+msgid "Content"
+msgstr "المحتوى"
+
+#, tao-public
+msgid "Create and design items and exercises."
+msgstr ""
+
+msgid "Debug Mode"
+msgstr "وضعيةالمنقحات"
+
+msgid "delete"
+msgstr "حذف"
+
+msgid "Disabled"
+msgstr "غير نشط"
+
+msgid "Download item content"
+msgstr ""
+
+msgid "duplicate"
+msgstr "تكرار"
+
+msgid "Edit Item"
+msgstr "تعديل السؤال"
+
+msgid "Edit item"
+msgstr "تعديل السؤال"
+
+msgid "Edit item class"
+msgstr ""
+
+msgid "Enabled"
+msgstr "نشط"
+
+msgid "Enables you to export a ZIP archive containing one folder for each exported item. Each  folder is composed by a main XML file (the item's data) and  by externals resources (media, manifests, etc.)"
+msgstr "Vous permais d'exporter une archive au format Zip contenant un dossier pour chaque item exporté. Chaque dossier est composé d'un fichier XML principal (les données de l'item) ainsi que de ressources externes (médias, manifets, etc.)"
+
+msgid "Enables you to export an IMS QTI Package."
+msgstr ""
+
+msgid "export"
+msgstr "تصدير"
+
+msgid "Export Options"
+msgstr "خيارات التصدير"
+
+msgid "Fake delivery"
+msgstr "Fausse passation"
+
+msgid "Fake process"
+msgstr "عملية خاطئة"
+
+msgid "Fake test"
+msgstr "اختبار خاطئ"
+
+msgid "File name"
+msgstr "اسم الملف"
+
+msgid "import"
+msgstr "استيراد"
+
+msgid "Item content saved"
+msgstr "تم حفظ محتوى السؤال"
+
+msgid "item content successfully imported"
+msgstr ""
+
+msgid "Item imported successfully"
+msgstr "تم استيراد الؤال بنجاح"
+
+msgid "item imported successfully"
+msgstr "تم استيراد السؤال بنجاح"
+
+msgid "Item saved"
+msgstr "تم حفظ السؤال"
+
+msgid "Item saving failed"
+msgstr ""
+
+msgid "Item successfully saved"
+msgstr ""
+
+msgid "item versioned content deleted"
+msgstr ""
+
+msgid "item versioned content saved"
+msgstr ""
+
+#, tao-public
+msgid "Items"
+msgstr "الاسئلة"
+
+msgid "items imported successfully"
+msgstr "تم استيراد السؤال بنجاح"
+
+msgid "Items library"
+msgstr ""
+
+msgid "lists"
+msgstr "القوائم"
+
+msgid "Manage item content"
+msgstr "ادارة محتوى السؤال"
+
+#, tao-public
+msgid "Manage items"
+msgstr "ادارة الاسئلة"
+
+msgid "Manage the item versioned content"
+msgstr ""
+
+msgid "Matching side"
+msgstr "Côté associé"
+
+msgid "Max filesize"
+msgstr ""
+
+msgid "MB"
+msgstr ""
+
+msgid "meta data"
+msgstr "بيانات التعريف"
+
+msgid "move"
+msgstr "التحرك"
+
+msgid "new class"
+msgstr "nouvelle classe"
+
+msgid "new item"
+msgstr "سؤال جديد"
+
+msgid "No item type selected for the current item."
+msgstr ""
+
+msgid "No items of could be imported successfuly"
+msgstr ""
+
+msgid "No user is logged in"
+msgstr "Aucun utilisateur authentifié"
+
+msgid "Not yet available"
+msgstr "غير متوفرة حتى الآن"
+
+msgid "Open Web Item Package"
+msgstr ""
+
+msgid "Options"
+msgstr "خيارات"
+
+msgid "Paper-based Item"
+msgstr ""
+
+msgid "Please select first the item type!"
+msgstr "!الرجاء اولا تحديد نوع السؤال"
+
+#, tao-public
+msgid "Preview"
+msgstr "معاينة"
+
+msgid "preview"
+msgstr "معاينة"
+
+msgid "PREVIEW BOX"
+msgstr "مربع المعاينة"
+
+msgid "Preview Console"
+msgstr "Moniteur de prévisualisation"
+
+msgid "QTI Item"
+msgstr ""
+
+msgid "QTI Package"
+msgstr ""
+
+msgid "Recovery context"
+msgstr "استرجاع المضمون"
+
+msgid "revision restored : "
+msgstr ""
+
+msgid "search"
+msgstr "بحث"
+
+msgid "Server"
+msgstr "الخادم"
+
+msgid "show/hide"
+msgstr "إظهار / إخفاء"
+
+msgid "the file was not uploaded successfully"
+msgstr ""
+
+msgid "The Items module enables the creation and design of items and exercises."
+msgstr "Le module Items vous permet la création et le design d'items et d'exercises."
+
+msgid "Unable to copy the resources"
+msgstr "لا يمكن نسخ الموارد"
+
+msgid "unable to extract archive content, please check your tmp dir"
+msgstr "لا يمكن استخراج محتويات الأرشيف"
+
+msgid "Unable to move"
+msgstr "لا يمكت التحريك"
+
+msgid "Upload a QTI Package File"
+msgstr "Télécharger un paquet QTI"
+
+msgid "Upload an Open Web Item Package File"
+msgstr ""
+
+msgid "Upload an paper-based Item"
+msgstr ""
+
+msgid "Upload QTI File"
+msgstr "QTI تحميل ملف"
+
+msgid "Upload the item content"
+msgstr "تحميل محتوى السؤال"
+
+msgid "Validation failed"
+msgstr ""
+
+msgid "Validation has failed"
+msgstr "فشل التحقق"
+
+msgid "Validation of the imported file has failed"
+msgstr "فشل التحقق من الملفات المستوردة"
+
+msgid "VersionedContent"
+msgstr ""
+
+msgid "wrong file format"
+msgstr ""
+

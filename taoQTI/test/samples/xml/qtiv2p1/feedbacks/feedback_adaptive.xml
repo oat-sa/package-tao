@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+	identifier="feedbackAdaptive" title="Mexican President with adaptive feedback" adaptive="true"
+	timeDependent="false">
+	<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+		<correctResponse>
+			<value>MGH001C</value>
+		</correctResponse>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="PREVIOUSRESPONSES" cardinality="multiple" baseType="identifier"/>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+	<outcomeDeclaration identifier="FEEDBACK" cardinality="multiple" baseType="identifier"/>
+	<itemBody>
+		<choiceInteraction responseIdentifier="RESPONSE" shuffle="false" maxChoices="1">
+			<prompt>Who is the President of Mexico?</prompt>
+			<simpleChoice identifier="MGH001A"> George W Bush <feedbackInline
+					outcomeIdentifier="FEEDBACK" identifier="MGH001A" showHide="show">No, he is the
+					President of the USA.</feedbackInline>
+			</simpleChoice>
+			<simpleChoice identifier="MGH001B"> Tony Blair <feedbackInline
+					outcomeIdentifier="FEEDBACK" identifier="MGH001B" showHide="show">No, he is the
+					Prime Minister of England.</feedbackInline>
+			</simpleChoice>
+			<simpleChoice identifier="MGH001C"> Vicente Fox <feedbackInline
+					outcomeIdentifier="FEEDBACK" identifier="MGH001C" showHide="show"
+				>Yes.</feedbackInline>
+			</simpleChoice>
+			<simpleChoice identifier="MGH001D"> Ariel Sharon <feedbackInline
+					outcomeIdentifier="FEEDBACK" identifier="MGH001D" showHide="show">No, he is the
+					Prime Minister of Israel.</feedbackInline>
+			</simpleChoice>
+		</choiceInteraction>
+		<feedbackBlock outcomeIdentifier="FEEDBACK" showHide="show" identifier="again">
+			<p>You already tried that option!</p>
+		</feedbackBlock>
+	</itemBody>
+	<responseProcessing>
+		<setOutcomeValue identifier="completionStatus">
+			<baseValue baseType="identifier">incomplete</baseValue>
+		</setOutcomeValue>
+		<responseCondition>
+			<responseIf>
+				<lt>
+					<variable identifier="numAttempts"/>
+					<baseValue baseType="integer">3</baseValue>
+				</lt>
+				<setOutcomeValue identifier="FEEDBACK">
+					<multiple>
+						<baseValue baseType="identifier">tryAgain</baseValue>
+					</multiple>
+				</setOutcomeValue>
+			</responseIf>
+			<responseElseIf>
+				<lt>
+					<variable identifier="numAttempts"/>
+					<baseValue baseType="integer">4</baseValue>
+				</lt>
+				<setOutcomeValue identifier="FEEDBACK">
+					<multiple>
+						<baseValue baseType="identifier">oneMore</baseValue>
+					</multiple>
+				</setOutcomeValue>
+			</responseElseIf>
+			<responseElse>
+				<setOutcomeValue identifier="FEEDBACK">
+					<multiple>
+						<baseValue baseType="identifier">giveUp</baseValue>
+					</multiple>
+				</setOutcomeValue>
+				<setOutcomeValue identifier="completionStatus">
+					<baseValue baseType="identifier">completed</baseValue>
+				</setOutcomeValue>
+			</responseElse>
+		</responseCondition>
+		<responseCondition>
+			<responseIf>
+				<match>
+					<variable identifier="RESPONSE"/>
+					<correct identifier="RESPONSE"/>
+				</match>
+				<setOutcomeValue identifier="SCORE">
+					<baseValue baseType="float">1</baseValue>
+				</setOutcomeValue>
+				<setOutcomeValue identifier="completionStatus">
+					<baseValue baseType="identifier">completed</baseValue>
+				</setOutcomeValue>
+				<setOutcomeValue identifier="FEEDBACK">
+					<variable identifier="RESPONSE"/>
+				</setOutcomeValue>
+			</responseIf>
+			<responseElse>
+				<setOutcomeValue identifier="SCORE">
+					<baseValue baseType="float">0</baseValue>
+				</setOutcomeValue>
+				<setOutcomeValue identifier="FEEDBACK">
+					<multiple>
+						<variable identifier="FEEDBACK"/>
+						<variable identifier="RESPONSE"/>
+					</multiple>
+				</setOutcomeValue>
+			</responseElse>
+		</responseCondition>
+		<responseCondition>
+			<responseIf>
+				<member>
+					<variable identifier="PREVIOUSRESPONSES"/>
+					<variable identifier="RESPONSE"/>
+				</member>
+				<setOutcomeValue identifier="FEEDBACK">
+					<multiple>
+						<variable identifier="FEEDBACK"/>
+						<baseValue baseType="identifier">again</baseValue>
+					</multiple>
+				</setOutcomeValue>
+			</responseIf>
+			<responseElse>
+				<setOutcomeValue identifier="PREVIOUSRESPONSES">
+					<multiple>
+						<variable identifier="PREVIOUSRESPONSES"/>
+						<variable identifier="RESPONSE"/>
+					</multiple>
+				</setOutcomeValue>
+				<setOutcomeValue identifier="FEEDBACK">
+					<delete>
+						<variable identifier="FEEDBACK"/>
+						<baseValue baseType="identifier">again</baseValue>
+					</delete>
+				</setOutcomeValue>
+			</responseElse>
+		</responseCondition>
+	</responseProcessing>
+	<modalFeedback outcomeIdentifier="FEEDBACK" identifier="MGH001C" showHide="show">Yes, that is
+		correct.</modalFeedback>
+	<modalFeedback outcomeIdentifier="FEEDBACK" identifier="tryAgain" showHide="show">No, that is
+		not correct.</modalFeedback>
+	<modalFeedback outcomeIdentifier="FEEDBACK" identifier="oneMore" showHide="show">No, that is not
+		correct, try one more time.</modalFeedback>
+	<modalFeedback outcomeIdentifier="FEEDBACK" identifier="giveUp" showHide="show">No, the correct
+		answer is Vicente Fox.</modalFeedback>
+</assessmentItem>

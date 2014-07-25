@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p0 imsqti_v2p0.xsd"
+    identifier="inlineChoice" title="Richard III (Take 2)" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+        <correctResponse>
+            <value>Y</value>
+        </correctResponse>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+    <itemBody>
+        <p>Identify the missing word in this famous quote from Shakespeare's Richard III.</p>
+        <blockquote>
+            <p>Now is the winter of our discontent<br/> Made glorious summer by this sun of
+                <inlineChoiceInteraction responseIdentifier="RESPONSE" shuffle="false">
+                    <inlineChoice identifier="G">Gloucester</inlineChoice>
+                    <inlineChoice identifier="L">Lancaster</inlineChoice>
+                    <inlineChoice identifier="Y">York</inlineChoice>
+                </inlineChoiceInteraction>;<br/> And all the clouds that lour'd upon our house<br/>
+                In the deep bosom of the ocean buried.</p>
+        </blockquote>
+    </itemBody>
+    <responseProcessing template="http://www.imsglobal.org/question/qti_v2p0/rptemplates/match_correct"/>
+</assessmentItem>

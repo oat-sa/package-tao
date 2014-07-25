@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+	xml:base="http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#" 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:funcacl="http://www.tao.lu/Ontologies/taoFuncACL.rdf#"
+> 
+  <rdf:Description rdf:about="http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#Instructor">
+  	<funcacl:grantAccessModule rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#m_ltiDeliveryProvider_LinkConfiguration" />
+  	<funcacl:grantAccessAction rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#a_taoDelivery_Delivery_getOntologyData" />
+  </rdf:Description>
+ </rdf:RDF>

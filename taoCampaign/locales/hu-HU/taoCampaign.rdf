@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage hu-HU
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAODelivery.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#Campaign">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage hu-HU
+    @source Campaign
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#Campaign
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="hu-HU"><![CDATA[Campaign]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage hu-HU
+    @source Campaign
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#Campaign
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="hu-HU"><![CDATA[Campaign]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryCampaign">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage hu-HU
+    @source Campaign
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryCampaign
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="hu-HU"><![CDATA[Campaign]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage hu-HU
+    @source Campaign
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryCampaign
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="hu-HU"><![CDATA[Campaign]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#CampaignStart">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage hu-HU
+    @source Campaign Start
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CampaignStart
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="hu-HU"><![CDATA[Campaign Start]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage hu-HU
+    @source The start date of the campaign
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CampaignStart
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="hu-HU"><![CDATA[The start date of the campaign]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#CampaignEnd">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage hu-HU
+    @source Campaign End
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CampaignEnd
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="hu-HU"><![CDATA[Campaign End]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage hu-HU
+    @source The end date of the campaign
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CampaignEnd
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="hu-HU"><![CDATA[The end date of the campaign]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,14 @@
+php_flag short_open_tag on
+php_value mbstring.internal_encoding UTF-8
+
+Options +FollowSymLinks
+
+<IfModule mod_rewrite.c>
+	# This environment variable indicates that mod rewrite is activated.
+	# Very useful for a later PHP check.
+	SetEnv HTTP_MOD_REWRITE On
+	RewriteEngine On
+
+	RewriteCond %{REQUEST_URI}	(.*)/test(/?)$ [NC]
+	RewriteRule ^(.*)$	/taoDelivery/DeliveryServerAuthentification/index [R]
+</IfModule>

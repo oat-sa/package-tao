@@ -1,0 +1,14 @@
+Options +FollowSymLinks
+Options +Indexes
+RewriteEngine On
+
+#don't macth resources and tests
+RewriteCond %{REQUEST_URI} !/views/  [NC]
+RewriteCond %{REQUEST_URI} !/test/  [NC]
+RewriteCond %{REQUEST_URI} !/doc/  [NC]
+RewriteCond %{REQUEST_URI} !/install/  [NC]
+RewriteCond %{REQUEST_URI} !/locales/  [NC]
+#call entry point for url resolving and framework bootstrap
+RewriteRule ^(.*)$ index.php [L]
+
+

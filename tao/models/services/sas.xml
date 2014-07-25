@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE services SYSTEM "../../tao/doc/sas.dtd">
+<services>
+	<description>tao services</description>
+	<service>
+		<name>Tao view users</name>
+		<description>View the users</description>
+		<location url="/tao/SaSUsers/viewGrid">
+		</location>
+	</service>
+</services>

@@ -1,0 +1,81 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+@CHARSET "UTF-8";
+
+/* Styles of widgets */
+
+/* Sortable lists */
+ul.sortable-list{
+ 	 list-style-type: none; 
+	 margin: 0; 
+	 padding: 0; 
+}
+ol.sortable-list{
+	margin: 0px 0px 0px 20px; 
+	padding: 0px 0px 0px 10px;
+}
+ul.sortable-list li,
+ol.sortable-list li{
+	 margin: 0 3px 3px 3px; 
+	 padding: 4px; 
+	 padding-left: 25px; 
+	 line-height: 18px;
+	 position:relative;
+}
+ul.sortable-list li.ui-state-error,
+ol.sortable-list li.ui-state-error{
+	height:20px;
+}
+ul.sortable-list li:hover,
+ol.sortable-list li:hover{
+	color:#D00239;
+	cursor: pointer;
+}
+ul.sortable-list.ui-sortable-disabled li:hover,
+ol.sortable-list.ui-sortable-disabled li:hover{
+	color:#555;
+	cursor:inherit;
+}
+
+ul.sortable-list li span.ui-icon,
+ol.sortable-list li span.ui-icon { 
+	position:absolute;
+}
+ul.sortable-list li span.ui-icon-arrowthick-2-n-s,
+ol.sortable-list li span.ui-icon-arrowthick-2-n-s{
+	margin:0px 0px 0px -15px;
+	z-index: 50;
+}
+ul.sortable-list li span.ui-icon-grip-dotted-vertical,
+ol.sortable-list li span.ui-icon-grip-dotted-vertical{
+	margin:0px 0px 0px -25px;
+	z-index: 50;
+}
+ul.sortable-list li span.ui-icon-circle-close,
+ol.sortable-list li span.ui-icon-circle-close{
+	right: 10px;
+	margin-top:-20px;
+	z-index: 1000;
+}
+
+/** jquery.timePicker style */
+.ui-datepicker .ui-state-default{
+    padding:0;
+}

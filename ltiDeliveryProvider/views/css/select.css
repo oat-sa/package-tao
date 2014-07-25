@@ -1,0 +1,38 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+ 
+ /* inspired by delivery main.css */
+ 
+.section_title
+{
+	color: black;
+	font-weight: bold;
+	padding-left: 20px;
+	padding-top: 5px;
+	background: #f3f3f3;
+	border: solid 1px #ccc;
+	font-size: 16px;
+	border-bottom: 1px solid;
+	border-bottom-color: #ddd;
+	margin:0px;
+	height:22px;
+	vertical-align: middle;
+
+}

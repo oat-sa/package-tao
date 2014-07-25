@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage EN
+    @targetLanguage it-IT
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAOLTI.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIRole">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage it-IT
+    @source LTI Roles
+    @subject http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="it-IT"><![CDATA[LTI Roles]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#RoleURN">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage it-IT
+    @source URN
+    @subject http://www.tao.lu/Ontologies/TAOLTI.rdf#RoleURN
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="it-IT"><![CDATA[URN]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage it-IT
+    @source LTI Uniform Resource Name(deprecated)
+    @subject http://www.tao.lu/Ontologies/TAOLTI.rdf#RoleURN
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="it-IT"><![CDATA[LTI Uniform Resource Name(deprecated)]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

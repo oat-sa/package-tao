@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<rdf:RDF
+	xml:base="http://www.tao.lu/Ontologies/TAOTest.rdf#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:test="http://www.tao.lu/Ontologies/TAOTest.rdf#"
+>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOTest.rdf#SimpleTestModel">
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOTest.rdf#TestModel"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[simple]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[simple test model]]></rdfs:comment>
+    <test:TestModelImplementation><![CDATA[taoWfTest_models_classes_WfTestModel]]></test:TestModelImplementation>
+  </rdf:Description>
+</rdf:RDF>

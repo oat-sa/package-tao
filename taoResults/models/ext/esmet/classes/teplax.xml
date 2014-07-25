@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<taoEvents>
+    <taoEvent Name='stimulus' Type='RADIO_BTN' Time='NaN'>id=choice1</taoEvent>
+    <taoEvent Name='stimulus' Type='BUTTON' Time='NaN'>id=btn_back</taoEvent>
+
+    <taoEvent Name='stimulus' Type='BUTTON' Time='NaN'>id=btn_next</taoEvent>
+    <taoEvent Name='stimulus' Type='BUTTON' Time='NaN'>id=btn_next</taoEvent>
+        
+
+    <taoEvent Name='stimulus' Type='BUTTON' Time='NaN'>id=btn_next3</taoEvent>
+    <taoEvent Name='stimulus' Type='BUTTON' Time='NaN'>id=btn_next</taoEvent>
+    <taoEvent Name='stimulus' Type='BUTTON' Time='NaN'>id=btn_next</taoEvent>
+    <taoEvent Name='stimulus' Type='BUTTON' Time='NaN'>id=btn_next</taoEvent>
+    <taoEvent Name='stimulus' Type='BUTTON' Time='NaN'>id=btn_next1</taoEvent>
+    <taoEvent Name='stimulus' Type='BUTTON' Time='NaN'>id=btn_next</taoEvent>
+    <taoEvent Name='stimulus' Type='BUTTON' Time='NaN'>id=btn_next4</taoEvent>
+    <taoEvent Name='stimulus' Type='BUTTON' Time='NaN'>id=btn_next</taoEvent>
+    <taoEvent Name='stimulus' Type='BUTTON' Time='NaN'>id=btn_next</taoEvent>
+
+    <taoEvent Name='stimulus' Type='BUTTON' Time='NaN'>id=btn_back</taoEvent>
+<taoEvent Name='stimulus' Type='BUTTON' Time='NaN'>id=btn_next4</taoEvent>
+    <taoEvent Name='stimulus' Type='BUTTON' Time='NaN'>id=btn_next2</taoEvent>
+    
+    <taoEvent Name='stimulus' Type='BUTTON' Time='NaN'>id=btn_next1</taoEvent>
+
+
+    <taoEvent Name='stimulus' Type='BUTTON' Time='NaN'>id=btn_calculate</taoEvent>
+    <taoEvent Name='stimulus' Type='RADIO_BTN' Time='NaN'>id=choice3</taoEvent>
+    <taoEvent Name='stimulus' Type='TEXTBOX_ONFOCUS' Time='NaN'>id=txt_comment|*$value=</taoEvent>
+    <taoEvent Name='stimulus' Type='TEXTBOX_KILLFOCUS' Time='NaN'>id=txt_comment|*$value=</taoEvent>
+    <taoEvent Name='stimulus' Type='TEXTBOX_ONFOCUS' Time='NaN'>id=txt_comment|*$value=</taoEvent>
+    <taoEvent Name='stimulus' Type='TEXTBOX_KILLFOCUS' Time='NaN'>id=txt_comment|*$value=</taoEvent>
+    <taoEvent Name='taoHAWAI' Type='END' Time='NaN'>END</taoEvent>
+    
+</taoEvents>

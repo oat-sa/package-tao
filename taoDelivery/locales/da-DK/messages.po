@@ -1,0 +1,229 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO v2.5-alpha\n"
+"PO-Revision-Date: 2013-09-02T11:40:21\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: da-DK\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "A delivery must to be compiled before being executed. The compilation can be done here."
+msgstr "En leverance skal sammensættes før den kan udføres. Sammensætningen kan ske her."
+
+msgid "A recompilation is also required after modification on the tests composing a delivery."
+msgstr "En ny sammensætning kræves efter hver ændring af en test leverance."
+
+msgid "Access denied. Please renew your authentication!"
+msgstr "Adgang nægtet. Forny din adgangskode!"
+
+msgid "Actions"
+msgstr "Handlinger"
+
+msgid "Active Deliveries"
+msgstr "Aktive leverancer"
+
+msgid "An error occured during history deletion"
+msgstr "En fejl opstod under sletning af historik"
+
+msgid "An undefined error has occured"
+msgstr ""
+
+msgid "Back"
+msgstr "Tilbage"
+
+msgid "Change..."
+msgstr ""
+
+msgid "Compilation"
+msgstr "Sammensætning"
+
+msgid "Compilation of the delivery"
+msgstr "Sammensætning af leverancen"
+
+msgid "Compile"
+msgstr "Sammensætte"
+
+msgid "complete!"
+msgstr "færdig!"
+
+msgid "delete"
+msgstr "slet"
+
+msgid "Delete"
+msgstr "Slet"
+
+msgid "Delete History"
+msgstr "Slet historik"
+
+#, tao-public
+msgid "Deliveries"
+msgstr "Leverance"
+
+msgid "Deliveries library"
+msgstr "Leverance arkiv"
+
+msgid "Delivery Class saved"
+msgstr "Leverance klasse gemt"
+
+msgid "delivery executions"
+msgstr "leverance udførelse"
+
+msgid "Delivery properties"
+msgstr "Leverance egenskaber"
+
+msgid "Delivery saved"
+msgstr "Leverance gemt"
+
+msgid "Delivery Type"
+msgstr ""
+
+msgid "duplicate"
+msgstr "kopier"
+
+msgid "Edit delivery class"
+msgstr "Redigere leverance klasse"
+
+msgid "Editing a delivery involves setting the tests composing the delivery and their sequence, as well as the delivery executing parameters: the maximum number of execution per subject, the delivery period, the result server."
+msgstr "At redigere en leverance involvere en fastsætte test genem at arrangere leverancen og deres indholds rækkefølge: det maksimale antal igangsættelser pr. emne, leverance periode, resultatserver."
+
+msgid "Execution History"
+msgstr "gennemførelses historik"
+
+msgid "export"
+msgstr "eksportere"
+
+msgid "Finished Test"
+msgstr "Afslut test"
+
+msgid "Forward"
+msgstr "Fremad"
+
+msgid "Generating the delivery process, please wait"
+msgstr "Opretter leverance processen, vent"
+
+msgid "History"
+msgstr "Historik"
+
+msgid "History deleted successfully"
+msgstr "Historik slettet"
+
+msgid "import"
+msgstr "importeret"
+
+msgid "Initialize new test"
+msgstr "Initialisere ny test"
+
+msgid "Invalid login or password. Please try again."
+msgstr "Ingen konto matcher den angivne brugernavn / adgangskode"
+
+msgid "Loading next item..."
+msgstr "Henter næste item..."
+
+msgid "Login to the TAO Delivery Server"
+msgstr ""
+
+msgid "Logout"
+msgstr "Log ud"
+
+msgid "LTI export"
+msgstr ""
+
+#, tao-public
+msgid "Manage deliveries"
+msgstr "Administrere leverancer"
+
+msgid "move"
+msgstr "flyt"
+
+msgid "new class"
+msgstr "ny klasse"
+
+msgid "new delivery"
+msgstr "ny leverance"
+
+msgid "Note: please make sure that all tests that make up the delivery are well defined and set to \"active\" in the test extension before compiling the delivery."
+msgstr "OBS: vær sikker på at alle test der skal leveres er defineret og sat til \"aktiv\" i test udvidelsen, før sammensætningen af leverancen."
+
+msgid "Participating groups"
+msgstr ""
+
+msgid "Pause"
+msgstr "Pause"
+
+msgid "Please confirm history deletion"
+msgstr "Bekræft sletning af histiorik"
+
+msgid "Please select a valid result server in the delivery editing section then try again.<br/>(No valid wsdl contract found for the defined result server)"
+msgstr "Vælg en gyldig resultatserver i leverance redigeringssektionen, forsøg igen.<br>(Intet gyldigt wsdl-kontrakt findes for den definerede resultat server)"
+
+#, tao-public
+msgid "Prepare, publish deliveries sessions."
+msgstr ""
+
+msgid "Recompile"
+msgstr "Sammensæt igen"
+
+msgid "Recompile the delivery"
+msgstr "Sammensæt leverancen igen"
+
+msgid "search"
+msgstr "søg"
+
+msgid "Select a test"
+msgstr "Vælg en test"
+
+msgid "Select test takers to be <b>excluded</b>"
+msgstr "Vælg test tagere som skal <b>ekskluderes</b>"
+
+msgid "Start/Resume the test"
+msgstr "Start/genoptag test"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "TAO - An Open and Versatile Computer-Based Assessment Platform"
+msgstr "TAO - En åben, smidig og mangesidig testplatformplattform"
+
+msgid "TAO Delivery Server"
+msgstr "TAO leverance server"
+
+msgid "Test Taker"
+msgstr "Test Tager"
+
+msgid "Test Takers"
+msgstr ""
+
+msgid "The Deliveries module allows users to define tests deliveries parameters."
+msgstr "Leverance modulet lader brugere definere testleverance parameter."
+
+msgid "The delivery is not compiled yet"
+msgstr "Leverancen er ikke sammenstat endnu"
+
+msgid "The delivery was last compiled on"
+msgstr "Leverancen sammensættes senest"
+
+msgid "the login must not be empty"
+msgstr "brugernavn må ikke være tomt"
+
+msgid "the password must not be empty"
+msgstr "adgangskode må ikke være tomt"
+
+msgid "There are currently"
+msgstr "Der er i øjeblikket"
+
+msgid "There is currently no delivery execution."
+msgstr "Der er i øjeblikket ingen leverings udførelse."
+
+msgid "This Deliveries Management Section allows to add and delete deliveries and to edit their properties values."
+msgstr "Denne leverance administrationssektion lader dig tillægge og fjerne leverancer samt redigere deres egenskaber."
+
+msgid "Time"
+msgstr "Tid"
+
+msgid "User name:"
+msgstr "Bruger navn:"
+
+msgid "View History"
+msgstr "Vis Historik"
+

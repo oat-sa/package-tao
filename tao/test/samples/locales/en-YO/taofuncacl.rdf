@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/taoFuncACL.rdf">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#Action">
+    <rdfs:label xml:lang="en-YO"><![CDATA[an action]]></rdfs:label>
+    <rdfs:comment xml:lang="en-YO"><![CDATA[an action]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#Module">
+    <rdfs:label xml:lang="en-YO"><![CDATA[a module]]></rdfs:label>
+    <rdfs:comment xml:lang="en-YO"><![CDATA[a module]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#grantAccessAction">
+    <rdfs:label xml:lang="en-YO"><![CDATA[give access to a action]]></rdfs:label>
+    <rdfs:comment xml:lang="en-YO"><![CDATA[give access to a action]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#grantAccessModule">
+    <rdfs:label xml:lang="en-YO"><![CDATA[give access to a module]]></rdfs:label>
+    <rdfs:comment xml:lang="en-YO"><![CDATA[give access to a module]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#actionIdentifier">
+    <rdfs:label xml:lang="en-YO"><![CDATA[Identifier]]></rdfs:label>
+    <rdfs:comment xml:lang="en-YO"><![CDATA[Identifier of the action]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#actionMemberOf">
+    <rdfs:label xml:lang="en-YO"><![CDATA[member of]]></rdfs:label>
+    <rdfs:comment xml:lang="en-YO"><![CDATA[member of a module]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#moduleIdentifier">
+    <rdfs:label xml:lang="en-YO"><![CDATA[Identifier]]></rdfs:label>
+    <rdfs:comment xml:lang="en-YO"><![CDATA[Identifier of the module]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#moduleExtension">
+    <rdfs:label xml:lang="en-YO"><![CDATA[extension]]></rdfs:label>
+    <rdfs:comment xml:lang="en-YO"><![CDATA[extension of the module]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

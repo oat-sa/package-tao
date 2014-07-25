@@ -1,0 +1,76 @@
+/**  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ 
+ * Copyright (c) 2013 (original work) Open Assessment Technologies SA (under the project TAO-PRODUCT);
+ * 
+ */
+body{
+	background-color: #eee;
+	font-family: Verdana, Arial, sans-serif;
+	color: #3A3A3A;
+}
+
+.row{
+    position: relative;
+    margin-bottom: 10px;    
+}
+
+label{
+	margin-bottom: 15px;
+	color: #222222; 
+    margin-left: 20px;
+    margin-top: 10px;
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+}
+
+.row div{
+    display: inline-block;
+    width: 60%;
+    vertical-align: top;
+}
+
+.description{
+    margin: 10px;
+	margin-left: 20px;
+	color: #666666;
+	font-style: italic;
+}
+
+.warning{
+    margin: 10px;
+	margin-left: 20px;
+	padding: 5px;
+    background: #FEF1EC;
+    border: 1px solid #CD0A0A;
+    color: #CD0A0A;
+}
+
+#copyPasteBox{
+    border-style:solid;
+    border-width:1px;
+	width: 100%;
+	font-family: monospace;
+}
+
+ul {
+    padding-left: 14px;
+}
+
+
+.emptyList {
+    color: #999999;
+}
