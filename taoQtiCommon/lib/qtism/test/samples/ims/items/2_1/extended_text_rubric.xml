@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Thie example adapted from the PET Handbook, copyright University of Cambridge ESOL Examinations -->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+	identifier="extendedText" title="Writing a Postcard with rubric" adaptive="false" timeDependent="false">
+	<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="string"/>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+	<itemBody>
+		<p>Read this postcard from your English pen-friend, Sam.</p>
+		<div>
+			<object type="image/png" data="images/postcard.png">
+				<blockquote class="postcard">
+					<p>Here is a postcard of my town. Please send me<br/> a postcard from your town.
+						What size is your<br/> town? What is the nicest part of your town?<br/>
+						Where do you go in the evenings?<br/> Sam.</p>
+				</blockquote>
+			</object>
+		</div>
+		<extendedTextInteraction responseIdentifier="RESPONSE" expectedLength="200">
+			<prompt>Write Sam a postcard. Answer the questions. Write 25-35 words.</prompt>
+		</extendedTextInteraction>
+		<rubricBlock view="scorer">
+			<h1>Scoring Guidelines</h1>
+			<div>
+				<p><b>Max Score:</b> 3.0 points</p>
+				<p><b>Scoring:</b></p>
+				<ul>
+					<li>When not all 3 questions are answered in the response: -1 for each missing.</li>
+					<li>Check for gramatical errors: -0.1 per error.</li>
+					<li>Possibly add in .1 increments extra bonus points for extra good answers.</li>
+				</ul>
+			</div>
+		</rubricBlock>
+	</itemBody>
+</assessmentItem>

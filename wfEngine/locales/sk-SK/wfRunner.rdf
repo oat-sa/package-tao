@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage sk-SK
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/middleware/wfEngine.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#FormalParamProcessDefinition">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sk-SK
+    @source Process Definition
+    @subject http://www.tao.lu/middleware/wfEngine.rdf#FormalParamProcessDefinition
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="sk-SK"><![CDATA[Process Definition]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sk-SK
+    @source Process Definition Uri
+    @subject http://www.tao.lu/middleware/wfEngine.rdf#FormalParamProcessDefinition
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="sk-SK"><![CDATA[Process Definition Uri]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#FormalParamProcessVariables">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sk-SK
+    @source Process Variables
+    @subject http://www.tao.lu/middleware/wfEngine.rdf#FormalParamProcessVariables
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="sk-SK"><![CDATA[Process Variables]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sk-SK
+    @source Process Variables Array
+    @subject http://www.tao.lu/middleware/wfEngine.rdf#FormalParamProcessVariables
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="sk-SK"><![CDATA[Process Variables Array]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ProcessDefinitionRunner">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sk-SK
+    @source Process Runner
+    @subject http://www.tao.lu/middleware/wfEngine.rdf#ProcessDefinitionRunner
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="sk-SK"><![CDATA[Process Runner]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sk-SK
+    @source Runs a process definition using the workflow engine
+    @subject http://www.tao.lu/middleware/wfEngine.rdf#ProcessDefinitionRunner
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="sk-SK"><![CDATA[Runs a process definition using the workflow engine]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

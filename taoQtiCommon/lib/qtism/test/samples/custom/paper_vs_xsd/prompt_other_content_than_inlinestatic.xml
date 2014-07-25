@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+This file aims at testing/exploring the rupture between the "paper based specification"* and the IMS QTI 2.1 XML
+Schema Definition. Indeed, the "paper based specification" describes the QTI prompt class as a bodyElement containing
+only QTI inlineStatick elements.
+
+In the IMS QTI 2.1 XML Schema Definition, the definition of Prompt.Type is far more relaxing.
+
+This test file focuses on creating a prompt containing other QTI classes than the one described in the "paper based specification"
+and see what happens with loading this file with and without the the XML Schema Validation.
+
+* http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html#element10252
+
+FYI, the XSD of IMS QTI 2.1 allow the following QTI classes to be direct children of prompt:
+
+math (inline, block)
+include (inline, block)
+h1 (block)
+h2 (block)
+h3 (block)
+h4 (block)
+h5 (block)
+h6 (block)
+p (block)
+address (block)
+dl (block)
+ol  (block)
+ul (block)
+br (inline)
+hr (block)
+img (inline)
+object (inline)
+blockquote (block)
+em (inline)
+a (inline)
+code (inline)
+span (inline)
+sub (inline)
+acronym (inline)
+big (inline)
+tt (inline)
+kbd (inline)
+q (inline)
+i (inline)
+dfn (inline)
+abbr (inline)
+strong (inline)
+sup (inline)
+var (inline)
+small (inline)
+samp (inline)
+b (inline)
+cite (inline)
+table (block)
+div (block)
+
+Conclusion, h1, h2, h3, h4, h5, h6, p, address, dl, ol, ul, hr, blockquote, table, div are out of the inlineStatic set. It's a lot of people ;).
+
+It seems that, at a runtime point of view, the content of prompts must be extdended to flowStatic to cover all these QTI classes.
+Unfortunately, accept flowStatic elements will include other elements to the possible list of prompt direct children candidates,
+that should not appear directly into a prompt.
+
++ pre
++ hottext
++ printedVariable
++ templateBlock
++ templateInline
++ infoControl
++ feedbackBlock
++ rubricBlock
++ a
++ feedbackInline
+
+So we'll have to find an agreement :) !
+ -->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+    identifier="prompt_other_content_than_inlineStatic" title="Prompt containing other stuff than inlineStatic elements" timeDependent="false">
+    
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier"/>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+    	<defaultValue>
+    		<value>0</value>
+    	</defaultValue>
+    </outcomeDeclaration>
+    <itemBody>
+    	<choiceInteraction responseIdentifier="RESPONSE" maxChoices="1">
+    		<prompt>Hell <div>YEAH!</div></prompt>
+    		<simpleChoice identifier="onechoice">Resistance is futile!</simpleChoice>
+    	</choiceInteraction>
+    </itemBody>
+    <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+</assessmentItem>

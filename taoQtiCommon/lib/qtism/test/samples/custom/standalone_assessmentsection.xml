@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentSection xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+	identifier="sectionA" title="Section A" visible="true">
+	<rubricBlock view="candidate">
+		<p>Instructions for Section A</p>
+	</rubricBlock>
+	<assessmentItemRef identifier="item034" href="item034.xml">
+		<weight identifier="WEIGHT" value="2"/>
+	</assessmentItemRef>
+	<assessmentItemRef identifier="item160" href="item160.xml">
+		<weight identifier="WEIGHT" value="0"/>
+	</assessmentItemRef>
+	<!-- undefined weights default to 1 -->
+    <assessmentItemRef identifier="item063" href="item063.xml"/>
+</assessmentSection>

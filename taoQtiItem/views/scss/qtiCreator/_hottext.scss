@@ -1,0 +1,35 @@
+@import "inc/bootstrap";
+
+.qti-hottextInteraction {
+    .qti-hottext{
+        input[disabled] ~ [class^="icon-"]{
+            cursor:pointer !important;
+        }
+        .mini-tlb{
+            display:inline-block;
+            postion:absolute;
+            right:-30px;
+            z-index:1000;
+        }
+    }
+    .qti-flow-container{
+        position:relative;
+        [data-html-editable]{
+            min-height:3rem;
+        }
+        .mini-tlb[data-role=create-hottext-tlb]{
+            postion:absolute;
+            right:-30px;
+        }
+        #selection-wrapper{
+            z-index:1000;
+            position:relative;
+        }
+    }
+    
+    input.score {
+        width: 30px;
+        min-width: 30px;
+        padding: 0 2px;
+    }
+}

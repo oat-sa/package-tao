@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="item8math" title="Item 8" adaptive="false" timeDependent="false" xml:lang="en-US">
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+        <correctResponse>
+            <value>Choice_1</value>
+        </correctResponse>
+    </responseDeclaration>
+    <responseDeclaration identifier="RESPONSE_1" cardinality="single" baseType="pair">
+        <correctResponse>
+            <value>Choice_4 Choice_5</value>
+        </correctResponse>
+        <mapping defaultValue="0" lowerBound="0" upperBound="2">
+            <mapEntry mapKey="Choice_4 Choice_5" mappedValue="2"/>
+        </mapping>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+    <itemBody>
+        <p> Find the value of <m:math id="mathML0">
+                <m:semantics>
+                    <m:mstyle>
+                        <m:mrow class="MJX-TeXAtom-ORD">
+                            <m:mi>x</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mrow class="MJX-TeXAtom-ORD">
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mo>&#x2212;<!-- − --></m:mo>
+                                        <m:mi>b</m:mi>
+                                        <m:mo>&#x00B1;<!-- ± --></m:mo>
+                                        <m:msqrt>
+                                            <m:msup>
+                                                <m:mi>b</m:mi>
+                                                <m:mn>2</m:mn>
+                                            </m:msup>
+                                            <m:mo>&#x2212;<!-- − --></m:mo>
+                                            <m:mn>4</m:mn>
+                                            <m:mi>a</m:mi>
+                                            <m:mi>c</m:mi>
+                                        </m:msqrt>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mn>2</m:mn>
+                                        <m:mi mathvariant="normal">&#x0394;<!-- Δ --></m:mi>
+                                    </m:mrow>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:mrow>
+                    </m:mstyle>
+                    <m:annotation encoding="tex">x = {-b \pm \sqrt{b^2-4ac} \over 2\beta}</m:annotation>
+                </m:semantics>
+            </m:math> to 3 decimal places.</p>
+        <choiceInteraction responseIdentifier="RESPONSE" shuffle="false" maxChoices="1" minChoices="0">
+            <prompt>choose</prompt>
+            <simpleChoice identifier="Choice_1" fixed="false">A</simpleChoice>
+            <simpleChoice identifier="Choice_2" fixed="false">B</simpleChoice>
+            <simpleChoice identifier="Choice_3" fixed="false">C</simpleChoice>
+        </choiceInteraction>
+        <associateInteraction responseIdentifier="RESPONSE_1" shuffle="false" maxAssociations="1" minAssociations="0">
+            <prompt>
+                <br/>
+            </prompt>
+            <simpleAssociableChoice identifier="Choice_4" fixed="false" matchMin="0" matchMax="1">A</simpleAssociableChoice>
+            <simpleAssociableChoice identifier="Choice_5" fixed="false" matchMin="0" matchMax="1">B</simpleAssociableChoice>
+            <simpleAssociableChoice identifier="Choice_6" fixed="false" matchMin="0" matchMax="1">C</simpleAssociableChoice>
+            <simpleAssociableChoice identifier="Choice_7" fixed="false" matchMin="0" matchMax="1">D</simpleAssociableChoice>
+        </associateInteraction>
+    </itemBody>
+    
+    <responseProcessing>
+        <responseCondition>
+            <responseIf>
+                <match>
+                    <variable identifier="RESPONSE"/>
+                    <correct identifier="RESPONSE"/>
+                </match>
+                <setOutcomeValue identifier="SCORE">
+                    <sum>
+                        <variable identifier="SCORE"/>
+                        <baseValue baseType="integer">1</baseValue>
+                    </sum>
+                </setOutcomeValue>
+            </responseIf>
+        </responseCondition>
+        <responseCondition>
+            <responseIf>
+                <not>
+                    <isNull>
+                        <variable identifier="RESPONSE_1"/>
+                    </isNull>
+                </not>
+                <setOutcomeValue identifier="SCORE">
+                    <sum>
+                        <variable identifier="SCORE"/>
+                        <mapResponse identifier="RESPONSE_1"/>
+                    </sum>
+                </setOutcomeValue>
+            </responseIf>
+        </responseCondition>
+    </responseProcessing>
+</assessmentItem>

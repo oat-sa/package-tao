@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+	<structure id="wfauthoring" name="Processes" level="6" visible="true">
+		<description>Build processes to drive activities into a workflow.</description>
+		<sections>
+			<section id="manage_process" name="Manage processes" url="/wfAuthoring/Process/index">
+				<trees>
+					<tree name="Processes library"
+						className="Process"
+						dataUrl="/wfAuthoring/Process/getOntologyData"
+						editInstanceUrl="/wfAuthoring/Process/editProcess"
+						addInstanceUrl="/wfAuthoring/Process/addInstance"
+						deleteUrl="/wfAuthoring/Process/delete"
+						editClassUrl="/wfAuthoring/Process/editProcessClass"
+					/>
+				</trees>
+				<actions>
+					<action name="search" url="/wfAuthoring/Process/search" context="*" />
+					<action name="new process" js="instanciate" url="/wfAuthoring/Process/addInstance" context="class" />
+					<action name="delete" js="removeNode" url="/wfAuthoring/Process/delete" context="resource" />
+					<action name="meta data" js="loadMetaData" url="/tao/MetaData/getMetaData"  context="resource" />
+					<action name="export" url="/tao/Export/index"  context="resource" />
+				</actions>
+			</section>
+
+			<section id="process_authoring" name="Process authoring" url="/wfAuthoring/Process/authoring" />
+
+			<section id="monitor_process" name="Monitor processes" url="/wfAuthoring/Monitor/index" />
+			
+			<section id="manage_services" name="Manage services" url="/wfAuthoring/Service/index">
+				<trees>
+					<tree name="Service library"
+						className="Services"
+						dataUrl="/wfAuthoring/Service/getOntologyData"
+						editInstanceUrl="/wfAuthoring/Service/editInstance"
+						addInstanceUrl="/wfAuthoring/Service/addInstance"
+						deleteUrl="/wfAuthoring/Service/delete"
+						editClassUrl="/wfAuthoring/Service/index"
+					/>
+				</trees>
+				<actions>
+					<action name="meta data" js="loadMetaData" url="/tao/MetaData/getMetaData"  context="resource" />
+				</actions>
+			</section>
+		</sections>
+	</structure>
+    <entrypoint id="wfRunner" title="Test Developers and Administrators" label="TAO WorkFlow Assistant" url="wfEngine/WfHome/index">
+        <description><![CDATA[Execute workflows for assessment preparation.]]></description>
+    </entrypoint>
+</structures>

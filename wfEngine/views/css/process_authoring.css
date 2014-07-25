@@ -1,0 +1,90 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2007-2010 (original work) Public Research Centre Henri Tudor & University of Luxembourg) (under the project TAO-QUAL);
+ *               2008-2010 (update and modification) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+@import url(frontend_user.css);
+
+/* Process authoring main title. */
+#authoring_title
+{
+	width: 930px;
+	margin: 15px auto 0px auto;
+	padding: 0px 0px 0px 20px;
+	
+	font-size: 18px;
+	font-weight: bold;
+	color: #255581;
+}
+
+/* Process authoring subtitle. */
+#authoring_subtitle
+{
+	padding: 0px 0px 0px 20px;
+	
+	font-size: 14px;
+	font-weight: bold;
+	color: #255581;
+	
+	background: url(../img/bullet.png) no-repeat 5px;
+}
+
+/* Process Authoring form. */
+#authoring_form
+{
+	width: 930px;
+	margin: 20px 0px 0px 0px;
+	
+	color: #000000;
+}
+
+/* Table containing information and input fields about the process
+   to create. */
+#authoring_table
+{
+	width: 930px;
+}
+
+/* Cells in the Authoring Form's body. */
+#authoring_table tbody td
+{
+	height: 20px;
+	padding: 5px 5px 5px 5px;
+	
+	border: 1px solid #fff;
+	background-color: #E5F2FF;
+	border-collapse: separate;
+}
+
+#authoring_table td input[type="text"]
+{
+	border: 1px solid #A5ACB2;
+}
+
+/* Process Authoring Form submission area. */
+#authoring_table #authoring_submit
+{
+	padding-top: 20px;
+	text-align: center;
+}
+
+/* Submission button for the Authorin form. */
+#authoring_table #authoring_submit #submit_process
+{
+	color: #000000;
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension SYSTEM "../doc/structures.dtd">
+<structures>
+	<structure id="users" name="Users" level="11" visible="false">
+		<description />
+		<sections>
+			<section id="list_users" name="Manage users" url="/tao/Users/index" />
+			<section id="add_user" name="Add a user" url="/tao/Users/add" />
+			<section id="edit_user" name="Edit a user" url="/tao/Users/edit" />
+			<section id="manage_roles" name="Manage roles" url="/tao/Roles/index">
+				<trees>
+					<tree name="Roles library"
+						className="Role"
+						dataUrl="/tao/Roles/getOntologyData"
+						editInstanceUrl="/tao/Roles/editRole"
+						addInstanceUrl="/tao/Roles/addInstance"
+						deleteUrl="/tao/Roles/delete"
+						editClassUrl="/tao/Roles/editRoleClass"
+					/>
+				</trees>
+				<actions>
+					<action name="search" url="/tao/Roles/search" context="*" />
+					<action name="new role" js="instanciate" url="/tao/Roles/addInstance" context="class" />
+					<action name="delete" js="removeNode" url="/tao/Roles/delete" context="resource" />
+					<action name="meta data" js="loadMetaData" url="/tao/MetaData/getMetaData"  context="resource" />
+					<action name="export" url="/tao/Export/index"  context="resource" />
+				</actions>
+			</section>
+		</sections>
+	</structure>
+	<structure id="settings" name="Settings" level="8" visible="false">
+		<description />
+		<sections>
+			<section id="settings_ext_mng" name="Extensions manager" url="/tao/ExtensionsManager/index" />
+			<section id="settings_im_export" name="Ontology" url="/tao/RdfImExport/index" />
+			<section id="settings_versioning" name="File sources" url="/tao/SettingsVersioning/index">
+				<trees>
+					<tree name="File sources"
+						className="Repository"
+						dataUrl="/tao/SettingsVersioning/getOntologyData"
+						editClassUrl="/tao/SettingsVersioning/index"
+						editInstanceUrl="/tao/SettingsVersioning/editRepository"
+						addInstanceUrl="/tao/SettingsVersioning/addInstance"
+						deleteUrl="/tao/SettingsVersioning/delete"
+					/>
+				</trees>
+				<actions>
+					<action name="add repository" js="instanciate" url="/tao/SettingsVersioning/addInstance" context="class" />
+					<action name="remove repository" js="removeNode" url="/tao/SettingsVersioning/delete" context="instance" />
+				</actions>
+			</section>
+		</sections>
+	</structure>
+	<structure id="user_settings" name="User Settings" level="12" visible="false">
+		<description />
+		<sections>
+			<section id="settings_my_settings" name="My settings" url="/tao/UserSettings/properties" />
+			<section id="settings_my_password" name="Change password" url="/tao/UserSettings/password" />
+		</sections>
+	</structure>
+    <toolbar>
+        <toolbaraction id="usermanager" icon="icon-users" level="9" structure="users" title="User Management"></toolbaraction>
+        <toolbaraction id="settings" icon="icon-tools" level="10" structure="settings" title="System Settings"></toolbaraction>
+    </toolbar>
+    <entrypoint id="backoffice" title="Test Developers and Administrators" label="TAO Back Office" url="tao/Main/index">
+        <description><![CDATA[Create items, manage item and test banks, organize cohorts and deliveries, prepare reports, set up workflows.]]></description>
+    </entrypoint>
+</structures>

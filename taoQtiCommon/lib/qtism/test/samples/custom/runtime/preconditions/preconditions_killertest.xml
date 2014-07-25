@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.taotesting.com/xsd/qticompact_v1p0.xsd"
+	identifier="preconditions_killertest" title="A Killer Test Aiming at Testing Chained Preconditions">
+	<testPart identifier="P01" navigationMode="linear" submissionMode="individual">
+		<assessmentSection identifier="S01" title="Who Wants to be a Killer?" visible="true">
+			<assessmentItemRef identifier="Q01" href="./Q01/qti.xml" fixed="false" timeDependent="false">
+				<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+					<correctResponse>
+						<value>GoodChoice</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+				<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+			</assessmentItemRef>
+			
+			<assessmentItemRef identifier="Q02" href="./Q02/qti.xml" fixed="false" timeDependent="false">
+				<preCondition>
+					<equalRounded roundingMode="decimalPlaces" figures="1">
+						<variable identifier="Q01.SCORE"/>
+						<baseValue baseType="float">1.0</baseValue>
+					</equalRounded>
+				</preCondition>
+				<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+					<correctResponse>
+						<value>GoodChoice</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+				<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+			</assessmentItemRef>
+			
+			<assessmentItemRef identifier="Q03" href="./Q03/qti.xml" fixed="false" timeDependent="false">
+				<preCondition>
+					<equalRounded roundingMode="decimalPlaces" figures="1">
+						<variable identifier="Q02.SCORE"/>
+						<baseValue baseType="float">1.0</baseValue>
+					</equalRounded>
+				</preCondition>
+				<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+					<correctResponse>
+						<value>GoodChoice</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+				<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+			</assessmentItemRef>
+			
+			<assessmentItemRef identifier="Q04" href="./Q04/qti.xml" fixed="false" timeDependent="false">
+				<preCondition>
+					<equalRounded roundingMode="decimalPlaces" figures="1">
+						<variable identifier="Q03.SCORE"/>
+						<baseValue baseType="float">1.0</baseValue>
+					</equalRounded>
+				</preCondition>
+				<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+					<correctResponse>
+						<value>GoodChoice</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+				<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+			</assessmentItemRef>
+			
+			<assessmentItemRef identifier="Q05" href="./Q05/qti.xml" fixed="false" timeDependent="false">
+				<preCondition>
+					<equalRounded roundingMode="decimalPlaces" figures="1">
+						<variable identifier="Q04.SCORE"/>
+						<baseValue baseType="float">1.0</baseValue>
+					</equalRounded>
+				</preCondition>
+				<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+					<correctResponse>
+						<value>GoodChoice</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+				<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+			</assessmentItemRef>
+		</assessmentSection>
+	</testPart>
+</assessmentTest>

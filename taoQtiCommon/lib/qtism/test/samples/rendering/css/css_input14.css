@@ -1,0 +1,21 @@
+/*
+ * Try to make the system crazy by adding specific compositions
+ * of characters...
+ * "hello!" "\\\nhello"
+ */
+
+.myClass {
+    border:1px solid #fff;/*"foo'bar\"baz*/
+    background-image: url('hello.gif');
+    background-image: url("hello.gif");
+    background-image: url(hel/lo.gif);
+    background-image: url("hello\r.gif");
+    background-image: url("\\n \\t \\.gif");
+    font-weight: bold;
+}
+
+.myOtherClass p,  .myOtherClass pre{text-decoration: underline;
+
+    /* Check! ///*/
+
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p0 imsqti_v2p0.xsd"
+    identifier="positionObjects" title="Airport Locations" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="directedPair">
+        <correctResponse>
+            <!-- MAN -->
+            <value>118 184</value>
+            <!-- LHR -->
+            <value>150 235</value>
+            <!-- EDI -->
+            <value>96 114</value>
+        </correctResponse>
+        <areaMapping defaultValue="0">
+            <areaMapEntry shape="circle" coords="118,184,12"  mappedValue="1"/>
+            <areaMapEntry shape="circle" coords="150,235,12"  mappedValue="1"/>
+            <areaMapEntry shape="circle" coords="96,114,12"  mappedValue="1"/>
+        </areaMapping>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+    <itemBody>
+        <p>When flying into the UK, you may well find yourself landing at Edinburgh,
+            Manchester or London Heathrow; but where are these airports actually located?</p>
+        <positionObjectStage>
+                <object type="image/png" data="images/uk.png" width="206" height="280"/>
+            <positionObjectInteraction responseIdentifier="RESPONSE" maxChoices="3">
+                <object type="image/png" data="images/airport.png" width="16" height="16"/>                
+            </positionObjectInteraction>
+        </positionObjectStage>
+    </itemBody>
+    <responseProcessing template="http://www.imsglobal.org/question/qti_v2p0/rptemplates/map_response"></responseProcessing>
+</assessmentItem>

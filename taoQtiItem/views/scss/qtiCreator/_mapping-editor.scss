@@ -1,0 +1,94 @@
+@import "inc/bootstrap";
+
+.mapping-editor {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: $textColor;
+    background: mix(#fff, $grey, 85%);
+    padding: 15px 15px 0 15px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+    z-index: 300;
+    min-width: 150px;
+    .closer {
+        position: absolute;
+        top: 10px;
+        right: 8px;
+    }
+
+    h2 {
+        @include font-size(15);
+        margin-bottom: 0;
+    }
+    hr {
+        margin: 0;
+    }
+    .heading {
+        font-weight: bold;
+    }
+    .arrow {
+        position: absolute;
+        z-index: 301;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        border: 1px $uiClickableDefaultBg solid;
+        border-left: none;
+        border-top: none;
+        width: 12px;
+        height: 12px;
+        background: $uiClickableDefaultBg;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+        box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+    }
+    .arrow-cover {
+        background: $uiClickableDefaultBg;
+        position: absolute;
+        z-index: 302;
+    }
+    &.arrow-left-top {
+        .arrow {
+            left: -6px;
+            top: 10px;
+        }
+        .arrow-cover {
+            left: 0;
+            top: 2px;
+            width: 15px;
+            height: 30px;
+        }
+    }
+    &.arrow-top-left{
+        .arrow {
+            top: -6px;
+        }
+        .arrow-cover {
+            left: 6px;
+            top: 0;
+            width: 30px;
+            height: 15px;
+        }
+    }
+    .score {
+        @include simple-border();
+        text-align:right;
+        min-width: 40px;
+        max-width: 60px;
+        position: relative;
+        top: -5px
+    }
+    .grid-row {
+        line-height: 1.6;
+        padding-top: 8px;
+    }
+    .tooltipstered {
+        text-align: right;
+    }
+    .icon-checkbox {
+        margin-left: 20px
+    }
+}

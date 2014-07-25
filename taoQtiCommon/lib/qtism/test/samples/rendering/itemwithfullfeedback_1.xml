@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem identifier="Q01" title="Question 01" timeDependent="false" xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+	<itemBody>
+		<feedbackBlock outcomeIdentifier="outcome1" identifier="please_show_me" showHide="show"><div>May I appear ?</div></feedbackBlock>
+		<div><feedbackInline outcomeIdentifier="outcome2" identifier="please_hide_me" showHide="hide">May I appear ?</feedbackInline></div>
+	</itemBody>
+	<modalFeedback outcomeIdentifier="outcome3" identifier="please_show_me" showHide="show">May I pop-up?</modalFeedback>
+</assessmentItem>

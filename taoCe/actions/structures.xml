@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+    <toolbar>
+        <toolbaraction id="help" icon="icon-help" level="7" js="controller/home" title="Help"></toolbaraction>
+    </toolbar>
+    <entrypoint id="backofficeCe" title="Test Developers and Administrators" label="TAO Back Office" url="taoCe/Main/index">
+        <description><![CDATA[Create items, manage item and test banks, organize cohorts and deliveries, prepare reports, set up workflows.]]></description>
+        <replace id="backoffice" />
+    </entrypoint>
+</structures>

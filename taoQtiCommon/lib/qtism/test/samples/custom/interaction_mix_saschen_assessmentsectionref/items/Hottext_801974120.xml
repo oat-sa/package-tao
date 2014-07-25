@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file was created using: Onyx Editor, Version 3.4.1 (Full, licensed version), (c)2011 BPS Bildungsportal Sachsen GmbH-->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 imsqti_v2p1.xsd" identifier="Hottext_801974120" title="hottext" adaptive="false" timeDependent="false">
+	<responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="identifier">
+		<correctResponse>
+			<value>Choice1</value>
+			<value>Choice3</value>
+			<value>Choice8</value>
+		</correctResponse>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>0.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>1.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+		<defaultValue>
+			<value>empty</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_31186754" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_17440045" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<itemBody>
+		<p>Geburtenrate in Sachsen</p>
+		<p>
+			<i>Sind die Fakten alle korrekt? <br />
+			Suche drei Fehler!</i>
+		</p>
+		<hottextInteraction responseIdentifier="RESPONSE" maxChoices="0">
+			<div>Die Bevölkerungszahl Sachsens ist seit ca. <hottext identifier="Choice0">1950</hottext> rückläufig. Hatte Sachsen Anfang 1990 noch <hottext identifier="Choice1">5,7 Millionen Einwohner</hottext>, waren es Ende 2008 nur noch annähernd 4,2 Millionen. Für das Jahr 2020 wird ein Rückgang der Einwohnerzahlen auf etwa <hottext identifier="Choice2">3,9 Millionen</hottext> prognostiziert. Einzig die Einwohnerzahlen der Städte <hottext identifier="Choice3">Chemnitz</hottext>, <hottext identifier="Choice4">Dresden</hottext> und <hottext identifier="Choice5">Leipzig</hottext> konnten in den vergangenen Jahren Zuwächse verzeichnen.
+				<br />Parallel zur Verringerung der Einwohnerzahl im Freistatt Sachsen stieg das Durchschnittsalter von <hottext identifier="Choice6">39 Jahren</hottext> 1990 auf fast <hottext identifier="Choice7">46 Jahre</hottext> im Jahr 2008. Im Jahr 2020 wird der »Durchschnittssachse« fast <hottext identifier="Choice8">54 Jahre</hottext> alt sein.</div>
+		</hottextInteraction>
+	</itemBody>
+	<responseProcessing>
+		<responseCondition>
+			<responseIf>
+				<isNull>
+					<variable identifier="RESPONSE" />
+				</isNull>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">empty</baseValue>
+				</setOutcomeValue>
+			</responseIf>
+			<responseElseIf>
+				<match>
+					<variable identifier="RESPONSE" />
+					<correct identifier="RESPONSE" />
+				</match>
+				<setOutcomeValue identifier="SCORE">
+					<sum>
+						<variable identifier="SCORE" />
+						<variable identifier="MAXSCORE" />
+					</sum>
+				</setOutcomeValue>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">correct</baseValue>
+				</setOutcomeValue>
+			</responseElseIf>
+			<responseElse>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">incorrect</baseValue>
+				</setOutcomeValue>
+			</responseElse>
+		</responseCondition>
+		<setOutcomeValue identifier="FEEDBACK_31186754">
+			<and>
+				<match>
+					<baseValue baseType="identifier">correct</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+		<setOutcomeValue identifier="FEEDBACK_17440045">
+			<and>
+				<match>
+					<baseValue baseType="identifier">incorrect</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+	</responseProcessing>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_31186754" showHide="show" title="Richtig!">Sachsen hatte Anfang 1990 noch 4,9 Millionen Einwohner.
+Einzig die Einwohnerzahlen der Dresden und Leipzig konnten in den vergangenen Jahren Zuwächse verzeichnen. 
+Im Jahr 2020 wird der »Durchschnittssachse« fast 49 Jahre alt sein. </modalFeedback>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_17440045" showHide="show" title="Leider Falsch!">Sachsen hatte Anfang 1990 noch 4,9 Millionen Einwohner.
+Einzig die Einwohnerzahlen der Dresden und Leipzig konnten in den vergangenen Jahren Zuwächse verzeichnen.
+Im Jahr 2020 wird der »Durchschnittssachse« fast 49 Jahre alt sein. </modalFeedback>
+</assessmentItem>

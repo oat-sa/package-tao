@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file was created using: Onyx Editor, Version 3.4.1 (Full, licensed version), (c)2011 BPS Bildungsportal Sachsen GmbH-->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 imsqti_v2p1.xsd" identifier="Hotspot_278940407" title="hotspot" adaptive="false" timeDependent="false">
+	<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+		<correctResponse>
+			<value>Choice6</value>
+		</correctResponse>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>0.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>1.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+		<defaultValue>
+			<value>empty</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_25412685" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_29642729" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<itemBody>
+		<div>Dresden ist die Landeshauptstadt des Freistaates Sachsen. <br />
+		Wähle die Stadt Dresden in der gezeigten Skizze des Bundeslandes aus.</div>
+		<hotspotInteraction responseIdentifier="RESPONSE" maxChoices="1">
+			<object data="media/735c5df9735b455e9bd4b366ab37d908.jpg" type="image/jpg" />
+			<hotspotChoice identifier="Choice0" fixed="false" shape="circle" coords="141,28,12" />
+			<hotspotChoice identifier="Choice1" fixed="false" shape="circle" coords="60,77,12" />
+			<hotspotChoice identifier="Choice2" fixed="false" shape="circle" coords="82,119,12" />
+			<hotspotChoice identifier="Choice3" fixed="false" shape="circle" coords="206,112,12" />
+			<hotspotChoice identifier="Choice4" fixed="false" shape="circle" coords="131,181,12" />
+			<hotspotChoice identifier="Choice5" fixed="false" shape="circle" coords="183,160,12" />
+			<hotspotChoice identifier="Choice6" fixed="false" shape="circle" coords="239,129,12" />
+			<hotspotChoice identifier="Choice7" fixed="false" shape="circle" coords="79,199,12" />
+			<hotspotChoice identifier="Choice8" fixed="false" shape="circle" coords="315,103,12" />
+			<hotspotChoice identifier="Choice9" fixed="false" shape="circle" coords="387,109,12" />
+			<hotspotChoice identifier="Choice10" fixed="false" shape="circle" coords="143,230,12" />
+			<hotspotChoice identifier="Choice11" fixed="false" shape="circle" coords="36,244,12" />
+		</hotspotInteraction>
+	</itemBody>
+	<responseProcessing>
+		<responseCondition>
+			<responseIf>
+				<isNull>
+					<variable identifier="RESPONSE" />
+				</isNull>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">empty</baseValue>
+				</setOutcomeValue>
+			</responseIf>
+			<responseElseIf>
+				<match>
+					<variable identifier="RESPONSE" />
+					<correct identifier="RESPONSE" />
+				</match>
+				<setOutcomeValue identifier="SCORE">
+					<sum>
+						<variable identifier="SCORE" />
+						<variable identifier="MAXSCORE" />
+					</sum>
+				</setOutcomeValue>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">correct</baseValue>
+				</setOutcomeValue>
+			</responseElseIf>
+			<responseElse>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">incorrect</baseValue>
+				</setOutcomeValue>
+			</responseElse>
+		</responseCondition>
+		<setOutcomeValue identifier="FEEDBACK_25412685">
+			<and>
+				<match>
+					<baseValue baseType="identifier">correct</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+		<setOutcomeValue identifier="FEEDBACK_29642729">
+			<and>
+				<match>
+					<baseValue baseType="identifier">incorrect</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+	</responseProcessing>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_25412685" showHide="show" title="Richtig!">Dresden liegt im Osten der Freistaates Sachsen.</modalFeedback>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_29642729" showHide="show" title="Leider Falsch!">Dresden liegt im Osten der Freistaates Sachsen.</modalFeedback>
+</assessmentItem>

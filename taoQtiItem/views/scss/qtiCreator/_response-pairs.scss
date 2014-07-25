@@ -1,0 +1,36 @@
+
+@import "inc/bootstrap";
+.response-pair-editor {
+    min-width: 350px;
+    background: rgba($uiClickableDefaultBg, .85);
+
+
+    .title {
+        position: relative;
+        top: -5px;
+        left: -10px;
+    }
+
+    .indicator {
+        color: $uiClickableHoverBg;
+        position:relative;
+        top: 10px;
+        @include font-size(13);
+    }
+
+    padding: 20px 30px 20px 30px;
+
+    .col-2 {
+        text-align: center;
+    }
+
+    .icon-bin {
+        position: relative;
+        top: 7px;
+        cursor:pointer
+    }
+
+    .cb {
+        top: 5px;
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+        <title>Extended Text Interaction Renderer Test</title>
+        <link rel="stylesheet" type="text/css" href="/tao/views/js/lib/qunit/qunit.css">
+        <script type="text/javascript" src="/tao/views/js/lib/require.js"></script>
+        <script type="text/javascript" src="/tao/views/js/lib/qunit/qunit.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="/tao/views/css/tao-main-style.css" />
+        <link rel="stylesheet" type="text/css" href="/taoQtiItem/views/css/qti.css" />
+
+        <script  type="text/javascript">
+            QUnit.config.autostart = false;
+            require(['/tao/ClientConfig/config'], function(){
+                require(['taoQtiItem/qtiCommonRenderer/test/renderer/test'], function(Test){
+                    QUnit.start();
+
+                    Test.testRender(
+                        'extendedText',
+                        {
+                            'base':8, 
+                            'placeholderText': 'Enter some text...', 
+                            'patternMask': '[a-z]{10,}',
+                            'expectedLength': 10,
+                            'expectedLines': 2
+                        },
+                        [
+                            {
+                                'set' : {'base' : {'string' : 'Lorem Ipsum is simply dummy text...'}},
+                                'get' : {'base' : {'string' : 'Lorem Ipsum is simply dummy text...'}}
+                            }
+                        ]
+                    );
+            
+                    Test.testRender(
+                        'extendedTextMultiple', 
+                        {
+                            'base':8, 
+                            'placeholderText': '1,2,3...', 
+                            'patternMask': '[0-9]{1}',
+                            'expectedLength': 10,
+                            'maxStrings': 5,
+                            'minStrings': 2
+                        },
+                        [
+                            {
+                                'set' : {'list' : {'integer' : [1, 2, 3, 4, 5]}},
+                                'get' : {'list' : {'integer' : [1, 2, 3, 4, 5]}}
+                            }
+                        ]
+                    );
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+    </body>
+</html>

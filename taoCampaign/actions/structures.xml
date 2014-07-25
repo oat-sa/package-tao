@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+	<structure id="delivery" name="Deliveries" level="4" visible="true">
+		<sections>
+			<section id="manage_campaigns" name="Manage campaigns" url="/taoCampaign/Campaign/index">
+				<trees>
+					<tree name="Campaigns library"
+						className="Campaign"
+						dataUrl="/taoCampaign/Campaign/getCampaigns"
+						editClassUrl="/taoCampaign/Campaign/editCampaignClass"
+						editInstanceUrl="/taoCampaign/Campaign/editCampaign"
+						addInstanceUrl="/taoCampaign/Campaign/addCampaign"
+						addSubClassUrl="/taoCampaign/Campaign/addCampaignClass"
+						deleteUrl="/taoCampaign/Campaign/delete"
+						duplicateUrl="/taoCampaign/Campaign/cloneInstance"
+						moveInstanceUrl="/taoCampaign/Campaign/moveInstance"
+					/>
+				</trees>
+				<actions>
+					<action name="search" url="/taoCampaign/Campaign/search" context="*" />
+					<action name="new class" js="subClass" url="/taoCampaign/Campaign/addCampaignClass" context="class" />
+					<action name="new campaign" js="instanciate" url="/taoCampaign/Campaign/addCampaign" context="class" />
+					<action name="delete" js="removeNode" url="/taoCampaign/Campaign/delete" context="resource" />
+					<action name="duplicate" js="duplicateNode" url="/taoCampaign/Campaign/cloneInstance" context="instance" />
+					<action name="move" js="moveNode" url="" context="instance" />
+					<action name="export" url="/tao/Export/index"  context="resource" />
+					<action name="import" url="/tao/Import/index"  context="class" />
+				</actions>
+			</section>
+		</sections>
+	</structure>
+</structures>

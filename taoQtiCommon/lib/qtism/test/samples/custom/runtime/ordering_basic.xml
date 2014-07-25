@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.taotesting.com/xsd/qticompact_v1p0.xsd"
+	identifier="ordering_basic" title="Ordering Basic">
+	<testPart identifier="testPart" navigationMode="linear" submissionMode="individual">
+		<assessmentSection identifier="S01" fixed="false" title="Section S01" visible="true">
+			<ordering shuffle="true"/>
+			<assessmentItemRef identifier="Q1" href="./Q1.xml" fixed="false" timeDependent="false"/>
+			<assessmentItemRef identifier="Q2" href="./Q2.xml" fixed="false" timeDependent="false"/>
+			<assessmentItemRef identifier="Q3" href="./Q3.xml" fixed="false" timeDependent="false"/>
+		</assessmentSection>
+	</testPart>
+</assessmentTest>

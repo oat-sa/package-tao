@@ -1,0 +1,38 @@
+@import 'inc/bootstrap';
+
+xxsvg {
+    * {
+        cursor: pointer;
+        position: absolute;
+        z-index: 10;
+        stroke:$websiteBorder;
+        stroke-width: 1;
+        fill: rgba($uiGeneralContentBorder, .5);
+
+    }
+    .active {
+        stroke:mix(#fff, $info, 20%);
+    }
+    .deactivated {
+        border: 2px dashed $websiteBorder;
+        fill: rgba($uiGeneralContentBorder, .3);
+        stroke-dasharray: 10,10;
+        cursor: not-allowed
+    }
+    .error {
+        stroke:mix(#fff, $error, 20%);
+        fill: rgba($error, .5);
+    }
+    .success {
+        stroke:mix(#fff, $success, 20%);
+        fill: rgba($success, .5);
+    }
+    .warning {
+        stroke:mix(#fff, $warning, 20%);
+        fill: rgba($warning, .5);
+    }
+    .info {
+        stroke:mix(#fff, $info, 20%);
+        fill: rgba($info, .5);
+    }
+}

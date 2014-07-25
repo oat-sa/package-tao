@@ -1,0 +1,120 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+/* Preview container */ 
+iframe#preview-container{
+	width:100%;
+	height:400px;
+	border:none;
+}
+
+.fullScreen, html{
+    height:100%;
+    overflow-y:auto;
+}
+.fullScreen iframe#preview-container{
+    width:100%;
+    height:90%;
+    border:none;
+}
+
+/* Preview console */ 
+#preview-console{
+        margin: 1em auto;
+	width:78%;
+	padding:0px;
+	border:solid #c0c0c0 2px;
+        z-index:1000;
+}
+    
+div#preview-console div.console-control{
+	position:relative;
+	background-color:#ddd;
+	text-align: right;	
+	font-size: .9em;
+	font-style: italic;
+	color:#333;
+        padding: 2px;
+}
+div#preview-console div.console-control span.ui-icon{
+	position:absolute;
+	cursor:pointer;
+	top:0px;
+}
+div#preview-console div.console-control span.ui-icon-circle-close{
+	left:20px;
+}
+div#preview-console div.console-control span.ui-icon-trash{
+	left:40px;
+}
+div#preview-console div.console-content{
+	display:none;
+	opacity:0.8;
+	overflow-y:scroll;
+	background-color:#333;
+	color: #eee;
+	height:134px;
+        border:solid #c0c0c0 2px;
+        width:100%;
+        margin-left:-2px;
+}
+div#preview-console ul{
+	margin:10px;
+        padding:0;
+        list-style-type: none;
+}
+
+/* Preview options */ 
+div.container-title{
+	position:relative;
+}
+div.container-title span#preview-options-opener{
+	position:absolute;
+	right:20px;	
+	font-weight:normal;	
+}
+div.container-title span#preview-options-opener:hover{
+	color:#D00239;	
+}
+div.container-title span#preview-options-opener span.ui-icon{
+	position:absolute;
+	right:-20px;
+	top:0px;
+}
+div#preview-options{
+	display:none;
+	position:absolute;
+	height:150px;
+	width: 300px;
+	right:10px;
+	z-index:1000;	
+	background-color: #fff;
+}
+div#preview-options div.xhtml_form {border: 1px dashed #FDD5DF; background-color: white; padding:0 10px 5px;}
+div#preview-options div.xhtml_form form select {margin-left:50%;}
+div#preview-options div.xhtml_form .form_desc {width:50%;}
+
+#submit {
+    margin: auto; 
+    width: 200px;  
+}
+
+#submit > button {
+    display: none;
+}

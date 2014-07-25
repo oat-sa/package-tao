@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.tao.lu/tao.rdfs" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:tao="http://www.tao.lu/tao.rdfs" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <xs:import namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" schemaLocation="./rdf.xsd"/>
+  <xs:import namespace="http://www.w3.org/2000/01/rdf-schema#" schemaLocation="./rdfs.xsd"/>
+  <xs:element name="ITEM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="rdfs:LABEL"/>
+        <xs:element ref="rdfs:COMMENT"/>
+        <xs:element ref="tao:CENONCE"/>
+        <xs:element ref="tao:ENONCE"/>
+        <xs:element maxOccurs="unbounded" ref="tao:VALUE"/>
+        <xs:element maxOccurs="unbounded" ref="tao:UNIT"/>
+        <xs:element ref="tao:ANSWER"/>
+        <xs:element ref="tao:LABELS"/>
+      </xs:sequence>
+      <xs:attribute ref="rdf:ID" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CENONCE" type="xs:string"/>
+  <xs:element name="ENONCE" type="xs:string"/>
+  <xs:element name="VALUE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tao:NUMERIC"/>
+        <xs:element ref="tao:LABEL"/>
+        <xs:element ref="tao:RELATEDUNIT"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NUMERIC" type="xs:integer"/>
+  <xs:element name="RELATEDUNIT" type="xs:integer"/>
+  <xs:element name="UNIT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tao:ID"/>
+        <xs:element ref="tao:LABEL"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ID" type="xs:integer"/>
+  <xs:element name="ANSWER">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tao:ANSWERNUMERIC"/>
+        <xs:element ref="tao:ANSWERRELATEDUNIT"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ANSWERNUMERIC">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="ANSWERRELATEDUNIT">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="LABELS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="tao:LABEL"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LABEL">
+    <xs:complexType mixed="true">
+      <xs:attribute name="key" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

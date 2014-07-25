@@ -1,0 +1,70 @@
+<phpunit verbose="false">
+	<testsuites>
+		<testsuite name="filemanager">
+			<directory>filemanager/test</directory>
+		</testsuite>
+		<testsuite name="funcAcl">
+			<directory>funcAcl/test</directory>
+		</testsuite>
+		<testsuite name="generis">
+			<directory>generis/test/</directory>
+		</testsuite>
+		<!--
+		<testsuite name="generisHard">
+			<directory>generisHard/test/</directory>
+		</testsuite>
+		-->
+		<testsuite name="tao">
+			<directory>tao/test</directory>
+		</testsuite>
+		<testsuite name="taoCampaign">
+			<directory>taoCampaign/test</directory>
+		</testsuite>
+		<testsuite name="taoDelivery">
+			<directory>taoDelivery/test</directory>
+		</testsuite>
+		<testsuite name="taoGroups">
+			<directory>taoGroups/test</directory>
+		</testsuite>
+		<testsuite name="taoItems">
+			<directory>taoItems/test</directory>
+		</testsuite>
+		<testsuite name="taoLti">
+			<directory>taoLti/test</directory>
+		</testsuite>
+		<testsuite name="taoOpenWebItem">
+			<directory>taoOpenWebItem/test</directory>
+		</testsuite>
+		<testsuite name="taoQtiCommon">
+			<directory>taoQtiCommon/test</directory>
+			<directory>taoQtiCommon/lib/qtism/test</directory>
+		</testsuite>
+		<testsuite name="taoQtiItem">
+			<directory>taoQtiItem/test</directory>
+		</testsuite>
+		<testsuite name="taoQtiTest">
+			<directory>taoQtiTest/test</directory>
+		</testsuite>
+		<testsuite name="taoResults">
+			<directory>taoResults/test</directory>
+		</testsuite>
+		<testsuite name="taoSubjects">
+			<directory>taoSubjects/test</directory>
+		</testsuite>
+		<testsuite name="taoTests">
+			<directory>taoTests/test</directory>
+		</testsuite>
+		<testsuite name="taoWfDelivery">
+			<directory>taoWfDelivery/test</directory>
+		</testsuite>
+		<testsuite name="taoWfTest">
+			<directory>taoWfTest/test</directory>
+		</testsuite>
+		<testsuite name="wfEngine">
+			<directory>wfEngine/test</directory>
+		</testsuite>
+		<testsuite name="wfAuthoring">
+			<directory>wfAuthoring/test</directory>
+		</testsuite>
+	</testsuites>
+</phpunit>

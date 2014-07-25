@@ -1,0 +1,1 @@
+<option data-identifier="{{attributes.identifier}}" data-serial="{{serial}}" value="{{attributes.identifier}}">{{body}}</option>

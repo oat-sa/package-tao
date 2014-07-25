@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p0 imsqti_v2p0.xsd"
+    identifier="template" title="Digging a Hole" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="float"/>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+    <templateDeclaration identifier="PEOPLE" cardinality="single" baseType="string"
+        mathVariable="false" paramVariable="false"/>
+    <templateDeclaration identifier="A" cardinality="single" baseType="integer" mathVariable="false" paramVariable="false"/>
+    <templateDeclaration identifier="B" cardinality="single" baseType="integer" mathVariable="false" paramVariable="false"/>
+    <templateDeclaration identifier="MIN" cardinality="single" baseType="integer"
+        mathVariable="false" paramVariable="false"/>
+    <templateProcessing>
+        <setTemplateValue identifier="PEOPLE">
+            <random>
+                <multiple>
+                    <baseValue baseType="string">men</baseValue>
+                    <baseValue baseType="string">women</baseValue>
+                    <baseValue baseType="string">children</baseValue>
+                </multiple>
+            </random>
+        </setTemplateValue>
+        <setTemplateValue identifier="A">
+            <randomInteger min="2" max="4"/>
+        </setTemplateValue>
+        <templateCondition>
+            <templateIf>
+                <match>
+                    <variable identifier="A"/>
+                    <baseValue baseType="integer">2</baseValue>
+                </match>
+                <setTemplateValue identifier="B">
+                    <randomInteger min="4" max="12" step="2"/>
+                </setTemplateValue>
+            </templateIf>
+            <templateElseIf>
+                <match>
+                    <variable identifier="A"/>
+                    <baseValue baseType="integer">3</baseValue>
+                </match>
+                <setTemplateValue identifier="B">
+                    <random>
+                        <multiple>
+                            <baseValue baseType="integer">6</baseValue>
+                            <baseValue baseType="integer">12</baseValue>
+                        </multiple>
+                    </random>
+                </setTemplateValue>
+            </templateElseIf>
+            <templateElse>
+                <setTemplateValue identifier="B">
+                    <random>
+                        <multiple>
+                            <baseValue baseType="integer">8</baseValue>
+                            <baseValue baseType="integer">12</baseValue>
+                        </multiple>
+                    </random>
+                </setTemplateValue>
+            </templateElse>
+        </templateCondition>
+        <setTemplateValue identifier="MIN">
+            <integerDivide>
+                <baseValue baseType="integer">120</baseValue>
+                <variable identifier="A"/>
+            </integerDivide>
+        </setTemplateValue>
+        <setCorrectResponse identifier="RESPONSE">
+            <integerDivide>
+                <baseValue baseType="integer">120</baseValue>
+                <variable identifier="B"/>
+            </integerDivide>
+        </setCorrectResponse>
+    </templateProcessing>
+    <itemBody>
+        <p>If it takes <printedVariable identifier="A"/>
+            <printedVariable identifier="PEOPLE"/>
+            <printedVariable identifier="MIN"/> minutes to dig a hole, how long would it take
+                <printedVariable identifier="B"/>
+            <printedVariable identifier="PEOPLE"/> to dig a similar hole?</p>
+        <p>Answer: <textEntryInteraction responseIdentifier="RESPONSE" expectedLength="8"/> minutes.</p>
+    </itemBody>
+    <responseProcessing
+        template="http://www.imsglobal.org/question/qti_v2p0/rptemplates/match_correct"/>
+</assessmentItem>

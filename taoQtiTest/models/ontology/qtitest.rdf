@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<rdf:RDF
+	xml:base="http://www.tao.lu/Ontologies/TAOTest.rdf#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:test="http://www.tao.lu/Ontologies/TAOTest.rdf#"
+	xmlns:wf="http://www.tao.lu/middleware/wfEngine.rdf#" 
+>
+ 
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOTest.rdf#QtiTestModel">
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOTest.rdf#TestModel"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[QTI 2.1 Test Driver]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Driver and configuration/authoring tool implementing the test interface for driving compliant QTI 2.1 tests]]></rdfs:comment>
+    <test:TestModelImplementation><![CDATA[taoQtiTest_models_classes_TestModel]]></test:TestModelImplementation>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamQtiTestDefinition">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassFormalParameters"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[QTI Test Definition]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[QTI Test Definition Uri]]></rdfs:comment>
+    <wf:PropertyFormalParametersName><![CDATA[QtiTestDefinition]]></wf:PropertyFormalParametersName>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamQtiTestCompilation">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassFormalParameters"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[QTI Test Compilation]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[QTI Test Compilation Uri]]></rdfs:comment>
+    <wf:PropertyFormalParametersName><![CDATA[QtiTestCompilation]]></wf:PropertyFormalParametersName>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#ServiceQtiTestRunner">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassDeliveryServices"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[QTI test runner]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[runs a QTI 2.1 test]]></rdfs:comment>
+    <wf:PropertySupportServicesUrl><![CDATA[/taoQtiTest/TestRunner/index?QtiTestDefinition=^QtiTestDefinition&QtiTestCompilation=^QtiTestCompilation]]></wf:PropertySupportServicesUrl>
+    <wf:PropertyServiceDefinitionsFormalParameterIn rdf:resource="http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamQtiTestDefinition"/>
+    <wf:PropertyServiceDefinitionsFormalParameterIn rdf:resource="http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamQtiTestCompilation"/>
+  </rdf:Description>
+  
+</rdf:RDF>

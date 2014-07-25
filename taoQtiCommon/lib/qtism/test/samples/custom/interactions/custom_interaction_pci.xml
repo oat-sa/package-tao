@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+				xmlns:pci="http://www.imsglobal.org/xsd/portableCustomInteraction"
+				xmlns:xhtml="http://www.w3.org/1999/xhtml"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/imsqti_v2p1.xsd"
+				identifier="SimpleExample" title="Example" adaptive="false" timeDependent="false">
+	<responseDeclaration baseType="point" cardinality="single" identifier="RESPONSE" />
+	<templateDeclaration baseType="integer" cardinality="single" identifier="X">
+		<defaultValue>
+			<value>1</value>
+		</defaultValue>
+	</templateDeclaration>
+	<templateDeclaration baseType="integer" cardinality="single" identifier="Y">
+		<defaultValue>
+			<value>1</value>
+		</defaultValue>
+	</templateDeclaration>
+	
+	<itemBody>
+		<customInteraction responseIdentifier="RESPONSE" id="graph1">
+			<pci:portableCustomInteraction customInteractionTypeIdentifier="IW30MX6U48JF9120GJS">
+				<pci:templateVariableMapping templateIdentifier="X" configurationProperty="areaX" />
+				<pci:templateVariableMapping templateIdentifier="Y" configurationProperty="areaY" />
+				<pci:instance>
+	       			<xhtml:script type="text/javascript" src="js/graph.js"></xhtml:script>
+					<xhtml:script type="text/javascript"><![CDATA[
+						qtiCustomInteractionContext.setConfiguration(
+							'graph1',
+							{
+								"div":"graph1_box","setup":{boundingbox: [-3,3,3,-3]},
+								"draw":function(graph){
+								var p1 = graph.create('point',[-1,-1]);
+							}
+						);
+	       			]]></xhtml:script>
+					<xhtml:div id="graph1_box" class="graph" style="width:500px; height:500px;"></xhtml:div>
+				</pci:instance>
+			</pci:portableCustomInteraction>
+		</customInteraction>
+	</itemBody>
+</assessmentItem>

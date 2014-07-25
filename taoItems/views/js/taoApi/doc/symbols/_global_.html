@@ -1,0 +1,2273 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta charset="utf-8"></meta>
+		<meta name="generator" content="JsDoc Toolkit"></meta>
+		<title>_global_ | JsDoc Reference</title>
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"></meta>
+		<meta name="mobileoptimized" content="0"></meta>
+	
+		<link rel="stylesheet" href="../css/all.css" media="all"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="only screen and (max-width: 660px)"></link>
+		<link rel="stylesheet" href="../css/handheld.css" media="handheld"></link>
+		<link rel="stylesheet" href="../css/screen.css" media="screen and (min-width: 661px)"></link>
+        <link rel="stylesheet" href="../css/jstree.css" media="screen and (min-width: 661px)"></link>
+
+		<script src="../javascript/all.js"></script>
+		<script src="../javascript/jquery-1.5.min.js"></script>
+		<script src="../javascript/jquery.jstree.js"></script>
+        <script type="application/javascript">
+        $(function(){
+            // Get the menu reference in the url
+            var ref = null;
+            var regexS = "ref=(.*)[#&]*";
+            var regex = new RegExp( regexS );
+            var results = regex.exec( window.location.href );
+            if (results!=null){
+                ref = results[1];
+            }
+
+            
+            // Load the jstree menu
+            $('#ClassMenu').jstree({
+        		"plugins" : [ "themes", "html_data", "ui" ] 
+			    , "themes" : {
+				    "theme" : "default",
+				    "dots" : true,
+				    "icons" : false
+			    }
+            })
+            // When an element is selected
+            .bind("select_node.jstree", function (e, ui) {
+                // same ref, ref null
+                if (($(ui.args[0]).parent())[0].id == ref 
+                    || ($(ui.args[0]).parent())[0].id == ''){ 
+                    return; 
+                }
+                // Redirect
+                window.location.href = $(ui.args[0])
+                    .attr('href')+"?ref="
+                    +($(ui.args[0]).parent())[0].id;
+            })
+            // When the jstree is loaded
+            .bind("loaded.jstree", function (event, data) {
+                // If a reference has been found in the url, select it on the jstree
+                if (ref!=null){
+                    $.jstree._reference($('#ClassMenu'))
+                        .select_node ($('#'+ref)[0]);
+                }
+            });
+    	});
+        </script>
+		<!--[if lt IE 9]>
+			<script src="../javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+
+
+<div class="index">
+	<div class="menu">
+        
+        <div style="width:100px; height:69px; background-image:url('../css/taoLogo.png');">&nbsp;</div>
+		<div class="indexLinks">
+			<a href="../index.html">Classes</a>
+			<a href="../files.html">Files</a>
+		</div>
+	
+		<h2 class="heading1">Classes</h2>
+		
+		<input type="text" name="classFilter" class="classFilter" id="ClassFilter" placeholder="Filter"></input>
+		
+		<nav id="ClassMenu" style="width:100%; overflow-x:auto;">
+			<ul class="classList" id="ClassList">
+                <li>
+                    <a href="#">main</a>
+                    <ul>
+				        
+					        <li id="menuRef0"><a href="../symbols/_global_.html">_global_</a>
+                                <ul>
+                                    
+                                        
+                                    
+                                        
+                                    
+                                </ul>
+                            </li>
+				        
+                        
+                            <li id=menuRef1><a href="../symbols/EventTracer.html">EventTracer</a></li>
+                        
+                            <li id=menuRef2><a href="../symbols/TaoStack.html">TaoStack</a></li>
+                        
+                    </ul>
+                </li>
+			</ul>
+		</nav>
+	</div>
+	<div class="fineprint" style="clear:both">
+		
+		Documentation generator: <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.3.2<br />
+		Template: <a href="http://www.thebrightlines.com/2010/05/06/new-template-for-jsdoctoolkit-codeview/" target="_blank">Codeview</a> 1.2<br />
+		Generated on: 2011-2-11 17:21
+	</div>
+</div>
+
+<div class="index indexStatic"></div>
+
+<div class="content">
+	<div class="innerContent">
+		<h1 class="classTitle">
+			
+			Built-In Namespace <span>_global_</span>
+		</h1>
+		
+		<div class="intro">
+			<p class="description summary">
+				
+			</p>
+				
+			
+		</div>
+		
+		
+		
+		
+			
+			
+				<div class="props">
+					<table class="summaryTable" cellspacing="0" summary="A summary of the fields documented in the class _global_.">
+						<caption class="sectionTitle">Field Summary</caption>
+						
+						<thead>
+							<tr>
+								<th scope="col">Field Attributes</th>
+								<th scope="col">Field Name and Description</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/_global_.html#eventTracer">eventTracer</a></b>
+										</div>
+										<div class="description">instanciate the EventTracer object</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;constant&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/_global_.html#STATE">STATE</a></b>
+										</div>
+										<div class="description">This object is used for a convenience translation of the differents states</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/_global_.html#taoStack">taoStack</a></b>
+										</div>
+										<div class="description">instanciate the TaoStack object</div>
+									</td>
+								</tr>
+							
+								<tr>
+									<td class="attributes">&lt;constant&gt; &nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont">
+										<b><a href="../symbols/_global_.html#URI">URI</a></b>
+										</div>
+										<div class="description">This object is used for a convenience translation of URIS
+<i>the ##NAMESPACE# tag means the local namespace</i></div>
+									</td>
+								</tr>
+							
+						</tbody>
+					</table>
+				</div>
+			
+			
+			
+		
+<!--
+#### METHODS SUMMARY
+-->
+		
+			
+			
+			<div class="props">
+				<h2 class="sectionTitle">Method Summary</h2>
+				
+				
+					<table class="summaryTable" id="MethodsList" cellspacing="0" summary="A summary of the methods documented in the class _global_.">
+						<thead>
+							<tr>
+								<th scope="col">Method Attributes</th>
+								<th scope="col">Method Name and Description</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							
+							
+								<tr
+									 class='item0'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#afterFinish">afterFinish</a></b>(callback)
+										</div>
+										<div class="description">Add a callback that will be executed on finish but after the other callbacks</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item1'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#beforeFinish">beforeFinish</a></b>(callback)
+										</div>
+										<div class="description">Add a callback that will be executed on finish but before the other callbacks</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item2'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#finish">finish</a></b>()
+										</div>
+										<div class="description">Define the item's state as finished.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item3'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#getAnsweredValues">getAnsweredValues</a></b>()
+										</div>
+										<div class="description">Get the values answered by the subject</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item4'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#getDelivery">getDelivery</a></b>()
+										</div>
+										<div class="description">Get the informations of the current delivery</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item5'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#getEndorsment">getEndorsment</a></b>()
+										</div>
+										<div class="description">Get the endorsment of the item</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item6'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#getItem">getItem</a></b>()
+										</div>
+										<div class="description">Get the current item's informations</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item7'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#getScore">getScore</a></b>()
+										</div>
+										<div class="description">Get the score of the item</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item8'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#getScoreRange">getScoreRange</a></b>()
+										</div>
+										<div class="description">get the score range if defined</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item9'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#getSubject">getSubject</a></b>()
+										</div>
+										<div class="description">Get the data of the user currently doing the item  (the subject)</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item10'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#getSubjectLogin">getSubjectLogin</a></b>()
+										</div>
+										<div class="description">Get the login of the subject</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item11'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#getSubjectName">getSubjectName</a></b>()
+										</div>
+										<div class="description">Get the name of the subject (firstname and lastname)</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item12'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#getTest">getTest</a></b>()
+										</div>
+										<div class="description">Get the informations of the currently running test</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item13'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#getToken">getToken</a></b>()
+										</div>
+										<div class="description">Get the communication token (this token is sent at each communication)</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item14'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#getUserVar">getUserVar</a></b>(key)
+										</div>
+										<div class="description">Get a previously defined user's variable.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item15'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#initDataSource">initDataSource</a></b>(environment, settings)
+										</div>
+										<div class="description">This fuction enables you to set up the data the item need.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item16'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#initEventServices">initEventServices</a></b>(source, destination)
+										</div>
+										<div class="description">Initialize the interfaces communication for the events logging.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item17'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#initManualDataSource">initManualDataSource</a></b>(source)
+										</div>
+										<div class="description">This function is a convenience method to add directly the datasource 
+by writing the data in the source object (JSON) .</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item18'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#initPush">initPush</a></b>(environment, settings)
+										</div>
+										<div class="description">Initialize the push communication.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item19'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#isScalar">isScalar</a></b>(value)
+										</div>
+										<div class="description">Utility function to check if a value is a scalar:
+(string, integer, float and boolean)</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item20'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#logCustomEvent">logCustomEvent</a></b>(eventName, data)
+										</div>
+										<div class="description">Log the a <i>eventName</i> by sending the <i>data</i></div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item21'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#logEvent">logEvent</a></b>(elementName, eventType, data)
+										</div>
+										<div class="description">Log the an <i>eventType</i> bound on <i>elementName</i> by sending the <i>data</i>.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item22'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#onFinish">onFinish</a></b>(callback)
+										</div>
+										<div class="description">Add a callback that will be executed on finish state.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item23'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#push">push</a></b>()
+										</div>
+										<div class="description">This method enables you to push the data to the server.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item24'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#setAnsweredValues">setAnsweredValues</a></b>(values)
+										</div>
+										<div class="description">Set the values answered by the subject.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item25'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#setEndorsment">setEndorsment</a></b>(endorsment)
+										</div>
+										<div class="description">Set the endorsment of the item</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item26'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#setScore">setScore</a></b>(score)
+										</div>
+										<div class="description">Set the final score of the item</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item27'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#setScoreRange">setScoreRange</a></b>(max, min)
+										</div>
+										<div class="description">Set the score range.</div>
+									</td>
+								</tr>
+							
+								<tr
+									 class='item28'
+								>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription">
+										<div class="fixedFont"><b><a href="../symbols/_global_.html#setUserVar">setUserVar</a></b>(key, the)
+										</div>
+										<div class="description">This function enables you to create and edit custom variables: the <i>user's variables</i>
+The variable is identified by a key you have chosen.</div>
+									</td>
+								</tr>
+							
+						</tbody>
+					</table>
+				
+			
+				
+			</div>
+		
+		
+<!--
+#### EVENTS SUMMARY
+-->
+		
+<!--
+#### CONSTRUCTOR DETAILS
+-->
+		
+<!--
+#### FIELD DETAILS
+-->
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle">
+						Field Detail
+					</h2>
+					
+					
+						<div class="fixedFont heading" id="eventTracer">
+							<span class='lighter'>
+							
+							</span>
+							
+							<span class="light">{<a href="../symbols/EventTracer.html">EventTracer</a>}</span>
+							
+							<b>eventTracer</b>							
+						</div>
+						
+						<div class="description">
+							instanciate the EventTracer object
+							
+								<br />
+								<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="STATE">
+							<span class='lighter'>
+							&lt;constant&gt; 
+							</span>
+							
+							
+							
+							<b>STATE</b>							
+						</div>
+						
+						<div class="description">
+							This object is used for a convenience translation of the differents states
+							
+								<br />
+								<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_constants.js.html">constants.js</a>.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="taoStack">
+							<span class='lighter'>
+							
+							</span>
+							
+							
+							
+							<b>taoStack</b>							
+						</div>
+						
+						<div class="description">
+							instanciate the TaoStack object
+							
+								<br />
+								<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						<div class="hr"></div>
+					
+						<div class="fixedFont heading" id="URI">
+							<span class='lighter'>
+							&lt;constant&gt; 
+							</span>
+							
+							
+							
+							<b>URI</b>							
+						</div>
+						
+						<div class="description">
+							This object is used for a convenience translation of URIS
+<i>the ##NAMESPACE# tag means the local namespace</i>
+							
+								<br />
+								<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_constants.js.html">constants.js</a>.
+							
+							
+							
+						</div>
+						
+						
+							
+						
+						
+					
+				</div>
+			</div>
+		
+<!--
+#### METHOD DETAILS
+-->		
+		
+			<div class="details props">
+				<div class="innerProps">
+					<h2 class="sectionTitle">
+						Method Detail
+					</h2>
+					
+					<ul class="methodDetail" id="MethodDetail">
+						
+						
+							<li 
+								 class='item0'
+							>
+								<div class="fixedFont heading" id="afterFinish">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>afterFinish</b>(callback)
+								</div>
+								
+								<div class="description">
+									Add a callback that will be executed on finish but after the other callbacks
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{function}</span> <b>callback</b>
+												
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item1'
+							>
+								<div class="fixedFont heading" id="beforeFinish">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>beforeFinish</b>(callback)
+								</div>
+								
+								<div class="description">
+									Add a callback that will be executed on finish but before the other callbacks
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{function}</span> <b>callback</b>
+												
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item2'
+							>
+								<div class="fixedFont heading" id="finish">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>finish</b>()
+								</div>
+								
+								<div class="description">
+									Define the item's state as finished.
+This state can have some consequences.
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item3'
+							>
+								<div class="fixedFont heading" id="getAnsweredValues">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{Object}</span>
+									
+									<b>getAnsweredValues</b>()
+								</div>
+								
+								<div class="description">
+									Get the values answered by the subject
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{Object}</span> </dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item4'
+							>
+								<div class="fixedFont heading" id="getDelivery">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{Object}</span>
+									
+									<b>getDelivery</b>()
+								</div>
+								
+								<div class="description">
+									Get the informations of the current delivery
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{Object}</span> the delivery's data (uri, label)</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item5'
+							>
+								<div class="fixedFont heading" id="getEndorsment">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{boolean}</span>
+									
+									<b>getEndorsment</b>()
+								</div>
+								
+								<div class="description">
+									Get the endorsment of the item
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{boolean}</span> </dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item6'
+							>
+								<div class="fixedFont heading" id="getItem">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{Object}</span>
+									
+									<b>getItem</b>()
+								</div>
+								
+								<div class="description">
+									Get the current item's informations
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{Object}</span> the item's data (uri, label)</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item7'
+							>
+								<div class="fixedFont heading" id="getScore">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{String|Number}</span>
+									
+									<b>getScore</b>()
+								</div>
+								
+								<div class="description">
+									Get the score of the item
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{String|Number}</span> </dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item8'
+							>
+								<div class="fixedFont heading" id="getScoreRange">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{Object}</span>
+									
+									<b>getScoreRange</b>()
+								</div>
+								
+								<div class="description">
+									get the score range if defined
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{Object}</span> with <b>min</b> and <b>max</b> attributes</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item9'
+							>
+								<div class="fixedFont heading" id="getSubject">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{Object}</span>
+									
+									<b>getSubject</b>()
+								</div>
+								
+								<div class="description">
+									Get the data of the user currently doing the item  (the subject)
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{Object}</span> all the data related to the subject</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item10'
+							>
+								<div class="fixedFont heading" id="getSubjectLogin">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{String}</span>
+									
+									<b>getSubjectLogin</b>()
+								</div>
+								
+								<div class="description">
+									Get the login of the subject
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{String}</span> the subject's login</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item11'
+							>
+								<div class="fixedFont heading" id="getSubjectName">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{Object}</span>
+									
+									<b>getSubjectName</b>()
+								</div>
+								
+								<div class="description">
+									Get the name of the subject (firstname and lastname)
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{Object}</span> the subject's name</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item12'
+							>
+								<div class="fixedFont heading" id="getTest">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{Object}</span>
+									
+									<b>getTest</b>()
+								</div>
+								
+								<div class="description">
+									Get the informations of the currently running test
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{Object}</span> the test's data (uri, label)</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item13'
+							>
+								<div class="fixedFont heading" id="getToken">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{String}</span>
+									
+									<b>getToken</b>()
+								</div>
+								
+								<div class="description">
+									Get the communication token (this token is sent at each communication)
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{String}</span> the token</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item14'
+							>
+								<div class="fixedFont heading" id="getUserVar">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{String|number|boolean}</span>
+									
+									<b>getUserVar</b>(key)
+								</div>
+								
+								<div class="description">
+									Get a previously defined user's variable.
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>key</b>
+												
+											</dt>
+											<dd>the key of the variable you want to retrieve</dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{String|number|boolean}</span> </dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item15'
+							>
+								<div class="fixedFont heading" id="initDataSource">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>initDataSource</b>(environment, settings)
+								</div>
+								
+								<div class="description">
+									This fuction enables you to set up the data the item need.
+You can retrieve this data from either a remote or a manual source.
+<b>If you don't need to change the default values, don't call this function.</b>
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>environment</b>
+												
+											</dt>
+											<dd><i>set to null if you want to keep all the default values</i></dd>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>environment.type</b>
+												<i>Optional, Default:  "async"</i>
+											</dt>
+											<dd>the datasource type <b>(manual|sync|async)</b></dd>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>environment.url</b>
+												<i>Optional, Default:  "/taoDelivery/ResultDelivery/initialize"</i>
+											</dt>
+											<dd>the url of the server where the data are sent</dd>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>environment.params</b>
+												<i>Optional</i>
+											</dt>
+											<dd>the additional parameters to send with the data</dd>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>settings</b>
+												
+											</dt>
+											<dd><i>set to null if you want to keep all the default values</i></dd>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>settings.format</b>
+												<i>Optional, Default:  "json"</i>
+											</dt>
+											<dd>the data format. <i>Only json is supported in the current version</i></dd>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>settings.method</b>
+												<i>Optional, Default:  "post"</i>
+											</dt>
+											<dd>HTTP method to push the data <b>(get|post)</b></dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item16'
+							>
+								<div class="fixedFont heading" id="initEventServices">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>initEventServices</b>(source, destination)
+								</div>
+								
+								<div class="description">
+									Initialize the interfaces communication for the events logging.
+The source service defines where and how we retrieve the list of events to catch
+The destination service defines where and how we send the catched events
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>source</b>
+												
+											</dt>
+											<dd></dd>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>source.type</b>
+												<i>Optional, Default:  "sync"</i>
+											</dt>
+											<dd>the type of source <b>(sync|manual)</b></dd>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>source.data</b>
+												<i>Optional</i>
+											</dt>
+											<dd>For the <i>manual</i> source type, set direclty the events list in the data</dd>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>source.url</b>
+												<i>Optional, Default:  "/taoDelivery/ResultDelivery/getEvents"</i>
+											</dt>
+											<dd>For the <i>sync</i> source type, the URL of the remote service</dd>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>source.params</b>
+												<i>Optional</i>
+											</dt>
+											<dd>the parameters to send to the sync service</dd>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>source.format</b>
+												<i>Optional, Default:  "json"</i>
+											</dt>
+											<dd>the data format. <i>Only json is supported in the current version</i></dd>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>source.method</b>
+												<i>Optional, Default:  "post"</i>
+											</dt>
+											<dd>HTTP method of the sync service <b>(get|post)</b></dd>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>destination</b>
+												
+											</dt>
+											<dd></dd>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>destination.url</b>
+												<i>Optional, Default:  "/taoDelivery/ResultDelivery/traceEvents"</i>
+											</dt>
+											<dd>the URL of the remote service</dd>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>destination.params</b>
+												<i>Optional</i>
+											</dt>
+											<dd>the common parameters to send to the service</dd>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>destination.format</b>
+												<i>Optional, Default:  "json"</i>
+											</dt>
+											<dd>the data format. <i>Only json is supported in the current version</i></dd>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>destination.method</b>
+												<i>Optional, Default:  "post"</i>
+											</dt>
+											<dd>HTTP method of the service <b>(get|post)</b></dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item17'
+							>
+								<div class="fixedFont heading" id="initManualDataSource">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>initManualDataSource</b>(source)
+								</div>
+								
+								<div class="description">
+									This function is a convenience method to add directly the datasource 
+by writing the data in the source object (JSON) .
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>source</b>
+												
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item18'
+							>
+								<div class="fixedFont heading" id="initPush">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>initPush</b>(environment, settings)
+								</div>
+								
+								<div class="description">
+									Initialize the push communication.
+<b>If you don't need to change the default values, don't call this function.</b>
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>environment</b>
+												
+											</dt>
+											<dd><i>set to null if you want to keep all the default values</i></dd>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>environment.url</b>
+												<i>Optional, Default:  "/taoDelivery/ResultDelivery/save"</i>
+											</dt>
+											<dd>the url of the server where the data are sent</dd>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>environment.params</b>
+												<i>Optional</i>
+											</dt>
+											<dd>the additional parameters to send with the data</dd>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>settings</b>
+												
+											</dt>
+											<dd><i>set to null if you want to keep all the default values</i></dd>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>settings.format</b>
+												<i>Optional, Default:  "json"</i>
+											</dt>
+											<dd>the data format. <i>Only json is supported in the current version</i></dd>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>settings.method</b>
+												<i>Optional, Default:  "post"</i>
+											</dt>
+											<dd>HTTP method to push the data <b>(get|post)</b></dd>
+										
+											<dt>
+												<span class="light fixedFont">{boolean}</span> <b>settings.async</b>
+												<i>Optional, Default:  true</i>
+											</dt>
+											<dd>if the request is asynchronous</dd>
+										
+											<dt>
+												<span class="light fixedFont">{boolean}</span> <b>settings.clearAfter</b>
+												<i>Optional, Default:  true</i>
+											</dt>
+											<dd>if the variables stacks are cleared once the push is done</dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item19'
+							>
+								<div class="fixedFont heading" id="isScalar">
+									<span class='lighter'>
+									
+									</span>
+									
+									<span class="light">{bool}</span>
+									
+									<b>isScalar</b>(value)
+								</div>
+								
+								<div class="description">
+									Utility function to check if a value is a scalar:
+(string, integer, float and boolean)
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_core.js.html">core.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{mixed}</span> <b>value</b>
+												
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+									<dl class="detailList nomargin">
+									
+										
+										
+										
+										
+										
+										
+										
+											<dt class="heading">Returns:</dt>
+											
+												<dd><span class="light fixedFont">{bool}</span> true if it's a scalar</dd>
+											
+										
+										
+										
+										
+										
+									
+									</dl>
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item20'
+							>
+								<div class="fixedFont heading" id="logCustomEvent">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>logCustomEvent</b>(eventName, data)
+								</div>
+								
+								<div class="description">
+									Log the a <i>eventName</i> by sending the <i>data</i>
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>eventName</b>
+												
+											</dt>
+											<dd>the name of the custom event</dd>
+										
+											<dt>
+												<span class="light fixedFont">{mixed}</span> <b>data</b>
+												
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item21'
+							>
+								<div class="fixedFont heading" id="logEvent">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>logEvent</b>(elementName, eventType, data)
+								</div>
+								
+								<div class="description">
+									Log the an <i>eventType</i> bound on <i>elementName</i> by sending the <i>data</i>.
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>elementName</b>
+												
+											</dt>
+											<dd>an HTML tag name</dd>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>eventType</b>
+												
+											</dt>
+											<dd>a JS User Events</dd>
+										
+											<dt>
+												<span class="light fixedFont">{mixed}</span> <b>data</b>
+												
+											</dt>
+											<dd>any data strucuture you want to trace</dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item22'
+							>
+								<div class="fixedFont heading" id="onFinish">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>onFinish</b>(callback)
+								</div>
+								
+								<div class="description">
+									Add a callback that will be executed on finish state.
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{function}</span> <b>callback</b>
+												
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item23'
+							>
+								<div class="fixedFont heading" id="push">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>push</b>()
+								</div>
+								
+								<div class="description">
+									This method enables you to push the data to the server.
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item24'
+							>
+								<div class="fixedFont heading" id="setAnsweredValues">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>setAnsweredValues</b>(values)
+								</div>
+								
+								<div class="description">
+									Set the values answered by the subject.
+If the item contains a free text field, 
+you can record here the complete response.
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{Object}</span> <b>values</b>
+												
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item25'
+							>
+								<div class="fixedFont heading" id="setEndorsment">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>setEndorsment</b>(endorsment)
+								</div>
+								
+								<div class="description">
+									Set the endorsment of the item
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{boolean}</span> <b>endorsment</b>
+												
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item26'
+							>
+								<div class="fixedFont heading" id="setScore">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>setScore</b>(score)
+								</div>
+								
+								<div class="description">
+									Set the final score of the item
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{String|Number}</span> <b>score</b>
+												
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item27'
+							>
+								<div class="fixedFont heading" id="setScoreRange">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>setScoreRange</b>(max, min)
+								</div>
+								
+								<div class="description">
+									Set the score range. 
+It will be used to calculate the endorsment from the score.
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{String|Number}</span> <b>max</b>
+												
+											</dt>
+											<dd></dd>
+										
+											<dt>
+												<span class="light fixedFont">{String|Number}</span> <b>min</b>
+												<i>Optional, Default:  0</i>
+											</dt>
+											<dd></dd>
+										
+									</dl>
+								
+								
+								
+								<div class="hr"></div>
+							</li>
+						
+							<li 
+								 class='item28'
+							>
+								<div class="fixedFont heading" id="setUserVar">
+									<span class='lighter'>
+									
+									</span>
+									
+									
+									
+									<b>setUserVar</b>(key, the)
+								</div>
+								
+								<div class="description">
+									This function enables you to create and edit custom variables: the <i>user's variables</i>
+The variable is identified by a key you have chosen.
+This variable will be saved temporarly into the taoApi.
+When you call the <code>push()</code> function, the <i>user's variables</i> are sent to the server.
+It's a way to record some data other than the results and the events.
+									
+									
+										<br />
+										<i>Defined in: </i> <a href="../symbols/src/_home_crp_workspace_transferAll_taoItems_views_js_taoApi_src_api.js.html">api.js</a>.
+									
+									
+									
+								</div>
+								
+								
+								
+								
+									<dl class="detailList params">
+										<dt class="heading">Parameters:</dt>
+										
+											<dt>
+												<span class="light fixedFont">{String}</span> <b>key</b>
+												
+											</dt>
+											<dd>to identify of the variable</dd>
+										
+											<dt>
+												<span class="light fixedFont">{String|number|boolean}</span> <b>the</b>
+												
+											</dt>
+											<dd>value of the variable</dd>
+										
+									</dl>
+								
+								
+								
+								
+							</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+		
+<!--
+#### EVENT DETAILS
+-->		
+		
+	</div>
+</div>
+		<script type="text/javascript">
+			wbos.CssTools.MediaQueryFallBack.LoadCss('../css/screen.css', '../css/handheld.css', 660)
+			codeview.classFilter.Init()
+		</script>
+	</body>
+</html>
+
