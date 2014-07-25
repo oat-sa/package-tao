@@ -1,0 +1,194 @@
+label {
+    display: inline-block;
+    cursor: pointer;
+    padding-right: 10px;
+    margin-bottom: 5px;
+    abbr {
+        border: none;
+        color: $info;
+    }
+}
+
+
+.file-upload {
+    display: inline-block;
+    position: relative;
+    overflow:hidden;
+    max-width: 300px;
+    .file-name {
+        padding:  2px 5px;
+        background: white;
+        &.placeholder {
+            font-style: italic;
+            color: whiten($textColor, .8);
+        }
+        @include simple-border();
+        &.active {
+            font-style: normal;
+            color: $textColor;
+        }
+    }
+    input[type="file"] {
+        font-size: 80px !important;
+        position: absolute;
+        left: auto;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    &:hover {
+        .btn-info {
+            opacity: .85;
+        }
+    }
+}
+
+.file-drop {
+    height: 150px;
+    padding-top: 50px;
+    border: dashed 2px $uiGeneralContentBorder;
+    text-align: center;
+    color: $uiGeneralContentBorder;
+    @include font-size(20);
+    &.drag-hover {
+        border-color: $uiClickableHoverBg;
+        color: $uiClickableHoverBg;
+    }
+}
+
+
+.pseudo-label-box {
+    position: relative;
+    cursor: pointer; 
+    & > label {
+        width: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        & + div {
+            cursor: pointer;
+            margin-left: 24px;
+        }
+    }
+    abbr {
+        border: none;
+        color: $info;
+    }
+}
+
+ol, ul {
+    &.horizontal {
+        .pseudo-label-box {
+            & > label {
+                & + div {
+                    display: table;
+                }
+            }
+        }
+    }
+}
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="text"],
+input[type="password"],
+input[type="url"],
+input[type="week"],
+textarea,
+select {
+    @include simple-border();
+    @include border-radius(2);
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 4px;
+    min-width: 150px;
+    background-color: white;
+    color: $textColor;
+    max-width: 300px;
+
+    &.disabled, &[disabled] {
+        cursor: not-allowed !important;
+    }
+    &.disabled, &[disabled], &[readonly] {
+        color: $textColor;
+        opacity: .55 !important;
+    }
+   
+
+    & ~ .validate-error {
+        color: $error;
+    }
+    &.error {
+        border-color: $error;
+    }
+}
+
+option {
+    background: white;
+    color: $textColor;
+}
+
+label {
+    position: relative;
+    [class^="icon-radio"],
+    [class*=" icon-radio"] {
+        padding: 0 2px 0 3px;
+    }
+    .icon-checkbox,
+    .icon-checkbox-crossed {
+        padding: 0 3px 0 3px;
+    }
+    .icon-checkbox-checked {
+        padding: 0 0 0 3px;
+    }
+    [class^="icon-"],
+    [class*=" icon-"] {
+        @include font-size(16);
+        position: relative;
+        top: 2px;
+        color: #555;
+        display: inline-block;
+        width: 20px;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+        position: absolute;
+        left: -10000px;
+        top: 0;
+        &:focus ~ [class^="icon-"],
+        &:focus ~ [class*=" icon-"],
+        &:active ~ [class^="icon-"],
+        &:active ~ [class*=" icon-"] {
+            color: #222;
+        }
+        &:checked ~ .icon-checkbox:before {
+            @extend .icon-checkbox-checked:before;
+        }
+        &:checked ~ .icon-radio:before {
+            @extend .icon-radio-checked:before;
+        }
+        &:checked ~ .icon-checkbox.cross:before {
+            @extend .icon-checkbox-crossed:before;
+        }
+        &.disabled, &[disabled], &[readonly] {
+            & ~[class^="icon-"], 
+            & ~[class*=" icon-"]{
+                cursor: not-allowed !important;
+                opacity: .4 !important;
+                color: #555;
+            }
+        }
+    }
+}
+

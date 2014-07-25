@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" identifier="testId" title="testTitle" xsi:schemaLocation="http://www.taotesting.com/xsd/qticompact_v1p0.xsd">
+  <testPart identifier="testPartId" navigationMode="nonlinear" submissionMode="individual">
+    <timeLimits minTime="0" maxTime="0" allowLateSubmission="false"/>
+    <assessmentSection identifier="assessmentSectionId" required="true" fixed="false" title="assessmentSectionTitle" visible="true" keepTogether="true">
+      <assessmentItemRef identifier="astronomy" required="false" fixed="false" href="http://taoplatform/taotrunk.rdf#i137968640174763|http://taoplatform/taotrunk.rdf#i1379686467155840|http://taoplatform/taotrunk.rdf#i1379686418393229" adaptive="false" timeDependent="false">
+        <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="pair">
+          <correctResponse>
+            <value>Ea Mo</value>
+            <value>Ju Ga</value>
+            <value>Ne Tr</value>
+          </correctResponse>
+          <mapping defaultValue="0">
+            <mapEntry mapKey="Ea Mo" mappedValue="2" caseSensitive="true"/>
+            <mapEntry mapKey="Ju Ga" mappedValue="1" caseSensitive="true"/>
+            <mapEntry mapKey="Ne Tr" mappedValue="1" caseSensitive="true"/>
+          </mapping>
+        </responseDeclaration>
+        <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+        <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response"/>
+      </assessmentItemRef>
+      <assessmentItemRef identifier="elections-in-the-united-states-2004" required="false" fixed="false" href="http://taoplatform/taotrunk.rdf#i13796864027736|http://taoplatform/taotrunk.rdf#i1379686467335042|http://taoplatform/taotrunk.rdf#i1379686418393229" adaptive="false" timeDependent="false">
+        <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="integer">
+          <correctResponse>
+            <value>51</value>
+          </correctResponse>
+          <mapping defaultValue="0">
+            <mapEntry mapKey="42" mappedValue="0.1" caseSensitive="true"/>
+            <mapEntry mapKey="43" mappedValue="0.2" caseSensitive="true"/>
+            <mapEntry mapKey="44" mappedValue="0.3" caseSensitive="true"/>
+            <mapEntry mapKey="45" mappedValue="0.4" caseSensitive="true"/>
+            <mapEntry mapKey="46" mappedValue="0.5" caseSensitive="true"/>
+            <mapEntry mapKey="47" mappedValue="0.6" caseSensitive="true"/>
+            <mapEntry mapKey="48" mappedValue="0.7" caseSensitive="true"/>
+            <mapEntry mapKey="49" mappedValue="0.8" caseSensitive="true"/>
+            <mapEntry mapKey="50" mappedValue="0.9" caseSensitive="true"/>
+            <mapEntry mapKey="51" mappedValue="1" caseSensitive="true"/>
+            <mapEntry mapKey="52" mappedValue="0.9" caseSensitive="true"/>
+            <mapEntry mapKey="53" mappedValue="0.8" caseSensitive="true"/>
+            <mapEntry mapKey="54" mappedValue="0.7" caseSensitive="true"/>
+            <mapEntry mapKey="55" mappedValue="0.6" caseSensitive="true"/>
+            <mapEntry mapKey="56" mappedValue="0.5" caseSensitive="true"/>
+            <mapEntry mapKey="57" mappedValue="0.4" caseSensitive="true"/>
+            <mapEntry mapKey="58" mappedValue="0.3" caseSensitive="true"/>
+            <mapEntry mapKey="59" mappedValue="0.2" caseSensitive="true"/>
+            <mapEntry mapKey="60" mappedValue="0.1" caseSensitive="true"/>
+          </mapping>
+        </responseDeclaration>
+        <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+        <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response"/>
+      </assessmentItemRef>
+      <assessmentItemRef identifier="periods-of-history" required="false" fixed="false" href="http://taoplatform/taotrunk.rdf#i137968640399879|http://taoplatform/taotrunk.rdf#i1379686468963044|http://taoplatform/taotrunk.rdf#i1379686418393229" adaptive="false" timeDependent="false">
+        <responseDeclaration identifier="RESPONSE" cardinality="ordered" baseType="identifier">
+          <correctResponse>
+            <value>Prehistory</value>
+            <value>Antiquity</value>
+            <value>MiddleAges</value>
+            <value>ModernEra</value>
+            <value>ContemporaryEra</value>
+          </correctResponse>
+        </responseDeclaration>
+        <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+        <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+      </assessmentItemRef>
+      <assessmentItemRef identifier="space-shuttle-30-years-of-adventure" required="false" fixed="false" href="http://taoplatform/taotrunk.rdf#i1379686403813512|http://taoplatform/taotrunk.rdf#i1379686468283046|http://taoplatform/taotrunk.rdf#i1379686418393229" adaptive="false" timeDependent="false">
+        <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+          <correctResponse>
+            <value>Atlantis</value>
+          </correctResponse>
+        </responseDeclaration>
+        <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+          <defaultValue>
+            <value>0</value>
+          </defaultValue>
+        </outcomeDeclaration>
+        <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+      </assessmentItemRef>
+    </assessmentSection>
+  </testPart>
+</assessmentTest>

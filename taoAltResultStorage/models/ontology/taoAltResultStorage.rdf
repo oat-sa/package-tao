@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xml:base="http://www.tao.lu/Ontologies/taoAltResultStorage.rdf#"
+	xmlns:resultserver="http://www.tao.lu/Ontologies/TAOResultServer.rdf#"
+	xmlns:basicoutcome="http://www.tao.lu/Ontologies/taoAltResultStorage.rdf#"
+	xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#" 
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#"
+	xmlns:tao="http://www.tao.lu/Ontologies/TAO.rdf#"
+>
+    
+   <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoAltResultStorage.rdf#KeyValueResultStorageModel">
+	<rdfs:label xml:lang="en-US">KeyValueResultStorage(configure persistency)</rdfs:label>
+	<rdfs:comment xml:lang="en-US">KeyValueResultStorage (configure persistency)</rdfs:comment>
+	<resultserver:implementation><![CDATA[taoAltResultStorage_models_classes_KeyValueResultStorage]]></resultserver:implementation>
+	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServerModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoAltResultStorage.rdf#KeyValueResultStorage">
+	<rdfs:label xml:lang="en-US">KeyValueResultStorage(configure persistency)</rdfs:label>
+	<rdfs:comment xml:lang="en-US">KeyValueResultStorage(configure persistency)</rdfs:comment>
+	<resultserver:hasResultServerModel rdf:resource="http://www.tao.lu/Ontologies/taoAltResultStorage.rdf#KeyValueResultStorageModel" />
+	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServer"/>
+  </rdf:Description>
+
+</rdf:RDF>

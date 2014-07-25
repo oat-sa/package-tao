@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p0 imsqti_v2p0.xsd"
+    identifier="hotspot" title="UK Airports (Take 1)" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+        <correctResponse>
+            <value>A</value>
+        </correctResponse>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+    <itemBody>
+        <p>The picture illustrates four of the most popular destinations for air travellers arriving
+            in the United Kingdom: London, Manchester, Edinburgh and Glasgow.</p>
+        <hotspotInteraction responseIdentifier="RESPONSE" maxChoices="1">
+            <prompt>Which one is Glasgow?</prompt>
+            <object type="image/png" width="206" height="280" data="http://localhost/projects/media/ukair.png">UK Map</object>
+            <hotspotChoice shape="circle" coords="77,115,8" identifier="A"/>
+            <hotspotChoice shape="circle" coords="118,184,8" identifier="B"/>
+            <hotspotChoice shape="circle" coords="150,235,8" identifier="C"/>
+            <hotspotChoice shape="circle" coords="96,114,8" identifier="D"/>
+        </hotspotInteraction>
+    </itemBody>
+    <responseProcessing
+        template="http://www.imsglobal.org/question/qti_v2p0/rptemplates/match_correct"/>
+</assessmentItem>

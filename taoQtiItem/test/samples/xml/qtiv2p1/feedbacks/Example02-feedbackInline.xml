@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This item is a true/false question with inline feedback, adapted from the CC question QUE_102010.xml -->
+<assessmentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+    xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" identifier="Example02-feedbackInline"
+    title="Example 2 - inline feedback" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+        <correctResponse>
+            <value>true</value>
+        </correctResponse>
+    </responseDeclaration>
+
+    <!--￼Define a feedback variable; its baseType is "identifier" so that it can contain the identifier 
+        of the feedback message-->
+
+    <outcomeDeclaration identifier="FEEDBACK" cardinality="single" baseType="identifier"/>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"
+        normalMaximum="10.0">
+        <defaultValue>
+            <value>0</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+        <defaultValue>
+            <value>10.0</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <itemBody>
+
+        <!--￼￼￼￼The response variable RESPONSE will hold the candidate's input-->
+
+        <choiceInteraction responseIdentifier="RESPONSE" shuffle="false" maxChoices="1">
+            <prompt>Sigmund Freud and Carl Jung both belong to the psychoanalytic school of
+                psychology.</prompt>
+            <simpleChoice identifier="true" fixed="true">True 
+                
+                <!--￼￼￼The feedbackInline elements are each given the same identifier as the 
+                    corresponding option.-->
+                
+                <feedbackInline
+                    outcomeIdentifier="FEEDBACK" identifier="true" showHide="show">That's
+                    correct</feedbackInline></simpleChoice>
+            <simpleChoice identifier="false" fixed="true">False <feedbackInline
+                    outcomeIdentifier="FEEDBACK" identifier="false" showHide="show">That's not
+                    correct</feedbackInline></simpleChoice>
+        </choiceInteraction>
+    </itemBody>
+    <responseProcessing>
+        
+        <!--￼This time, FEEDBACK is given the value of the identifier of the option which was selected.-->
+        
+        <setOutcomeValue identifier="FEEDBACK">
+            <variable identifier="RESPONSE"/>
+        </setOutcomeValue>
+        <responseCondition>
+            <responseIf>
+                <match>
+                    <variable identifier="RESPONSE"/>
+                    <correct identifier="RESPONSE"/>
+                </match>
+                <setOutcomeValue identifier="SCORE">
+                    <variable identifier="MAXSCORE"/>
+                </setOutcomeValue>
+            </responseIf>
+        </responseCondition>
+    </responseProcessing>
+</assessmentItem>

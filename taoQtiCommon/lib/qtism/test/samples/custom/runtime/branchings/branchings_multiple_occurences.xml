@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.taotesting.com/xsd/qticompact_v1p0.xsd"
+	identifier="branchings_single_section_linear" title="Branchings Single Section Linear">
+	<testPart identifier="P01" navigationMode="linear" submissionMode="individual">
+		<assessmentSection identifier="S01" fixed="false" title="Section1" visible="true">
+			<assessmentItemRef identifier="Q01" href="./Q01.xml" fixed="false" timeDependent="false">
+				<branchRule target="Q02.1">
+					<match>
+						<variable identifier="Q01.RESPONSE"/>
+						<baseValue baseType="identifier">goto21</baseValue>
+					</match>
+				</branchRule>
+				<branchRule target="Q02.2">
+					<match>
+						<variable identifier="Q01.RESPONSE"/>
+						<baseValue baseType="identifier">goto22</baseValue>
+					</match>
+				</branchRule>
+				<branchRule target="Q02.3">
+					<match>
+						<variable identifier="Q01.RESPONSE"/>
+						<baseValue baseType="identifier">goto23</baseValue>
+					</match>
+				</branchRule>
+				<branchRule target="Q02.4">
+					<isNull>
+						<variable identifier="Q01.RESPONSE"/>
+					</isNull>
+				</branchRule>
+				<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier"/>
+			</assessmentItemRef>
+		</assessmentSection>
+		<assessmentSection identifier="S02" fixed="false" title="Section2" visible="true">
+			<selection select="4" withReplacement="true"/>
+			<assessmentItemRef identifier="Q02" href="./Q02.xml" fixed="false" timeDependent="false"/>
+		</assessmentSection>
+	</testPart>
+</assessmentTest>

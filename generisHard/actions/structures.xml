@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension SYSTEM "../doc/structures.dtd">
+<structures>
+	<structure id="settings" name="Settings" level="8" visible="false">
+		<description />
+		<sections>
+			<section id="settings_optimisation" name="TAO optimizer" url="/generisHard/Optimize/index" />
+		</sections>
+	</structure>
+</structures>

@@ -1,0 +1,341 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+@import url(frontend_user.css);
+@import url(dialogs.css);
+
+
+div#content{
+	width: 960px;
+  	min-height :600px;	
+  	padding: 3px;
+}
+#control{
+	width: 960px;
+}
+#business{
+	width:100%;
+}
+
+#toolbox
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;	
+	position: absolute;
+	margin-top: 6px;
+	margin-left: 4px;
+}
+
+#toolbox li
+{
+	display: inline;
+	margin-right: 5px;
+}
+
+#toolbox li a
+{
+	color: #000;
+	font-weight: bold;
+	margin-bottom: 5px;
+	min-height: 20px;
+	width: 200px;
+	padding-left: 20px;
+	background-repeat: no-repeat;
+	background-position: 0px -1px;
+}
+
+#toolbox #remarkAction{background-image: url(../img/application_edit.png);}
+#toolbox #calendarAction{background-image: url(../img/calendar.png);}
+
+/* The area containing the classical Back and Next action buttons. */
+#navigation
+{
+	width: 100%;
+	text-align: right;
+	margin: 20px 0px 5px 0px;
+}
+
+/* The Back action button within the Navigation area. */
+#navigation #back 
+{
+	width: 100px;
+	right: 5px;
+}
+
+/* The Next action button within the Navigation area. */
+#navigation #next 
+{
+	width: 100px;
+	right: 2px;
+}
+
+/* The area containing the floating navigation buttons. */
+#navigation_floating
+{
+	position: relative;
+	display: none; /* display:none to disable floating navigation. */
+}
+
+/* The Back button within the Floating Navigation area. */
+#back_floating 
+{
+	position: absolute;
+	top: 0px;
+	width: 30px;
+	left: -33px;
+}
+
+/* The Next button within the Floating Navigation area. */
+#next_floating 
+{
+	position: absolute;
+	top: 0px;
+	width: 30px;
+	right: -33px;
+}
+
+/* The area containing Interactive tools (e.g. HyperViews, CLI, ...) */
+#tools
+{
+  width: 100%;
+  margin: 0px auto 0px auto;
+  position: relative;
+}
+	
+#tools #xul_info
+{
+	margin: 10px 0px 0px 0px;
+	width: 320px;
+	height: 100px ;
+}	
+	
+#tools #xul_question
+{
+	width: 100%;
+	margin: 0px;
+}
+
+/* Area containing the SVG graphical view of a Process. */
+#process_view
+{
+	position: absolute;
+	display: none;
+	margin: 0px auto 0px auto;
+	
+	z-index: 9999;
+}
+
+/* The area containing the Help text. This area will be displayed
+   inside an help dialog box. */
+#help
+{
+	display: none;
+	overflow: auto;
+}
+
+/* The area containing the Consistency check UI. This area will be displayed
+   inside a Consistency Check dialog box. */
+#consistency
+{
+	display: none;
+	overflow: auto;
+}
+
+/* The comment inside the Consistency Check dialog box explaining the consistency
+   error/warning. */
+#consistency #comment
+{
+	margin: 0px 0px 15px 0px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+/* The list of the activities that are involved in the
+   thrown consistency check. */
+#consistency #involved_activities
+{
+	margin: 0px 4px 0px 0px;
+}
+
+/* List items of the Involved Activities list. */
+#involved_activities li
+{
+	padding: 3px 3px 3px 3px;
+	margin: 0px 0px 1px 0px;
+	
+	background-color: #FFFFFF;
+}
+
+/* Links within items contained in the Involved Activities list. */
+#involved_activities li a
+{
+	display: block;
+	color: #000000;
+}
+
+/* These style attributes are used when the links within the Involved
+   Activities List are not active or already visited. */
+#involved_activities li a:link, #involded_activities li a:visited
+{
+	display: block;
+	color: #000000;
+	text-decoration: none;
+}
+
+/* These style attributes are used when the links within the Involved
+   Activities List are flyed over or simply clicked. */
+#involved_activities li a:hover, #involded_activities li a:active
+{
+	display: block;
+	color: #000000;
+	text-decoration: underline;
+}
+/**
+this style applies to the popup annotation edition form
+*/
+#annotationBox
+{
+color: #255581;
+font-weight: bold;
+font-size: 10px;
+display: none;
+}
+
+.annotationType
+{
+color: black;
+font-weight: bold;
+	font-size: 8px;
+}
+
+.annotationContent
+{
+color: black;
+font-size: 10px;
+font-weight: normal;
+}
+
+#ranges, #errors
+{
+	display: none;	
+}
+
+#ranges p, #errors p
+{
+	font-size: 12px;
+	font-weight: bold;
+	color: #000;	
+}
+
+#calendar
+{
+	display: none;	
+}
+
+#watch
+{
+	display: none;	
+}
+
+
+#calendar iframe
+{
+	width: 740px;	
+	height: 220px;
+}
+
+.activity_deactivated
+{
+	background-color: #FFFFFF!important;
+}
+
+.activity_activated
+{
+	background-color: #EFEBE7!important;
+}
+
+select
+{
+font-size: 9px;
+}
+#messages
+{
+display:block;
+overflow-y:scroll;
+height:170px;
+}
+
+.soft_text
+{
+	color: #003399;	
+}
+
+.hard_text
+{
+	color: #FF0000 !important;
+}
+
+
+.jumpToLink
+{
+font-size:11px;
+font-family:Verdana;
+font-weight:bold;
+color:black;
+
+}
+
+input[type="button"]
+{
+	font-size: 12px;
+	font-family: Verdana, Helvetica, sans-serif;
+}
+
+#loader{
+	position:absolute;
+	left:40%;
+	top:50%;
+	z-index:1000;
+	font-size: 26px;
+	color: #CCC;
+}
+
+div#footer .releasestatus {
+	width: 380px;
+	margin: 10px auto 10px auto;
+	padding: 5px 5px 5px 62px;
+	text-align: center;
+	position: relative;
+	font-size: 12px;
+}
+
+div#footer .releasestatus img {
+	position: absolute;
+	left: 15px;
+	top: 5px;
+}
+
+div#footer .releasestatus a {
+	font-size: 10px;
+}
+
+div#footer .releasestatus strong {
+	font-weight: bold;
+}

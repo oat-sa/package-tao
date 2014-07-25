@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAOItem.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#Item">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Item
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#Item
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Item]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Item
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#Item
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[Item]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContent">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Item Content
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContent
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Item Content]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Item Content
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContent
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[Item Content]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContentSourceName">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Original Filename
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContentSourceName
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Original Filename]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Original Filename
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContentSourceName
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[Original Filename]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModels">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Item Models
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModels
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Item Models]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Item Models
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModels
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[Item Models]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModel">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Item Model
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModel
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Item Model]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Item Model
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModel
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[Item Model]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemRuntime">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Runtime
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ItemRuntime
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Runtime]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Runtime
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ItemRuntime
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[Runtime]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ModelTarget">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Deliverable
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ModelTarget
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Deliverable]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Items of model are deliverable
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ModelTarget
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[Items of model are deliverable]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ModelService">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source itemmodel service
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ModelService
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[itemmodel service]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source service of the item model
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ModelService
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[service of the item model]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#DeliveryTarget">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Delivery Target
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#DeliveryTarget
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Delivery Target]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Delivery Target
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#DeliveryTarget
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[Delivery Target]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#OnlineTarget">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Online Delivery Target
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#OnlineTarget
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Online Delivery Target]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Online Delivery Target
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#OnlineTarget
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[Online Delivery Target]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#PaperbasedTarget">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Paper-based Delivery Target
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#PaperbasedTarget
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Paper-based Delivery Target]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Paper-based Delivery Target
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#PaperbasedTarget
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[Paper-based Delivery Target]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemAuthoring">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Authoring
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ItemAuthoring
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Authoring]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Authoring
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ItemAuthoring
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[Authoring]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#DataFileName">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Data File Name
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#DataFileName
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Data File Name]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source the filename used to store the item content for this model
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#DataFileName
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[the filename used to store the item content for this model]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ModelStatus">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Model Status
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ModelStatus
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Model Status]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#StatusStable">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Stable
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#StatusStable
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Stable]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source This item  model can be used in production
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#StatusStable
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[This item  model can be used in production]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#StatusDeprecated">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Deprecated
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#StatusDeprecated
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Deprecated]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source This item model is not supported anymore, we advise to migrate your items
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#StatusDeprecated
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[This item model is not supported anymore, we advise to migrate your items]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#StatusDevelopment">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Development
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#StatusDevelopment
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Development]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source this item model has not been tested in a production environment, we advise to be carefull with it
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#StatusDevelopment
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[this item model has not been tested in a production environment, we advise to be carefull with it]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#StatusExperimental">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Experimental
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#StatusExperimental
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Experimental]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source this item model is still in conception, but you can try it, give your feedback and it will be improved.
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#StatusExperimental
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[this item model is still in conception, but you can try it, give your feedback and it will be improved.]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModelStatus">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Status
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModelStatus
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Status]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source The status of an item model
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModelStatus
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[The status of an item model]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemsManagerRole">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Items Manager
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ItemsManagerRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Items Manager]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source The Items Manager Role
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#ItemsManagerRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[The Items Manager Role]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

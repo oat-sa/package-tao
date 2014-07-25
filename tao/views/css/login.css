@@ -1,0 +1,139 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+@CHARSET "UTF-8";
+@import url('home.css');
+div#login-form,  div#login-title {
+    margin-top:35px;;
+    width:100%;
+    text-align: left;
+    padding-left:80px;
+}
+div.xhtml_form div .form_desc {
+  font-size:1.1em;
+  vertical-align:middle;
+  text-align: left;
+  margin-bottom:25px;
+  padding-left: 0px;
+  
+}
+div#login-form .form-toolbar {
+  padding-left:10%;
+
+}
+.ui-widget input {
+  height:22px;
+  vertical-align:top;
+  width: 120px;
+
+}
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {
+  background-color:#fff;
+  margin-top:-10px;
+  padding-top:0px;
+  background-image:none;
+  border:0px solid #CD0A0A;
+  color:#CD0A0A;
+  font-weight:normal;
+  font-style:italic;
+  margin-left:0px;
+  width:300px;
+
+}
+#connect{
+    background-color:#aaa;
+    color:#fff;
+    margin-left:85px;
+     width: 123px;
+    height:40px;
+    border-width:1px;
+    border-collapse: collapse;
+    font-weight:bold;
+     -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+#connect:hover{
+    background-color:#D00239;
+    color:#fff;;
+    
+}
+.loginHeader{
+    float:right;
+    width:430px;
+    height:50px;
+    margin-right:10px;
+    padding-left:10px;
+    padding-top:10px;
+    padding-right:0px;
+    background-color:#eee;
+    font-weight:bolder;
+    
+    color:#666
+}
+.hintMsg{
+	float:left;
+	width:80%;
+	font-style: normal;
+	color:#888;
+	font-weight:normal;
+	margin-left:10px;
+	margin-bottom:10px;
+	margin-top:5px;
+
+}
+.loginBox{
+    float:right;
+    width:430px;
+    height:auto;
+    margin-top:10px;
+    margin-right:10px;
+    padding-left:10px;
+    padding-top:10px;
+    padding-right:0px;
+    font-weight:bolder;
+	color:#666;
+}
+.hintLink{
+    float:right;
+    padding-right:15px;
+     color: #0000FF;
+}
+
+A:link {
+    color: #0000FF;
+    font-style: normal;
+
+    font-size:x-small;
+}
+A:visited {
+    color: #0000FF;
+    font-style: normal;
+
+    font-size:x-small;
+}
+A:active {
+    color: #0000FF;
+    font-style: normal;
+    font-size:x-small;
+}
+A:hover {
+    color:#D00239;
+    font-style: normal;
+    font-size:x-small;
+}

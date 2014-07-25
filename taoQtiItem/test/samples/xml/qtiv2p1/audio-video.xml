@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="mediaInteraction" title="Media Interaction Sample" adaptive="false" timeDependent="false" xml:lang="en-US">
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="integer"/>
+    <responseDeclaration identifier="RESPONSE_1" cardinality="single" baseType="integer"/>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+    <itemBody>
+        <div>
+             <mediaInteraction responseIdentifier="RESPONSE" autostart="true" minPlays="0" maxPlays="0" loop="true">
+                <prompt>Play it !<br/></prompt>
+                <object data="http://tao.localdomain/filemanager/views/data/media/echo-hereweare.mp4" type="video/mp4" width="320" height="240"/>
+            </mediaInteraction>
+             <br/>
+            <mediaInteraction responseIdentifier="RESPONSE_1" autostart="true" minPlays="0" maxPlays="1" loop="true">
+                <prompt>Identify this track:<br/></prompt>
+                <object data="http://tao.localdomain/filemanager/views/data/EgyptianMarch30.mp3" type="audio/mpeg"/>
+            </mediaInteraction>
+            <br/>    
+        </div>
+    </itemBody>
+    <responseProcessing>
+        <responseCondition>
+            <responseIf>
+                <match>
+                    <variable identifier="RESPONSE"/>
+                    <correct identifier="RESPONSE"/>
+                </match>
+                <setOutcomeValue identifier="SCORE">
+                    <sum>
+                        <variable identifier="SCORE"/>
+                        <baseValue baseType="integer">1</baseValue>
+                    </sum>
+                </setOutcomeValue>
+            </responseIf>
+        </responseCondition>
+        <responseCondition>
+            <responseIf>
+                <match>
+                    <variable identifier="RESPONSE_1"/>
+                    <correct identifier="RESPONSE_1"/>
+                </match>
+                <setOutcomeValue identifier="SCORE">
+                    <sum>
+                        <variable identifier="SCORE"/>
+                        <baseValue baseType="integer">1</baseValue>
+                    </sum>
+                </setOutcomeValue>
+            </responseIf>
+        </responseCondition>
+    </responseProcessing>
+</assessmentItem>

@@ -1,0 +1,94 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+body {
+    color: #222;
+    font-size: 14px;
+}
+
+#control
+{   
+    line-height: 22px;
+    margin: 0px 0px 0px 0px;
+    text-align:right;
+    background: #f3f3f3;
+    border: solid 1px #ccc;
+    border-bottom: 1px solid;
+    border-bottom-color: #ddd;
+}
+#control li
+{   
+    display:inline;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+#footer{
+	clear: both;
+	font-size:11px;
+	width:100%;
+	text-align:center;
+	bottom:0%;
+	margin:5px auto 0px auto;
+	color:#333;
+}
+
+div#footer .releasestatus {
+	width: 460px;
+	margin: 10px auto 10px auto;
+	padding: 5px 5px 5px 62px;
+	text-align: center;
+	position: relative;
+	font-size: 12px;
+}
+
+div#footer .releasestatus img {
+	position: absolute;
+	left: 15px;
+	top: 5px;
+}
+
+div#footer .releasestatus a {
+	font-size: 10px;
+}
+
+div#footer .releasestatus strong {
+	font-weight: bold;
+}
+
+
+
+/**
+* todo
+**/
+
+#control li.actionControl a{
+    color:#222 !important;
+}
+#control li.actionControl a:hover{
+    color:#3e7da7 !important;
+    text-decoration: none !important;
+}
+#control li.infoControl {
+
+}
+
+#control li.separator{
+    opacity:0.5;
+}

@@ -1,0 +1,738 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<xs:schema xmlns="http://www.imsglobal.org/xsd/apip/apipv1p0/imsafa_pnpv2p0"
+    targetNamespace="http://www.imsglobal.org/xsd/apip/apipv1p0/imsafa_pnpv2p0"
+    xmlns:apip="http://www.imsglobal.org/xsd/apip/apipv1p0/imsapip_pnpv1p0"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+    version="IMS AFAPNP APIP V1.0"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+    <xs:import namespace="http://www.imsglobal.org/xsd/apip/apipv1p0/imsapip_pnpv1p0" schemaLocation="http://www.imsglobal.org/profile/apip/apipv1p0/apipv1p0_afapnpextv1p0_v1p0.xsd"/>
+    <xs:annotation>
+        <xs:documentation>
+            XSD Data File Information
+            -------------------------
+            Author:         Colin Smythe
+            Date:           30th April, 2012
+            Version:        1.0
+            Status:         Final
+            Description:    This is the PSM for the APIP version 1.0 of the Access For All Personal Needs and Preferences (AfA PNP) v2.0 data model.
+                            This is the PSM for the APIP PNP Entry and APIP PNP Core Profiles.
+
+            History:        This is version 1 of the profile of the AfA PNP v2.0 for APIP.
+
+            PROFILE:        This is the "APIPv1p0PNP". THIS IS A PROFILE OF THE BASE SPECIFICATION.
+                            The changes to the base specification are:
+                            * The "AdaptationPreference" class/complexType and set of XML attributes have been deleted;
+                            * The "AlternativeKeyboard" class/complexType and set of XML attributes have been deleted;
+                            * The "AlternativePointing" class/complexType and set of XML attributes have been deleted;
+                            * The "Application" class/complexType and set of XML attributes have been deleted;
+                            * The "ApplicationParameter" class/complexType and set of XML attributes have been deleted;
+                            * The "AutomaticScanning" class/complexType and set of XML attributes have been deleted;
+                            * The "CodedInput" class/complexType and set of XML attributes have been deleted;
+                            * The "CodeSelection" class/complexType and set of XML attributes have been deleted;
+                            * The "CodeTermination" class/complexType and set of XML attributes have been deleted;
+                            * The "CommandAndControl" class/complexType and set of XML attributes have been deleted;
+                            * The "Debounce" class/complexType and set of XML attributes have been deleted;
+                            * The "DirectedScanning" class/complexType and set of XML attributes have been deleted;
+                            * The "DwellSelect" class/complexType and set of XML attributes have been deleted;
+                            * The "FontFace" class/complexType and set of XML attributes have been deleted;
+                            * The "InverseScanning" class/complexType and set of XML attributes have been deleted;
+                            * The "KeyboardEnhancement" class/complexType and set of XML attributes have been deleted;
+                            * The "MouseEmulation" class/complexType and set of XML attributes have been deleted;
+                            * The "OnscreenKeyboard" class/complexType and set of XML attributes have been deleted;
+                            * The "PointAndClickSelection" class/complexType and set of XML attributes have been deleted;
+                            * The "PointAndDwellSelection" class/complexType and set of XML attributes have been deleted;
+                            * The "Prediction" class/complexType and set of XML attributes have been deleted;
+                            * The "RelativePointing" class/complexType and set of XML attributes have been deleted;
+                            * The "RepeatKeys" class/complexType and set of XML attributes have been deleted;
+                            * The "ResizableKeys" class/complexType and set of XML attributes have been deleted;
+                            * The "SlowKeys" class/complexType and set of XML attributes have been deleted;
+                            * The "StickyKeys" class/complexType and set of XML attributes have been deleted;
+                            * The "StructuralNavigation" class/complexType and set of XML attributes have been deleted;
+                            * The "StructuralPresentation" class/complexType and set of XML attributes have been deleted;
+                            * The "SwitchAssignment" class/complexType and set of XML attributes have been deleted;
+                            * The "TextReadingHighlight" class/complexType and set of XML attributes have been deleted;
+                            * The "VisualAlert" class/complexType and set of XML attributes have been deleted;
+                            * The "VoiceRecognition" class/complexType and set of XML attributes have been deleted;
+                            * The "AccessForAllUser" class/complexType has been modified by:-
+                              - The "extension" attribute has been prohibited;
+                            * The "Braille" class/complexType has been modified by:-
+                              - The "extension" attribute has been prohibited;
+                              - The "assignedSupport" attribute has been added using Import;
+                              - The "activateByDefault" attribute has been added using Import;
+                            * The "Content" class/complexType has been modified by:-
+                              - The "colourCodingAvoidance" attribute has been prohibited;
+                              - The "extension" attribute has been prohibited;
+                              - The "apipContent" attribute has been added using Import;
+                            * The "Control" class/complexType has been modified by:-
+                              - The "inputRequirements" attribute has been prohibited;
+                              - The "extension" attribute has been prohibited;
+                              - The "apipControl" attribute has been added using Import;
+                            * The "Display" class/complexType has been modified by:-
+                              - The "extension" attribute has been prohibited;
+                              - The "apipDisplay" attribute has been added using Import;
+                            * The "ScreenEnhancement" class/complexType has been modified by:-
+                              - The "fontSize" attribute has been prohibited;
+                              - The "usage" attribute has been prohibited;
+                              - The "highlightColour" attribute has been prohibited;
+                              - The "linkColour" attribute has been prohibited;
+                              - The "cursorTrails" attribute has been prohibited;
+                              - The "cursorColour" attribute has been prohibited;
+                              - The "cursorSize" attribute has been prohibited;
+                              - The "invertImages" attribute has been prohibited;
+                              - The "tracking" attribute has been prohibited;
+                              - The "personalStylesheet" attribute has been prohibited;
+                              - The "foregroundColour" attribute has been prohibited;
+                              - The "backgroundColour" attribute has been prohibited;
+                              - The "extension" attribute has been prohibited;
+                              - The "apipScreenEnhancement" attribute has been added using Import;
+                            * The "ScreenReader" class/complexType has been modified by:-
+                              - The "extension" attribute has been prohibited;
+                            * The "Tactile" class/complexType has been modified by:-
+                              - The "usage" attribute has been prohibited;
+                              - The "extension" attribute has been prohibited;
+                              - The "assignedSupport" attribute has been added using Import;
+                              - The "activateByDefault" attribute has been added using Import;
+
+            License:        IPR, License and Distribution Notices
+
+                            This machine readable file is derived from IMS Global Learning Consortium (GLC) specification IMS Accessible Portable Item Protocol (APIP): Access for All Personal Needs and Preferences (AfA PNP) v2.0 Profile Version 1.0
+                            found at http://www.imsglobal.org/apip and the original IMS GLC schema binding or code base
+                            http://www.imsglobal.org/apip.
+
+                            Recipients of this document are requested to submit, with their comments, notification of any
+                            relevant patent claims or other intellectual property rights of which they may be aware that might be
+                            infringed by the schema binding contained in this document.
+
+                            IMS GLC takes no position regarding the validity or scope of any intellectual property or other
+                            rights that might be claimed to pertain to the implementation or use of the technology described in this
+                            document or the extent to which any license under such rights might or might not be available; neither
+                            does it represent that it has made any effort to identify any such rights. Information on IMS GLCs
+                            procedures with respect to rights in IMS GLC specifications can be found at the IMS GLC Intellectual Property
+                            Rights web page: http://www.imsglobal.org/ipr/imsipr_policyFinal.pdf.
+
+                            Copyright (c) IMS Global Learning Consortium 1999-2012. All Rights Reserved.
+
+                            License Notice for Users
+
+                            Users of products or services that include this document are hereby granted a worldwide, royalty-free, 
+                            non-exclusive license to use this document. 
+
+                            Distribution Notice for Developers
+
+                            Developers of products or services that are not original incorporators of this document and 
+                            have not changed this document, that is, are distributing a software product that incorporates this 
+                            document as is from a third-party source other than IMS, are hereby granted permission to copy,
+                            display and distribute the contents of this document in any medium for any purpose without fee or 
+                            royalty provided that you include this IPR, License and Distribution notice in its entirety on ALL
+                            copies, or portions thereof.
+
+                            Developers of products or services that are original incorporators of this document and wish 
+                            to provide distribution of this document as is or with modifications and developers of products and 
+                            services that are not original incorporators of this document and have changed this document, are
+                            required to register with the IMS GLC community on the IMS GLC website as described in the following two
+                            paragraphs:-
+
+                            *  If you wish to distribute this document as is, with no modifications, you are hereby granted 
+                               permission to copy, display and distribute the contents of this document in any medium for any 
+                               purpose without fee or royalty provided that you include this IPR, License and Distribution notice in
+                               its entirety on ALL copies, or portions thereof, that you make and you complete a valid license 
+                               registration with IMS and receive an email from IMS granting the license. To register, follow the 
+                               instructions on the IMS website: http://www.imsglobal.org/specificationdownload.cfm. Once 
+                               registered you are granted permission to transfer unlimited distribution rights of this document for the 
+                               purposes of third-party or other distribution of your product or service that incorporates this 
+                               document as long as this IPR, License and Distribution notice remains in place in its entirety; 
+
+                            *  If you wish to create and distribute a derived work from this document, you are hereby 
+                               granted permission to copy, display and distribute the contents of the derived work in any medium for 
+                               any purpose without fee or royalty provided that you include this IPR, License and Distribution 
+                               notice in its entirety on ALL copies, or portions thereof, that you make and you complete a valid 
+                               profile registration with IMS GLC and receive an email from IMS GLC granting the license. To register, follow
+                               the instructions on the IMS GLC website: http://www.imsglobal.org/profile/. Once registered you are 
+                               granted permission to transfer unlimited distribution rights of the derived work for the purposes of 
+                               third-party or other distribution of your product or service that incorporates the derived work as long 
+                               as this IPR, License and Distribution notice remains in place in its entirety. 
+
+                            The limited permissions granted above are perpetual and will not be revoked by IMS GLC or its 
+                            successors or assigns.
+
+                            THIS SPECIFICATION IS BEING OFFERED WITHOUT ANY WARRANTY WHATSOEVER, AND IN PARTICULAR, ANY WARRANTY OF NONINFRINGEMENT IS
+                            EXPRESSLY DISCLAIMED. ANY USE OF THIS SPECIFICATION SHALL BE MADE ENTIRELY AT THE IMPLEMENTERS OWN RISK, AND NEITHER THE CONSORTIUM
+                            NOR ANY OF ITS MEMBERS OR SUBMITTERS, SHALL HAVE ANY LIABILITY WHATSOEVER TO ANY IMPLEMENTER OR THIRD PARTY FOR ANY DAMAGES OF
+                            ANY NATURE WHATSOEVER, DIRECTLY OR INDIRECTLY, ARISING FROM THE USE OF THIS SPECIFICATION.
+
+            Source UML File Information
+            ---------------------------
+            The source file information must be supplied as an XMI file (without diagram layout information).
+            The supported UML authoring tools are:
+            (a) Poseidon - v6 (and later)
+
+            Source XSLT File Information
+            ----------------------------
+            XSL Generator:    UMLtoXSDTransformv1p0.xsl
+            XSLT Processor:   Xalan
+            Release:          1.0
+            Date:             31st March, 2012
+            Autogen Engineer: Colin Smythe (IMS GLC, UK)
+            Autogen Date:     2012-04-16
+
+            IMS GLC Auto-generation Binding Tool-kit (I-BAT)
+            ------------------------------------------------
+            This file was auto-generated using the IMS GLC Binding Auto-generation Tool-kit (I-BAT).  While every
+            attempt has been made to ensure that this tool auto-generates the files correctly, users should be aware
+            that this is an experimental tool.  Permission is given to make use of this tool.  IMS GLC makes no
+            claim on the materials created by third party users of this tool.  Details on how to use this tool
+            are contained in the IMS GLC "I-BAT" Documentation available at the IMS GLC web-site.
+
+            Tool Copyright:  2005-2012 (c) IMS Global Learning Consortium Inc.  All Rights Reserved.
+        </xs:documentation>
+    </xs:annotation>
+
+    <xs:annotation>
+        <xs:documentation>
+            Schematron Strict Selection Validation Rules
+            --------------------------------------------
+            This is the set of Schematron rules that have been created to enforce the use of the "Unordered" stereotype.
+            These rules ensure that the number of entries in an unordered complexType of an element obey the multiplicity constraints.
+            This is required so that any-order/any-multiplicity complexTypes can be constructed and validated.
+        </xs:documentation>
+        <xs:appinfo>
+            <sch:ns uri="http://www.imsglobal.org/xsd/accessibility/accpnpv2p0/imsafapnp_v2p0" prefix="apnp"/>
+            <sch:ns uri="http://www.imsglobal.org/xsd/apip/apipv1p0/imsapip_pnpv1p0" prefix="apip"/>
+            <sch:title>Schematron validation rules for the enforcement of the Unordered stereotype.</sch:title>
+
+            <!-- RULESET ******************************************************************* -->
+            <sch:pattern abstract="false" id="AccessForAllUser.Type">
+                <sch:title>[RULESET] For the AccessForAllUser.Type complexType.</sch:title>
+
+                <sch:rule abstract="false" context="apnp:accessForAllUser">
+
+                    <sch:assert test="count(apnp:language) = 0 or count(apnp:language) = 1">
+                        [RULE for Root Class Attribute 1] Invalid number of "language" elements: <sch:value-of select="count(apnp:language)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apnp:display) = 0 or count(apnp:display) = 1">
+                        [RULE for Root Class Attribute 2] Invalid number of "display" elements: <sch:value-of select="count(apnp:display)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apnp:control) = 0 or count(apnp:control) = 1">
+                        [RULE for Root Class Attribute 3] Invalid number of "control" elements: <sch:value-of select="count(apnp:control)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apnp:content) = 0 or count(apnp:content) = 1">
+                        [RULE for Root Class Attribute 4] Invalid number of "content" elements: <sch:value-of select="count(apnp:content)"/>.
+                    </sch:assert>
+
+                </sch:rule>
+
+            </sch:pattern>
+            <!-- *************************************************************************** -->
+
+            <!-- RULESET ******************************************************************* -->
+            <sch:pattern abstract="false" id="Braille.Type">
+                <sch:title>[RULESET] For the Braille.Type complexType.</sch:title>
+
+                <sch:rule abstract="false" context="apnp:accessForAllUser/apnp:display/apnp:braille">
+
+                    <sch:assert test="count(apnp:usage) = 0 or count(apnp:usage) = 1">
+                        [RULE for Local Attribute 1] Invalid number of "usage" elements: <sch:value-of select="count(apnp:usage)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apnp:brailleGrade) = 0 or count(apnp:brailleGrade) = 1">
+                        [RULE for Local Attribute 2] Invalid number of "brailleGrade" elements: <sch:value-of select="count(apnp:brailleGrade)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apnp:numberOfBrailleDots) = 0 or count(apnp:numberOfBrailleDots) = 1">
+                        [RULE for Local Attribute 3] Invalid number of "numberOfBrailleDots" elements: <sch:value-of select="count(apnp:numberOfBrailleDots)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apnp:numberOfBrailleCells) = 0 or count(apnp:numberOfBrailleCells) = 1">
+                        [RULE for Local Attribute 4] Invalid number of "numberOfBrailleCells" elements: <sch:value-of select="count(apnp:numberOfBrailleCells)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apnp:brailleMark) = 0 or count(apnp:brailleMark) = 1">
+                        [RULE for Local Attribute 5] Invalid number of "brailleMark" elements: <sch:value-of select="count(apnp:brailleMark)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apnp:brailleDotPressure) = 0 or count(apnp:brailleDotPressure) = 1">
+                        [RULE for Local Attribute 6] Invalid number of "brailleDotPressure" elements: <sch:value-of select="count(apnp:brailleDotPressure)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apnp:brailleStatusCell) = 1">
+                        [RULE for Local Attribute 7] Invalid number of "brailleStatusCell" elements: <sch:value-of select="count(apnp:brailleStatusCell)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apip:assignedSupport) = 1">
+                        [RULE for Local Attribute "New (added by Profile)"] Invalid number of "assignedSupport" elements: <sch:value-of select="count(apip:assignedSupport)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apip:activateByDefault) = 1">
+                        [RULE for Local Attribute "New (added by Profile)"] Invalid number of "activateByDefault" elements: <sch:value-of select="count(apip:activateByDefault)"/>.
+                    </sch:assert>
+
+                </sch:rule>
+
+            </sch:pattern>
+            <!-- *************************************************************************** -->
+
+            <!-- RULESET ******************************************************************* -->
+            <sch:pattern abstract="false" id="Content.Type">
+                <sch:title>[RULESET] For the Content.Type complexType.</sch:title>
+
+                <sch:rule abstract="false" context="apnp:accessForAllUser/apnp:content">
+
+                    <sch:assert test="count(apnp:hazard) = 0 or count(apnp:hazard) = 1">
+                        [RULE for Local Attribute 3] Invalid number of "hazard" elements: <sch:value-of select="count(apnp:hazard)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apnp:supportTool) = 0 or count(apnp:supportTool) = 1">
+                        [RULE for Local Attribute 4] Invalid number of "supportTool" elements: <sch:value-of select="count(apnp:supportTool)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apip:apipContent) = 0 or count(apip:apipContent) = 1">
+                        [RULE for Local Attribute "New (added by Profile)"] Invalid number of "apipContent" elements: <sch:value-of select="count(apip:apipContent)"/>.
+                    </sch:assert>
+
+                </sch:rule>
+
+            </sch:pattern>
+            <!-- *************************************************************************** -->
+
+            <!-- RULESET ******************************************************************* -->
+            <sch:pattern abstract="false" id="Control.Type">
+                <sch:title>[RULESET] For the Control.Type complexType.</sch:title>
+
+                <sch:rule abstract="false" context="apnp:accessForAllUser/apnp:control">
+
+                    <sch:assert test="count(apip:apipControl) = 0 or count(apip:apipControl) = 1">
+                        [RULE for Local Attribute "New (added by Profile)"] Invalid number of "apipControl" elements: <sch:value-of select="count(apip:apipControl)"/>.
+                    </sch:assert>
+
+                </sch:rule>
+
+            </sch:pattern>
+            <!-- *************************************************************************** -->
+
+            <!-- RULESET ******************************************************************* -->
+            <sch:pattern abstract="false" id="Display.Type">
+                <sch:title>[RULESET] For the Display.Type complexType.</sch:title>
+
+                <sch:rule abstract="false" context="apnp:accessForAllUser/apnp:display">
+
+                    <sch:assert test="count(apnp:screenReader) = 0 or count(apnp:screenReader) = 1">
+                        [RULE for Local Attribute 1] Invalid number of "screenReader" elements: <sch:value-of select="count(apnp:screenReader)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apnp:screenEnhancement) = 0 or count(apnp:screenEnhancement) = 1">
+                        [RULE for Local Attribute 2] Invalid number of "screenEnhancement" elements: <sch:value-of select="count(apnp:screenEnhancement)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apnp:braille) = 0 or count(apnp:braille) = 1">
+                        [RULE for Local Attribute 4] Invalid number of "braille" elements: <sch:value-of select="count(apnp:braille)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apnp:tactile) = 0 or count(apnp:tactile) = 1">
+                        [RULE for Local Attribute 5] Invalid number of "tactile" elements: <sch:value-of select="count(apnp:tactile)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apip:apipDisplay) = 0 or count(apip:apipDisplay) = 1">
+                        [RULE for Local Attribute "New (added by Profile)"] Invalid number of "apipDisplay" elements: <sch:value-of select="count(apip:apipDisplay)"/>.
+                    </sch:assert>
+
+                </sch:rule>
+
+            </sch:pattern>
+            <!-- *************************************************************************** -->
+
+            <!-- RULESET ******************************************************************* -->
+            <sch:pattern abstract="false" id="ScreenEnhancement.Type">
+                <sch:title>[RULESET] For the ScreenEnhancement.Type complexType.</sch:title>
+
+                <sch:rule abstract="false" context="apnp:accessForAllUser/apnp:display/apnp:screenEnhancement">
+
+                    <sch:assert test="count(apnp:invertColourChoice) = 0 or count(apnp:invertColourChoice) = 1">
+                        [RULE for Local Attribute 11] Invalid number of "invertColourChoice" elements: <sch:value-of select="count(apnp:invertColourChoice)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apnp:magnification) = 0 or count(apnp:magnification) = 1">
+                        [RULE for Local Attribute 14] Invalid number of "magnification" elements: <sch:value-of select="count(apnp:magnification)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apip:apipScreenEnhancement) = 1">
+                        [RULE for Local Attribute "New (added by Profile)"] Invalid number of "apipScreenEnhancement" elements: <sch:value-of select="count(apip:apipScreenEnhancement)"/>.
+                    </sch:assert>
+
+                </sch:rule>
+
+            </sch:pattern>
+            <!-- *************************************************************************** -->
+
+            <!-- RULESET ******************************************************************* -->
+            <sch:pattern abstract="false" id="ScreenReader.Type">
+                <sch:title>[RULESET] For the ScreenReader.Type complexType.</sch:title>
+
+                <sch:rule abstract="false" context="apnp:accessForAllUser/apnp:display/apnp:screenReader">
+
+                    <sch:assert test="count(apnp:usage) = 0 or count(apnp:usage) = 1">
+                        [RULE for Local Attribute 1] Invalid number of "usage" elements: <sch:value-of select="count(apnp:usage)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apnp:speechRate) = 0 or count(apnp:speechRate) = 1">
+                        [RULE for Local Attribute 3] Invalid number of "speechRate" elements: <sch:value-of select="count(apnp:speechRate)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apnp:pitch) = 0 or count(apnp:pitch) = 1">
+                        [RULE for Local Attribute 4] Invalid number of "pitch" elements: <sch:value-of select="count(apnp:pitch)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apnp:volume) = 0 or count(apnp:volume) = 1">
+                        [RULE for Local Attribute 5] Invalid number of "volume" elements: <sch:value-of select="count(apnp:volume)"/>.
+                    </sch:assert>
+
+                </sch:rule>
+
+            </sch:pattern>
+            <!-- *************************************************************************** -->
+
+            <!-- RULESET ******************************************************************* -->
+            <sch:pattern abstract="false" id="Tactile.Type">
+                <sch:title>[RULESET] For the Tactile.Type complexType.</sch:title>
+
+                <sch:rule abstract="false" context="apnp:accessForAllUser/apnp:display/apnp:tactile">
+
+                    <sch:assert test="count(apip:assignedSupport) = 1">
+                        [RULE for Local Attribute "New (added by Profile)"] Invalid number of "assignedSupport" elements: <sch:value-of select="count(apip:assignedSupport)"/>.
+                    </sch:assert>
+
+                    <sch:assert test="count(apip:activateByDefault) = 1">
+                        [RULE for Local Attribute "New (added by Profile)"] Invalid number of "activateByDefault" elements: <sch:value-of select="count(apip:activateByDefault)"/>.
+                    </sch:assert>
+
+                </sch:rule>
+
+            </sch:pattern>
+            <!-- *************************************************************************** -->
+
+        </xs:appinfo>
+    </xs:annotation>
+
+    <!-- Generate Global Attributes *********************************************************************** -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate Global List Types *********************************************************************** -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate Namespaced extension Group  ************************************************************* -->
+
+    <xs:group name="grpStrict.any">
+        <xs:annotation>
+            <xs:documentation>
+                Any namespaced element from any namespace may be included within an "any" element.
+                The namespace for the imported element must be defined in the instance, and the schema must be imported.
+                The extension has a definition of "strict" i.e. they must have their own namespace.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:any namespace = "##other" processContents = "strict" minOccurs = "0" maxOccurs = "unbounded"/>
+        </xs:sequence>
+    </xs:group>
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate Special DataTypes  ********************************************************************** -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the enumerated simpleType declarations ************************************************** -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the simpleType elements based on IMS data-types (Parameter) ***************************** -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the simpleType elements based on IMS data-types (Derived) ******************************* -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the simpleType elements based on IMS data-types (Union) ********************************* -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the simpleType elements based on IMS data-types (Complex) ******************************* -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the derived data-type elements based upon simpleType ************************************ -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the derived data-type elements based upon derived simpleType **************************** -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the data-type ComplexTypes ************************************************************** -->
+
+    <xs:complexType name="AccessForAllUser.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The Access_For_All_User complexType is the container for the collection of AfA needs and preferences for 
+control flexibility, display transformability and content with respect to the accessibility of a resource.
+                [APIPv1p0PNP] Profile - the changes are:
+                * The "extension" element has been prohibited;
+            </xs:documentation>
+        </xs:annotation>
+        <xs:choice minOccurs = "0" maxOccurs = "unbounded">
+            <xs:element name="language" type="xs:normalizedString" minOccurs = "0" maxOccurs = "1"/>
+            <xs:element name="display" type="Display.Type" minOccurs = "0" maxOccurs = "1"/>
+            <xs:element name="control" type="Control.Type" minOccurs = "0" maxOccurs = "1"/>
+            <xs:element name="content" type="Content.Type" minOccurs = "0" maxOccurs = "1"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="Braille.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The Braille complexType is the container for the collection of needs and preferences 
+for how to configure a Braille display.
+                [APIPv1p0PNP] Profile - the changes are:
+                * The "extension" element has been prohibited;
+                * The "assignedSupport" element has been added using Import;
+                * The "activateByDefault" element has been added using Import;
+            </xs:documentation>
+        </xs:annotation>
+        <xs:choice minOccurs = "0" maxOccurs = "unbounded">
+            <xs:element name="usage" default="preferred" minOccurs = "0" maxOccurs = "1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="required"/>
+                        <xs:enumeration value="preferred"/>
+                        <xs:enumeration value="optionally use"/>
+                        <xs:enumeration value="prohibited"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="brailleGrade" default="uncontracted" minOccurs = "0" maxOccurs = "1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="uncontracted"/>
+                        <xs:enumeration value="contracted"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="numberOfBrailleDots" default="6" minOccurs = "0" maxOccurs = "1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="6"/>
+                        <xs:enumeration value="8"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="numberOfBrailleCells" type="xs:integer" default="80" minOccurs = "0" maxOccurs = "1"/>
+            <xs:element name="brailleMark" minOccurs = "0" maxOccurs = "1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="highlight"/>
+                        <xs:enumeration value="bold"/>
+                        <xs:enumeration value="underline"/>
+                        <xs:enumeration value="italic"/>
+                        <xs:enumeration value="strikeout"/>
+                        <xs:enumeration value="colour"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="brailleDotPressure" type="xs:decimal" default="0.5" minOccurs = "0" maxOccurs = "1"/>
+            <xs:element name="brailleStatusCell" default="off" minOccurs = "1" maxOccurs = "1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="off"/>
+                        <xs:enumeration value="left"/>
+                        <xs:enumeration value="right"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref="apip:assignedSupport" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element ref="apip:activateByDefault" minOccurs = "1" maxOccurs = "1"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="Content.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The Content complexType is the container for the collection of needs and preferences for content, 
+specifying any desired transformations or enhancements.
+                [APIPv1p0PNP] Profile - the changes are:
+                * The "colourCodingAvoidance" element has been prohibited;
+                * The "extension" element has been prohibited;
+                * The "apipContent" element has been added using Import;
+            </xs:documentation>
+        </xs:annotation>
+        <xs:choice minOccurs = "0" maxOccurs = "unbounded">
+            <xs:element name="hazard" minOccurs = "0" maxOccurs = "1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="flashing"/>
+                        <xs:enumeration value="sound"/>
+                        <xs:enumeration value="olfactory"/>
+                        <xs:enumeration value="motion simulation"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="supportTool" minOccurs = "0" maxOccurs = "1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="dictionary"/>
+                        <xs:enumeration value="calculator"/>
+                        <xs:enumeration value="note taking"/>
+                        <xs:enumeration value="peer interaction"/>
+                        <xs:enumeration value="thesaurus"/>
+                        <xs:enumeration value="abacus"/>
+                        <xs:enumeration value="spell checker"/>
+                        <xs:enumeration value="homophone checker"/>
+                        <xs:enumeration value="mind mapping software"/>
+                        <xs:enumeration value="outline tool"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element ref="apip:apipContent" minOccurs = "0" maxOccurs = "1"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="Control.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The Control complexType is the container for the collection of needs and preferences for how to configure 
+alternative access systems for controlling a device.
+                [APIPv1p0PNP] Profile - the changes are:
+                * The "inputRequirements" element has been prohibited;
+                * The "extension" element has been prohibited;
+                * The "apipControl" element has been added using Import;
+            </xs:documentation>
+        </xs:annotation>
+        <xs:choice minOccurs = "0" maxOccurs = "unbounded">
+            <xs:element ref="apip:apipControl" minOccurs = "0" maxOccurs = "1"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="Display.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The Display complexType is the container for the collection of AfA needs and preferences for how a 
+user interface and content should be presented.
+                [APIPv1p0PNP] Profile - the changes are:
+                * The "extension" element has been prohibited;
+                * The "apipDisplay" element has been added using Import;
+            </xs:documentation>
+        </xs:annotation>
+        <xs:choice minOccurs = "0" maxOccurs = "unbounded">
+            <xs:element name="screenReader" type="ScreenReader.Type" minOccurs = "0" maxOccurs = "1"/>
+            <xs:element name="screenEnhancement" type="ScreenEnhancement.Type" minOccurs = "0" maxOccurs = "1"/>
+            <xs:element name="braille" type="Braille.Type" minOccurs = "0" maxOccurs = "1"/>
+            <xs:element name="tactile" type="Tactile.Type" minOccurs = "0" maxOccurs = "1"/>
+            <xs:element ref="apip:apipDisplay" minOccurs = "0" maxOccurs = "1"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="ScreenEnhancement.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The ScreenEnhancement complexType is the container for the collection of AfA needs and preferences 
+for how to configure enhancements to a screen display.
+                [APIPv1p0PNP] Profile - the changes are:
+                * The "fontSize" element has been prohibited;
+                * The "usage" element has been prohibited;
+                * The "highlightColour" element has been prohibited;
+                * The "linkColour" element has been prohibited;
+                * The "cursorTrails" element has been prohibited;
+                * The "cursorColour" element has been prohibited;
+                * The "cursorSize" element has been prohibited;
+                * The "invertImages" element has been prohibited;
+                * The "tracking" element has been prohibited;
+                * The "personalStylesheet" element has been prohibited;
+                * The "foregroundColour" element has been prohibited;
+                * The "backgroundColour" element has been prohibited;
+                * The "extension" element has been prohibited;
+                * The "apipScreenEnhancement" element has been added using Import;
+            </xs:documentation>
+        </xs:annotation>
+        <xs:choice minOccurs = "0" maxOccurs = "unbounded">
+            <xs:element name="invertColourChoice" type="xs:boolean" default="false" minOccurs = "0" maxOccurs = "1"/>
+            <xs:element name="magnification" type="xs:decimal" default="1.0" minOccurs = "0" maxOccurs = "1"/>
+            <xs:element ref="apip:apipScreenEnhancement" minOccurs = "1" maxOccurs = "1"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="ScreenReader.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The ScreenReader complexType is the container for the collection of AfA needs and preferences 
+for how to configure a screen reader.
+                [APIPv1p0PNP] Profile - the changes are:
+                * The "extension" element has been prohibited;
+            </xs:documentation>
+        </xs:annotation>
+        <xs:choice minOccurs = "0" maxOccurs = "unbounded">
+            <xs:element name="usage" default="preferred" minOccurs = "0" maxOccurs = "1">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="required"/>
+                        <xs:enumeration value="preferred"/>
+                        <xs:enumeration value="optionally use"/>
+                        <xs:enumeration value="prohibited"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="linkIndication" default="speak link" minOccurs = "0" maxOccurs = "unbounded">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="speak link"/>
+                        <xs:enumeration value="different voice"/>
+                        <xs:enumeration value="sound effect"/>
+                        <xs:enumeration value="none"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="speechRate" type="xs:integer" default="180" minOccurs = "0" maxOccurs = "1"/>
+            <xs:element name="pitch" type="xs:decimal" default="0.5" minOccurs = "0" maxOccurs = "1"/>
+            <xs:element name="volume" type="xs:decimal" default="0.5" minOccurs = "0" maxOccurs = "1"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="Tactile.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The Tactile complexType is the container for the collection of needs and preferences for 
+how to configure a tactile display (this is intended for future use).
+                [APIPv1p0PNP] Profile - the changes are:
+                * The "usage" element has been prohibited;
+                * The "extension" element has been prohibited;
+                * The "assignedSupport" element has been added using Import;
+                * The "activateByDefault" element has been added using Import;
+            </xs:documentation>
+        </xs:annotation>
+        <xs:choice minOccurs = "0" maxOccurs = "unbounded">
+            <xs:element ref="apip:assignedSupport" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element ref="apip:activateByDefault" minOccurs = "1" maxOccurs = "1"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <!-- ================================================================================================== -->
+
+    <!-- Declaration of the elements (Complex) ************************************************************ -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Declaration of the elements (Derived) ************************************************************* -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Declaration of the root element(s) *************************************************************** -->
+
+    <xs:element name="accessForAllUser" type="AccessForAllUser.Type"/>
+
+    <!-- ================================================================================================== -->
+
+</xs:schema>

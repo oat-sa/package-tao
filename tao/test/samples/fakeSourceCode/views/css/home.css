@@ -1,0 +1,72 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+@CHARSET "UTF-8";
+
+/* Home Page */
+div#home{
+	min-height:480px;
+	width:99%;
+	margin:auto;
+	margin-right:3px;
+}
+div#home div#home-title{
+	margin-bottom:11px;
+	padding-top:8px;
+	padding-bottom:9px;
+	text-align:center;
+}
+div#home table{
+	width:450px;
+	margin:auto;	
+}
+div.home-box{
+	width: 180px;
+	height:150px;
+	text-align:center;
+	margin:15px;
+	padding-top:20px;
+	border: solid 1px #999;
+	background-color:#E2E2E2;
+	background-position:bottom;
+	position:relative;
+}
+div.home-box a{
+	color:#D00239;
+	text-decoration:none;
+}
+div.home-box a:hover, div.home-box:hover{
+	opacity:0.8;
+}
+div.home-box-right{
+	float:right;
+	margin-top:0px;
+ }
+ div.home-box span.extension-desc{
+ 	display:block;
+ 	position:absolute;
+ 	top:120px;
+ }
+ div.home-box .extension-desc{
+ 	font-weight: normal;
+	font-size: 11px;
+	color:#555;
+	text-align: center;
+	padding:0px 5px 0px 5px;
+ }

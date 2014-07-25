@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file was created using: Onyx Editor, Version 3.4.1 (Full, licensed version), (c)2011 BPS Bildungsportal Sachsen GmbH-->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 imsqti_v2p1.xsd" identifier="Choicemultiple_871212949" title="choice (multiple, point per answer)" adaptive="false" timeDependent="false">
+	<responseDeclaration identifier="RESPONSE_27966883" cardinality="multiple" baseType="identifier">
+		<correctResponse>
+			<value>choice_934383202</value>
+			<value>choice_2022864592</value>
+			<value>choice_1534527094</value>
+		</correctResponse>
+		<mapping defaultValue="0.0">
+			<mapEntry mapKey="choice_934383202" mappedValue="1.0" />
+			<mapEntry mapKey="choice_2022864592" mappedValue="1.0" />
+			<mapEntry mapKey="choice_1534527094" mappedValue="1.0" />
+			<mapEntry mapKey="choice_921260236" mappedValue="-1.0" />
+			<mapEntry mapKey="choice_1757121272" mappedValue="-2.0" />
+		</mapping>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>0.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>3.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+		<defaultValue>
+			<value>empty</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_5714028" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_8958131" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_1634627" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_20327592" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_5765523" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_15433735" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_21035203" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<itemBody>
+		<div>
+		Welche Naturräume finden sich im Freistaat Sachsen?
+		</div>
+		<choiceInteraction responseIdentifier="RESPONSE_27966883" shuffle="true" maxChoices="0">
+			<simpleChoice identifier="choice_934383202">Erzgebirge</simpleChoice>
+			<simpleChoice identifier="choice_2022864592">Lausitz</simpleChoice>
+			<simpleChoice identifier="choice_1534527094">Vogtland</simpleChoice>
+			<simpleChoice identifier="choice_921260236">Harz</simpleChoice>
+			<simpleChoice identifier="choice_1757121272">Alpen</simpleChoice>
+		</choiceInteraction>
+	</itemBody>
+	<responseProcessing>
+		<responseCondition>
+			<responseIf>
+				<not>
+					<isNull>
+						<variable identifier="RESPONSE_27966883" />
+					</isNull>
+				</not>
+				<setOutcomeValue identifier="SCORE">
+					<sum>
+						<variable identifier="SCORE" />
+						<mapResponse identifier="RESPONSE_27966883" />
+					</sum>
+				</setOutcomeValue>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">incorrect</baseValue>
+				</setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+		<responseCondition>
+			<responseIf>
+				<and>
+					<not>
+						<match>
+							<variable identifier="FEEDBACKBASIC" />
+							<baseValue baseType="identifier">empty</baseValue>
+						</match>
+					</not>
+					<equal toleranceMode="exact">
+						<variable identifier="SCORE" />
+						<variable identifier="MAXSCORE" />
+					</equal>
+				</and>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">correct</baseValue>
+				</setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+		<setOutcomeValue identifier="FEEDBACK_5714028">
+			<and>
+				<match>
+					<baseValue baseType="identifier">correct</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+		<setOutcomeValue identifier="FEEDBACK_8958131">
+			<and>
+				<match>
+					<baseValue baseType="identifier">incorrect</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+		<setOutcomeValue identifier="FEEDBACK_1634627">
+			<and>
+				<not>
+					<member>
+						<baseValue baseType="identifier">choice_2022864592</baseValue>
+						<variable identifier="RESPONSE_27966883" />
+					</member>
+				</not>
+			</and>
+		</setOutcomeValue>
+		<setOutcomeValue identifier="FEEDBACK_20327592">
+			<and>
+				<not>
+					<member>
+						<baseValue baseType="identifier">choice_934383202</baseValue>
+						<variable identifier="RESPONSE_27966883" />
+					</member>
+				</not>
+			</and>
+		</setOutcomeValue>
+		<setOutcomeValue identifier="FEEDBACK_5765523">
+			<and>
+				<not>
+					<member>
+						<baseValue baseType="identifier">choice_1534527094</baseValue>
+						<variable identifier="RESPONSE_27966883" />
+					</member>
+				</not>
+			</and>
+		</setOutcomeValue>
+		<setOutcomeValue identifier="FEEDBACK_15433735">
+			<and>
+				<member>
+					<baseValue baseType="identifier">choice_921260236</baseValue>
+					<variable identifier="RESPONSE_27966883" />
+				</member>
+			</and>
+		</setOutcomeValue>
+		<setOutcomeValue identifier="FEEDBACK_21035203">
+			<and>
+				<member>
+					<baseValue baseType="identifier">choice_1757121272</baseValue>
+					<variable identifier="RESPONSE_27966883" />
+				</member>
+			</and>
+		</setOutcomeValue>
+	</responseProcessing>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_5714028" showHide="show" title="">Richtig!</modalFeedback>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_8958131" showHide="show" title="">Leider Falsch!</modalFeedback>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_1634627" showHide="show" title="In deiner Auswahl fehlt die Region Lausitz">Die Lausitz ist eine Region in Deutschland und Polen. Sie umfasst den Süden Brandenburgs und den Osten des Freistaates Sachsen.</modalFeedback>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_20327592" showHide="show" title="In deiner Auswahl fehlt das Erzgebirge">Das Erzgebirge ist ein Mittelgebirge und bildet die natürliche Grenze zwischen Sachsen und Böhmen.</modalFeedback>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_5765523" showHide="show" title="In deiner Auswahl fehlt das Vogtland">Das Vogtland ist eine Region im Grenzgebiet der drei deutschen Bundesländer Bayern, Sachsen und Thüringen.</modalFeedback>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_15433735" showHide="show" title="Die Auswahl Harz war leider falsch">Der Harz ist ein Mittelgebirge in Deutschland. Er stellt das höchste Gebirge Norddeutschlands dar und liegt am Schnittpunkt von Niedersachsen, Sachsen-Anhalt und Thüringen.</modalFeedback>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_21035203" showHide="show" title="Die Auswahl Alpen war leider falsch">Die Alpen sind das höchste Gebirge im Inneren Europas. Sie erstrecken sich von Italien und der Schweiz bis in den Süden Deutschlands. Das Alpenvorland zieht sich durch die Bundesländer Bayern und Baden-Württemberg.</modalFeedback>
+</assessmentItem>

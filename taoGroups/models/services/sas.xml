@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE services SYSTEM "../../tao/doc/sas.dtd">
+<services>
+	<description>Groups services</description>
+	<service>
+		<name>Group class selection</name>
+		<description>Select a group (sub)class</description>
+		<location url="/taoGroups/SaSGroups/sasSelect">
+			<param key="selectInstance" value="false" />
+		</location>
+		<return>
+			<param key="groupClassUri" />
+		</return>
+	</service>
+	<service>
+		<name>Group selection</name>
+		<description>Select a group</description>
+		<location url="/taoGroups/SaSGroups/sasSelect">
+			<param key="selectInstance" value="true" />
+		</location>
+		<return>
+			<param key="groupClassUri" />
+			<param key="groupUri" />
+		</return>
+	</service>
+	<service>
+		<name>Group add</name>
+		<description>Add a new group and redirect to the edit form</description>
+		<location url="/taoGroups/SaSGroups/sasAddInstance">
+			<param key="classUri" value="^groupClassUri" />
+		</location>
+		<return>
+			<param key="groupUri" />
+		</return>
+	</service>
+	<service>
+		<name>Group editor</name>
+		<description>Edit group properties</description>
+		<location url="/taoGroups/SaSGroups/sasEditInstance">
+			<param key="uri" value="^groupUri" />
+			<param key="classUri" value="^groupClassUri" />
+		</location>
+	</service>
+	<service>
+		<name>Group full editor</name>
+		<description>Full edit form: edit group properties, select group subjects and deliveries</description>
+		<location url="/taoGroups/SaSGroups/editGroup">
+			<param key="uri" value="^groupUri" />
+			<param key="classUri" value="^groupClassUri" />
+		</location>
+	</service>
+	<service>
+		<name>Group class editor</name>
+		<description>Edit a Group (sub)class: add/edit/delete class properties</description>
+		<location url="/taoGroups/SaSGroups/editGroupClass">
+			<param key="classUri" value="^groupClassUri" />
+		</location>
+	</service>
+	<service>
+		<name>Group translation</name>
+		<description>Translate the value of the group properties</description>
+		<location url="/taoGroups/SaSGroups/translateInstance">
+			<param key="uri" value="^groupUri" />
+			<param key="classUri" value="^groupClassUri" />
+			<param key="target_lang" value="^groupTargetLang" />
+		</location>	
+	</service>
+	<service>
+		<name>Group related subjects</name>
+		<description>Select the subjects linked to the group</description>
+		<location url="/taoGroups/SaSGroups/selectSubjects">
+			<param key="uri" value="^groupUri" />
+			<param key="classUri" value="^groupClassUri" />
+		</location>
+		<return>
+			<param key="subjectUris" />
+		</return>
+	</service>
+	<service>
+		<name>Groups searching</name>
+		<description>Search groups instances</description>
+		<location url="/taoGroups/SaSGroups/search" />
+		<return>
+			<param key="groupUris" />
+		</return>
+	</service>	
+	<service>
+		<name>Group removing</name>
+		<description>Delete a group instance</description>
+		<location url="/taoGroups/SaSGroups/sasDeleteInstance">
+			<param key="uri" value="^groupUri" />
+			<param key="classUri" value="^groupClassUri" />
+		</location>
+	</service>
+</services>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file was created using: Onyx Editor, Version 3.4.1 (Full, licensed version), (c)2011 BPS Bildungsportal Sachsen GmbH-->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 imsqti_v2p1.xsd" identifier="Choicetruefalse_176040516" title="choice (true-false)" adaptive="false" timeDependent="false">
+	<responseDeclaration identifier="RESPONSE_27628688" cardinality="single" baseType="identifier">
+		<correctResponse>
+			<value>choice_1164834606</value>
+		</correctResponse>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>0.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>1.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+		<defaultValue>
+			<value>empty</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_10516488" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_10171297" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<itemBody>
+		<div>
+		Das Bundesland Sachsen ist eines der neuen Bundesländer und gehörte damit zur ehemaligen Deutschen Demokratischen Republik (DDR).
+		</div>
+		<choiceInteraction responseIdentifier="RESPONSE_27628688" shuffle="false" maxChoices="1">
+			<simpleChoice identifier="choice_1164834606">Richtig</simpleChoice>
+			<simpleChoice identifier="choice_1416143937">Falsch</simpleChoice>
+		</choiceInteraction>
+	</itemBody>
+	<responseProcessing>
+		<responseCondition>
+			<responseIf>
+				<isNull>
+					<variable identifier="RESPONSE_27628688" />
+				</isNull>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">empty</baseValue>
+				</setOutcomeValue>
+			</responseIf>
+			<responseElseIf>
+				<match>
+					<variable identifier="RESPONSE_27628688" />
+					<correct identifier="RESPONSE_27628688" />
+				</match>
+				<setOutcomeValue identifier="SCORE">
+					<sum>
+						<variable identifier="SCORE" />
+						<variable identifier="MAXSCORE" />
+					</sum>
+				</setOutcomeValue>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">correct</baseValue>
+				</setOutcomeValue>
+			</responseElseIf>
+			<responseElse>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">incorrect</baseValue>
+				</setOutcomeValue>
+			</responseElse>
+		</responseCondition>
+		<setOutcomeValue identifier="FEEDBACK_10516488">
+			<and>
+				<match>
+					<baseValue baseType="identifier">correct</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+		<setOutcomeValue identifier="FEEDBACK_10171297">
+			<and>
+				<match>
+					<baseValue baseType="identifier">incorrect</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+	</responseProcessing>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_10516488" showHide="show" title="Richtig!">Am 7. Oktober 1949 wurde Sachsen eines von fünf Ländern der gegründeten Deutschen Demokratischen Republik (DDR). 1990, im Jahr der Wiedervereinigung, wurde per Verfassungsgesetz zur Bildung von Ländern in der Deutschen Demokratischen Republik (Ländereinführungsgesetz) das Land Sachsen neu gegründet. Mit dem Beitritt der DDR zur Bundesrepublik Deutschland wurde es dann zum Freistaat Sachsen und ist seitdem einer der 16 Gliedstaaten der Bundesrepublik.</modalFeedback>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_10171297" showHide="show" title="Leider Falsch!">Am 7. Oktober 1949 wurde Sachsen eines von fünf Ländern der gegründeten Deutschen Demokratischen Republik (DDR). 1990, im Jahr der Wiedervereinigung, wurde per Verfassungsgesetz zur Bildung von Ländern in der Deutschen Demokratischen Republik (Ländereinführungsgesetz) das Land Sachsen neu gegründet. Mit dem Beitritt der DDR zur Bundesrepublik Deutschland wurde es dann zum Freistaat Sachsen und ist seitdem einer der 16 Gliedstaaten der Bundesrepublik.</modalFeedback>
+</assessmentItem>

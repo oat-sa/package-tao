@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i1348837076744912" title="emoty" timeDependent="false" adaptive="false" xml:lang="en-US">
+  <responseDeclaration identifier="RESPONSE" cardinality="ordered" baseType="identifier">
+    	
+		
+	</responseDeclaration>
+  <outcomeDeclaration identifier="SCORE" baseType="integer" cardinality="single"/>
+  <itemBody>
+    <div>ewqawerqawrfeqfewfaew<br/>
+<orderInteraction shuffle="false" responseIdentifier="RESPONSE" orientation="vertical"><prompt>asdasdasdas</prompt><simpleChoice identifier="choice_1">qewe qewr qwer qw<br/></simpleChoice><simpleChoice identifier="choice_2"/><simpleChoice identifier="choice_3">qwer qwer qwe rwq<br/></simpleChoice></orderInteraction>
+<br/></div>
+  </itemBody>
+  <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+</assessmentItem>

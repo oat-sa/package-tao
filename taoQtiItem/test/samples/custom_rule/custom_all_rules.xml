@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 imsqti_v2p1.xsd" identifier="orderPartialScoring" title="Grand Prix of Bahrain (Partial Scoring)" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE_SIN_ID" cardinality="single" baseType="identifier">
+        <correctResponse>
+            <value>identifier1</value>
+        </correctResponse>
+    </responseDeclaration>
+    <responseDeclaration identifier="RESPONSE_SIN_BOOL" cardinality="single" baseType="boolean">
+        <correctResponse>
+            <value>true</value>
+        </correctResponse>
+    </responseDeclaration>
+    <responseDeclaration identifier="RESPONSE_SIN_FLOAT" cardinality="single" baseType="float">
+        <correctResponse>
+            <value>3.14</value>
+        </correctResponse>
+    </responseDeclaration>
+    <responseDeclaration identifier="RESPONSE_SIN_INT" cardinality="single" baseType="integer">
+        <correctResponse>
+            <value>123456</value>
+        </correctResponse>
+    </responseDeclaration>
+    <responseDeclaration identifier="RESPONSE_SIN_PAIR" cardinality="single" baseType="pair">
+        <correctResponse>
+            <value>pair1 pair2</value>
+        </correctResponse>
+    </responseDeclaration>
+    <responseDeclaration identifier="RESPONSE_SIN_DPAIR" cardinality="single" baseType="directedPair">
+        <correctResponse>
+            <value>dpair1 dpair2</value>
+        </correctResponse>
+    </responseDeclaration>
+    <responseDeclaration identifier="RESPONSE_MUL_ID" cardinality="multiple" baseType="identifier">
+        <correctResponse>
+            <value>Multiple1</value>
+            <value>Multiple2</value>
+            <value>Multiple3</value>
+        </correctResponse>
+    </responseDeclaration>
+    <responseDeclaration identifier="RESPONSE_ORD_ID" cardinality="ordered" baseType="identifier">
+        <correctResponse>
+            <value>Ordered1</value>
+            <value>Ordered2</value>
+            <value>Ordered3</value>
+        </correctResponse>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE_INT" cardinality="single" baseType="integer"/>
+    <outcomeDeclaration identifier="SCORE_FLOAT" cardinality="single" baseType="float"/>
+    <outcomeDeclaration identifier="SCORE_STR" cardinality="single" baseType="float"/>
+    <outcomeDeclaration identifier="SCORE_BOOL" cardinality="single" baseType="boolean"/>
+    <outcomeDeclaration identifier="SCORE_PAIR" cardinality="single" baseType="pair"/>
+    <outcomeDeclaration identifier="SCORE_DPAIR" cardinality="single" baseType="directedPair"/>
+    <itemBody>
+        <choiceInteraction responseIdentifier="RESPONSE_SIN_ID" shuffle="false" maxChoices="1"><simpleChoice identifier="ChoiceA"></simpleChoice></choiceInteraction>
+        <choiceInteraction responseIdentifier="RESPONSE_SIN_BOOL" shuffle="false" maxChoices="1"><simpleChoice identifier="ChoiceA"></simpleChoice></choiceInteraction>
+        <choiceInteraction responseIdentifier="RESPONSE_SIN_FLOAT" shuffle="false" maxChoices="1"><simpleChoice identifier="ChoiceA"></simpleChoice></choiceInteraction>
+        <choiceInteraction responseIdentifier="RESPONSE_SIN_INT" shuffle="false" maxChoices="1"><simpleChoice identifier="ChoiceA"></simpleChoice></choiceInteraction>
+        <choiceInteraction responseIdentifier="RESPONSE_SIN_PAIR" shuffle="false" maxChoices="1"><simpleChoice identifier="ChoiceA"></simpleChoice></choiceInteraction>
+        <choiceInteraction responseIdentifier="RESPONSE_SIN_DPAIR" shuffle="false" maxChoices="1"><simpleChoice identifier="ChoiceA"></simpleChoice></choiceInteraction>
+        <choiceInteraction responseIdentifier="RESPONSE_MUL_ID" shuffle="false" maxChoices="1"><simpleChoice identifier="ChoiceA"></simpleChoice></choiceInteraction>
+        <choiceInteraction responseIdentifier="RESPONSE_ORD_ID" shuffle="false" maxChoices="1"><simpleChoice identifier="ChoiceA"></simpleChoice></choiceInteraction>
+    </itemBody>
+    <responseProcessing>
+        <responseCondition>
+            <responseIf>
+                <and>
+                    
+<!-- VARIABLES TESTING -->
+
+                    <!-- VARIABLES CREATION TESTING -->
+                    
+                    <and>
+                        <not><isNull><correct identifier="RESPONSE_SIN_ID" /></isNull></not>
+                        <not><isNull><correct identifier="RESPONSE_SIN_BOOL" /></isNull></not>
+                        <not><isNull><correct identifier="RESPONSE_SIN_FLOAT" /></isNull></not>
+                        <not><isNull><correct identifier="RESPONSE_SIN_INT" /></isNull></not>
+                        <not><isNull><correct identifier="RESPONSE_SIN_PAIR" /></isNull></not>
+                        <not><isNull><correct identifier="RESPONSE_SIN_DPAIR" /></isNull></not>
+                        <not><isNull><baseValue baseType="boolean">true</baseValue></isNull></not>
+                        <not><isNull><baseValue baseType="boolean">false</baseValue></isNull></not>
+                        <not><isNull><baseValue baseType="string">yes</baseValue></isNull></not>
+                        <not><isNull><baseValue baseType="integer">123456</baseValue></isNull></not>
+                        <not><isNull><baseValue baseType="float">3.14</baseValue></isNull></not>
+                        <not><isNull><baseValue baseType="pair">pair1 pair2</baseValue></isNull></not>
+                        <not><isNull><baseValue baseType="directedPair">dpair1 dpair2</baseValue></isNull></not>
+                    </and>
+                    
+                    <!-- VARIABLES HAVE CORRECT VALUE -->
+                    
+                    <and>
+                        <match>
+                            <correct identifier="RESPONSE_SIN_ID" />
+                            <baseValue baseType="identifier">identifier1</baseValue>
+                        </match>
+                        <match>
+                            <correct identifier="RESPONSE_SIN_BOOL" />
+                            <baseValue baseType="boolean">true</baseValue>
+                        </match>
+                        <match>
+                            <correct identifier="RESPONSE_SIN_FLOAT" />
+                            <baseValue baseType="float">3.14</baseValue>
+                        </match>
+                        <match>
+                            <correct identifier="RESPONSE_SIN_INT" />
+                            <baseValue baseType="integer">123456</baseValue>
+                        </match>
+                        <match>
+                            <correct identifier="RESPONSE_SIN_PAIR" />
+                            <baseValue baseType="pair">pair2 pair1</baseValue>
+                        </match>
+                        <match>
+                            <correct identifier="RESPONSE_SIN_DPAIR" />
+                            <baseValue baseType="directedPair">dpair1 dpair2</baseValue>
+                        </match>
+                    </and>
+                    
+<!-- OPERATORS TESTING -->
+                    
+                    <!-- ORDERED -->
+                    <not>
+                        <isNull>
+                            <ordered>
+                                <baseValue baseType="identifier">Ordered1</baseValue>
+                                <baseValue baseType="identifier">Ordered2</baseValue>
+                                <baseValue baseType="identifier">Ordered3</baseValue>
+                            </ordered>
+                        </isNull>
+                    </not>
+                    
+                    <match>
+                        <ordered>
+                            <baseValue baseType="identifier">Ordered1</baseValue>
+                            <baseValue baseType="identifier">Ordered2</baseValue>
+                            <baseValue baseType="identifier">Ordered3</baseValue>
+                        </ordered>
+                        <correct identifier="RESPONSE_ORD_ID"/>
+                    </match>
+                    
+                    <!-- MULTIPLE -->
+                    <not>
+                        <isNull>
+                            <multiple>
+                                <baseValue baseType="identifier">Multiple1</baseValue>
+                                <baseValue baseType="identifier">Multiple2</baseValue>
+                                <baseValue baseType="identifier">Multiple3</baseValue>
+                            </multiple>
+                        </isNull>
+                    </not>
+                    
+                    <match>
+                        <multiple>
+                            <baseValue baseType="identifier">Multiple1</baseValue>
+                            <baseValue baseType="identifier">Multiple2</baseValue>
+                            <baseValue baseType="identifier">Multiple3</baseValue>
+                        </multiple>
+                        <correct identifier="RESPONSE_MUL_ID"/>
+                    </match>
+                    
+                    <!-- EQUAL & DIVIDE -->
+                    
+                    <equal toleranceMode="exact">
+                        <baseValue baseType="integer">61728</baseValue>
+                        <divide>
+                            <correct identifier="RESPONSE_SIN_INT" />
+                            <baseValue baseType="integer">2</baseValue>
+                        </divide>
+                    </equal>
+                    
+                    <not>
+                        <equal toleranceMode="exact">
+                            <baseValue baseType="integer">61728</baseValue>
+                            <baseValue baseType="integer">61727</baseValue>
+                        </equal>
+                    </not>
+                    
+                    <!-- GT -->
+                    
+                    <gt>
+                        <correct identifier="RESPONSE_SIN_FLOAT" />
+                        <baseValue baseType="integer">3</baseValue>
+                    </gt>
+                    
+                    <not>
+                        <gt>
+                            <baseValue baseType="integer">3</baseValue>
+                            <correct identifier="RESPONSE_SIN_FLOAT" />
+                        </gt>    
+                    </not>
+                    
+                    <not>
+                        <gt>
+                            <baseValue baseType="integer">3</baseValue>
+                            <baseValue baseType="integer">3</baseValue>
+                        </gt>    
+                    </not>
+                    
+                    <!-- LT -->
+                    
+                    <lt>
+                        <correct identifier="RESPONSE_SIN_INT" />
+                        <baseValue baseType="integer">123457</baseValue>
+                    </lt>
+                    
+                    <not>
+                        <lt>
+                        <baseValue baseType="integer">123457</baseValue>
+                        <correct identifier="RESPONSE_SIN_INT" />
+                        </lt>    
+                    </not>
+                    
+                    <not>
+                        <lt>
+                        <baseValue baseType="integer">123457</baseValue>
+                        <baseValue baseType="integer">123457</baseValue>
+                        </lt>    
+                    </not>
+                    
+                    <!-- GTE -->
+                    
+                    <gte>
+                        <correct identifier="RESPONSE_SIN_FLOAT" />
+                        <baseValue baseType="integer">3</baseValue>
+                    </gte>
+                    
+                    <not>
+                        <gte>
+                            <baseValue baseType="integer">3</baseValue>
+                            <correct identifier="RESPONSE_SIN_FLOAT" />
+                        </gte>    
+                    </not>
+                    
+                    <gte>
+                        <correct identifier="RESPONSE_SIN_FLOAT" />
+                        <correct identifier="RESPONSE_SIN_FLOAT" />
+                    </gte>
+                    
+                    <!-- LTE -->
+                    
+                    <lte>
+                        <correct identifier="RESPONSE_SIN_INT" />
+                        <baseValue baseType="integer">123457</baseValue>
+                    </lte>
+                    
+                    <not>
+                        <lte>
+                            <baseValue baseType="integer">123457</baseValue>
+                            <correct identifier="RESPONSE_SIN_INT" />
+                        </lte>    
+                    </not>
+                    
+                    <lte>
+                        <correct identifier="RESPONSE_SIN_INT" />
+                        <correct identifier="RESPONSE_SIN_INT" />
+                    </lte>
+                    
+                    <!-- EQUAL & ROUND -->
+                    
+                    <equal toleranceMode="exact">
+                        <round>
+                            <baseValue baseType="float">3.5</baseValue>
+                        </round>
+                        <baseValue baseType="integer">4</baseValue>
+                    </equal>
+                    
+                    <equal toleranceMode="exact">
+                        <round>
+                            <baseValue baseType="float">3.4</baseValue>
+                        </round>
+                        <baseValue baseType="integer">3</baseValue>
+                    </equal>
+                    
+                    <!-- EQUAL & INTEGER DIVIDE -->
+                    
+                    <equal toleranceMode="exact">
+                        <integerDivide>
+                            <baseValue baseType="float">3</baseValue>
+                            <baseValue baseType="float">2.3</baseValue>
+                        </integerDivide>
+                        <baseValue baseType="float">1</baseValue>
+                    </equal>
+                    
+                    <equal toleranceMode="exact">
+                        <integerDivide>
+                            <baseValue baseType="float">3</baseValue>
+                            <baseValue baseType="float">2</baseValue>
+                        </integerDivide>
+                        <baseValue baseType="float">2</baseValue>
+                    </equal>
+                    
+                    <!-- OR -->
+                    
+                    <or>
+                        <baseValue baseType="boolean">true</baseValue>
+                        <baseValue baseType="boolean">true</baseValue>
+                    </or>
+                    
+                    <or>
+                        <baseValue baseType="boolean">true</baseValue>
+                        <baseValue baseType="boolean">false</baseValue>
+                    </or>
+                    
+                    <not>
+                        <or>
+                            <baseValue baseType="boolean">false</baseValue>
+                            <baseValue baseType="boolean">false</baseValue>
+                        </or>
+                    </not>
+                    
+                    <!-- SUM -->
+                    
+                    <equal toleranceMode="exact">
+                        <sum>
+                            <baseValue baseType="integer">1</baseValue>
+                            <baseValue baseType="integer">1</baseValue>
+                            <baseValue baseType="integer">98</baseValue>
+                        </sum>
+                        <baseValue baseType="integer">100</baseValue>
+                    </equal>
+                    
+                    <!-- SUBSTRACT -->
+                    
+                    <equal toleranceMode="exact">
+                        <subtract>
+                            <baseValue baseType="integer">100</baseValue>
+                            <baseValue baseType="integer">2</baseValue>
+                        </subtract>
+                        <baseValue baseType="integer">98</baseValue>
+                    </equal>
+                    
+                    
+                </and>
+                <setOutcomeValue identifier="SCORE_INT">
+                    <baseValue baseType="integer">1</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="SCORE_FLOAT">
+                    <baseValue baseType="float">1.1</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="SCORE_STR">
+                    <baseValue baseType="integer">yes</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="SCORE_BOOL">
+                    <baseValue baseType="boolean">true</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="SCORE_PAIR">
+                    <baseValue baseType="pair">1 2</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="SCORE_DPAIR">
+                    <baseValue baseType="pair">1 2</baseValue>
+                </setOutcomeValue>
+            </responseIf>
+            <responseElse>
+                <setOutcomeValue identifier="SCORE_INT">
+                    <baseValue baseType="integer">0</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="SCORE_FLOAT">
+                    <baseValue baseType="float">0.0</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="SCORE_STR">
+                    <baseValue baseType="string">no</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="SCORE_BOOL">
+                    <baseValue baseType="boolean">false</baseValue>
+                </setOutcomeValue>
+            </responseElse>
+        </responseCondition>
+    </responseProcessing>
+</assessmentItem>

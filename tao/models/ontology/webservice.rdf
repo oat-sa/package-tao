@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xml:base="http://www.tao.lu/Ontologies/TAO.rdf#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:wf="http://www.tao.lu/middleware/wfEngine.rdf#"
+>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#WebServiceUrlParam">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessVariables"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Web Service Url]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Web Service Url]]></rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <wf:PropertyCode><![CDATA[webServiceUrl]]></wf:PropertyCode>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#WebServiceUrl">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassFormalParameters"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Web Service Url]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Web Service Url]]></rdfs:comment>
+    <wf:PropertyFormalParametersName><![CDATA[url]]></wf:PropertyFormalParametersName>
+    <wf:PropertyFormalParametersDefaultProcessVariable rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#WebServiceUrlParam"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#ServiceWebService">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassSupportServices"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Web Service]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Embed a generic web service accessible via url in an iframe]]></rdfs:comment>
+    <wf:PropertySupportServicesUrl><![CDATA[/tao/WebService/index?url=^webServiceUrl&]]></wf:PropertySupportServicesUrl>
+    <wf:PropertyServiceDefinitionsFormalParameterIn rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#WebServiceUrl"/>
+  </rdf:Description>
+  
+</rdf:RDF>

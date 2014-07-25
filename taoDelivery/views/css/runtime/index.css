@@ -1,0 +1,69 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+
+@import url(main.css);
+
+
+#content{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top:0%;
+}
+
+.tile{
+    display:block;
+    border: 1px solid #ddd;
+    padding:6px;
+    width:100%;
+    margin-bottom:10px;
+}
+.tileLabel{
+    display:block;
+    margin-bottom:5px;
+    width:100%;
+    font-weight:bold;
+}
+.tileDetail{
+    padding-left: 5px;
+    font-style:italic;
+    color:#aaa;
+    margin-bottom:5px;
+}
+.header{    
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    padding-left:10px;
+    background-color: #ddd;
+    font-size:14px;
+    margin-bottom: 10px;
+    margin-top:25px;
+    font-weight: bold;
+}
+
+.btn-info {
+    width:30%;
+    
+}
+
+h1{
+    margin-top:20px;
+     color: #222;
+}

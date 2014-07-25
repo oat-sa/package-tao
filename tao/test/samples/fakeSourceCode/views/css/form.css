@@ -1,0 +1,200 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+/* Form layout and theme */
+div#form-title{
+	padding:4px;
+	font-size:1em;
+}
+div#form-container{
+	font-size:1em;
+	position:relative;
+}
+div.xhtml_form{
+	color:#444;
+	font-size:1em;
+	padding-bottom:5px;
+}
+div.xhtml_form div{
+	position:relative;
+	padding:4px 3px 4px 3px;
+	margin:2px 2px 3px 2px;
+	border: dashed 1px #FDD5DF;
+}
+div.xhtml_form div div div{
+	border:none;	
+}
+
+/* Form label */
+div.xhtml_form div .form_desc{
+	position:absolute;
+	font-size:1em;
+	width:30%;
+}
+
+/* Form elements */
+div.xhtml_form div input,
+div.xhtml_form div select,
+div.xhtml_form div textarea,
+div.xhtml_form div.wysiwyg,
+div.xhtml_form ul.form-elt-list,
+div.xhtml_form div .form-elt-container{
+	margin-left:30%;
+}
+div.xhtml_form div input.form-reverter{
+	margin-left:5%;
+}
+div.xhtml_form div textarea{
+	width: 280px;
+	height: 40px;
+}
+div.xhtml_form div.wysiwyg,
+div.xhtml_form div textarea.html-area{
+	width: 300px;
+}
+div.xhtml_form div .elt_desc{
+	font-weight:normal;
+}
+div.xhtml_form div .form-elt-info{
+	font-style:italic;
+	font-size:1.1em;
+	color:#D00239;
+}
+div.xhtml_form ul.form-elt-list{
+	padding-left:15px;
+	color:#444;
+}
+div.xhtml_form div .form-elt-container{
+	padding:3px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+div.xhtml_form div .file-uploader{
+	z-index:10000;
+	
+}
+div.xhtml_form div span.checker-container{
+	margin-left:28%;
+	font-size:10px;
+	padding-top:5px;
+}
+
+/* Form group */
+div.xhtml_form div.form-group{
+	border: solid 1px #cfcfcf;
+	background-color: #e3e3e3;
+	margin:5px;
+	padding:3px;
+	color:#D00239;
+	font-size:1.2em;
+}
+div.xhtml_form div.form-group div{
+	background-color: #fff;
+	padding:3px;
+	color:#444;
+	font-size:0.9em;
+	border: solid 1px #ddd;
+}
+div.xhtml_form div.form-group div div{
+	border: solid 1px #FDD5DF;
+}
+
+div.xhtml_form div.form-group div div div{
+	border:none;	
+}
+
+/* Form error message */
+div#form-container div.xhtml_form div.form-error,
+div#form-container div.xhtml_form div.form-group div.form-error{
+	font-size:0.9em;
+	font-weight:bold;
+	padding:4px;
+	margin:5px;
+	margin-bottom:25px;
+	border:1px solid #CD0A0A;
+	color:#CD0A0A;
+	margin-left:30%;
+	width:250px;
+}
+div#form-container div.xhtml_form div.form-elt-highlight{
+	background-color:#DAE6F8;
+}
+div#form-container table{
+	border-collapse:collapse;
+	width:96%;
+	margin:2% auto 2% auto;
+}
+div#form-container table td,
+div#form-container table th{
+	border: solid 1px #CCC;
+} 
+div#form-container table th{
+	padding:5px;
+}
+div.form-group span.form-group-control{
+	cursor:pointer;
+	position:absolute;
+	right: 1%;
+}
+input[type=button], input[type=submit]{
+	cursor:pointer;
+}
+div.xhtml_form div.form-actions{
+	padding-left:30%;
+	border:none;
+}
+div.xhtml_form div.form-actions input{
+	margin-left:0px;
+	margin-right: 20px;
+}
+div.xhtml_form div.form-toolbar{
+	color:#AAA;
+	position:relative;
+	right:0%;
+	z-index:1;
+	margin:5px 5px 5px 2px;
+	padding-left:1px;
+	border:none;
+}
+div.xhtml_form div.form-toolbar:hover{
+	z-index:1000;
+}
+
+div.xhtml_form div.form-toolbar a img{
+	vertical-align:text-bottom;	
+}
+div.xhtml_form div.form-toolbar a{
+	text-decoration:none;
+	padding: 3px 6px 3px 6px;
+	margin-right:5px; 
+	margin-left:0px; 
+	border: solid 1px #ccc;
+	border-bottom-color:#aaa;
+	border-right-color:#aaa;
+}
+div.xhtml_form div.form-toolbar a:hover{
+	color:#D00239;	
+}
+
+div#form-container div.xhtml_form div table.form-elt-container{
+	margin:5px 0 5px 30%;
+	padding:5px;
+	width:70%;	
+	vertical-align: middle;
+}

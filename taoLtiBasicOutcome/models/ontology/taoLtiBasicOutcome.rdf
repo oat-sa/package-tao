@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xml:base="http://www.tao.lu/Ontologies/taoLtiBasicOutcome.rdf#"
+	xmlns:resultserver="http://www.tao.lu/Ontologies/TAOResultServer.rdf#"
+	xmlns:basicoutcome="http://www.tao.lu/Ontologies/taoLtiBasicOutcome.rdf#"
+	xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#" 
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#"
+	xmlns:tao="http://www.tao.lu/Ontologies/TAO.rdf#"
+>
+    <!--
+   <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoLtiBasicOutcome.rdf#LtiResultServerModel">
+	<rdfs:label xml:lang="en-US"><![CDATA[Lti Basic Outcome POX/Oauth]]></rdfs:label>
+	<rdfs:comment xml:lang="en-US"><![CDATA[Lti Basic Outcome POX/Oauth]]></rdfs:comment>
+	<resultserver:implementation><![CDATA[taoLtiBasicOutcome_models_classes_LtiBasicOutcome]]></resultserver:implementation>
+	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServerModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResultServer.rdf#LtiBasicRole">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#ManagementRole"/>
+  	<generis:includesRole rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#BackOfficeRole"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Lti Basic]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Lti Basic]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoLtiBasicOutcome.rdf#ltiBasicOutcomeExample">
+	<rdfs:label xml:lang="en-US"><![CDATA[LTI Basic Outcome Result]]></rdfs:label>
+	<rdfs:comment xml:lang="en-US"><![CDATA[LTI Basic Outcome Server]]></rdfs:comment>
+	<resultserver:hasResultServerModel rdf:resource="http://www.tao.lu/Ontologies/taoLtiBasicOutcome.rdf#LtiResultServerModel" />
+	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServer"/>
+  </rdf:Description>
+  -->
+</rdf:RDF>

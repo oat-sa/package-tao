@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p0 imsqti_v2p0.xsd"
+    identifier="selectPoint" title="Where is Edinburgh?" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="point">
+        <correctResponse>
+            <value>102 113</value>
+        </correctResponse>
+        <areaMapping defaultValue="0">
+            <areaMapEntry shape="circle" coords="102,113,8" mappedValue="1"/>
+        </areaMapping>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+    <itemBody>
+        <selectPointInteraction responseIdentifier="RESPONSE" maxChoices="1">
+            <prompt>Mark Edinburgh on this map of the United Kingdom.</prompt>
+            <object type="image/png" width="196" height="280" data="images/uk.png">UK Map</object>
+        </selectPointInteraction>
+    </itemBody>
+    <responseProcessing template="http://www.imsglobal.org/question/qti_v2p0/rptemplates/map_response_point"/>
+</assessmentItem>

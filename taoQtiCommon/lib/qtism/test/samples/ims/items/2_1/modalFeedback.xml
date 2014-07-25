@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This item is a true/false question with modal feedback, adapted from the CC question QUE_102010.xml -->
+<assessmentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+    xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" identifier="Example01-modalFeedback"
+    title="Example 1 - modal feedback" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+
+        <!-- The response variable RESPONSE will hold the candidate's input-->
+
+        <correctResponse>
+
+            <!-- The value of the right answer is declared-->
+
+            <value>true</value>
+        </correctResponse>
+    </responseDeclaration>
+
+    <!-- Define a feedback variable; its baseType is "identifier" so that it can contain 
+        the identifier of the feedback message-->
+
+    <outcomeDeclaration identifier="FEEDBACK" cardinality="single" baseType="identifier"/>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"
+        normalMaximum="10.0">
+        <defaultValue>
+            <value>0</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+        <defaultValue>
+            <value>10.0</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <itemBody>
+        <choiceInteraction responseIdentifier="RESPONSE" shuffle="false" maxChoices="1">
+            <prompt>Sigmund Freud and Carl Jung both belong to the psychoanalytic school of
+                psychology.</prompt>
+            <simpleChoice identifier="true" fixed="true">True </simpleChoice>
+            <simpleChoice identifier="false" fixed="true">False </simpleChoice>
+        </choiceInteraction>
+    </itemBody>
+    <responseProcessing>
+        <responseCondition>
+            <responseIf>
+                <match>
+
+                    <!-- The value of RESPONSE is compared with the correct value identified 
+                        in the RESPONSE declaration-->
+
+                    <variable identifier="RESPONSE"/>
+                    <correct identifier="RESPONSE"/>
+                </match>
+                <setOutcomeValue identifier="SCORE">
+                    <variable identifier="MAXSCORE"/>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <baseValue baseType="identifier">correct</baseValue>
+                </setOutcomeValue>
+            </responseIf>
+            <responseElse>
+
+                <!-- Depending on whether the input matches the correct answer or not, FEEDBACK 
+                    is given the value of the identifier of the appropriate feedback message-->
+
+                <setOutcomeValue identifier="FEEDBACK">
+                    <baseValue baseType="identifier">incorrect</baseValue>
+                </setOutcomeValue>
+            </responseElse>
+        </responseCondition>
+    </responseProcessing>
+
+    <!-- Note how the identifiers in the following modalFeedback elements match those of the 
+        setOutcomeValue elements above -->
+
+    <modalFeedback outcomeIdentifier="FEEDBACK" showHide="show" identifier="correct"
+        >correct</modalFeedback>
+    <modalFeedback outcomeIdentifier="FEEDBACK" showHide="show" identifier="incorrect"
+        >incorrect</modalFeedback>
+</assessmentItem>

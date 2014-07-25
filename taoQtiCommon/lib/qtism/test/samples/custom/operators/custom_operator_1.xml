@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A custom operator with a single native QTI argument and platform specific LAX attributes.-->
+<customOperator xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" 
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+				xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+				xmlns:qtism="http://qtism.taotesting.com"
+				class="com.taotesting.qtism.customOperator1" definition="http://qtism.taotesting.com/xsd/customOperator1.xsd" qtism:debug="false" qtism:syntax="default">
+	<baseValue baseType="string">
+		<![CDATA[Param1Data]]>
+	</baseValue>
+</customOperator>

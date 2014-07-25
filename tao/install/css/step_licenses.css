@@ -1,0 +1,186 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2002-2008 (original work) Public Research Centre Henri Tudor & University of Luxembourg (under the project TAO & TAO2);
+ *               2008-2010 (update and modification) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+
+pre {
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+}
+
+body textarea {
+    font-weight: normal;
+    //background-color: white;  
+}
+
+textarea {
+        overflow-y: auto;//hidden;
+        width: 260px;
+        min-width: 260px;
+        max-width: 260px;
+        height: 160px;
+        min-height: 160px;
+        max-height: 160px;
+        border: 1px solid #888; 
+        resize: none;
+        border-radius: 4px;
+        display: inline-block;
+        outline: none;
+}
+
+/* form check */
+#forms_content{
+	position: absolute;
+	top: 149px;
+	width: 585px;
+	height: 294px;
+	margin-left: 200px;
+}
+
+#forms_content form ul li div.approved{
+	//border:1px solid;
+        //margin-left: 20px;
+        //padding-left: 25px;
+	//background:none;
+	//background:url(../images/valide.png) no-repeat 0px 0px;
+	margin-top:20px;
+}
+
+#deployment{
+	margin: 100px 0 0 160px;
+	visibility: hidden;	
+}
+
+#deployment span{
+	position: relative;
+	top: 3px;
+	margin-left: 22px;
+	font-size: 10px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+#abortForm{
+	position:absolute;
+	right:145px;
+	bottom:-30px;
+	font-size: 0.8em;
+	background:#e5e5e5;
+	border-top:none;
+	border:none;
+	padding:5px;
+	width: 85px;
+}
+
+div.ui-dialog{
+    font-size: 0.8em;
+    //font-weight: bold;
+    //overflow-y: auto;
+}
+
+div.ui-dialog strong{
+    //font-size: 0.9em;
+    font-weight: bold;
+    //font-style: italic;
+}
+
+div.ui-dialog-buttonpane {
+    //height: 45px;
+}
+
+dl {
+    margin-left: 10px;
+}
+
+div.ui-widget-overlay {
+    //background-color: white;
+}
+
+span.ui-button-text {
+    font-size: 0.9em;
+}
+
+#submitForm {
+    width: 120px;
+}
+
+#readLicense1 {
+    margin-left: 10px;
+}
+
+#readLicense2 {
+    margin-left: 10px;
+}
+
+p {
+  margin-bottom: 0.21cm;
+}
+
+p.center {
+    text-align: center;
+}
+
+p.justify {
+    text-align: justify;
+}
+
+h1.license2 {
+    font-size: 16pt;
+    font-weight: bold;
+    top: 20px;
+    text-align: center;
+    border-left: none;
+}
+
+h2.license2 {
+    font: 14pt;
+    font-weight: bold;
+    text-align: left;
+    
+}
+
+img#logo_tao {
+    margin-left: 20%;
+    margin-bottom: 10px;
+}
+
+img#logo_generis4 {
+    margin-left: 8%;
+    margin-bottom: 50px;
+}
+
+div#license2-content {
+    margin-top: 0px;
+}
+
+#border {
+    border: 1px solid #00000a;
+    padding: 0.04cm 0.14cm;
+}
+
+p#comments {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#readLicense1Header, #readLicense2Header {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input#readLicense1, input#readLicense2 {
+    font-family: Arial, Helvetica, sans-serif;
+}

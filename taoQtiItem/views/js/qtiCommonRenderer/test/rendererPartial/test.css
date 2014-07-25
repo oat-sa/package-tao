@@ -1,0 +1,15 @@
+a{text-decoration:underline;color:blue;cursor: pointer;margin : 0 2px;}
+a:hover{color:gray;}
+
+div{
+-webkit-user-select: none; /* Chrome/Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+ */
+
+/* Rules below not implemented in browsers yet */
+-o-user-select: none;
+user-select: none;}
+
+
+span.cke_top{padding:0;border:0;}
+span.cke_toolgroup{margin:0;}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>UploadInteraction Renderer Test</title>
+        <link rel="stylesheet" type="text/css" href="/tao/views/js/lib/qunit/qunit.css">
+        <script type="text/javascript" src="/tao/views/js/lib/require.js"></script>
+        <script type="text/javascript" src="/tao/views/js/lib/qunit/qunit.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="/tao/views/css/tao-main-style.css" />
+      <link rel="stylesheet" type="text/css" href="/taoQtiItem/views/css/qti.css" />
+
+        <script  type="text/javascript">
+            QUnit.config.autostart = false;
+            require(['/tao/ClientConfig/config'], function(){
+                require(['taoQtiItem/qtiCommonRenderer/test/renderer/test'], function(Test){
+                    QUnit.start();
+                    var filePlaceholder = { "base" : { "file" : { "data" : "cXRpX2ZpbGVfZGF0YXR5cGVfcGxhY2Vob2xkZXJfZGF0YQ==", "mime" : "qti+application/octet-stream", "name" : "myfile.png" } } };
+                    Test.testRender('upload', { }, [filePlaceholder]);
+                });
+            });
+        </script>
+    </head>
+    <body class="tao-scope">
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+    </body>
+</html>

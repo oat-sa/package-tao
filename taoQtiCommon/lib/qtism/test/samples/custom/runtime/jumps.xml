@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.taotesting.com/xsd/qticompact_v1p0.xsd"
+	identifier="itemsubset" title="Item Subset">
+	<outcomeDeclaration identifier="NCORRECTS01" cardinality="single" baseType="integer"/>
+    <outcomeDeclaration identifier="NCORRECTS02" cardinality="single" baseType="integer"/>
+    <outcomeDeclaration identifier="NCORRECTS03" cardinality="single" baseType="integer"/>
+    <outcomeDeclaration identifier="NINCORRECT" cardinality="single" baseType="integer"/>
+    <outcomeDeclaration identifier="NRESPONSED" cardinality="single" baseType="integer"/>
+    <outcomeDeclaration identifier="NPRESENTED" cardinality="single" baseType="integer"/>
+    <outcomeDeclaration identifier="NSELECTED" cardinality="single" baseType="integer"/>
+    <outcomeDeclaration identifier="PERCENT_CORRECT" cardinality="single" baseType="float"/>
+	<testPart identifier="P01" navigationMode="nonlinear" submissionMode="individual">
+		<assessmentSection identifier="S01" title="Section1" visible="true">
+			<assessmentItemRef identifier="Q01" href="./Q01.xml" timeDependent="false" category="mathematics chemistry">
+				<variableMapping sourceIdentifier="scoring" targetIdentifier="SCORE"/>
+				<weight identifier="W01" value="2.0"/>
+				<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+					<correctResponse>
+						<value>ChoiceA</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="scoring" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<responseProcessing>
+				    <responseCondition>
+				        <responseIf>
+				            <match>
+				                <variable identifier="RESPONSE"/>
+				                <correct identifier="RESPONSE"/>
+				            </match>
+				            <setOutcomeValue identifier="scoring">
+				                <baseValue baseType="float">1</baseValue>
+				            </setOutcomeValue>
+				        </responseIf>
+				        <responseElse>
+				            <setOutcomeValue identifier="scoring">
+				                <baseValue baseType="float">0</baseValue>
+				            </setOutcomeValue>
+				        </responseElse>
+				    </responseCondition>
+				</responseProcessing>
+			</assessmentItemRef>
+			
+			<assessmentItemRef identifier="Q02" href="./Q02.xml" timeDependent="false" category="maximum">
+				<responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="pair">
+					<correctResponse>
+						<value>A P</value>
+						<value>C M</value>
+						<value>D L</value>
+					</correctResponse>
+					<mapping defaultValue="0">
+						<mapEntry mapKey="A P" mappedValue="2"/>
+						<mapEntry mapKey="C M" mappedValue="1"/>
+						<mapEntry mapKey="D L" mappedValue="1"/>
+					</mapping>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float" normalMaximum="2.5"/>
+				<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response"/>
+			</assessmentItemRef>
+
+			<assessmentItemRef identifier="Q03" href="./Q03.xml" timeDependent="false" category="mathematics minimum">
+				<responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="identifier">
+					<correctResponse>
+						<value>H</value>
+						<value>O</value>
+					</correctResponse>
+					<mapping lowerBound="0" upperBound="2" defaultValue="-2">
+						<mapEntry mapKey="H" mappedValue="1"/>
+						<mapEntry mapKey="O" mappedValue="1"/>
+						<mapEntry mapKey="Cl" mappedValue="-1"/>
+					</mapping>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float" normalMinimum="-2"/>
+				<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response"/>
+			</assessmentItemRef>
+		</assessmentSection>
+		
+		<assessmentSection identifier="S02" title="Section 2" visible="true">
+			<assessmentItemRef identifier="Q04" href="./Q04.xml" timeDependent="false" category="chemistry">
+				<responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="directedPair">
+					<correctResponse>
+						<value>W G1</value>
+						<value>Su G2</value>
+					</correctResponse>
+					<mapping defaultValue="-1" lowerBound="0">
+						<mapEntry mapKey="W G1" mappedValue="1"/>
+						<mapEntry mapKey="Su G2" mappedValue="2"/>
+					</mapping>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+				<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response"/>
+			</assessmentItemRef>
+			
+			<assessmentItemRef identifier="Q05" href="./Q05.xml" timeDependent="false" category="minimum maximum">
+				<responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="pair">
+					<correctResponse>
+						<value>C B</value>
+						<value>C D</value>
+					</correctResponse>
+					<mapping lowerBound="0" defaultValue="0">
+						<mapEntry mapKey="A B" mappedValue="-1"/>
+						<mapEntry mapKey="A C" mappedValue="-1"/>
+						<mapEntry mapKey="A D" mappedValue="-1"/>
+						<mapEntry mapKey="B C" mappedValue="1"/>
+						<mapEntry mapKey="B D" mappedValue="-1"/>
+						<mapEntry mapKey="C D" mappedValue="1"/>
+					</mapping>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float" normalMinimum="0.5" normalMaximum="1.5"/>
+				<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response"/>
+			</assessmentItemRef>
+			
+			<assessmentItemRef identifier="Q06" href="./Q06.xml" timeDependent="false" category="mathematics minimum">
+				<variableMapping sourceIdentifier="mySc0r3" targetIdentifier="SCORE"/>
+				<variableMapping sourceIdentifier="answer" targetIdentifier="RESPONSE"/>
+				<responseDeclaration identifier="answer" cardinality="single" baseType="identifier">
+					<correctResponse>
+						<value>A</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="mySc0r3" cardinality="single" baseType="float" normalMinimum="1"/>
+				<responseProcessing>
+				    <responseCondition>
+				        <responseIf>
+				            <match>
+				                <variable identifier="answer"/>
+				                <correct identifier="answer"/>
+				            </match>
+				            <setOutcomeValue identifier="mySc0r3">
+				                <baseValue baseType="float">1</baseValue>
+				            </setOutcomeValue>
+				        </responseIf>
+				        <responseElse>
+				            <setOutcomeValue identifier="mySc0r3">
+				                <baseValue baseType="float">0</baseValue>
+				            </setOutcomeValue>
+				        </responseElse>
+				    </responseCondition>
+				</responseProcessing>
+			</assessmentItemRef>
+		</assessmentSection>
+	</testPart>
+	<testPart identifier="P02" navigationMode="nonlinear" submissionMode="individual">
+		<assessmentSection identifier="S03" title="Section 3" visible="true">
+			<selection select="3" withReplacement="true"/>
+			<assessmentItemRef identifier="Q07" href="./Q07.xml" timeDependent="false" category="minimum">
+				<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="point">
+					<correctResponse>
+						<value>102 113</value>
+					</correctResponse>
+					<areaMapping defaultValue="0">
+						<areaMapEntry shape="circle" coords="102,113,16" mappedValue="1"/>
+					</areaMapping>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float" normalMinimum="1"/>
+				<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response_point"/>
+			</assessmentItemRef>
+		</assessmentSection>
+	</testPart>
+	<outcomeProcessing>
+        <setOutcomeValue identifier="NCORRECTS01">
+            <numberCorrect sectionIdentifier="S01"/>
+        </setOutcomeValue>
+        <setOutcomeValue identifier="NCORRECTS02">
+            <numberCorrect sectionIdentifier="S02"/>
+        </setOutcomeValue>
+        <setOutcomeValue identifier="NCORRECTS03">
+            <numberCorrect sectionIdentifier="S03"/>
+        </setOutcomeValue>
+        <setOutcomeValue identifier="NINCORRECT">
+            <numberIncorrect/>
+        </setOutcomeValue>
+        <setOutcomeValue identifier="NRESPONSED">
+            <numberResponded/>
+        </setOutcomeValue>
+        <setOutcomeValue identifier="NPRESENTED">
+            <numberPresented/>
+        </setOutcomeValue>
+        <setOutcomeValue identifier="NSELECTED">
+            <numberSelected/>
+        </setOutcomeValue>
+        <setOutcomeValue identifier="PERCENT_CORRECT">
+            <product>
+                <baseValue baseType="float">100.0</baseValue>
+                <divide>
+                    <numberCorrect/>
+                    <numberSelected/>
+                </divide>
+            </product>
+        </setOutcomeValue>
+    </outcomeProcessing>
+</assessmentTest>

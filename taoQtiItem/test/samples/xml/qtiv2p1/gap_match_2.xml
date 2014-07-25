@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i13806271719128107" title="Create Item" label="" xml:lang="en-US" adaptive="false" timeDependent="false">
+  <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="directedPair">
+    <correctResponse>
+      <value>Gap_1 Text_1</value>
+      <value>Gap_2 Text_2</value>
+      <value>Gap_3 Text_3</value>
+      <value>Gap_4 Text_4</value>
+      <value>Gap_5 Text_5</value>
+      <value>Gap_6 Text_6</value>
+    </correctResponse>
+    <mapping defaultValue="-1" lowerBound="0" upperBound="3">
+      <mapEntry mapKey="Gap_1 Text_1" mappedValue="0.5"/>
+      <mapEntry mapKey="Gap_2 Text_2" mappedValue="0.5"/>
+      <mapEntry mapKey="Gap_3 Text_3" mappedValue="0.5"/>
+      <mapEntry mapKey="Gap_4 Text_4" mappedValue="0.5"/>
+      <mapEntry mapKey="Gap_5 Text_5" mappedValue="0.5"/>
+      <mapEntry mapKey="Gap_6 Text_6" mappedValue="0.5"/>
+    </mapping>
+  </responseDeclaration>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <itemBody>
+    <div> <gapMatchInteraction responseIdentifier="RESPONSE" shuffle="true"><prompt>You are a seasoned TAO user, Sam is new user and needs you help to
+guide him through the process of his first online assessment
+creation.</prompt><gapText identifier="Text_1" fixed="false" matchMax="0">authoring tool</gapText><gapText identifier="Text_2" fixed="false" matchMax="0">math</gapText><gapText identifier="Text_3" fixed="false" matchMax="0">MCQ</gapText><gapText identifier="Text_4" fixed="false" matchMax="0">preview tab</gapText><gapText identifier="Text_5" fixed="false" matchMax="0">popup preview</gapText><gapText identifier="Text_6" fixed="false" matchMax="0">items extensions</gapText><gapText identifier="Text_7" fixed="false" matchMax="0">tests extensions</gapText><gapText identifier="Text_8" fixed="false" matchMax="0">settings</gapText><gapText identifier="Text_9" fixed="false" matchMax="0">word</gapText><gapText identifier="Text_10" fixed="false" matchMax="0">select box</gapText><p>Log into tao. Go to the 
+<gap identifier="Gap_6" fixed="false" required="false"/>
+Create an item and select QTI item type.Go into the 
+<gap identifier="Gap_1" fixed="false" required="false"/>
+ to start
+editing your item.<br/>Write some text in your item body editor. You can insert image,
+media and even 
+<gap identifier="Gap_2" fixed="false" required="false"/>
+ elements in
+your item bodyInsert an interaction at some point and customized it. Let's
+start with the simplest one the Choice Interaction which is
+basically a 
+<gap identifier="Gap_3" fixed="false" required="false"/>
+ .Save it and preview it either in the
+
+<gap identifier="Gap_4" fixed="false" required="false"/>
+ , or the
+
+<gap identifier="Gap_5" fixed="false" required="false"/>
+ . The result is the same, but
+going to the first one will have you leave the authoring tool so
+you gonna need to reload the authoring tool to resume working on.
+For quick review when authoring you item, prefer the second
+one.<br/></p></gapMatchInteraction>
+
+ <br/>
+<br/>
+ <br/></div>
+  </itemBody>
+  <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response"/>
+</assessmentItem>

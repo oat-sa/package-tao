@@ -1,0 +1,39 @@
+@import "inc/bootstrap";
+
+.qti-graphicInteraction {
+
+    .source li > img {
+        display: block;
+    }
+
+    .active {
+        & > input, & > textarea,
+        input.active, textarea.active {
+            border-color: mix(#fff, $info, 20%);
+        }
+    }
+    .image-editor {
+        position: relative;
+        float: left;
+        padding: 3px;
+       .mapping-editor {
+            display: none;  
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            text-align: left;
+            z-index: 10009;
+        }
+    }
+
+    .main-image-box {
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        overflow: visible;
+    }
+}
+
+@import 'graphic-gap';
+@import 'graphic-order';
+@import 'select-point';

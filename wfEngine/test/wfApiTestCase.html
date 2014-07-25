@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>wfApi Test Suite</title>
+	<link rel="stylesheet" href="../../tao/test/qunit/qunit.css" type="text/css" media="screen">
+	<script type="text/javascript" src='../../tao/views/js/jquery-1.8.0.min.js'></script>
+	<script type="text/javascript" src="../../tao/test/qunit/qunit.js"></script>
+	<script type="text/javascript" src="../views/js/wfApi/wfApi.min.js"></script>
+
+	<script type="text/javascript">
+
+		module("constants");
+
+		test("Test the constants availability", function() {
+			equals( wf_STATE.ITEM.FINISHED, 'item_finished', 'the state finished is defined ');
+		});
+
+		module("context");
+
+		initRecoveryContext({
+			type: 'sync',
+			url : 'wfApiServer.php',
+			params: {
+				token: '7114e56cb3b9423314a425500afb41fc56183000',
+				action: 'get'
+			}
+		},{
+			type: 'sync',
+			url : 'wfApiServer.php',
+			params: {
+				token: '7114e56cb3b9423314a425500afb41fc56183000',
+				action: 'set'
+			},
+			flush : true
+		});
+
+		test("Test the context recovery", function() {
+			var myContext = {integer: '12', obj: {arr: [1,2]} };
+			setRecoveryContext('myContext', myContext);
+
+			ok($.isPlainObject(recoveryCtx.registry), 'test if the registry has been initialized');
+			equals( typeof(recoveryCtx.registry['myContext']), 'undefined',  'test if the registry has flushed');
+
+			recoveryCtx.registry = null;
+
+			var myNewContext = getRecoveryContext('myContext');
+
+			ok(myNewContext !== false, 'test if the context is found');
+			ok(myNewContext.obj.arr, 'test the context structure');
+			equals(myNewContext.obj.arr[0], 1, 'test the context values');
+
+			recoveryCtx.registry = null;
+
+			initRecoveryContext({
+				type: 'sync',
+				url : 'wfApiServer.php',
+				params: {
+					token: '7114e56cb3b9423314a425500afb41fc56183000',
+					action: 'get'
+				}
+			},{
+				type: 'sync',
+				url : 'wfApiServer.php',
+				params: {
+					token: '7114e56cb3b9423314a425500afb41fc56183000',
+					action: 'remove'
+				},
+				flush : true
+			});
+
+			setRecoveryContext('myContext', null);
+
+			var myNewContext = getRecoveryContext('myContext');
+			ok($.isPlainObject(myNewContext), 'test if the context is retrieved');
+			ok(myNewContext['obj'] == undefined, 'test if the context is deleted');
+
+		});
+
+		module("state");
+
+		test("Finishing", function(){
+
+			var testCallBack = 2;
+			beforeFinish(function(){
+				testCallBack++;
+			});
+
+			equals(testCallBack, 2, 'Test the value before the finish callback is launched');
+
+			var testNextCallBack = 2;
+			$("#next").bind('click', function(){
+				testNextCallBack++;
+			});
+			equals(testNextCallBack, 2, 'Test the value before the next button is clicked');
+
+			finish();
+
+			equals(testCallBack, 3, 'Test the finish callback');
+
+			equals(testNextCallBack, 3, 'Test the value once the next button is clicked');
+		});
+	</script>
+
+</head>
+<body>
+	<h1 id="qunit-header">WORKFLOW API Test Suite</h1>
+	<h2 id="qunit-banner"></h2>
+	<div id="qunit-testrunner-toolbar"></div>
+	<h2 id="qunit-userAgent"></h2>
+	<ol id="qunit-tests"></ol>
+	<div id="qunit-fixture">test markup</div>
+	<div id="controls">
+		<a href="#" id='next' >Next</a>
+		<a href="#" id='back' >Back</a>
+		<a href="#" id='pause' >Pause</a>
+	</div>
+</body>
+</html>

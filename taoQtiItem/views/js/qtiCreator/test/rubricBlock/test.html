@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rubric Block Test</title>
+        <link rel="stylesheet" type="text/css" href="/tao/views/js/lib/qunit/qunit.css">
+        <script type="text/javascript" src="/tao/views/js/lib/require.js"></script>
+        <script type="text/javascript" src="/tao/views/js/lib/qunit/qunit.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="/tao/views/css/tao-main-style.css" />
+        <link rel="stylesheet" type="text/css" href="/taoQtiItem/views/css/qti.css" />
+        <link rel="stylesheet" type="text/css" href="/taoQtiItem/views/css/item-creator.css" />
+
+        <script  type="text/javascript">
+            QUnit.config.autostart = false;
+            require(['/tao/ClientConfig/config'], function(){
+                require(['taoQtiItem/qtiCreator/test/rubricBlock/test'], function(){
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+        <div class="tao-scope">
+            <div id="item-editor-panel" class="has-item">
+                <div class="qti-item item-editor-item">
+                    <div class="grid-row">
+                        <div class="col-12">
+                            <div id="element"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="form"></div>
+        </div>
+
+    </body>
+</html>

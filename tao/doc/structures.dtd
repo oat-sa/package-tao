@@ -1,0 +1,78 @@
+<!-- Root Tag -->
+<!ELEMENT structures  (( structure )* , (toolbar)* ,(entrypoint)*) >
+	<!ELEMENT structure  ( (description)? ,sections )>
+	
+		<!-- The id of the structure -->
+		<!ATTLIST structure id ID #REQUIRED>
+		<!-- The name of the structure -->
+		<!ATTLIST structure name CDATA #REQUIRED>
+		<!-- The level of that structure regarding the others (to order them)  -->
+		<!ATTLIST structure level CDATA #REQUIRED>
+		<!-- The id of the structure -->
+		<!ATTLIST structure visible CDATA #REQUIRED>
+	
+		<!ELEMENT description (#PCDATA)>
+		
+		<!-- sub division, each section of the extension will be displayed in a separated tab -->
+		<!ELEMENT sections  ( section )*>
+			<!ELEMENT section  ( trees | actions )*>
+				<!-- identifier of the section -->
+				<!ATTLIST section id CDATA #REQUIRED>
+				<!-- displayed name of the section -->
+				<!ATTLIST section name CDATA #REQUIRED>
+				<!-- The URL of the action to load -->
+				<!ATTLIST section url CDATA #REQUIRED>
+	
+				<!-- The list of trees to load in the section panel -->
+				<!ELEMENT trees  ( tree )*>
+					<!ELEMENT tree  EMPTY>
+					<!-- the name of the tree  -->
+					<!ATTLIST tree name CDATA #REQUIRED>
+					<!-- the URL to populate the tree with (must return JSON data)  -->
+					<!ATTLIST tree dataUrl CDATA #REQUIRED>
+					<!-- the URL to execute contextual actions from the tree -->
+					<!ATTLIST tree className CDATA #IMPLIED>
+					<!-- the name of the main class that resources are instances of in the tree -->
+					<!ATTLIST tree 
+						editClassUrl CDATA #IMPLIED
+						editInstanceUrl CDATA #IMPLIED
+						addInstanceUrl CDATA #IMPLIED
+						addSubClassUrl CDATA #IMPLIED
+						deleteUrl CDATA #IMPLIED
+						duplicateUrl CDATA #IMPLIED
+						moveInstanceUrl CDATA #IMPLIED
+					>
+	
+				<!-- The list of contextual actions to load in the section panel -->
+				<!ELEMENT actions  ( action )*>
+					<!ELEMENT action  EMPTY>
+					<!-- Name of the action -->
+					<!ATTLIST action name CDATA #REQUIRED>
+					<!-- A javascript method to run instead of loading directly the URL -->
+					<!ATTLIST action js CDATA #IMPLIED>
+					<!-- The URL of the action -->
+					<!ATTLIST action url CDATA #REQUIRED>
+					<!-- The context of the action: (class|instance|resource|*) -->
+					<!ATTLIST action context CDATA #REQUIRED>
+					<!-- Reload the complete page if true -->
+					<!ATTLIST action reload CDATA #IMPLIED>
+
+	<!ELEMENT entrypoint  ( description, (replace)* )>
+		<!ATTLIST entrypoint id ID #REQUIRED>
+		<!ATTLIST entrypoint title CDATA #REQUIRED>
+		<!ATTLIST entrypoint label CDATA #REQUIRED>
+		<!ATTLIST entrypoint url CDATA #REQUIRED>
+
+		<!ELEMENT replace EMPTY>
+		
+			<!ATTLIST replace id CDATA #REQUIRED>
+			
+	<!ELEMENT toolbar  ( (toolbaraction)* )>
+		<!-- displayed name of the section -->
+		<!ATTLIST toolbaraction id CDATA #REQUIRED>
+		<!ATTLIST toolbaraction icon CDATA #REQUIRED>
+		<!ATTLIST toolbaraction level CDATA #REQUIRED>
+		<!ATTLIST toolbaraction title CDATA #REQUIRED>
+		<!ATTLIST toolbaraction js CDATA #IMPLIED>
+		<!ATTLIST toolbaraction structure CDATA #IMPLIED>
+		
