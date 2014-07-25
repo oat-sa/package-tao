@@ -1,0 +1,59 @@
+{
+	"name" : "oat/generis",
+	"description" : "TAO generis library",
+	"type" : "library",
+	"authors" : [
+		{
+			"name" : "Open Assessment Technologies S.A.",
+			"homepage" : "http://www.taotesting.com"
+		},
+		{
+			"name": "Jérôme Bogaerts",
+			"role": "Developer"
+		},
+		{
+			"name": "Joel Bout",
+			"role": "Developer"
+		},
+		{
+			"name": "Bertrand Chevrier",
+			"role": "Developer"
+		},
+		{
+			"name": "Lionel Lecaque",
+			"role": "Developer"
+		},
+		{
+			"name": "Patrick Plichart",
+			"role": "Developer"
+		},
+		{
+			"name": "Dieter Raber",
+			"role": "Developer"
+		},
+		{
+			"name": "Somsack Sipasseuth",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"forum": "http://forum.taotesting.com",
+		"issues": "http://forge.taotesting.com"
+	},
+	"keywords" : [
+		"tao",
+		"oat",
+		"doctrine-dbal",
+		"computer-based-assessment"
+	],
+	"homepage" : "http://www.taotesting.com",
+	"license" : [
+		"GPL-2.0"
+	],
+	"require" : {
+		"easyrdf/easyrdf" : "*",
+		"doctrine/dbal" : ">=2.2.0,<2.4",
+		"php" : ">=5.3.2"
+	},
+	"minimum-stability" : "dev"
+}

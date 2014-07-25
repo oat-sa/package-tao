@@ -1,0 +1,298 @@
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/**
+ * Use icon within sass: @inclue icon('down');
+ */
+/* @todo tmp solution*/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\000034}}
+.ui-widget #item-editor-scope {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.4rem; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\000035}}
+.ui-widget #item-editor-scope .ui-widget #item-editor-scope {
+  font-size: 1.4rem; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\000036}}
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.4rem; }
+
+/* @todo end tmp solution*/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/inc\/_widgets\.scss}line{font-family:\000032}}
+.tao-scope .item-editor-widget-box {
+  border: 1px dashed transparent; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/inc\/_widgets\.scss}line{font-family:\000036}}
+  .tao-scope .item-editor-widget-box.active-widget-box {
+    border-color: #3e7da7; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/inc\/_widgets\.scss}line{font-family:\000038}}
+    .tao-scope .item-editor-widget-box.active-widget-box .active-block {
+      border-color: #3e7da7; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\0000316}}
+.tao-scope [class*=" col-"], .tao-scope [class^="col-"] {
+  border: 1px #eee dotted;
+  padding: 6px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\0000322}}
+.tao-scope .font-selector optgroup {
+  font-style: normal;
+  line-height: 1.5;
+  font-weight: normal;
+  font-size: 1.4rem;
+  color: #6f6359;
+  padding: 2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\0000330}}
+.tao-scope .font-selector option {
+  font-size: 1.2rem;
+  color: #222222; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\0000336}}
+.tao-scope #item-editor-widget-bar {
+  display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\0000340}}
+.tao-scope #item-editor-toolbar {
+  position: relative;
+  color: black;
+  background: #dcdee1;
+  overflow: hidden;
+  padding-left: 180px;
+  height: 50px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\0000347}}
+  .tao-scope #item-editor-toolbar #item-editor-logo {
+    text-indent: -1000px;
+    overflow: hidden;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAAA8CAYAAACuNrLFAAAcB0lEQVR42u1dB1iUx9Zme1+20HvvvReVJr03xY7YDUqw994LRsSCHRVFpKhgAZYmzYIl0dw/Nya5ydU/pvdobizzn7Oy/LCsRnPNDfHuPM88LN/MN9+3c945dc6shoa6/EeKjrZUc8r4UTnF+7ZdklUd+7nu9FFSX11yv6J4962Fs6fnuTk7OKln6TUtMREhceVHCm+31paThjPHCRJfBrULBKSlpowAKO4vnpuTr60l1VTP2GtUxo4cMvNiwynSdK5UTnAEQUf9SXIBiN4uq5RXBAEAgFxsPE2OF+24YWpsaKSeudegDEmOG4HER+Liym+trXi0Zd3SsuSE6Aw3F8eAiLBBcQtmZefVnir+oqWmnMBf0gaAKN6X3y7SFHLUM9iPCoNBp8THDE5dtXj2kXXL55cMS0sczeGwGc/qb2pipF9z8sinjUD4Lrb/dXRESJTKvsaGunu2rT/XWlchB8GlpioyfUrWEvWs96OydH7uzivN1fIV2iarIPi5YPPKMh6XS1PVf+a0iUtx9SPbv1BT/iRqcJCc+P4+nr5wX3Xlsb3/OLT7rauZI9In4XVY8awje/Pbms+fkAPmTFnRXX1dHYl65vtBiYseHIsER1Ze16W8Ye28cIaMykjJUu7PZrOoJQe3v41yH1c1cIzDeH2Av/cA+P8+gqjxbKlcD8AxFs2Zvh7bgwb4DUJRgGN3AHjiosIS1bPfD8qc3Cn5qLj1JP5Tha6CgEwvVe5vZWFmDordg3oATBsAICx4QAxe37t9Yy0CoucYqABeOF/2wMbKwgr7HN2/TQ6cdnjem1PHLVfPfv8AwFsd9af6AqBODoAS5f6ebs5+uLrrq48hgX+1NDc153I5rKoTBz5VmIE9K4qK+JjwFLx33fJ5ZTguWgfzZr6xRz37/aBEh4dEXgbFTFkEoFjISEsYrQIAviD35f2B1T+ys7G0wevlxYV/bzpb2gcAyF2CB/qHYZ+NqxZWIGdpl50k82e+sUs9+/2kLJg9LQ9BgITBisTftHrRYSaTSVHua21pZgIr/2cEAK7kpLjIIXh9Vs6klSjzZVX/T3wUEeAkehuUSQZYFfTSQzv/jvoBcpzJ40bOVc98Pypgt8csXzizEOq+xNiINBaLRXtW3yN7t15uPncCLQCyPW/VGbzG5XCY61csOIIsH5U8/AvWwG3gGG7YnpIQndZWV/kUGACcgYE+A9Wz/hct4Peffgk8e09XeSUZNzpjsqIt0M/bLzUxZnJkWFCSRCwSyBVHSzOz6rKDHzeePU7QFDy6v6ATOAJNPZP9tDja2zgAS9/4xsQxi4wM9XWU26USMQ9Y+83m83I/P2mpLX+cMzVrkaZQwFbuGzLIP/hkyb4PkPBPlcLTKDZS1LPcT4u1pblFDbhvUSfovFBNjh4oaBcKBX28guD08QOl7weFrx91B3QAgVOpcPyYYfOmTR67eu/2DRfQRaxQDnHMZQtmbFXPcj8uk7JGTrsMSqBCkUOb3dvD1V9V3+T4qBQFF8C+qOChSEDNXx4U6mrD1Y8iY9mC3Hw2i0VRz/IfW5gQpZsKylktuGXrJ2QOnwmsmfuiNwN7TkNtHlc2EhTs9gcKU0+5ONhZO4J377ECAHgPav7o8UNzD7V9BAJ4Dt9N6PIFqMsfXNYum1OKZhwSAGSz3KTb9dbaOqGAz3qR+9HVu2bZ3EJY2UjYnyeOHZHzrL5gKVD2FmxsRMCg5i87fewbuPfQtk0rKzauWlQyffLYlaFBAaE8Hpf5XMQy6Qw6nfbqOUOUn012VqRDZ3yg7Yr/BuKPzEgdotDOlf36IJenvOg4dDqdArqAKWzg+M2ADSiEommTMpcAe9/p5+3h8zLvi+AozF8nO7a/4JOiwi2XhqUnjnq1Xi47+v1IOxqJsqP/wmNSLJWa0QwRIpBfFwCsWDRzJ9rYygBAubx2+bzSlx3P093Ze9umFXXZkzLnK7eB3c8Af8Fw8PJF/dY4LAqVLqHShRwKtXuuIXwcD+/1GF3DTXKfQhlwqzMELI9X5yDyNmMVxjpz7wdYsk/SqZRemqyBJi0mwZn7yNWQ+doEJRbPmZ6nKrCDoFi9dM5hRT8qlUoBvYADK536vPEO7MqTXW05Szqherg6ufVsmzB2eM7b7TXkassZEhsZGv9cvYItGdYmdSYTubqzFNdOHN51GZXEnu+JsQQQO18bGxnov5IJoVA0qFwmVUpTIj4WS23GuDQPHvEwYb31ugAgZKB/MG69wkCNYlJRQUM9AJSwVOyjq6MtyVu7pKT6xMEvgP3WQHTP7FnjzZsxdfP1tvNyj56+no52zzaI5i1652ItuQEgSE+OHfa89xrL0Z1zS8udTOfqy0WxoYGeIZiachNSGaztT2MHwX/4ZNnoMuamugMAjFl5r5MeMCN7wpIW5AL1wFrrK+Xm1+xZ2esU7cuWzs7HVY27edAu375l9clnjYVRPl8v9wBwDJkrxwWkBrrcCZMzc1OHJGbRGYxnKnApmUPTy5MyPrzItyPTRSar5PdKJcJTJw/faTjbO3ooA0A0NZ567O7h4vJKJkObT/M1ldDHa/FpQYprAjbV2khEj/U1Z51OdOWRQEv2eUMRPcVYTB8FNYNBo/QymagUDRq0x7obs3Z7mbKqgWPsN5HQ04F59uEqbAZF10xKHy/lUeV2M4dBkQLQZnqasio8TVjHLLXpWXBft0YsZFPNnQyZq6H9FI5rIKL/pjwtX7TKP0tDsG4536RyBd/kxHiu7hxjGsuwZ580P7/k5hlz7h3Myalz8/d0MaTRpdPZumtXsA3Kq8ZP/ryhyyvXAFZC2dHd78dr6ibN4+jvXM41OrmAZ7QnliVOZVOojC4lT1BxdM9t4BonFOPH2NpH74xKbJjL1Ns1myI9NI9rsCOYpTm4jw7m6JRyZXs+aQxNIg0ca3LEPehWtFBnWARNkHZ40uSrbfD8OkUU8nwpkQEgzi5c+OVSifmupfAuS/nGB5PZ0tFCKk2gai5EVDo/niUZPYApDMf/Qc8QTeTqzV/JNzk1n2+Ur+FnwS5M8+QTHzN2peImZwPmxmFefJLgwiXRjlwSD3/TgBN01Z9EHKpx9wpgUnQBIDXJbjySAu3xLjyi+DzQii2D9l5aso6AFpIOz/M1Zx+Fz54w/qcoZrB/itvTe33NWMewr6mUPhze4b6iHdsQkPZ6jHmqvuzJA0Wi90ZOL2nkWZMbWm7kstRVXt+GzzKJ408xLHGaom8kTRh5nWtHZjJ1dthSmFY1Ivsvbmq7k+s8e9IUlvx964XqR80NwCVK9pPagXGP2wX2T9pFjqRV34N0gKy+CuPuEFrWiTUoAk2JmI3Bnzmzs/MdKGyHTQKzMxe13cg1sQu5JHGRv8M1eIcOqQuZyTdaZ2Zhqi2RiFG51gAiHmqnmZNavg2pkTqRJk178rbUjbwD910QO31xeMOqutbGU6SluYrUFRWSWv8o0si1IVeh/SKMh+Ne1XIlpWLbD/wYgsA+Lms61/IGiJa9mtYdpjSW/nGR7c2b8P87UM9JHP4uVwKTYGJh9XUDALhBoLUOIxsI2JkABB1kzW4EfWA8XMuBOplFp/CxH3ACdpA1pw2JA39b9YS0EC6LYqAtoPkNAOKj+PAzZx9T4jjBCKxwe87nAKwfwuw4N4FbDNXTpA+Ad9iLYItz5j70ARAAsR8HWLDPAHeJhJUfDu9Tn/C0/QfgDL3ksoBGZxzRc5bVM8zJaa7ld5N5+gud6Dx3ZzrPcw7fcHOz1PmXCJYooRsALFEUTmCRyLr1lNj+3WqJ/afDONpTI+nCYYFCrYFjxg1/Y9+WNRdk3hGkiW5Oys29b8nyNjxoPLafVK5c9nEBz/R8p8iJrBOayRVHKpiFcsWPo5vzP9oeZLemZesQtlamI53nZk9lu+RSJasbBHakWeT4uDFv479OlO7/m0RbKhhq6zj+6oqVROYRRmRca1LhM/ifmVKTaSPZWjlDmZJMKZvL9vL38pk1avj8evuBvzYDlygV2b6XwJZkWNM59kFMYeRuTaumywCCOonjd64MXi9F1I7OsWySOj05Iba9XSyyaYbPDyZx9RbCXKSHs0TxKgGgKG7GrKMpz9EBHPSZC7qI3w6g6LWNGf4XAnFv44oFQHn0BAASGSuIi8MAol4OEABbG7bhfY4wfs82PotqFOXI/SYJ2kCM9NqIkcXRndUmdCAXTXzvr08b0SeMak5jG9E0KNSeAGiFlXwBKgDgthmN1Wcv/iSm9tzLmo5kr8Ci2UAg5G/ften8lbZzZHrulEUJgwYktnuEk2ah/SMnOrdbHouBxcLERjIplO5IHovPZSQlx0RX2AfcQIDKUkeRG9ebSOiggEi5srjwzUU14cn323m2ZKae1XqVegtNa00HvEul2P4jZXHGo9AYhZqWMgTBHk2rWmUA1EucfmmUAHeROv0IXMKvjxn4AgDoYwWAU4o92I7zPhIKzMUIVS9tr89cngrsG2R8bm8OwCNAyM85SuIBi5MBcw2yehAr7arGhOv12A79limuge3MKBHZvlvHMCN3F2/a+CK6DwKgDThACwAAZGSScrsmhcapENl9iH0GMYWhci4D7mJrWytz/Bw3JGFI0+Rpjzq4tmQ0R2fa854VHhEScfX9DlKbM+OzWooJkflGPdmycflxTU1hty61UdO86hoQMJur38fk1qYypNVih8+QY2VwtCepeoYPQzAAuBzBClzAoycAGgAA+D2mgOxX6Qf4PQAQc6muuFIj7Dn3eCyKGFYyjUmnsBQV+8AqHYX3u5uwdigDINKBewcUQp4KrjIz5anoaFL1RYFrnMB2F0NmN6Ht6RzHBonjkxquFXl45R3/FwXAJZgUYI33hBSaULkdJxE5RIXY7q4BjSkSUGl0Pjhr5EDQoMq51lhd8zdQF1iAypQqC4FCZYJO4JhlYDlDNnrCzzKXkG8aQcYXiW3eYdLovayC9QKzKpTn2V1mYK+oIkMQjD6CWonjL5Y0toWqZwEXYMIieP8KgAgAObUnAGD1PwQd6Ik1nW33ygCAWn8CrP4YJ+7DaCful/D3K6X6JcjqH9M8+MTblFWkAgB3AQB8FQCY9bIAgBUa3gIKmkzP/Xvyzfd6Lw4AV3JUZHMXtPk+QAQZGY+TXiNx/BXqlzD5XylqndTp62qBzaenWRafobK5WmC6u+e9elSG7jSu/moETye0XxQ7kTKm6Z0TfKu7uEIPaFrfpKEH5gUBkMqWjkCwlovt7gBYec/6TluFFjJUCHN5Bht6AUDq9BC+w0MTGsvilQEAzMF4ZP8RDtxvnQ2Z24Alb4War1Tfwjbom/xHAiCIqRndInIg9Yae35Lvf9J+FQCIZomTUGsH/eCbXL7htmyO3paJFPFqqKsm06WbVpk4Hd3nF3ZhBs9wWxRT1L1/35ch8K+WONxDYBwR2dyC1ZhjS2XaykPDbOlIXKEvCwBQJkfiuwIAPgEAPDNqmSc0r+kCwOZnAMDy9wJgi3IbKHY+SEgAwFdASOlL+B1eOQDcgV03gZJTI7AlT/72geurAIAnlePdInZEAHwh0aCJ5Cx/4qip2bmTF+LnBQtzt3V21hMXN6futG4+6A1lYru/IZHn8Y26iRAaNmjw1l0bqxa6+a1rFdiTgyKbm3TKiwMAbfh2AONZicOPRjSmocoIJYVKAy3/Fj57HEc391UDIF+FQ0cTiPi/yAXAkZT2ZwIAgyinxfZ3ahim5PNNu+e8EACYokhkq6oAYGNrZbr8zam760y9SSuIllAN9uDw2MEJ6Nd/p6MWgzELIIsnFIJHB8BjJ+6eSwY/AAl1RuzwpT6V2b0opk4YPfNip4xsjUo4WA8mZYPH4Cfjx2TM7AUAvukzAWBAZRqAzf4djh3HkmSo+j7OdK4raPuPUW/x7eEP+LcAAJ69nTjZ0KdM1UOhfQtq5KG2nFvP4gLgJaT+0QCQB3n4xtvaNB1Ip0Pop5umTO8j6wxpTF0w0bpz79N0TIZcVAEAiNzyK4/tuXXpYg2pGzqGNDItyX6WSXty0MAkWdPJXy6DGZiRntgdNqb3MC0DmMIQFBtVYvvPdWiMXhYObBXXW6Vptr8Z3L0NXhGwkeT4/4IzSP794xKjE4tdB71/Ecy8RXxjlckg6wRmRbi6QaxcQ++ecvsGgdkxdDgBF7gE34f6SgCAzh8kMHjrfgJHTCxo90Ipn+bO7HIEQfhYB0TAbewTYsu5gW5aIKoEfQAiLtXRzZhZ4NnDAvgjAWBKZxuW8yw/aWBbkVKB1QfxbGmqLpWpawg2cwq4Ss+DIreArb9NW0+HvXb9kqKa1Svvo+Olzsr/8Zi0xPGKcSBeP0geLUQf/LF9pNYmgLQC0Q4KrS4tC4tclxUbnanNZAttqWzH+Tyj7TNo2usS46PSThzfdzPJ0zOqimf1WaPQjhR6BtWNT0+eLqUy+P403sBCjmkzcpxaEFNN4Fxas3TuPnweJH/kXbvWQBqm5RIZ+AiAzX8dwtQMQX8CijawJOT+FVMNuvFpgc0dtPXB5m8Gs88fOJ/Uns51WCMwPYxgBgXzEehDocp+gOcCwMOQUhhrRyGu+pQ+AGBQNTT9TTRuRdpQSLg15Umwhca/om0pRIenEd5t6tA17HyNNW5EwfUoWyoJsdB4AP1+jIB7YuyoBNoug2+/20kk5WqE4BihVpS7LLpGHwDYalNmx9lTiJcRRSUA3A0oZfHQ7qhL2aTcVjx3ifsVt8j366gmpIVnQ6o4Fo/OcCwed4CD5RzL/FE2R3dp4bb1FZcu1RDZ6lWkVsOIyAw9yRXYGZScFCNP3oDInzX43X+WRwsh/l63p+BfJXrOn7SAB66Obv7kOMXwq1Ncyx+awat3BRxPeRpaJycPS5vZAa5av0AfzyyKKPcKrMQr4ApuN/N7VCNy+Ok6sHYw0d4bydEe3y5xeVip7XSbAfFmqZZEBCnkX8rjDkf3khprf9IMbt4OLdcntWKHX5tYlo9iTSxjA4MCwjz9vbxCpPp+xWyzWzfAZd0Cz69kmz+UgenbDt8VPn83iMJJ7eOLobItm7nWD+u4Vo9MqEyrPhOaEOYTPzLWd2N8qLdK2TLAz9M4K8EvP2dIwBWoVyck+R0ODfRy7OWE8PLgpEb4jJmS4l8BfW5gv4nJfkeSBvukQVuvbdAD/T3NRsT4rh0a5TvDx9uzzzaoqCDvgFGxfnmJYT6Zqt4nIdRnyKg4vy0xwd4qnU/kpwfC9lnLppzziz3dGZx+41JwenvxwLjNaa4+FklpiV4XMLiCq3vfDlI3ZhKpy36TNFcfJ8X7C1oVYyyd9+Y42HzxBe7o3blz4wpfJwf2HDv3MRVuwZWN7oNvNLgP7ixxDTo8zc4tKSLQL9zX19NbR1va7UuIZ0vS13OMK4u07N4uMnK5mEwXZYKdzoHVzB7H1V00lK2VLQ/UiDS5kAb+ESaQyCDQ01JygBwNiLi2jW3csktg0VoTn/Ft86Hdj9obq+R7B4uLC6/FB/gFDdHgj6tyDTt/PSzj7fbgtKa9A2KWJXj5Gavc8eXlKy4MjFmyIzB6Sainj1jjv7nc/fj2iPMVRU8ja2cgzg6h4Lq6csVmzTuw2aJbF4BrQkjheu52r9NVxRnNACjM8IEM4F6RPsgVkB7eu7XtdHnRnYHBgc+M3acnxw2D3T4/45bxo4d3dppZmRnI9YKY8IQLFyAf8Vxpr2zkyhMHbrM4LJGGurx8+edH7w06V17UZ4NFV+142fFgI8lS3M6Nmz5GD08b17MNsn0TboDFcLX1HJ4PcPB541iYmxp6e7p58vm8bhu/IG9VNRJc+T1x70JcVOhYNTV/ZwEA1D0DAKNfdizgGKL9OzZvn5E9cQPsKOYqcQAtCBG3ni0v+jwsODD8Zcc+un9bZ9M51ZnE40YNWaCm5O8sZ8sO6taeKq6E+gjP44H6JdTslxkD+hsCMUbCPsLn7vDFM4RYLKZ80wjjOTuCVBVIIj2oau8icoCB/t7xakr+G+X7b7+mQLWE6gX1pRSjtKQYB1j593AfIe7WffONcc9djbFRYSklB7ZfL96b3xkXFZbwos/xcHNyhS1p32ESSQMmoMD2NNy3uLdgQx26V9RU/JPKwtnTClBhk28XA8KcrzzymY62lkoQwT5BJ0g8eYAp4lgBON9Danl+9sQxy9KTYsdA1pDt857l7enqs3vb+gZ4xjewQfUe5AzugH2nYjUV/sQCRMjHY9wUeX7nKw/fg9wQlVo5rPgRHQ2neu0+xu3n8nQwuA7m30PYddzwvB2+eDydni7uIBPx1bPfD4qzo50N2O7/xN3CuL18yvhRM1T1s7e1tik9tPNWY9eZQE+PhC2XZwijdo/nAHSljcsVuzm5U9aqZ/cvUiAnQxcTOYFFe6hqB2+i8enS/R8icRWHScHfHyGDqHbx3Jy9m1YvKoM8go+R8A1nnqaOX26qJkvm5WxWz24/LJCUSYVgjoWbi6OzUCjg/VZ/SDStUugJmHIG28WPmZsZ9/LU8Xk85uhhqVlgUXytOBsAOQqkkqkzhPtTgQRQs11vrTkHLPsR5uadKtn3cVL800OfVJWYyNAEhdxHeQ9u5QJFm5ODrUNqQnRWTERIOriO5V5GL3cXT+j7FXICdAmD2Lj2rNNH1eU/XESaQjYQpBMJisEhPN0LPX/Aup+A61elc2d73qpKZP2oIMK9NxVHwkDUby1cf3Kx63Coc+WHPgsZFCAfAzjBOEXCKv4NCvQLUs9+Pyjx0YNTVaWSo0wHQvdJF4NUcdGZsoP3cDVj/l7WqKFv4vXh6UmZigMlFGMgNwH2fw/UCR0el8MsL979ESqGaCFMGT9a7enrD2X8mGGzeppxioou2mMHCq73sfvtbBxg5T/GI2Ixq9fTzdkbr4PzRnah6wxgZa/e0NR4+V6EvHVLypFzILjWLJt7QD37/aCgpq+w+ZU5QMGmlX04gJ+PhzuaePITQs8cf2xjbeGA18GvfwXz+1UdETtuTIY813/DygX78V6sm9YsLlbPfj8oKL9LDm6/fFGuA5T0PMzpSUTooMEqzD9L6PdLj0Oi5Zk/q5fM2a2Kk+BxcIojYtEhhFwDTxZdNGe6+pSwfmQFmBRsXnUG5PND/G0fyAL+KDUxRuUmWAjnMsuO7Hqv6+AoAm7f7V3avzUA4zO0+7ENuQEeL7d1w/Lj2I4nheNZQ/KfjQGgDEtPHK2e+f7lB6DgEfCuzg6Owt84TWzBrOzNHV0/EwPE/tnXy80Tr8O9dpvXLC6tPLrnH8eLdrybM3XcEh6PK8+g2rx28RFk/V2ni39raW6q/s2gv2qxt7WyxqAPigxc6eDx+9AdHEiq+nLYbNrCWdPy2rp+QwCBs2xB7hb1LP7Fy4TMYdMudymP6NwBs/BH4AxbAvy8Bhga6JmCcmibnhybCcrh1fYu+x/jBOBkeldfT/0zMa9FgbDxGjTz8FCn+q4oYNePQv0K+sRj9BM0d1kG6DaGcO8nTva2juqZe43K0JT4MecqDn2OBMaooKwrKoj6AYIClUoEBQSJTqvl/mta8CfhsidlLjqyL/+6XNN/ui/g4anj++6C8lcaGhQY8We+3/8BdELgAWSKwp8AAAAASUVORK5CYII=) no-repeat center -3px;
+    width: 180px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 50px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\0000357}}
+  .tao-scope #item-editor-toolbar ul {
+    height: 50px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\0000359}}
+    .tao-scope #item-editor-toolbar ul [class^="icon-"], .tao-scope #item-editor-toolbar ul [class*=" icon-"] {
+      font-size: 20px;
+      font-size: 2rem;
+      color: #7d7269;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+      line-height: 1;
+      display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\0000365}}
+      .tao-scope #item-editor-toolbar ul [class^="icon-"]::-moz-selection, .tao-scope #item-editor-toolbar ul [class*=" icon-"]::-moz-selection {
+        text-shadow: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\0000366}}
+      .tao-scope #item-editor-toolbar ul [class^="icon-"]::selection, .tao-scope #item-editor-toolbar ul [class*=" icon-"]::selection {
+        text-shadow: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\0000368}}
+    .tao-scope #item-editor-toolbar ul li {
+      height: 50px;
+      float: left;
+      position: relative;
+      padding: 12px 20px 0 20px;
+      line-height: 1.2;
+      cursor: pointer;
+      text-align: center;
+      font-size: 12px;
+      font-size: 1.2rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\0000377}}
+      .tao-scope #item-editor-toolbar ul li a {
+        display: block;
+        text-decoration: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\0000381}}
+      .tao-scope #item-editor-toolbar ul li:hover, .tao-scope #item-editor-toolbar ul li .active {
+        color: white;
+        background: #ba122b; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\0000384}}
+        .tao-scope #item-editor-toolbar ul li:hover [class^="icon-"], .tao-scope #item-editor-toolbar ul li:hover [class*=" icon-"], .tao-scope #item-editor-toolbar ul li .active [class^="icon-"], .tao-scope #item-editor-toolbar ul li .active [class*=" icon-"] {
+          color: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\0000388}}
+      .tao-scope #item-editor-toolbar ul li#item-editor-status {
+        line-height: 53px;
+        cursor: default;
+        background: transparent; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\0000397}}
+.tao-scope #item-editor-wrapper {
+  margin: 0;
+  position: relative;
+  background: #f2f0ee; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003103}}
+.tao-scope .item-editor-sidebar {
+  background: #f2f0ee;
+  border-bottom: 1px white solid;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  width: 180px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003107}}
+  .tao-scope .item-editor-sidebar .tool-group h2 {
+    font-size: 13px;
+    font-size: 1.3rem;
+    border-top: 1px white solid;
+    font-weight: 400;
+    line-height: 30px;
+    padding: 0 6px;
+    letter-spacing: .06rem;
+    clear: left;
+    margin: 0;
+    color: black;
+    position: relative;
+    background: #dcdee1;
+    cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003120}}
+    .tao-scope .item-editor-sidebar .tool-group h2 span {
+      position: absolute;
+      top: 9px;
+      right: 9px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003126}}
+  .tao-scope .item-editor-sidebar .tool-group .panel {
+    padding: 8px 5px;
+    overflow: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003129}}
+    .tao-scope .item-editor-sidebar .tool-group .panel h3 {
+      padding: 0;
+      margin: 0;
+      font-size: 13px;
+      font-size: 1.3rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003134}}
+    .tao-scope .item-editor-sidebar .tool-group .panel .panel-row {
+      margin-bottom: 7px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003139}}
+  .tao-scope .item-editor-sidebar .inset {
+    margin-left: 6px;
+    margin-right: 6px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003148}}
+  .tao-scope .item-editor-sidebar:first-child {
+    right: auto;
+    left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003152}}
+  .tao-scope .item-editor-sidebar .tool-list {
+    margin-top: -3px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003154}}
+    .tao-scope .item-editor-sidebar .tool-list li {
+      width: 50%;
+      margin: 0 0%;
+      float: left;
+      padding: 9px 3px;
+      font-size: 12px;
+      font-size: 1.2rem;
+      border: 1px dotted transparent;
+      cursor: move; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003162}}
+      .tao-scope .item-editor-sidebar .tool-list li:hover {
+        background: rgba(255, 255, 255, 0.6);
+        border: 1px dotted #aaa; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003166}}
+      .tao-scope .item-editor-sidebar .tool-list li img {
+        display: block;
+        margin: 1px auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003174}}
+.tao-scope #item-editor-panel {
+  margin: 0 180px;
+  overflow: auto;
+  padding: 20px;
+  border: 1px white solid;
+  border-bottom: none;
+  background: #dcdee1;
+  position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003182}}
+  .tao-scope #item-editor-panel #item-editor-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003191}}
+  .tao-scope #item-editor-panel #item-width-indicator-box {
+    margin: auto;
+    display: none;
+    font-weight: 400;
+    padding: 0;
+    z-index: 10;
+    position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003198}}
+    .tao-scope #item-editor-panel #item-width-indicator-box div {
+      padding: 2px 0;
+      height: 40px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003201}}
+      .tao-scope #item-editor-panel #item-width-indicator-box div#item-width-devices {
+        width: 98%;
+        line-height: 40px;
+        margin: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003206}}
+      .tao-scope #item-editor-panel #item-width-indicator-box div#item-width-px {
+        border-top: 5px white solid;
+        font-size: 18px;
+        font-size: 1.8rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003211}}
+    .tao-scope #item-editor-panel #item-width-indicator-box span {
+      position: absolute;
+      top: 4px;
+      right: -20px;
+      font-size: 50px;
+      font-size: 5rem;
+      line-height: 1.61; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003217}}
+      .tao-scope #item-editor-panel #item-width-indicator-box span:first-child {
+        right: auto;
+        left: -20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003222}}
+    .tao-scope #item-editor-panel #item-width-indicator-box hr {
+      height: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003226}}
+  .tao-scope #item-editor-panel .item-editor-item {
+    background: white;
+    margin: auto;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0px 0px 8px #b7b1ac;
+    -moz-box-shadow: 0px 0px 8px #b7b1ac;
+    box-shadow: 0px 0px 8px #b7b1ac; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003234}}
+  .tao-scope #item-editor-panel h1 {
+    font-weight: 300;
+    margin: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003238}}
+  .tao-scope #item-editor-panel .item-editor-drop-area {
+    min-height: 300px;
+    padding-bottom: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003242}}
+  .tao-scope #item-editor-panel .item-editor-row {
+    min-height: 100px;
+    overflow: hidden;
+    border: 1px #3e7da7 dashed;
+    background: #f2f6f9; }
+
+@media print {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003253}}
+  #tabs {
+    margin: 0;
+    min-height: 0;
+    width: auto;
+    padding: 0;
+    border: none !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003261}}
+  .item-no-print {
+    display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003265}}
+  #item-editor-panel {
+    margin: 0 !important;
+    padding: 0 !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003268}}
+    #item-editor-panel .item-editor-item {
+      border-radius: 0;
+      box-shadow: none;
+      margin: 0 !important;
+      border: none !important;
+      width: 100% !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003274}}
+      #item-editor-panel .item-editor-item [class*="col-"] {
+        border-color: transparent; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/style\.scss}line{font-family:\00003279}}
+  .item-editor-row {
+    border: none !important;
+    background: none !important; } }

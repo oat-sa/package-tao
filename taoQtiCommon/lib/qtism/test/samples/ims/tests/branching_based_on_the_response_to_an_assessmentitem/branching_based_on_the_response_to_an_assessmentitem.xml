@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+	identifier="RTEST-13" title="Branching based on the response to an assessmentItem">
+	<!-- Provide support for branching. -->
+	<testPart navigationMode="linear" submissionMode="individual" identifier="RTEST-13-A">
+		<itemSessionControl showFeedback="true" maxAttempts="1" showSolution="false"/>
+		<assessmentSection identifier="sectionA" title="Section A" visible="true">
+			<rubricBlock view="candidate">
+				<p>Instructions for Section A</p>
+			</rubricBlock>
+			<assessmentItemRef identifier="item034" href="item034.xml">
+				<itemSessionControl maxAttempts="0"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="item160" href="item160.xml">
+				<!-- this item only if the the previous response was identifier Y -->
+				<preCondition>
+					<match>
+						<variable identifier="item034.RESPONSE"/>
+						<baseValue baseType="identifier">Y</baseValue>
+					</match>
+				</preCondition>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="item063" href="item063.xml">
+				<!-- this item only if the the previous response was identifier N -->
+				<preCondition>
+					<match>
+						<variable identifier="item034.RESPONSE"/>
+						<baseValue baseType="identifier">N</baseValue>
+					</match>
+				</preCondition>
+			</assessmentItemRef>
+		</assessmentSection>
+		<assessmentSection identifier="sectionB" title="Section B" visible="true">
+			<itemSessionControl maxAttempts="2"/>
+			<rubricBlock view="candidate">
+				<p>Instructions for Section B</p>
+			</rubricBlock>
+			<assessmentItemRef identifier="item347" href="item347.xml">
+				<!-- skip item653 if response is identifier "N" -->
+				<branchRule target="item656">
+					<match>
+						<variable identifier="item347.RESPONSE"/>
+						<baseValue baseType="identifier">N</baseValue>
+					</match>
+				</branchRule>
+				<!-- special targetItem means exit this section of the test -->
+				<branchRule target="EXIT_SECTION">
+					<not>
+						<match>
+							<variable identifier="item347.RESPONSE"/>
+							<baseValue baseType="identifier">Y</baseValue>
+						</match>
+					</not>
+				</branchRule>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="item653" href="item653.xml"/>
+			<assessmentItemRef identifier="item656" href="item656.xml"/>
+		</assessmentSection>
+	</testPart>
+</assessmentTest>

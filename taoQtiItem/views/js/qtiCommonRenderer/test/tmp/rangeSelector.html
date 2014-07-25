@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Range Selector Proto Test</title>
+        <link rel="stylesheet" type="text/css" href="/tao/views/js/lib/qunit/qunit.css">
+        <script type="text/javascript" src="/tao/views/js/lib/require.js"></script>
+        <script type="text/javascript" src="/tao/views/js/lib/qunit/qunit.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="/tao/views/css/tao-main-style.css" />
+        <link rel="stylesheet" type="text/css" href="/taoQtiItem/views/css/qti.css" />
+        <style>
+            .range-slider{width:300px;margin:auto;}
+        </style>
+        <script  type="text/javascript">
+            QUnit.config.autostart = false;
+            require(['/tao/ClientConfig/config'], function(){
+
+                var choiceCount = 7;
+
+                require(['jquery', 'jqueryui'], function($){
+                    var $slider = $("#slider-range"),
+                        $label = $("#selectableChoiceRange");
+
+                    $slider.slider({
+                        range : false,
+                        min : 0,
+                        max : choiceCount,
+                        step : 1,
+                        values : [0, choiceCount],
+                        slide : function(e, ui){
+                            if(ui.values[0] === ui.values[1]){
+                                $label.val('exactly ' + ui.values[1]);
+                            }else{
+                                $label.val(ui.values[0] + " to " + ui.values[1]);
+                            }
+                        }
+                    });
+
+                    //init display:
+                    $label.val($slider.slider("values", 0) + " to " + $slider.slider("values", 1));
+                });
+            });
+        </script>
+    </head>
+    <body class="tao-scope">
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+        <p>
+            <label for="selectableChoiceRange">Available Number of Selection:</label>
+            <input type="text" id="selectableChoiceRange" style="border:0; color:#f6931f; font-weight:bold;">
+        </p>
+        <div class="range-slider">
+            <div id="slider-range"></div>
+        </div>
+
+    </body>
+</html>

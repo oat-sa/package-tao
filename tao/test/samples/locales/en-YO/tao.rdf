@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAO.rdf">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#TAOObject">
+    <rdfs:label xml:lang="en-YO"><![CDATA[Object TAO]]></rdfs:label>
+    <rdfs:comment xml:lang="en-YO"><![CDATA[Related to e-testing any resource]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#List">
+    <rdfs:label xml:lang="en-YO"><![CDATA[List]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#level">
+    <rdfs:label xml:lang="en-YO"><![CDATA[level]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#Languages">
+    <rdfs:label xml:lang="en-YO"><![CDATA[Languages]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#TaoManagerRole">
+    <rdfs:label xml:lang="en-YO"><![CDATA[ManagerTao]]></rdfs:label>
+    <rdfs:comment xml:lang="en-YO"><![CDATA[Manager Tao]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#TaoSubjectRole">
+    <rdfs:label xml:lang="en-YO"><![CDATA[RoleSubjectTao]]></rdfs:label>
+    <rdfs:comment xml:lang="en-YO"><![CDATA[Role Subject Tao]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#WorkflowUserRole">
+    <rdfs:label xml:lang="en-YO"><![CDATA[Role User Workflow]]></rdfs:label>
+    <rdfs:comment xml:lang="en-YO"><![CDATA[Role User Workflow: to every assigned default role backend user, deletable not]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#WorkflowUser">
+    <rdfs:label xml:lang="en-YO"><![CDATA[UserWf]]></rdfs:label>
+    <rdfs:comment xml:lang="en-YO"><![CDATA[User Workflow: to group the workflow user class, deletable not]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#FrontOffice">
+    <rdfs:label xml:lang="en-YO"><![CDATA[OfficeFront]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#BackOffice">
+    <rdfs:label xml:lang="en-YO"><![CDATA[OfficeBack]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#TAOGUIOrder">
+    <rdfs:label xml:lang="en-YO"><![CDATA[OrderFieldForm]]></rdfs:label>
+    <rdfs:comment xml:lang="en-YO"><![CDATA[Within the class the order of the property]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

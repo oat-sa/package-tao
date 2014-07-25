@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.taotesting.com/xsd/qticompact_v1p0.xsd"
+	identifier="force_late_submission" title="Force Late Submission">
+	<testPart identifier="TP01" navigationMode="linear" submissionMode="individual">
+		<assessmentSection identifier="S01" fixed="false" title="Section 01" visible="true">
+			<assessmentItemRef identifier="Q01" href="Q01.xml" fixed="false" adaptive="false" timeDependent="false">
+				<timeLimits minTime="1" maxTime="3" allowLateSubmission="false"/>
+				<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+					<correctResponse>
+						<value>ChoiceA</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>0.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q02" href="Q02.xml" fixed="false" adaptive="false" timeDependent="false">
+				<timeLimits maxTime="3" allowLateSubmission="true"/>
+				<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+					<correctResponse>
+						<value>ChoiceB</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>0.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+			</assessmentItemRef>
+		</assessmentSection>
+	</testPart>
+	<testPart identifier="TP02" navigationMode="linear" submissionMode="individual">
+		<assessmentSection identifier="S02" fixed="false" title="Section 02" visible="true">
+			<assessmentItemRef identifier="Q03" href="Q03.xml" fixed="false" adaptive="false" timeDependent="false">
+				<timeLimits allowLateSubmission="false"/>
+				<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+					<correctResponse>
+						<value>ChoiceC</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>0.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+			</assessmentItemRef>
+		</assessmentSection>
+	</testPart>
+</assessmentTest>

@@ -1,0 +1,1802 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+**** BEGIN LICENSE BLOCK *****
+The contents of this file are subject to the Mozilla Public License
+Version 1.1 (the "License"); you may not use this file except in
+compliance with the License. You may obtain a copy of the License at
+http://www.mozilla.org/MPL/
+
+Software distributed under the License is distributed on an "AS IS"
+basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+License for the specific language governing rights and limitations
+under the License.
+
+The Original Code is XUL Schema.
+
+The Initial Developer of the Original Code is Mihailo Lalevic.
+Copyright (C) 2009, Mihailo Lalevic. All Rights Reserved.
+
+Contributor(s): 
+**** END LICENSE BLOCK ****
+-->
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+>
+
+  <xs:include schemaLocation="xulAttributeGroups.xsd" />
+
+  <xs:element name="rootElement" abstract="true" />
+
+  <xs:element name="window" substitutionGroup="rootElement" type="windowElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:window">
+        Describes the structure of a top-level window. It is the root node of a XUL document. It is by default a horizontally oriented box. As it is a box, all box attributes can be used. By default, the window will have a platform-specific frame around it.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="dialog" substitutionGroup="rootElement" type="dialogElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:dialog">
+        This element should be used in place of the window element for dialog boxes. The buttons attribute may be used to set which buttons should appear in the dialog box. These buttons will be placed in the correct locations for the user's platform.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="box" type="boxElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:box">
+        A container element which can contain any number of child elements. If the box has an orient attribute that is set to horizontal, the child elements are laid out from left to right in the order that they appear in the box. If orient is set to vertical, the child elements are laid out from top to bottom. Child elements do not overlap. The default orientation is horizontal.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="hbox" type="boxElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:hbox">
+        A container element which can contain any number of child elements. This is equivalent to the box element.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="vbox" type="boxElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:vbox">
+        A container element which can contain any number of child elements. This is equivalent to the box element, except it defaults to vertical orientation.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="bbox" type="boxElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:bbox">
+        A horizontal box that is baseline aligned. It is equivalent to using an hbox element with an align attribute set to baseline.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="stack" type="boxElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:stack">
+        An element that renders its children on top of each other. The first element is placed on the bottom and each successive child is placed above the previous. All elements are displayed at once. Child elements may also be placed at absolute positions within the stack.
+
+        The left and top attributes on a child of the stack specify the position of that element.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="deck" type="deckElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:deck">
+        An element that displays only one of its children at a time. The selectedIndex attribute determines which child is displayed.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="menubar" type="menubarElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:menubar">
+        A container that usually contains menu elements. On the Macintosh, the menubar is displayed along the top of the screen, and all non-menu related elements inside the menubar will be ignored.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+  <xs:element name="menulist" type="menulistElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:menulist">
+        An element that can be used for drop-down choice lists. The user may select one of the elements displayed in the menulist. The currently selected choice is displayed on the menulist element. To create the drop-down, put a menupopup inside the menulist containing the choices as menuitem elements. The command event may be used to execute code when the menulist selection changes.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+  <xs:element name="menu" type="menuElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:menu">
+        An element, much like a button, that is placed on a menubar. When the user clicks the menu element, the child menupopup of the menu will be displayed. This element is also used to create submenus.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="menupopup" type="menupopupElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:menupopup">
+        A container used to display the contents of a popup menu. When a menupopup is open, it floats above the window and may extend outside the window border. There are several ways in which a menupopup may be used:
+
+        1. It may be placed inside a menu, menulist, toolbarbutton, or a button with the type attribute set to "menu" to create a popup that will open when the menu or button is pressed.
+        2. It may be attached to any element using the popup attribute. When the element is clicked with the left mouse button, the menupopup will be displayed.
+        3. It may be attached to any element using the context attribute. When a context menu is opened, the menupopup will be displayed. A context menu may be opened by right-clicking the element, or by pressing the menu key on the keyboard.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="menuitem" type="menuitemElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:menuitem">
+        A single choice in a menupopup element. It acts much like a button but it is rendered on a menu.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+  <xs:element name="menuseparator" type="menuseparatorElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:menuseparator">
+        Used to create a separator between menu items. Typically drawn as a thin line.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="statusbar" type="statusbarElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:statusbar">
+        An element used to create a status bar, usually placed along the bottom of a window. It is virtually equivalent to a standard box, but may be rendered differently. Contains statusbarpanels.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="statusbarpanel" type="statusbarpanelElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:statusbarpanel">
+        An individual element of a statusbar. This is a special type of button which is drawn differently. Unlike normal buttons, a statusbarpanel can only have a label or an image but not both. This element is often used with a short label or icon to indicate status, for instance whether the user is online or whether there are new messages.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="spacer" type="simpleXulElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:spacer">
+        An element that takes up space but does not display anything. It is usually used to place spacing within a container. If you don't specify that the spacer has a size or is flexible, the spacer does not occupy any space. If you want a small gap, consider using a separator instead.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="separator" type="separatorElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:separator">
+        Creates a small separating gap between elements. This type of separator should be used to separate parts of a dialog. It doesn't draw a bar visually, but is just a small space. It is functionally equivalent to a spacer except it defaults to a small size (usually 1.5 ems).
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="splitter" type="splitterElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:splitter">
+        An element which should appear before or after an element inside a container. When the splitter is dragged, the sibling elements of the splitter are resized. If a grippy is placed inside the splitter, one sibling element of the splitter is collapsed when the grippy is clicked.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="grippy" type="simpleXulElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:grippy">
+        An element that may be used inside a splitter which can be used to collapse a sibling element of the splitter.
+
+        The Firefox browser does not support the grippy element.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="action" type="actionElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/action">
+        Used to specify the content that should be generated for each matching result from a query. The action should be contained within a query  or rule  element.
+
+        One descendant of the action body should have a uri attribute set to the member variable. This element and its descendants may use variables in place of attribute values. Variables are a question mark followed by a name. For a matched rule, each variable will be a reference to data within the datasource, determined from the query. If the same variable appears multiple times, it will have the same value in each place.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="template" type="templateElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/template">
+        Used to declare a template for rule-based construction of elements. Elements are constructed from a datasource. For more information see the rule  element.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="rule" type="ruleElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/rule">
+        A rule is used in a template . The children of the rule are used to declare the conditions in which the rule matches and the content that is generated. A rule may contain where , binding  and/or action  elements. A condition is defined used a where  element. For each result that matches all of the conditions, content within the rule's action  body is generated. The bindings  element is optional and may specify additional variable bindings to be used.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="where" type="whereElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/where">
+        New in Firefox 3.
+        Indicate a condition that must match for a template result to be used. If the condition is true, the corresponding action  body is generated; otherwise the result is ignored and no content is generated.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="binding" type="bindingElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/binding">
+        Should be contained within a rule element. A binding is used to bind a variable to a node. Like the triple  element in syntax, it can be used to bind a particular property of a matched node to a particular variable name. That name can then be used within the action of a rule.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="bindings" type="bindingsElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/bindings">
+        Depricated!
+        Used to specify a set of variable bindings for a rule. This element should be contained within a rule  element and contain one or more binding  elements. This element is optional in Firefox 3/Mozilla 1.9 and later; instead binding  elements may be placed directly inside the rule  element.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="triple" type="bindingElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/triple">
+        A triple can be included inside a rule 's conditions  element. It is used check for an assertion within a graph. If such an assertion exists, the rule may match, assuming that all the conditions match. If the assertion does not exist, the rule will not match. Both the subject  and object  attributes may be variables.
+
+        The subject of a triple is an RDF resource. In an RDF file this would usually be an RDF Description element. The predicate would be a child element or property. For example, for a bookmark resource, the name and URL would be predicates. They should be specified in their full URI form. The object is the value of the RDF property.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="conditions" type="conditionsElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/conditions">
+        Depricated!
+        This element should appear directly inside a rule  element and is used to define conditions for the rule. Within the conditions can be placed content , member  and triple  elements. These may have attributes whose value is a variable name beginning with a question mark (?). When evaluating the rule for a particular RDF resource, the variables are replaced with values from the resource. If all variables can be replaced, the rule matched.
+
+        This element is used with Firefox 2/Mozilla 1.8 and earlier instead of the query element.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="query" type="queryElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/query">
+        New in Firefox 3!
+        Used to specify the query for a template. The attributes and content of the query are dependent on the type of datasource being used.
+
+        For RDF datasources, the query should contain one content element as well as member and/or triple elements. For XML datasources, the query should have an expr attribute and may optionally contain assign elements. For SQL datasources, the query should contain an SQL statement as text.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="content" type="contentElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/content">
+        This element should appear inside a query  element. A rule's query should contain one and only one content element. The content element should also have a uri  attribute. It is used to bind a variable to a content node during matching. When using a tree with the flags  attribute set to dont-build-content, use a treeitem  element instead.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="member" type="memberElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/member">
+        Used within a rule's conditions  element to match elements that are containers or are contained within another element. Both the container and child attributes may use variables.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="assign" type="assignElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/assign">
+        New in Firefox 3!
+        For XML templates, specifies an additional variable to assign a value to.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="arrowscrollbox" type="arrowscrollboxElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/arrowscrollbox">
+        A box which provides scroll arrows along its edges for scolling through the contents of the box. The user only needs to hover the mouse over the arrows to scroll the box. This element is typically used for large popup menus.
+
+        Hovering the mouse over one of the (active) arrows triggers a scroll event.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="broadcaster" type="simpleXulElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/broadcaster">
+        A broadcaster is used when you want multiple elements to share one or more attribute values, or when you want elements to respond to a state change. Any elements that are observing the broadcaster will share the attributes placed on the broadcaster. For instance, if the broadcaster has a label  attribute, the observers will use that label. If the label changes, the labels of the observers will update automatically. An onbroadcast event will be sent to the observers when a change is made.
+
+        For menuitem s or button s that just want to have their disabled status set when the feature should be disabled, you should use a command element instead.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="broadcasterset" type="broadcastersetElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/broadcasterset">
+        A container element for broadcaster  elements. The broadcasterset and its descendants are not displayed.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="button" type="buttonElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/button">
+        A button that can be pressed by the user. Event handlers can be used to trap mouse, keyboard and other events. It is typically rendered as a grey outset rectangle. You can specify the label of the button using the label  attribute or by placing content inside the button.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="browser" type="browserElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/browser">
+        A frame which is expected to contain a view of a Web document. It is similar to an iframe  except that it holds a page history and contains additional methods to manipulate the currently displayed page.
+
+        Most of the properties and methods of the browser will rarely be used and can only be called from chrome URLs. Other URLs will need to use the document and history objects to change the displayed document.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="checkbox" type="checkboxElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/checkbox">
+        An element that can be turned on and off. This is most commonly rendered as a box when the element is off and a box with a check when the element is on. The user can switch the state of the check box by selecting it with the mouse. A label, specified with the label  attribute, may be added beside the check box.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="caption" type="captionElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/caption">
+        A header for a groupbox . It may contain either a text label, using the label  attribute, or child elements for a more complex caption.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="groupbox" type="groupboxElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/groupbox">
+        A box that draws a frame around it, intended to group a set of elements together. If a caption  element is placed inside the groupbox, it will be used as a caption which appears along the top of the groupbox.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="column" type="boxElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/column">
+        A single column in a columns  element. Each child of the column element is placed in each successive cell of the grid . The column with the most child elements determines the number of rows  in each column.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="columns" type="columnsElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/columns">
+        Defines the columns of a grid . Each child of a columns element should be a column  element.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="rows" type="rowsElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/rows">
+        Defines the rows of a grid . Each child of a rows element should be a row  element.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="row" type="boxElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/row">
+        A single row in a rows  element. Each child of the row element is placed in each successive cell of the grid . The row with the most child elements determines the number of columns  in each row.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="grid" type="gridElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/grid">
+        A grid is an element that contains both rows  and columns  elements. It is used to create a grid of elements. Both the rows and columns are displayed at once although only one will typically contain content, while the other may provide size information. Whichever is last in the grid is displayed on top.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="colorpicker" type="colorpickerElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/colorpicker">
+        A palette of colors from which a user may select by clicking on one of the grid cells.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="command" type="commandElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/command">
+        A command element can be used to invoke an operation that can come from multiple sources. For example, a clipboard paste operation can be invoked from the Edit menu, a context menu and by pressing a keyboard shortcut. You attach the code to the command using the oncommand attribute. It will be called no matter how it is invoked by the user. In addition, disabling the command will automatically disable the menu items and keyboard shortcuts.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="commandset" type="commandsetElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/commandset">
+        This element is not displayed and serves as a container for command  elements.
+
+        In addition, this element can serve as a command updater, which is used to update the enabled state of one or more commands when certain events occur. A common use of the command updater is to update the cut, copy, and paste menu items as the user selects text.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="datepicker" type="datepickerElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/datepicker">
+        A datepicker allows the user to enter a date. Three types are available, which can be specified using the type attribute.
+
+        * normal - a datepicker with three fields for entering the year, month and date.
+        * grid - a datepicker with a calendar grid for selecting a date.
+        * popup - a normal datepicker with three fields, but with an additional dropdown button to display a popup grid.
+
+        There are several ways to set the selected day. In XUL, the value attribute may be set to a value of the form YYYY-MM-DD to initialize the datepicker to a certain date. If not specified, the datepicker defaults to the current day.
+
+        To change the selected date, the value property may be used to set a new value in the form YYYY-MM-DD. The dateValue property may be used to retrieve and set the date using a Date object. In addition, the date, month and year properties may be used to retrieve and modify each component of the date separately.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+  <xs:element name="description" type="descriptionElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/description">
+        This element is used to create a block of text. The text can be set either with the value  attribute or by placing text inside the open and close description tags. The value attribute is used to set text that appears in a single line. If text appears as a child of the description, it will wrap to multiple lines. It may contain arbitrary markup, which can be styled as needed.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="dialogheader" type="dialogheaderElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/dialogheader">
+        A heading row for a dialog box. This element should be placed inside a dialog  element. The header may have a title and a description.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="dropmarker" type="simpleXulElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/dropmarker">
+        A dropmarker is a button with an arrow which will reveal more details when pressed. A dropmarker is not indended to be used as a separate element, but as part of another element. For instance the menulist  and the popup type of datepicker  use a dropmarker, that when pressed, will reveal a popup menu.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="editor" type="editorElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/editor">
+        A frame which is expected to contain an editable document. Set the value of the editortype  attribute to html to create an editor document. Mozilla provides two types of editors, the HTML editor and the plaintext editor. The editor does not provide any editing user interface; you would supply that yourself. However, text editing, image resizing, and table row and cell editing capabilities are provided. If you do not set the editortype  attribute on an editor, you must enable editing using the makeEditable  method.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="iframe" type="iframeElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/iframe">
+        An inner frame that works much like the HTML iframe element. The src  attribute can be used to specify the content of the frame. This content is a separate document. The children of the iframe are ignored.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="image" type="imageElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/image">
+        An element that displays an image, much like the HTML img element. The src  attribute can be used to specify the URL of the image.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="keyset" type="keysetElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/keyset">
+        A container element for key  elements. The keyset and its descendants are not displayed.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="key" type="keyElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/keyset">
+        A container element for key  elements. The keyset and its descendants are not displayed.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="label" type="labelElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/label">
+        This element is used to provide a label for a control element. If the user clicks the label, it will move the focus to the associated control, specified with the control  attribute.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="listbox" type="listboxElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/listbox">
+        This element is used to create a list of items where one or more of the items may be selected. A listbox may contain multiple columns. There are numerous methods which allow the items in the listbox to be retrieved and modified.
+
+        You may specify the number of rows to display in the list using the rows attribute. Additional rows can be viewed using a scroll bar. A listbox is expected to contain listitem elements. All the rows in the listbox are the same height, which is the height of the tallest item in the list. If you wish to create a list with variable height rows, or with non-text content, you should instead use the richlistbox element.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+ 
+  <xs:element name="listitem" type="listitemElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/listitem">
+        A single row in a listbox . The text of the listitem is specified either using listcell  elements, or by placing a label attribute directly on the listitem element. By default it contains a single listcell element of type and class approprate to that of the listitem.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="listcell" type="listcellElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/listcell">
+        A single cell of a listbox . By default it only contains text but iconic and checkbox listcells are also available.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="listheader" type="listheaderElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/listheader">
+        A header for a single column in a listbox .
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="listhead" type="listheadElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/listhead">
+        A header row of a listbox . It is usual to place listheader  elements inside the listhead, one for each column.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="listcols" type="listcolsElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/listcols">
+        A container for the columns of a listbox , each of which are created with the listcol  element. There should be only one listcols element in a list box. If there is no listcols element, the list box has a single column.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="listcol" type="simpleXulElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/listcol">
+        A column in a listbox . You can make some columns flexible and other columns non-flexible.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+  <xs:element name="notificationbox" type="notificationboxElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/notificationbox">
+        notificationbox  is used to display notifications above an element. Typically the element will be a browser, but any element may be used. The notification  element is used for each notification, and will be created automatically for each item. Each notification will slide in and out as needed. This element is used, for example, to implement the yellow information bar in various Firefox windows.
+
+        The notification box is a vertical box which may have children. The notifications appear at the top of the box. The notifications may be placed at the bottom by setting the dir attribute to reverse.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+  <xs:element name="notification" type="notificationElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/notification">
+        The notification is used to display an informative message. It will normally be used as part of a notificationbox. The box includes a button which the user can use to close the box.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+  <xs:element name="observes" type="observesElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/observes">
+        The observes element can be used to listen to a broadcaster  and receive events and attributes from it. The observes element should be placed inside the element that wants to observe the broadcaster. When an observed attribute is modified on the broadcaster, the attribute's value will be forwarded and set on the parent element of the observer.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="overlay" type="overlayElementType" substitutionGroup="rootElement">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/overlay">
+        An overlay is used when it is desirable for a block of content to be shared between several different windows. It can also be used to append or alter content in an existing window. An overlay is defined in a separate XUL file. Overlays are applied while the XUL is being loaded.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="page" type="boxElementType" substitutionGroup="rootElement">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/page">
+        Similar to a window , except it should be used for XUL files that are to be loaded into an iframe .
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+  <xs:element name="panel" type="panelElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/panel">
+        New in Firefox 3!
+        A panel is a popup window that may contain any type of content. It does not have any window decorations. When open, it floats above the window and may extend outside the border of the main window. Typically, it will be attached to an element using the popup attribute so that when the element is clicked with the left mouse button, the panel will be displayed. A panel may also be open via a script using the openPopup  method.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="param" type="paramElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/param">
+        New in Firefox 3!
+        For SQL templates, used to bind values to parameters specified within an SQL statement. The value to bind should be text as a child of the param element.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="popup" type="menupopupElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/popup">
+        The popup element is equivalent to the menupopup  element which should be used instead. See the documentation on the menupopup  element for more information.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="popupset" type="popupsetElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/popupset">
+        A container for menupopup , panel  and tooltip  elements. This element is optional and should only be used by a application to provide a container for overlays to include popups.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="progressmeter" type="progressmeterElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/progressmeter">
+        A meter which can be used to display the progress of a lengthy operation. It is drawn as a bar that is filled as the operation completes. In addition, an indeterminate progressmeter may be created by setting the mode  attribute to undetermined. This is used when the length of time to complete an operation is not known beforehand.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="queryset" type="querysetElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/queryset">
+        A container for query  elements when more than one query is used.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="radio" type="radioElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/radio">
+        An element that can be turned on and off. Radio buttons are almost always grouped together in groups. Only one radio button within the same radiogroup  may be selected at a time. The user can switch which radio button is turned on by selecting it with the mouse or keyboard. Other radio buttons in the same group are turned off. A label, specified with the label  attribute may be added beside the radio button.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+  <xs:element name="radiogroup" type="radiogroupElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/radiogroup">
+        A group of radio buttons. Only one radio button inside the group can be selected at a time. The radio  buttons may either direct children of the radiogroup or descendants. Place the radiogroup inside a groupbox  if you would like a border or caption  for the group. The radiogroup defaults to vertical orientation.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="resizer" type="resizerElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/resizer">
+        An element used for window resizing. If you place a custom resizing button inside the resizer, the user will be able to resize the window by dragging it. The resizer will send a command event after the resize is complete.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+  <xs:element name="richlistbox" type="richlistboxElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/richlistbox">
+        This element is used to create a list of listitems (richlistitem s), similar to a listbox , but is designed to be used when the items do not contain simple text content.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="richlistitem" type="richlistitemElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/richlistitem">
+        An individual item in a richlistbox .
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="preference" type="preferenceElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/preference">
+        Declares a preference that may adjusted in a prefpane . This element must be placed inside a preferences  element. Each preference element corresponds to a preference which is stored in the user's preferences file. You can connect a user interface element such as a checkbox to a preference element using the user interface element's preference  attribute.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="preferences" type="preferencesElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/preferences">
+        Used to hold a set of preference  elements.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="prefpane" type="prefpaneElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/prefpane">
+        A single preference panel in a prefwindow . A prefpane is made up of two parts, the preferences descriptions, which specify the set of preferences that will be modified, and the user interface for adjusting those preferences. The former is specified using a preferences  element while the latter may be specified using other XUL elements.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="prefwindow" type="prefwindowElementType" substitutionGroup="rootElement">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/prefwindow">
+        A specialized window used for preference dialogs. This element should be used in place of the window  tag and should contain one or more prefpane  elements. A row of buttons appears across the preference dialog, one for each prefpane. Each pane will usually group together a set of related preferences. If there is only one prefpane , the navigation area will be hidden.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+  <xs:element name="scale" type="scaleElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/scale">
+        New in Firefox 3!
+        A scale (sometimes referred to as a "slider") allows the user to select a value from a range. A bar displayed either horizontally or vertically allows the user to select a value by dragging a thumb on the bar.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="script" type="scriptElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/script">
+        Much like the HTML script element, this is used to declare a script to be used by the XUL window. You should usually put scripts in a separate file pointed to by the src  attribute, but you may also place the script inline inside the opening and closing script tags.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+  <xs:element name="scrollbar" type="scrollbarElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/scrollbar">
+        When a container's contents which are larger that the size of the container, scroll bars may be placed at the side of the container to allow the user to scroll around in the container. The scroll bar may also be used independently when a numeric value or percentage needs to be selected by the user. The user can adjust the position of the scroll bar by clicking arrows on either end of the scroll bar or by dragging the scroll bar thumb around.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+  <xs:element name="scrollbox" type="boxElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/scrollbox">
+        A box that has additional functions that can be used to scroll the content. Note that a scrollbox doesn't cause scrollbars to be displayed. It is intended to be used when an application wants to be able to adjust the scroll position itself. If you just want scrollbars to appear, add style='overflow: auto;'. This may also be used with any other container element.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="scrollcorner" type="simpleXulElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/scrollcorner">
+        This element is used for the small box where the horizontal and vertical scrollbars meet.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="spinbuttons" type="simpleXulElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/spinbuttons">
+        New in Firefox 3!
+        Spin buttons are two arrows, one to increase a value and one to decrease a value. Spin buttons are not used as separate elements, but are used in combination with other elements to create a control that can be increased and decreased.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="stringbundle" type="stringbundleElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/stringbundle">
+        An element which can be used to load localized resources from property files. Stringbundles should be placed inside a stringbundleset  element.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="stringbundleset" type="stringbundlesetElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/stringbundleset">
+        A container for stringbundle  elements.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="tab" type="tabElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/tab">
+        A single tab which should be placed inside a tabs  element. The user may click a tab to bring the associated page of the tabbox  to the front.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+  <xs:element name="tabpanel" type="boxElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/tabpanel">
+        A individual panel in a tabpanels  element. This element is optional and you may just use any other container in place of it.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+  <xs:element name="tabpanels" type="tabpanelsElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/tabpanels">
+        A container to hold the set of pages in a tabbox . The tabpanels element should be placed in a tabbox . The children of the tabpanels element become the panels of the tabbox . Usually, the children are tabpanel  elements. By clicking the first tab, the first panel will be displayed. By clicking the second tab, the second panel will be displayed and so on.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+  <xs:element name="tabs" type="tabsElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/tabs">
+        A row of tabs. A tabs element should be placed inside a tabbox  and should contain tab  elements.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+  <xs:element name="tabbox" type="tabboxElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/tabbox">
+        A container used to display tabbed pages of elements to the user. The tabbox should contain two children, the first a tabs  element which contains the tab s and the second a tabpanels  element which contains the contents of the pages. This is a type of box that defaults to vertical orientation.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="tabbrowser" type="tabbrowserElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/tabbrowser">
+        Not in Firefox 3!
+        This element is used for holding a set of read-only views of Web documents. It is similar to the browser  element, except that multiple documents can be displayed, each in a separate tab. This element is implemented as a set of browser elements inside a tabbox .
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="textnode" type="textnodeElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/textnode">
+        Normally when substituting RDF resources in template rules, you place the RDF property name inside an attribute value preceded with rdf:. In the case of the textnode element, the entire node is replaced with text corresponding to the result of the value attribute.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+  <xs:element name="textbox" type="textboxElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/textbox">
+        An input field where the user can enter text. It is similar to the HTML input element. Only one line of text is displayed by default. The multiline  attribute can be specified to display a field with multiple rows.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="timepicker" type="timepickerElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:timepicker">
+        The timepicker is used to allow the user to enter a time. It contains three fields to enter the hour, minute and second. Arrow buttons next to the fields allow the values to be adjusted with the mouse. A fourth textbox appears for 12 hour clocks which allows selection of AM or PM.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="titlebar" type="titlebarElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:titlebar">
+        Used to represent a title bar. This element is used to create a custom titlebar by placing the contents as children inside the titlebar. When the titlebar is clicked and dragged, the window moves with it. Any elements inside the titlebar do not receive events. The titlebar will send a command event after the move is complete.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="toolbar" type="toolbarElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:toolbar">
+        A container which typically contains a row of buttons. It is a type of box that defaults to horizontal orientation. It can be collapsed with a grippy  when the toolbar is placed inside a toolbox . The toolbar should always have an id  attribute. Firefox supports toolbar customization, whereas the Mozilla browser does not.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="toolbarbutton" type="toolbarbuttonElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:toolbarbutton">
+        A button that appears on a toolbar . It is equivalent to a regular button  except that it may be rendered differently. Typically, it is expected to have an image.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="toolbargrippy" type="simpleXulElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:toolbargrippy">
+        The notch on the side of a toolbar  which can be used to collapse and expand it. This element is used internally by the toolbar and should only be used directly when modifying its theme. 
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="toolbaritem" type="boxElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:toolbaritem">
+        Firefox Only.
+        An item that appears on a toolbar . This element should wrap all items that are not buttons, which should instead be created using the toolbarbutton  element. The element is used, for example, to hold the location bar's textbox  in Firefox.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="toolbarpalette" type="toolbarpaletteElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:toolbarpalette">
+        Firefox Only.
+        The item is a palette of available toolbar  items. It is not displayed, but is used by the toolbar customization dialog to display the list of items. The children of the toolbarpalette should be the complete list of toolbarbutton s and toolbaritem s that can be added to the toolbar. Do not add the various spacing items, as those are added automatically.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="toolbarseparator" type="simpleXulElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:toolbarseparator">
+        Creates a separator between groups of toolbar items. It is functionally equivalent to a normal separator  but some themes may apply a different appearance.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="toolbarset" type="toolbarsetElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:toolbarset">
+        Firefox Only!
+        This element is used as a container for custom toolbars, which are added in the custom toolbar  dialog.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="toolbarspacer" type="simpleXulElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:toolbarspacer">
+        Firefox Only.
+        A space between toolbar  items.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="toolbarspring" type="simpleXulElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:toolbarspring">
+        A flexible space between toolbar  items.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="toolbox" type="toolboxElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:toolbox">
+        A container for toolbar s. It is a type of box but defaults to vertical orientation. If a toolbar  is placed inside a toolbox, a grippy  is displayed on its left or upper edge. The user may click the grippy  to collapse the toolbar . If multiple toolbars are placed in the same toolbox, they will all collapse into the same row. The Firefox browser does not have grippies so toolbars cannot be collapsed and expanded.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="tooltip" type="tooltipElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:tooltip">
+        This element is used for the tooltip popups. For text-only tooltips, this element doesn't need to be used; instead you may just add a tooltiptext  attribute to an element.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="wizard" substitutionGroup="rootElement" type="wizardElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:wizard">
+        This element is used to construct a step-by-step wizard found in some applications to guide users through a task. It is used for a window with several steps contained on several pages. This element provides the header and buttons along the bottom, and also handles navigation between the pages. Each page should be constructed using a wizardpage . The pages are displayed in the order that they are placed in the wizard, unless you use the next  and pageid attributes on the pages to change the sequence. The wizard will rendered in a manner suitable for the user's selected theme and platform. In newer versions of Mozilla, a statusbar  may be placed directly inside the wizard element which will be shared among all pages
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="wizardpage" type="wizardpageElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:wizardpage">
+        This element defines a page in a wizard . The content in the pages should be placed inside the wizardpage element.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="tree" type="treeElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:tree">
+        A container which can be used to hold a tabular or hierarchical set of rows of elements. The tree may contain any number of rows and any number of columns. Each row of the tree may contain child rows which are displayed indented from the parent. Unlike other elements, the data to display inside the tree is not specified using tags, but is determined from a view object. The view object implements the nsITreeView interface. The view is queried for the data to appear in the tree. There are several ways in which trees are used, as listed below. The second column lists the interfaces available via the tree's view  property. The third column indicates whether treeitem  element are used.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="treechildren" type="treechildrenElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:treechildren">
+        This element is the body of the tree . For content trees, the content will be placed inside this element. This element is also used to define container rows in the tree.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="treeitem" type="treeitemElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:treeitem">
+        A treeitem should be placed inside a treechildren  element and should contain treerow  elements. The treeitem can be clicked by the user to select the row of the tree. The treeitem contains a single row and all of what appear to the user as that row's descendants.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="treerow" type="treerowElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:treerow">
+        A single row in a tree . It should be placed inside a treeitem  element. Children of the treerow should be treecell  elements. If child rows are necessary, they should be placed in a treechildren  element inside the parent treeitem .
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="treecell" type="treecellElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:treecell">
+        A single cell in a tree . This element should be placed inside a treerow . You can set the text for the cell using the label  attribute.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="treecols" type="treecolsElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:treecols">
+        A group of treecol  elements. There should one and only one treecols  element in a tree .
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="treecol" type="treecolElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:treecol">
+        A column of a tree . It displays the column header and holds the size and other information about the column. You can also place splitter  elements between the columns to allow column resizing. You should always place an id  attribute on a treecol element to ensure that the column positioning is handled properly.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="treeseparator" type="treeseparatorElementType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:treeseparator">
+        Used to place a seperator row in a tree .
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <!-- element types -->
+
+  <xs:group name="boxElements">
+    <xs:choice>
+      <xs:element ref="box" />
+      <xs:element ref="vbox" />
+      <xs:element ref="hbox" />
+      <xs:element ref="scrollbox" />
+      <xs:element ref="stack" />
+      <xs:element ref="deck" />
+      <xs:element ref="tabpanel" />
+      <xs:element ref ="grid" />
+    </xs:choice>
+  </xs:group>
+
+  <xs:complexType name="windowElementType">
+    <xs:complexContent>
+      <xs:extension base="boxElementType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="statusbar" />
+        </xs:choice>
+        <xs:attributeGroup ref="windowElementAttributes" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="dialogElementType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="boxElementElementsOnlyGroup" />
+      <xs:element ref="dialogheader" />
+      <xs:element ref="statusbar" />
+    </xs:choice>
+    <xs:attributeGroup ref="dialogElementAttributes" />
+  </xs:complexType>
+
+  <xs:group name="boxElementElementsOnlyGroup">
+    <xs:choice>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="htmlElementsGroup" />
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="elementsForBox" />
+    </xs:choice>
+  </xs:group>
+
+  <xs:complexType name="boxElementType">
+    <xs:group minOccurs="0" maxOccurs="unbounded" ref="boxElementElementsOnlyGroup" />
+    <xs:attributeGroup ref="xulElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="actionElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="boxElementElementsOnlyGroup" />
+      <xs:element ref="treechildren" />
+      <xs:element ref="listitem" />
+      <xs:element ref="richlistitem" />
+    </xs:choice>
+    <xs:attributeGroup ref="xulElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="deckElementType">
+    <xs:complexContent>
+      <xs:extension base="boxElementType">
+        <xs:attributeGroup ref="deckElementAttributes" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="menuElementType">
+    <xs:group ref="menuElements" minOccurs="0" maxOccurs="unbounded" />
+    <xs:attributeGroup ref="menuElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="menubarElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="menu" minOccurs="0" maxOccurs="unbounded" />
+    </xs:choice>
+    <xs:attributeGroup ref="menubarElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="menulistElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="menu" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element ref="menupopup" />
+    </xs:choice>
+    <xs:attributeGroup ref="menulistElementAttributes" />
+  </xs:complexType>
+
+  <xs:group name="menuElements">
+    <xs:choice>
+      <xs:element ref="menu" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element ref="menuitem" />
+      <xs:element ref="menuseparator" />
+    </xs:choice>
+  </xs:group>
+  
+  <xs:complexType name="menupopupElementType">
+    <xs:group ref="menuElements" minOccurs="0" maxOccurs="unbounded" />
+    <xs:attributeGroup ref="menupopupElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="menuitemElementType">
+    <xs:attributeGroup ref="menuitemElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="menuseparatorElementType">
+    <xs:attributeGroup ref="menuseparatorElementAttributes" />
+  </xs:complexType>
+
+  <xs:group name="htmlElementsGroup">
+    <xs:choice>
+      <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/1999/xhtml" processContents="strict" />
+    </xs:choice>
+  </xs:group>
+
+  <xs:complexType name="statusbarElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="boxElementElementsOnlyGroup" />
+      <xs:element ref="statusbarpanel" />
+    </xs:choice>
+    <xs:attributeGroup ref="xulElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="statusbarpanelElementType">
+    <xs:attributeGroup ref="statusbarpanelElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="simpleXulElementType">
+    <xs:attributeGroup ref="xulElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="separatorElementType">
+    <xs:attributeGroup ref="separatorElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="splitterElementType">
+    <xs:sequence minOccurs="0" maxOccurs="1">
+      <xs:element ref="grippy" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attributeGroup ref="splitterElementAttributes" />
+  </xs:complexType>
+
+
+  <xs:complexType name="templateElementType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="boxElementElementsOnlyGroup" />
+      <xs:element ref="rule" />
+      <xs:element ref="queryset" />
+      <xs:element ref="query" />
+      <xs:element ref="action" />
+      <xs:element ref="textnode" />
+    </xs:choice>
+    <xs:attributeGroup ref="templateElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="ruleElementType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element ref="action" />
+      <xs:element ref="binding" />
+      <xs:element ref="where" />
+      <xs:element ref="bindings" />
+      <xs:element ref ="conditions" />
+      <xs:element ref="query" />
+    </xs:choice>
+    <xs:attributeGroup ref="ruleElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="whereElementType">
+    <xs:attributeGroup ref="whereElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="bindingElementType">
+    <xs:attributeGroup ref="tripleElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="bindingsElementType">
+    <xs:choice>
+      <xs:element ref="binding" />
+    </xs:choice>
+    <xs:attributeGroup ref="tripleElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="conditionsElementType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element ref="content" />
+      <xs:element ref="member" />
+      <xs:element ref="triple" />
+    </xs:choice>
+    <xs:attributeGroup ref="xulElementAttributes" />
+  </xs:complexType>
+
+
+  <xs:complexType name="queryElementType" mixed="true">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element ref="content" />
+      <xs:element ref="member" />
+      <xs:element ref="triple" />
+      <xs:element ref="assign" />
+      <xs:element ref="param" />
+    </xs:choice>
+    <xs:attributeGroup ref="queryElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="contentElementType">
+    <xs:attributeGroup ref="contentElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="memberElementType">
+    <xs:attributeGroup ref="memberElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="assignElementType">
+    <xs:attributeGroup ref="assignElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="arrowscrollboxElementType">
+    <xs:group minOccurs="0" maxOccurs="unbounded" ref="boxElementElementsOnlyGroup" />
+    <xs:attributeGroup ref="arrowscrollboxElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="broadcastersetElementType">
+    <xs:choice minOccurs="1" maxOccurs="unbounded">
+      <xs:element ref="broadcaster" />
+    </xs:choice>
+    <xs:attributeGroup ref="xulElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="buttonElementType">
+    <xs:group minOccurs="0" maxOccurs="unbounded" ref="boxElementElementsOnlyGroup" />
+    <xs:attributeGroup ref="buttonElementAttributes"/>
+  </xs:complexType>
+
+  <xs:complexType name="browserElementType">
+     <xs:attributeGroup ref="browserElementAttributes"/>
+  </xs:complexType>
+
+  <xs:complexType name="checkboxElementType">
+    <xs:attributeGroup ref="checkboxElementAttributes"/>
+  </xs:complexType>
+
+  <xs:complexType name="captionElementType">
+    <xs:group minOccurs="0" maxOccurs="unbounded" ref="boxElementElementsOnlyGroup" />
+    <xs:attributeGroup ref="captionElementAttributes"/>
+  </xs:complexType>
+
+  <xs:complexType name="groupboxElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="boxElementElementsOnlyGroup" />
+      <xs:element ref="caption" />
+    </xs:choice>
+    <xs:attributeGroup ref="groupboxElementAttributes"/>
+  </xs:complexType>
+
+  <xs:complexType name="columnsElementType">
+        <xs:choice maxOccurs="unbounded" minOccurs="1">
+          <xs:element ref="column" />
+        </xs:choice>
+        <xs:attributeGroup ref="xulElementAttributes"/>
+  </xs:complexType>
+
+  <xs:complexType name="rowsElementType">
+    <xs:choice maxOccurs="unbounded" minOccurs="1">
+      <xs:element ref="row" />
+    </xs:choice>
+    <xs:attributeGroup ref="xulElementAttributes"/>
+  </xs:complexType>
+
+  <xs:complexType name="gridElementType">
+    <xs:all minOccurs="1" maxOccurs="1">
+      <xs:element ref="columns" minOccurs="1" maxOccurs="1" />
+      <xs:element ref="rows" minOccurs="1" maxOccurs="1" />
+    </xs:all>
+    <xs:attributeGroup ref="xulElementAttributes"/>
+  </xs:complexType>
+
+  <xs:complexType name="colorpickerElementType">
+    <xs:attributeGroup ref="colorpickerElementAttributes"/>
+  </xs:complexType>
+
+  <xs:complexType name="commandElementType">
+    <xs:attributeGroup ref="commandElementAttributes"/>
+  </xs:complexType>
+
+  <xs:complexType name="commandsetElementType">
+    <xs:choice minOccurs="1" maxOccurs="unbounded">
+      <xs:element ref="command" />
+    </xs:choice>
+    <xs:attributeGroup ref="commandsetElementAttributes"/>
+  </xs:complexType>
+
+  <xs:complexType name="datepickerElementType">
+    <xs:attributeGroup ref="datepickerElementAttributes"/>
+  </xs:complexType>
+
+  <xs:complexType name="descriptionElementType" mixed="true">
+    <xs:attributeGroup ref="descriptionElementAttributes"/>
+  </xs:complexType>
+
+  <xs:complexType name="dialogheaderElementType">
+    <xs:attributeGroup ref="dialogheaderElementAttributes"/>
+  </xs:complexType>
+
+  <xs:complexType name="editorElementType">
+    <xs:attributeGroup ref="editorElementAttributes"/>
+  </xs:complexType>
+
+  <xs:complexType name="iframeElementType">
+    <xs:attributeGroup ref="iframeElementAttributes"/>
+  </xs:complexType>
+
+  <xs:complexType name="imageElementType">
+    <xs:attributeGroup ref="imageElementAttributes"/>
+  </xs:complexType>
+
+  <xs:complexType name="keysetElementType">
+    <xs:choice minOccurs="1" maxOccurs="unbounded">
+      <xs:element ref="key" />
+    </xs:choice>
+    <xs:attributeGroup ref="xulElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="keyElementType">
+    <xs:attributeGroup ref="keyElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="labelElementType" mixed="true">
+    <xs:attributeGroup ref="labelElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="listboxElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="listhead" />
+      <xs:element ref="listcols" />
+      <xs:element ref="listitem" />
+      <xs:element ref="queryset" />
+      <xs:element ref="query" />
+    </xs:choice>
+    <xs:attributeGroup ref="listboxElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="listitemElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="listcell" />
+    </xs:choice>
+    <xs:attributeGroup ref="listitemElementAttributes" />
+  </xs:complexType>
+  
+  <xs:complexType name="listcellElementType">
+    <xs:attributeGroup ref="listcellElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="listheaderElementType">
+    <xs:attributeGroup ref="listheaderElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="listheadElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="listheader" />
+    </xs:choice>
+    <xs:attributeGroup ref="listheaderElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="listcolsElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="listcol" />
+    </xs:choice>
+    <xs:attributeGroup ref="xulElementAttributes" />
+  </xs:complexType>
+  
+  <xs:complexType name="notificationboxElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="boxElementElementsOnlyGroup" />
+      <xs:element ref="notification" />
+    </xs:choice>
+    <xs:attributeGroup ref="xulElementAttributes" />
+    </xs:complexType>
+
+  <xs:complexType name="notificationElementType">
+    <xs:attributeGroup ref="notificationElementAttributes" />
+  </xs:complexType>
+  
+  <xs:complexType name="observesElementType">
+    <xs:attributeGroup ref="observesElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="overlayElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="boxElementElementsOnlyGroup" />
+      <xs:element ref="statusbar" />
+      <xs:element ref="prefpane" />
+      <xs:element ref="menu" />
+    </xs:choice>
+    <xs:attributeGroup ref="overlayElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="panelElementType">
+    <xs:group ref="boxElementElementsOnlyGroup" minOccurs="0" maxOccurs="unbounded" />
+    <xs:attributeGroup ref="panelElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="paramElementType" mixed="true">
+    <xs:attributeGroup ref="paramElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="popupsetElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="menupopup" />
+      <xs:element ref="panel" />
+      <xs:element ref="tooltip" />
+    </xs:choice>
+    <xs:attributeGroup ref="xulElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="progressmeterElementType">
+    <xs:attributeGroup ref="progressmeterElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="querysetElementType">
+    <xs:choice maxOccurs="unbounded" minOccurs="1">
+      <xs:element ref="query" />
+      <xs:element ref="rule" />
+      <xs:element ref="action" />
+    </xs:choice>
+    <xs:attributeGroup ref="xulElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="radioElementType">
+    <xs:attributeGroup ref="radioElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="radiogroupElementType">
+    <xs:choice minOccurs="1" maxOccurs="unbounded">
+      <xs:element ref="radio" />
+    </xs:choice>
+    <xs:attributeGroup ref="radiogroupElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="resizerElementType">
+    <xs:attributeGroup ref="resizerElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="richlistboxElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="richlistitem" />
+    </xs:choice>
+    <xs:attributeGroup ref="richlistboxElementAttributes" />
+  </xs:complexType>
+  
+  <xs:complexType name="richlistitemElementType">
+    <xs:attributeGroup ref="richlistitemElementAttributes" />
+  </xs:complexType>
+
+
+  <xs:complexType name="preferenceElementType">
+    <xs:attributeGroup ref="preferenceElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="preferencesElementType">
+    <xs:choice minOccurs="1" maxOccurs="unbounded">
+      <xs:element ref="preference" />
+    </xs:choice>
+    <!-- xs:attributeGroup ref="xulElementAttributes" / -->
+  </xs:complexType>
+
+  <xs:complexType name="prefpaneElementType">
+    <xs:sequence>
+      <xs:element ref="preferences" minOccurs="0" />
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="boxElementElementsOnlyGroup" />
+    </xs:sequence>
+    <xs:attributeGroup ref="prefpaneElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="prefwindowElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="prefpane" />
+      <xs:element ref="statusbar" />
+      <xs:element ref="script" />
+    </xs:choice>
+    <xs:attributeGroup ref="prefwindowElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="scaleElementType">
+    <xs:attributeGroup ref="scaleElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="scriptElementType" mixed="true">
+    <xs:attributeGroup ref="scriptElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="scrollbarElementType">
+    <xs:attributeGroup ref="scrollbarElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="stringbundleElementType">
+    <xs:attributeGroup ref="stringbundleElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="stringbundlesetElementType">
+    <xs:choice minOccurs="1" maxOccurs="unbounded">
+      <xs:element ref="stringbundle" />
+    </xs:choice>
+    <xs:attributeGroup ref="xulElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="tabElementType">
+    <xs:attributeGroup ref="tabElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="tabpanelsElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="boxElements" />
+    </xs:choice>
+    <xs:attributeGroup ref="tabpanelsElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="tabsElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="tab" />
+    </xs:choice>
+    <xs:attributeGroup ref="tabsElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="tabboxElementType">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element ref="tabs" minOccurs="1" maxOccurs="1" />
+      <xs:element ref="tabpanels" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attributeGroup ref="tabboxElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="tabbrowserElementType">
+    <xs:attributeGroup ref="tabbrowserElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="textnodeElementType">
+    <xs:attributeGroup ref="textnodeElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="textboxElementType">
+    <xs:attributeGroup ref="textboxElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="timepickerElementType">
+    <xs:attributeGroup ref="timepickerElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="titlebarElementType">
+    <xs:complexContent>
+      <xs:extension base="boxElementType" />
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="toolbarElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="toolbarbutton" />
+      <xs:element ref="toolbargrippy" />
+      <xs:element ref="toolbaritem" />
+      <xs:element ref="toolbarpalette" />
+      <xs:element ref="toolbarseparator" />
+      <xs:element ref="toolbarspacer" />
+      <xs:element ref="toolbarspring" />
+    </xs:choice>
+    <xs:attributeGroup ref="toolbarElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="toolbarbuttonElementType">
+    <xs:attributeGroup ref="toolbarbuttonElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="toolbarpaletteElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="toolbarbutton" />
+      <xs:element ref="toolbaritem" />
+      <xs:element ref="toolbarseparator" />
+    </xs:choice>
+    <xs:attributeGroup ref="xulElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="toolbarsetElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="toolbar" />
+    </xs:choice>
+    <xs:attributeGroup ref="xulElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="toolboxElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="toolbar" />
+    </xs:choice>
+    <xs:attributeGroup ref="xulElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="tooltipElementType">
+    <xs:group ref="boxElementElementsOnlyGroup" minOccurs="0" maxOccurs="unbounded" />
+    <xs:attributeGroup ref="tooltipElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="wizardElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="wizardpage" />
+      <xs:element ref="statusbar" />
+    </xs:choice>
+     <xs:attributeGroup ref="wizardElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="wizardpageElementType">
+    <xs:complexContent>
+      <xs:extension base="boxElementType">
+        <xs:attributeGroup ref="wizardpageElementAttributes" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="treeElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="treecols" />
+      <xs:element ref="treechildren" />
+      <xs:element ref="template" />
+    </xs:choice>
+    <xs:attributeGroup ref="treeElementAttributes" />
+  </xs:complexType>
+
+
+  <xs:complexType name="treechildrenElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="treeitem" />
+    </xs:choice>
+    <xs:attributeGroup ref="treechildrenElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="treeitemElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="treechildren" />
+      <xs:element ref="treerow" />
+    </xs:choice>
+    <xs:attributeGroup ref="treeitemElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="treerowElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="treecell" />
+    </xs:choice>
+    <xs:attributeGroup ref="treerowElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="treecellElementType">
+    <xs:attributeGroup ref="treecellElementAttributes" />
+  </xs:complexType>
+
+
+  <xs:complexType name="treecolsElementType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="treecol" />
+      <xs:element ref="treeseparator" />
+    </xs:choice>
+    <xs:attributeGroup ref="treecolsElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="treecolElementType">
+    <xs:attributeGroup ref="treecolElementAttributes" />
+  </xs:complexType>
+
+  <xs:complexType name="treeseparatorElementType">
+    <xs:attributeGroup ref="treeseparatorElementAttributes" />
+  </xs:complexType>
+
+  <!-- end element types -->
+
+  <xs:group name="elementsForBox">
+    <xs:choice>
+      <xs:element ref="box" />
+      <xs:element ref="vbox" />
+      <xs:element ref="hbox" />
+      <xs:element ref="bbox" />
+      <xs:element ref="stack" />
+      <xs:element ref="deck" />
+      <xs:element ref="spacer" />
+      <xs:element ref="separator" />
+      <xs:element ref="splitter" />
+      <xs:element ref="template" />
+      <xs:element ref="arrowscrollbox" />
+      <xs:element ref="broadcasterset" />
+      <xs:element ref="button" />
+      <xs:element ref="browser" />
+      <xs:element ref="checkbox" />
+      <xs:element ref="grid" />
+      <xs:element ref="groupbox" />
+      <xs:element ref="colorpicker" />
+      <xs:element ref="commandset" />
+      <xs:element ref="datepicker" />
+      <xs:element ref="description" />
+      <xs:element ref="dropmarker" />
+      <xs:element ref ="editor" />
+      <xs:element ref ="iframe" />
+      <xs:element ref="image" />
+      <xs:element ref="keyset" />
+      <xs:element ref="label" />
+      <xs:element ref="listbox" />
+      <xs:element ref="menubar" />
+      <xs:element ref="menulist" />
+      <xs:element ref="menupopup" />
+      <xs:element ref="notificationbox" />
+      <xs:element ref="observes" />
+      <xs:element ref="panel" />
+      <xs:element ref="popupset" />
+      <xs:element ref="progressmeter" />
+      <xs:element ref="radio" />
+      <xs:element ref="radiogroup"/>
+      <xs:element ref="resizer" />
+      <xs:element ref="richlistbox" />
+      <xs:element ref="scale" />
+      <xs:element ref="script" />
+      <xs:element ref="scrollbar" />
+      <xs:element ref="scrollbox" />
+      <xs:element ref="scrollcorner" />
+      <xs:element ref="spinbuttons" />
+      <xs:element ref="stringbundleset" />
+      <xs:element ref="tabbox" />
+      <xs:element ref="textbox" />
+      <xs:element ref="timepicker" />
+      <xs:element ref="titlebar"/>
+      <xs:element ref="toolbar" />
+      <xs:element ref="toolbarset" />
+      <xs:element ref="toolbox" />
+      <xs:element ref="tooltip" />
+      <xs:element ref="tree" />
+      <xs:element ref="toolbarbutton" />
+    </xs:choice>
+  </xs:group>
+
+ 
+</xs:schema>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ui Test - Previwer UI Component</title>
+        <base href="../../../../" />
+        <link rel="stylesheet" type="text/css" href="js/lib/qunit/qunit.css">
+        <link rel="stylesheet" type="text/css" href="css/tao-main-style.css">
+        <script type="text/javascript" src="js/lib/require.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit.js"></script>
+        <script  type="text/javascript">
+            
+            //don't start the test now
+            QUnit.config.autostart = false;
+            
+            //load the config
+            require(['/tao/ClientConfig/config'], function(){
+                
+                //load the test
+                require(['test/ui/uploader/test'], function(){
+                    
+                    //Tests loaded, run tests
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+        </div>
+
+        <div class="tao-scope">
+
+            <form>            
+                <div class="progressbar"></div>
+                <div class="file-upload grid-row">
+                    <span class="btn-info btn-browse small col-4"><span class="icon-upload"></span>Browse</span>
+                    <span class="file-name col-8 truncate">File name</span>
+                    <input type="file">
+                </div>
+                <div class="grid-row"> 
+                    <div class="file-drop col-12">
+                        - or -<br />
+                        Drop file here
+                    </div>
+                </div>
+                <div class="grid-row"> 
+                    <button class="btn-success btn-upload small"><span class="icon-upload"></span>Upload</button>
+                </div>
+            </form>
+       </div>
+        
+    </body>
+</html>

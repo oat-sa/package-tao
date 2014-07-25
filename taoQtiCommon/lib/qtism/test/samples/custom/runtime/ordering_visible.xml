@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.taotesting.com/xsd/qticompact_v1p0.xsd"
+	identifier="ordering_visible" title="Ordering Basic Visible">
+	<testPart identifier="testPart" navigationMode="linear" submissionMode="individual">
+		<assessmentSection identifier="S01" title="Section S01" visible="true">
+			<ordering shuffle="true"/>
+			<assessmentSection identifier="S01A" title="Section S01A" visible="true">
+				<ordering shuffle="false"/>
+				<assessmentItemRef identifier="Q1" href="./Q1.xml" timeDependent="false"/>
+				<assessmentItemRef identifier="Q2" href="./Q2.xml" timeDependent="false"/>
+				<assessmentItemRef identifier="Q3" href="./Q3.xml" timeDependent="false"/>
+			</assessmentSection>
+			<assessmentSection identifier="S01B" title="Section S01B" visible="true">
+				<ordering shuffle="true"/>
+				<assessmentItemRef identifier="Q4" href="./Q4.xml" timeDependent="false"/>
+				<assessmentItemRef identifier="Q5" href="./Q5.xml" timeDependent="false"/>
+				<assessmentItemRef identifier="Q6" href="./Q6.xml" timeDependent="false"/>
+			</assessmentSection>
+			<assessmentSection identifier="S01C" title="Section S01C" visible="true">
+				<ordering shuffle="false"/>
+				<assessmentItemRef identifier="Q7" href="./Q4.xml" timeDependent="false"/>
+				<assessmentItemRef identifier="Q8" href="./Q5.xml" timeDependent="false"/>
+				<assessmentItemRef identifier="Q9" href="./Q6.xml" timeDependent="false"/>
+			</assessmentSection>
+		</assessmentSection>
+	</testPart>
+</assessmentTest>

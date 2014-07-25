@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Qti XML Renderer Test</title>
+        <link rel="stylesheet" href="/tao/views/js/lib/qunit/qunit.css">
+        <link rel="stylesheet" href="prism/prism.css">
+        <script src="/tao/views/js/lib/require.js"></script>
+        <script src="prism/prism.js" data-manual></script>
+        <script src="vkBeautify.js"></script>
+        <script src="/tao/views/js/lib/qunit/qunit.js"></script>
+        <script>
+            QUnit.config.autostart = false;
+            require(['/tao/ClientConfig/config'], function(){
+                require(['taoQtiItem/qtiXmlRenderer/test/renderer/test', 'jquery'], function(test, $){
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+    </body>
+</html>

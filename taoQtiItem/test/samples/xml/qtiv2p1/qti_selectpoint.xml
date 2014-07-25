@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i1380188055599842" title="media0" label="" xml:lang="en-US" adaptive="false" timeDependent="false">
+  <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="point">
+    <areaMapping defaultValue="0">
+      <areaMapEntry shape="circle" coords="96,346,54" mappedValue="2"/>
+    </areaMapping>
+  </responseDeclaration>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <itemBody>
+    <div>    
+<selectPointInteraction responseIdentifier="RESPONSE" maxChoices="1" minChoices="0"><object data="http://tao.localdomain/filemanager/views/data/Human%20Body/ear.png" type="image/png" width="227" height="416"/></selectPointInteraction>
+
+ </div>
+  </itemBody>
+  <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response_point"/>
+</assessmentItem>

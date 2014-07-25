@@ -1,0 +1,131 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+@CHARSET "UTF-8";
+/* Common Style */
+body{
+	width:100%;
+	height:100%;
+	margin: 0px;
+	padding: 0px;
+	background-color:#EEEEEE;
+	font-size:12px;
+	font-family:Verdana,Arial,sans-serif;
+}
+table{
+	width:100%;
+}
+body img{
+	vertical-align:baseline;
+}
+fieldset{
+	border: solid 1px #cfcfcf;
+}
+fieldset table tr td{
+	padding:4px;
+}
+a img{
+	border-width:0px;
+	text-decoration:none;
+}
+img.icon{
+	vertical-align:middle;
+	margin-right:3px;
+}
+a.nd{
+	text-decoration:none;
+}
+span.elt-info{
+	font-style:italic;
+	color: #555555 /*#D00239*/;
+}
+div.breaker{
+	clear:both;
+}
+a.blink{
+	text-decoration:none;
+	font-size : 1.1em;
+	font-weight:bold;
+	color:#444;
+}
+a.blink:hover{
+	color:#D00239;
+}
+iframe{
+	position:relative;
+	border-width:0px;
+	width:100%;
+	height:100%;
+	overflow-y:auto;
+	min-height:500px;
+}
+
+/* Messages */
+div.error-message{
+	width: 500px;
+	margin: auto;
+	margin-bottom:10px;
+	padding:5px;
+	font-weight:bold;
+}
+
+div#info-box{
+	position:fixed;
+	bottom:0px;
+	height:90px;
+	width:250px;
+	right:10px;
+	z-index:10100;
+	padding:5px;
+	text-align:center;
+	border: solid 1px #bbb;
+	color:#3383BB;
+	font-size:1em;
+}
+
+/* update JQuery UI styles  */
+
+.ui-state-default{
+	padding: 3px;
+}
+.ui-widget div.ui-widget-header{
+	font-weight:bold;
+}
+a.ui-state-default{
+	padding:4px 8px 4px 8px;
+}
+a.ui-state-default:hover{
+	text-decoration:none;
+}
+span.ui-state-default{
+	padding:4px 8px 4px 8px;
+	margin:4px;
+	border:solid #444 1px;
+}
+span.ui-state-default img{
+	vertical-align:text-bottom;
+}
+
+.ui-dialog, div.ui-dialog div{
+ 	/*z-index:9999999;*/
+}
+
+.jqgrow {
+	background: transparent!important;
+}

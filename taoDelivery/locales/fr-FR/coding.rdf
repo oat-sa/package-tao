@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAODelivery.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingMethode">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source Coding methode
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingMethode
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fr-FR"><![CDATA[Méthode d'encodage]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source Methodes to code a delivery
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingMethode
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="fr-FR"><![CDATA[Méthode d'encodage d'une passation]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingMethodeAutomated">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source Automated coding
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingMethodeAutomated
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fr-FR"><![CDATA[Encodage automatique]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source delivery is coded automaticly
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingMethodeAutomated
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="fr-FR"><![CDATA[La passation est encodée automatiquement]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingMethodeManual">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source Manual coding
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingMethodeManual
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fr-FR"><![CDATA[Encodage manuel]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source the delivery is at least partialy coded manualy
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingMethodeManual
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="fr-FR"><![CDATA[La passation est encodée manuellement au moins en partie]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryCodingMethode">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source Coding methode of the delivery
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryCodingMethode
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fr-FR"><![CDATA[Méthode d'encodage de la passation]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source how the delivery is coded
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryCodingMethode
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="fr-FR"><![CDATA[La manière dont la passation est encodée]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatus">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source Coding status
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatus
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fr-FR"><![CDATA[Etat de l'encodage]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source Status of the coding of a delivery
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatus
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="fr-FR"><![CDATA[Etat de l'encodage d'une passation]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatusGrading">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source In grading
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatusGrading
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fr-FR"><![CDATA[En cours d'évaluation]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source Delivery is being graded
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatusGrading
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="fr-FR"><![CDATA[La passation est en cours d'évaluation]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatusConciliation">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source In conciliation
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatusConciliation
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fr-FR"><![CDATA[En réconciliation]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source Delivery is being conciliated
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatusConciliation
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="fr-FR"><![CDATA[La passation est en cours de réconciliation]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatusCommited">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source Coding commited
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatusCommited
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fr-FR"><![CDATA[Encodage terminé]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source Coding has been commited
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatusCommited
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="fr-FR"><![CDATA[L'encodage est terminé]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryCodingStatus">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source Coding status of the delivery
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryCodingStatus
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fr-FR"><![CDATA[Statut de l'encodage de la passation]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source Current status of a deliverys coding
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryCodingStatus
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="fr-FR"><![CDATA[Statut actuel de l'encodage de la passation]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#active">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source Active
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#active
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fr-FR"><![CDATA[Actif]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage fr-FR
+    @source active / inactive state
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#active
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="fr-FR"><![CDATA[Statut actif/inactif]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

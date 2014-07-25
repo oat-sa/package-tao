@@ -1,0 +1,1 @@
+<math id="{{serial}}" {{#if block}}display = "block"{{/if}}>{{{body}}}</math>

@@ -1,0 +1,102 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+@CHARSET "UTF-8";
+
+/* Style specifiq to the List interface */
+
+div#list-container{
+	color: #363636;
+	min-height: 500px;
+}
+div#list-container table {
+	width:auto;
+}
+div#list-container table td{
+	width:240px;
+}
+div#list-container table a{
+	text-decoration:none;
+}
+div#list-container table a:hover{
+	color: #D00239
+}
+div#list-container fieldset{
+	width:220px;
+	padding:10px;
+	background-color:#fff;
+}
+div#list-container fieldset legend{
+	font-weight:bold;
+	color: #363636;
+}
+div#list-container fieldset div.list-elements{
+	background-color:#fff;
+	border: solid #777 1px;
+	border-bottom-color:#bbb;
+	border-right-color:#bbb;
+	height:200px;
+	overflow-y:scroll;
+	width:220px;
+	position: relative;
+}
+div#list-container fieldset div.list-controls{
+	text-align:right;
+	color:#999;
+}
+div#list-container li input{
+	width: 130px;
+	height:15px;
+	padding:0px;
+	position: absolute;
+	top: 3px;
+	left: 35px;
+}
+
+
+ul.sortable-list li span.ui-icon,
+ol.sortable-list li span.ui-icon { 
+	position: absolute;
+}
+
+ul.sortable-list li span.ui-icon-arrowthick-2-n-s,
+ol.sortable-list li span.ui-icon-arrowthick-2-n-s{
+	position: absolute;
+	top: 4px;
+	left: 24px;
+}
+
+ul.sortable-list li span.ui-icon-grip-dotted-vertical,
+ol.sortable-list li span.ui-icon-grip-dotted-vertical{
+	position: absolute;
+	top: 4px;
+	left: 24px;
+}
+
+ul.sortable-list li span.ui-icon-circle-close,
+ol.sortable-list li span.ui-icon-circle-close{
+	position: absolute;
+	top: 26px;
+	right: 3px;
+}
+
+ol.sortable-list{
+	padding: 0;
+	margin: 10px 0;
+}

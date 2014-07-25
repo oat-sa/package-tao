@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xml:base="http://www.tao.lu/Ontologies/TAOResult.rdf#"
+	xmlns:result="http://www.tao.lu/Ontologies/TAOResult.rdf"
+	xmlns:resultserver="http://www.tao.lu/Ontologies/TAOResultServer.rdf#"
+	xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#" 
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#"
+>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#Result">
+    <rdfs:label xml:lang="en-US"><![CDATA[Result]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Result]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#TAOObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#resultOfSubject">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Test taker of result]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Test taker of result]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#Result"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#DeliveryResult">
+    <rdfs:label xml:lang="en-US"><![CDATA[Result]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Result]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#Result"/>
+  </rdf:Description>
+ <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#ItemResult">
+    <rdfs:label xml:lang="en-US"><![CDATA[Item Result]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Result]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#TAOObject"/>
+  </rdf:Description>
+   <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#RelatedItem">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>   
+    <rdfs:label xml:lang="en-US"><![CDATA[Related Item]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Related Item]]></rdfs:comment>
+     <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#ItemResult"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#TAOItem"/>
+  </rdf:Description>
+   <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#relatedDeliveryResult">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Delivery of result]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Delivery of result]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#ItemResult"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#Variable"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#Result"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#RelatedTest">
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Related Item]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Related Item]]></rdfs:comment>
+     <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#ItemResult"/>
+     <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#Variable"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAOTest.rdf#TAOTest"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#Identifier">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Result Identifier]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[An identifier related to the instanciation of a delivery a test an item or a variable . If the item is used twice, different ids are setup]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#Result"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#ItemResult"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#TestResult"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#Variable"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>
+
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#resultOfDelivery">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Delivery of result]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Delivery of result]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#DeliveryResult"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#Delivery"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>
+
+
+
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#Variable">
+    <rdfs:label xml:lang="en-US"><![CDATA[Result Variable]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Variable of a DeliveryResult]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#TAOObject"/>
+  </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#cardinality">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Related Item result]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Related Item result]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#Variable"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>
+   <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#baseType">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Related Item result]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Related Item result]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#Variable"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#ResponseVariable">
+    <rdfs:label xml:lang="en-US"><![CDATA[Response Variable]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Response to an interaction]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#correctResponse">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[The correct expected response]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Related Item result]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#ResponseVariable"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#candidateResponse">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[The candidate response]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The candidate response]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#ResponseVariable"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#OutcomeVariable">
+    <rdfs:label xml:lang="en-US"><![CDATA[OutCome Variable]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[OutCome Variable]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#Variable"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#normalMaximum">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Related Item result]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Related Item result]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#OutcomeVariable"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#normalMinimum">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Related Item result]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Related Item result]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#OutcomeVariable"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>
+
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#TraceVariable">
+    <rdfs:label xml:lang="en-US"><![CDATA[Trace Variable]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Trace Variable]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#Variable"/>
+  </rdf:Description>
+
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#relatedItemResult">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#member"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Related Item result]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Related Item result]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#Variable"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#ItemResult"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>
+
+
+
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#variableEpoch">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[The epoch when the variable got stored]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The epoch when the variable got stored]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#Variable"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#variableComment">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Variable Comment]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Variable Comment]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#Variable"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <!-- Management Role -->
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#ResultsManagerRole">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#ManagementRole"/>
+  	<generis:includesRole rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#BackOfficeRole"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Results Manager]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The Results Manager Role]]></rdfs:comment>
+  </rdf:Description>
+
+
+
+
+    <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#taoResultServerModel">
+	<rdfs:label xml:lang="en-US"><![CDATA[taoResults storage (database)]]></rdfs:label>
+	<rdfs:comment xml:lang="en-US"><![CDATA[TAO Result Server 2.5 (DB storage)]]></rdfs:comment>
+	<resultserver:implementation><![CDATA[taoResults_models_classes_DbResult]]></resultserver:implementation>
+	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServerModel"/>
+   </rdf:Description>
+     <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOResult.rdf#taoResultServer">
+	<rdfs:label xml:lang="en-US"><![CDATA[TAO Result Server 2.5 (DB storage)]]></rdfs:label>
+	<rdfs:comment xml:lang="en-US"><![CDATA[TAO Result Server 2.5 (using DB storage)]]></rdfs:comment>
+	<resultserver:hasResultServerModel rdf:resource="http://www.tao.lu/Ontologies/TAOResult.rdf#taoResultServerModel" />
+	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServer"/>
+   </rdf:Description>
+</rdf:RDF>

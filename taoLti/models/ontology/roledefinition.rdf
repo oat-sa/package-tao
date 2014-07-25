@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+	xml:base="http://www.tao.lu/Ontologies/TAOLTI.rdf#" 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#"
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#"	
+>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIRole">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#ClassRole"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[LTI Roles]]></rdfs:label>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#RoleURN">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[URN]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[LTI Uniform Resource Name(deprecated)]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIRole"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#Label"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiBaseRole">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIRole"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[LTI Base Role]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[The LTI Base Role]]></rdfs:comment>
+  	<generis:isSystem rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True"/>
+  	<generis:includesRole rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#BaseUserRole"/>
+  </rdf:Description>
+  
+ </rdf:RDF>

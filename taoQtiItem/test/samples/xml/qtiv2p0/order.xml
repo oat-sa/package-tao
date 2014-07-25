@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p0 imsqti_v2p0.xsd"
+    identifier="order" title="Grand Prix of Bahrain" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="ordered" baseType="identifier">
+        <correctResponse>
+            <value>DriverC</value>
+            <value>DriverA</value>
+            <value>DriverB</value>
+        </correctResponse>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+    <itemBody>
+        <orderInteraction responseIdentifier="RESPONSE" shuffle="true">
+            <prompt>The following F1 drivers finished on the podium in the first ever Grand Prix of
+                Bahrain. Can you rearrange them into the correct finishing order?</prompt>
+            <simpleChoice identifier="DriverA">Rubens Barrichello</simpleChoice>
+            <simpleChoice identifier="DriverB">Jenson Button</simpleChoice>
+            <simpleChoice identifier="DriverC" fixed="true">Michael Schumacher</simpleChoice>
+        </orderInteraction>
+    </itemBody>
+    <responseProcessing
+        template="http://www.imsglobal.org/question/qti_v2p0/rptemplates/match_correct"/>
+</assessmentItem>
