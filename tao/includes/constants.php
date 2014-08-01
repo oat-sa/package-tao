@@ -39,7 +39,7 @@ define('TAO_VERSION_NAME', 'v2.6.3');
 define('PRODUCT_NAME', 'TAO');
 
 #TAO release status, use to add specific footer to TAO, available alpha, beta, demo, stable
-define('TAO_RELEASE_STATUS', 'alpha');
+define('TAO_RELEASE_STATUS', 'stable');
 
 #TAO default character encoding (mainly used with multi-byte string functions).
 define('TAO_DEFAULT_ENCODING', 'UTF-8');
