@@ -1,0 +1,12 @@
+// generic widget styles
+.item-editor-widget-box {
+  border: 1px dashed transparent;
+
+
+  &.active-widget-box {
+    border-color:  mix(#fff, $info, 20%);
+    .active-block {
+      border-color: mix(#fff, $info, 20%);
+    }
+  }
+}

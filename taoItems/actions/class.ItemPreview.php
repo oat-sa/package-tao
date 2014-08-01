@@ -1,0 +1,129 @@
+<?php
+/*
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2002-2008 (original work) Public Research Centre Henri Tudor & University of Luxembourg (under the project TAO & TAO2);
+ *               2008-2010 (update and modification) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+?>
+<?php
+
+/**
+ * experimental preview API 
+ *
+ * @author CRP Henri Tudor - TAO Team - {@link http://www.tao.lu}
+ * @package taoItems
+
+ * @license GPLv2  http://www.opensource.org/licenses/gpl-2.0.php
+ */
+class taoItems_actions_ItemPreview extends tao_actions_Api
+{
+
+    public function index(){
+        $this->setData('preview', false);
+
+        if($this->hasRequestParameter('fullScreen')){
+            $this->setData('client_config_url', $this->getClientConfigUrl());
+            $template = 'fsPreviewItemRunner.tpl';
+        }
+
+        else if($this->hasRequestParameter('quick')){
+            $this->setData('client_config_url', $this->getClientConfigUrl());
+            $template = 'quickPreviewItemRunner.tpl';
+        }
+
+        else if($this->hasRequestParameter('twosix')){
+            $this->setData('client_config_url', $this->getClientConfigUrl());
+            $template = 'preview26.tpl';
+        }
+
+        else{
+            $template = 'previewItemRunner.tpl';
+        }
+
+        $item = new core_kernel_classes_Resource(tao_helpers_Uri::decode($this->getRequestParameter('uri')));
+
+        $itemService = taoItems_models_classes_ItemsService::singleton();
+        if($itemService->hasItemContent($item) && $itemService->isItemModelDefined($item)){
+
+            //this is this url that will contains the preview
+            //@see taoItems_actions_LegacyPreviewApi
+            $previewUrl = $this->getPreviewUrl($item);
+            $this->setData('previewUrl', $previewUrl);
+            $this->setData('client_config_url', $this->getClientConfigUrl());
+            $this->setData('resultServer', $this->getResultServer());
+        }
+
+        $this->setView($template, 'taoItems');
+    }
+
+    public function getPreviewUrl($item, $options = array()){
+        $code = base64_encode($item->getUri());
+        return _url('render/'.$code.'/index.php', 'ItemPreview', 'taoItems', $options);
+    }
+
+    public function render(){
+        $relPath = tao_helpers_Request::getRelativeUrl();
+        list($extension, $module, $action, $codedUri, $path) = explode('/', $relPath, 5);
+        
+        $uri = base64_decode($codedUri);
+        $item = new core_kernel_classes_Resource($uri);
+        if($path == 'index.php'){
+            $this->renderItem($item);
+        } else {
+            $this->renderResource($item, urldecode($path));
+        }
+    }
+
+    protected function getRenderedItem($item){
+        $itemModel = $item->getOnePropertyValue(new core_kernel_classes_Property(TAO_ITEM_MODEL_PROPERTY));
+        $impl = taoItems_models_classes_ItemsService::singleton()->getItemModelImplementation($itemModel);
+        if(is_null($impl)){
+            throw new common_Exception('preview not supported for this item type '.$itemModel->getUri());
+        }
+        return $impl->render($item, '');
+    }
+
+    private function renderItem($item){
+        echo $this->getRenderedItem($item);
+    }
+
+    private function renderResource($item, $path){
+        
+        //@todo : allow preview in a language other than the one in the session
+        $lang = core_kernel_classes_Session::singleton()->getDataLanguage();
+        $folder = taoItems_models_classes_ItemsService::singleton()->getItemFolder($item, $lang);
+        if(tao_helpers_File::securityCheck($path, true)){
+            $filename = $folder.$path;
+            tao_helpers_Http::returnFile($filename);
+        }else{
+            throw new common_exception_Error('invalid item preview file path');
+        }
+    }
+
+    /**
+     * Get the ResultServer API call to be used by the item.
+     *
+     * @return string A string representing JavaScript instructions.
+     */
+    protected function getResultServer(){
+        return array(
+            'module' => 'taoItems/runtime/ConsoleResultServer'
+        );
+    }
+
+}

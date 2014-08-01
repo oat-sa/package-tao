@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage hu-HU
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#">
+  <rdf:Description rdf:about="http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#Learner">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage hu-HU
+    @source LTI Learner
+    @subject http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#Learner
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="hu-HU"><![CDATA[LTI Learner]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage hu-HU
+    @source The LTI Context Learner Role
+    @subject http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#Learner
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="hu-HU"><![CDATA[The LTI Context Learner Role]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#Instructor">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage hu-HU
+    @source LTI Instructor
+    @subject http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#Instructor
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="hu-HU"><![CDATA[LTI Instructor]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage hu-HU
+    @source The LTI Context Instructor Role
+    @subject http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#Instructor
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="hu-HU"><![CDATA[The LTI Context Instructor Role]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#Administrator">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage hu-HU
+    @source LTI Administrator
+    @subject http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#Administrator
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="hu-HU"><![CDATA[LTI Administrator]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage hu-HU
+    @source The LTI Context Administrator Role
+    @subject http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#Administrator
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="hu-HU"><![CDATA[The LTI Context Administrator Role]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

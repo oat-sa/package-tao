@@ -1,0 +1,20 @@
+Options +FollowSymLinks
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+#don't macth resources and tests
+RewriteCond %{REQUEST_URI} 	!/views/  	[NC]
+RewriteCond %{REQUEST_URI} 	!/test/ 	[NC]
+RewriteCond %{REQUEST_URI} 	!/doc/ 	 	[NC]
+RewriteCond %{REQUEST_URI} 	!/update/	[NC]
+RewriteCond %{REQUEST_URI} 	!/install/	[NC]
+RewriteCond %{REQUEST_URI} 	!/locales/	[NC]
+RewriteCond %{REQUEST_URI}  !/getFile.php	[NC]
+#call entry point for url resolving and framework bootstrap
+RewriteRule ^(.*)$ index.php [L]
+
+#required by token based access system
+RewriteCond %{REQUEST_URI} (.*)/getFile.php/  [NC]
+RewriteRule ^(.*)$ getFile.php [L]
+
+</IfModule>

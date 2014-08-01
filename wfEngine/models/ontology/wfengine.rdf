@@ -1,0 +1,838 @@
+<?xml version="1.0"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xml:base="http://www.tao.lu/middleware/wfEngine.rdf#"
+	xmlns:wf="http://www.tao.lu/middleware/wfEngine.rdf#"
+	xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#"
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#"
+>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassStep">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessDefinitionResources"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Step]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Process Step]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyStepNext">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[nextStep]]></rdfs:label>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassStep"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassStep"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+	<generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyTransitionRulesThen">
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TreeView"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassTransitionRules"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Then]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Then statement]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassStep"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassCallOfservicesResources">
+    <rdfs:label xml:lang="en-US"><![CDATA[Call Of services Resources]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Call of services Resources]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassServicesResources"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassServiceDefinitionResources">
+    <rdfs:label xml:lang="en-US"><![CDATA[Services Definition Resources]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Services Definition Resources]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassServicesResources"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessDefinitionResources">
+    <rdfs:label xml:lang="en-US"><![CDATA[Process Definition Resources]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Process Definition Resources]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#generis_Ressource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassServicesResources">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#generis_Ressource"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Services Resources]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Services Resources]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessExecutionResources">
+    <rdfs:label xml:lang="en-US"><![CDATA[Process Execution Resource]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Process Execution Resource]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#generis_Ressource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassTransitionRules">
+    <rdfs:label xml:lang="en-US"><![CDATA[Transition Rules]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Transition Rules]]></rdfs:comment>
+    <rdfs:subClassOf xml:lang="en-US" rdf:resource="http://www.tao.lu/middleware/Rules.rdf#Rule"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyServiceDefinitionsFormalParameterIn">
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassFormalParameters"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassServiceDefinitions"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[formalParameterIn]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Formal Parameter for input]]></rdfs:comment>
+	<generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivitiesInitial">
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#Boolean"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[isInitial]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Is Initial activity]]></rdfs:comment>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#RadioBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivities"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#InstanceStatusPaused">
+    <rdfs:label xml:lang="en-US"><![CDATA[Paused]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Paused status]]></rdfs:comment>
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessInstanceStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyProcessInstancesStatus">
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessInstanceStatus"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Status]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Status]]></rdfs:comment>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessInstances"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#InstanceStatusFinished">
+    <rdfs:label xml:lang="en-US"><![CDATA[Finished]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Finished Status]]></rdfs:comment>
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessInstanceStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#InstanceStatusResumed">
+    <rdfs:label xml:lang="en-US"><![CDATA[Active]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Active status]]></rdfs:comment>
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessInstanceStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#InstanceStatusStarted">
+    <rdfs:label xml:lang="en-US"><![CDATA[Started]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Started status]]></rdfs:comment>
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessInstanceStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#InstanceStatusClosed">
+    <rdfs:label xml:lang="en-US"><![CDATA[Closed]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Closed status]]></rdfs:comment>
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessInstanceStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessInstanceStatus">
+    <rdfs:label xml:lang="en-US"><![CDATA[Process Instance Status]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Process Instance Status]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessExecutionResources"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyProcessInstancesExecutionOf">
+    <rdfs:label xml:lang="en-US"><![CDATA[Execution of]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Execution of]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessDefinitions"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#RadioBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessInstances"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyProcessInstancesCurrentActivityExecutions">
+    <rdfs:label xml:lang="en-US"><![CDATA[Current Activity Executions]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Current Activity Executions]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessInstances"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyProcessInstancesActivityExecutions">
+    <rdfs:label xml:lang="en-US"><![CDATA[Activity Executions]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Activity Executions]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessInstances"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyProcessInstancesTimeStarted">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessInstances"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Started on]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[the start time of the process execution]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessInstances">
+    <rdfs:label xml:lang="en-US"><![CDATA[Process Instances]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Process Instances]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessExecutionResources"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyProcessActivities">
+    <rdfs:label xml:lang="en-US"><![CDATA[Activities]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Activities]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivities"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessDefinitions"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyProcessRootActivities">
+    <rdfs:label xml:lang="en-US"><![CDATA[Root Activities]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Root Activities]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivities"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessDefinitions"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyCallOfServicesActualParameterOut">
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActualParameters"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Actual Parameter Out]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Actual Parameter Out]]></rdfs:comment>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassCallOfServices"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyServiceDefinitionsFormalParameterOut">
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassFormalParameters"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Formal Parameter Out]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Formal Paramater Out]]></rdfs:comment>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassServiceDefinitions"/>
+	<generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyConnectorsType">
+    <rdfs:label xml:lang="en-US"><![CDATA[Connector Type]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Connector Type]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassTypeOfConnectors"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#RadioBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassConnectors"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyCallOfServicesActualParameterin">
+    <rdfs:label xml:lang="en-US"><![CDATA[Actual Parameter In]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Actual Parameter In]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActualParameters"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassCallOfServices"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyCallOfServicesServiceDefinition">
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassServiceDefinitions"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Service Definition]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Service Definition]]></rdfs:comment>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#RadioBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassCallOfServices"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassCallOfServices">
+    <rdfs:label xml:lang="en-US"><![CDATA[Call of Services]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Call of Services]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassCallOfservicesResources"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#InstanceTypeOfConnectorsSequence">
+    <rdfs:label xml:lang="en-US"><![CDATA[Sequence]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Sequence Connector Type]]></rdfs:comment>
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassTypeOfConnectors"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#InstanceTypeOfConnectorsConditional">
+    <rdfs:label xml:lang="en-US"><![CDATA[Conditional]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Conditional Connector Type]]></rdfs:comment>
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassTypeOfConnectors"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#InstanceTypeOfConnectorsParallel">
+    <rdfs:label xml:lang="en-US"><![CDATA[Split]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Split Connector Type]]></rdfs:comment>
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassTypeOfConnectors"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#InstanceTypeOfConnectorsJoin">
+    <rdfs:label xml:lang="en-US"><![CDATA[Join]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Join Connector Type]]></rdfs:comment>
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassTypeOfConnectors"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#InstanceTypeOfConnectorsSwitch">
+    <rdfs:label xml:lang="en-US"><![CDATA[Switch]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Switch Connector Type]]></rdfs:comment>
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassTypeOfConnectors"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassConnectors">
+    <rdfs:label xml:lang="en-US"><![CDATA[Connectors]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Connectors]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivities"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyProcessVariables">
+    <rdfs:label xml:lang="en-US"><![CDATA[Process Variables]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Process Variables]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessVariables"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessDefinitions"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassTypeOfConnectors">
+    <rdfs:label xml:lang="en-US"><![CDATA[TypeOfConnectors]]></rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessDefinitionResources"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActualParametersProcessVariable">
+    <rdfs:label xml:lang="en-US"><![CDATA[Process Variable]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Process Variable]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessVariables"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActualParameters"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActualParametersConstantValue">
+    <rdfs:label xml:lang="en-US"><![CDATA[Constant Value]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Constant Value]]></rdfs:comment>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActualParameters"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessVariables">
+    <rdfs:label xml:lang="en-US"><![CDATA[Process Variables]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Process Variables]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessDefinitionResources"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActualParametersFormalParameter">
+    <rdfs:label xml:lang="en-US"><![CDATA[Formal Parameter]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Formal Parameter]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassFormalParameters"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#RadioBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActualParameters"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyFormalParametersDefaultConstantValue">
+    <rdfs:label xml:lang="en-US"><![CDATA[Default Constant Value]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Default Constant Value]]></rdfs:comment>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassFormalParameters"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyFormalParametersDefaultProcessVariable">
+    <rdfs:label xml:lang="en-US"><![CDATA[DefaultProcessVariable]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Default Process Variable]]></rdfs:comment>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassFormalParameters"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessVariables"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassActualParameters">
+    <rdfs:label xml:lang="en-US"><![CDATA[Actual Parameter]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Actual Parameter]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassCallOfservicesResources"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyFormalParameterDataType">
+    <rdfs:label xml:lang="en-US"><![CDATA[Data Type]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Data Type]]></rdfs:comment>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassFormalParameters"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyFormalParametersName">
+    <rdfs:label xml:lang="en-US"><![CDATA[Name]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Formal Parameter Name]]></rdfs:comment>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassFormalParameters"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassFormalParameters">
+    <rdfs:label xml:lang="en-US"><![CDATA[Formal Parameter]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Formal Parameter]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassServiceDefinitionResources"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertySupportServicesUrl">
+    <rdfs:label xml:lang="en-US"><![CDATA[url]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[url]]></rdfs:comment>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassSupportServices"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyWebServicesWsdlUrl">
+    <rdfs:label xml:lang="en-US"><![CDATA[wsdl location]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[wsdl location]]></rdfs:comment>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassWebServices"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivitiesInteractiveServices">
+    <rdfs:label xml:lang="en-US"><![CDATA[Interactive Services]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Interactive Services]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassCallOfServices"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivities"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivities">
+    <rdfs:label xml:lang="en-US"><![CDATA[Activity]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Activity]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassStep"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessDefinitions">
+    <rdfs:label xml:lang="en-US"><![CDATA[Process Definition]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Process Definition]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessDefinitionResources"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyConnectorsTransitionRule">
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TreeView"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassConnectors"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassTransitionRules"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Transition Rule]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Transition Rule]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyTransitionRulesElse">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassTransitionRules"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TreeView"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivities"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Else]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Else statement]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivitiesHidden">
+    <rdf:type xml:lang="en-US" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#Boolean"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Is Hidden]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Is Hidden]]></rdfs:comment>
+    <rdfs:domain xml:lang="en-US" rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivities"/>
+    <widget:widget xml:lang="en-US" rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyConnectorsActivityReference">
+    <rdfs:label xml:lang="en-US"><![CDATA[Activity Reference]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[the reference to the activity at the time of creation]]></rdfs:comment>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TreeView"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassConnectors"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivities"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyCode">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Code]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[For process variables only]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessVariables"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyCallOfServicesTop">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Top Shifting]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The CSS top attribute value for the service iframe]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassCallOfServices"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyCallOfServicesLeft">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Left Shifting]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The CSS left attribute value for the service iframe]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassCallOfServices"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyCallOfServicesWidth">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassCallOfServices"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Width]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The CSS width attribute value for the service iframe]]></rdfs:comment>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyCallOfServicesHeight">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Height]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The CSS height attribute value for the service iframe]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassCallOfServices"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivityExecutionsExecutionOf">
+    <rdfs:label xml:lang="en-US"><![CDATA[Activity Definition]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Activity Definition]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivities"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivityExecutionsCurrentUser">
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#User"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Current User]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Current User]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivityExecutionsProcessExecution">
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessInstances"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Process Execution]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The process execution to which the activity execution is linked]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivityExecutionsHasVariables">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Variables]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Serialized array of currently used variables]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivityExecutionsPreviousActivityExecutions">
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Previous Activity Executions]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Used to build the process path]]></rdfs:comment>
+	<generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivityExecutionsFollowingActivityExecutions">
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Following Activity Executions]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Used to build the process path]]></rdfs:comment>
+	<generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivityExecutionsStatus">
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessInstanceStatus"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Status]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The status of the activity execution]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivityExecutionsTimeCreated">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Created on]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The creation time of the activity execution]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivityExecutionsTimeStarted">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Started on]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The start time of the activity execution]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivityExecutionsTimeLastAccess">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Last accessed on]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The last time the current user accessed it]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivityExecutionsNonce">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Nonce]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The nonce to garantee unique action (transitions)]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivityExecutionsAccessControlMode">
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassAccessControlModes"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Execution ACL mode]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The ACL mode applied to the acitivty execution]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivityExecutionsRestrictedUser">
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#User"/>
+	<rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessVariables"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Execution restricted user]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The user who is allowed to execute the activity execution]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivityExecutionsRestrictedRole">
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#ClassRole"/>
+		<rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessVariables"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Execution restricted role]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The role who is allowed to execute the activity execution]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions">
+    <rdfs:label xml:lang="en-US"><![CDATA[Activity Instance Resource]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Activity Instance Resource]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#generis_Ressource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassAccessControlModes">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#generis_Ressource"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[ACL modes]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[ACL modes]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyAccessControlModesRole">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassAccessControlModes"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Role]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Access Control Role]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyAccessControlModesRoleRestrictedUser">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassAccessControlModes"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Role Restricted User]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Role Restricted User]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyAccessControlModesUser">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassAccessControlModes"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[User]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[User]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyAccessControlModesRoleRestrictedUserInherited">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassAccessControlModes"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Role Restricted User Inherited]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Role Restricted User Inherited]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyAccessControlModesRoleRestrictedUserInheritedDelivery">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassAccessControlModes"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Role Restricted User Inherited Delivery]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Role Restricted User Inherited]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivitiesAccessControlMode">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivities"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[ACL mode]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[ACL mode]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassAccessControlModes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivitiesRestrictedRole">
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#ClassRole"/>
+	<rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessVariables"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivities"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[restricted Role]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[restricted Role]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivitiesRestrictedUser">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivities"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#User"/>
+	<rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessVariables"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Restricted User]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Restricted User]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyProcessInitAccesControlMode">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessDefinitions"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassAccessControlModes"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Init ACL mode]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Init ACL mode]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyProcessInitRestrictedUser">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessDefinitions"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#User"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Init Restricted User]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Init Restricted User]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyProcessInitRestrictedRole">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessDefinitions"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#ClassRole"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Init Restricted Role]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Init Restricted Role]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyProcessDiagramData">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessDefinitions"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Diagram Data]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Diagram Data]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassNotificationMode">
+    <rdfs:label xml:lang="en-US"><![CDATA[Notification Mode]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Notification Mode]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessDefinitionResources"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#InstanceNotifyUser">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassNotificationMode"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Notify User]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Notify User]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#InstanceNotifyNextActivityUsers">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassNotificationMode"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Notify Next Activity Users]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Notify Next Activity Users]]></rdfs:comment>
+  </rdf:Description>
+	<rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#InstanceNotifyThenActivityUsers">
+		<rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassNotificationMode"/>
+		<rdfs:label xml:lang="en-US"><![CDATA[Notify Then Activity Users]]></rdfs:label>
+		<rdfs:comment xml:lang="en-US"><![CDATA[For connector of conditional type only]]></rdfs:comment>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#InstanceNotifyElseActivityUsers">
+		<rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassNotificationMode"/>
+		<rdfs:label xml:lang="en-US"><![CDATA[Notify Else Activity Users]]></rdfs:label>
+		<rdfs:comment xml:lang="en-US"><![CDATA[For connector of conditional type only]]></rdfs:comment>
+	</rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#InstanceNotifyPreviousActivityUsers">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassNotificationMode"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Notify Previous Activity Users]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Notify Previous Activity Users]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#InstanceNotifyRole">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassNotificationMode"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Notify Role]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Notify Role]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyConnectorsNotificationModes">
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassNotificationMode"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Notify]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Notify]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassConnectors"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyConnectorsNotifiedUser">
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#User"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Users to notify]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Users to notify]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassConnectors"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyConnectorsNotifiedRole">
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#ClassRole"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Role's users to notify]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Role's users to notify]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassConnectors"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyConnectorsNotificationMessage">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#HTMLArea"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Notification Message]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Notification Message]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassConnectors"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassNotification">
+    <rdfs:label xml:lang="en-US"><![CDATA[Notification]]></rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessDefinitionResources"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyNotificationTo">
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#User"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[User to notify]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[User to notify]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassNotification"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyNotificationConnector">
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassConnectors"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Connector's notification]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Connector's notification]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassNotification"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyNotificationProcessExecution">
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessInstances"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Process execution's notification]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Process execution's notification]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassNotification"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyNotificationSent">
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#Boolean"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#RadioBox"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Notification sent]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Notification sent]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassNotification"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyNotificationDate">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#Calendar"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Notification date]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Notification date]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassNotification"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivityExecutionsContextRecovery">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Context Recovery]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Context Recovery]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassControls">
+    <rdfs:label xml:lang="en-US"><![CDATA[Controls]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Controls]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessDefinitionResources"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#InstanceControlsForward">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassControls"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Forward]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#InstanceControlsBackward">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassControls"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Backward]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Backward]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivitiesControls">
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassControls"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Activity controls]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Activity controls]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivities"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+    <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ProcessVarPrevEndosment">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessVariables"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[PREV_ENDORSMENT]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Previous Endorsment]]></rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityExecutions"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <wf:PropertyCode><![CDATA[PREV_ENDORSMENT]]></wf:PropertyCode>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityCardinality">
+    <rdfs:label xml:lang="en-US"><![CDATA[Activity Cardinality]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Activity Cardinality]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassStep"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivityCardinalityCardinality">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Cardinality]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Cardinality]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityCardinality"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#PropertyActivityCardinalitySplitVariables">
+    <rdfs:label xml:lang="en-US"><![CDATA[Split variables]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Split variables]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessVariables"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassActivityCardinality"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  
+  <!-- Management Role -->
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#WorkflowsManagerRole">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#ManagementRole"/>
+  	<generis:includesRole rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#BackOfficeRole"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Workflows Manager]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The Workflows Manager Role]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

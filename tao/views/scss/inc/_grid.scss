@@ -1,0 +1,73 @@
+[class*=" col-"], [class^="col-"] {
+    float: left;
+    min-height: 1rem;
+    &:first-child {
+        margin-left: 0;
+    }
+    &.grid-container {
+        margin-bottom: 0;
+    }
+}
+
+.col-12 {
+    float: none;
+}
+
+.grid-container {
+    overflow-x: hidden; 
+}
+
+.grid-row, .fixed-grid-row {
+    @extend .clearfix;
+    width: widthPerc(852, 840);
+    &:before {
+        @extend .clearfix:before;
+    }
+    &:after {
+        @extend .clearfix:after;
+    }
+
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        @include grid-unit($i, 12, 12);
+        margin-bottom: 12px;
+    }
+    .alpha {
+        margin-left: 0 !important
+    }
+}
+
+#icon-editor {
+
+    .grid-row {
+        @extend .clearfix;
+        width: 100%
+    }
+    @for $i from 1 through 12 {
+        .col-#{$i} {
+            @include grid-unit($i, 12);
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+}
+
+@media all and (max-width: 1600px) {
+    //  @for $i from 1 through 12 {
+    //    .box.col-#{$i} { @include grid-unit($i, 12); }
+    //  }
+}
+
+@media all and (max-width: 1100px) {
+    //  @for $i from 1 through 8 {
+    //    .box.col-#{$i} { @include grid-unit($i, 8); }
+    //  }
+}
+
+@media all and (max-width: 768px) {
+    //  @for $i from 1 through 6 {
+    //    .box.col-#{$i} { @include grid-unit($i, 6); }
+    //  }
+}

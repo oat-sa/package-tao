@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xml:base="http://www.tao.lu/Ontologies/TAODelivery.rdf#" 
+	xmlns:delivery="http://www.tao.lu/Ontologies/TAODelivery.rdf#" 
+	xmlns:wf="http://www.tao.lu/middleware/wfEngine.rdf#" 
+	xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#" 
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#"
+	xmlns:tao="http://www.tao.lu/Ontologies/TAO.rdf#"
+>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#WfDeliveryContent">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#AbstractDeliveryContent"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Workflow]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The workflow delivery content model class]]></rdfs:comment>
+    <delivery:DeliveryContentImplementation><![CDATA[taoWfDelivery_models_classes_WfContentModel]]></delivery:DeliveryContentImplementation>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#ContentWfProcess">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Workflow]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The process definition associated to this delivery]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#WfDeliveryContent"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassProcessDefinitions"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamTestUri">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassFormalParameters"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Test Uri]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Test Uri]]></rdfs:comment>
+    <wf:PropertyFormalParametersName><![CDATA[testUri]]></wf:PropertyFormalParametersName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#ServiceTestContainer">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassDeliveryServices"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Test container]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Test container]]></rdfs:comment>
+<!--
+<wf:PropertySupportServicesUrl rdf:resource="http://www.tao.lu/Ontologies/TAOTest.rdf#Test"/>
+-->
+    <wf:PropertyServiceDefinitionsFormalParameterIn rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamTestUri"/>
+  </rdf:Description>
+  
+</rdf:RDF>

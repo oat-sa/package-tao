@@ -1,0 +1,1 @@
+<input type="text" id="{{attributes.identifier}}" name="{{attributes.identifier}}" class="qti_{{_type}} {{attributes.class}}" />

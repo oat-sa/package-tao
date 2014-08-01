@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xml:base="http://www.tao.lu/Ontologies/TAOItem.rdf#" 
+	xmlns:tao="http://www.tao.lu/Ontologies/TAO.rdf#" 
+	xmlns:taoItem="http://www.tao.lu/Ontologies/TAOItem.rdf#" 
+	xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#" 
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#"
+>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#Measurement">
+    <rdfs:label xml:lang="en-US"><![CDATA[Measurement]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Measurement of an item]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rd#generis_Ressource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#hasMeasurement">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Item has Measurement]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Item has Measurement]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#Item"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#Measurement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#MeasurementIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Identifier]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Identifier of the measurement]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#Measurement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#MeasurementDescription">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Description]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Description ot the measurement]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#Measurement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#isHumanAssisted">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Is Human Assisted?]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Whenever or not the measurement is human assisted]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#Measurement"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#Boolean"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#Scale">
+    <rdfs:label xml:lang="en-US"><![CDATA[Measurement scale]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Measurement scale]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rd#generis_Ressource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#hasScale">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Measurement has scale]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Measurement has scale]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#Measurement"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#Scale"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#NumericalScale">
+    <rdfs:label xml:lang="en-US"><![CDATA[Numerical measurement scale]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Numerical measurement scale]]></rdfs:comment>
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/generis.rd#Scale"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#DiscreteScale">
+    <rdfs:label xml:lang="en-US"><![CDATA[Discrete measurement scale]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Discrete measurement scale]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rd#Scale"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#Enumeration">
+    <rdfs:label xml:lang="en-US"><![CDATA[Enumeration scale]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Enumeration scale]]></rdfs:comment>
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/generis.rd#Scale"/>
+  </rdf:Description>
+    <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#UpperBound">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Upper bound]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Upper bound of a numerical value]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#NumericalScale"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+  </rdf:Description>
+    <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#LowerBound">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Lower bound]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Lower bound of a numerical value]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#NumericalScale"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+  </rdf:Description>
+    <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#DiscreteScaleDistance">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Discretescale distance]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Smalles distance between two discrete values]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#DiscreteScale"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+  </rdf:Description>
+</rdf:RDF>

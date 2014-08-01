@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p0 imsqti_v2p0.xsd"
+    identifier="graphicOrder" title="Flying Home" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="ordered" baseType="identifier">
+        <correctResponse>
+            <value>A</value>
+            <value>D</value>
+            <value>C</value>
+            <value>B</value>
+        </correctResponse>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+    <itemBody>
+        <p>Lorna is flying back home to the UK. Ideally, she would like to fly in directly to her
+            home town of Glasgow. Edinburgh is her second choice and, if necessary, she could fly
+            into London and pick up an internal connecting flight. Although she has been offered a
+            cheap flight to Manchester it remains her least favourite option as connecting flights
+            to Glasgow are not very reliable from there.</p>
+        <graphicOrderInteraction responseIdentifier="RESPONSE">
+            <prompt>Mark the airports shown on the map according to Lorna's preferences.</prompt>
+            <object type="image/png" width="206" height="280" data="images/ukair.png">UK Map</object>
+            <hotspotChoice shape="circle" coords="77,115,8" identifier="A"/>
+            <hotspotChoice shape="circle" coords="118,184,8" identifier="B"/>
+            <hotspotChoice shape="circle" coords="150,235,8" identifier="C"/>
+            <hotspotChoice shape="circle" coords="96,114,8" identifier="D"/>
+        </graphicOrderInteraction>
+    </itemBody>
+    <responseProcessing template="http://www.imsglobal.org/question/qti_v2p0/rptemplates/match_correct"/>
+</assessmentItem>

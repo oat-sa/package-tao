@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+                xmlns:pci="http://www.imsglobal.org/xsd/portableCustomInteraction" 
+                xmlns:xhtml="http://www.w3.org/1999/xhtml" 
+                identifier="pci002" title="PCI 002" adaptive="false" timeDependent="false">
+    
+    <stylesheet href="css/likert1.css" type="text/css"/>
+    
+    <responseDeclaration identifier="likert1" cardinality="single" baseType="integer"/>
+    <responseDeclaration identifier="likert2" cardinality="single" baseType="integer"/>
+    <responseDeclaration identifier="likert3" cardinality="single" baseType="integer"/>
+
+    <itemBody>
+        
+        <p>This is a sample PCI.</p>
+        
+        <customInteraction responseIdentifier="likert1">
+            <pci:portableCustomInteraction customInteractionTypeIdentifier="likertScaleInteraction">
+
+                <pci:responseSchema href="http://imsglobal.org/schema/json/v1.0/response.json"/>
+                
+                <pci:resources location="http://imsglobal.org/pci/1.0.15/sharedLibraries.xml">
+                    <pci:libraries>
+                        <pci:lib name="likertScaleCss" href="libs/likertScaleInteraction.css"/><!-- dep css -->
+                        <pci:lib name="likertScaleJs" href="libs/likertScaleInteraction.amd.js"/><!-- amd -->
+                        <pci:lib name="jquery" href="libs/jquery.min.js"/><!-- dep -->
+                    </pci:libraries>
+                </pci:resources>
+
+                <pci:properties>
+                    <pci:entry key="literal">0</pci:entry>
+                    <pci:entry key="scale">5</pci:entry>
+                    <pci:entry key="label-min">Not at all</pci:entry>
+                    <pci:entry key="label-max">Very much</pci:entry>
+                    <pci:entry key="prompt">&lt;div&gt;Do you like movies ? &lt;img src=&quot;http://cdn-static.zdnet.com/i/story/60/01/056464/vudu-movies-screenshot-082911.png&quot;&gt;&lt;/div&gt;</pci:entry>
+                </pci:properties>
+
+                <pci:markup>
+                    <xhtml:div id="likert1" class="likert-scale">
+                        <xhtml:div class="prompt"></xhtml:div>
+                        <xhtml:ul class="likert"></xhtml:ul>
+                    </xhtml:div>
+                </pci:markup>
+
+            </pci:portableCustomInteraction>
+        </customInteraction>
+        
+        <p>Here is another one.</p>
+        
+        <customInteraction responseIdentifier="likert2">
+            <pci:portableCustomInteraction customInteractionTypeIdentifier="likertScaleInteraction">
+
+                <pci:responseSchema href="http://imsglobal.org/schema/json/v1.0/response.json"/>
+                
+                <pci:resources location="http://imsglobal.org/pci/1.0.15/sharedLibraries.xml">
+                    <pci:libraries>
+                        <pci:lib name="likertScaleCss" href="libs/likertScaleInteraction.css"/><!-- dep css -->
+                        <pci:lib name="likertScaleJs" href="libs/likertScaleInteraction.amd.js"/><!-- amd -->
+                        <pci:lib name="jquery" href="libs/jquery.min.js"/><!-- dep that under into collision with TAO delivery engine -->
+                    </pci:libraries>
+                </pci:resources>
+
+                <pci:properties>
+                    <pci:entry key="literal">0</pci:entry>
+                    <pci:entry key="scale">7</pci:entry>
+                    <pci:entry key="label-min">Can't stand it :( </pci:entry>
+                    <pci:entry key="label-max">Absolutely ! :)</pci:entry>
+                    <pci:entry key="prompt">&lt;div&gt;Do you like video games ? &lt;img src=&quot;http://animepic.biz/wp-content/uploads//video-games-characters-wallpaper-classic-video-game--id--26449--wallpho-pic.jpg&quot;&gt;&lt;/div&gt;</pci:entry>
+                </pci:properties>
+
+                <pci:markup>
+                    <xhtml:div id="likert2" class="likert-scale">
+                        <xhtml:div class="prompt"></xhtml:div>
+                        <xhtml:ul class="likert"></xhtml:ul>
+                    </xhtml:div>
+                </pci:markup>
+
+            </pci:portableCustomInteraction>
+        </customInteraction>
+        
+        <p>Here is yet another one.</p>
+        
+        <customInteraction responseIdentifier="likert3">
+            <pci:portableCustomInteraction customInteractionTypeIdentifier="likertScaleInteraction">
+
+                <pci:responseSchema href="http://imsglobal.org/schema/json/v1.0/response.json"/>
+                
+                <pci:resources location="http://imsglobal.org/pci/1.0.15/sharedLibraries.xml">
+                    <pci:libraries>
+                        <pci:lib name="likertScaleCss" href="libs/likertScaleInteraction.css"/><!-- dep css -->
+                        <pci:lib name="likertScaleJs" href="libs/likertScaleInteraction.amd.js"/><!-- amd -->
+                        <pci:lib name="jquery" href="libs/jquery.min.js"/><!-- dep -->
+                    </pci:libraries>
+                </pci:resources>
+
+                <pci:properties>
+                    <pci:entry key="literal">0</pci:entry>
+                    <pci:entry key="prompt">&lt;div&gt;Do you like reading ? &lt;img src=&quot;http://cdn1.askiitians.com/Images/2014129-11594625-1242-books.jpg&quot;&gt;&lt;/div&gt;</pci:entry>
+                    <pci:entry key="scale">9</pci:entry>
+                    <pci:entry key="label-min">Hate it</pci:entry>
+                    <pci:entry key="label-max">Love it</pci:entry>
+                </pci:properties>
+
+                <pci:markup>
+                    <xhtml:div id="likert3" class="likert-scale">
+                        <xhtml:div class="prompt"></xhtml:div>
+                        <xhtml:ul class="likert"></xhtml:ul>
+                    </xhtml:div>
+                </pci:markup>
+
+            </pci:portableCustomInteraction>
+        </customInteraction>
+
+    </itemBody>
+    
+</assessmentItem>

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+	xml:base="http://www.tao.lu/Ontologies/TAOLTI.rdf#" 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#"
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#" 
+	xmlns:taolti="http://www.tao.lu/Ontologies/TAOLTI.rdf#"
+>
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIToolDelivery">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LTITool"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[LTI Delivery Execution Tool]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Tool to allow test takers to take a delivery from within an tool consumer.]]></rdfs:comment>
+    <taolti:ToolService><![CDATA[ltiDeliveryProvider_models_classes_LTIDeliveryTool]]></taolti:ToolService>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#LinkDelivery">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Linked delivery]]></rdfs:label>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiIncomingLink"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#Delivery"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#LinkDeliveryExecution">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiObject"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[LTI Delivery Link Execution]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Link between delivery Tool and Consumer]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#LinkDeliveryExecutionLink">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Linked delivery]]></rdfs:label>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LinkDeliveryExecution"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiIncomingLink"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#LinkDeliveryExecutionUser">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Linked delivery]]></rdfs:label>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LinkDeliveryExecution"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#Delivery"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#LinkDeliveryExecutionExecution">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Linked delivery]]></rdfs:label>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LinkDeliveryExecution"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#Delivery"/>
+  </rdf:Description>
+</rdf:RDF>
+ 

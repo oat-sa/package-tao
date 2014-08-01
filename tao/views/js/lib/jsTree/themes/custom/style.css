@@ -1,0 +1,77 @@
+/* BACKGROUND */
+.tree-custom .ltr, .tree-custom .rtl { background:none left top repeat; min-width:100%; _width:100%; margin-left:0; margin-right:0; display:table; }
+.tree-custom .ltr > li.leaf, .tree-custom .rtl > li.leaf { background-image:none; }
+/* LOCKED */
+.tree-custom .locked li a { color:gray; }
+/* DOTS */
+.tree-custom ul { background-position:6px 1px; background-repeat:repeat-y; background-image:url(data:image/gif;base64,R0lGODlhAgACAIAAAB4dGf///yH5BAEAAAEALAAAAAACAAIAAAICRF4AOw==); _background-image:url("dot_for_ie.gif"); *background-image:url("dot_for_ie.gif"); }
+.tree-custom li { background-position:-64px -18px; background-repeat:no-repeat; background-image:url("icons.png"); }
+.tree-custom ul li { padding-left:12px; }
+/* NO DOTS */
+.tree-custom .no_dots, .tree-custom .no_dots ul { background:transparent; }
+.tree-custom .no_dots li.leaf { background-image:none; background-color:transparent; }
+/* OPEN or CLOSED */
+.tree-custom li.open { background:url("icons.png") -32px -48px no-repeat; }
+.tree-custom li.closed, #jstree-dragged.tree-custom li li.open { background:url("icons.png") -48px -32px no-repeat; }
+#jstree-marker { background-image:url("icons.png"); }
+/* DEFAULT, HOVER, CLICKED, LOADING STATES */
+.tree-custom li.node-class a{margin: 1px 0px 1px 0px;border:solid 1px white;}
+.tree-custom li a { border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; }
+.tree-custom li.node-draggable a {background:#eee; border:1px solid #ddd;}
+.tree-custom li a:hover, .tree-custom li a.hover { background:#FDD5DF; border:1px solid #D00239; padding:0px; font-size:13px;}
+.tree-custom li a {font-size:13px; padding:0px;}
+.tree-custom li a.clicked, .tree-custom li a.clicked:hover, .tree-custom li span.clicked { background:#FDD5DF; border:1px solid #E7698C; padding:0px; }
+
+
+/* ICONS, don't change the order (the priority is used to override icon) */
+.tree-custom ins { background-image:url("icons.png"); background-position:0 0; background-repeat:no-repeat; }
+.tree-custom .node-root ins{background-image:url("list.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom .node-class ins{background-image:url("class.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom .node-instance ins{background-image:url("bullet_blue.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-item ins{background-image:url("item.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-test ins{background-image:url("test.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-test-taker ins{background-image:url("subject.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.paginate{padding-left:12px; background-image:none !important; display:inline !important;}
+.tree-custom li.paginate-more ins{background-image:url("paginate_more.png");}
+.tree-custom li.paginate-all ins{background-image:url("paginate_all.png");}
+.tree-custom li.paginate a:hover, .tree-custom li.paginate a.hover { background:#91c7ff; border:1px solid blue; padding:0px; font-size:13px;}
+.tree-custom li.paginate a.clicked, .tree-custom li.paginate a.clicked:hover, .tree-custom li.paginate span.clicked { background:none; border:none; }
+.tree-custom li.node-group ins{background-image:url("group.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-result ins{background-image:url("result.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-delivery ins{background-image:url("delivery.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-campaign ins{background-image:url("campaign.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-result-server ins{background-image:url("result_server.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-role ins{background-image:url("user.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-process ins{background-image:url("process.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-process-root ins{background-image:url("process-root.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-activity ins{background-image:url("process_activity.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-activity-initial ins{background-image:url("process_activity_start.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-activity-last ins{background-image:url("process_activity_last.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-activity-unique ins{background-image:url("process_activity_unique.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-property ins{background-image:url("process_property.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-connector ins{background-image:url("process_connector.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-inferenceRule-onBefore ins{background-image:url("process_inferenceRule_before.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-inferenceRule-onAfter ins{background-image:url("process_inferenceRule_after.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-interactive-service ins{background-image:url("process_service.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-consistencyRule ins{background-image:url("process_consistency_rule.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-rule ins{background-image:url("process_rule.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-notification ins{background-image:url("process_notification.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-activity-goto ins{background-image:url("process_activity_goto.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-connector-goto ins{background-image:url("process_connector_goto.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-connector-prev ins{background-image:url("process_connector_prev.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-assignment ins{background-image:url("process_assignment.png"); background-position:0 0; background-repeat:no-repeat;}
+.tree-custom li.node-draggable a, .tree-custom li.node-draggable a.clicked {padding-right:12px;background-image:url("grip.png");background-position: right;background-repeat: no-repeat;}
+
+.tree-custom ul li a.loading ins { background-image:url("throbber.gif") !important; background-position:0 0 !important; } /* UL is added to make selector stronger */
+.tree-custom li a ins.forbidden { background-position:-16px -16px; }
+.tree-custom .locked li a ins { background-position:0 -48px; }
+.tree-custom li span ins { background-position:-16px 0; }
+.tree li span.cutted {padding: 0px;}
+#jstree-dragged.tree-custom ins { background:url("icons.png") -16px -32px no-repeat; }
+#jstree-dragged.tree-custom ins.forbidden { background:url("icons.png") -16px -16px no-repeat; }
+/* CONTEXT MENU */
+.tree-custom-context a ins { background-image:url("icons.png"); /* background-repeat:no-repeat; */background-position:-64px -64px; }
+.tree-custom-context a ins.create { background-position:0 -16px; }
+.tree-custom-context a ins.rename { background-position:-16px 0px; }
+.tree-custom-context a ins.remove { background-position:0 -32px; }
+.tree-custom-context li a.disabled span{ color:#b0b0b0;}

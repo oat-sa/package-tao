@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file was created using: Onyx Editor, Version 3.4.1 (Full, licensed version), (c)2011 BPS Bildungsportal Sachsen GmbH-->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 imsqti_v2p1.xsd" identifier="Matchsingle_143114773" title="match (single)" adaptive="false" timeDependent="false">
+	<responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="directedPair">
+		<correctResponse>
+			<value>Match29886762 Match30518135</value>
+			<value>Match5256823 Match2607634</value>
+			<value>Match4430647 Match8604807</value>
+			<value>Match1403839 Match5570831</value>
+		</correctResponse>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>0.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>1.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+		<defaultValue>
+			<value>empty</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_26962107" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_18190857" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<itemBody>
+		<div>Der wichtigste, größte und einzig schiffbare Fluss des Bundeslandes Sachsens ist die Elbe. Die verschiedene Quellflüsse der Elbe durchziehen die sächsischen Städte. <br />
+		Ordne anhand des Flusslaufs die Quellflüsse den gegebenen Städten zu.</div>
+		<matchInteraction responseIdentifier="RESPONSE" shuffle="true" maxAssociations="0">
+			<simpleMatchSet>
+				<simpleAssociableChoice identifier="Match29886762" fixed="false" matchMax="1">Weißeritz</simpleAssociableChoice>
+				<simpleAssociableChoice identifier="Match5256823" fixed="false" matchMax="1">Mulde</simpleAssociableChoice>
+				<simpleAssociableChoice identifier="Match4430647" fixed="false" matchMax="1">Saale</simpleAssociableChoice>
+				<simpleAssociableChoice identifier="Match1403839" fixed="false" matchMax="1">Spree</simpleAssociableChoice>
+			</simpleMatchSet>
+			<simpleMatchSet>
+				<simpleAssociableChoice identifier="Match30518135" fixed="false" matchMax="1">Dresden</simpleAssociableChoice>
+				<simpleAssociableChoice identifier="Match2607634" fixed="false" matchMax="1">Leipzig</simpleAssociableChoice>
+				<simpleAssociableChoice identifier="Match8604807" fixed="false" matchMax="1">Halle</simpleAssociableChoice>
+				<simpleAssociableChoice identifier="Match5570831" fixed="false" matchMax="1">Bautzen</simpleAssociableChoice>
+			</simpleMatchSet>
+		</matchInteraction>
+	</itemBody>
+	<responseProcessing>
+		<responseCondition>
+			<responseIf>
+				<isNull>
+					<variable identifier="RESPONSE" />
+				</isNull>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">empty</baseValue>
+				</setOutcomeValue>
+			</responseIf>
+			<responseElseIf>
+				<match>
+					<variable identifier="RESPONSE" />
+					<correct identifier="RESPONSE" />
+				</match>
+				<setOutcomeValue identifier="SCORE">
+					<sum>
+						<variable identifier="SCORE" />
+						<variable identifier="MAXSCORE" />
+					</sum>
+				</setOutcomeValue>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">correct</baseValue>
+				</setOutcomeValue>
+			</responseElseIf>
+			<responseElse>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">incorrect</baseValue>
+				</setOutcomeValue>
+			</responseElse>
+		</responseCondition>
+		<setOutcomeValue identifier="FEEDBACK_26962107">
+			<and>
+				<match>
+					<baseValue baseType="identifier">correct</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+		<setOutcomeValue identifier="FEEDBACK_18190857">
+			<and>
+				<match>
+					<baseValue baseType="identifier">incorrect</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+	</responseProcessing>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_26962107" showHide="show" title="Richtig!">Die Elbe durchzieht den Freistaat von Südosten nach Nordwesten. Wichtige Quellflüsse sind die Mulde, die Weißeritz, die Zschopau, die Weiße Elster und die Spree, deren allgemeine Fließrichtung Norden ist und die ebenfalls zum Fluss-System der Elbe gehören.</modalFeedback>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_18190857" showHide="show" title="Leider Falsch!">Die Elbe durchzieht den Freistaat von Südosten nach Nordwesten. Wichtige Quellflüsse sind die Mulde, die Weißeritz, die Zschopau, die Weiße Elster und die Spree, deren allgemeine Fließrichtung Norden ist und die ebenfalls zum Fluss-System der Elbe gehören.</modalFeedback>
+</assessmentItem>

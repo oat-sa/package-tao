@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage fr-FR
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAOLTI.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIToolDelivery">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage fr-FR
+    @source LTI Delivery Execution Tool
+    @subject http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIToolDelivery
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fr-FR"><![CDATA[LTI Delivery Execution Tool]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage fr-FR
+    @source Tool to allow test takers to take a delivery from within an tool consumer.
+    @subject http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIToolDelivery
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="fr-FR"><![CDATA[Tool to allow test takers to take a delivery from within an tool consumer.]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#LinkDelivery">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage fr-FR
+    @source Linked delivery
+    @subject http://www.tao.lu/Ontologies/TAOLTI.rdf#LinkDelivery
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fr-FR"><![CDATA[Linked delivery]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#LinkDeliveryExecution">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage fr-FR
+    @source LTI Delivery Link Execution
+    @subject http://www.tao.lu/Ontologies/TAOLTI.rdf#LinkDeliveryExecution
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fr-FR"><![CDATA[LTI Delivery Link Execution]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage fr-FR
+    @source Link between delivery Tool and Consumer
+    @subject http://www.tao.lu/Ontologies/TAOLTI.rdf#LinkDeliveryExecution
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="fr-FR"><![CDATA[Link between delivery Tool and Consumer]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#LinkDeliveryExecutionLink">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage fr-FR
+    @source Linked delivery
+    @subject http://www.tao.lu/Ontologies/TAOLTI.rdf#LinkDeliveryExecutionLink
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fr-FR"><![CDATA[Linked delivery]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#LinkDeliveryExecutionUser">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage fr-FR
+    @source Linked delivery
+    @subject http://www.tao.lu/Ontologies/TAOLTI.rdf#LinkDeliveryExecutionUser
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fr-FR"><![CDATA[Linked delivery]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#LinkDeliveryExecutionExecution">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage fr-FR
+    @source Linked delivery
+    @subject http://www.tao.lu/Ontologies/TAOLTI.rdf#LinkDeliveryExecutionExecution
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fr-FR"><![CDATA[Linked delivery]]></rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

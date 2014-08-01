@@ -1,0 +1,8 @@
+/* Do not rescope if already scoped ;) ! */
+#myId .myClass {
+    color: white;
+}
+
+#myId .myRed, #myId .myRed {
+    color: red;
+}

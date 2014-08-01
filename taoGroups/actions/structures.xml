@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+	<structure id="groups" name="Groups" level="3" visible="true">
+		<description>Group test takers according to global features and classifications.</description>
+		<sections>
+			<section id="manage_groups" name="Manage groups" url="/taoGroups/Groups/index">
+				<trees>
+					<tree name="Groups library"
+						className="Group"
+						dataUrl="/taoGroups/Groups/getOntologyData"
+						editClassUrl="/taoGroups/Groups/editGroupClass"
+						editInstanceUrl="/taoGroups/Groups/editGroup"
+						addInstanceUrl="/taoGroups/Groups/addInstance"
+						addSubClassUrl="/taoGroups/Groups/addSubClass"
+						deleteUrl="/taoGroups/Groups/delete"
+						duplicateUrl="/taoGroups/Groups/cloneInstance"
+						moveInstanceUrl="/taoGroups/Groups/moveInstance"
+					/>
+				</trees>
+				<actions>
+					<action name="search" url="/taoGroups/Groups/search" context="*" />
+					<action name="new class" js="subClass" url="/taoGroups/Groups/addSubClass" context="class" />
+					<action name="new group" js="instanciate" url="/taoGroups/Groups/addInstance" context="class" />
+					<action name="delete" js="removeNode" url="/taoGroups/Groups/delete" context="resource" />
+					<action name="duplicate" js="duplicateNode" url="/taoGroups/Groups/cloneInstance" context="instance" />
+					<action name="move" js="gmoveNode" url="" context="instance" />
+					<action name="lists"  url="/tao/Lists/index"  context="*" />
+					<action name="meta data" js="loadMetaData" url="/tao/MetaData/getMetaData"  context="resource" />
+					<action name="export" url="/tao/Export/index"  context="resource" />
+					<action name="import" url="/tao/Import/index"  context="class" />
+				</actions>
+			</section>
+		</sections>
+	</structure>
+</structures>

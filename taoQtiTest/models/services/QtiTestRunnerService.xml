@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE services SYSTEM "../../tao/doc/sas.dtd">
+<services>
+	<description>Other Delivery services</description>
+	
+	<!-- item container service -->
+	<service>
+		<name>QTI test runner</name>
+		<description>runs a QTI 2.1 test</description>
+		<location url="/taoQtiTest/TestRunner/index">
+			<param key="deliveryUri" value="^deliveryUri" />
+			<param key="testUri" value="^testUri" />
+		</location>
+	</service>
+</services>

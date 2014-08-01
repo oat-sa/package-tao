@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemBody xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+	<p>
+		Much to the dismay of Star Wars fans, the 2001 UK national census classified people who identified themselves as
+		<i>Jedi Knights</i>
+		as having no religion. In fact, the
+		<i>Jedi</i>
+		accounted for more than 4% of this group!
+	</p>
+	<sliderInteraction responseIdentifier="RESPONSE" lowerBound="0" upperBound="100" step="1" stepLabel="false">
+		<prompt>
+			In total, what percentage of the UK population do you think were eventually classifed as having no religion?
+		</prompt>
+	</sliderInteraction>
+</itemBody>
