@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  imsqti_v2p1.xsd"
+	identifier="space-shuttle-30-years-of-adventure" title="The Space Shuttle, 30 years of adventure" adaptive="false" timeDependent="false">
+	<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+		<correctResponse>
+			<value>Atlantis</value>
+		</correctResponse>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer">
+		<defaultValue>
+			<value>0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<stylesheet href="style.css" type="text/css" media="screen" title="The Space Shuttle, 30 Years of Adventure"/>
+	<itemBody id="itemBody">
+		<p id="stimulus">
+			During more than 30 years, the American Space Shuttle transported 355 astronauts in space over 135
+			orbital launchings from Cap Canaveral, Florida. This 2046-ton Behemoth traveled 870 million kilometers
+			around the Earth from 12th of April 1981 to 21st of July 2011. The National Aeronautics and Space
+			Administration (NASA) built 5 Space Shuttles: Columbia, Challenger, Discovery, Atlantis and Endeavour.
+		</p>
+		<choiceInteraction id="interaction" responseIdentifier="RESPONSE" shuffle="false" maxChoices="1">
+			<prompt>Which was the last Space Shuttle going into space during the STS-135 mission in July 2011?</prompt>
+			<simpleChoice identifier="Discovery">Discovery</simpleChoice>
+			<simpleChoice identifier="Challenger">Challenger</simpleChoice>
+			<simpleChoice identifier="Pathfinder">Pathfinder</simpleChoice>
+			<simpleChoice identifier="Atlantis">Atlantis</simpleChoice>
+			<simpleChoice identifier="Endeavour">Endeavour</simpleChoice>
+		</choiceInteraction>
+	</itemBody>
+	<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+</assessmentItem>
+<!-- NASA Image, free to use. http://en.wikipedia.org/wiki/File:STS120LaunchHiRes-edit1.jpg -->

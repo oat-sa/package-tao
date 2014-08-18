@@ -1,0 +1,133 @@
+@import "inc/bootstrap";
+@import "inc/fonts";
+@import "inc/normalize";
+@import "inc/main";
+@import "inc/feedback";
+@import "inc/grid";
+@import "inc/select2";
+@import "inc/toolbars";
+@import "inc/tooltip";
+@import "inc/resourcemgr";
+@import "inc/mediasizer";
+
+
+#tab-items_preview {
+    display: none !important;
+}
+
+
+
+// better z-indices on mobiles
+body {
+    z-index: 0;
+}
+
+// set all block elements to have no space on top
+address, article, aside, audio, blockquote, canvas, dd, div, dl, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header,
+hgroup, hr, noscript, ol, output, p, pre, section, table, tfoot, ul, video, main {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+// add margin to some of the block elements
+blockquote, dd, dl, fieldset, figure, h1, h2, h3, h4, h5, h6,
+hr, ol, p, pre, table, ul {
+    margin-bottom: 10px;
+}
+
+iframe {
+    border: none;
+}
+
+code {
+    background: whiten($lightBlueGrey, .5);
+    padding: 2px 6px;
+    display: inline-block;
+    margin: 0 3px;
+    @include border-radius();
+}
+
+code, pre {
+    font-family: $monospaceFont;
+    @include font-size(14);
+}
+
+input {
+    @include simple-border();
+    @include border-radius(1);
+}
+
+.overlay, .ui-widget-overlay {
+    background: white(.9);
+}
+
+.ui-widget {
+    font-family: $regularFont;
+    font-size: 1.4rem !important;
+}
+
+.ui-widget .ui-widget {
+    font-size: 1.4rem !important;
+}
+
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+    font-family: $regularFont;
+    font-size: 1.4rem !important;
+}
+
+a {
+    color: $info;
+    &:hover {
+        color: whiten($info, .1);
+        text-decoration: underline
+    }
+}
+
+a[rel="external"] span.icon-external {
+    &:before {
+        @include font-size(11);
+        padding: 0 0 0 4px;
+        position: relative;
+        top: 1px;
+    }
+}
+
+.tao-scope {
+    @import "inc/buttons";
+    @import "inc/jquery-ui";
+    @import "inc/jquery.nouislider";
+    @import "inc/base";
+    @import "inc/forms";
+    @import "inc/components";
+
+    position: relative;
+
+    font-family: $regularFont;
+    font-weight: normal;
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    b, .b, strong, .strong {
+        font-weight: bold;
+    }
+
+    a.block {
+        color: $textColor;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+        font-family: $regularFont;
+        font-weight: normal;
+    }
+
+    select {
+        max-width: 100%
+    }
+}

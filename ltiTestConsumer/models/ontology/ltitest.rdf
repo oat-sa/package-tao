@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<rdf:RDF
+	xml:base="http://www.tao.lu/Ontologies/TAOTest.rdf#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:test="http://www.tao.lu/Ontologies/TAOTest.rdf#"
+	xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#"	
+>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOTest.rdf#LtiTestModel">
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOTest.rdf#TestModel"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[LTI consumer]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[LTI consumer test model]]></rdfs:comment>
+    <test:TestModelImplementation><![CDATA[ltiTestConsumer_models_classes_LtiTestModel]]></test:TestModelImplementation>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOTest.rdf#LtiTestContent">
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiOutgoingLink"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[LTI Resource Link]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[LTI consumer test model]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

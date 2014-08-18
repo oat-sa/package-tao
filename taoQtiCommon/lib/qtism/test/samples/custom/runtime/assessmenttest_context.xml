@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.taotesting.com/xsd/qticompact_v1p0.xsd"
+	identifier="assessmenttest_context" title="AssessmentTest Context">
+	<outcomeDeclaration identifier="OUTCOME1" cardinality="single" baseType="string"/>
+	<testPart identifier="P01" navigationMode="linear" submissionMode="individual">
+		<assessmentSection identifier="S01" fixed="false" title="Section1" visible="false">
+			<assessmentItemRef identifier="Q01" href="./Q01.xml" fixed="false" timeDependent="false">
+				<weight identifier="W01" value="1.0"/>
+				<weight identifier="W02" value="1.1"/>
+				<outcomeDeclaration identifier="var1" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="var2" cardinality="multiple" baseType="float"/>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q02" href="./Q02.xml" fixed="false" timeDependent="false">
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q03" href="./Q03.xml" fixed="false" timeDependent="false">
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q04" href="./Q04.xml" fixed="false" timeDependent="false">
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q05" href="./Q05.xml" fixed="false" timeDependent="false">
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q06" href="./Q06.xml" fixed="false" timeDependent="false">
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q07" href="./Q07.xml" fixed="false" timeDependent="false">
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q08" href="./Q08.xml" fixed="false" timeDependent="false">
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q09" href="./Q09.xml" fixed="false" timeDependent="false">
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q10" href="./Q10.xml" fixed="false" timeDependent="false">
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q11" href="./Q11.xml" fixed="false" timeDependent="false">
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q12" href="./Q12.xml" fixed="false" timeDependent="false">
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q13" href="./Q14.xml" fixed="false" timeDependent="false">
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q14" href="./Q15.xml" fixed="false" timeDependent="false">
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q15" href="./Q15.xml" fixed="false" timeDependent="false">
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q16" href="./Q16.xml" fixed="false" timeDependent="false">
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q17" href="./Q17.xml" fixed="false" timeDependent="false">
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q18" href="./Q18.xml" fixed="false" timeDependent="false">
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q19" href="./Q19.xml" fixed="false" timeDependent="false">
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer"/>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Q20" href="./Q20.xml" fixed="false" timeDependent="false">
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer"/>
+			</assessmentItemRef>
+		</assessmentSection>
+	</testPart>
+</assessmentTest>

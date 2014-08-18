@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+    <structure id="settings" name="Settings" level="11" visible="false">
+        <description>Manage Result Servers</description>
+        <sections>
+            <section id="manage_resultservers" name="Result Server Manager"
+                     url="/taoResultServer/ResultServerMgt/index">
+                <trees>
+                    <tree name="Result Servers library"
+                          className="Result Server"
+                          dataUrl="/taoResultServer/ResultServerMgt/getResultServers"
+                          editClassUrl="/taoResultServer/ResultServerMgt/editResultServerClass"
+                          editInstanceUrl="/taoResultServer/ResultServerMgt/editResultServer"
+                          addInstanceUrl="/taoResultServer/ResultServerMgt/addResultServer"
+                          addSubClassUrl="/taoResultServer/ResultServerMgt/addResultServerClass"
+                          deleteUrl="/taoResultServer/ResultServerMgt/delete"
+                          duplicateUrl="/taoResultServer/ResultServerMgt/cloneInstance"
+                          moveInstanceUrl="/taoResultServer/ResultServerMgt/moveInstance"
+                            />
+                </trees>
+                <actions>
+
+                    <action name="new class" js="subClass" url="/taoResultServer/ResultServerMgt/addResultServerClass"
+                            context="class"/>
+                    <action name="new result server" js="instanciate"
+                            url="/taoResultServer/ResultServerMgt/addResultServer" context="class"/>
+                    <action name="delete" js="removeNode" url="/taoResultServer/ResultServerMgt/delete"
+                            context="resource"/>
+                    <action name="move" js="moveNode" url="" context="instance"/>
+                    <action name="migrate" url="/taoResultServer/ResultServerMgt/migrate" context="*"/>
+
+                </actions>
+            </section>
+        </sections>
+    </structure>
+</structures>

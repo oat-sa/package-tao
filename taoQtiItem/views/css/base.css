@@ -1,0 +1,39 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2013 (original work) Open Assessment Techonologies SA (under the project TAO-PRODUCT);
+ *               
+ * Share by both authoring and runtime
+ */
+body {font-family:Arial, Helvetica, sans-serif; font-size:14px; }
+h1, h2, h3, h4, h5, h6 {font-weight:bold; margin:3px 0px 6px 3px; }
+h1 {font-size:18px; color:black; }
+h2 {font-size:16px; }
+h3 {font-size:14px; }
+h4 {font-size:13px; }
+h5 {font-size:12px; }
+h6 {font-size:11px; }
+p {margin:10px 0 10px 0; }
+ol, ul, li {font-size:14px; }
+
+/*table*/
+td,th{border:none;}
+
+/*bloc alignment*/
+.qti_align_left{text-align:left;}
+.qti_align_right{text-align:right;}
+.qti_align_center{text-align:center;}
+.qti_align_justify{text-align:justify; text-justify:inter-word;}
+blockquote.qti_indent{margin: 0 0 0 40px; border:none; padding:0px;}

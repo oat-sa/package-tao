@@ -1,0 +1,27 @@
+/*add some style here*/
+ul.likert{
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 0;
+}
+
+ul.likert li{
+    float: left;
+    text-align: left;
+    list-style-type: none;
+}
+
+ul.likert li input{margin: 0 3px;}
+
+.likert-scale{
+    width:100%;
+    padding:30px 30px 50px;
+    background-color:#eee;
+    margin:20px 0;
+}
+
+.prompt {position:relative;}
+
+.likert-label {min-width:90px; color: #444;}
+.likert-label-min {text-align: right;}
+.likert-label-max {text-align: left;}

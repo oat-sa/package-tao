@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="media-prompt" title="media prompt" label="" xml:lang="en-US" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+        <correctResponse>
+            <value>Choice_1</value>
+        </correctResponse>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+    <itemBody>
+        <div>      
+            <object data="https://www.youtube.com/watch?v=Jsiy4TxgIME" type="video/youtube"/>
+
+            <div>
+                <br/>
+            </div>
+            <div>
+                <br/>
+                <choiceInteraction responseIdentifier="RESPONSE" shuffle="false" maxChoices="1" minChoices="0">
+                    <prompt>
+                        <object data="http://tao.localdomain/filemanager/views/data/media/echo-hereweare.mp4" type="video/mp4"/>
+                        <m:math>
+                            <m:semantics>
+                                <m:mstyle>
+                                    <m:mrow class="MJX-TeXAtom-ORD">
+                                        <m:mi>x</m:mi>
+                                        <m:mo>=</m:mo>
+                                        <m:mrow class="MJX-TeXAtom-ORD">
+                                            <m:mfrac>
+                                                <m:mrow>
+                                                    <m:mo>−<!-- − --></m:mo>
+                                                    <m:mi>b</m:mi>
+                                                    <m:mo>±<!-- ± --></m:mo>
+                                                    <m:msqrt>
+                                                        <m:msup>
+                                                            <m:mi>b</m:mi>
+                                                            <m:mn>2</m:mn>
+                                                        </m:msup>
+                                                        <m:mo>−<!-- − --></m:mo>
+                                                        <m:mn>4</m:mn>
+                                                        <m:mi>a</m:mi>
+                                                        <m:mi>c</m:mi>
+                                                    </m:msqrt>
+                                                </m:mrow>
+                                                <m:mrow>
+                                                    <m:mn>2</m:mn>
+                                                    <m:mi>a</m:mi>
+                                                </m:mrow>
+                                            </m:mfrac>
+                                        </m:mrow>
+                                    </m:mrow>
+                                </m:mstyle>
+                                <m:annotation encoding="latex">x = {-b \pm \sqrt{b^2-4ac} \over 2a}</m:annotation>
+                            </m:semantics>
+                        </m:math>
+                    </prompt>
+                    <simpleChoice identifier="Choice_1" fixed="false">A 
+                        <m:math>
+                            <m:semantics>
+                                <m:mstyle>
+                                    <m:mrow class="MJX-TeXAtom-ORD">
+                                        <m:mi>x</m:mi>
+                                        <m:mo>=</m:mo>
+                                        <m:mrow class="MJX-TeXAtom-ORD">
+                                            <m:mfrac>
+                                                <m:mrow>
+                                                    <m:mo>−<!-- − --></m:mo>
+                                                    <m:mi>b</m:mi>
+                                                    <m:mo>±<!-- ± --></m:mo>
+                                                    <m:msqrt>
+                                                        <m:msup>
+                                                            <m:mi>b</m:mi>
+                                                            <m:mn>2</m:mn>
+                                                        </m:msup>
+                                                        <m:mo>−<!-- − --></m:mo>
+                                                        <m:mn>4</m:mn>
+                                                        <m:mi>a</m:mi>
+                                                        <m:mi>c</m:mi>
+                                                    </m:msqrt>
+                                                </m:mrow>
+                                                <m:mrow>
+                                                    <m:mn>2</m:mn>
+                                                    <m:mi>a</m:mi>
+                                                </m:mrow>
+                                            </m:mfrac>
+                                        </m:mrow>
+                                    </m:mrow>
+                                </m:mstyle>
+                                <m:annotation encoding="latex">x = {-b \pm \sqrt{b^2-4ac} \over 2a}</m:annotation>
+                            </m:semantics>
+                        </m:math>
+                    </simpleChoice>
+                    <simpleChoice identifier="Choice_2" fixed="false">B
+                        <div>
+                            <br/>
+                        </div>
+                        <div>
+                            <object data="http://tao.localdomain/filemanager/views/data/EgyptianMarch30.mp3" type="audio/mpeg"/>
+                        </div>
+                    </simpleChoice>
+                    <simpleChoice identifier="Choice_3" fixed="false">C</simpleChoice>
+                </choiceInteraction>
+
+            </div>
+        </div>
+    </itemBody>
+    <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+</assessmentItem>

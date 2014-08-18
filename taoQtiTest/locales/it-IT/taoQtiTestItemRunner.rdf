@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage it-IT
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAOTest.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamQtiTestParentServiceCallId">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage it-IT
+    @source QTI Test Parent Service Call ID
+    @subject http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamQtiTestParentServiceCallId
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="it-IT"><![CDATA[QTI Test Parent Service Call ID]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage it-IT
+    @source QTI Test Parent Service Call ID
+    @subject http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamQtiTestParentServiceCallId
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="it-IT"><![CDATA[QTI Test Parent Service Call ID]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#ServiceQtiTestItemRunner">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage it-IT
+    @source QTI Test Item Runner
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#ServiceQtiTestItemRunner
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="it-IT"><![CDATA[QTI Test Item Runner]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage it-IT
+    @source Embed and run an item into a QTI Test. This service initialize the TAO Apis and contexts
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#ServiceQtiTestItemRunner
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="it-IT"><![CDATA[Embed and run an item into a QTI Test. This service initialize the TAO Apis and contexts]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

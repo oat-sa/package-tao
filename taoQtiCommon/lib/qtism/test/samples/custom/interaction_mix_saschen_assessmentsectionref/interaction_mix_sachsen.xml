@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file was created using: Onyx Editor, Version 3.4.3 (Full, licensed version), (c)2012 BPS Bildungsportal Sachsen GmbH-->
+<!-- This file was modified by Jérôme Bogaerts. It now uses an assessmentSectionRef object instead of a plain old assessmentSection -->
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+	identifier="InteractionMixSachsen_1901710679" title="Interaction Mix (Sachsen)">
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>0.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>18.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<testPart identifier="testpartID" navigationMode="nonlinear" submissionMode="individual">
+		<assessmentSection identifier="Container_45665458" title="Container Sektion" visible="true">
+			<assessmentSectionRef identifier="Sektion_181865064" href="./Sektion_181865064.xml"/>
+		</assessmentSection>
+	</testPart>
+	<outcomeProcessing>
+		<setOutcomeValue identifier="SCORE">
+			<sum>
+				<testVariables variableIdentifier="SCORE"/>
+			</sum>
+		</setOutcomeValue>
+	</outcomeProcessing>
+</assessmentTest>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAOItem.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#QTI">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source QTI
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#QTI
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[QTI]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source IMS Question and Test Interoperability
+    @subject http://www.tao.lu/Ontologies/TAOItem.rdf#QTI
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[IMS Question and Test Interoperability]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

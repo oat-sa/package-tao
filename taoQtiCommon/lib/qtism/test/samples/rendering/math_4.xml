@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example taken from the Quadratic Equation article, from Wikipedia (http://en.wikipedia.org/wiki/Quadratic_equation). -->
+<rubricBlock view="candidate" use="A reminder about " xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+	<h1>Quadratic Equations</h1>
+	
+	<h2>Discriminant</h2>
+	<div>
+		<p>
+			In the quadratic formula, the expression underneath the square root sign is called the <em>discriminant</em>
+			of the quadratic equation, and is often represented using an upper case <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mi>D</mi></math> or <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#x394;</mi></math>.
+		</p>
+		<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+			<mrow>
+				<mi>&#x394;</mi>
+				<mo>=</mo>
+				<msup>
+              		<mi>b</mi>
+              		<mn>2</mn>
+            	</msup>
+            	<mo>-</mo>
+            	<mrow>
+	              <mn>4</mn>
+	              <mo>&#x2062;</mo>
+	              <mi>a</mi>
+	              <mo>&#x2062;</mo>
+	              <mi>c</mi>
+            	</mrow>
+			</mrow>
+		</math>
+	</div>
+</rubricBlock>

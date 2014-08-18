@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+@import url("./my/css.css");
+.myClass {
+    /* This is a comment! */
+    border:1px solid #fff;
+    background-color: white;
+}

@@ -1,0 +1,223 @@
+/* Base style that applies on all elements */
+.viewport-hidden {
+    position: absolute;
+    left: -10000px;
+    top: -10000px
+}
+
+s {
+    text-decoration: none;
+}
+
+.deleted {
+    display: none !important;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.clear {
+    display: block;
+    clear: both;
+}
+
+.lft {
+    display: inline;
+    float: left;
+}
+
+.rgt {
+    display: inline;
+    float: right;
+}
+
+img {
+    max-width: 100%
+}
+
+.plain {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.block {
+    display: block;
+    text-decoration: none !important;
+}
+
+label, button {
+    cursor: pointer;
+}
+
+button {
+    vertical-align: middle;
+    outline: 0;
+    overflow: visible;
+    border: none
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.placeholder {
+    color: #777 !important;
+}
+
+::-webkit-input-placeholder {
+    color: #777 !important;
+}
+
+:-moz-placeholder {
+    color: #777 !important;
+}
+
+/* box that contains submit button */
+.submit {
+    text-align: right;
+}
+
+.em, i, em, .i {
+    font-style: italic;
+}
+
+.strong, .b, strong, b {
+    font-weight: bold
+}
+
+small {
+    font-size: 1.1rem;
+    font-size: 11px;
+}
+
+.js .js-hide {
+    display: none
+}
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.txt-ctr {
+    text-align: center
+}
+
+.txt-lft {
+    text-align: left
+}
+
+.txt-rgt {
+    text-align: right
+}
+
+.txt-jty {
+    text-align: justify
+}
+
+/* fake table stuff */
+.tbl {
+    display: table;
+    float: none !important;
+}
+
+.tbl-row {
+    display: table-row;
+    float: none !important;
+}
+
+.tbl-cell {
+    display: table-cell;
+    vertical-align: top;
+    float: none !important;
+}
+
+.debug {
+    border: 1px firebrick solid
+}
+
+// ok, there is no ul.decimal but then again loops are so nice
+$list_styles: armenian, circle, cjk-ideographic, decimal, decimal-leading-zero, disc, georgian, hebrew, hiragana, hiragana-iroha, katakana, katakana-iroha, lower-alpha, lower-greek, lower-latin, lower-roman, square, upper-alpha, upper-latin, upper-roman, none;
+@for $i from 1 through length($list_styles) {
+    ul.#{nth($list_styles, $i)}, ol.#{nth($list_styles, $i)} {
+        list-style-type: #{nth($list_styles, $i)};
+    }
+}
+
+ul, ol {
+    padding-left: 40px;
+    &.none {
+        padding-left: 0
+    }
+    li {
+        vertical-align: text-top !important;
+    }
+}
+
+/* link */
+a {
+    color: $uiClickableHoverBg;
+    &:hover {
+        color: $info;
+        &:before, &:after {
+            text-decoration: none !important;
+        }
+    }
+}
+
+/* disabled elements */
+.disabled, *:disabled {
+    cursor: default;
+    opacity: .7;
+}
+
+table.matrix {
+
+    width: 100%;
+    border: 6px solid whiten($uiClickableDefaultBg, .5);
+    margin-bottom: 10px;
+    td, th {
+        font-weight: normal;
+        padding: 3px 5px;
+        border: 1px solid #ddd;
+    }
+    th {
+        text-align: left;
+        vertical-align: middle;
+        background: whiten($uiClickableDefaultBg, .5);
+    }
+    td {
+        background: transparent;
+        text-align: left;
+        padding: 2px;
+        &.numeric {
+            text-align: right;
+        }
+        label {
+            display: block;
+            margin: 0
+        }
+    }
+    [data-edit], [data-edit] * {
+        border: none;
+        padding: 6px;
+        cursor: pointer
+    }
+    tbody [data-edit] {
+        width: 30px
+    }
+}

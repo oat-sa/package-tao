@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAO.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#TAOObject">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source TAO Object
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#TAOObject
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[TAO Object]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Any resource related to etesting
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#TAOObject
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[Any resource related to etesting]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#List">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source List
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#List
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[List]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#level">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source level
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#level
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[level]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#Languages">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Languages
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#Languages
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[Languages]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#LanguageUsages">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Usage
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#LanguageUsages
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[Usage]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Usage of a language
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#LanguageUsages
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[Usage of a language]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#LanguagesUsages">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Language Usage
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#LanguagesUsages
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[Language Usage]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Language usage class
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#LanguagesUsages
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[Language usage class]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#LanguageUsageGUI">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source GUI Usage
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#LanguageUsageGUI
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[GUI Usage]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Graphical User Interface language usage
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#LanguageUsageGUI
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[Graphical User Interface language usage]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#LanguageUsageData">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Data Usage
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#LanguageUsageData
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[Data Usage]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Data language usage
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#LanguageUsageData
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[Data language usage]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#LanguageOrientations">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Language orientation
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#LanguageOrientations
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[Language orientation]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Language orientation class
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#LanguageOrientations
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[Language orientation class]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#LanguageOrientation">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Orientation
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#LanguageOrientation
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[Orientation]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Orientation of a language
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#LanguageOrientation
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[Orientation of a language]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#OrientationLeftToRight">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Left-to-right orientation
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#OrientationLeftToRight
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[Left-to-right orientation]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Left-to-right language orientation
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#OrientationLeftToRight
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[Left-to-right language orientation]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#OrientationRightToLeft">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Right-to-left orientation
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#OrientationRightToLeft
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[Right-to-left orientation]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Right-to-left language orientation
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#OrientationRightToLeft
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[Right-to-left language orientation]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#User">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source User
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#User
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[User]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source TAO User Class
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#User
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[TAO User Class]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#ManagementRole">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Management
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#ManagementRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[Management]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source The Management Role Class
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#ManagementRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[The Management Role Class]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#WorkerRole">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Worker
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#WorkerRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[Worker]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source The Worker Role Class
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#WorkerRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[The Worker Role Class]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#BackOfficeRole">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Back Office
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#BackOfficeRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[Back Office]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source The BackOffice Role
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#BackOfficeRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[The BackOffice Role]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#FrontOfficeRole">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Front Office
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#FrontOfficeRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[Front Office]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source The FrontOffice Role
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#FrontOfficeRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[The FrontOffice Role]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#ServiceRole">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Service
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#ServiceRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[Service]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source The Service Role
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#ServiceRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[The Service Role]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#GlobalManagerRole">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Global Manager
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#GlobalManagerRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[Global Manager]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source The Global Manager Role
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#GlobalManagerRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[The Global Manager Role]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#TaoManagerRole">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source TAO Manager
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#TaoManagerRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[TAO Manager]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source The TAO Manager Role
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#TaoManagerRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[The TAO Manager Role]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#DeliveryRole">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Test Taker
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#DeliveryRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[Test Taker]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source The Test Taker Role
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#DeliveryRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[The Test Taker Role]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#WorkflowRole">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Workflow Participant
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#WorkflowRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[Workflow Participant]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source The Workflow Participant Role
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#WorkflowRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[The Workflow Role]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#WorkflowUser">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source WfUser
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#WorkflowUser
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[WfUser]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Workflow User: sub class to group the workflow user, not deletable
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#WorkflowUser
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[Workflow User: sub class to group the workflow user, not deletable]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#TAOGUIOrder">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Form Field Order
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#TAOGUIOrder
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[Form Field Order]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source The order of the property within the class
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#TAOGUIOrder
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[The order of the property within the class]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#Lock">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Lock
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#Lock
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[Lock]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Lock information related to the resource
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#Lock
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[Lock information related to the resource]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#LastExtensionUsed">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source LastExtensionUsed
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#LastExtensionUsed
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[LastExtensionUsed]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Saves the last extension the user had visited.
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#LastExtensionUsed
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[Saves the last extension the user had visited.]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#FirstTimeInTao">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source First Time In Tao
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#FirstTimeInTao
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="de-DE"><![CDATA[First Time In Tao]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage de-DE
+    @source Is it the first the user connects to TAO?
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#FirstTimeInTao
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="de-DE"><![CDATA[Is it the first the user connects to TAO?]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

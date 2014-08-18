@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemBody xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+	<p>
+		When flying into the UK, you may well find yourself landing at Edinburgh, Manchester or London Heathrow; but where are these airports actually located?
+	</p>
+	<positionObjectStage>
+		<object type="image/png" data="images/uk.png" width="206" height="280"/>
+		<positionObjectInteraction responseIdentifier="RESPONSE" maxChoices="3">
+			<object type="image/png" data="images/airport.png" width="16" height="16"/>
+		</positionObjectInteraction>
+	</positionObjectStage>
+</itemBody>

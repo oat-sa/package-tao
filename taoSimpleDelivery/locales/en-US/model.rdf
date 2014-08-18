@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage en-US
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAODelivery.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#SimpleDeliveryContent">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage en-US
+    @source Simple
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#SimpleDeliveryContent
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="en-US"><![CDATA[Simple]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage en-US
+    @source The simple delivery content model class
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#SimpleDeliveryContent
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="en-US"><![CDATA[A simple delivery content model]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#ContentTest">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage en-US
+    @source Test
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#ContentTest
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="en-US"><![CDATA[Test]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage en-US
+    @source The test to run for this delivery
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#ContentTest
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="en-US"><![CDATA[The test to run for this delivery]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

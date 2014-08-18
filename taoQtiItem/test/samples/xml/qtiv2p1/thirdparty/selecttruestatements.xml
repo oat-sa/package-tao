@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+    identifier="selecttruestatements" title="Select True Statements" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="identifier">
+        <correctResponse>
+            <value>StmtB</value>
+            <value>StmtC</value>
+        </correctResponse>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+    <outcomeDeclaration identifier="NBCORRECT" cardinality="single" baseType="integer"/>
+    <itemBody>
+        <choiceInteraction responseIdentifier="RESPONSE" maxChoices="4">
+            <prompt>Please select correct statements:</prompt>
+            <simpleChoice identifier="STMTA">This is an incorrect statement.</simpleChoice>
+            <simpleChoice identifier="STMTB">This is a correct statement.</simpleChoice>
+            <simpleChoice identifier="STMTC">This is a correct statement.</simpleChoice>
+            <simpleChoice identifier="STMTD">This is an incorrect statement.</simpleChoice>
+        </choiceInteraction>
+    </itemBody>
+    <responseProcessing>
+        <!-- Infer the number of correct evaluations. -->
+        <responseCondition>
+             <!-- As per specs, an empty container is always considered to be NULL.
+             Then, we have a special case when the RESPONSE variable is empty. -->
+            <responseIf>
+                <isNull>
+                    <variable identifier="RESPONSE"/>
+                </isNull>
+                <setOutcomeValue identifier="NBCORRECT">
+                    <baseValue baseType="integer">2</baseValue>
+                </setOutcomeValue>
+            </responseIf>
+            <responseElse>
+                <responseCondition>
+                    <responseIf>
+                        <not>
+                            <contains>
+                                <variable identifier="RESPONSE"/>
+                                <multiple>
+                                    <baseValue baseType="identifier">STMTA</baseValue>
+                                </multiple>
+                            </contains>
+                        </not>
+                        <setOutcomeValue identifier="NBCORRECT">
+                            <sum>
+                                <variable identifier="NBCORRECT"/>
+                                <baseValue baseType="integer">1</baseValue>
+                            </sum>
+                        </setOutcomeValue>
+                    </responseIf>
+                </responseCondition>
+                <responseCondition>
+                    <responseIf>
+                        <contains>
+                            <variable identifier="RESPONSE"/>
+                            <multiple>
+                                <baseValue baseType="identifier">STMTB</baseValue>
+                            </multiple>
+                        </contains>
+                        <setOutcomeValue identifier="NBCORRECT">
+                            <sum>
+                                <variable identifier="NBCORRECT"/>
+                                <baseValue baseType="integer">1</baseValue>
+                            </sum>
+                        </setOutcomeValue>
+                    </responseIf>
+                </responseCondition>
+                <responseCondition>
+                    <responseIf>
+                        <contains>
+                            <variable identifier="RESPONSE"/>
+                            <multiple>
+                                <baseValue baseType="identifier">STMTC</baseValue>
+                            </multiple>
+                        </contains>
+                        <setOutcomeValue identifier="NBCORRECT">
+                            <sum>
+                                <variable identifier="NBCORRECT"/>
+                                <baseValue baseType="integer">1</baseValue>
+                            </sum>
+                        </setOutcomeValue>
+                    </responseIf>
+                </responseCondition>
+                <responseCondition>
+                    <responseIf>
+                        <not>
+                            <contains>
+                                <variable identifier="RESPONSE"/>
+                                <multiple>
+                                    <baseValue baseType="identifier">STMTD</baseValue>
+                                </multiple>
+                            </contains>
+                        </not>
+                        <setOutcomeValue identifier="NBCORRECT">
+                            <sum>
+                                <variable identifier="NBCORRECT"/>
+                                <baseValue baseType="integer">1</baseValue>
+                            </sum>
+                        </setOutcomeValue>
+                    </responseIf>
+                </responseCondition>
+            </responseElse>
+        </responseCondition>
+        
+        <!-- Actual scoring from NBCORRECT. -->
+        <responseCondition>
+            <responseIf>
+            <match>
+                <variable identifier="NBCORRECT"/>
+                <baseValue baseType="integer">4</baseValue>
+            </match>
+            <setOutcomeValue identifier="SCORE">
+                <baseValue baseType="float">5.0</baseValue>
+            </setOutcomeValue>
+            </responseIf>
+            <responseElseIf>
+                <match>
+                    <variable identifier="NBCORRECT"/>
+                    <baseValue baseType="integer">3</baseValue>
+                </match>
+                <setOutcomeValue identifier="SCORE">
+                    <baseValue baseType="float">3.0</baseValue>
+                </setOutcomeValue>
+            </responseElseIf>
+            <responseElseIf>
+                <match>
+                    <variable identifier="NBCORRECT"/>
+                    <baseValue baseType="integer">2</baseValue>
+                </match>
+                <setOutcomeValue identifier="SCORE">
+                    <baseValue baseType="float">1.0</baseValue>
+                </setOutcomeValue>
+            </responseElseIf>
+            <responseElse>
+                <setOutcomeValue identifier="SCORE">
+                    <baseValue baseType="float">0.0</baseValue>
+                </setOutcomeValue>
+            </responseElse>
+        </responseCondition>
+    </responseProcessing>
+</assessmentItem>

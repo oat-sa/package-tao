@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+	<structure id="items" name="Items" level="0" visible="true">
+		<description>Create and design items and exercises.</description>
+		<sections>
+			<section id="manage_items" name="Manage items" url="/taoItems/Items/index">
+				<trees>
+					<tree name="Items library"
+						className="Item"
+						dataUrl="/taoItems/Items/getOntologyData"
+						editClassUrl="/taoItems/Items/editItemClass"
+						editInstanceUrl="/taoItems/Items/editItem"
+						addInstanceUrl="/taoItems/Items/addInstance"
+						addSubClassUrl="/taoItems/Items/addSubClass"
+						deleteUrl="/taoItems/Items/delete"
+						duplicateUrl="/taoItems/Items/cloneInstance"
+						moveInstanceUrl="/taoItems/Items/moveInstance"
+					/>
+				</trees>
+				<actions>
+					<action name="search" url="/taoItems/Items/search" context="*" />
+					<action name="new class" js="subClass" url="/taoItems/Items/addSubClass" context="class" />
+					<action name="new item" js="instanciate" url="/taoItems/Items/addInstance" context="class" />
+					<action name="delete" js="removeNode" url="/taoItems/Items/delete" context="resource" />
+					<action name="duplicate" js="duplicateNode" url="/taoItems/Items/cloneInstance" context="instance" />
+					<action name="move" js="moveNode" url="/taoItems/Items/moveInstance" context="instance" />
+					<action name="preview" js="fullScreen" url="/taoItems/Items/fullScreenPreview" context="instance" />
+					<action name="lists"  url="/tao/Lists/index"  context="*" />
+					<action name="meta data" js="loadMetaData" url="/tao/MetaData/getMetaData"  context="resource" />
+					<action name="export" url="/taoItems/ItemExport/index"  context="resource" />
+					<action name="import" url="/taoItems/ItemImport/index"  context="class" />
+				</actions>
+			</section>
+			<section id="items_authoring" name="Authoring" url="/taoItems/Items/authoring" />
+            <section id="items_preview" name="Preview" url="/taoItems/ItemPreview/index" />
+		</sections>
+	</structure>
+</structures>

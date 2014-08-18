@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+	<structure id="delivery" name="Deliveries" level="4" visible="true">
+		<description>Prepare, publish deliveries sessions.</description>
+		<sections>
+
+			<section id="manage_delivery_assembly" name="Deliveries" url="/taoDelivery/Delivery/index">
+				<trees>
+					<tree name="Deliveries library"
+						className="Delivery"
+						dataUrl="/taoDelivery/Delivery/getOntologyData"
+						editClassUrl="/taoDelivery/Delivery/editDeliveryClass"
+						editInstanceUrl="/taoDelivery/Delivery/editDelivery"
+						addSubClassUrl="/taoDelivery/Delivery/addSubClass"
+						deleteUrl="/taoDelivery/Delivery/delete"
+						moveInstanceUrl="/taoDelivery/Delivery/moveInstance"
+					/>
+				</trees>
+				<actions>
+					<action name="search" url="/taoDelivery/Delivery/search" context="*" />
+					<action name="new class" js="subClass" url="/taoDelivery/Delivery/addSubClass" context="class" />
+					<action name="new delivery" url="/taoSimpleDelivery/Authoring/wizard" context="class" />
+					<action name="delete" js="removeNode" url="/taoDelivery/Delivery/delete" context="resource" />
+					<action name="move" js="moveNode" url="" context="instance" />
+					<action name="LTI" url="/ltiDeliveryProvider/DeliveryLinks/index" context="instance" />
+				</actions>
+			</section>
+			<section id="manage_delivery_templates" name="Delivery Templates" url="/taoDelivery/DeliveryTemplate/index" >
+				<trees>
+					<tree name="Delivery Templates"
+						className="Delivery"
+						dataUrl="/taoDelivery/DeliveryTemplate/getOntologyData"
+						editClassUrl="/taoDelivery/DeliveryTemplate/index"
+						editInstanceUrl="/taoDelivery/DeliveryTemplate/editDelivery"
+						addInstanceUrl="/taoDelivery/DeliveryTemplate/addDelivery"
+						deleteUrl="/taoDelivery/DeliveryTemplate/delete"
+					/>
+				</trees>
+				<actions>
+					<action name="new template" js="instanciate" url="/taoDelivery/DeliveryTemplate/addDelivery" context="class" />
+					<action name="delete" js="removeNode" url="/taoDelivery/DeliveryTemplate/delete" context="resource" />
+				</actions>
+			</section>			
+		</sections>
+	</structure>
+    <entrypoint id="deliveryServer" title="Test-Takers" label="TAO Delivery Server" url="taoDelivery/DeliveryServer/index">
+        <description><![CDATA[Take or continue a test.]]></description>
+    </entrypoint>
+</structures>

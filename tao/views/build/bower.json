@@ -1,0 +1,13 @@
+{
+  "name": "tao",
+  "version": "2.6.0",
+  "dependencies": {
+        "jquery" : "1.10.2",
+        "jquery.ui" : "1.8.24",
+        "requirejs" : "2.1.9",
+        "ckeditor" : "latest"
+  },
+  "devDependencies": {
+        "qunit" : "1.12.0"
+  }
+}

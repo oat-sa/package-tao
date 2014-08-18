@@ -1,0 +1,9 @@
+Options +FollowSymLinks
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !/css/ [NC]
+RewriteCond %{REQUEST_URI} !/js/ [NC]
+RewriteCond %{REQUEST_URI} !/images/ [NC]
+RewriteCond %{REQUEST_URI} !/production.html [NC]
+RewriteRule ^.*$ http://tao.localdomain/tao/install/production.html
+</IfModule>

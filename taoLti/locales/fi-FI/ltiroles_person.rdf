@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage fi-FI
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.imsglobal.org/imspurl/lis/v1/vocab/person#">
+  <rdf:Description rdf:about="http://www.imsglobal.org/imspurl/lis/v1/vocab/person#Learner">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage fi-FI
+    @source LTI Learner
+    @subject http://www.imsglobal.org/imspurl/lis/v1/vocab/person#Learner
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fi-FI"><![CDATA[LTI Learner]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage fi-FI
+    @source The LTI Institution Learner Role
+    @subject http://www.imsglobal.org/imspurl/lis/v1/vocab/person#Learner
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="fi-FI"><![CDATA[The LTI Learner Role]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.imsglobal.org/imspurl/lis/v1/vocab/person#Instructor">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage fi-FI
+    @source LTI Instructor
+    @subject http://www.imsglobal.org/imspurl/lis/v1/vocab/person#Instructor
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fi-FI"><![CDATA[LTI Instructor]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage fi-FI
+    @source The LTI Institution Instructor Role
+    @subject http://www.imsglobal.org/imspurl/lis/v1/vocab/person#Instructor
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="fi-FI"><![CDATA[The LTI Instructor Role]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.imsglobal.org/imspurl/lis/v1/vocab/person#Student">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage fi-FI
+    @source LTI Institution Student
+    @subject http://www.imsglobal.org/imspurl/lis/v1/vocab/person#Student
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fi-FI"><![CDATA[LTI Institution Student]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage fi-FI
+    @source The LTI Student Role
+    @subject http://www.imsglobal.org/imspurl/lis/v1/vocab/person#Student
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="fi-FI"><![CDATA[The LTI Student Role]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.imsglobal.org/imspurl/lis/v1/vocab/person#Administrator">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage fi-FI
+    @source LTI Administrator
+    @subject http://www.imsglobal.org/imspurl/lis/v1/vocab/person#Administrator
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="fi-FI"><![CDATA[LTI Administrator]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage fi-FI
+    @source The LTI Administrator Role
+    @subject http://www.imsglobal.org/imspurl/lis/v1/vocab/person#Administrator
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="fi-FI"><![CDATA[The LTI Administrator Role]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

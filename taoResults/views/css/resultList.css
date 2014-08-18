@@ -1,0 +1,45 @@
+/**
+* Styles used in the resultList.tpl template
+*/
+/*The facet based used to fitler delivery results */
+#filter-container {
+    width:19%;
+    padding:0px;
+    margin:0px
+}
+
+/*The workspace */
+#main-container {
+    width:100%;
+
+
+}
+
+/*The grid of delivery results according to the filters */
+#inspect-results-container {
+    padding:0px;
+    overflow:auto;
+    padding-bottom: 20px;
+}
+
+.ui-jqgrid-bdiv{
+    width:100%;
+}
+
+th td tr tbody table .ui-jqgrid tr.jqgrow td{
+    padding:0px;
+    margin:0px;
+    border: 0px;
+}
+
+
+#buildTableButton{
+   position: relative;
+   top: 5px;
+}
+#buildTableButton:hover{
+    background:none;
+    cursor:pointer;
+    background-color:#D00239 ;
+    color:#fff;
+    }

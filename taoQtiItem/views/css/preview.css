@@ -1,0 +1,157 @@
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/**
+ * Use icon within sass: @inclue icon('down');
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\000033}}
+#preview-overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 9995;
+  position: absolute;
+  left: 0;
+  top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000312}}
+  #preview-overlay.preview-desktop .mobile-only {
+    display: none !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000317}}
+  #preview-overlay.preview-mobile .desktop-only {
+    display: none !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000321}}
+  #preview-overlay .preview-container {
+    display: table;
+    padding: 0  0 20px 0;
+    width: 100%;
+    height: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000327}}
+  #preview-overlay .preview-utility-bar {
+    background: #dcdee1;
+    padding: 13px 0 0 0;
+    height: 55px;
+    margin-bottom: 30px;
+    z-index: 9996;
+    position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000335}}
+  #preview-overlay .preview-utility-bar-inner {
+    max-width: 960px;
+    min-width: 800px;
+    margin: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000340}}
+    #preview-overlay .preview-utility-bar-inner .feedback {
+      color: #0e5d91;
+      margin-top: 2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000343}}
+      #preview-overlay .preview-utility-bar-inner .feedback .icon-info {
+        font-size: 18px;
+        font-size: 1.8rem;
+        position: relative;
+        top: 2px;
+        left: 0;
+        padding-right: 8px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000351}}
+    #preview-overlay .preview-utility-bar-inner li {
+      margin-left: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000354}}
+    #preview-overlay .preview-utility-bar-inner .btn-info {
+      min-width: 185px;
+      margin-top: 1px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000358}}
+    #preview-overlay .preview-utility-bar-inner .desktop-width-slider-label {
+      margin-right: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000361}}
+    #preview-overlay .preview-utility-bar-inner .desktop-width-slider {
+      min-width: 200px;
+      background: white;
+      border: 1px solid #999999;
+      border-radius: 2px;
+      -webkit-border-radius: 2px;
+      margin-right: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000366}}
+      #preview-overlay .preview-utility-bar-inner .desktop-width-slider a {
+        margin-top: -4px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000370}}
+    #preview-overlay .preview-utility-bar-inner .mobile-device-selector {
+      min-width: 150px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000373}}
+    #preview-overlay .preview-utility-bar-inner .select2-container {
+      position: relative;
+      top: -1px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000377}}
+    #preview-overlay .preview-utility-bar-inner .select2-container, #preview-overlay .preview-utility-bar-inner .select2-container .select2-choice {
+      border: 1px transparent solid !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000380}}
+    #preview-overlay .preview-utility-bar-inner .select2-container .select2-choice .select2-arrow b {
+      text-align: center !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000384}}
+  #preview-overlay .desktop-preview-container {
+    width: 1024px;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+    -webkit-border-radius: 2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000388}}
+  #preview-overlay .desktop-preview-iframe-container {
+    min-height: 500px;
+    -webkit-box-shadow: 0px 0px 8px #b7b1ac;
+    -moz-box-shadow: 0px 0px 8px #b7b1ac;
+    box-shadow: 0px 0px 8px #b7b1ac; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000393}}
+    #preview-overlay .desktop-preview-iframe-container iframe {
+      overflow: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\0000397}}
+  #preview-overlay .preview-canvas {
+    display: table-cell;
+    text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\00003100}}
+    #preview-overlay .preview-canvas * {
+      text-align: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\00003104}}
+  #preview-overlay .preview-outer-frame {
+    position: relative;
+    display: inline-block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\00003108}}
+  #preview-overlay .preview-iframe {
+    border: none;
+    width: 100%;
+    height: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\00003113}}
+  #preview-overlay .mobile-preview-container {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\00003120}}
+  #preview-overlay .mobile-preview-iframe-container {
+    height: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\00003123}}
+  #preview-overlay .mobile-preview-frame {
+    position: relative;
+    border: 3px #aaa ridge;
+    border-radius: 25px;
+    background: #5a5a5a;
+    background: -moz-linear-gradient(-45deg, #5a5a5a 0%, #565656 7%, #444444 15%, #141414 30%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #5a5a5a), color-stop(7%, #565656), color-stop(15%, #444444), color-stop(30%, #141414));
+    background: -webkit-linear-gradient(-45deg, #5a5a5a 0%, #565656 7%, #444444 15%, #141414 30%);
+    background: -o-linear-gradient(-45deg, #5a5a5a 0%, #565656 7%, #444444 15%, #141414 30%);
+    background: -ms-linear-gradient(-45deg, #5a5a5a 0%, #565656 7%, #444444 15%, #141414 30%);
+    background: linear-gradient(135deg, #5a5a5a 0%, #565656 7%, #444444 15%, #141414 30%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5a5a5a', endColorstr='#141414', GradientType=1);
+    -webkit-box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.7); }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\00003124}}
+    #preview-overlay .mobile-preview-frame.mobile-preview-landscape {
+      padding: 40px 55px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\00003126}}
+      #preview-overlay .mobile-preview-frame.mobile-preview-landscape .mobile-device-toolbar {
+        padding-right: 55px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\00003130}}
+    #preview-overlay .mobile-preview-frame.mobile-preview-portrait {
+      padding: 55px 40px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\00003132}}
+      #preview-overlay .mobile-preview-frame.mobile-preview-portrait .mobile-device-toolbar {
+        padding-right: 40px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/htdocs\/tao\/tao\/taoQtiItem\/views\/scss\/preview\.scss}line{font-family:\00003150}}
+  #preview-overlay .mobile-preview-container {
+    background: white;
+    border-radius: 3px;
+    border: 2px solid;
+    border-color: #444 #999 #999 #444; }

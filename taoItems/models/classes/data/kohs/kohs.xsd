@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.tao.lu/tao.rdfs#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:tao="http://www.tao.lu/tao.rdfs#">
+  <xs:import namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" schemaLocation="rdf.xsd"/>
+  <xs:element name="KOHS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tao:MATRIX"/>
+      </xs:sequence>
+      <xs:attribute ref="rdf:ID" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MATRIX" type="xs:integer"/>
+</xs:schema>

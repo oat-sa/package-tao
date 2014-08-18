@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ui Test - Incrementer UI Component</title>
+        <base href="../../../../" />
+        <link rel="stylesheet" type="text/css" href="js/lib/qunit/qunit.css">
+        <link rel="stylesheet" type="text/css" href="css/tao-main-style.css">
+        <script type="text/javascript" src="js/lib/require.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit.js"></script>
+        <script  type="text/javascript">
+            
+            //don't start the test now
+            QUnit.config.autostart = false;
+            
+            //load the config
+            require(['/tao/ClientConfig/config'], function(){
+                
+                //load the test
+                require(['jquery', 'ui', 'test/ui/resourcemgr/test'], function($, ui){
+                    
+                    //Tests loaded, run tests
+                    QUnit.start();
+
+                    ui.startEventComponents($('#main'));
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="feedback-box" class="tao-scope"></div>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+        <div id="main" class="tao-scope">
+            <ol>
+            <li><input id="uri" type="text" value="" placeholder="Enter an item URI" /></li>
+            <li><input id="filters" type="text" value="" placeholder="Enter a filters, eg. image/png,text/css" /></li>
+            <li><button id="launcher" class="btn-info">
+                <span class="icon-upload"></span> Select a resource
+            </button>
+            </li>
+            <li class="selected">
+            </li>
+        </div>
+    </body>
+</html>
