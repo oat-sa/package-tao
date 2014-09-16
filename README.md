@@ -3,7 +3,7 @@ package-tao
 
 Clone repository
 
-    git clone git@github.com:oat-sa/package-tao
+    git clone https://github.com/oat-sa/package-tao.git
     
 Install via composer missing library and extensions
 
