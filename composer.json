@@ -1,5 +1,10 @@
 {
-
+	"repositories": [
+	{
+            "type": "vcs",
+            "url": "https://github.com/jbout/easyrdf"
+        }
+	],
 	"name": "oat-sa/tao",
 		"require": {
 			"oat-sa/generis": "dev-master",
@@ -31,9 +36,11 @@
 			"oat-sa/extension-tao-delivery" : "dev-master",
 			"oat-sa/extension-tao-deliverysimple" : "dev-master",
 
-			"oat-sa/extension-tao-filemanager" : "dev-master"
+			"oat-sa/extension-tao-filemanager" : "dev-master",
 
-			
+                        "oat-sa/extension-tao-wfauthoring": "dev-master",
+
+                        "easyrdf/easyrdf" : "dev-patch-1"
 
 		},
 		"minimum-stability" : "dev"
