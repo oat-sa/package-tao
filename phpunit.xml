@@ -48,8 +48,8 @@
 		<testsuite name="taoResults">
 			<directory>taoResults/test</directory>
 		</testsuite>
-		<testsuite name="taoSubjects">
-			<directory>taoSubjects/test</directory>
+		<testsuite name="taoTestTaker">
+			<directory>taoTestTaker/test</directory>
 		</testsuite>
 		<testsuite name="taoTests">
 			<directory>taoTests/test</directory>

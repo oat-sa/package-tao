@@ -16,7 +16,7 @@
 			"oat-sa/extension-tao-community": "dev-master",
 
 			"oat-sa/extension-tao-funcacl": "dev-master",
-                        "oat-sa/extension-tao-dac-simple": "dev-master",
+			"oat-sa/extension-tao-dac-simple": "dev-master",
 
 			"oat-sa/extension-tao-testtaker": "dev-master",
 
@@ -25,8 +25,8 @@
 			"oat-sa/extension-tao-item": "dev-master",
 			"oat-sa/extension-tao-itemhtml": "dev-master",
 			"oat-sa/extension-tao-itemqti": "dev-master",
-                        "oat-sa/extension-tao-itemqti-pci": "dev-master",
-
+			"oat-sa/extension-tao-itemqti-pci": "dev-master",
+            
 			"oat-sa/extension-tao-test": "dev-master",
 			"oat-sa/extension-tao-testqti": "dev-master",
 			"oat-sa/extension-tao-testwf": "dev-master",
@@ -54,7 +54,7 @@
 			"oat-sa/extension-tao-devtools" : "dev-master",
 			"oat-sa/extension-tao-ontobrowser" : "dev-master",
 
-                        "easyrdf/easyrdf" : "dev-patch-1"
+			"easyrdf/easyrdf" : "dev-patch-1"
 		},
 		"minimum-stability" : "dev"
 }
