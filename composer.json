@@ -1,14 +1,12 @@
 {
-
-	"name": "oat-sa/tao",
-	"description" : "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online – in any language or subject matter.",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/jbout/easyrdf"
-        }
-        ],
-        "authors" : [{
+	"name" : "oat-sa/tao",
+	"description" : "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online \u2013 in any language or subject matter.",
+	"repositories" : [{
+			"type" : "vcs",
+			"url" : "https://github.com/jbout/easyrdf"
+		}
+	],
+	"authors" : [{
 			"name" : "Open Assessment Technologies S.A.",
 			"homepage" : "http://www.taotesting.com"
 		}, {
@@ -45,54 +43,40 @@
 	],
 	"homepage" : "http://www.taotesting.com",
 	"license" : "GPL-2.0",
-		"require": {
-			"oat-sa/generis": "dev-master",
-			"oat-sa/extension-generis-hard": "dev-master",
-
-			"oat-sa/tao-core": "dev-master",
-
-			"oat-sa/extension-tao-community": "dev-master",
-
-			"oat-sa/extension-tao-funcacl": "dev-master",
-			"oat-sa/extension-tao-dac-simple": "dev-master",
-
-			"oat-sa/extension-tao-testtaker": "dev-master",
-
-			"oat-sa/extension-tao-group" : "dev-master",
-
-			"oat-sa/extension-tao-item": "dev-master",
-			"oat-sa/extension-tao-itemhtml": "dev-master",
-			"oat-sa/extension-tao-itemqti": "dev-master",
-			"oat-sa/extension-tao-itemqti-pci": "dev-master",
-            
-			"oat-sa/extension-tao-test": "dev-master",
-			"oat-sa/extension-tao-testqti": "dev-master",
-			"oat-sa/extension-tao-testwf": "dev-master",
-			"oat-sa/extension-tao-testlti": "dev-master",
-			
-			"oat-sa/extension-tao-wfengine": "dev-master",
-			"oat-sa/extension-tao-wfauthoring": "dev-master",
-			"oat-sa/extension-tao-testwfauthoring": "dev-master",
-		
-			"oat-sa/extension-tao-outcome" : "dev-master",
-			"oat-sa/extension-tao-outcomerdf": "dev-master",
-			"oat-sa/extension-tao-outcomekeyvalue" : "dev-master",
-			"oat-sa/extension-tao-outcomeudp" : "dev-master",
-			"oat-sa/extension-tao-outcomelti" : "dev-master",
-
-			"oat-sa/extension-tao-delivery" : "dev-master",
-			"oat-sa/extension-tao-deliverysimple" : "dev-master",
-			"oat-sa/extension-tao-campaign" : "dev-master",
-
-			"oat-sa/extension-tao-filemanager" : "dev-master",
-
-			"oat-sa/extension-tao-lti" : "dev-master",
-			"oat-sa/extension-tao-ltideliveryprovider": "dev-master",
-
-			"oat-sa/extension-tao-devtools" : "dev-master",
-			"oat-sa/extension-tao-ontobrowser" : "dev-master",
-
-			"easyrdf/easyrdf" : "dev-patch-1"
-		},
-		"minimum-stability" : "dev"
+	"require" : {
+		"oat-sa/generis" : "dev-develop",
+		"oat-sa/extension-generis-hard" : "dev-develop",
+		"oat-sa/tao-core" : "dev-develop",
+		"oat-sa/extension-tao-community" : "dev-develop",
+		"oat-sa/extension-tao-funcacl" : "dev-develop",
+		"oat-sa/extension-tao-dac-simple" : "dev-develop",
+		"oat-sa/extension-tao-testtaker" : "dev-develop",
+		"oat-sa/extension-tao-group" : "dev-develop",
+		"oat-sa/extension-tao-item" : "dev-develop",
+		"oat-sa/extension-tao-itemhtml" : "dev-develop",
+		"oat-sa/extension-tao-itemqti" : "dev-develop",
+		"oat-sa/extension-tao-itemqti-pci" : "dev-develop",
+		"oat-sa/extension-tao-test" : "dev-develop",
+		"oat-sa/extension-tao-testqti" : "dev-develop",
+		"oat-sa/extension-tao-testwf" : "dev-develop",
+		"oat-sa/extension-tao-testlti" : "dev-develop",
+		"oat-sa/extension-tao-wfengine" : "dev-develop",
+		"oat-sa/extension-tao-wfauthoring" : "dev-develop",
+		"oat-sa/extension-tao-testwfauthoring" : "dev-develop",
+		"oat-sa/extension-tao-outcome" : "dev-develop",
+		"oat-sa/extension-tao-outcomerdf" : "dev-develop",
+		"oat-sa/extension-tao-outcomekeyvalue" : "dev-develop",
+		"oat-sa/extension-tao-outcomeudp" : "dev-develop",
+		"oat-sa/extension-tao-outcomelti" : "dev-develop",
+		"oat-sa/extension-tao-delivery" : "dev-develop",
+		"oat-sa/extension-tao-deliverysimple" : "dev-develop",
+		"oat-sa/extension-tao-campaign" : "dev-develop",
+		"oat-sa/extension-tao-filemanager" : "dev-develop",
+		"oat-sa/extension-tao-lti" : "dev-develop",
+		"oat-sa/extension-tao-ltideliveryprovider" : "dev-develop",
+		"oat-sa/extension-tao-devtools" : "dev-develop",
+		"oat-sa/extension-tao-ontobrowser" : "dev-develop",
+		"easyrdf/easyrdf" : "dev-patch-1"
+	},
+	"minimum-stability" : "dev"
 }
