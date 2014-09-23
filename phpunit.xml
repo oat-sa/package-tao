@@ -1,4 +1,6 @@
-<phpunit verbose="false">
+<phpunit 
+	bootstrap="tests/bootstrap/bootstrap.php">
+	
 	<testsuites>
 		<testsuite name="filemanager">
 			<directory>filemanager/test</directory>
@@ -34,10 +36,6 @@
 		</testsuite>
 		<testsuite name="taoOpenWebItem">
 			<directory>taoOpenWebItem/test</directory>
-		</testsuite>
-		<testsuite name="taoQtiCommon">
-			<directory>taoQtiCommon/test</directory>
-			<directory>taoQtiCommon/lib/qtism/test</directory>
 		</testsuite>
 		<testsuite name="taoQtiItem">
 			<directory>taoQtiItem/test</directory>
