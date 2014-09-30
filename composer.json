@@ -78,5 +78,9 @@
 		"oat-sa/extension-tao-ontobrowser" : "dev-develop",
 		"easyrdf/easyrdf" : "dev-patch-1"
 	},
+    "require-dev": {
+        "phpunit/phpunit": "~4.4@dev",
+        "sebastian/global-state": "~1.0@dev"
+    },
 	"minimum-stability" : "dev"
 }
