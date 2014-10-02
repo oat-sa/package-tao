@@ -34,6 +34,9 @@
 		<testsuite name="taoLti">
 			<directory>taoLti/test</directory>
 		</testsuite>
+				<testsuite name="qtiItemPci">
+			<directory>qtiItemPci/test</directory>
+		</testsuite>
 		<testsuite name="taoOpenWebItem">
 			<directory>taoOpenWebItem/test</directory>
 		</testsuite>
