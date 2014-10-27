@@ -44,6 +44,7 @@
 	"homepage" : "http://www.taotesting.com",
 	"license" : "GPL-2.0",
 	"require" : {
+		"oat-sa/extension-tao-outcomerds" : "dev-master",
 		"oat-sa/generis" : "dev-develop",
 		"oat-sa/extension-generis-hard" : "dev-develop",
 		"oat-sa/tao-core" : "dev-develop",
@@ -85,3 +86,4 @@
     },
 	"minimum-stability" : "dev"
 }
+
