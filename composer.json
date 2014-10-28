@@ -44,6 +44,7 @@
 	"homepage" : "http://www.taotesting.com",
 	"license" : "GPL-2.0",
 	"require" : {
+		"oat-sa/extension-tao-outcomerds" : "dev-master",
 		"oat-sa/generis" : "dev-develop",
 		"oat-sa/extension-generis-hard" : "dev-develop",
 		"oat-sa/tao-core" : "dev-develop",
@@ -56,6 +57,7 @@
 		"oat-sa/extension-tao-itemhtml" : "dev-develop",
 		"oat-sa/extension-tao-itemqti" : "dev-develop",
 		"oat-sa/extension-tao-itemqti-pci" : "dev-develop",
+		"oat-sa/extension-tao-itemqti-pic" : "dev-develop",
 		"oat-sa/extension-tao-test" : "dev-develop",
 		"oat-sa/extension-tao-testqti" : "dev-develop",
 		"oat-sa/extension-tao-testwf" : "dev-develop",
@@ -84,3 +86,4 @@
     },
 	"minimum-stability" : "dev"
 }
+
