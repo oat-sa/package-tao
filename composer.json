@@ -44,9 +44,7 @@
 	"homepage" : "http://www.taotesting.com",
 	"license" : "GPL-2.0",
 	"require" : {
-		"oat-sa/extension-tao-outcomerds" : "dev-master",
 		"oat-sa/generis" : "dev-develop",
-		"oat-sa/extension-generis-hard" : "dev-develop",
 		"oat-sa/tao-core" : "dev-develop",
 		"oat-sa/extension-tao-community" : "dev-develop",
 		"oat-sa/extension-tao-funcacl" : "dev-develop",
@@ -66,7 +64,8 @@
 		"oat-sa/extension-tao-wfauthoring" : "dev-develop",
 		"oat-sa/extension-tao-testwfauthoring" : "dev-develop",
 		"oat-sa/extension-tao-outcome" : "dev-develop",
-		"oat-sa/extension-tao-outcomerdf" : "dev-develop",
+		"oat-sa/extension-tao-outcomeui" : "dev-develop",
+		"oat-sa/extension-tao-outcomerds" : "dev-develop",
 		"oat-sa/extension-tao-outcomekeyvalue" : "dev-develop",
 		"oat-sa/extension-tao-outcomeudp" : "dev-develop",
 		"oat-sa/extension-tao-outcomelti" : "dev-develop",
@@ -78,6 +77,7 @@
 		"oat-sa/extension-tao-ltideliveryprovider" : "dev-develop",
 		"oat-sa/extension-tao-devtools" : "dev-develop",
 		"oat-sa/extension-tao-ontobrowser" : "dev-develop",
+		"oat-sa/extension-generis-hard" : "dev-develop",
 		"easyrdf/easyrdf" : "dev-patch-1"
 	},
     "require-dev": {
