@@ -9,11 +9,14 @@
 		<testsuite name="generis">
 			<directory>generis/test/</directory>
 		</testsuite>
+		<testsuite name="qtiItemPci/">
+			<directory>qtiItemPci/test</directory>
+		</testsuite>
 		<testsuite name="tao">
 			<directory>tao/test</directory>
 		</testsuite>
-		<testsuite name="taoCampaign">
-			<directory>taoCampaign/test</directory>
+		<testsuite name="taoDacSimple">
+			<directory>taoDacSimple/test</directory>
 		</testsuite>
 		<testsuite name="taoDelivery">
 			<directory>taoDelivery/test</directory>
@@ -30,9 +33,11 @@
 		<testsuite name="taoOpenWebItem">
 			<directory>taoOpenWebItem/test</directory>
 		</testsuite>
-		<testsuite name="taoQtiCommon">
-			<directory>taoQtiCommon/test</directory>
-			<directory>taoQtiCommon/lib/qtism/test</directory>
+		<testsuite name="taoOutcomeRds">
+			<directory>taoOutcomeRds/test</directory>
+		</testsuite>
+		<testsuite name="taoOutcomeUi">
+			<directory>taoOutcomeUi/test</directory>
 		</testsuite>
 		<testsuite name="taoQtiItem">
 			<directory>taoQtiItem/test</directory>
@@ -40,29 +45,20 @@
 		<testsuite name="taoQtiTest">
 			<directory>taoQtiTest/test</directory>
 		</testsuite>
-		<testsuite name="taoOutcomeRds">
-			<directory>taoOutcomeRds/test</directory>
-		</testsuite>
-		<testsuite name="taoOutcomeUi">
-			<directory>taoOutcomeUi/test</directory>
-		</testsuite>
-		<testsuite name="taoSubjects">
-			<directory>taoSubjects/test</directory>
+		<testsuite name="taoTestTaker">
+			<directory>taoTestTaker/test</directory>
 		</testsuite>
 		<testsuite name="taoTests">
 			<directory>taoTests/test</directory>
 		</testsuite>
-		<testsuite name="taoWfDelivery">
-			<directory>taoWfDelivery/test</directory>
-		</testsuite>
 		<testsuite name="taoWfTest">
 			<directory>taoWfTest/test</directory>
 		</testsuite>
-		<testsuite name="wfEngine">
-			<directory>wfEngine/test</directory>
-		</testsuite>
 		<testsuite name="wfAuthoring">
 			<directory>wfAuthoring/test</directory>
+		</testsuite>
+		<testsuite name="wfEngine">
+			<directory>wfEngine/test</directory>
 		</testsuite>
 	</testsuites>
 </phpunit>

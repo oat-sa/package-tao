@@ -8,10 +8,12 @@ generisHard/
 ltiDeliveryProvider/
 ltiTestConsumer/
 ontoBrowser/
+qtiItemPci/
 tao/
 taoAltResultStorage/
 taoCampaign/
 taoCe/
+taoDacSimple/
 taoDelivery/
 taoDevTools/
 taoGroups/
@@ -19,13 +21,13 @@ taoItems/
 taoLti/
 taoLtiBasicOutcome/
 taoOpenWebItem/
+taoOutcomeRds/
+taoOutcomeUi/
 taoQtiItem/
 taoQtiTest/
 taoResultServer/
-taoResults/
-taoResultsUdp/
 taoSimpleDelivery/
-taoSubjects/
+taoTestTaker/
 taoTests/
 taoWfAdvTest/
 taoWfTest/
@@ -33,3 +35,4 @@ vendor/
 wfAuthoring/
 wfEngine/
 composer.lock
+install.sh

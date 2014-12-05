@@ -52,6 +52,7 @@
 			"oat-sa/extension-tao-community": "dev-master",
 
 			"oat-sa/extension-tao-funcacl": "dev-master",
+			"oat-sa/extension-tao-dac-simple" : "dev-master",
 
 			"oat-sa/extension-tao-testtaker": "dev-master",
 
@@ -65,20 +66,32 @@
 			"oat-sa/extension-tao-test": "dev-master",
 			"oat-sa/extension-tao-testqti": "dev-master",
 			"oat-sa/extension-tao-testwf": "dev-master",
+			"oat-sa/extension-tao-testlti" : "dev-master",
+
 			"oat-sa/extension-tao-wfengine": "dev-master",
+            "oat-sa/extension-tao-wfauthoring": "dev-master",
+
+			"oat-sa/extension-tao-filemanager" : "dev-master",
+
 
 			"oat-sa/extension-tao-outcome" : "dev-master",
-			"oat-sa/extension-tao-outcomerdf": "dev-master",
+			"oat-sa/extension-tao-outcomerds": "dev-master",
+			"oat-sa/extension-tao-outcomeui" : "dev-master",
+			"oat-sa/extension-tao-outcomelti" : "dev-master",
+
 
 			"oat-sa/extension-tao-delivery" : "dev-master",
 			"oat-sa/extension-tao-deliverysimple" : "dev-master",
 
-			"oat-sa/extension-tao-filemanager" : "dev-master",
-
-            "oat-sa/extension-tao-wfauthoring": "dev-master",
+			"oat-sa/extension-tao-lti" : "dev-master",
+			"oat-sa/extension-tao-ltideliveryprovider" : "dev-master",
 
             "easyrdf/easyrdf" : "dev-patch-1"
 
 		},
+		"require-dev": {
+        	"phpspec/prophecy" : "1.3.1"
+        
+    	},
 		"minimum-stability" : "dev"
 }
