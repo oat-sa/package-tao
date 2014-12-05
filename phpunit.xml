@@ -9,11 +9,6 @@
 		<testsuite name="generis">
 			<directory>generis/test/</directory>
 		</testsuite>
-		<!--
-		<testsuite name="generisHard">
-			<directory>generisHard/test/</directory>
-		</testsuite>
-		-->
 		<testsuite name="tao">
 			<directory>tao/test</directory>
 		</testsuite>
@@ -45,8 +40,11 @@
 		<testsuite name="taoQtiTest">
 			<directory>taoQtiTest/test</directory>
 		</testsuite>
-		<testsuite name="taoResults">
-			<directory>taoResults/test</directory>
+		<testsuite name="taoOutcomeRds">
+			<directory>taoOutcomeRds/test</directory>
+		</testsuite>
+		<testsuite name="taoOutcomeUi">
+			<directory>taoOutcomeUi/test</directory>
 		</testsuite>
 		<testsuite name="taoSubjects">
 			<directory>taoSubjects/test</directory>
