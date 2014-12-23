@@ -1,11 +1,6 @@
 {
 	"name" : "oat-sa/tao",
 	"description" : "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online \u2013 in any language or subject matter.",
-	"repositories" : [{
-			"type" : "vcs",
-			"url" : "https://github.com/jbout/easyrdf"
-		}
-	],
 	"authors" : [{
 			"name" : "Open Assessment Technologies S.A.",
 			"homepage" : "http://www.taotesting.com"
@@ -77,8 +72,7 @@
 		"oat-sa/extension-tao-ltideliveryprovider" : "dev-develop",
 		"oat-sa/extension-tao-devtools" : "dev-develop",
 		"oat-sa/extension-tao-ontobrowser" : "dev-develop",
-		"oat-sa/extension-generis-hard" : "dev-develop",
-		"easyrdf/easyrdf" : "dev-patch-1"
+		"oat-sa/extension-generis-hard" : "dev-develop"
 	},
     "require-dev": {
         "phpunit/phpunit": "~4.4@dev",
