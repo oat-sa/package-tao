@@ -10,12 +10,6 @@
         "issues": "http://forge.taotesting.com",
         "forum": "http://forum.taotesting.com"
     },
-    "repositories": [
-        {
-            "url": "https://github.com/jbout/easyrdf",
-            "type": "vcs"
-        }
-    ],
     "authors": [
         {
             "homepage": "http://www.taotesting.com",
@@ -77,7 +71,6 @@
         "oat-sa/extension-tao-itemhtml": "dev-develop",
         "oat-sa/extension-tao-item": "dev-develop",
         "oat-sa/extension-tao-funcacl": "dev-develop",
-        "easyrdf/easyrdf": "dev-patch-1",
         "oat-sa/generis": "dev-develop",
         "oat-sa/extension-tao-test": "dev-develop",
         "oat-sa/extension-tao-testlti": "dev-develop",
