@@ -40,6 +40,9 @@
 		<testsuite name="taoOutcomeRds/">
 			<directory>taoOutcomeRds//test</directory>
 		</testsuite>
+		<testsuite name="taoOutcomeUi/">
+			<directory>taoOutcomeRds//test</directory>
+		</testsuite>
 		<testsuite name="taoQtiItem">
 			<directory>taoQtiItem/test</directory>
 		</testsuite>
@@ -57,15 +60,6 @@
 		</testsuite>
 		<testsuite name="taoTests">
 			<directory>taoTests/test</directory>
-		</testsuite>
-		<testsuite name="taoWfTest">
-			<directory>taoWfTest/test</directory>
-		</testsuite>
-		<testsuite name="wfAuthoring">
-			<directory>wfAuthoring/test</directory>
-		</testsuite>
-		<testsuite name="wfEngine">
-			<directory>wfEngine/test</directory>
 		</testsuite>
 	</testsuites>
 </phpunit>
