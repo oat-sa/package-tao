@@ -53,10 +53,17 @@
     "homepage": "http://www.taotesting.com",
     "require": {
         
-        "oat-sa/extension-tao-community": "dev-add_require_extension_in_conposer",
+        "oat-sa/extension-tao-community": "dev-develop",
         
-        "oat-sa/extension-tao-deliverytemplate": "dev-develop",
+        "oat-sa/extension-tao-devtools" : "dev-develop",
 
+        "oat-sa/extension-tao-deliverytemplate": "dev-develop",
+        
+        "oat-sa/extension-tao-ontobrowser" : "dev-develop",
+        "oat-sa/extension-tao-outcomekeyvalue" : "dev-develop",
+
+        "oat-sa/extension-tao-revision": "dev-develop",
+        
         "oat-sa/extension-tao-testwf": "dev-develop",
 
         "oat-sa/extension-tao-wfauthoring": "dev-develop",
