@@ -1,57 +1,44 @@
 {
-    "name": "oat-sa/tao",
-    "license": "GPL-2.0",
-    "require-dev": {
-        "mikey179/vfsStream": "1.4.0",
-        "sebastian/global-state": "~1.0@dev",
-        "phpunit/phpunit": "~4.4@dev"
-    },
-    "support": {
-        "issues": "http://forge.taotesting.com",
-        "forum": "http://forum.taotesting.com"
-    },
-    "authors": [
-        {
-            "homepage": "http://www.taotesting.com",
-            "name": "Open Assessment Technologies S.A."
-        },
-        {
-            "role": "Developer",
-            "name": "Jérome Bogaerts"
-        },
-        {
-            "role": "Developer",
-            "name": "Joel Bout"
-        },
-        {
-            "role": "Developer",
-            "name": "Bertrand Chevrier"
-        },
-        {
-            "role": "Developer",
-            "name": "Lionel Lecaque"
-        },
-        {
-            "role": "Developer",
-            "name": "Patrick Plichart"
-        },
-        {
-            "role": "Developer",
-            "name": "Dieter Raber"
-        },
-        {
-            "role": "Developer",
-            "name": "Somsack Sipasseuth"
-        }
-    ],
-    "keywords": [
-        "tao",
-        "oat",
-        "computer-based-assessment"
-    ],
-    "minimum-stability": "dev",
-    "homepage": "http://www.taotesting.com",
-    "require": {
+	"name" : "oat-sa/tao",
+	"description" : "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online \u2013 in any language or subject matter.",
+	"authors" : [{
+			"name" : "Open Assessment Technologies S.A.",
+			"homepage" : "http://www.taotesting.com"
+		}, {
+			"name" : "Jérôme Bogaerts",
+			"role" : "Developer"
+		}, {
+			"name" : "Joel Bout",
+			"role" : "Developer"
+		}, {
+			"name" : "Bertrand Chevrier",
+			"role" : "Developer"
+		}, {
+			"name" : "Lionel Lecaque",
+			"role" : "Developer"
+		}, {
+			"name" : "Patrick Plichart",
+			"role" : "Developer"
+		}, {
+			"name" : "Dieter Raber",
+			"role" : "Developer"
+		}, {
+			"name" : "Somsack Sipasseuth",
+			"role" : "Developer"
+		}
+	],
+	"support" : {
+		"forum" : "http://forum.taotesting.com",
+		"issues" : "http://forge.taotesting.com"
+	},
+	"keywords" : [
+		"tao",
+		"oat",
+		"computer-based-assessment"
+	],
+	"homepage" : "http://www.taotesting.com",
+	"license" : "GPL-2.0",
+  "require": {
         "oat-sa/extension-tao-delivery": "dev-develop",
         "oat-sa/extension-tao-deliverysimple": "dev-develop",
         "oat-sa/extension-tao-lti": "dev-develop",
@@ -78,5 +65,11 @@
 	"oat-sa/extension-tao-deliverytemplate" : "dev-develop",
         "oat-sa/extension-tao-community": "dev-develop"
     },
-    "description": "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online \u2013 in any language or subject matter."
+    "require-dev": {
+        "phpunit/phpunit": "~4.4@dev",
+        "sebastian/global-state": "~1.0@dev",
+        "mikey179/vfsStream": "1.4.0"
+    },
+	"minimum-stability" : "dev"
 }
+
