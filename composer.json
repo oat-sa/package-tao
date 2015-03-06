@@ -14,7 +14,15 @@
         {
             "url": "https://github.com/jbout/easyrdf",
             "type": "vcs"
-        }
+        },
+	{
+	    "type" : "vcs",
+	    "url" : "https://github.com/oat-sa/extension-tao-cssdevkit.git"
+	},
+	{
+            "type" : "vcs",
+	    "url" : "https://github.com/oat-sa/extension-tao-clientdiag.git"
+	}
     ],
     "authors": [
         {
@@ -67,8 +75,8 @@
         "oat-sa/extension-tao-ltideliveryprovider": "dev-master",
         "oat-sa/extension-tao-outcomerds": "dev-master",
         "oat-sa/extension-tao-outcomeui": "dev-master",        
-		"oat-sa/extension-tao-outcomekeyvalue": "dev-master",        
-		"oat-sa/extension-tao-dac-simple": "dev-master",
+	"oat-sa/extension-tao-outcomekeyvalue": "dev-master",        
+	"oat-sa/extension-tao-dac-simple": "dev-master",
         "oat-sa/extension-tao-itemqti-pci": "dev-master",
         "oat-sa/extension-tao-itemqti-pic": "dev-master",
         "oat-sa/extension-tao-group": "dev-master",
@@ -83,10 +91,11 @@
         "oat-sa/extension-tao-testlti": "dev-master",
         "oat-sa/extension-tao-outcome": "dev-master",
         "oat-sa/extension-tao-testlinear" : "dev-master",
-		"oat-sa/tao-core": "dev-master",
+	"oat-sa/tao-core": "dev-master",
         "oat-sa/extension-tao-community": "dev-master",
-        "oat-sa/extension-tao-deliverytemplate" : "dev-master"
-
+        "oat-sa/extension-tao-deliverytemplate" : "dev-master",
+	"oat-sa/extension-tao-cssdevkit" : "dev-master",
+	"oat-sa/extension-tao-clientdiag" : "dev-master"
     },
     "description": "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online \u2013 in any language or subject matter."
 }
