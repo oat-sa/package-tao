@@ -21,6 +21,11 @@
 	},
 	{
             "type" : "vcs",
+            "url" : "https://github.com/oat-sa/extension-pcisample.git"
+        },
+
+	{
+            "type" : "vcs",
 	    "url" : "https://github.com/oat-sa/extension-tao-clientdiag.git"
 	}
     ],
@@ -74,9 +79,9 @@
         "oat-sa/extension-tao-testtaker": "dev-master",
         "oat-sa/extension-tao-ltideliveryprovider": "dev-master",
         "oat-sa/extension-tao-outcomerds": "dev-master",
-        "oat-sa/extension-tao-outcomeui": "dev-master",        
-	"oat-sa/extension-tao-outcomekeyvalue": "dev-master",        
-	"oat-sa/extension-tao-dac-simple": "dev-master",
+        "oat-sa/extension-tao-outcomeui": "dev-master",       
+        "oat-sa/extension-tao-outcomekeyvalue": "dev-master",        
+	    "oat-sa/extension-tao-dac-simple": "dev-master",
         "oat-sa/extension-tao-itemqti-pci": "dev-master",
         "oat-sa/extension-tao-itemqti-pic": "dev-master",
         "oat-sa/extension-tao-group": "dev-master",
@@ -85,18 +90,21 @@
         "oat-sa/extension-tao-item": "dev-master",
         "oat-sa/extension-tao-funcacl": "dev-master",
         "oat-sa/generis": "dev-master",
+        "oat-sa/generis-auth-keyvalue": "dev-master",
         "oat-sa/extension-tao-test": "dev-master",
         "oat-sa/extension-tao-testwf": "dev-master",
         "oat-sa/extension-tao-wfengine": "dev-master",
         "oat-sa/extension-tao-testlti": "dev-master",
         "oat-sa/extension-tao-outcome": "dev-master",
         "oat-sa/extension-tao-testlinear" : "dev-master",
-	"oat-sa/tao-core": "dev-master",
+	    "oat-sa/tao-core": "dev-master",
         "oat-sa/extension-tao-community": "dev-master",
         "oat-sa/extension-tao-deliverytemplate" : "dev-master",
-	"oat-sa/extension-tao-cssdevkit" : "dev-master",
-	"oat-sa/extension-tao-clientdiag" : "dev-master",
-	"oat-sa/extension-tao-theming-platform" : "dev-master"
+        "oat-sa/extension-tao-cssdevkit" : "dev-master",
+        "oat-sa/extension-tao-clientdiag" : "dev-master",
+        "oat-sa/extension-pcisample" : "dev-master",
+        "oat-sa/extension-tao-theming-platform" : "dev-master"
+        
     },
     "description": "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online \u2013 in any language or subject matter."
 }
