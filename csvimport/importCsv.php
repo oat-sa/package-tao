@@ -2,7 +2,7 @@
 
 use oat\taoGroups\models\GroupsService;
 use oat\taoDevTools\helper\NameGenerator;
-use oat\authKeyValue\helpers\DataMigration;
+use oat\authKeyValue\helpers\DataGeneration;
 use oat\authKeyValue\AuthKeyValueUserService;
 $parms = $argv;
 array_shift($parms);
@@ -78,7 +78,7 @@ if (($handle = fopen($csvfile, "r")) !== FALSE) {
                 echo 'User "'.$toAdd[PROPERTY_USER_LOGIN].'" already exists.'.PHP_EOL;
                 die(1); 
             }
-            DataMigration::createUser($toAdd);
+            DataGeneration::createUser($toAdd);
         }
         $row++;
     }
