@@ -1,11 +1,6 @@
 {
     "name": "oat-sa/tao",
     "license": "GPL-2.0",
-    "require-dev": {
-        "mikey179/vfsStream": "1.4.0",
-        "sebastian/global-state": "~1.0@dev",
-        "phpunit/phpunit": "~4.4@dev"
-    },
     "support": {
         "issues": "http://forge.taotesting.com",
         "forum": "http://forum.taotesting.com"
@@ -53,7 +48,6 @@
     "homepage": "http://www.taotesting.com",
     "require": {
  	"oat-sa/extension-tao-delivery": "dev-master",
-        "oat-sa/extension-tao-deliverysimple": "dev-master",
         "oat-sa/extension-tao-lti": "dev-master",
         "oat-sa/extension-tao-itemqti": "dev-master",
         "oat-sa/extension-tao-testqti": "dev-master",
@@ -74,8 +68,8 @@
         "oat-sa/extension-tao-testlinear" : "dev-master",
         "oat-sa/extension-tao-outcome": "dev-master",
         "oat-sa/tao-core": "dev-master",
-	"oat-sa/extension-tao-deliverytemplate" : "dev-master",
-        "oat-sa/extension-tao-community": "dev-master"
+        "oat-sa/extension-tao-devtools" : "dev-master",
+	"oat-sa/extension-tao-community": "dev-master"
      },
     "description": "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online \u2013 in any language or subject matter."
 }
