@@ -47,6 +47,7 @@
     "minimum-stability": "dev",
     "homepage": "http://www.taotesting.com",
     "require": {
+
  	    "oat-sa/extension-tao-delivery": "2.6.2",
         "oat-sa/extension-tao-lti": "1.0",
         "oat-sa/extension-tao-itemqti": "2.7.5",
@@ -69,7 +70,8 @@
         "oat-sa/extension-tao-outcome": "2.6",
         "oat-sa/tao-core": "2.7.13",
         "oat-sa/extension-tao-devtools" : "2.6",
-	"oat-sa/extension-tao-community": "1.1.1"
+	    "oat-sa/extension-tao-community": "1.1.1"
+
      },
     "description": "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online \u2013 in any language or subject matter."
 }
