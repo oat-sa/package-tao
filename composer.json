@@ -1,102 +1,75 @@
 {
-	"name" : "oat-sa/tao",
-	"description" : "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online \u2013 in any language or subject matter.",
-	"authors" : [{
-			"name" : "Open Assessment Technologies S.A.",
-			"homepage" : "http://www.taotesting.com"
-		}, {
-			"name" : "Jérôme Bogaerts",
-			"role" : "Developer"
-		}, {
-			"name" : "Joel Bout",
-			"role" : "Developer"
-		}, {
-			"name" : "Bertrand Chevrier",
-			"role" : "Developer"
-		}, {
-			"name" : "Lionel Lecaque",
-			"role" : "Developer"
-		}, {
-			"name" : "Patrick Plichart",
-			"role" : "Developer"
-		}, {
-			"name" : "Dieter Raber",
-			"role" : "Developer"
-		}, {
-			"name" : "Somsack Sipasseuth",
-			"role" : "Developer"
-		}
-	],
-	"support" : {
-		"forum" : "http://forum.taotesting.com",
-		"issues" : "http://forge.taotesting.com"
-	},
-	"keywords" : [
-		"tao",
-		"oat",
-		"computer-based-assessment"
-	],
-	 "repositories": [
+    "name": "oat-sa/tao",
+    "license": "GPL-2.0",
+    "support": {
+        "issues": "http://forge.taotesting.com",
+        "forum": "http://forum.taotesting.com"
+    },
+    "authors": [
         {
-            "type" : "vcs",
-            "url" : "https://github.com/oat-sa/extension-tao-cssdevkit.git"
+            "homepage": "http://www.taotesting.com",
+            "name": "Open Assessment Technologies S.A."
         },
- 	{
-            "type" : "vcs",
-            "url" : "https://github.com/oat-sa/extension-tao-clientdiag.git"
+        {
+            "role": "Developer",
+            "name": "Jérome Bogaerts"
+        },
+        {
+            "role": "Developer",
+            "name": "Joel Bout"
+        },
+        {
+            "role": "Developer",
+            "name": "Bertrand Chevrier"
+        },
+        {
+            "role": "Developer",
+            "name": "Lionel Lecaque"
+        },
+        {
+            "role": "Developer",
+            "name": "Patrick Plichart"
+        },
+        {
+            "role": "Developer",
+            "name": "Dieter Raber"
+        },
+        {
+            "role": "Developer",
+            "name": "Somsack Sipasseuth"
         }
     ],
-
-	"homepage" : "http://www.taotesting.com",
-	"license" : "GPL-2.0",
-	"require" : {
-		"oat-sa/generis" : "dev-develop",
-		"oat-sa/tao-core" : "dev-develop",
-		"oat-sa/extension-tao-community" : "dev-develop",
-		"oat-sa/extension-tao-funcacl" : "dev-develop",
-		"oat-sa/extension-tao-dac-simple" : "dev-develop",
-		"oat-sa/extension-tao-testtaker" : "dev-develop",
-		"oat-sa/extension-tao-group" : "dev-develop",
-		"oat-sa/extension-tao-item" : "dev-develop",
-		"oat-sa/extension-tao-itemhtml" : "dev-develop",
-		"oat-sa/extension-tao-itemqti" : "dev-develop",
-		"oat-sa/extension-tao-itemqti-pci" : "dev-develop",
-		"oat-sa/extension-tao-itemqti-pic" : "dev-develop",
-		"oat-sa/extension-tao-test" : "dev-develop",
-		"oat-sa/extension-tao-testlinear" : "dev-develop",
-		"oat-sa/extension-tao-testqti" : "dev-develop",
-		"oat-sa/extension-tao-testwf" : "dev-develop",
-		"oat-sa/extension-tao-testlti" : "dev-develop",
-		"oat-sa/extension-tao-wfengine" : "dev-develop",
-		"oat-sa/extension-tao-wfauthoring" : "dev-develop",
-		"oat-sa/extension-tao-testwfauthoring" : "dev-develop",
-		"oat-sa/extension-tao-outcome" : "dev-develop",
-		"oat-sa/extension-tao-outcomeui" : "dev-develop",
-		"oat-sa/extension-tao-outcomerds" : "dev-develop",
-		"oat-sa/extension-tao-outcomekeyvalue" : "dev-develop",
-		"oat-sa/extension-tao-outcomeudp" : "dev-develop",
-		"oat-sa/extension-tao-outcomelti" : "dev-develop",
-		"oat-sa/extension-tao-delivery" : "dev-develop",
-		"oat-sa/extension-tao-deliverysimple" : "dev-develop",
-		"oat-sa/extension-tao-campaign" : "dev-develop",
-		"oat-sa/extension-tao-filemanager" : "dev-develop",
-		"oat-sa/extension-tao-lti" : "dev-develop",
-		"oat-sa/extension-tao-ltideliveryprovider" : "dev-develop",
-		"oat-sa/extension-tao-devtools" : "dev-develop",
-		"oat-sa/extension-tao-ontobrowser" : "dev-develop",
-		"oat-sa/extension-tao-revision" : "dev-develop",
-		"oat-sa/extension-generis-hard" : "dev-develop",
-                "oat-sa/extension-tao-mediamanager" : "dev-develop",
-		"oat-sa/extension-tao-deliverytemplate" : "dev-develop",
-		"oat-sa/extension-tao-cssdevkit" : "dev-develop",
-		"oat-sa/extension-tao-clientdiag" : "dev-develop",
-        "oat-sa/extension-tao-theming-platform": "dev-develop"
-	},
-    "require-dev": {
-        "phpunit/phpunit": "~4.4@dev",
-        "sebastian/global-state": "~1.0@dev",
-        "mikey179/vfsStream": "1.4.0"
-    },
-	"minimum-stability" : "dev"
+    "keywords": [
+        "tao",
+        "oat",
+        "computer-based-assessment"
+    ],
+    "minimum-stability": "dev",
+    "homepage": "http://www.taotesting.com",
+    "require": {
+ 	    "oat-sa/extension-tao-delivery": "2.6.2",
+        "oat-sa/extension-tao-lti": "1.0",
+        "oat-sa/extension-tao-itemqti": "2.7.5",
+        "oat-sa/extension-tao-testqti": "2.6",
+        "oat-sa/extension-tao-testtaker": "2.6",
+        "oat-sa/extension-tao-outcomeui": "2.6.1",
+        "oat-sa/extension-tao-ltideliveryprovider": "1.0",
+        "oat-sa/extension-tao-outcomerds": "1.0",
+        "oat-sa/extension-tao-dac-simple": "1.0.1",
+        "oat-sa/extension-tao-itemqti-pci": "0.1",
+        "oat-sa/extension-tao-itemqti-pic": "0.1",
+        "oat-sa/extension-tao-group": "2.6.1",
+        "oat-sa/extension-tao-outcomelti": "2.6",
+        "oat-sa/extension-tao-itemhtml": "2.6",
+        "oat-sa/extension-tao-item": "2.6.4",
+        "oat-sa/extension-tao-funcacl": "2.6",
+        "oat-sa/generis": "2.7.5",
+        "oat-sa/extension-tao-test": "2.6",
+        "oat-sa/extension-tao-testlinear" : "0.1",
+        "oat-sa/extension-tao-outcome": "2.6",
+        "oat-sa/tao-core": "2.7.13",
+        "oat-sa/extension-tao-devtools" : "2.6",
+	"oat-sa/extension-tao-community": "1.1.1"
+     },
+    "description": "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online \u2013 in any language or subject matter."
 }
-
