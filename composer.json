@@ -36,9 +36,15 @@
 		"oat",
 		"computer-based-assessment"
 	],
+    "repositories" : [
+            {
+			"type" : "vcs",
+				"url" : "https://github.com/oat-sa/ZendSearch"
+            }
+    ],
 	"homepage" : "http://www.taotesting.com",
 	"license" : "GPL-2.0",
-  "require": {
+    "require": {
         "oat-sa/extension-tao-delivery": "dev-develop",
         "oat-sa/extension-tao-deliverysimple": "dev-develop",
         "oat-sa/extension-tao-lti": "dev-develop",
