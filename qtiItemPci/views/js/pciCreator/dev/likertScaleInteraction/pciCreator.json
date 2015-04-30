@@ -1,0 +1,27 @@
+{
+    "typeIdentifier": "likertScaleInteraction",
+    "label": "Likert Scale",
+    "description": "A simple implementation of likert scale.",
+    "version": "0.1",
+    "author": "Sam Sipasseuth",
+    "email": "sam@taotesting.com",
+    "libraries": [
+        "IMSGlobal/jquery_2_1_1",
+        "./runtime/js/renderer"
+    ],
+    "css": [
+        "./runtime/css/likertScaleInteraction.css"
+    ],
+    "entryPoint": "./runtime/likertScaleInteraction.amd.js",
+    "tags": [
+        "mcq",
+        "likert"
+    ],
+    "icon": "./creator/img/icon.svg",
+    "short": "Likert",
+    "response": {
+        "baseType": "integer",
+        "cardinality": "single"
+    },
+    "debug" : false
+}

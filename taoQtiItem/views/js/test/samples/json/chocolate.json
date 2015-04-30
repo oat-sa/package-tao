@@ -1,0 +1,86 @@
+{
+  "identifier": "upload",
+  "serial": "item_547dd8964dec1443421987",
+  "qtiClass": "assessmentItem",
+  "attributes": {
+    "identifier": "upload",
+    "title": "Chocolate Factory",
+    "label": "",
+    "adaptive": false,
+    "timeDependent": false,
+    "toolName": "TAO",
+    "toolVersion": "3.0"
+  },
+  "body": {
+    "serial": "container_containeritembody_547dd8964deb0046274992",
+    "body": "<p>A chocolate factory produces several types of chocolate, some of which have nut centres.\n            The chocolates are mixed together and are randomly packed into cartons of ten.</p>\n    {{interaction_uploadinteraction_547dd8964f8af556377191}}",
+    "elements": {
+      "interaction_uploadinteraction_547dd8964f8af556377191": {
+        "serial": "interaction_uploadinteraction_547dd8964f8af556377191",
+        "qtiClass": "uploadInteraction",
+        "attributes": {
+          "responseIdentifier": "RESPONSE"
+        },
+        "choices": [],
+        "prompt": {
+          "serial": "container_containerstatic_547dd8964fb1d729819370",
+          "body": "Build a spreadsheet to simulate 50 cartons of chocolates when each carton\n                contains 10 chocolates, and when one-seventh of the chocolates have nut centres.\n                Your spreadsheet should include 50 rows representing the 50 cartons, each row\n                containing 10 columns to represent the chocolates.",
+          "elements": [],
+          "debug": {
+            "relatedItem": "item_547dd8964dec1443421987"
+          }
+        }
+      }
+    },
+    "debug": {
+      "relatedItem": "item_547dd8964dec1443421987"
+    }
+  },
+  "namespaces": {
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "": "http://www.imsglobal.org/xsd/imsqti_v2p1"
+  },
+  "stylesheets": [],
+  "outcomes": {
+    "outcomedeclaration_547dd8964e5fc752122714": {
+      "identifier": "SCORE",
+      "serial": "outcomedeclaration_547dd8964e5fc752122714",
+      "qtiClass": "outcomeDeclaration",
+      "attributes": {
+        "identifier": "SCORE",
+        "cardinality": "single",
+        "baseType": "float"
+      },
+      "defaultValue": null
+    }
+  },
+  "responses": {
+    "responsedeclaration_547dd8964e16b185243843": {
+      "identifier": "RESPONSE",
+      "serial": "responsedeclaration_547dd8964e16b185243843",
+      "qtiClass": "responseDeclaration",
+      "attributes": {
+        "identifier": "RESPONSE",
+        "cardinality": "single",
+        "baseType": "file"
+      },
+      "correctResponses": [],
+      "mapping": [],
+      "areaMapping": [],
+      "howMatch": null,
+      "mappingAttributes": {
+        "defaultValue": 0
+      },
+      "feedbackRules": []
+    }
+  },
+  "feedbacks": [],
+  "responseProcessing": {
+    "serial": "response_custom_547dd8964fd04625229819",
+    "qtiClass": "responseProcessing",
+    "attributes": [],
+    "processingType": "custom",
+    "data": "<responseProcessing/>"
+  }
+}

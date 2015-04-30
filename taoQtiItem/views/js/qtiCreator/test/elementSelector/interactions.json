@@ -1,0 +1,237 @@
+{
+    "choiceInteraction": {
+        "label": "Choice Interaction",
+        "description": "Select a single (radio buttons) or multiple (check boxes) responses among a set of choices.",
+        "icon": "icon-choice",
+        "short": "Choice",
+        "qtiClass": "choiceInteraction",
+        "tags": [
+            "Common Interactions",
+            "mcq"
+        ]
+    },
+    "orderInteraction": {
+        "label": "Order Interaction",
+        "icon": "icon-order",
+        "description": "Arrange a list of choices in the correct order.",
+        "short": "Order",
+        "qtiClass": "orderInteraction",
+        "tags": [
+            "Common Interactions",
+            "ordering"
+        ]
+    },
+    "associateInteraction": {
+        "label": "Associate Interaction",
+        "icon": "icon-associate",
+        "description": "Create pair(s) from a series of choices.",
+        "short": "Associate",
+        "qtiClass": "associateInteraction",
+        "tags": [
+            "Common Interactions",
+            "association"
+        ]
+    },
+    "matchInteraction": {
+        "label": "Match Interaction",
+        "icon": "icon-match",
+        "description": "Create association(s) between two sets of choices displayed in a table (row and column).",
+        "short": "Match",
+        "qtiClass": "matchInteraction",
+        "tags": [
+            "Common Interactions",
+            "association"
+        ]
+    },
+    "hottextInteraction": {
+        "label": "Hottext Interaction",
+        "icon": "icon-hottext",
+        "description": "Select one or more text parts (hottext) within a text.",
+        "short": "Hottext",
+        "qtiClass": "hottextInteraction",
+        "tags": [
+            "Common Interactions",
+            "text"
+        ]
+    },
+    "gapMatchInteraction": {
+        "label": "Gap Match Interaction",
+        "icon": "icon-gap-match",
+        "description": " Fill in the gaps in a text from a set of choices.",
+        "short": "Gap Match",
+        "qtiClass": "gapMatchInteraction",
+        "tags": [
+            "Common Interactions",
+            "text",
+            "association"
+        ]
+    },
+    "sliderInteraction": {
+        "label": "Slider Interaction",
+        "icon": "icon-slider",
+        "description": "Select a value within a numerical range.",
+        "short": "Slider",
+        "qtiClass": "sliderInteraction",
+        "tags": [
+            "Common Interactions",
+            "special"
+        ]
+    },
+    "extendedTextInteraction": {
+        "label": "Extended Text Interaction",
+        "icon": "icon-extended-text",
+        "description": "Collect open-ended information in one or more text area(s) (strings or numeric values).",
+        "short": "Extended Text",
+        "qtiClass": "extendedTextInteraction",
+        "tags": [
+            "Common Interactions",
+            "text"
+        ]
+    },
+    "uploadInteraction": {
+        "label": "File Upload Interaction",
+        "icon": "icon-upload",
+        "description": "Upload a file (e.g. document, picture...) as a response.",
+        "short": "File Upload",
+        "qtiClass": "uploadInteraction",
+        "tags": [
+            "Common Interactions",
+            "special"
+        ]
+    },
+    "mediaInteraction": {
+        "label": "Media Interaction",
+        "icon": "icon-media",
+        "description": "Control the playing parameters (auto-start, loop) of a video or audio file and report the number of time it has been played.",
+        "short": "Media",
+        "qtiClass": "mediaInteraction",
+        "tags": [
+            "Common Interactions",
+            "media"
+        ]
+    },
+    "_container": {
+        "label": "Text Block",
+        "icon": "icon-font",
+        "description": "Block contains the content (stimulus) of the item such as text or image. It is also required for Inline Interactions.",
+        "short": "Block",
+        "qtiClass": "_container",
+        "tags": [
+            "Inline Interactions",
+            "text"
+        ]
+    },
+    "inlineChoiceInteraction": {
+        "label": "Inline Choice Interaction",
+        "icon": "icon-inline-choice",
+        "description": "Select a choice from a drop-down list.",
+        "short": "Inline Choice",
+        "qtiClass": "inlineChoiceInteraction",
+        "tags": [
+            "Inline Interactions",
+            "inline-interactions",
+            "mcq"
+        ]
+    },
+    "textEntryInteraction": {
+        "label": "Text Entry Interaction",
+        "icon": "icon-text-entry",
+        "description": "Collect open-ended information in a short text input (strings or numeric values).",
+        "short": "Text Entry",
+        "qtiClass": "textEntryInteraction",
+        "tags": [
+            "Inline Interactions",
+            "inline-interactions",
+            "text"
+        ]
+    },
+    "endAttemptInteraction": {
+        "label": "End Attempt Interaction",
+        "icon": "icon-end-attempt",
+        "description": "Trigger the end of the item attempt.",
+        "short": "End Attempt",
+        "qtiClass": "endAttemptInteraction",
+        "tags": [
+            "Inline Interactions",
+            "inline-interactions",
+            "button",
+            "submit"
+        ]
+    },
+    "hotspotInteraction": {
+        "label": "Hotspot Interaction",
+        "icon": "icon-hotspot",
+        "description": "Select one or more areas (hotspots) displayed on an picture.",
+        "short": "Hotspot",
+        "qtiClass": "hotspotInteraction",
+        "tags": [
+            "Graphic Interactions",
+            "mcq"
+        ]
+    },
+    "graphicOrderInteraction": {
+        "label": "Graphic Order Interaction",
+        "icon": "icon-graphic-order",
+        "description": "Order the areas (hotspots) displayed on a picture.",
+        "short": "Graphic Order",
+        "qtiClass": "graphicOrderInteraction",
+        "tags": [
+            "Graphic Interactions",
+            "ordering"
+        ]
+    },
+    "graphicAssociateInteraction": {
+        "label": "Graphic Associate Interaction",
+        "icon": "icon-graphic-associate",
+        "description": "Create association(s) between areas (hotspots) displayed on a picture.",
+        "short": "Graphic Associate",
+        "qtiClass": "graphicAssociateInteraction",
+        "tags": [
+            "Graphic Interactions",
+            "association"
+        ]
+    },
+    "graphicGapMatchInteraction": {
+        "label": "Graphic Gap Match Interaction",
+        "icon": "icon-graphic-gap",
+        "description": "Fill in the gaps on a picture with a set of image choices.",
+        "short": "Graphic Gap",
+        "qtiClass": "graphicGapMatchInteraction",
+        "tags": [
+            "Graphic Interactions",
+            "association"
+        ]
+    },
+    "selectPointInteraction": {
+        "label": "Select Point Interaction",
+        "icon": "icon-select-point",
+        "description": "Position one or more points on a picture (response areas are not displayed).",
+        "short": "Select Point",
+        "qtiClass": "selectPointInteraction",
+        "tags": [
+            "Graphic Interactions"
+        ]
+    },
+    "customInteraction.likertScaleInteraction": {
+        "label": "Likert Scale",
+        "icon": "http://tao.localdomain/qtiItemPci/views/js/pciCreator/dev/likertScaleInteraction/./creator/img/icon.svg",
+        "short": "Likert",
+        "description": "A simple implementation of likert scale.",
+        "qtiClass": "customInteraction.likertScaleInteraction",
+        "tags": [
+            "Custom Interactions",
+            "mcq",
+            "likert"
+        ]
+    },
+    "customInteraction.liquidsInteraction": {
+        "label": "Liquids",
+        "icon": "http://tao.localdomain/qtiItemPci/views/js/pciCreator/dev/liquidsInteraction/./creator/img/icon.svg",
+        "short": "Liquids",
+        "description": "A simple implementation of SBAC liquids.",
+        "qtiClass": "customInteraction.liquidsInteraction",
+        "tags": [
+            "Custom Interactions"
+        ]
+    }
+}

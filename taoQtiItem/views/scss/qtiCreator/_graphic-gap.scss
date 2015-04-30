@@ -1,0 +1,42 @@
+@import "inc/bootstrap";
+
+.qti-graphicGapMatchInteraction {
+
+    ul.source > li {
+        img {
+            height: 100% !important;
+        }
+
+        &.empty, &.placeholder {
+            margin: 0 3px 3px 0 !important;
+            width: 60px;
+            height: 60px;
+            max-height: 60px;
+        }
+
+        .dummy-element {
+            cursor : pointer;
+
+            & ~ span.mini-tlb[data-edit] {
+                right: 0 !important;
+                top: 0 !important;
+
+                .tlb-button {
+                    line-height: 18px;
+                }
+            }
+        }
+        img ~ span.mini-tlb[data-edit] {
+             top: 0;
+             right: 0;
+            .tlb-button {
+                line-height: 18px;
+            }
+        }
+
+        // now that's pretty good specificity!
+        &.add-option.empty > div > span[class^="icon-"] {
+            @include font-size(50);
+        }
+    }
+}

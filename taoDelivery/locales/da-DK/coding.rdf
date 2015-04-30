@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAODelivery.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingMethode">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source Coding methode
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingMethode
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="da-DK"><![CDATA[Coding methode]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source Methodes to code a delivery
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingMethode
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="da-DK"><![CDATA[Methodes to code a delivery]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingMethodeAutomated">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source Automated coding
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingMethodeAutomated
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="da-DK"><![CDATA[Automated coding]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source delivery is coded automaticly
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingMethodeAutomated
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="da-DK"><![CDATA[delivery is coded automaticly]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingMethodeManual">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source Manual coding
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingMethodeManual
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="da-DK"><![CDATA[Manual coding]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source the delivery is at least partialy coded manualy
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingMethodeManual
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="da-DK"><![CDATA[the delivery is at least partialy coded manualy]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryCodingMethode">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source Coding methode of the delivery
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryCodingMethode
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="da-DK"><![CDATA[Coding methode of the delivery]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source how the delivery is coded
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryCodingMethode
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="da-DK"><![CDATA[how the delivery is coded]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatus">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source Coding status
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatus
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="da-DK"><![CDATA[Coding status]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source Status of the coding of a delivery
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatus
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="da-DK"><![CDATA[Status of the coding of a delivery]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatusGrading">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source In grading
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatusGrading
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="da-DK"><![CDATA[In grading]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source Delivery is being graded
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatusGrading
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="da-DK"><![CDATA[Delivery is being graded]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatusConciliation">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source In conciliation
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatusConciliation
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="da-DK"><![CDATA[In conciliation]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source Delivery is being conciliated
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatusConciliation
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="da-DK"><![CDATA[Delivery is being conciliated]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatusCommited">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source Coding commited
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatusCommited
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="da-DK"><![CDATA[Coding commited]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source Coding has been commited
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#CodingStatusCommited
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="da-DK"><![CDATA[Coding has been commited]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryCodingStatus">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source Coding status of the delivery
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryCodingStatus
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="da-DK"><![CDATA[Coding status of the delivery]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source Current status of a deliverys coding
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryCodingStatus
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="da-DK"><![CDATA[Current status of a deliverys coding]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#active">
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source Active
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#active
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="da-DK"><![CDATA[Active]]></rdfs:label>
+    <!--
+    @sourceLanguage EN
+    @targetLanguage da-DK
+    @source active / inactive state
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#active
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="da-DK"><![CDATA[active / inactive state]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

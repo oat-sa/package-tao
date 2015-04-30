@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemBody xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+	<p>
+		Read the following description of Giovanni's house and then colour the picture accordingly.
+	</p>
+	<drawingInteraction responseIdentifier="RESPONSE">
+		<prompt xml:lang="it">Il tetto è rosso e i muri sono gialli.</prompt>
+		<object type="image/png" data="images/house.png" width="144" height="260"/>
+	</drawingInteraction>
+</itemBody>

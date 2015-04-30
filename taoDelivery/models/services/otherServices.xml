@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE services SYSTEM "../../tao/doc/sas.dtd">
+<services>
+	<description>Other Delivery services</description>
+	
+	<!-- generic web service -->
+	<service>
+		<name>Web Service</name>
+		<description>Embed a generic web service accessible via url in an iframe</description>
+		<location url="/taoDelivery/WebService/index">
+			<param key="url" value="^webServiceUrl" />
+			<param key="height" value="98%" />
+			<param key="width" value="98%" />
+		</location>
+	</service>
+	
+</services>

@@ -1,0 +1,17 @@
+/*
+ * New Item Runner style.
+ * It will replace qti.css once the new runner is integrated.
+ */
+@charset "UTF-8";
+
+$fontPath : 'font/';
+$mainContainer : '.qti-item';
+@import "inc/bootstrap";
+@import "inc/fonts/source-sans-pro";
+@import "inc/fonts/tao-icon-def";
+@import "inc/fonts/tao-icon-vars";
+@import "inc/select2";
+
+
+@import "qti";
+

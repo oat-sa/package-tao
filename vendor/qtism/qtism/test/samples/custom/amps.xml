@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+    identifier="Test1" title="testTitle">
+    <testPart navigationMode="linear" submissionMode="individual" identifier="TP01">
+        <itemSessionControl maxAttempts="0" allowSkipping="true"/>
+        <assessmentSection identifier="S01" title="Section 1" visible="true" required="true">
+        	<rubricBlock view="candidate">
+        		<div>Hello there &amp; there! I am trying to make &lt;you&gt; &quot;crazy&quot;</div>
+        	</rubricBlock>
+        </assessmentSection>
+    </testPart>
+</assessmentTest>

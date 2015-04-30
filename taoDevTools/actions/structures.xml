@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../doc/structures.dtd">
+<structures>
+	<structure id="settings" name="Settings" level="8" group="settings">
+		<description />
+		<sections>
+			<section id="settings_ext_mng" name="Extensions manager" url="/taoDevTools/ExtensionsManager/index" policy="override" />
+		</sections>
+	</structure>
+	<structure id="user_settings" name="User Settings" level="12" group="invisible">
+		<description />
+		<sections>
+			<section id="settings_debug_roles" name="Restrict Roles" url="/taoDevTools/UserDebug/roles" />
+		</sections>
+	</structure>
+	<structure id="tools" name="Tools" level="18" group="settings">
+		<description />
+		<icon id="icon-tools" src=""/>
+		<sections>
+			<section id="scripts" name="Scripts" url="/taoDevTools/ScriptRunner/index" />
+			<section id="controller_view" name="Controller Viewer" url="/taoDevTools/ControllerMap/index" />
+			<section id="settings_view" name="System Settings" url="/taoDevTools/SystemSettings/index">
+				<trees>
+				    <tree name="System Settings"
+				    	className="Item"
+				        dataUrl="/taoDevTools/SystemSettings/data"
+				        selectInstance="view-config"
+				    >
+				    <icon id="icon-settings"/>
+				    </tree>
+				</trees>
+				<actions>
+					<action id="view-config" name="View" url="/taoDevTools/SystemSettings/viewSetting" group="content" context="instance">
+					    <icon id="icon-settings"/>
+					</action>
+				</actions>
+			</section>
+            <section id="convert_font" name="TAO Icon Font" url="/taoDevTools/FontConversion/index"/>
+            <section id="student_tools" name="Student Tool Generator" url="/taoDevTools/StudentToolGenerator/index"/>
+		</sections>
+	</structure>
+</structures>

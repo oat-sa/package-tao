@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          identifier="MANIFEST-QTI-1" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 http://www.imsglobal.org/xsd/imscp_v1p2.xsd">
+<organizations/>
+<resources>
+  <resource identifier="choice" type="imsqti_item_xmlv2p0" href="choice.xml">
+    <file href="choice.xml"/>
+  </resource>
+
+  <resource identifier="hybrid" type="imsqti_item_xmlv2p1" href="hybrid.xml">
+    <file href="hybrid.xml"/>
+  </resource>
+</resources>
+</manifest>

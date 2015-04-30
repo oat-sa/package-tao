@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+	xml:base="http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#" 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#" 
+	xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#"
+	xmlns:taolti="http://www.tao.lu/Ontologies/TAOLTI.rdf#" 
+>
+  
+  <!-- Context roles -->
+  <rdf:Description rdf:about="http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#Learner">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIRole"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[LTI Learner]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[The LTI Context Learner Role]]></rdfs:comment>
+  	<taolti:RoleURN><![CDATA[urn:lti:role:ims/lis/Learner]]></taolti:RoleURN>
+  	<generis:includesRole rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiBaseRole"/>
+  	<generis:includesRole rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#DeliveryRole"/>
+  	<generis:isSystem rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#Instructor">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIRole"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[LTI Instructor]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[The LTI Context Instructor Role]]></rdfs:comment>
+  	<taolti:RoleURN><![CDATA[urn:lti:role:ims/lis/Instructor]]></taolti:RoleURN>
+  	<generis:includesRole rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiBaseRole"/>
+  	<generis:isSystem rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#Administrator">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIRole"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[LTI Administrator]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[The LTI Context Administrator Role]]></rdfs:comment>
+  	<taolti:RoleURN><![CDATA[urn:lti:role:ims/lis/Administrator]]></taolti:RoleURN>
+  	<generis:includesRole rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiBaseRole"/>
+  	<generis:isSystem rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True"/>
+  </rdf:Description>
+ </rdf:RDF>

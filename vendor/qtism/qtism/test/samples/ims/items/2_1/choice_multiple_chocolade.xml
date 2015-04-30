@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+	identifier="choiceMultiple" title="Chocolate Milk" adaptive="false" timeDependent="false">
+	<responseDeclaration identifier="MR01" cardinality="multiple" baseType="identifier"/>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+	<itemBody>
+		<choiceInteraction responseIdentifier="MR01" shuffle="true" maxChoices="10">
+			<prompt>How to make chocolate milk. Select the combination of steps that lead to a nice
+				glass of hot and steamy chocolate milk.</prompt>
+			<simpleChoice identifier="C01" fixed="false">Take a lighter</simpleChoice>
+			<simpleChoice identifier="C02" fixed="false">Open the gas on the stove</simpleChoice>
+			<simpleChoice identifier="C03" fixed="false">Light the gas</simpleChoice>
+			<simpleChoice identifier="C04" fixed="false">Poor the milk in the pan</simpleChoice>
+			<simpleChoice identifier="C05" fixed="false">Add 2 tea spoons of cocoa into the mug</simpleChoice>
+			<simpleChoice identifier="C06" fixed="false">Add 2 tea spoons of sugar into the mug</simpleChoice>
+			<simpleChoice identifier="C07" fixed="false">Add 2 spoons of water into the mug</simpleChoice>
+			<simpleChoice identifier="C08" fixed="false">Stir the water, cocoa and sugar until the
+				mixture is smooth</simpleChoice>
+			<simpleChoice identifier="C09" fixed="false">Put the pan with milk on the stove</simpleChoice>
+			<simpleChoice identifier="C10" fixed="false">Poor the boiling milk into the mug</simpleChoice>
+			<simpleChoice identifier="C11" fixed="false">Put the mug with the mixture and milk into
+				the microwave</simpleChoice>
+			<simpleChoice identifier="C12" fixed="false">Add milk to the mug with the smooth mixture</simpleChoice>
+			<simpleChoice identifier="C13" fixed="false">Add cold milk from the fridge into the mug
+				with smooth mixture</simpleChoice>
+			<simpleChoice identifier="C14" fixed="false">Set the microwave on 700 Watt and set the
+				timer to 2 minutes</simpleChoice>
+		</choiceInteraction>
+	</itemBody>
+	<responseProcessing>
+		<responseCondition>
+			<responseIf>
+				<match>
+					<variable identifier="MR01"/>
+					<baseValue baseType="identifier">C01 C02 C03 C04 C05 C06 C07 C08 C09
+					C10</baseValue>
+				</match>
+				<setOutcomeValue identifier="SCORE">
+					<baseValue baseType="float">1</baseValue>
+				</setOutcomeValue>
+			</responseIf>
+			<responseElseIf>
+				<match>
+					<variable identifier="MR01"/>
+					<baseValue baseType="identifier">C11 C05 C06 C07 C08 C12 C13 C14</baseValue>
+				</match>
+				<setOutcomeValue identifier="SCORE">
+					<baseValue baseType="float">1</baseValue>
+				</setOutcomeValue>
+			</responseElseIf>
+		</responseCondition>
+	</responseProcessing>
+</assessmentItem>

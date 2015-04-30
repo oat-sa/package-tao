@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p0 imsqti_v2p0.xsd"
+    identifier="upload" title="Chocolate Factory" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="file"/>
+    <responseDeclaration identifier="RESPONSE_P" cardinality="single" baseType="integer"/>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+    <itemBody>
+        <p>A chocolate factory produces several types of chocolate, some of which have nut centres.
+            The chocolates are mixed together and are randomly packed into cartons of ten.</p>
+        <uploadInteraction responseIdentifier="RESPONSE">
+            <prompt>Build a spreadsheet to simulate 50 cartons of chocolates when each carton
+                contains 10 chocolates, and when one-seventh of the chocolates have nut centres.
+                Your spreadsheet should include 50 rows representing the 50 cartons, each row
+                containing 10 columns to represent the chocolates.</prompt>
+        </uploadInteraction>
+        <p>Incorporate in your spreadsheet a count of how many cartons contain fewer than two nut
+            centres, and hence estimate (to the nearest whole number) the percentage of a cartons
+            containing fewer than two nut centres: <textEntryInteraction
+                responseIdentifier="RESPONSE_P" expectedLength="3"/>%</p>
+    </itemBody>
+    <responseProcessing/>
+</assessmentItem>

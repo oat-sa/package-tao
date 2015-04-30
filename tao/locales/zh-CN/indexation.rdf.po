@@ -1,0 +1,122 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.0.0\n"
+"PO-Revision-Date: 2015-04-30T09:07:56\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: zh-CN\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: zh-CN\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#Index
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Index"
+msgstr "索引"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#Index
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Index class"
+msgstr "索引类"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexIdentifier
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Identifier"
+msgstr "识别码"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexIdentifier
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Humanreadable identifier of the index"
+msgstr "人可读取的标识符索引"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexTokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Tokenizer of index"
+msgstr "标记生成器索引"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexTokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Tokenizer to be used to extract search strings"
+msgstr "标记生成器用来提取搜索字符串"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexFuzzyMatching
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Fuzzy matching"
+msgstr "模糊匹配"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexFuzzyMatching
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Should the string matching be exact or fuzzy"
+msgstr "串的匹配应该是精确的还是模糊的"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexDefaultSearch
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Use by default"
+msgstr "作为默认值"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexDefaultSearch
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Should this property be used implicitly in the defautl search"
+msgstr "这个属性在默认搜索中应当被无保留地使用"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#Tokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Tokenizer"
+msgstr "标记生成器"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#Tokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Tokenizer class"
+msgstr "标记生成器类别"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#TokenizerClass
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Tokenizer implementation"
+msgstr "实行标记生成器"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#TokenizerClass
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Classname of the tokenizer implementation"
+msgstr "实行标记生成器类别名"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#PropertyIndex
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Property Indexation"
+msgstr "属性指数化"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#PropertyIndex
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "How a property should be indexed"
+msgstr "一个属性应当如何被编入索引"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#RawValueTokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Raw Value Tokenizer"
+msgstr "原始值标记生成器"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#RawValueTokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Tokenizer using the raw property value"
+msgstr "标记生成器使用原始属性值"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LabelTokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Label Tokenizer"
+msgstr "标签标记生成器"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LabelTokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Tokenizer using the resource labels"
+msgstr "标记生成器使用资源标签"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LabelIndex
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Label Index"
+msgstr "标签索引"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#TypeIndex
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Type Index"
+msgstr "类型索引"
+

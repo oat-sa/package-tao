@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemBody class="date-body" xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+	<orderInteraction id="order-conflicts" class="date-ordering" responseIdentifier="RESPONSE" minChoices="2" orientation="horizontal">
+		<prompt>Order these events by date.</prompt>
+		<simpleChoice id="my-choice-ww2" identifier="ww2">World War II</simpleChoice>
+		<simpleChoice id="my-choice-korea" identifier="korea">Korean War</simpleChoice>
+		<simpleChoice id="my-choice-ww1" identifier="ww1" templateIdentifier="SHOWWW1" showHide="show">World War I</simpleChoice>
+	</orderInteraction>
+</itemBody>

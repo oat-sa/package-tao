@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:pic="http://www.imsglobal.org/xsd/portableInfoControl" xmlns:html5="html5" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i1429862111476188" title="Item title" adaptive="false" timeDependent="false">
+  <responseDeclaration baseType="identifier" cardinality="multiple" identifier="RESPONSE"/>
+  <outcomeDeclaration cardinality="single" baseType="float" identifier="SCORE"/>
+  <stylesheet href="style/custom/tao-user-styles.css" title="" type="text/css" media="all"/>
+  <stylesheet href="studentToolbar/runtime/css/common.css" title="" type="text/css" media="all"/>
+  <stylesheet href="studentToolbar/runtime/css/student-toolbar.css" title="" type="text/css" media="all"/>
+  <stylesheet href="parccEliminateAnswerChoices/runtime/css/eliminate-answer-choices.css" title="" type="text/css" media="all"/>
+  <itemBody>
+    <infoControl title="Eliminate Answer Choices" class="sts-scope sts-tmp-element">
+      <pic:portableInfoControl infoControlTypeIdentifier="parccEliminateAnswerChoices" hook="parccEliminateAnswerChoices/runtime/eliminate-answer-choices.js">
+        <pic:resources location="http://imsglobal.org/pci/1.0.15/sharedLibraries.xml">
+          <pic:libraries>
+            <pic:lib id="IMSGlobal/jquery_2_1_1"/>
+            <pic:lib id="parccEliminateAnswerChoices/runtime/js/eliminator"/>
+          </pic:libraries>
+        </pic:resources>
+        <pic:properties>
+          <pic:entry key="position">4</pic:entry>
+          <pic:entry key="toolbarId">sts-studentToolbar</pic:entry>
+        </pic:properties>
+        <pic:markup>
+          <html5:div id="sts-parccEliminateAnswerChoices" class="sts-toolcontainer" data-position="4">
+            <html5:span class="sts-button sts-launch-button" data-typeIdentifier="parccEliminateAnswerChoices" title="Eliminate Answer Choices">
+              <html5:img src="parccEliminateAnswerChoices/runtime/media/eliminate-answer-choices-icon.svg" alt="Eliminate Answer Choices"/>
+            </html5:span>
+            <html5:div class="sts-container sts-hidden-container sts-parccEliminateAnswerChoices-container">
+            </html5:div>
+          </html5:div>
+        </pic:markup>
+      </pic:portableInfoControl>
+    </infoControl>
+    <infoControl title="Student Toolbar" class="sts-scope">
+      <pic:portableInfoControl infoControlTypeIdentifier="studentToolbar" hook="studentToolbar/runtime/studentToolbar.js">
+        <pic:resources location="http://imsglobal.org/pci/1.0.15/sharedLibraries.xml">
+          <pic:libraries>
+            <pic:lib id="IMSGlobal/jquery_2_1_1"/>
+          </pic:libraries>
+        </pic:resources>
+        <pic:properties>
+          <pic:entry key="position">100</pic:entry>
+          <pic:entry key="toolbarId">sts-studentToolbar</pic:entry>
+        </pic:properties>
+        <pic:markup>
+          <html5:div class="sts-scope">
+            <html5:div id="sts-studentToolbar" class="sts-container sts-studentToolbar-container sts-movable-container">
+              <html5:div class="sts-title-bar">
+                <html5:div class="sts-title">Student Toolbar</html5:div>
+              </html5:div>
+              <html5:div class="sts-content">
+                <!-- Actual tools go here -->
+              </html5:div>
+            </html5:div>
+          </html5:div>
+        </pic:markup>
+      </pic:portableInfoControl>
+    </infoControl>
+    <div class="grid-row">
+      <div class="col-12">
+        <choiceInteraction shuffle="false" maxChoices="0" minChoices="0" orientation="vertical" responseIdentifier="RESPONSE">
+          <prompt/>
+          <simpleChoice fixed="false" showHide="show" identifier="choice_1">choice #1</simpleChoice>
+          <simpleChoice fixed="false" showHide="show" identifier="choice_2">choice #2</simpleChoice>
+          <simpleChoice fixed="false" showHide="show" identifier="choice_3">choice #3</simpleChoice>
+        </choiceInteraction>
+      </div>
+    </div>
+  </itemBody>
+  <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+</assessmentItem>

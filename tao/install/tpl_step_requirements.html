@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <title>Installation Process</title>
+	<link rel="stylesheet" type="text/css" href="../views/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../views/css/custom-theme/jquery-ui-1.8.22.custom.css"/>
+	<link rel="stylesheet" type="text/css" href="css/installation_main.css" />
+	<link rel="stylesheet" type="text/css" href="css/step_requirements.css" />
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/step_ie8.css"/>
+	<![endif]-->
+
+	<script type="text/javascript" src="../views/js/lib/require.js" data-main="js/step_requirements"></script>
+
+</head>
+
+<body>
+	<div id="installation_form" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+			<h2>TAO Installation Wizard</h2>
+			<h1>Requirements Check</h1>
+			<ul id="install_seq">
+				<li><h3>Installation Steps</h3></li>
+				<li id="step_requirements" class="currentStep">1. Requirements Check</li>
+				<li id="step_server_setup">2. Server Setup</li>
+				<li id="step_database_setup">3. Database Setup</li>
+				<li id="step_admin_setup">4. Administrator Setup</li>
+                <li id="step_licenses">5. Licensing Agreement</li>
+				<li id="step_finalization">6. Finalize Installation</li>
+			</ul>
+			<p id="comments">
+				In this first step, we will check if your web server meets the minimum requirements to install and run TAO.
+                                If we detect any issues, they will be listed below. "Mandatory components" must be installed. "Optional components" may be installed depending on your needs.
+			</p>
+			<div id="forms_check_content">
+        <form autocomplete="off">
+                                <ul id="checks"></ul>
+                                <input id="redoForm" class="enabled" type="button" value="Re-check" />
+                                <input id="submitForm" class="disabled" type="submit" value="Next" disabled="disabled"/>
+                                <div id="formComment"></div>
+                            </form>
+			</div>
+	</div>
+</body>
+
+</html>

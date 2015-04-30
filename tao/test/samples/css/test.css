@@ -1,0 +1,443 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+@CHARSET "UTF-8";
+html body{
+	height:100%;
+	position:relative;
+}
+/* Layout specific stylesheet, used for elements positioning */
+
+/* Layout */
+div#tabs{
+	min-height:620px;
+	width:99%;
+	margin:auto 3px 32px auto;
+}
+div#tabs .ui-tabs-nav{
+	margin-right:0px;
+	background-color: #fff;
+	z-index:1;
+}
+
+/* don't change it ! (used by scripting) */
+div#tabs div.ui-tabs-panel{
+	position:relative;
+	/*left:0%;
+	width: 100%;*/
+	padding: 5px 0
+}
+/* --- */
+
+
+/* Menu */
+div#main-menu{
+	padding-left:65px;
+	border:none;
+	border-width: 0px;
+	height:35px;
+	position:relative;
+	margin-right:10px;
+	background-position:50% 52.5%;
+}
+div#main-menu #menu-bullet{
+	position:absolute;
+	top:2px;
+	left:4px;
+	width:55px;
+	height:40px;
+	background: transparent url("../img/tao_icon.png") no-repeat;
+}
+div#main-menu #menu-bullet:hover{
+        opacity:0.8;
+}
+#main-menu span a{
+	font-size:1.2em;
+	font-weight:bold;
+	color:#888;
+}
+div#main-menu .right-menu{
+	position:absolute;
+	right:0px;
+	top:5px;
+	background: transparent;
+}
+div#main-menu .right-menu span{
+	padding-left:5px;
+	padding-right:8px
+}
+div#main-menu .right-menu span a:hover{
+	opacity:0.8;
+}
+div#main-menu .left-menu{
+	margin-top:8px;
+	color:#BBB;
+	font-size:14px;
+}
+div#main-menu .left-menu span{
+	padding-left:4px;
+	padding-right:4px;
+	font-size:12px;
+}
+#main-menu .left-menu a:hover{
+	border-bottom: solid 2px #D00239;
+	color:#D00239;
+}
+div#main-menu span.current-extension a{
+	border-bottom: solid 2px #D00239;
+	color:#D00239;
+}
+div#main-menu span.disabled-extension{
+	font-size:1.3em;
+	color:#B0B0B0;
+}
+
+/* Main containers */
+
+div.main-container { margin-left: 0/*0.25%*/ }
+div.main-container .medium {
+	width: 49.75%;
+	float: right;
+}
+div.main-container .large {
+	width: 74.75%;
+	float: right;
+}
+div#preview-container{
+	width:59%;
+	height:100%;
+	overflow-y:auto;
+	float:left;
+	background-color:#EFEFEF;
+	color:#CCC;
+	text-align:center;
+	margin-right:5px;
+}
+div.data-container{
+	width:24%;
+	float:left;
+	margin-right:1%;
+	margin-bottom:1%;
+}
+div.container-title{
+	padding:4px;
+	font-size:1em;
+}
+div.container-content{
+	font-size:1em;
+	overflow-y: auto;
+	min-height:200px;
+	max-height:400px;
+}
+div.container-content .elt-info { display: block; padding: 0 5px }
+div#authoring-container{
+	left:0px;
+	width:100%;
+	height:600px;
+}
+div.ext-home-container{
+	padding:1%;
+	font-size:1.1em;
+}
+
+.form-help {
+	display: block;
+	font-size: 10px;
+	margin: 5px 0 5px 30%;
+	font-style: italic;
+}
+
+/* Section aside */
+div#sections-aside {
+	float: left;
+	width: 20%;
+}
+/* Tree panel */
+div#section-trees{
+	/*position:absolute;
+	width:19%;
+	left:0%;
+	top:40px;
+	height:290px;*/
+	margin: 5px 0;
+}
+div#section-trees div.ui-widget-content{
+	height:230px;
+	overflow-y:auto;
+	overflow-x:hidden;
+	padding:3px;
+}
+div.tree-actions{
+	font-size:11px;
+	padding:2px;
+	background-color: #E0E0E0;
+	border-left:1px solid #AAAAAA;
+	border-right:1px solid #AAAAAA;
+}
+div#section-trees div.tree-custom {
+	overflow-y:auto;
+	height: 100%;
+}
+div.tree-block {
+	margin: 5px 0;
+}
+/* Actions box */
+div#section-actions{
+	/*left:0%;
+	top:342px;
+	margin:0% 0.5% 0.5% 0.5%;
+	padding:0px;
+	text-align:left;
+	width:19%;
+	z-index:100;
+	position:absolute;*/
+	margin: 5px 0;
+}
+div#section-actions div#action-title{
+	padding: 3px;
+}
+div#section-actions div#action-items{
+}
+div#section-actions div#action-items td{
+	text-align:center;
+	vertical-align:top;
+	padding:5px 0px 5px 0px;
+	width:33%;
+}
+div#section-actions div#action-items{
+	font-size:10px;
+	font-weight:normal;
+	color:#666;
+}
+div#section-actions div#action-items a img{
+	text-decoration:none;
+	border-width: 0px;
+}
+div#section-actions div#action-items a{
+	text-decoration:none;
+	font-weight:bold;
+	color:#D1043B;
+}
+div#section-actions div#action-items td:hover a,
+div#section-actions div#action-items a:hover{
+	color:#FA648C;
+}
+div#section-actions ul{
+	list-style-type:none;
+	margin-left:0px;
+	padding-left:0px;
+}
+div#section-actions ul li{
+	margin:12px;
+	padding:4px;
+}
+div#section-actions ul li a:hover{
+	color:#FA648C;
+}
+
+/* Metadata */
+div#section-meta{
+	position:absolute;
+	bottom:0%;
+	right:0.25%;
+	width:33%;
+}
+div#meta-title{
+	padding:3px;
+}
+div#meta-content table{
+	border-collapse:collapse;
+}
+div#meta-content table th,
+div#meta-content table td{
+	border: solid 1px #ccc;
+	font-size:0.9em;
+	color:#444;
+	padding:3px;
+	margin:0;
+}
+div#meta-content table td{
+	font-weight:normal;
+}
+div#meta-content table td,
+div#meta-content table th{
+	width:20%;
+}
+div#meta-content table .first{
+	width:30%;
+}
+div#meta-content table .last{
+	width:50%;
+}
+
+/* Footer */
+div#footer {
+	font-size:10px;
+	width:100%;
+	text-align:center;
+	margin:5px auto 0px auto;
+	padding:5px 0px 0px 0px;
+}
+div#footer .releasestatus {
+	width: 380px;
+	margin: 10px auto 10px auto;
+	padding: 5px 5px 5px 62px;
+	text-align:center;
+	position: relative;
+}
+div#footer .releasestatus strong { font-size: 12px; }
+div#footer .releasestatus img {
+	position: absolute;
+	left: 15px;
+	top: 5px;
+}
+
+/* Ajax Loader */
+div#ajax-loading{
+	z-index: 1000;
+	display: none;
+	opacity: 0.5;
+	background: #FFF url(../img/ajax-loader.gif) no-repeat center center;
+}
+
+/* Results Manual Scoring Conciliation */
+form#coding_scoreconcil div#selectors {
+	width: 19.5%;
+	float: left;
+}
+form#coding_scoreconcil div#evalitems {
+	width: 80%;
+	float: right;
+}
+form#coding_scoreconcil div#navigation {
+	float: left;
+}
+
+form#coding_scoreconcil div.history {
+
+}
+
+form#coding_scoreconcil fieldset {
+
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+html[xmlns] .clearfix {
+	display: block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+
+.containerDisplay {
+  border: 1px solid #999;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin-bottom: 10px;
+	position: relative;
+}
+.containerDisplay > .title {
+  border-bottom: 1px solid #999;
+	padding: 5px 7px;
+	font-weight: bold;
+	background-color: #ccc;
+	display: block;
+	font-size: 14px;
+}
+.containerDisplay .title a { font-size: 10px }
+
+
+ul.group-list, ul.group-list ul {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 100%;
+}
+
+ul.group-list li {
+	list-style: none;
+	padding-left: 13px;
+	border-bottom: 1px solid #999;
+}
+ul.group-list li span.label,
+ul.group-list .group-title .title {
+	width: 90%;
+	padding: 5px 0;
+	display: inline-block;
+}
+ul.group-list li span.selector,
+ul.group-list .group-title .selector {
+	width: 10%;
+	height: 27px;
+	vertical-align: top;
+	display: inline-block;
+}
+ul.group-list li:last-child { border-bottom: 0 }
+ul.group-list .group-title { font-weight: bold; padding-left: 7px }
+ul.group-list li:hover:not(.group) { background-color: #ccc }
+ul.group-list .group-title:hover { background-color: #ddd }
+ul.group-list li.selectable { cursor: pointer }
+ul.group-list li.selected { background-color: #9f9 }
+ul.group-list li.selected:hover { background-color: #9c9 }
+ul.group-list li.group { padding: 0 }
+ul.group-list li .group-title { background-color: #999; cursor: pointer }
+ul.group-list li span.title { background-color: inherit }
+ul.group-list li.expendable.closed ul { display: none; }
+ul.group-list li.expendable.closed { margin-bottom: 1px }
+ul.group-list li.expendable.closed:last-child { margin-bottom: 0 }
+ul.group-list .selector {
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+ul.group-list li > .checkable,
+ul.group-list li .group-title > .checkable { background-image: url(../img/checkbox.png) }
+ul.group-list .has-access > .selector,
+ul.group-list .has-access .group-title > .selector,
+ul.group-list .has-access:hover > .selector,
+ul.group-list .has-access:hover .group-title > .selector { background-image: url(../img/checkbox_partial.png) }
+ul.group-list .has-allaccess > .selector,
+ul.group-list .has-allaccess .group-title > .selector,
+ul.group-list .has-allaccess:hover > .selector,
+ul.group-list .has-allaccess:hover .group-title > .selector { background-image: url(../img/checkbox_checked.png) }
+ul.group-list .autoadd > .selector,
+ul.group-list .autoadd .group-title > .selector,
+ul.group-list .autoadd:hover > .selector,
+ul.group-list .autoadd:hover .group-title > .selector { background-image: url(../img/autoadd.png) }
+ul.group-list .autoadd.checked > .selector,
+ul.group-list .autoadd.checked .group-title > .selector,
+ul.group-list .autoadd.checked:hover > .selector,
+ul.group-list .autoadd.checked:hover .group-title > .selector { background-image: url(../img/autoadd_checked.png) }
+
+ul.group-list .selector { background-color: white }
+.selector.checkable { cursor: pointer }

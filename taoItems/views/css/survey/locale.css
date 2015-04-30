@@ -1,0 +1,105 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+#container {
+	font-family:				 'Verdana', 'Arial', 'Helvetica', 'sans-serif';
+}
+
+#container .column_header {
+	color:				 #000000;
+	font-size:				 16px;
+	text-decoration:				 none;
+}
+
+#container em {
+	color:				 #000000;
+	font-weight:				bold;
+	font-style:				italic;
+	text-decoration:				 none;
+}
+
+#container .matrix_table .labelText {
+	color:				 #000000;
+	font-size:				 12px;
+	text-align:				 left;
+	line-height:				 16px;
+	text-decoration:				 none;
+}
+
+#container .question {
+	color:				 #000000;
+	font-size:				 14px;
+	text-align:				 left;
+	font-weight:				bold;
+	line-height:				 18px;
+	text-decoration:				 none;
+}
+
+#container .question_description {
+	font-size:				 12px;
+	color:				 #000000;
+	text-align:				 left;
+	font-style:				italic;
+	line-height:				 14px;
+	text-decoration:				 none;
+}
+
+#container .instruction {
+	color:				 #000000;
+	font-size:				 14px;
+	text-align:				 left;
+	font-style:				italic;
+	line-height:				 18px;
+	text-decoration:				 none;
+}
+
+#container .response_description {
+	font-size:				 12px;
+	color:				 #000000;
+	text-align:				 left;
+	font-style:				italic;
+	line-height:				 14px;
+	text-decoration:				 none;
+}
+
+#container .list_table .labelText {
+	color:				 #000000;
+	font-size:				 12px;
+	text-align:				 left;
+	line-height:				 16px;
+	text-decoration:				 none;
+}
+
+#container strong {
+	color:				 #000000;
+	text-decoration:				 underline;
+}
+
+#container .input[type="text"] {
+	font-size:				 12px;
+	color:				 #000000;
+	text-align:				 right;
+	line-height:				 14px;
+	text-decoration:				 none;
+}
+
+#container table {
+	font-family:				'Verdana', 'Arial', 'Helvetica', 'sans-serif';
+}
+

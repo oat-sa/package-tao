@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemBody xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+	<matchInteraction responseIdentifier="RESPONSE" shuffle="true" maxAssociations="4">
+		<prompt>
+			Match the following characters to the Shakespeare play they appeared in:
+		</prompt>
+		<simpleMatchSet>
+			<simpleAssociableChoice identifier="C" matchMax="1">Capulet</simpleAssociableChoice>
+			<simpleAssociableChoice identifier="D" matchMax="1">Demetrius</simpleAssociableChoice>
+			<simpleAssociableChoice identifier="L" matchMax="1">Lysander</simpleAssociableChoice>
+			<simpleAssociableChoice identifier="P" matchMax="1">Prospero</simpleAssociableChoice>
+		</simpleMatchSet>
+		<simpleMatchSet>
+			<simpleAssociableChoice identifier="M" matchMax="4">A Midsummer-Night's Dream</simpleAssociableChoice>
+			<simpleAssociableChoice identifier="R" matchMax="4">Romeo and Juliet</simpleAssociableChoice>
+			<simpleAssociableChoice identifier="T" matchMax="4">The Tempest</simpleAssociableChoice>
+		</simpleMatchSet>
+	</matchInteraction>
+</itemBody>

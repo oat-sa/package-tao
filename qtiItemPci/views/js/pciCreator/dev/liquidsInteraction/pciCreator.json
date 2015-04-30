@@ -1,0 +1,22 @@
+{
+    "typeIdentifier": "liquidsInteraction",
+    "label": "Liquids",
+    "description": "A simple implementation of SBAC liquids.",
+    "version": "0.1",
+    "author": "Jérôme Bogaerts",
+    "email": "jerome@taotesting.com",
+    "libraries": [
+        "IMSGlobal/jquery_2_1_1"
+    ],
+    "css": [
+    ],
+    "entryPoint": "./runtime/liquidsInteraction.amd.js",
+    "tags": [
+    ],
+    "icon": "./creator/img/icon.svg",
+    "short": "Liquids",
+    "response": {
+        "baseType": "integer",
+        "cardinality": "single"
+    }
+}

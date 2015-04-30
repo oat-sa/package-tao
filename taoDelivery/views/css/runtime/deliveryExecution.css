@@ -1,0 +1,88 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+@import url(main.css);
+
+html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
+
+#content .contentHeader {
+    font-size: 20px;
+    padding:20px 10px 20px 25px;
+    font-weight:bold;
+}
+.section_title {
+	color: black;
+	font-weight: bold;
+	/*background: url(../img/bullet.png) no-repeat 5px;*/
+	padding-left: 20px;
+	padding-top: 5px;
+	background: #f3f3f3;
+	border: solid 1px #ccc;
+	font-size: 16px;
+	border-bottom: 1px solid;
+	border-bottom-color: #ddd;
+	margin:0px;
+	height:22px;
+	vertical-align: middle;
+
+}
+
+.section_title .counter {
+    color:#aaa;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    filter:alpha(opacity=20);
+    -moz-opacity:0.20;
+    -khtml-opacity: 0.20;
+    opacity: 0.20;
+    z-index: 10000;
+}
+
+#loading {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    z-index: 10000;
+}
+
+#loading > div {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 50%;
+    top: 50%;
+    margin:-75px 0 0 -75px;
+}
+
+#iframeDeliveryExec {
+    overflow: hidden;
+    width: 100%;
+    display: block;
+}

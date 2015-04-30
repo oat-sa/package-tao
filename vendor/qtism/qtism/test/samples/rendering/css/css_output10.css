@@ -1,0 +1,6 @@
+@media screen and (min-width:0\0) { 
+
+   #myId .main h3:after, #myId .preamble h3:after, #myId .select:after { display: none; }
+   #myId [role="banner"] h1:before { display: none; }
+
+}

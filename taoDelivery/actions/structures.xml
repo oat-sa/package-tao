@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+    <structure id="delivery" name="Deliveries" level="4" group="main">
+        <description>Prepare, publish deliveries sessions.</description>
+        <icon id="icon-delivery" src=""/>
+        <sections>
+
+            <section id="manage_delivery_assembly" name="Deliveries" url="/taoDelivery/Delivery/index">
+                <trees>
+                    <tree name="Deliveries library"
+                          className="Delivery"
+                          dataUrl="/taoDelivery/Delivery/getOntologyData"
+                          rootNode="http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDelivery"
+                          selectClass="delivery-class-properties"
+                          selectInstance="delivery-properties"
+                          moveInstance="delivery-move"
+                          delete="delivery-delete" 
+                    />
+                </trees>
+                <actions>
+                	
+                	<action id="delivery-class-properties" name="Properties" url="/tao/PropertiesAuthoring/index" group="content" context="class">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="delivery-properties" name="Properties"  url="/taoDelivery/Delivery/editDelivery" group="content" context="instance">
+                        <icon id="icon-edit"/>
+                    </action> 
+                    <action id="delivery-filter" name="Filter" context="*" group="search" binding="filter">
+                        <icon id="icon-filter"/>
+                    </action>
+                    <action id="delivery-search" name="Search" url="/taoDelivery/Delivery/search" context="*" group="search" binding="launchFinder">
+                        <icon id="icon-find"/>
+                    </action>  
+                    <action id="delivery-class-new" name="New class" url="/taoDelivery/Delivery/addSubClass" context="resource" group="tree" binding="subClass">
+                        <icon id="icon-folder-open"/>
+                    </action>
+                    <action id="delivery-delete" name="Delete" url="/taoDelivery/Delivery/delete" context="resource" group="tree" binding="removeNode">
+                        <icon id="icon-bin"/>
+                    </action>
+                    <action id="delivery-move" name="Move" url="/taoDelivery/Delivery/moveInstance" context="instance" group="none" binding="moveNode">
+                        <icon id="icon-move-item"/>
+                    </action>
+                    <action id="delivery-new" name="New delivery" url="/taoDelivery/Delivery/wizard" context="resource" group="tree">
+                        <icon id="icon-delivery"/>
+                    </action>
+
+                </actions>
+            </section>
+        </sections>
+    </structure>
+    <entrypoint id="deliveryServer" title="Test-Takers" label="TAO Delivery Server" url="taoDelivery/DeliveryServer/index">
+        <description><![CDATA[Take or continue a test.]]></description>
+    </entrypoint>
+</structures>

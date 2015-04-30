@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 imsqti_v2p1.xsd" identifier="exitResponse" title="testitems 1" timeDependent="false" adaptive="false" xml:lang="en-US">
+	<outcomeDeclaration identifier="SCORE_bool" baseType="boolean" cardinality="single"/>
+	<responseProcessing>
+		<setOutcomeValue identifier="SCORE_bool">
+			<baseValue baseType="boolean">true</baseValue>
+		</setOutcomeValue>
+		<exitResponse/>
+		<setOutcomeValue identifier="SCORE_bool">
+			<baseValue baseType="boolean">false</baseValue>
+		</setOutcomeValue>
+	</responseProcessing>
+</assessmentItem>

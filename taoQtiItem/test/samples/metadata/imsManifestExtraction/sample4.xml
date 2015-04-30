@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" 
+          xmlns:ypm="http://www.taotesting.com/xsd/ypm" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 http://www.imsglobal.org/xsd/imscp_v1p2.xsd http://www.taotesting.com/xsd/ypm http://www.taotesting.com/xsd/ypm.xsd" 
+          identifier="QTI-MANIFEST">
+    <!-- Target Namespace remains v1p1 for backward compatibility -->
+    <organizations/>
+    <resources>
+        <resource identifier="Q01" type="imsqti_item_xmlv2p1" href="Q01/qti.xml">
+            <metadata>
+                <ypm:myprojectMetadata>
+                    <ypm:complexity>4</ypm:complexity>
+                </ypm:myprojectMetadata>
+            </metadata>
+            
+            <file href="Q01/qti.xml"/>
+        </resource>
+    </resources>
+</manifest>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+	<structure id="help" name="Help" level="100" group="settings" binding="taoCe/controller/home">
+		<description></description>
+		<icon id="icon-help" src=""/>
+		<sections>
+			<section id="help" name="Help" url="/taoCe/Main/index" binding="taoCe/controller/home"></section>
+		</sections>
+	</structure>
+    <entrypoint id="backofficeCe" title="Test Developers and Administrators" label="TAO Back Office" url="taoCe/Main/index">
+        <description><![CDATA[Create items, manage item and test banks, organize cohorts and deliveries, prepare reports, set up workflows.]]></description>
+        <replace id="backoffice" />
+    </entrypoint>
+</structures>

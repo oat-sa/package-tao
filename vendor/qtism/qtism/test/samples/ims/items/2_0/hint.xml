@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p0 imsqti_v2p0.xsd"
+    identifier="hint" title="Mexican President (Take 2)" adaptive="true" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+        <correctResponse>
+            <value>MGH001C</value>
+        </correctResponse>
+    </responseDeclaration>
+    <responseDeclaration identifier="HINTREQUEST" cardinality="single" baseType="boolean"/>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+    <outcomeDeclaration identifier="FEEDBACK" cardinality="single" baseType="identifier"/>
+    <itemBody>
+        <choiceInteraction responseIdentifier="RESPONSE" shuffle="false" maxChoices="1">
+            <prompt>Who is the President of Mexico?</prompt>
+            <simpleChoice identifier="MGH001A"> George W Bush <feedbackInline
+                    outcomeIdentifier="FEEDBACK" identifier="MGH001A" showHide="show">No, he is the
+                    President of the USA.</feedbackInline>
+            </simpleChoice>
+            <simpleChoice identifier="MGH001B"> Tony Blair <feedbackInline
+                    outcomeIdentifier="FEEDBACK" identifier="MGH001B" showHide="show">No, he is the
+                    Prime Minister of England.</feedbackInline>
+            </simpleChoice>
+            <simpleChoice identifier="MGH001C"> Vicente Fox <feedbackInline
+                    outcomeIdentifier="FEEDBACK" identifier="MGH001C" showHide="show">Yes.</feedbackInline>
+            </simpleChoice>
+            <simpleChoice identifier="MGH001D"> Ariel Sharon <feedbackInline
+                    outcomeIdentifier="FEEDBACK" identifier="MGH001D" showHide="show">No, he is the
+                    Prime Minister of Israel.</feedbackInline>
+            </simpleChoice>
+        </choiceInteraction>
+        <p>
+            <endAttemptInteraction responseIdentifier="HINTREQUEST" title="Show Hint"/>
+        </p>
+    </itemBody>
+    <responseProcessing>
+        <responseCondition>
+            <responseIf>
+                <variable identifier="HINTREQUEST"/>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <baseValue baseType="identifier">HINT</baseValue>
+                </setOutcomeValue>
+            </responseIf>
+            <responseElse>
+                <responseCondition>
+                    <responseIf>
+                        <match>
+                            <variable identifier="RESPONSE"/>
+                            <correct identifier="RESPONSE"/>
+                        </match>
+                        <setOutcomeValue identifier="SCORE">
+                            <baseValue baseType="float">1</baseValue>
+                        </setOutcomeValue>
+                    </responseIf>
+                    <responseElse>
+                        <setOutcomeValue identifier="SCORE">
+                            <baseValue baseType="float">0</baseValue>
+                        </setOutcomeValue>
+                    </responseElse>
+                </responseCondition>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <variable identifier="RESPONSE"/>
+                </setOutcomeValue>
+            </responseElse>
+        </responseCondition>
+    </responseProcessing>
+    <modalFeedback outcomeIdentifier="FEEDBACK" identifier="HINT" showHide="show">Tony lives in the
+        United Kingdom and George lives in Washington.</modalFeedback>
+    <modalFeedback outcomeIdentifier="FEEDBACK" identifier="MGH001C" showHide="show">Yes, that is correct.</modalFeedback>
+    <modalFeedback outcomeIdentifier="FEEDBACK" identifier="MGH001C" showHide="hide">No, the correct
+        answer is Vicente Fox.</modalFeedback>
+</assessmentItem>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Qti Element Selector Test</title>
+        <link rel="stylesheet" type="text/css" href="/tao/views/js/lib/qunit/qunit.css">
+        <script type="text/javascript" src="/tao/views/js/lib/require.js"></script>
+        <script type="text/javascript" src="/tao/views/js/lib/qunit/qunit.js"></script>
+
+        <!--tao css-->
+        <link rel="stylesheet" type="text/css" href="/tao/views/css/tao-main-style.css" />
+        <link rel="stylesheet" type="text/css" href="/taoQtiItem/views/css/qti.css" />
+        <link rel="stylesheet" type="text/css" href="/taoQtiItem/views/css/item-creator.css" />
+        <style>
+            #item-editor-panel{
+                position:relative;
+                margin-left: auto;
+                margin-right: auto;
+                width: 70%;
+                background-color: #b0e0e6;
+                padding: 40px 60px;
+              }
+            .item-editor-item {
+                position : relative;
+                height : 1050px;
+            }
+            .center{
+                position:relative;
+                background-color: #b0e0e6;
+                width: 10px;
+                height: 10px;
+            }
+            #center1{
+                top : 20px;
+                left : 50px;
+            }
+            #center2{
+                top : 350px;
+                left : 200px;
+                width: 50px;
+                height: 50px;
+            }
+            #center3{
+                top : 700px;
+                left : 300px;
+                width: 150px;
+                height: 150px;
+            }
+        </style>
+        <script  type="text/javascript">
+            QUnit.config.autostart = false;
+            require(['/tao/ClientConfig/config'], function(){
+                require(['taoQtiItem/qtiCreator/test/elementSelector/test'], function(){
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="item-editor-panel" class="has-item">
+            <div class="qti-item item-editor-item">
+                <div class="grid-row">
+                    <div class="col-12">
+                        <div id="center1" class="center"></div>
+                        <div id="center2" class="center"></div>
+                        <div id="center3" class="center"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="form-container"></div>
+        <div id="qunit-fixture"></div>
+    </body>
+</html>

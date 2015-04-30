@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 imsqti_v2p1.xsd"
+	identifier="shakespeare" title="Shakespeare biography" timeDependent="false"
+	adaptive="false" xml:lang="en-US">
+
+	<responseDeclaration identifier="response_1"
+		cardinality="single" baseType="identifier">
+
+		<correctResponse>
+			<value>choice_1</value>
+		</correctResponse>
+
+	</responseDeclaration>
+	<responseDeclaration identifier="response_2"
+		cardinality="single" baseType="identifier">
+
+		<correctResponse>
+			<value>choice_4</value>
+		</correctResponse>
+
+	</responseDeclaration>
+	<responseDeclaration identifier="response_3"
+		cardinality="single" baseType="string">
+		<correctResponse>
+			<value>poet</value>
+		</correctResponse>
+		<mapping defaultValue="0">
+			<mapEntry mapKey="poet" mappedValue="1" />
+			<mapEntry mapKey="playwright" mappedValue="1" />
+			<mapEntry mapKey="writer" mappedValue="0.5" />
+		</mapping>
+
+	</responseDeclaration>
+	<responseDeclaration identifier="response_4"
+		cardinality="single" baseType="string">
+
+		<correctResponse>
+			<value>Bard of Avon</value>
+		</correctResponse>
+		<mapping defaultValue="0">
+			<mapEntry mapKey="Bard of Avon" mappedValue="1" />
+			<mapEntry mapKey="bard of Avon" mappedValue="1" />
+			<mapEntry mapKey="bard" mappedValue="0.5" />
+			<mapEntry mapKey="Bard" mappedValue="0.5" />
+		</mapping>
+
+	</responseDeclaration>
+	<responseDeclaration identifier="response_5"
+		cardinality="multiple" baseType="directedPair">
+
+		<correctResponse>
+			<value>group_1 choice_7</value>
+			<value>group_2 choice_8</value>
+			<value>group_3 choice_9</value>
+			<value>group_4 choice_10</value>
+		</correctResponse>
+
+	</responseDeclaration>
+	<responseDeclaration identifier="response_6"
+		cardinality="multiple" baseType="identifier">
+
+		<correctResponse>
+			<value>choice_12</value>
+			<value>choice_13</value>
+		</correctResponse>
+
+	</responseDeclaration>
+
+    <outcomeDeclaration identifier="SCORE" cardinality="single"
+        baseType="integer" />
+
+    <outcomeDeclaration identifier="SCORE_1" cardinality="single"
+        baseType="integer" />
+
+    <outcomeDeclaration identifier="SCORE_2" cardinality="single"
+        baseType="integer" />
+
+    <outcomeDeclaration identifier="SCORE_3" cardinality="single"
+        baseType="integer" />
+
+    <outcomeDeclaration identifier="SCORE_4" cardinality="single"
+        baseType="integer" />
+
+    <outcomeDeclaration identifier="SCORE_5" cardinality="single"
+        baseType="integer" />
+
+    <outcomeDeclaration identifier="SCORE_6" cardinality="single"
+        baseType="integer" />
+
+	<itemBody>
+		<div>
+			<div>
+				<p>
+					<b>William Shakespeare</b>
+					<br />
+				</p>
+				<p>
+					Date of birth:
+					<inlineChoiceInteraction shuffle="false"
+						responseIdentifier="response_1">
+						<inlineChoice identifier="choice_1">26 April 1564</inlineChoice>
+						<inlineChoice identifier="choice_2">29 February 1664</inlineChoice>
+						<inlineChoice identifier="choice_3">2 March 2010</inlineChoice>
+					</inlineChoiceInteraction>
+				</p>
+				<p>
+					Date of death:
+					<inlineChoiceInteraction shuffle="true"
+						responseIdentifier="response_2">
+						<inlineChoice identifier="choice_4">23 April 1616</inlineChoice>
+						<inlineChoice identifier="choice_5">24 April 1616</inlineChoice>
+						<inlineChoice identifier="choice_6">25 April 1616</inlineChoice>
+					</inlineChoiceInteraction>
+				</p>
+				<br />
+				<hr />
+				<br />
+				<p>
+					<i>Shakespeare</i>
+					was an English
+					<textEntryInteraction responseIdentifier="response_3" />
+
+					, widely regarded as the greatest writer in the English language
+					and the world's pre-eminent dramatist. He is often called England's
+					<span class="mw-redirect">national poet</span>
+					and the&#xA0; "
+					<textEntryInteraction responseIdentifier="response_4" />
+
+					". His surviving works, including some collaborations, consist of
+					about
+					<b>38</b>
+					plays,
+					<b>154</b>
+					<span class="mw-redirect">sonnets</span>
+					,
+					<b>2</b>
+					long
+					<span class="mw-redirect">narrative poems</span>
+					,
+					and several other poems. His plays have been translated into every
+					major living language and are performed more often than those of
+					any
+					other playwright.
+				</p>
+				<br />
+				<hr />
+				<br />
+					<gapMatchInteraction shuffle="true" responseIdentifier="response_5">
+						<gapText identifier="choice_7" matchMax="0">Stratford-upon-Avon</gapText><gapText identifier="choice_8" matchMax="2">Anne Hathaway</gapText><gapText identifier="choice_9" matchMax="0">Lord Chamberlain's Men</gapText><gapText identifier="choice_10" matchMax="2">Stratford</gapText>
+							<p> Shakespeare was born and raised in
+								<gap identifier="group_1" /> . At the age of 18, he married
+								<gap identifier="group_2" /> , with whom he had three children: Susanna, and twins Hamnet and Judith. Between 1585 and 1592, he began a successful career in London as an actor, writer, and part owner of a playing company called the
+								<gap identifier="group_3" /> , later known as the King's Men. He appears to have retired to
+								<gap identifier="group_4" /> around 1613, where he died three years later. Few records of Shakespeare's private life survive, and there has been considerable speculation about such matters as his physical appearance, sexuality,
+								<span class="mw-redirect">religious beliefs</span> , and whether the works attributed to him were written by others.
+							</p>
+					</gapMatchInteraction>
+				<br />
+				<hr />
+				<br />
+					<hottextInteraction maxChoices="2"
+						responseIdentifier="response_6">
+
+						<div>
+							<div>
+								<div>
+									Shakespeare produced most of his known work between
+									<hottext identifier="choice_11">1589</hottext>
+									and
+									<hottext identifier="choice_12">1313</hottext>
+									. His
+									early plays were mainly comedies and histories, genres he raised to
+									the
+									peak of sophistication and artistry by the end of the 16th century.
+									He
+									then wrote mainly tragedies until about
+									<hottext identifier="choice_13">1808</hottext>
+									, including Hamlet, King
+									Lear, and Macbeth, considered some of the finest works in the
+									English
+									language. In his last phase, he wrote tragicomedies, also known as
+									romances, and collaborated with other playwrights.
+								</div>
+							</div>
+						</div>
+					</hottextInteraction>
+				<br />
+				<hr />
+				<br />
+				<br />
+				<div>
+					<img
+						src="http://tao.localdomain/filemanager/views/data/240px-Shakespeare.jpg"
+						 alt="Shakespeare" height="284" width="221" />
+					<br />
+				</div>
+			</div>
+		</div>
+	</itemBody>
+
+	<responseProcessing>
+		<responseCondition>
+			<responseIf>
+				<match>
+					<variable identifier="response_1" />
+					<correct identifier="response_1" />
+				</match>
+                <setOutcomeValue identifier="SCORE">
+                    <sum>
+                        <variable identifier="SCORE" />
+                        <baseValue baseType="integer">1</baseValue>
+                    </sum>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="SCORE_1">
+                    <baseValue baseType="integer">1</baseValue>
+                </setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+		<responseCondition>
+			<responseIf>
+				<match>
+					<variable identifier="response_2" />
+					<correct identifier="response_2" />
+				</match>
+                <setOutcomeValue identifier="SCORE">
+                    <sum>
+                        <variable identifier="SCORE" />
+                        <baseValue baseType="integer">1</baseValue>
+                    </sum>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="SCORE_2">
+                    <baseValue baseType="integer">1</baseValue>
+                </setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+		<responseCondition>
+			<responseIf>
+				<not>
+					<isNull>
+						<variable identifier="response_3" />
+					</isNull>
+				</not>
+				<setOutcomeValue identifier="SCORE">
+					<sum>
+						<variable identifier="SCORE" />
+						<mapResponse identifier="response_3" />
+					</sum>
+				</setOutcomeValue>
+                <setOutcomeValue identifier="SCORE_3">
+                    <mapResponse identifier="response_3" />
+                </setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+		<responseCondition>
+			<responseIf>
+				<not>
+					<isNull>
+						<variable identifier="response_4" />
+					</isNull>
+				</not>
+				<setOutcomeValue identifier="SCORE">
+					<sum>
+						<variable identifier="SCORE" />
+						<mapResponse identifier="response_4" />
+					</sum>
+				</setOutcomeValue>
+                <setOutcomeValue identifier="SCORE_4">
+                    <mapResponse identifier="response_4" />
+                </setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+        <responseCondition>
+            <responseIf>
+                <match>
+                    <variable identifier="response_5" />
+                    <correct identifier="response_5" />
+                </match>
+                <setOutcomeValue identifier="SCORE">
+                    <sum>
+                        <variable identifier="SCORE" />
+                        <baseValue baseType="integer">1</baseValue>
+                    </sum>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="SCORE_5">
+                    <baseValue baseType="integer">1</baseValue>
+                </setOutcomeValue>
+            </responseIf>
+        </responseCondition>
+        <responseCondition>
+            <responseIf>
+                <match>
+                    <variable identifier="response_6" />
+                    <correct identifier="response_6" />
+                </match>
+                <setOutcomeValue identifier="SCORE">
+                    <sum>
+                        <variable identifier="SCORE" />
+                        <baseValue baseType="integer">1</baseValue>
+                    </sum>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="SCORE_6">
+                    <baseValue baseType="integer">1</baseValue>
+                </setOutcomeValue>
+            </responseIf>
+        </responseCondition>
+    </responseProcessing>
+
+</assessmentItem>

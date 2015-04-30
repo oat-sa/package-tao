@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+This file aims at testing/exploring the rupture between the "paper based specification"* and the IMS QTI 2.1 XML
+Schema Definition. Indeed, the "paper based specification" describes the templateBlock as containing blockStatic components.
+
+Unfortunately, in the IMS QTI 2.1 XML Schema Definition, the templateBlock class can contain elements out of the set defined 
+by the blockStatic class.
+
+This test file focuses on creating a templateBlock containing other QTI classes than the one described in the "paper based specification"
+and see what happens with loading this file with and without the the XML Schema Validation.
+
+* http://www.imsglobal.org/question/qtiv2p1/imsqti_infov2p1.html#element10252
+
+FYI, the XSD of IMS QTI 2.1 allow the following QTI classes to be direct children of templateBlock:
+
++ pre (block)
++ h1 (h1)
++ h2 (h2)
++ h3 (h3)
++ h4 (h4)
++ h5 (h5)
++ h6 (h6)
++ p (block)
++ address (block)
++ dl (block)
++ ol (block)
++ ul (block)
++ br (inline)
++ hr (block)
++ img (inline)
++ object (flowStatic, inlineStatic)
++ blockquote (blockquote)
++ em (inline)
++ a (inline)
++ code (inline)
++ span (inline)
++ sub (inline)
++ acronym
++ big
++ tt (inline)
++ kbd (inline)
++ q (inline)
++ i (inline)
++ dfn (inline)
++ abbr (inline)
++ strong (inline)
++ sup (inline)
++ var (inline)
++ small (inline)
++ samp (inline)
++ b (inline)
++ cite (inline)
++ table (block)
++ div (block, flowStatic)
++ math (blockStatic, flowStatic, inlineStatic)
++ templateBlock (blockStatic, flowStatic)
++ templateInline (inline)
++ feedbackBlock (block)
++ feedbackInline (inline)
++ printedVariable (inline, flowStatic, textOrVariable) i.e. text (the complexType is mixed).
+
+It seems that, at a runtime point of view, the content of templateBlocks must be extdended to flowStatic to cover all these QTI classes.
+Unfortunately, accept flowStatic elements will include other elements to the possible list of rubricBlock direct children candidates,
+that should not appear directly into a rubricBlock.
+
++ hottext
++ rubricBlock
++ infoControl
+
+So we'll have to find an agreement :) !
+ -->
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+    identifier="test_othen_than_block" title="RubricBlock containing other stuff than block elements">
+    <testPart navigationMode="linear" submissionMode="individual" identifier="TP01">
+        <itemSessionControl maxAttempts="0" allowSkipping="true"/>
+        <assessmentSection identifier="S01" title="Section 01" visible="true">
+		<rubricBlock view="candidate">
+			<templateBlock templateIdentifier="tpl1" showHide="show" identifier="show_meh">
+				Hello there, regarding the paper based specification, I cannot be contained
+				directly into a rubricBlock. However, the XML Schema Definition describes
+				the rubricBlock complexType as a "mixed" one. So I am perfectly allowed to be there.
+				<!-- This hr element is allowed to be there from both XSD and paper spec point of views. -->
+				<hr/>
+				<div>
+					This div and its inner text are perfectly valid from both XSD and paper spec point of views.
+				</div>
+				<!-- But this element should not be there according to the paper specification. However its perfectly valid against the XSD. -->
+				<a href="goto.html">Go to somewhere...</a>
+			</templateBlock>
+			
+			<stylesheet href="stylesheet.css" type="text/css" media="screen"/>
+		</rubricBlock>
+		<assessmentItemRef identifier="Q01" href="./Q01/qti.xml"/>
+		<assessmentItemRef identifier="Q02" href="./Q02/qti.xml"/>
+        </assessmentSection>
+    </testPart>
+</assessmentTest>

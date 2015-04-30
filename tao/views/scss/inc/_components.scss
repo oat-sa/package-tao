@@ -1,0 +1,345 @@
+/* Style of advanced components */
+
+/* toggler */
+.toggler {
+    &:after {
+        margin-left: 3px;
+        position: relative;
+        top: 2px;
+        @include tao-icon-setup;
+        @include icon-down;
+    }
+    &.opened:after {
+        @include tao-icon-setup;
+        @include icon-up;
+    }
+}
+
+.toggled {
+    display: none;
+}
+
+/* Adder */
+.adder {
+    &:before {
+        margin-right: 5px;
+        @include font-size(10.5);
+        @include tao-icon-setup;
+        @include icon-add;
+    }
+}
+
+/* Closer / Deleter */
+.closer {
+    &:before {
+        margin-right: 5px;
+        @include font-size(10.5);
+        @include tao-icon-setup;
+        @include icon-close;
+    }
+}
+.deleter {
+    @extend .closer;
+}
+
+.undobox {
+    display : block;
+    position : fixed;
+    top : 50px;
+    left : 50%;
+    margin-left : -200px;
+    width : 400px;
+    z-index: 100005;
+}
+
+/* Incrementer and duration */
+input[data-increment], input.duration-ctrl {
+    width: 40px !important;
+    min-width: 40px !important;
+    text-align:right;
+}
+
+.duration-ctrl-wrapper, .incrementer-ctrl-wrapper {
+    position: relative;
+    display: inline-block;
+    @include simple-border($uiGeneralContentBorder);
+    @include border-radius(2);
+    .incrementer {
+        text-align: right;
+        border: none;
+        padding-right: 18px;
+        & ~ .incrementer-ctrl {
+            border-left: 1px $uiGeneralContentBorder solid;
+            display: inline-block;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            > a {
+                outline: 0 !important;
+                cursor:pointer;
+                display: inline-block;
+                line-height: 13px;
+                color: $textColor;
+                background: $uiClickableDefaultBg;
+                padding: 0 4px 0 4px;
+                @include font-size(10.5);
+                position: absolute;
+                right: 0;
+                height: 50%;
+                text-align:center;
+                &.inc {
+                    top: 0;
+                    -moz-border-radius-topright: 2px;
+                    -webkit-border-top-right-radius: 2px;
+                    border-top-right-radius: 2px;
+                }
+                &.dec {
+                    top: 50%;
+                    -moz-border-radius-bottomright: 2px;
+                    -webkit-border-bottom-right-radius: 2px;
+                    border-bottom-right-radius: 2px;
+                }
+                &.inc:before {
+                    position: relative;
+                    bottom: 0px;
+                    @include tao-icon-setup;
+                    @include icon-up;
+                }
+                &.dec:before {
+                    position: relative;
+                    top: 0px;
+                    @include tao-icon-setup;
+                    @include icon-down;
+                }
+                &:hover {
+                    background-color: $uiClickableHoverBg;
+                    color: $textHighlight;
+                }
+            }
+        }
+    }
+}
+
+.duration-ctrl-wrapper ~ .separator {
+    padding: 0 3px;
+    text-align: center;
+    opacity: .7;
+}
+
+/* InPlacer */
+[data-in-place], .inplace {
+    cursor: pointer;
+    min-height: 1em;
+    input {
+        cursor: auto;
+    }
+    &:hover {
+        border: dotted 1px $uiClickableHoverBg;
+    }
+}
+
+/* ListBox  */
+ul.listbox {
+    margin: .1em 0;
+    padding: 0;
+    list-style-type: none;
+    display: block;
+    > li {
+        white-space: no-wrap;
+        position: relative;
+        min-width: 75%;
+        border: solid 1px $uiGeneralContentBorder;
+        border-bottom-width: 0;
+        vertical-align: top;
+        margin: 0;
+        padding: .3em 2em .3em .2em;
+        background-color: $uiClickableDefaultBg;
+        min-height: 1.5em;
+
+        > .closer {
+            position: absolute;
+            right: 5px;
+            top: 0;
+        }
+
+        &:first-child {
+            -moz-border-radius: 2px 2px 0 0;
+            -webkit-border-radius: 2px 2px 0 0;
+            border-radius: 2px 2px 0 0;
+        }
+
+        &:last-child {
+            -moz-border-radius: 0 0 2px 2px;
+            -webkit-border-radius: 0 0 2px 2px;
+            border-radius: 0 0 2px 2px;
+            border-bottom-width: 1px;
+        }
+
+        &.placeholder {
+            background: none;
+            margin: .5em;
+            opacity: 0.6;
+        }
+    }
+}
+
+/* Modal styles */
+.modal {
+    background-color: $uiGeneralContentBg;
+    border: 1px solid $uiGeneralContentBorder;
+    box-shadow: 3px 3px 5px #666666;
+    height: auto;
+    opacity: 0;
+    top: -1000px;
+    padding: 40px;
+    position: fixed;
+    z-index: 105002;
+    margin: auto;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+
+    .modal-close {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        cursor: pointer;
+        font-weight: bold;
+        color: $textColor;
+        @include font-size(20);
+    }
+}
+
+.modal-bg {
+    background: none repeat scroll 0 0 black();
+    opacity: 0.45;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=45)";
+    filter: alpha(opacity=45);
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100001;
+    overflow: hidden;
+}
+
+/* Button groups */
+
+
+ul[data-button-group], ul.button-group {
+
+    list-style-type: none;
+    padding: 0;
+    background-color: $uiGeneralContentBg;
+    border: 1px solid $uiGeneralContentBorder;
+    border-radius: 1px;
+    margin: 0 2px 2px 0;
+    display: inline-block;
+    @include border-radius;
+    @include font-size(12);
+
+    & > li {
+        border: 0 none;
+        color: $textColor;
+        cursor: pointer;
+        display: inline-block;
+        float: left;
+        min-width: 26px;
+        padding: 4px 6px;
+        text-align: center;
+        text-decoration: none !important;
+
+        &.active {
+            color: $textHighlight;
+            background-color: $info;
+            -webkit-transition: background 0.4s ease;
+            -moz-transition: all 0.4s ease;
+            -o-transition: background 0.4s ease;
+            transition: all 0.4s ease;
+        }
+        &:hover {
+            color: $textHighlight;
+            background-color: whiten($info, 0.2);
+            -webkit-transition: background 0.4s ease;
+            -moz-transition: all 0.4s ease;
+            -o-transition: background 0.4s ease;
+            transition: all 0.4s ease;
+        }
+        &.separator{
+            background-color: $uiGeneralContentBorder;
+            float: left;
+            height: 18px;
+            margin: 5px 2px 0 2px;
+            width: 1px;
+            min-width: 1px;
+            padding: 0;
+        }
+
+        &[class^="icon-"], &[class*=" icon-"] {
+            height: 16px;
+            margin-top: 1px;
+            width: 16px;
+            padding-top: 2px;
+        }
+    }
+}
+
+/* Media Preview */
+.previewer {
+    background-color: $uiGeneralContentBg;
+    margin: 5px;
+    min-width: 280px;
+    min-height: 200px;
+    text-align: center;
+    .nopreview {
+        color: $uiGeneralContentBorder;
+        text-align: center;
+        @include font-size(20);
+        &:before {
+            @include font-size(60);
+            @include tao-icon-setup;
+            @include icon-media;
+            display: block !important;
+        }
+    }
+}
+
+/* Progress bar */
+
+.progressbar {
+    height: 2em;
+    text-align: left;
+    border: none;
+    height: 0.8em;
+    background-color: $uiGeneralContentBg;
+    border: 1px solid $uiGeneralContentBorder;
+
+    & > span {
+        height: 100%;
+        border: none;
+        background-color: $uiClickableHoverBg;
+        display: block;
+        color: white();
+
+        -webkit-transition: width 0.6s ease 0s;
+        -moz-transition: width 0.4s ease 0s;
+        -o-transition: width 0.4s ease 0s;
+        transition: width 0.4s ease 0s;
+    }
+
+    &.info > span {
+        background-color: $info;
+    }
+    &.success > span{
+        background-color: $success;
+    }
+    &.warning > span{
+        background-color: $warning;
+    }
+    &.error > span{
+        background-color: $error;
+    }
+}

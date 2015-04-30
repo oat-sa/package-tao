@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+        <title>Gap Match Interaction Renderer Test</title>
+        <link rel="stylesheet" type="text/css" href="/tao/views/js/lib/qunit/qunit.css">
+        <script type="text/javascript" src="/tao/views/js/lib/require.js"></script>
+        <script type="text/javascript" src="/tao/views/js/lib/qunit/qunit.js"></script>
+
+        <!--pretty print-->
+        <script src="/taoQtiItem/views/js/qtiXmlRenderer/test/renderer/prism/prism.js" data-manual></script>
+        <script src="/taoQtiItem/views/js/qtiXmlRenderer/test/renderer/vkBeautify.js"></script>
+        <link rel="stylesheet" href="/taoQtiItem/views/js/qtiXmlRenderer/test/renderer/prism/prism.css">
+
+        <!--tao css-->
+        <link rel="stylesheet" type="text/css" href="/tao/views/css/tao-main-style.css" />
+        <link rel="stylesheet" type="text/css" href="/taoQtiItem/views/css/qti.css" />
+        <link rel="stylesheet" type="text/css" href="/taoQtiItem/views/css/item-creator.css" />
+        <link rel="stylesheet" type="text/css" href="test.css" />
+        <style>
+        </style>
+        <script  type="text/javascript">
+            QUnit.config.autostart = false;
+            require(['/tao/ClientConfig/config'], function() {
+                require(['taoQtiItem/qtiCreator/test/renderer/test'], function(Test) {
+                    QUnit.start();
+                    Test.testRender('gapMatch');
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+
+        <!--item creator rendering-->
+        <div class="tao-scope">
+            <div id="item-editor-panel" class="has-item">
+            </div>
+            <div id="form-container"></div>
+        </div>
+
+        <!--for xml rendering-->
+        <pre class="line-numbers">
+            <code id="xml-container" class="language-markup">
+            </code>
+        </pre>
+
+    </body>
+</html>

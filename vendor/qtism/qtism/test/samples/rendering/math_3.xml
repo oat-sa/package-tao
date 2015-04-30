@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Thie example adapted from the PET Handbook, copyright University of Cambridge ESOL Examinations -->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+	xmlns:m="http://www.w3.org/1998/Math/MathML"
+	identifier="math" title="Relativity"
+	adaptive="false" timeDependent="false">
+	<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+		<correctResponse>
+			<value>E</value>
+		</correctResponse>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+	<itemBody>
+		<choiceInteraction responseIdentifier="RESPONSE" shuffle="true" maxChoices="1">
+			<prompt>Which famous scientist is popularly associated with the equation <m:math>
+					<m:mrow>
+						<m:mi>E</m:mi>
+						<m:mo>=</m:mo>
+						<m:mi>m</m:mi>
+						<m:msup>
+							<m:mi>c</m:mi>
+							<m:mn>2</m:mn>
+						</m:msup>
+					</m:mrow>
+				</m:math> ?</prompt>
+			<simpleChoice identifier="E">Einstein</simpleChoice>
+			<simpleChoice identifier="G">Gallileo</simpleChoice>
+			<simpleChoice identifier="H">Hawking</simpleChoice>
+			<simpleChoice identifier="N">Newton</simpleChoice>
+		</choiceInteraction>
+	</itemBody>
+	<responseProcessing
+		template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+</assessmentItem>

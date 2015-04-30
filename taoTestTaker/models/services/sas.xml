@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE services SYSTEM "../../tao/doc/sas.dtd">
+<services>
+	<description>Test takers services</description>
+	<service>
+		<name>Test takers class selection</name>
+		<description>Select a test taker (sub)class</description>
+		<location url="/taoTestTaker/SasTestTaker/sasSelect">
+			<param key="selectInstance" value="false" />
+		</location>
+		<return>
+			<param key="testTakerClassUri" />
+		</return>
+	</service>
+	<service>
+		<name>Test takers selection</name>
+		<description>Select a test taker</description>
+		<location url="/taoTestTaker/SasTestTaker/sasSelect">
+			<param key="selectInstance" value="true" />
+		</location>
+		<return>
+			<param key="testTakerClassUri" />
+			<param key="testTakerUri" />
+		</return>
+	</service>
+	<service>
+		<name>Test takers add</name>
+		<description>Add a new test taker and redirect to the edit form</description>
+		<location url="/taoTestTaker/SasTestTaker/sasAddInstance">
+			<param key="classUri" value="^testTakerClassUri" />
+		</location>
+		<return>
+			<param key="testTakerUri" />
+		</return>
+	</service>
+	<service>
+		<name>Test takers editor</name>
+		<description>Edit test taker properties</description>
+		<location url="/taoTestTaker/SasTestTaker/sasEditInstance">
+			<param key="uri" value="^testTakerUri" />
+			<param key="classUri" value="^testTakerClassUri" />
+		</location>
+	</service>
+	<service>
+		<name>Test takers full editor</name>
+		<description>Full edit form: edit test taker properties</description>
+		<location url="/taoTestTaker/SasTestTaker/editSubject">
+			<param key="uri" value="^testTakerUri" />
+			<param key="classUri" value="^testTakerClassUri" />
+		</location>
+	</service>
+	<service>
+		<name>Test taker class editor</name>
+		<description>Edit a test taker (sub)class: add/edit/delete class properties</description>
+		<location url="/taoTestTaker/SasTestTaker/editSubjectClass">
+			<param key="classUri" value="^testTakerClassUri" />
+		</location>
+	</service>
+	<service>
+		<name>Test taker translation</name>
+		<description>Translate the value of the test taker properties</description>
+		<location url="/taoTestTaker/SasTestTaker/translateInstance">
+			<param key="uri" value="^testTakerUri" />
+			<param key="classUri" value="^testTakerClassUri" />
+			<param key="target_lang" value="^subjectTargetLang" />
+		</location>
+	</service>
+	<service>
+		<name>Test takers searching</name>
+		<description>Search test taker instances</description>
+		<location url="/taoTestTaker/SasTestTaker/search" />
+		<return>
+			<param key="testTakerUris" />
+		</return>
+	</service>
+	<service>
+		<name>Test taker removing</name>
+		<description>Delete a test taker</description>
+		<location url="/taoTestTaker/SasTestTaker/sasDeleteInstance">
+			<param key="uri" value="^testTakerUri" />
+			<param key="classUri" value="^testTakerClassUri" />
+		</location>
+	</service>
+</services>

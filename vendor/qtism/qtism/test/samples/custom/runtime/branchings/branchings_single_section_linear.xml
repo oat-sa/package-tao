@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.taotesting.com/xsd/qticompact_v1p0.xsd"
+	identifier="branchings_single_section_linear" title="Branchings Single Section Linear">
+	<testPart identifier="P01" navigationMode="linear" submissionMode="individual">
+		<assessmentSection identifier="S01" fixed="false" title="Section1" visible="false">
+			<assessmentItemRef identifier="Q01" href="./Q01.xml" fixed="false" timeDependent="false">
+				<!-- If the response to Q01 is correct, you sure do not have to take Q02, it's OK! -->
+				<branchRule target="Q03">
+					<equalRounded roundingMode="decimalPlaces" figures="1">
+						<variable identifier="Q01.SCORE"/>
+						<baseValue baseType="float">1.0</baseValue>
+					</equalRounded>
+				</branchRule>
+				<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+					<correctResponse>
+						<value>ChoiceA</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+				<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+			</assessmentItemRef>
+			
+			<assessmentItemRef identifier="Q02" href="./Q02.xml" fixed="false" timeDependent="false">
+				<!-- If the response to Q02 is correct, you do not have to take Q03. -->
+				<branchRule target="Q04">
+					<equalRounded roundingMode="decimalPlaces" figures="1">
+						<variable identifier="Q02.SCORE"/>
+						<baseValue baseType="float">1.0</baseValue>
+					</equalRounded>
+				</branchRule>
+				<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+					<correctResponse>
+						<value>ChoiceB</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+				<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+			</assessmentItemRef>
+			
+			<assessmentItemRef identifier="Q03" href="./Q03.xml" fixed="false" timeDependent="false">
+				<!-- If the response to Q03 is correct, you do not have to take Q04. You can exit the test. -->
+				<branchRule target="EXIT_TEST">
+					<equalRounded roundingMode="decimalPlaces" figures="1">
+						<variable identifier="Q03.SCORE"/>
+						<baseValue baseType="float">1.0</baseValue>
+					</equalRounded>
+				</branchRule>
+				<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+					<correctResponse>
+						<value>ChoiceC</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+				<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+			</assessmentItemRef>
+			
+			<assessmentItemRef identifier="Q04" href="./Q04.xml" fixed="false" timeDependent="false">
+				<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+					<correctResponse>
+						<value>ChoiceD</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+				<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+			</assessmentItemRef>
+		</assessmentSection>
+	</testPart>
+</assessmentTest>

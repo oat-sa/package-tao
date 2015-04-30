@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Layout Test - Section</title>
+        <base href="../../../../" />
+        <link rel="stylesheet" type="text/css" href="js/lib/qunit/qunit.css">
+        <link rel="stylesheet" type="text/css" href="css/tao-main-style.css">
+        <script type="text/javascript" src="js/lib/require.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit.js"></script>
+        <script  type="text/javascript">
+            
+            //don't start the test now
+            QUnit.config.autostart = false;
+            
+            //load the config
+            require(['/tao/ClientConfig/config'], function(){
+                
+                //load the test
+                require(['test/layout/section/test'], function(){
+                    
+                    //Tests loaded, run tests
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+
+            <div class="multiple">
+                <div class="section-container">
+                    <ul class="tab-container">
+                        <li>
+                            <a href="#panel-list_users" data-url="http://tao.localdomain/tao/Users/index" title="Manage users">Manage users</a>
+                        </li>
+                        <li>
+                            <a href="#panel-add_user" data-url="http://tao.localdomain/tao/Users/add" title="Add a user">Add a user</a>
+                        </li>
+                        <li>
+                            <a href="#panel-edit_user" data-url="http://tao.localdomain/tao/Users/edit" title="Edit a user">Edit a user</a>
+                        </li>
+                        <li>
+                            <a href="#panel-manage_roles" data-url="http://tao.localdomain/tao/Roles/index" title="Manage roles">Manage roles</a>
+                        </li>
+                        <li>
+                            <a href="#panel-manage_acl" data-url="http://tao.localdomain/funcAcl/Admin/index" title="Manage Access Rights">Manage Access Rights</a>
+                        </li>
+                    </ul>
+
+                    <div class="content-wrapper content-panel" id="panel-list_users"></div>
+                    <div class="content-wrapper content-panel" id="panel-add_user"></div>
+                    <div class="content-wrapper content-panel" id="panel-edit_user"></div>
+                    <div class="content-wrapper content-panel" id="panel-manage_roles"></div>
+                    <div class="content-wrapper content-panel" id="panel-manage_acl"></div>
+                </div>
+            </div>
+ 
+            <div class="single">
+                <div class="section-container">
+                    <ul class="tab-container">
+                        <li>
+                            <a href="#panel-manage_items" data-url="http://tao.localdomain/taoItems/Items/index" title="Manage items">Manage items</a>
+                        </li>
+                    </ul>
+
+                    <div class="content-wrapper content-panel" id="panel-manage_items"></div>
+                </div>
+            </div>
+ 
+        </div>  
+    </body>
+</html>

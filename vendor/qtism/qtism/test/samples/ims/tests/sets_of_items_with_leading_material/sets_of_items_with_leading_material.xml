@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1
+     http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+    identifier="RTEST-01" title="Sets of Items With
+    Leading Material">
+    <testPart identifier="P1" navigationMode="linear" submissionMode="individual">
+        <assessmentSection identifier="set" title="Section A" visible="true">
+            <selection select="2"/>
+            <assessmentItemRef identifier="set01" href="rtest01-set01.xml"/>
+            <assessmentItemRef identifier="set02" href="rtest01-set02.xml"/>
+            <assessmentItemRef identifier="set03" href="rtest01-set03.xml"/>
+        </assessmentSection>
+    </testPart>
+</assessmentTest>

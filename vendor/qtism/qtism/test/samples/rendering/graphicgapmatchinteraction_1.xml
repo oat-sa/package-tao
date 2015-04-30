@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemBody xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+	<p>
+		The International Air Transport Association assigns three-letter codes to identify airports worldwide. For example, London Heathrow has code LHR.
+	</p>
+	<graphicGapMatchInteraction responseIdentifier="RESPONSE">
+		<prompt>
+			Some of the labels on the following diagram are missing: can you identify the correct three-letter codes for the unlabelled airports?
+		</prompt>
+		<object type="image/png" data="images/ukairtags.png" width="206" height="280"/>
+		<gapImg identifier="CBG" matchMax="1"><object type="image/png" data="images/CBG.png" width="20" height="9"/></gapImg>
+		<gapImg identifier="EBG" matchMax="1"><object type="image/png" data="images/EBG.png" width="18" height="9"/></gapImg>
+		<gapImg identifier="EDI" matchMax="1"><object type="image/png" data="images/EDI.png" width="14" height="9"/></gapImg>
+		<gapImg identifier="GLA" matchMax="1"><object type="image/png" data="images/GLA.png" width="17" height="9"/></gapImg>
+		<gapImg identifier="MAN" matchMax="1"><object type="image/png" data="images/MAN.png" width="21" height="9"/></gapImg>
+		<gapImg identifier="MCH" matchMax="1"><object type="image/png" data="images/MCH.png" width="22" height="9"/></gapImg>
+		<associableHotspot identifier="A" matchMax="1" shape="rect" coords="12,108,39,121"/>
+		<associableHotspot identifier="B" matchMax="1" shape="rect" coords="128,103,155,126"/>
+		<associableHotspot identifier="C" matchMax="1" shape="rect" coords="66,165,93,178"/>
+	</graphicGapMatchInteraction>
+</itemBody>
