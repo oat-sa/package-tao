@@ -54,7 +54,7 @@
 		"tao-extension-name" : "generis"
 	},
 	"require" : {
-		"clearFw/clearFw" : "*",
+		"clearFw/clearFw" : "1.0",
 		"easyrdf/easyrdf" : "0.9.*",
 		"doctrine/dbal" : ">=2.2.0,<2.4",
 		"oat-sa/oatbox-extension-installer": "dev-master",
