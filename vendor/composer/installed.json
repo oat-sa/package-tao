@@ -651,40 +651,6 @@
         ]
     },
     {
-        "name": "clearfw/clearfw",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/oat-sa/clearfw.git",
-            "reference": "33a5efa3642ec354324174586a5ba84fbfccb17c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/oat-sa/clearfw/zipball/33a5efa3642ec354324174586a5ba84fbfccb17c",
-            "reference": "33a5efa3642ec354324174586a5ba84fbfccb17c",
-            "shasum": ""
-        },
-        "time": "2015-03-24 12:44:55",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "classmap": [
-                "core/",
-                "core/helpers/",
-                "core/util"
-            ],
-            "files": [
-                "clearbricks/init.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "GPL-2.0"
-        ],
-        "description": "ClearFw"
-    },
-    {
         "name": "phpdocumentor/reflection-docblock",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -2431,5 +2397,39 @@
             "TAO",
             "computer-based-assessment"
         ]
+    },
+    {
+        "name": "clearfw/clearfw",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/oat-sa/clearfw.git",
+            "reference": "33a5efa3642ec354324174586a5ba84fbfccb17c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/oat-sa/clearfw/zipball/33a5efa3642ec354324174586a5ba84fbfccb17c",
+            "reference": "33a5efa3642ec354324174586a5ba84fbfccb17c",
+            "shasum": ""
+        },
+        "time": "2015-03-24 12:44:55",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "core/",
+                "core/helpers/",
+                "core/util"
+            ],
+            "files": [
+                "clearbricks/init.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0"
+        ],
+        "description": "ClearFw"
     }
 ]
