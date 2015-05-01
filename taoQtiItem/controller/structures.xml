@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+    <structure id="items" name="Items" level="0" group="main">
+        <sections>
+            <section id="manage_items" name="Manage items" url="/taoItems/Items/index">
+                <actions>
+                    <action id="item-new" name="New item" url="/taoQtiItem/QtiCreator/createItem" context="resource" group="tree" binding="instanciate">
+                        <icon id="icon-item"/>
+                    </action>
+                </actions>
+            </section>
+        </sections>
+    </structure>
+</structures>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.taotesting.com/xsd/qticompact_v1p0.xsd"
+	identifier="selection_and_ordering" title="Selection and Ordering">
+	<testPart identifier="testPart" navigationMode="linear" submissionMode="individual">
+		<assessmentSection identifier="S01" fixed="false" title="Section S01" visible="true">
+			<selection select="1"/>
+			<assessmentSection identifier="S01A" fixed="false" title="Section S01A" visible="true">
+				<assessmentItemRef identifier="Q1" href="./Q1.xml" fixed="false" timeDependent="false"/>
+				<assessmentItemRef identifier="Q2" href="./Q2.xml" fixed="false" timeDependent="false"/>
+				<assessmentItemRef identifier="Q3" href="./Q3.xml" fixed="false" timeDependent="false"/>
+			</assessmentSection>
+			<assessmentSection identifier="S01B" fixed="false" title="Section S01B" visible="true">
+				<assessmentItemRef identifier="Q4" href="./Q1.xml" fixed="false" timeDependent="false"/>
+				<assessmentItemRef identifier="Q5" href="./Q5.xml" fixed="false" timeDependent="false"/>
+				<assessmentItemRef identifier="Q6" href="./Q6.xml" fixed="false" timeDependent="false"/>
+			</assessmentSection>
+		</assessmentSection>
+		<assessmentSection identifier="S02" fixed="false" title="Section S02" visible="true">
+			<assessmentItemRef identifier="Q7" href="./Q7.xml" fixed="false" timeDependent="false"/>
+			<assessmentItemRef identifier="Q8" href="./Q8.xml" fixed="false" timeDependent="false"/>
+			<assessmentItemRef identifier="Q9" href="./Q9.xml" fixed="false" timeDependent="false"/>
+		</assessmentSection>
+		<assessmentSection identifier="S03" fixed="false" title="Section S03" visible="true">
+			<selection select="2"/>
+			<assessmentItemRef identifier="Q10" href="./Q10.xml" fixed="false" timeDependent="false"/>
+			<assessmentItemRef identifier="Q11" href="./Q11.xml" fixed="false" timeDependent="false"/>
+			<assessmentItemRef identifier="Q12" href="./Q12.xml" fixed="false" timeDependent="false"/>
+		</assessmentSection>
+	</testPart>
+</assessmentTest>

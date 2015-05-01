@@ -1,0 +1,23 @@
+{
+    "typeIdentifier": "{tool-id}",
+    "label": "{tool-title}",
+    "description": "",
+    "version": "0.1",
+    "author": "",
+    "email": "",
+    "libraries": [
+        "IMSGlobal/jquery_2_1_1"
+    ],
+    "css": [
+        "./runtime/css/{tool-base}.css"
+    ],
+    "media": [
+        "./runtime/media/{tool-base}-icon.svg"
+    ],
+    "entryPoint": "./runtime/{tool-base}.js",
+    "tags": [
+        "student-tool"
+    ],
+    "icon" : "./creator/media/{tool-base}-icon.svg",
+    "short" : "{tool-title}"
+}

@@ -1,0 +1,198 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.0.0\n"
+"PO-Revision-Date: 2015-04-30T09:16:09\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: zh-CN\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: zh-CN\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ../../\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+
+msgid "%s test-taker(s) are excluded.', get_data('ttexcluded"
+msgstr "%s个考生被排除.', get_data('ttexcluded"
+
+msgid "Add the source file."
+msgstr "添加源文件。"
+
+msgid "An error occured during the import"
+msgstr "导入时发生了错误"
+
+msgid "Assembly"
+msgstr "集会"
+
+msgid "Assembly import"
+msgstr "聚集导入"
+
+msgid "Assigned test-takers"
+msgstr "已被分配的考生"
+
+msgid "Assigned Tests"
+msgstr "已被分配的考试"
+
+msgid "Assigned to"
+msgstr "已分配给"
+
+msgid "Attempt(s)"
+msgstr "考试次数"
+
+msgid "Attempts"
+msgstr "试的次数"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Completed Tests"
+msgstr "已完成的考试"
+
+msgid "Create a new delivery"
+msgstr "创建一个新的输送"
+
+msgid "Create a test"
+msgstr "创建考试"
+
+#, tao-public
+msgid "Delete"
+msgstr "删除"
+
+#, tao-public
+msgid "Deliveries"
+msgstr "递送"
+
+#, tao-public
+msgid "Deliveries library"
+msgstr "递送书库"
+
+msgid "Delivery is assigned to %s test-takers.', get_data('ttassigned"
+msgstr "递送已被分配给%s个考生', get_data('ttassigned"
+
+msgid "Delivery is not assigned to any test-taker."
+msgstr "此输送没被分配给任何的考生。"
+
+msgid "Delivery saved"
+msgstr "递送已储存"
+
+msgid "Enables you to export a published delivery"
+msgstr "让你能导出一个已出版的输送"
+
+msgid "Excluded test-takers"
+msgstr "被排除的考生"
+
+msgid "Export Options"
+msgstr "导入选项"
+
+#, tao-public
+msgid "Filter"
+msgstr "过滤条件"
+
+msgid "Import"
+msgstr "导入"
+
+msgid "Items"
+msgstr "题目"
+
+msgid "Logout"
+msgstr "登出"
+
+msgid "Manifest not found in assembly"
+msgstr "清单中未发现集会"
+
+#, tao-public
+msgid "Move"
+msgstr "移动"
+
+msgid "My Tests"
+msgstr "我的考试"
+
+#, tao-public
+msgid "New class"
+msgstr "新类别"
+
+#, tao-public
+msgid "New delivery"
+msgstr "新的递送"
+
+msgid "No attempt has been started yet."
+msgstr "没有已开始的考试。"
+
+msgid "No information available"
+msgstr "没资讯可提供"
+
+msgid "Paused Tests"
+msgstr "暂停考试"
+
+msgid "Please upload a published delivery assembly ."
+msgstr "请上传一个已出版的递送集合。"
+
+#, tao-public
+msgid "Prepare, publish deliveries sessions."
+msgstr "预备，发布递送时域。"
+
+#, tao-public
+msgid "Properties"
+msgstr "属性"
+
+msgid "Publish"
+msgstr "发布"
+
+msgid "Published on %2s', tao_helpers_Date::displayeDate(get_data('date"
+msgstr "发布在%2s', tao_helpers_Date::displayeDate(get_data('date"
+
+msgid "Resume"
+msgstr "继续"
+
+msgid "Save"
+msgstr "储存"
+
+#, tao-public
+msgid "Search"
+msgstr "搜寻"
+
+msgid "Select the test you want to publish to the test-takers"
+msgstr "选择您想发布给考生的考试"
+
+msgid "Selection saved successfully"
+msgstr "所选的已储存成功"
+
+msgid "Start"
+msgstr "开始"
+
+msgid "Started at "
+msgstr "开始于："
+
+#, tao-public
+msgid "Take or continue a test."
+msgstr "开始或继续参加一个考试。"
+
+msgid "TAO - An Open and Versatile Computer-Based Assessment Platform"
+msgstr "TAO：一个开放和有弹性的电脑考试平台"
+
+#, tao-public
+msgid "TAO Delivery Server"
+msgstr "TAO递送服务器"
+
+msgid "Test-takers"
+msgstr "考生"
+
+msgid "There are currently %s attempts', get_data('exec"
+msgstr "现在有%s个考试次数', get_data('exec"
+
+msgid "There are currently no tests available to publish."
+msgstr "现在没有考试可以发布。"
+
+msgid "There is currently 1 attempt"
+msgstr "考生已试了1次"
+
+msgid "Unkown error during impoort"
+msgstr "导入时发生了不明的错误"
+
+msgid "Unlimited"
+msgstr "无限制"
+
+msgid "Upload an assembly"
+msgstr "上传一个集会"
+

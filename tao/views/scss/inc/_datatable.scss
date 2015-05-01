@@ -1,0 +1,36 @@
+.datatable-container {
+    overflow-y: auto;
+}
+table.datatable{
+    th{
+        cursor: not-allowed;
+        &[data-sort-by]{
+            cursor: pointer;
+        }
+        &.sorted{
+            &:after{
+                float:right;
+            }
+            &.sorted_asc::after{
+                @include tao-icon-setup;
+                @include icon-down;
+            }
+            &.sorted_desc::after{
+                @include tao-icon-setup;
+                @include icon-up;
+            }
+        }
+    }
+    th,
+    td{
+        &.id{
+            display:none;
+        }
+        &[data-item-identifier] {
+            text-align: center;
+        }
+        button{
+          text-transform: capitalize;
+        }
+    }
+}

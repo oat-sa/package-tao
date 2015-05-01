@@ -1,0 +1,44 @@
+/* style used to test CSS parsing */
+
+@import url('style2.css');
+@import "../style3.css";
+
+/* some dirty rules produced by SASS */
+[class^="icon-"], [class*=" icon-"], .cke_button_icon, .tlb .tlb-bar .tlb-button-on [class^="icon-"], .tlb .tlb-bar .tlb-button-on [class*=" icon-"], .tlb .tlb-bar .tlb-button-off [class^="icon-"], .tlb .tlb-bar .tlb-button-off [class*=" icon-"], .tlb .tlb-bar .tlb-button-disabled [class^="icon-"], .tlb .tlb-bar .tlb-button-disabled [class*=" icon-"], .cke_button, .tlb .tlb-bar .tlb-button-on, .tlb .tlb-bar .tlb-button-off, .tlb .tlb-bar .tlb-button-disabled, table.datatable th.sorted.sorted_asc::after, table.datatable th.sorted.sorted_desc::after, .file-drop ul > li:before, .file-drop ul > li .status.sending:before, .file-drop ul > li .status.success:before, .file-drop ul > li .status.error:before { font-family: 'tao'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.icon-icon:before { content: "\f1c5"; }
+
+.icon-radio-bg:before, label [class^="icon-radio"]:after, label [class*=" icon-radio"]:after { content: "\e600"; }
+
+.icon-checkbox-bg:before, label [class^="icon-checkbox"]:after, label [class*=" icon-checkbox"]:after { content: "\e601"; }
+
+.icon-tag:before { content: "\e602"; }
+
+.icon-style:before { content: "\e604"; background: url("test.png");}
+
+.icon-ownership-transfer:before { content: "\e605"; }
+
+.icon-property-advanced:before { content: "\e606"; }
+
+
+/* some font declaration */
+@font-face { font-family: 'Source Sans Pro'; font-style: normal; font-weight: normal; src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(font/source-sans-pro/source-sans-pro-regular.eot) format("embedded-opentype"), url(font/source-sans-pro/source-sans-pro-regular.woff) format("woff"); }
+@font-face { font-family: 'Source Sans Pro'; font-style: normal; font-weight: bold; src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"), url(font/source-sans-pro/source-sans-pro-semibold.eot) format("embedded-opentype"), url(font/source-sans-pro/source-sans-pro-semibold.woff) format("woff"); }
+@font-face { font-family: 'Source Sans Pro'; font-style: italic; font-weight: normal; src: local("Source Sans Pro Semibold Italic"), local("SourceSansPro-SemiboldIt"), url(font/source-sans-pro/source-sans-pro-italic.eot) format("embedded-opentype"), url(font/source-sans-pro/source-sans-pro-italic.woff) format("woff"); }
+@font-face { font-family: 'tao'; src: url("font/tao/tao.eot?-90tbgt"); src: url("font/tao/tao.eot?#iefix-90tbgt") format("embedded-opentype"), url("font/tao/tao.woff?-90tbgt") format("woff"), url("font/tao/tao.ttf?-90tbgt") format("truetype"), url("font/tao/tao.svg?-90tbgt#tao") format("svg"); font-weight: normal; font-style: normal; }
+
+/* media queries */
+@media print { * { background: transparent !important; color: #000 !important; /* Black prints faster: h5bp.com/s */ box-shadow: none !important; text-shadow: none !important; }
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  /* Don't show links for images, or javascript/internal links */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; /* h5bp.com/t */ }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; background: url ('test2.png');}
+}

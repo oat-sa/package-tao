@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemBody xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+	<gapMatchInteraction responseIdentifier="RESPONSE" shuffle="false">
+		<prompt>
+			Identify the missing words in this famous quote from Shakespeare's Richard III.
+		</prompt>
+		<gapText identifier="W" matchMax="1">winter</gapText>
+		<gapText identifier="Sp" matchMax="1">spring</gapText>
+		<gapText identifier="Su" matchMax="1">summer</gapText>
+		<gapText identifier="A" matchMax="1">autumn</gapText>
+		<gapImg identifier="Img" matchMax="1" objectLabel="Not a season..."><object data="./not-a-season.png" type="image/png"/></gapImg>
+		<blockquote>
+			<p>
+				Now is the
+				<gap identifier="G1"/>
+				of our discontent
+				<br/>
+				Made glorious
+				<gap identifier="G2"/>
+				by this sun of York;
+				<br/>
+				And all the clouds that lour'd upon our house
+				<br/>
+				In the deep bosom of the ocean buried.
+			</p>
+		</blockquote>
+	</gapMatchInteraction>
+</itemBody>

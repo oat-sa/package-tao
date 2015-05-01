@@ -1,0 +1,8 @@
+@import "inc/bootstrap";
+
+.icon-view:before { 
+        @include tao-icon-setup;
+@include icon-external; }
+.icon-delete:before { 
+    @include tao-icon-setup;
+@include icon-bin; }

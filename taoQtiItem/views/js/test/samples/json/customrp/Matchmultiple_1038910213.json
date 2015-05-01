@@ -1,0 +1,535 @@
+{
+    "identifier": "Matchmultiple_1038910213",
+    "serial": "item_54eee7e5581ed574089532",
+    "qtiClass": "assessmentItem",
+    "attributes": {
+        "identifier": "Matchmultiple_1038910213",
+        "title": "match (multiple)",
+        "label": "",
+        "adaptive": false,
+        "timeDependent": false,
+        "toolName": "TAO",
+        "toolVersion": "3.0-RC01"
+    },
+    "body": {
+        "serial": "container_containeritembody_54eee7e5581cc398912206",
+        "body": "<div>Das Bundesland Sachsen besitzt viele kulturelle und historische Sehensw\u00fcrdigkeiten. <br\/>\n\tWelche Sehensw\u00fcrdigkeit geh\u00f6rt zu welcher Stadt?<\/div>\n\t\t{{interaction_matchinteraction_54eee7e558b97947684668}}",
+        "elements": {
+            "interaction_matchinteraction_54eee7e558b97947684668": {
+                "serial": "interaction_matchinteraction_54eee7e558b97947684668",
+                "qtiClass": "matchInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE",
+                    "shuffle": true,
+                    "maxAssociations": 0,
+                    "minAssociations": 0
+                },
+                "prompt": {
+                    "serial": "container_containerstatic_54eee7e558d8b233574709",
+                    "body": "",
+                    "elements": [],
+                    "debug": {
+                        "relatedItem": "item_54eee7e5581ed574089532"
+                    }
+                },
+                "choices": [
+                    {
+                        "choice_simpleassociablechoice_54eee7e558e69303474151": {
+                            "identifier": "Match21853614",
+                            "serial": "choice_simpleassociablechoice_54eee7e558e69303474151",
+                            "qtiClass": "simpleAssociableChoice",
+                            "attributes": {
+                                "identifier": "Match21853614",
+                                "fixed": false,
+                                "matchMax": 1,
+                                "matchMin": 0
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_54eee7e558f8c384476387",
+                                "body": "{{img_54eee7e558fde975821355}}",
+                                "elements": {
+                                    "img_54eee7e558fde975821355": {
+                                        "serial": "img_54eee7e558fde975821355",
+                                        "qtiClass": "img",
+                                        "attributes": {
+                                            "src": "media\/6561883b00fd435f9a9106c3f562ad55.jpg",
+                                            "alt": ""
+                                        }
+                                    }
+                                },
+                                "debug": {
+                                    "relatedItem": "item_54eee7e5581ed574089532"
+                                }
+                            }
+                        },
+                        "choice_simpleassociablechoice_54eee7e559149950663885": {
+                            "identifier": "Match6887188",
+                            "serial": "choice_simpleassociablechoice_54eee7e559149950663885",
+                            "qtiClass": "simpleAssociableChoice",
+                            "attributes": {
+                                "identifier": "Match6887188",
+                                "fixed": false,
+                                "matchMax": 1,
+                                "matchMin": 0
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_54eee7e5591c8480200462",
+                                "body": "{{img_54eee7e559211673514485}}",
+                                "elements": {
+                                    "img_54eee7e559211673514485": {
+                                        "serial": "img_54eee7e559211673514485",
+                                        "qtiClass": "img",
+                                        "attributes": {
+                                            "src": "media\/095e88097efe4e7f98fe1e878dcea4df.jpg",
+                                            "alt": ""
+                                        }
+                                    }
+                                },
+                                "debug": {
+                                    "relatedItem": "item_54eee7e5581ed574089532"
+                                }
+                            }
+                        },
+                        "choice_simpleassociablechoice_54eee7e559333573139982": {
+                            "identifier": "Match23738841",
+                            "serial": "choice_simpleassociablechoice_54eee7e559333573139982",
+                            "qtiClass": "simpleAssociableChoice",
+                            "attributes": {
+                                "identifier": "Match23738841",
+                                "fixed": false,
+                                "matchMax": 1,
+                                "matchMin": 0
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_54eee7e5593ad859501062",
+                                "body": "{{img_54eee7e5593ef444959495}}",
+                                "elements": {
+                                    "img_54eee7e5593ef444959495": {
+                                        "serial": "img_54eee7e5593ef444959495",
+                                        "qtiClass": "img",
+                                        "attributes": {
+                                            "src": "media\/c6640477db8249678663bc00aab883a5.jpg",
+                                            "alt": ""
+                                        }
+                                    }
+                                },
+                                "debug": {
+                                    "relatedItem": "item_54eee7e5581ed574089532"
+                                }
+                            }
+                        },
+                        "choice_simpleassociablechoice_54eee7e55950d834957414": {
+                            "identifier": "Match16519624",
+                            "serial": "choice_simpleassociablechoice_54eee7e55950d834957414",
+                            "qtiClass": "simpleAssociableChoice",
+                            "attributes": {
+                                "identifier": "Match16519624",
+                                "fixed": false,
+                                "matchMax": 1,
+                                "matchMin": 0
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_54eee7e559584251721711",
+                                "body": "{{img_54eee7e5595c9055088256}}",
+                                "elements": {
+                                    "img_54eee7e5595c9055088256": {
+                                        "serial": "img_54eee7e5595c9055088256",
+                                        "qtiClass": "img",
+                                        "attributes": {
+                                            "src": "media\/e819855de2ac4c559d39fc8a27b19d1c.jpg",
+                                            "alt": ""
+                                        }
+                                    }
+                                },
+                                "debug": {
+                                    "relatedItem": "item_54eee7e5581ed574089532"
+                                }
+                            }
+                        },
+                        "choice_simpleassociablechoice_54eee7e5596ec862413265": {
+                            "identifier": "Match15952430",
+                            "serial": "choice_simpleassociablechoice_54eee7e5596ec862413265",
+                            "qtiClass": "simpleAssociableChoice",
+                            "attributes": {
+                                "identifier": "Match15952430",
+                                "fixed": false,
+                                "matchMax": 1,
+                                "matchMin": 0
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_54eee7e559773764257947",
+                                "body": "{{img_54eee7e5597ba139163786}}",
+                                "elements": {
+                                    "img_54eee7e5597ba139163786": {
+                                        "serial": "img_54eee7e5597ba139163786",
+                                        "qtiClass": "img",
+                                        "attributes": {
+                                            "src": "media\/1d65a7270ea0482ab8135e876bed3f25.jpg",
+                                            "alt": ""
+                                        }
+                                    }
+                                },
+                                "debug": {
+                                    "relatedItem": "item_54eee7e5581ed574089532"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "choice_simpleassociablechoice_54eee7e5598fe377866242": {
+                            "identifier": "Match12582080",
+                            "serial": "choice_simpleassociablechoice_54eee7e5598fe377866242",
+                            "qtiClass": "simpleAssociableChoice",
+                            "attributes": {
+                                "identifier": "Match12582080",
+                                "fixed": false,
+                                "matchMax": 0,
+                                "matchMin": 0
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_54eee7e559979546306768",
+                                "body": "Chemnitz",
+                                "elements": [],
+                                "debug": {
+                                    "relatedItem": "item_54eee7e5581ed574089532"
+                                }
+                            }
+                        },
+                        "choice_simpleassociablechoice_54eee7e559a54673759775": {
+                            "identifier": "Match7003951",
+                            "serial": "choice_simpleassociablechoice_54eee7e559a54673759775",
+                            "qtiClass": "simpleAssociableChoice",
+                            "attributes": {
+                                "identifier": "Match7003951",
+                                "fixed": false,
+                                "matchMax": 0,
+                                "matchMin": 0
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_54eee7e559acc111794542",
+                                "body": "Dresden",
+                                "elements": [],
+                                "debug": {
+                                    "relatedItem": "item_54eee7e5581ed574089532"
+                                }
+                            }
+                        },
+                        "choice_simpleassociablechoice_54eee7e559b89480603369": {
+                            "identifier": "Match6457581",
+                            "serial": "choice_simpleassociablechoice_54eee7e559b89480603369",
+                            "qtiClass": "simpleAssociableChoice",
+                            "attributes": {
+                                "identifier": "Match6457581",
+                                "fixed": false,
+                                "matchMax": 0,
+                                "matchMin": 0
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_54eee7e559c00661989555",
+                                "body": "Leipzig",
+                                "elements": [],
+                                "debug": {
+                                    "relatedItem": "item_54eee7e5581ed574089532"
+                                }
+                            }
+                        },
+                        "choice_simpleassociablechoice_54eee7e559cbb668834937": {
+                            "identifier": "Match17531354",
+                            "serial": "choice_simpleassociablechoice_54eee7e559cbb668834937",
+                            "qtiClass": "simpleAssociableChoice",
+                            "attributes": {
+                                "identifier": "Match17531354",
+                                "fixed": false,
+                                "matchMax": 0,
+                                "matchMin": 0
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_54eee7e559d32498238568",
+                                "body": "Freiberg",
+                                "elements": [],
+                                "debug": {
+                                    "relatedItem": "item_54eee7e5581ed574089532"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "debug": {
+            "relatedItem": "item_54eee7e5581ed574089532"
+        }
+    },
+    "namespaces": {
+        "xml": "http:\/\/www.w3.org\/XML\/1998\/namespace",
+        "xsi": "http:\/\/www.w3.org\/2001\/XMLSchema-instance",
+        "": "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1"
+    },
+    "stylesheets": [],
+    "outcomes": {
+        "outcomedeclaration_54eee7e55845a636484454": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_54eee7e55845a636484454",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "defaultValue": "0.0"
+        },
+        "outcomedeclaration_54eee7e558511527149259": {
+            "identifier": "MAXSCORE",
+            "serial": "outcomedeclaration_54eee7e558511527149259",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "MAXSCORE",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "defaultValue": "1.0"
+        },
+        "outcomedeclaration_54eee7e5585af313891543": {
+            "identifier": "FEEDBACKBASIC",
+            "serial": "outcomedeclaration_54eee7e5585af313891543",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "FEEDBACKBASIC",
+                "cardinality": "single",
+                "baseType": "identifier"
+            },
+            "defaultValue": "empty"
+        },
+        "outcomedeclaration_54eee7e55864c172420027": {
+            "identifier": "FEEDBACK_31052549",
+            "serial": "outcomedeclaration_54eee7e55864c172420027",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "FEEDBACK_31052549",
+                "cardinality": "single",
+                "baseType": "boolean",
+                "view": [
+                    "testConstructor"
+                ]
+            },
+            "defaultValue": "false"
+        },
+        "outcomedeclaration_54eee7e55870f417598658": {
+            "identifier": "FEEDBACK_13697523",
+            "serial": "outcomedeclaration_54eee7e55870f417598658",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "FEEDBACK_13697523",
+                "cardinality": "single",
+                "baseType": "boolean",
+                "view": [
+                    "testConstructor"
+                ]
+            },
+            "defaultValue": "false"
+        }
+    },
+    "responses": {
+        "responsedeclaration_54eee7e558383272667476": {
+            "identifier": "RESPONSE",
+            "serial": "responsedeclaration_54eee7e558383272667476",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE",
+                "cardinality": "multiple",
+                "baseType": "directedPair"
+            },
+            "correctResponses": [
+                "Match15952430 Match12582080",
+                "Match21853614 Match7003951",
+                "Match6887188 Match7003951",
+                "Match16519624 Match17531354",
+                "Match23738841 Match6457581"
+            ],
+            "mapping": [],
+            "areaMapping": [],
+            "howMatch": null,
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": []
+        }
+    },
+    "feedbacks": [],
+    "responseProcessing": {
+        "serial": "response_custom_54eee7e55a1c4519186185",
+        "qtiClass": "responseProcessing",
+        "attributes": [],
+        "processingType": "custom",
+        "data": "<responseProcessing>\n\t\t<responseCondition>\n\t\t\t<responseIf>\n\t\t\t\t<isNull>\n\t\t\t\t\t<variable identifier=\"RESPONSE\"\/>\n\t\t\t\t<\/isNull>\n\t\t\t\t<setOutcomeValue identifier=\"FEEDBACKBASIC\">\n\t\t\t\t\t<baseValue baseType=\"identifier\">empty<\/baseValue>\n\t\t\t\t<\/setOutcomeValue>\n\t\t\t<\/responseIf>\n\t\t\t<responseElseIf>\n\t\t\t\t<match>\n\t\t\t\t\t<variable identifier=\"RESPONSE\"\/>\n\t\t\t\t\t<correct identifier=\"RESPONSE\"\/>\n\t\t\t\t<\/match>\n\t\t\t\t<setOutcomeValue identifier=\"SCORE\">\n\t\t\t\t\t<sum>\n\t\t\t\t\t\t<variable identifier=\"SCORE\"\/>\n\t\t\t\t\t\t<variable identifier=\"MAXSCORE\"\/>\n\t\t\t\t\t<\/sum>\n\t\t\t\t<\/setOutcomeValue>\n\t\t\t\t<setOutcomeValue identifier=\"FEEDBACKBASIC\">\n\t\t\t\t\t<baseValue baseType=\"identifier\">correct<\/baseValue>\n\t\t\t\t<\/setOutcomeValue>\n\t\t\t<\/responseElseIf>\n\t\t\t<responseElse>\n\t\t\t\t<setOutcomeValue identifier=\"FEEDBACKBASIC\">\n\t\t\t\t\t<baseValue baseType=\"identifier\">incorrect<\/baseValue>\n\t\t\t\t<\/setOutcomeValue>\n\t\t\t<\/responseElse>\n\t\t<\/responseCondition>\n\t\t<setOutcomeValue identifier=\"FEEDBACK_31052549\">\n\t\t\t<and>\n\t\t\t\t<match>\n\t\t\t\t\t<baseValue baseType=\"identifier\">correct<\/baseValue>\n\t\t\t\t\t<variable identifier=\"FEEDBACKBASIC\"\/>\n\t\t\t\t<\/match>\n\t\t\t<\/and>\n\t\t<\/setOutcomeValue>\n\t\t<setOutcomeValue identifier=\"FEEDBACK_13697523\">\n\t\t\t<and>\n\t\t\t\t<match>\n\t\t\t\t\t<baseValue baseType=\"identifier\">incorrect<\/baseValue>\n\t\t\t\t\t<variable identifier=\"FEEDBACKBASIC\"\/>\n\t\t\t\t<\/match>\n\t\t\t<\/and>\n\t\t<\/setOutcomeValue>\n\t<\/responseProcessing>",
+        "responseRules": [
+            {
+                "qtiClass": "responseCondition",
+                "responseIf": {
+                    "qtiClass": "responseIf",
+                    "expression": {
+                        "qtiClass": "isNull",
+                        "expressions": [
+                            {
+                                "qtiClass": "variable",
+                                "attributes": {
+                                    "identifier": "RESPONSE"
+                                }
+                            }
+                        ]
+                    },
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "FEEDBACKBASIC"
+                            },
+                            "expression": {
+                                "qtiClass": "baseValue",
+                                "attributes": {
+                                    "baseType": "identifier"
+                                },
+                                "value": "empty"
+                            }
+                        }
+                    ]
+                },
+                "responseElseIf": {
+                    "qtiClass": "responseElseIf",
+                    "expression": {
+                        "qtiClass": "match",
+                        "expressions": [
+                            {
+                                "qtiClass": "variable",
+                                "attributes": {
+                                    "identifier": "RESPONSE"
+                                }
+                            },
+                            {
+                                "qtiClass": "correct",
+                                "attributes": {
+                                    "identifier": "RESPONSE"
+                                }
+                            }
+                        ]
+                    },
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "SCORE"
+                            },
+                            "expression": {
+                                "qtiClass": "sum",
+                                "expressions": [
+                                    {
+                                        "qtiClass": "variable",
+                                        "attributes": {
+                                            "identifier": "SCORE"
+                                        }
+                                    },
+                                    {
+                                        "qtiClass": "variable",
+                                        "attributes": {
+                                            "identifier": "MAXSCORE"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "FEEDBACKBASIC"
+                            },
+                            "expression": {
+                                "qtiClass": "baseValue",
+                                "attributes": {
+                                    "baseType": "identifier"
+                                },
+                                "value": "correct"
+                            }
+                        }
+                    ]
+                },
+                "responseElse": {
+                    "qtiClass": "responseElse",
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "FEEDBACKBASIC"
+                            },
+                            "expression": {
+                                "qtiClass": "baseValue",
+                                "attributes": {
+                                    "baseType": "identifier"
+                                },
+                                "value": "incorrect"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "qtiClass": "setOutcomeValue",
+                "attributes": {
+                    "identifier": "FEEDBACK_31052549"
+                },
+                "expression": {
+                    "qtiClass": "and",
+                    "expressions": [
+                        {
+                            "qtiClass": "match",
+                            "expressions": [
+                                {
+                                    "qtiClass": "baseValue",
+                                    "attributes": {
+                                        "baseType": "identifier"
+                                    },
+                                    "value": "correct"
+                                },
+                                {
+                                    "qtiClass": "variable",
+                                    "attributes": {
+                                        "identifier": "FEEDBACKBASIC"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "qtiClass": "setOutcomeValue",
+                "attributes": {
+                    "identifier": "FEEDBACK_13697523"
+                },
+                "expression": {
+                    "qtiClass": "and",
+                    "expressions": [
+                        {
+                            "qtiClass": "match",
+                            "expressions": [
+                                {
+                                    "qtiClass": "baseValue",
+                                    "attributes": {
+                                        "baseType": "identifier"
+                                    },
+                                    "value": "incorrect"
+                                },
+                                {
+                                    "qtiClass": "variable",
+                                    "attributes": {
+                                        "identifier": "FEEDBACKBASIC"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
+

@@ -1,0 +1,37 @@
+{
+	"name": "oat-sa/lib-tao-qti",
+	"description": "QTI Software Module Library for TAO",
+	"version": "0.9.0",
+	"type": "library",
+	"authors": [
+		{
+			"name": "Open Assessment Technologies S.A.",
+			"homepage": "http://www.taotesting.com"
+		},
+		{
+			"name": "Jérôme Bogaerts",
+			"email": "jerome@taotesting.com",
+			"homepage": "http://www.taotesting.com",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"forum": "http://forum.taotesting.com",
+		"issues": "http://forge.taotesting.com"
+	},
+	"keywords" : ["QTI", "IMS", "OAT", "TAO", "CBA", "Computer-Based Assessment", "Computer-Aided Assessment", "Computer-Assisted Assessment"],
+	"homepage" : "http://www.taotesting.com",
+	"license" : [
+		"GPL-2.0"
+	],
+	"require" : {
+		"php" : ">=5.3.10",
+		"qtism/qtism":"~0.9"
+	},
+	"require-dev": {
+
+	},
+	"autoload": {
+		"classmap": ["helpers/"]
+	}
+}

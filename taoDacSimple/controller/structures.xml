@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+    <!-- add the permissions admin to the items section -->
+    <structure id="items" name="Items" level="0" group="main">
+        <sections>
+            <section id="manage_items" name="Manage Items" url="">
+				<actions>
+					<action id="access-control-instance" name="Access control" url="/taoDacSimple/AdminAccessController/instancePermissions" group="tree" context="instance">
+                        <icon id="icon-unlock" />
+                    </action>
+					<action id="access-control-class" name="Access control" url="/taoDacSimple/AdminAccessController/classPermissions" group="tree" context="class">
+                        <icon id="icon-unlock" />
+                    </action>
+                </actions>
+            </section>
+        </sections>
+    </structure>
+    <!-- add the permissions admin to the tests section -->
+    <structure id="tests" name="Tests" level="1" group="main">
+        <sections>
+            <section id="manage_tests" name="Manage tests" url="">
+				<actions>
+					<action id="access-control-instance" name="Access control" url="/taoDacSimple/AdminAccessController/instancePermissions" group="tree" context="instance">
+                        <icon id="icon-unlock" />
+                    </action>
+					<action id="access-control-class" name="Access control" url="/taoDacSimple/AdminAccessController/classPermissions" group="tree" context="class">
+                        <icon id="icon-unlock" />
+                    </action>
+                </actions>
+            </section>
+        </sections>
+    </structure>
+</structures>

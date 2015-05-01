@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rubricBlock xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" view="candidate">
+    <div id="main-container" class="container">
+		<h1>The F4U Corsair</h1>
+		<img src="f4u-corsair.png" alt="A restored F4U-4 Corsair in Korean War-ear U.S. Marine Corps markings" longdesc="http://en.wikipedia.org/wiki/Vought_F4U_Corsair" height="400" width="300"/>
+		<h2>Introduction</h2>
+		<p>
+			The <strong>Chance Vought F4U Corsair</strong> was a carrier-capable fighter aircraft 
+			that saw service primarily in World War II and the Korean War. Demand 
+			for the aircraft soon overwhelmed Vought's manufacturing capability, 
+			resulting in production by Goodyear and Brewster: Goodyear-built Corsairs 
+			were designated <strong>FG</strong> and Brewster-built aircraft <strong>F3A</strong>. 
+			From the first prototype delivery to the U.S. Navy in 1940, to final delivery in 1953 
+			to the French, 12,571 F4U Corsairs were manufactured by Vought,[1] in 16 separate models, 
+			in the longest production run of any piston-engined fighter in U.S. history (1942–53).
+		</p>
+		
+		<h2>Operational History</h2>
+		<table summary="Operational History">
+			<caption>Operational History of the F4U Corsair</caption>
+			<thead>
+				<tr>
+					<th>War</th>
+					<th># Missions</th>
+					<th># Victories</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th>War</th>
+					<th># Missions</th>
+					<th># Victories</th>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td>World War II</td>
+					<td>600</td>
+					<td>124</td>
+				</tr>
+				<tr>
+					<td>Korean War</td>
+					<td>80% of support missions</td>
+					<td>N/A</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<h2>Aces</h2>
+		<div id="aces" class="highlight hall-of-fame">
+			<p>
+				The F4U Corsair produces multiple aces <dfn>5 victories against ennemies or more</dfn>.
+			</p>
+			<p>
+				The first ace was produced within the <abbr>VMF-124</abbr> squadron. <strong>Second
+				Lieutenant Kenneth A. Walsh</strong> racked up a total of 21 kills during World War II. 
+			</p>
+		</div>
+		
+		<h2>Variants</h2>
+		<dl>
+			<dt>F4U-1 (Corsair MK I Fleet Air Arm)</dt>
+			<dd>The first production version of the corsair with the distinctive &quot;bird cage&quot; canopy and low seating position.</dd>
+			
+			<dt>F4U-1A (Corsair MK II)</dt>
+			<dd>New canopy design, raised pilot seat. Moreover, it is the first &quot;carrier capable&quot; Corsair.</dd>
+			
+			<dt>F3A-1 (Corsair MK III)</dt>
+			<dd>This was the designation for the Brewster-built F4U-1. Just over 700 were built due to poor production techniques.</dd>
+			
+			<dt>F4U-1B</dt>
+			<dd>Unofficial post-war designation used to identify F4U-1s modified for FAA use.</dd>
+		</dl>
+		
+		<h2>See also</h2>
+		<ul>
+			<li><a href="http://en.wikipedia.org/wiki/Goodyear_F2G_Corsair">Goodyear F2G &quot;Super&quot; Corsair</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/List_of_aircraft_of_World_War_II">List of aircraft of World War II</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/List_of_aircraft_of_the_United_States_during_World_War_II">List of aircraft of the United States during World War II</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/List_of_military_aircraft_of_the_United_States">List of military aircraft of the United States</a></li>
+			<li><a href="this/test/additional.html">Additional Information</a></li>
+		</ul>
+		
+		<h2>Miscellaneous</h2>
+		<p>A Shockwave-Flash animation of the F4U Corsair.</p>
+		<object type="application/x-shockwave-flash" data="f4u-corsair.swf" width="550" height="400">
+			<param name="movie" value="movie_name.swf" valuetype="REF"/>
+			<a href="http://www.adobe.com/go/getflash"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player"/></a>
+		</object>
+	</div>
+	<stylesheet href="my-stylesheet.css" type="text/css" media="screen"/>
+</rubricBlock>

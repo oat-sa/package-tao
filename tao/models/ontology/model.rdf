@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xml:base="http://www.tao.lu/Ontologies/TAO.rdf#"
+	xmlns:tao="http://www.tao.lu/Ontologies/TAO.rdf#"
+	xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#"
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#"
+>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#AbstractModel">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rd#generis_Ressource"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Abstract Model]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[An abstract model to differentiate implementations of resources of the same type]]></rdfs:comment>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#ModelImplementation">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Model implementation]]></rdfs:label>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#AbstractModel"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#ModelStatus">
+    <rdfs:label xml:lang="en-US"><![CDATA[Model Status]]></rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rd#generis_Ressource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusStable">
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#ModelStatus"/>
+    <rdfs:label xml:lang="en-US">Stable</rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[This model can be used in production]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusDeprecated">
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#ModelStatus"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Deprecated]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[This model is not supported anymore, we advise to migrate]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusDevelopment">
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#ModelStatus"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Development]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[this model has not been tested in a production environment, we advise to be carefull with it]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusExperimental">
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#ModelStatus"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Experimental]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[this model is still in conception, but you can try it, give your feedback and it will be improved.]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#ModelAbstractModelStatus">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#AbstractModel"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#ModelStatus"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Status]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The status of a model]]></rdfs:comment>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+  </rdf:Description>
+ 
+  <!-- Model Widget --> 
+  <rdf:Description rdf:about="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ModelSelector">
+    <rdf:type rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#WidgetClass"/>
+    <widget:identifier><![CDATA[model]]></widget:identifier>
+    <rdfs:label xml:lang="en-US"><![CDATA[Model]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Select the associated model]]></rdfs:comment>
+    <widget:rangeConstraint rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#rangeConstraint-Resource"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ModelSelectorXhtmlRenderer">
+    <rdf:type rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#WidgetRenderer"/>
+    <widget:renderedWidget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ModelSelector"/>
+  	<widget:renderMode><![CDATA[xhtml]]></widget:renderMode>
+  	<widget:implementation><![CDATA[oat\tao\helpers\form\elements\xhtml\Model]]></widget:implementation>
+  </rdf:Description>
+  
+    
+</rdf:RDF>

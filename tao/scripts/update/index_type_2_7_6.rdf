@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xml:base="http://www.tao.lu/Ontologies/TAO.rdf#"
+	xmlns:tao="http://www.tao.lu/Ontologies/TAO.rdf#"
+>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#TypeIndex">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#Index"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Type Index]]></rdfs:label>
+  	<tao:IndexIdentifier><![CDATA[class]]></tao:IndexIdentifier>
+  	<tao:IndexFuzzyMatching rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False" />
+  	<tao:IndexDefaultSearch rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  	<tao:IndexTokenizer rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#LabelTokenizer"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">
+  	<tao:PropertyIndex rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#TypeIndex"/>
+  </rdf:Description>
+  
+</rdf:RDF>

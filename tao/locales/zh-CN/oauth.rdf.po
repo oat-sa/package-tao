@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.0.0\n"
+"PO-Revision-Date: 2015-04-30T09:07:56\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: zh-CN\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: zh-CN\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#OauthConsumer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Oauth Credentials"
+msgstr "Oauth的凭证"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#OauthKey
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "OAuth consumer key"
+msgstr "OAuth消费者密钥"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#OauthKey
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "identifier of OAuth consumer"
+msgstr "OAuth消费者的识别码"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#OauthSecret
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Oauth consumer secret"
+msgstr "OAuth消费者的秘密"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#OauthSecret
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Secret used for signatures"
+msgstr "签名使用的秘密"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#OauthCallbackUrl
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "OAuth consumer callback URL"
+msgstr "OAuth消费者回调URL"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#OauthCallbackUrl
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "URL to call after autentification"
+msgstr "鉴别后调用的URL"
+

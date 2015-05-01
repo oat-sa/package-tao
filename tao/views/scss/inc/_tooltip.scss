@@ -1,0 +1,89 @@
+@import 'inc/bootstrap';
+
+/* tooltipster themes */
+%tao-theme-tooltip {
+	@include border-radius(4); 
+    max-width: 300px;
+	border-width: 1px;
+    border-style: solid;
+    
+    .tooltipster-content {
+        @include font-size(12);
+        line-height: 14px;
+        padding: 6px;
+    }
+
+    .tooltipster-fade-show{
+        opacity: 0.7 !important;
+    }
+}
+
+.tao-dark-tooltip {
+    @extend %tao-theme-tooltip;
+ 
+    border-color: #444;
+	background-color: #404040;
+    @include box-shadow;
+	color: $textHighlight;
+}
+.tao-default-tooltip {
+    @extend %tao-theme-tooltip;
+    
+    border-color: $uiGeneralContentBorder;
+	background-color: $uiGeneralContentBg;
+    @include box-shadow;
+	color: $textColor;
+}
+
+.tao-info-tooltip {
+    @extend %tao-theme-tooltip;
+    @extend .feedback-info; 
+    @include box-shadow;
+	color: $textColor;
+}
+
+.tao-success-tooltip {
+    @extend %tao-theme-tooltip;
+    @extend .feedback-success; 
+    @include box-shadow;
+	color: $textColor;
+}
+
+.tao-warning-tooltip {
+    @extend %tao-theme-tooltip;
+    @extend .feedback-warning; 
+    @include box-shadow;
+	color: $textColor;
+}
+
+.tao-error-tooltip {
+    @extend %tao-theme-tooltip;
+    @extend .feedback-error; 
+    @include box-shadow;
+	color: $textColor;
+}
+
+/* default class for the tooltip content. Must be hidden. */
+.tooltip-content {
+    display: none;
+}
+.tooltipster-content .tooltip-content{
+    display: block;
+}
+
+/* override small arrow border */
+.tooltipster-arrow-top .tooltipster-arrow-border, 
+.tooltipster-arrow-top-right .tooltipster-arrow-border, 
+.tooltipster-arrow-top-left .tooltipster-arrow-border{
+    bottom: -8px !important;
+}
+
+.icon-help.tooltipstered {
+    cursor: help;
+    position: relative;
+    top: 2px
+}
+
+.help-content{
+    display: none;
+}

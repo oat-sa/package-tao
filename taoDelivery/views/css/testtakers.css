@@ -1,0 +1,89 @@
+/**  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ 
+ * Copyright (c) 2013 (original work) Open Assessment Technologies SA (under the project TAO-PRODUCT);
+ * 
+ */
+                                  /*
+                                 /  \
+                                |    |
+                              --:'''':--
+THIS CODE IS GENERATED          :*_* :
+                                _:"":\___
+AUTOMAGICALLY    * *      ____.' :::     '._
+                * *=====<<=)           \    :
+DO NOT EDIT!     * *      '-'-'\_      /'._.'
+                                  \====:_ ""
+                                 .'     \
+                                :       :
+                               /   :    \
+                              :   .      '.
+                              :  : :      :
+                              :__:-:__.;--'
+                             <*_/   <*/
+#excludedList li .arrow:before {
+  content: "\e60e"; }
+
+#assignedList li .arrow:before {
+  content: "\e60f"; }
+
+.ttlist {
+  overflow: auto; }
+
+#assignedList {
+  height: 261px; }
+
+#excludedList {
+  height: 300px; }
+
+.ttlist li {
+  cursor: pointer;
+  border-bottom: 1px solid #D3D3D3;
+  padding: 3px;
+  background: none repeat scroll 0 0 #F9F8F7; }
+
+.ttlist li:hover {
+  color: #FFFFFF;
+  background: none repeat scroll 0 0 #266D9C; }
+
+.filter-div {
+  background: none repeat scroll 0 0 lightgrey;
+  padding: 2px;
+  height: 35px; }
+
+.ttbox {
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  -webkit-border-radius: 2px; }
+
+#assignedList li .arrow {
+  float: right;
+  margin-right: 5px;
+  line-height: 1.4; }
+  #assignedList li .arrow:before {
+    font-family: 'tao';
+    display: inline-block; }
+
+#excludedList li .arrow {
+  float: left;
+  margin-left: 5px;
+  margin-right: 10px;
+  line-height: 1.4; }
+  #excludedList li .arrow:before {
+    font-family: 'tao';
+    display: inline-block; }
+
+/*# sourceMappingURL=testtakers.css.map */

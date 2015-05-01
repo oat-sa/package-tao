@@ -1,0 +1,45 @@
+@import "inc/bootstrap";
+
+.qti-textEntryInteraction {
+
+    table {
+        border-collapse: separate;
+        border-spacing: 2px;
+    }
+
+    tr {
+        height: 27px;
+        white-space: nowrap;
+    }
+
+    .icon-bin, .icon-pin, .icon-shuffle {
+        text-align:center;
+        padding: 0 5px;
+        cursor: pointer;
+        vertical-align: middle;
+    }
+
+
+    .icon-radio, .icon-checkbox, .icon-radio-checked, .icon-checkbox-checked {
+        font-size: 13px !important;
+    }
+
+    .icon-bin:hover, .icon-pin:hover, .icon-shuffle:hover {
+        color: $uiClickableHoverBg;
+    }
+
+
+    td[contenteditable], .main-option {
+        padding: 0 7px;
+        background:white;
+        @include simple-border();
+    }
+
+    .main-option {
+        border-top: 1px $uiGeneralContentBorder solid;
+        border-bottom: 1px $uiGeneralContentBorder solid;
+        padding-right: 29px;
+        min-width: 180px
+    }
+
+}

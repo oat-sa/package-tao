@@ -1,0 +1,6 @@
+@media screen and (min-width:0\0) { 
+
+   .main h3:after, .preamble h3:after, .select:after { display: none; }
+   [role="banner"] h1:before { display: none; }
+
+}

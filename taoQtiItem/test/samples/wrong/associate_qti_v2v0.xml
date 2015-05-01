@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p0 imsqti_v2p0.xsd"
+    identifier="associate" title="Shakespearian Rivals" adaptive="false" timeDependent="false" lang="en-US">
+    <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="pair">
+        <correctResponse>
+            <value>A P</value>
+            <value>C M</value>
+            <value>D L</value>
+        </correctResponse>
+        <mapping defaultValue="0">
+            <mapEntry mapKey="A P" mappedValue="2"/>
+            <mapEntry mapKey="C M" mappedValue="1"/>
+            <mapEntry mapKey="D L" mappedValue="1"/>
+        </mapping>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+    <itemBody>
+        <associateInteraction responseIdentifier="RESPONSE" shuffle="true" maxAssociations="3">
+            <prompt>Hidden in this list of characters from famous Shakespeare plays are three pairs
+                of rivals. Can you match each character to his adversary?</prompt>
+            <simpleAssociableChoice identifier="A" matchMax="1" matchGroup="P M">Antonio</simpleAssociableChoice>
+            <simpleAssociableChoice identifier="C" matchMax="1" matchGroup="P M">Capulet</simpleAssociableChoice>
+            <simpleAssociableChoice identifier="D" matchMax="2">Demetrius</simpleAssociableChoice>
+            <simpleAssociableChoice identifier="L" matchMax="1">Lysander</simpleAssociableChoice>
+            <simpleAssociableChoice identifier="M" matchMax="1" matchGroup="A C">Montague</simpleAssociableChoice>
+            <simpleAssociableChoice identifier="P" matchMax="1" matchGroup="A C">Prospero</simpleAssociableChoice>
+        </associateInteraction>
+    </itemBody>
+    <responseProcessing template="http://www.imsglobal.org/question/qti_v2p0/rptemplates/map_response"/>
+</assessmentItem>

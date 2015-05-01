@@ -1,0 +1,100 @@
+{
+		"identifier": "extendedText",
+		"serial": "item_547d89b1d6c23267948888",
+		"qtiClass": "assessmentItem",
+		"attributes": {
+			"identifier": "extendedText",
+			"title": "Writing a Postcard",
+			"label": "",
+			"adaptive": false,
+			"timeDependent": false,
+			"toolName": "TAO",
+			"toolVersion": "3.0"
+		},
+		"body": {
+			"serial": "container_containeritembody_547d89b1d6c0c246247099",
+			"body": "<p>Read this postcard from your English pen-friend, Sam.</p>\n    <div>\n      {{object_547d89b1db1ca294674790}}\n    </div>\n    {{interaction_extendedtextinteraction_547d89b1d9db7634390944}}",
+			"elements": {
+				"interaction_extendedtextinteraction_547d89b1d9db7634390944": {
+					"serial": "interaction_extendedtextinteraction_547d89b1d9db7634390944",
+					"qtiClass": "extendedTextInteraction",
+					"attributes": {
+						"responseIdentifier": "RESPONSE",
+						"base": 10,
+						"expectedLength": 500,
+						"minStrings": 0,
+						"expectedLines": 15,
+						"format": "plain"
+					},
+					"choices": [],
+					"prompt": {
+						"serial": "container_containerstatic_547d89b1daf57997005360",
+						"body": "Write Sam a long letter. Answer the questions. Write 150 words (500 chars).",
+						"elements": [],
+						"debug": {
+							"relatedItem": "item_547d89b1d6c23267948888"
+						}
+					}
+				},
+				"object_547d89b1db1ca294674790": {
+					"serial": "object_547d89b1db1ca294674790",
+					"qtiClass": "object",
+					"attributes": {
+						"data": "images/postcard.png",
+						"type": "image/png"
+					},
+					"_alt": "\n        <blockquote class=\"postcard\">\n          <p>Here is a postcard of my town. Please send me<br/> a postcard from your town.\n\t\t\t\t\t\tWhat size is your<br/> town? What is the nicest part of your town?<br/>\n\t\t\t\t\t\tWhere do you go in the evenings?<br/> Sam.</p>\n        </blockquote>\n      "
+				}
+			},
+			"debug": {
+				"relatedItem": "item_547d89b1d6c23267948888"
+			}
+		},
+		"namespaces": {
+			"xml": "http://www.w3.org/XML/1998/namespace",
+			"xsi": "http://www.w3.org/2001/XMLSchema-instance",
+			"": "http://www.imsglobal.org/xsd/imsqti_v2p1"
+		},
+		"stylesheets": [],
+		"outcomes": {
+			"outcomedeclaration_547d89b1d8d81678487868": {
+				"identifier": "SCORE",
+				"serial": "outcomedeclaration_547d89b1d8d81678487868",
+				"qtiClass": "outcomeDeclaration",
+				"attributes": {
+					"identifier": "SCORE",
+					"cardinality": "single",
+					"baseType": "float"
+				},
+				"defaultValue": null
+			}
+		},
+		"responses": {
+			"responsedeclaration_547d89b1d82c0946659679": {
+				"identifier": "RESPONSE",
+				"serial": "responsedeclaration_547d89b1d82c0946659679",
+				"qtiClass": "responseDeclaration",
+				"attributes": {
+					"identifier": "RESPONSE",
+					"cardinality": "single",
+					"baseType": "string"
+				},
+				"correctResponses": [],
+				"mapping": [],
+				"areaMapping": [],
+				"howMatch": null,
+				"mappingAttributes": {
+					"defaultValue": 0
+				},
+				"feedbackRules": []
+			}
+		},
+		"feedbacks": [],
+		"responseProcessing": {
+			"serial": "response_custom_547d89b1dbc80108048924",
+			"qtiClass": "responseProcessing",
+			"attributes": [],
+			"processingType": "custom",
+			"data": "<responseProcessing/>"
+		}
+	}

@@ -1,0 +1,16 @@
+@import "inc/bootstrap";
+.qti-customInteraction {
+    
+    & ~.overlay {
+        background: transparent;
+    }
+    
+    .simple-editable{
+        border : solid 1px transparent;
+        min-height: 1.8rem;
+        min-width: 3rem;
+        &:hover{
+            border-color : whiten($info, .5);
+        }
+    }
+}

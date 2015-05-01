@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pic="http://www.imsglobal.org/xsd/portableInfoControl" xmlns:html5="html5" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="pic001" title="sample info control" adaptive="false" timeDependent="false" label="" xml:lang="en-US" toolName="TAO" toolVersion="2.7">
+    <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="pair">
+        <correctResponse>
+            <value>A P</value>
+            <value>C M</value>
+            <value>D L</value>
+        </correctResponse>
+        <mapping defaultValue="0">
+            <mapEntry mapKey="A P" mappedValue="2"/>
+            <mapEntry mapKey="C M" mappedValue="1"/>
+            <mapEntry mapKey="D L" mappedValue="1"/>
+        </mapping>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+    <stylesheet href="runtime/css/studentToolbar.css" type="text/css" media="all" title=""/>
+    <itemBody>
+        
+        <div class="grid-row">
+            <div class="col-12">
+                <associateInteraction responseIdentifier="RESPONSE" shuffle="true" maxAssociations="3">
+                    <prompt>Hidden in this list of characters from famous Shakespeare plays are three pairs
+                        of rivals. Can you match each character to his adversary?</prompt>
+                    <simpleAssociableChoice identifier="A" matchMax="1">Antonio</simpleAssociableChoice>
+                    <simpleAssociableChoice identifier="C" matchMax="1">Capulet</simpleAssociableChoice>
+                    <simpleAssociableChoice identifier="D" matchMax="1">Demetrius</simpleAssociableChoice>
+                    <simpleAssociableChoice identifier="L" matchMax="1">Lysander</simpleAssociableChoice>
+                    <simpleAssociableChoice identifier="M" matchMax="1">Montague</simpleAssociableChoice>
+                    <simpleAssociableChoice identifier="P" matchMax="1">Prospero</simpleAssociableChoice>
+                </associateInteraction>
+            </div>
+        </div>
+        
+        <infoControl id="toolbar1" title="student toolbar">
+            <pic:portableInfoControl infoControlTypeIdentifier="studentToolbar" hook="runtime/studentToolbar.js">
+                <pic:resources location="http://imsglobal.org/pic/1.0.15/sharedLibraries.xml">
+                    <pic:libraries>
+                        <pic:lib id="IMSGlobal/jquery_2_1_1"/>
+                    </pic:libraries>
+                </pic:resources>
+                <pic:properties></pic:properties>
+                <pic:markup>
+                    <html5:div id="toolbar1" class="studentToolbar"></html5:div>
+                </pic:markup>
+            </pic:portableInfoControl>
+        </infoControl>
+                
+        <infoControl id="calculator1" title="a calculator">
+            <pic:portableInfoControl infoControlTypeIdentifier="studentToolCalculator" hook="runtime/tools/calculator.js">
+                <pic:resources location="http://imsglobal.org/pic/1.0.15/sharedLibraries.xml">
+                    <pic:libraries>
+                        <pic:lib id="IMSGlobal/jquery_2_1_1"/>
+                    </pic:libraries>
+                </pic:resources>
+                <pic:properties>
+                    <pic:entry key="toolbar">toolbar1</pic:entry>
+                    <pic:entry key="trigonometric">value1</pic:entry>
+                    <pic:entry key="statistic">value2</pic:entry>
+                </pic:properties>
+                <pic:markup>
+                    <html5:div class="studentToolCalculator"></html5:div>
+                </pic:markup>
+            </pic:portableInfoControl>
+        </infoControl>
+                
+        <infoControl id="protractor1" title="a protractor">
+            <pic:portableInfoControl infoControlTypeIdentifier="studentToolProtractor" hook="runtime/tools/protractor.js">
+                <pic:resources location="http://imsglobal.org/pic/1.0.15/sharedLibraries.xml">
+                    <pic:libraries>
+                        <pic:lib id="IMSGlobal/jquery_2_1_1"/>
+                    </pic:libraries>
+                </pic:resources>
+                <pic:properties>
+                    <pic:entry key="toolbar">toolbar1</pic:entry>
+                    <pic:entry key="rotatable">true</pic:entry>
+                </pic:properties>
+                <pic:markup>
+                    <html5:div class="studentToolProtractor"></html5:div>
+                </pic:markup>
+            </pic:portableInfoControl>
+        </infoControl>
+                
+        <infoControl id="ruler1" title="a ruler">
+            <pic:portableInfoControl infoControlTypeIdentifier="studentToolRule" hook="runtime/tools/ruler.js">
+                <pic:resources location="http://imsglobal.org/pic/1.0.15/sharedLibraries.xml">
+                    <pic:libraries>
+                        <pic:lib id="IMSGlobal/jquery_2_1_1"/>
+                    </pic:libraries>
+                </pic:resources>
+                <pic:properties>
+                    <pic:entry key="toolbar">toolbar1</pic:entry>
+                    <pic:entry key="rotatable">true</pic:entry>
+                    <pic:entry key="unit">metric</pic:entry>
+                    <pic:entry key="length">10</pic:entry>
+                </pic:properties>
+                <pic:markup>
+                    <html5:div class="studentToolRuler"></html5:div>
+                </pic:markup>
+            </pic:portableInfoControl>
+        </infoControl>
+                
+        <infoControl id="magnifier1" title="a magnifier">
+            <pic:portableInfoControl infoControlTypeIdentifier="studentToolMagnifier" hook="runtime/tools/magnifier.js">
+                <pic:resources location="http://imsglobal.org/pic/1.0.15/sharedLibraries.xml">
+                    <pic:libraries>
+                        <pic:lib id="IMSGlobal/jquery_2_1_1"/>
+                    </pic:libraries>
+                </pic:resources>
+                <pic:properties>
+                    <pic:entry key="toolbar">toolbar1</pic:entry>
+                </pic:properties>
+                <pic:markup>
+                    <html5:div class="studentToolMagnifier"></html5:div>
+                </pic:markup>
+            </pic:portableInfoControl>
+        </infoControl>
+           
+    </itemBody>
+    <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response"/>
+</assessmentItem>

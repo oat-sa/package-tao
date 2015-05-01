@@ -1,0 +1,13 @@
+{
+	"name" : "clearfw/clearfw",
+	"description" : "ClearFw",
+	"version" : "1.0",
+	"license" : [
+		"GPL-2.0"
+	],
+	"autoload": {
+		"classmap" : ["core/", "core/helpers/" , "core/util"],
+		"files" : ["clearbricks/init.php"]
+	 
+	} 
+}

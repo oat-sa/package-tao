@@ -1,0 +1,31 @@
+{
+
+    "name": "{authorNs}/{id}",
+    "description" : "{description}",
+    "type" : "tao-extension",
+    "authors" : [
+        {
+        "name": "{author}"
+        }
+    ],
+    "keywords" : [
+        "tao",
+        "computer-based-assessment"
+    ],
+    "homepage" : "http://www.taotesting.com",
+    "license" : [
+        "{license}"
+    ],
+    "extra" : {
+        "tao-extension-name" : "{id}"
+    },
+    "minimum-stability" : "dev",
+    "require": {
+        "oat-sa/oatbox-extension-installer": "dev-master"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "{authorNs}\\{id}\\" : ""
+        }
+    } 
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xml:base="http://www.tao.lu/Ontologies/TAOItem.rdf#"
+	xmlns:tao="http://www.tao.lu/Ontologies/TAO.rdf#"
+>
+  
+  <!-- Tokenizers -->
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContentTokenizer">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#Tokenizer"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Item Content Tokenizer]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[Tokenizer using the item content]]></rdfs:comment>
+  	<tao:TokenizerClass xml:lang="en-US"><![CDATA[taoItems_models_classes_search_ItemContentTokenizer]]></tao:TokenizerClass>
+  </rdf:Description>
+  
+  <!-- Item model index -->
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModelIndex">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#Index"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Item Model Index]]></rdfs:label>
+  	<tao:IndexIdentifier><![CDATA[model]]></tao:IndexIdentifier>
+  	<tao:IndexTokenizer rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#LabelTokenizer"/>
+  	<tao:IndexFuzzyMatching rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False" />
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModel">
+  	<tao:PropertyIndex rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModelIndex"/>
+  </rdf:Description>
+  
+  <!-- Item content index -->
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContentIndex">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#Index"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Item Content Index]]></rdfs:label>
+  	<tao:IndexIdentifier><![CDATA[content]]></tao:IndexIdentifier>
+  	<tao:IndexTokenizer rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContentTokenizer"/>
+  	<tao:IndexFuzzyMatching rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContent">
+  	<tao:PropertyIndex rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContentIndex"/>
+  </rdf:Description>
+  
+</rdf:RDF>

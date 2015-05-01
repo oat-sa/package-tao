@@ -1,0 +1,248 @@
+{
+    "identifier": "hottext",
+    "serial": "item_547dd79b8be3e240017126",
+    "qtiClass": "assessmentItem",
+    "attributes": {
+        "identifier": "hottext",
+        "title": "Identifying Sentence Errors",
+        "label": "",
+        "adaptive": false,
+        "timeDependent": false,
+        "toolName": "TAO",
+        "toolVersion": "3.0"
+    },
+    "body": {
+        "serial": "container_containeritembody_547dd79b8be24092340443",
+        "body": "{{rubricblock_547dd79b8cfda580861579}}\n    {{interaction_hottextinteraction_547dd79b8d52c373545736}}",
+        "elements": {
+            "rubricblock_547dd79b8cfda580861579": {
+                "serial": "rubricblock_547dd79b8cfda580861579",
+                "qtiClass": "rubricBlock",
+                "attributes": {
+                    "view": [
+                        "candidate"
+                    ]
+                },
+                "body": {
+                    "serial": "container_containerstatic_547dd79b8d195914915139",
+                    "body": "<p>Select the error in the following passage of text (or <em>No Error</em> if there is\n\t\t\t\tnone).</p>",
+                    "elements": [],
+                    "debug": {
+                        "relatedItem": "item_547dd79b8be3e240017126"
+                    }
+                }
+            },
+            "interaction_hottextinteraction_547dd79b8d52c373545736": {
+                "serial": "interaction_hottextinteraction_547dd79b8d52c373545736",
+                "qtiClass": "hottextInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE",
+                    "maxChoices": 1,
+                    "minChoices": 0
+                },
+                "body": {
+                    "serial": "container_containerhottext_547dd79b8d7f1931717195",
+                    "body": "<p>Sponsors of the Olympic Games {{choice_hottext_547dd79b8d9f4774514379}}\n\t\t\t\tadvertising time on United States television {{choice_hottext_547dd79b8daf5284589059}}\n\t\t\t\t{{choice_hottext_547dd79b8db64175149202}} a dozen international firms {{choice_hottext_547dd79b8dbcb263172857}} names are familiar to American consumers.\n\t\t\t\t\t{{choice_hottext_547dd79b8dc33869435046}}\n\t\t\t</p>",
+                    "elements": {
+                        "choice_hottext_547dd79b8d9f4774514379": {
+                            "identifier": "A",
+                            "serial": "choice_hottext_547dd79b8d9f4774514379",
+                            "qtiClass": "hottext",
+                            "attributes": {
+                                "identifier": "A",
+                                "fixed": false
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_547dd79b8da85686601510",
+                                "body": "who bought",
+                                "elements": [],
+                                "debug": {
+                                    "relatedItem": "item_547dd79b8be3e240017126"
+                                }
+                            }
+                        },
+                        "choice_hottext_547dd79b8daf5284589059": {
+                            "identifier": "B",
+                            "serial": "choice_hottext_547dd79b8daf5284589059",
+                            "qtiClass": "hottext",
+                            "attributes": {
+                                "identifier": "B",
+                                "fixed": false
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_547dd79b8db12833964282",
+                                "body": "includes",
+                                "elements": [],
+                                "debug": {
+                                    "relatedItem": "item_547dd79b8be3e240017126"
+                                }
+                            }
+                        },
+                        "choice_hottext_547dd79b8db64175149202": {
+                            "identifier": "C",
+                            "serial": "choice_hottext_547dd79b8db64175149202",
+                            "qtiClass": "hottext",
+                            "attributes": {
+                                "identifier": "C",
+                                "fixed": false
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_547dd79b8db7f317164150",
+                                "body": "at least",
+                                "elements": [],
+                                "debug": {
+                                    "relatedItem": "item_547dd79b8be3e240017126"
+                                }
+                            }
+                        },
+                        "choice_hottext_547dd79b8dbcb263172857": {
+                            "identifier": "D",
+                            "serial": "choice_hottext_547dd79b8dbcb263172857",
+                            "qtiClass": "hottext",
+                            "attributes": {
+                                "identifier": "D",
+                                "fixed": false
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_547dd79b8dbe9417605168",
+                                "body": "whose",
+                                "elements": [],
+                                "debug": {
+                                    "relatedItem": "item_547dd79b8be3e240017126"
+                                }
+                            }
+                        },
+                        "choice_hottext_547dd79b8dc33869435046": {
+                            "identifier": "E",
+                            "serial": "choice_hottext_547dd79b8dc33869435046",
+                            "qtiClass": "hottext",
+                            "attributes": {
+                                "identifier": "E",
+                                "fixed": false
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_547dd79b8dc4d467233914",
+                                "body": "No error.",
+                                "elements": [],
+                                "debug": {
+                                    "relatedItem": "item_547dd79b8be3e240017126"
+                                }
+                            }
+                        }
+                    },
+                    "debug": {
+                        "relatedItem": "item_547dd79b8be3e240017126"
+                    }
+                },
+                "prompt": {
+                    "serial": "container_containerstatic_547dd79b8d656623958489",
+                    "body": "",
+                    "elements": [],
+                    "debug": {
+                        "relatedItem": "item_547dd79b8be3e240017126"
+                    }
+                }
+            }
+        },
+        "debug": {
+            "relatedItem": "item_547dd79b8be3e240017126"
+        }
+    },
+    "namespaces": {
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "": "http://www.imsglobal.org/xsd/imsqti_v2p1"
+    },
+    "stylesheets": [],
+    "outcomes": {
+        "outcomedeclaration_547dd79b8c688752696559": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_547dd79b8c688752696559",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "defaultValue": "0"
+        }
+    },
+    "responses": {
+        "responsedeclaration_547dd79b8c587771102769": {
+            "identifier": "RESPONSE",
+            "serial": "responsedeclaration_547dd79b8c587771102769",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE",
+                "cardinality": "single",
+                "baseType": "identifier"
+            },
+            "correctResponses": [
+                "B"
+            ],
+            "mapping": [],
+            "areaMapping": [],
+            "howMatch": "http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct",
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": []
+        }
+    },
+    "feedbacks": [],
+    "responseProcessing": {
+        "serial": "response_templatesdriven_547dd79b8dee5275459776",
+        "qtiClass": "responseProcessing",
+        "attributes": [],
+        "processingType": "templateDriven",
+        "responseRules": [{
+            "qtiClass": "responseCondition",
+            "responseIf": {
+                "qtiClass": "responseIf",
+                "expression": {
+                    "qtiClass": "match",
+                    "expressions": [{
+                        "qtiClass": "variable",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }, {
+                        "qtiClass": "correct",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }]
+                },
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "baseValue",
+                        "attributes": {
+                            "baseType": "float"
+                        },
+                        "value": "1"
+                    }
+                }]
+            },
+            "responseElse": {
+                "qtiClass": "responseElse",
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "baseValue",
+                        "attributes": {
+                            "baseType": "float"
+                        },
+                        "value": "0"
+                    }
+                }]
+            }
+        }]
+    }
+}

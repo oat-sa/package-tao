@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 imsqti_v2p1.xsd"
+    identifier="choiceMultiple" title="Composition of Water" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="identifier">
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+    <itemBody>
+        <choiceInteraction responseIdentifier="RESPONSE" shuffle="true" maxChoices="0">
+            <prompt>Select three animals from the same family</prompt>
+            <simpleChoice identifier="RZ" fixed="false">Razorback</simpleChoice>
+            <simpleChoice identifier="PI" fixed="false">Pig</simpleChoice>
+            <simpleChoice identifier="SO" fixed="false">Sow</simpleChoice>
+            <simpleChoice identifier="CO" fixed="false">Cow</simpleChoice>
+            <simpleChoice identifier="GO" fixed="false">Goat</simpleChoice>
+            <simpleChoice identifier="SH" fixed="false">Sheep</simpleChoice>
+            <simpleChoice identifier="SN" fixed="false">Snail</simpleChoice>
+            <simpleChoice identifier="FR" fixed="false">Frog</simpleChoice>
+            <simpleChoice identifier="WI" fixed="false">Winkle</simpleChoice>
+        </choiceInteraction>
+    </itemBody>
+    <responseProcessing>
+        <responseCondition>
+            <responseIf>
+                <match>
+                    <variable identifier="RESPONSE"/>
+                    <multiple>
+                        <baseValue baseType="identifier">RZ</baseValue>
+                        <baseValue baseType="identifier">PI</baseValue>
+                        <baseValue baseType="identifier">SO</baseValue>
+                    </multiple>
+                </match>
+                <setOutcomeValue identifier="SCORE">
+                    <baseValue baseType="integer">2</baseValue>
+                </setOutcomeValue>
+            </responseIf>
+            <responseElseIf>
+                <match>
+                    <variable identifier="RESPONSE"/>
+                    <multiple>
+                        <baseValue baseType="identifier">CO</baseValue>
+                        <baseValue baseType="identifier">GO</baseValue>
+                        <baseValue baseType="identifier">SH</baseValue>
+                    </multiple>
+                </match>
+                <setOutcomeValue identifier="SCORE">
+                    <baseValue baseType="integer">2</baseValue>
+                </setOutcomeValue>
+            </responseElseIf>
+            <responseElseIf>
+                <match>
+                    <variable identifier="RESPONSE"/>
+                    <multiple>
+                        <baseValue baseType="identifier">SN</baseValue>
+                        <baseValue baseType="identifier">FR</baseValue>
+                        <baseValue baseType="identifier">WI</baseValue>
+                    </multiple>
+                </match>
+                <setOutcomeValue identifier="SCORE">
+                    <baseValue baseType="integer">2</baseValue>
+                </setOutcomeValue>
+            </responseElseIf>
+            <responseElse>
+                <setOutcomeValue identifier="SCORE">
+                    <baseValue baseType="integer">0</baseValue>
+                </setOutcomeValue>
+            </responseElse>
+        </responseCondition>
+    </responseProcessing>
+</assessmentItem>

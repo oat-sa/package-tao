@@ -1,0 +1,490 @@
+label {
+    display: inline-block;
+    cursor: pointer;
+    padding-right: 10px;
+    margin-bottom: 5px;
+    abbr {
+        border: none;
+        color: $info;
+    }
+}
+
+
+.file-upload {
+    display: inline-block;
+    position: relative;
+    overflow:hidden;
+    max-width: 300px;
+    .file-name {
+        padding:  2px 5px;
+        background: white;
+        &.placeholder {
+            font-style: italic;
+            color: whiten($textColor, .8);
+        }
+        @include simple-border();
+        &.active {
+            font-style: normal;
+            color: $textColor;
+        }
+    }
+    input[type="file"] {
+        font-size: 80px !important;
+        position: absolute;
+        left: auto;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    &:hover {
+        .btn-info {
+            opacity: .85;
+        }
+    }
+}
+
+.file-drop {
+    height: 150px;
+    overflow-y: auto;
+    border: solid 1px $uiGeneralContentBorder;
+    position: relative; 
+    .dragholder{ 
+        padding-top: 20px;
+        text-align: center;
+        color: $uiGeneralContentBorder;
+        @include font-size(20);
+    }
+    &.drag-hover {
+        border-color: $uiClickableHoverBg;
+        color: $uiClickableHoverBg;
+        &:after {
+            content: attr(data-drop-msg);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 75%;
+            height: 30px;
+            padding: 5px;
+            background-color: $info;
+            color: white();
+            text-align: center;
+            margin: auto;
+        }
+    }
+    ul {
+        list-style-type: none;
+        position: relative;
+        margin: 0;
+        padding: 0; 
+        & > li{
+            position: relative;
+            padding: 6px 60px 6px 6px;
+            @include simple-border;
+            @extend .truncate;
+            &:before {
+               @include tao-icon-setup; 
+               @include tao-icon-setup-document; 
+               @include font-size(14);
+               line-height: 14px;
+               margin-right: 5px;
+               color: $info;
+            }
+            .size {
+                color: $info;
+                margin-left: 5px;
+                font-style: italic; 
+            }
+            .status {
+               position: absolute; 
+               right: 30px;
+               top: 6px;
+               &.sending:before {
+                   @include tao-icon-setup; 
+                   @include icon-download;
+                   @include fade(2s);
+                   @include repeat;
+               }
+               &.success:before{
+                   @include tao-icon-setup; 
+                   @include icon-success;
+                   color: $success;
+               }
+               &.error:before{
+                   @include tao-icon-setup; 
+                   @include icon-error;
+                   color: $error;
+               }
+            }
+            .icon-close {
+               position: absolute; 
+               right: 6px;
+               top: 6px;
+             } 
+        }
+    }
+}
+
+
+.pseudo-label-box {
+    position: relative;
+    cursor: pointer; 
+    & > label {
+        width: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        & + div {
+            cursor: pointer;
+            margin-left: 24px;
+        }
+    }
+    abbr {
+        border: none;
+        color: $info;
+    }
+}
+
+ol, ul {
+    &.horizontal {
+        .pseudo-label-box {
+            & > label {
+                & + div {
+                    display: table;
+                }
+            }
+        }
+    }
+}
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="text"],
+input[type="password"],
+input[type="url"],
+input[type="week"],
+textarea,
+select {
+    @include simple-border();
+    @include border-radius(2);
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 4px;
+    min-width: 150px;
+    background-color: white;
+    color: $textColor;
+    max-width: 300px;
+
+    &.disabled, &[disabled] {
+        cursor: not-allowed !important;
+    }
+    &.disabled, &[disabled], &[readonly] {
+        color: $textColor;
+        opacity: .55 !important;
+    }
+   
+
+    & ~ .validate-error {
+        color: $error;
+    }
+    &.error {
+        border-color: $error;
+    }
+}
+
+option {
+    background: white;
+    color: $textColor;
+}
+
+label {
+    position: relative;
+    [class^="icon-radio"],
+    [class*=" icon-radio"] {
+        padding: 0 2px 0 3px;
+    }
+    .icon-checkbox,
+    .icon-checkbox-crossed {
+        padding: 0 3px 0 3px;
+    }
+    .icon-checkbox-checked {
+        padding: 0 0 0 3px;
+    }
+    [class^="icon-"],
+    [class*=" icon-"] {
+        @include font-size(16);
+        position: relative;
+        top: 2px;
+        color: #555;
+        display: inline-block;
+        width: 20px;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+        position: absolute;
+        left: -10000px;
+        top: 0;
+        &:focus ~ [class^="icon-"],
+        &:focus ~ [class*=" icon-"],
+        &:active ~ [class^="icon-"],
+        &:active ~ [class*=" icon-"] {
+            color: #222;
+        }
+        &:checked ~ .icon-checkbox:before {
+            @extend .icon-checkbox-checked:before;
+        }
+        &:checked ~ .icon-radio:before {
+            @extend .icon-radio-checked:before;
+        }
+        &:checked ~ .icon-checkbox.cross:before {
+            @extend .icon-checkbox-crossed:before;
+        }
+        &.disabled, &[disabled], &[readonly] {
+            & ~[class^="icon-"], 
+            & ~[class*=" icon-"]{
+                cursor: not-allowed !important;
+                opacity: .4 !important;
+                color: #555;
+            }
+        }
+    }
+}
+
+.search-form, .filter-form {
+    display:none;
+
+    @include font-size(13);
+    .search-area {
+        margin: 8px 8px 0 8px;
+        border-bottom: 1px solid $uiGeneralContentBorder;
+        padding-bottom: 8px;
+    }
+    .xhtml_form {
+
+        .form_desc {
+            display:block;
+            width: auto;
+            margin-top: 5px;
+            margin-bottom: 1px;
+        }
+        .form-toolbar {
+            margin: 0 !important;
+        }
+        input {
+            &[type="text"], &[type="password"] {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        select, textarea, .form_radlst {
+            width: 100%;
+            max-width: none;
+        }
+
+        .form-group {
+            margin-bottom: 0;
+            & > div > div {
+                margin-bottom: 10px;
+            }
+        }
+        label {
+            margin: 0;
+        }
+
+        .form_radlst {
+            padding-left: 2px
+        }
+    }
+
+    .ui-widget-header, .search-title {
+        @include font-size(16);
+        border: none;
+        margin: 8px 0;
+    }
+
+    & > div {
+        background: transparent;
+    }
+}
+
+.xhtml_form {
+    form {
+        > div {
+            margin-bottom: 10px;
+
+            &.property-container {
+                margin-top: 20px;
+                border-top: 1px solid $uiGeneralContentBorder;
+                padding-top: 20px;
+                .tree {
+                    ul {
+                        background: transparent !important;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+    // these buttons are originally green which turned out to be avery poor choice
+    [class^="btn-"], [class*=" btn-"],
+    button, input[type="submit"], input[type="reset"] {
+        &.btn-success {
+            background-color: whiten($info, .1);
+            text-shadow: 1px 1px 0 blacken($info, .2);
+        }
+    }
+
+    .form-toolbar {
+        text-align: right;
+        margin: 30px 0 0 0;
+        @extend %clearfix;
+    }
+
+    .property-title {
+        margin-bottom: 10px;
+    }
+
+    .property-heading-icon {
+        margin-left: 5px;
+        &:hover {
+            color: $info;
+        }
+    }
+
+    .property-heading-label {
+        padding-left: 5px;
+        &:before {
+            font-size: 12px;
+            content: '• ';
+            line-height: 2px;
+            opacity: .8;
+        }
+    }
+
+    .property-edit-container {
+        display:none;
+        width: 100%;
+    }
+
+
+    .property-heading-toolbar {
+        float: right;
+        .property-parent-label {
+            display:inline-block;
+            padding: 0 5px;
+        }
+        [class^="icon-"], [class*=" icon-"] {
+            background: white(.5);
+            @include simple-border();
+            margin-left: 1px;
+            padding: 3px;
+            cursor: pointer;
+            min-width: 24px;
+            display: inline-block;
+            text-align: center;
+            &:hover {
+                background: white(.7);
+                color: $info;
+            }
+        }
+    }
+
+    .property-block {
+        overflow: hidden;
+        padding: 6px 0;
+        border-bottom: 1px white solid;
+        &.property-block-first {
+            border-top: 1px white solid;
+        }
+        &.readonly-property div {
+            display: inline;
+            div {
+                float: right;
+                padding-left: 5px;
+                color: whiten($textColor, .4);
+                cursor: default;
+            }
+        }
+        &.parent-property div {
+            display: inline;
+            div {
+                float: right;
+                padding-left: 5px;
+                color: whiten($textColor, .2);
+            }
+        }
+        &.regular-property {
+            & > div {
+                @include simple-border();
+                padding: 15px;
+                background: white(.5);
+                margin: 5px 0;
+                position: relative;
+                top: 6px;
+                div {
+                    padding: 2px 0
+                }
+            }
+
+            &.property-edit-container-open {
+                padding-top: 10px;
+            }
+        }
+    }
+
+    .form_desc {
+        width: 35%;
+        display:inline-block;
+        padding: 0 10px 0 0;
+
+    }
+    input {
+        &[type="text"], &[type="password"] {
+            width: 65%;
+            max-width: none;
+        }
+    }
+    select, textarea, .form_radlst {
+        width: 65%;
+        max-width: none;
+    }
+
+    .form_radlst {
+        display:inline-block;
+    }
+
+
+    .btn-info {
+        float:left;
+    }
+
+    .btn-success {
+        float: right;
+    }
+
+
+}
+
+
+input {
+    &[type="checkbox"], &[type="radio"] {
+        position: relative;
+        top: 1px;
+        margin-right: 3px;
+    }
+}
+

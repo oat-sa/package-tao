@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+	xml:base="http://www.tao.lu/Ontologies/TAOTest.rdf#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xmlns:wf="http://www.tao.lu/middleware/wfEngine.rdf#"
+>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamQtiTestParentServiceCallId">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassFormalParameters"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[QTI Test Parent Service Call ID]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[QTI Test Parent Service Call ID]]></rdfs:comment>
+    <wf:PropertyFormalParametersName><![CDATA[QtiTestParentServiceCallId]]></wf:PropertyFormalParametersName>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#ServiceQtiTestItemRunner">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassDeliveryServices"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[QTI Test Item Runner]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Embed and run an item into a QTI Test. This service initialize the TAO Apis and contexts]]></rdfs:comment>
+    <wf:PropertySupportServicesUrl><![CDATA[/taoQtiTest/ItemRunner/index?itemPath=^itemPath&itemDataPath=^itemDataPath&QtiTestParentServiceCallId=^QtiTestParentServiceCallId&QtiTestDefinition=^QtiTestDefinition&QtiTestCompilation=^QtiTestCompilation]]></wf:PropertySupportServicesUrl>
+    <wf:PropertyServiceDefinitionsFormalParameterIn rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamItemPath"/>
+    <wf:PropertyServiceDefinitionsFormalParameterIn rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamItemDataPath"/>
+    <wf:PropertyServiceDefinitionsFormalParameterIn rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamItemUri"/>
+    <wf:PropertyServiceDefinitionsFormalParameterIn rdf:resource="http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamQtiTestParentServiceCallId"/>
+    <wf:PropertyServiceDefinitionsFormalParameterIn rdf:resource="http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamQtiTestDefinition"/>
+    <wf:PropertyServiceDefinitionsFormalParameterIn rdf:resource="http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamQtiTestCompilation"/>
+  </rdf:Description>
+</rdf:RDF>

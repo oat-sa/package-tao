@@ -1,0 +1,235 @@
+{
+    "identifier": "periods-of-history",
+    "serial": "item_547481ffc7445711059654",
+    "qtiClass": "assessmentItem",
+    "attributes": {
+        "identifier": "periods-of-history",
+        "title": "Periods of History",
+        "label": "",
+        "xml:lang": "en-US",
+        "adaptive": false,
+        "timeDependent": false,
+        "toolName": "TAO",
+        "toolVersion": "3.0"
+    },
+    "body": {
+        "serial": "container_containeritembody_547481ffc7431683168069",
+        "body": "<div><p id=\"stimulus\">The history of mankind is an unfailing source of\ninspiration for every human being. But before knowing in-depth the\nhistory of the world, you should know its major periods.</p>{{interaction_orderinteraction_547481ffc8c1b803673841}}\n  </div>",
+        "elements": {
+            "interaction_orderinteraction_547481ffc8c1b803673841": {
+                "serial": "interaction_orderinteraction_547481ffc8c1b803673841",
+                "qtiClass": "orderInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE",
+                    "shuffle": false,
+                    "id": "interaction"
+                },
+                "choices": {
+                    "choice_simplechoice_547481ffc8ede696148422": {
+                        "identifier": "Prehistory",
+                        "serial": "choice_simplechoice_547481ffc8ede696148422",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "Prehistory",
+                            "fixed": false,
+                            "id": "Prehistory"
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_547481ffc8f61600710070",
+                            "body": "Prehistory",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_547481ffc7445711059654"
+                            }
+                        }
+                    },
+                    "choice_simplechoice_547481ffc8fdf820005158": {
+                        "identifier": "Antiquity",
+                        "serial": "choice_simplechoice_547481ffc8fdf820005158",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "Antiquity",
+                            "fixed": false,
+                            "id": "Antiquity"
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_547481ffc9000308440815",
+                            "body": "Antiquity",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_547481ffc7445711059654"
+                            }
+                        }
+                    },
+                    "choice_simplechoice_547481ffc9069153919004": {
+                        "identifier": "MiddleAges",
+                        "serial": "choice_simplechoice_547481ffc9069153919004",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "MiddleAges",
+                            "fixed": false,
+                            "id": "MiddleAges"
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_547481ffc9088868830591",
+                            "body": "Middle Ages",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_547481ffc7445711059654"
+                            }
+                        }
+                    },
+                    "choice_simplechoice_547481ffc90ee936344449": {
+                        "identifier": "ModernEra",
+                        "serial": "choice_simplechoice_547481ffc90ee936344449",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "ModernEra",
+                            "fixed": false,
+                            "id": "ModernEra"
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_547481ffc910c364964850",
+                            "body": "Modern Era",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_547481ffc7445711059654"
+                            }
+                        }
+                    },
+                    "choice_simplechoice_547481ffc916f507312761": {
+                        "identifier": "ContemporaryEra",
+                        "serial": "choice_simplechoice_547481ffc916f507312761",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "ContemporaryEra",
+                            "fixed": false,
+                            "id": "ContemporaryEra"
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_547481ffc918d027900688",
+                            "body": "Contemporary Era",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_547481ffc7445711059654"
+                            }
+                        }
+                    }
+                },
+                "prompt": {
+                    "serial": "container_containerstatic_547481ffc8df6161124029",
+                    "body": "Use your mouse to drag and drop periods of history in the correct\norder, from the top to the bottom of the screen. When your answer\nis correctly set, click the <i>Validate</i> button.",
+                    "elements": [],
+                    "debug": {
+                        "relatedItem": "item_547481ffc7445711059654"
+                    }
+                }
+            }
+        },
+        "debug": {
+            "relatedItem": "item_547481ffc7445711059654"
+        }
+    },
+    "namespaces": {
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "": "http://www.imsglobal.org/xsd/imsqti_v2p1"
+    },
+    "stylesheets": {
+         },
+    "outcomes": {
+        "outcomedeclaration_547481ffc89d5513551552": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_547481ffc89d5513551552",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "integer"
+            },
+            "defaultValue": null
+        }
+    },
+    "responses": {
+        "responsedeclaration_547481ffc88ce269348905": {
+            "identifier": "RESPONSE",
+            "serial": "responsedeclaration_547481ffc88ce269348905",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE",
+                "cardinality": "ordered",
+                "baseType": "identifier"
+            },
+            "correctResponses": [
+                "Prehistory",
+                "Antiquity",
+                "MiddleAges",
+                "ModernEra",
+                "ContemporaryEra"
+            ],
+            "mapping": [],
+            "areaMapping": [],
+            "howMatch": "http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct",
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": []
+        }
+    },
+    "feedbacks": [],
+    "responseProcessing": {
+        "serial": "response_templatesdriven_547481ffc9336026044001",
+        "qtiClass": "responseProcessing",
+        "attributes": [],
+        "processingType": "templateDriven",
+        "responseRules": [{
+            "qtiClass": "responseCondition",
+            "responseIf": {
+                "qtiClass": "responseIf",
+                "expression": {
+                    "qtiClass": "match",
+                    "expressions": [{
+                        "qtiClass": "variable",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }, {
+                        "qtiClass": "correct",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }]
+                },
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "baseValue",
+                        "attributes": {
+                            "baseType": "float"
+                        },
+                        "value": "1"
+                    }
+                }]
+            },
+            "responseElse": {
+                "qtiClass": "responseElse",
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "baseValue",
+                        "attributes": {
+                            "baseType": "float"
+                        },
+                        "value": "0"
+                    }
+                }]
+            }
+        }]
+    }
+}

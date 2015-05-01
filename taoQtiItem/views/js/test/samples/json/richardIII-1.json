@@ -1,0 +1,161 @@
+{
+    "identifier": "inlineChoice",
+    "serial": "item_547464dbc71ca216551726",
+    "qtiClass": "assessmentItem",
+    "attributes": {
+        "identifier": "inlineChoice",
+        "title": "Richard III (Take 2)",
+        "label": "",
+        "adaptive": false,
+        "timeDependent": false,
+        "toolName": "TAO",
+        "toolVersion": "3.0"
+    },
+    "body": {
+        "serial": "container_containeritembody_547464dbc71b2977728057",
+        "body": "<p>Identify the missing word in this famous quote from Shakespeare's Richard III.</p>\n    <blockquote>\n      <p>Now is the winter of our discontent<br/> Made glorious summer by this sun of\n\t\t\t\t\t{{interaction_inlinechoiceinteraction_547464dbc7afc574464937}};<br/> And all the clouds that lour'd upon our house<br/>\n\t\t\t\tIn the deep bosom of the ocean buried.</p>\n    </blockquote>",
+        "elements": {
+            "interaction_inlinechoiceinteraction_547464dbc7afc574464937": {
+                "serial": "interaction_inlinechoiceinteraction_547464dbc7afc574464937",
+                "qtiClass": "inlineChoiceInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE",
+                    "shuffle": false,
+                    "required": false
+                },
+                "choices": {
+                    "choice_inlinechoice_547464dbc7c3c465126979": {
+                        "identifier": "G",
+                        "serial": "choice_inlinechoice_547464dbc7c3c465126979",
+                        "qtiClass": "inlineChoice",
+                        "attributes": {
+                            "identifier": "G",
+                            "fixed": false
+                        },
+                        "text": "Gloucester"
+                    },
+                    "choice_inlinechoice_547464dbc7ce2756509667": {
+                        "identifier": "L",
+                        "serial": "choice_inlinechoice_547464dbc7ce2756509667",
+                        "qtiClass": "inlineChoice",
+                        "attributes": {
+                            "identifier": "L",
+                            "fixed": false
+                        },
+                        "text": "Lancaster"
+                    },
+                    "choice_inlinechoice_547464dbc7d18579789437": {
+                        "identifier": "Y",
+                        "serial": "choice_inlinechoice_547464dbc7d18579789437",
+                        "qtiClass": "inlineChoice",
+                        "attributes": {
+                            "identifier": "Y",
+                            "fixed": false
+                        },
+                        "text": "York"
+                    }
+                }
+            }
+        },
+        "debug": {
+            "relatedItem": "item_547464dbc71ca216551726"
+        }
+    },
+    "namespaces": {
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "": "http://www.imsglobal.org/xsd/imsqti_v2p1"
+    },
+    "stylesheets": [],
+    "outcomes": {
+        "outcomedeclaration_547464dbc7894288258313": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_547464dbc7894288258313",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "defaultValue": null
+        }
+    },
+    "responses": {
+        "responsedeclaration_547464dbc747b652530353": {
+            "identifier": "RESPONSE",
+            "serial": "responsedeclaration_547464dbc747b652530353",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE",
+                "cardinality": "single",
+                "baseType": "identifier"
+            },
+            "correctResponses": [
+                "Y"
+            ],
+            "mapping": [],
+            "areaMapping": [],
+            "howMatch": "http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct",
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": []
+        }
+    },
+    "feedbacks": [],
+    "responseProcessing": {
+        "serial": "response_templatesdriven_547464dbc7ed2120730680",
+        "qtiClass": "responseProcessing",
+        "attributes": [],
+        "processingType": "templateDriven",
+        "responseRules": [{
+            "qtiClass": "responseCondition",
+            "responseIf": {
+                "qtiClass": "responseIf",
+                "expression": {
+                    "qtiClass": "match",
+                    "expressions": [{
+                        "qtiClass": "variable",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }, {
+                        "qtiClass": "correct",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }]
+                },
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "baseValue",
+                        "attributes": {
+                            "baseType": "float"
+                        },
+                        "value": "1"
+                    }
+                }]
+            },
+            "responseElse": {
+                "qtiClass": "responseElse",
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "baseValue",
+                        "attributes": {
+                            "baseType": "float"
+                        },
+                        "value": "0"
+                    }
+                }]
+            }
+        }]
+    }
+}

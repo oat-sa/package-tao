@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+	xml:base="LOCAL_NAMESPACE##"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#">
+	
+	<rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#installator">
+		<rdf:type rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#User"/>
+    	<generis:userRoles rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#GlobalManagerRole"/>
+    	<rdfs:label xml:lang="en-US"><![CDATA[Generis]]></rdfs:label>
+    	<rdfs:comment xml:lang="en-US"><![CDATA[User created for system tasks and anonymous connection]]></rdfs:comment>
+    	<generis:login><![CDATA[{SYS_USER_LOGIN}]]></generis:login>
+    	<generis:userDefLg rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#Langen-US"/>
+		<generis:userUILg rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#Langen-US"/>
+  	</rdf:Description>
+</rdf:RDF>

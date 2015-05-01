@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.tao.lu/tao.rdfs#" xmlns:rdfs="http://www.w3.org/TR/1999/PR-rdf-schema-19990303#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:tao="http://www.tao.lu/tao.rdfs#">
+  <xs:import schemaLocation="qcm.xsd"/>
+  <xs:import namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" schemaLocation="rdf.xsd"/>
+  <xs:import namespace="http://www.w3.org/TR/1999/PR-rdf-schema-19990303#" schemaLocation="rdfs.xsd"/>
+  <xs:element name="ITEM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="rdfs:LABEL"/>
+        <xs:element ref="rdfs:COMMENT"/>
+        <xs:element ref="tao:DISPLAYALLINQUIRIES"/>
+        <xs:element ref="tao:DURATION"/>
+        <xs:element ref="tao:ITEMPRESENTATION"/>
+        <xs:element ref="tao:ITEMLISTENERS"/>
+        <xs:element ref="tao:PROBLEM"/>
+        <xs:element maxOccurs="unbounded" ref="tao:INQUIRY"/>
+      </xs:sequence>
+      <xs:attribute ref="rdf:ID" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DISPLAYALLINQUIRIES">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="DURATION">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="ITEMPRESENTATION" type="xul"/>
+  <xs:element name="ITEMLISTENERS">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="PROBLEM">
+    <xs:complexType mixed="true">
+      <xs:attribute name="lang" use="required" type="xs:NCName"/>
+      <xs:attribute name="type" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INQUIRY">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tao:QUESTION"/>
+        <xs:element ref="tao:INQUIRYDESCRIPTION"/>
+      </xs:sequence>
+      <xs:attribute name="order" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QUESTION">
+    <xs:complexType mixed="true">
+      <xs:attribute name="lang" use="required" type="xs:NCName"/>
+      <xs:attribute name="type" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INQUIRYDESCRIPTION">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tao:PROPOSITIONTYPE"/>
+        <xs:element ref="tao:WIDGET"/>
+        <xs:element ref="tao:PROPLISTENERS"/>
+        <xs:element ref="tao:ANSWERTYPE"/>
+        <xs:element ref="tao:EVALUATIONRULE"/>
+        <xs:element ref="tao:HASGUIDE"/>
+        <xs:element ref="tao:HASPRESENTATIONLAYER"/>
+        <xs:element ref="tao:LISTPROPOSITION"/>
+        <xs:element ref="tao:HASANSWER"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PROPOSITIONTYPE" type="xs:string"/>
+  <xs:element name="WIDGET" type="xs:string"/>
+  <xs:element name="PROPLISTENERS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tao:ITEMBEHAVIOR"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ITEMBEHAVIOR">
+    <xs:complexType>
+      <xs:attribute name="src" use="required"/>
+      <xs:attribute name="LISTENERNAME" use="required" form="qualified"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ANSWERTYPE" type="xs:string"/>
+  <xs:element name="EVALUATIONRULE" type="xs:NCName"/>
+  <xs:element name="HASGUIDE" type="xs:NCName"/>
+  <xs:element name="HASPRESENTATIONLAYER" type="xul"/>
+  <xs:element name="LISTPROPOSITION">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="tao:PROPOSITION"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PROPOSITION">
+    <xs:complexType mixed="true">
+      <xs:attribute name="Id" use="required" type="xs:integer"/>
+      <xs:attribute name="answer" use="required" type="xs:integer"/>
+      <xs:attribute name="lang" use="required" type="xs:NCName"/>
+      <xs:attribute name="order" use="required" type="xs:integer"/>
+      <xs:attribute name="type" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HASANSWER" type="xs:integer"/>
+</xs:schema>

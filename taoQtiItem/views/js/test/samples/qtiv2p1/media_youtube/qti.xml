@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i14073357147621368" title="example_1_TAO" label="" xml:lang="en-US" adaptive="false" timeDependent="false" toolName="TAO" toolVersion="3.0">
+  <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="integer"/>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <itemBody>
+    <div class="grid-row">
+      <div class="col-7">
+        <mediaInteraction responseIdentifier="RESPONSE" autostart="false" minPlays="0" maxPlays="0" loop="false">
+          <object data="http://youtu.be/YJWSVUPSQqw" type="video/youtube" width="356" height="270"/>
+        </mediaInteraction>
+      </div>
+      <div class="col-5">
+        <p>
+          <img src="tao_logo_big.png" alt="tao_logo_big" width="208" height="132"/>
+        </p>
+        <p><strong>B</strong>e free</p>
+        <p><strong>B</strong>e creative</p>
+        <p>TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online – in any language or subject matter.</p>
+      </div>
+    </div>
+  </itemBody>
+  <responseProcessing></responseProcessing>
+</assessmentItem>

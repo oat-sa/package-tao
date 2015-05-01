@@ -1,0 +1,45 @@
+@import "inc/bootstrap";
+
+.pci-manager-trigger{
+    &:before{
+        margin-right: 5px;
+        @include font-size(10.5);
+        @include tao-icon-setup;
+        @include icon-tools;
+    }
+}
+
+.pcimgr{
+    .file-selector{
+        display:block;
+        min-height:400px;
+        .title-container{
+            margin-right:75px;
+            .title{
+                margin-right:0;
+            }
+        }
+        .note{
+            color : $info;
+            font-weight:bold;
+            margin:0 3px;
+        }
+        .note-container{
+            position: absolute;
+            bottom : -10px;
+        }
+    }
+}
+
+.uploader{
+    .upload-separator{
+        margin:0 2px;
+        color: #333;
+    }
+    .upload-label{
+        font-weight : bold;
+    }
+    .upload-identifier{
+        color: #333;
+    }
+}

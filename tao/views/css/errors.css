@@ -1,0 +1,110 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+body{
+	background-color: #eee;
+	font-family: Verdana, Arial, sans-serif;
+	color: #3A3A3A;
+}
+
+h1{
+	font-size: 28px;
+	margin-bottom: 35px;
+	font-weight: bold;
+	color: #666666; 
+}
+
+#main{
+	background-color: white;
+	width: 740px;
+	padding: 40px;
+	background-repeat: no-repeat;
+	margin: 100px auto;
+}
+
+#content{
+	width:400px;
+}
+
+#warning_msg{
+	font-size:18px;
+	font-weight:normal;
+	line-height:22px;
+	position:relative;
+	margin-bottom: 10px;
+}
+
+#warning_msg strong{
+	font-weight: bold;	
+}
+
+#warning_msg p{
+    margin-bottom: 10px;
+}
+.embedWarning{
+	float:left;
+	position:relative;
+	margin:5px 7px 0 0;
+}
+
+#redirect{
+	margin-top: 35px;
+	text-align: center;
+}
+
+.error_button{
+    color: #BA122B !important;
+}
+
+#sgo_to_tao_bt{
+	padding:2px 8px;
+	text-decoration: none;
+	background:#009933;
+	font-size:12px;
+	text-align: center;
+	line-height:25px;
+	font-weight:bold;
+	color:white;
+	padding: 7px;
+}
+
+#go_to_tao_bt:hover{
+	cursor: pointer;
+}
+
+#go_to_tao_bt:active{
+	position: relative;
+	left:1px;
+	top:1px;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 15px;
+}
+
+li:before {
+    content: "• ";
+    color: #BA122B;
+    margin-right: 5px;
+}
+
+li {
+    margin-top: 5px;
+}

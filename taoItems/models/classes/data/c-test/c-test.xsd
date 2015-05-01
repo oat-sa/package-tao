@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.tao.lu/tao.rdfs" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:tao="http://www.tao.lu/tao.rdfs" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <xs:import namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" schemaLocation="rdf.xsd"/>
+  <xs:import namespace="http://www.w3.org/2000/01/rdf-schema#" schemaLocation="rdfs.xsd"/>
+  <xs:element name="ITEM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="rdfs:LABEL"/>
+        <xs:element ref="rdfs:COMMENT"/>
+        <xs:element name="CTInfos" form="unqualified">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Text" form="unqualified" type="xs:string"/>
+              <xs:element name="Timer" form="unqualified" type="xs:integer"/>
+              <xs:element name="Words" form="unqualified">
+                <xs:complexType/>
+              </xs:element>
+              <xs:element name="Ports" form="unqualified">
+                <xs:complexType/>
+              </xs:element>
+              <xs:element name="Coords" form="unqualified">
+                <xs:complexType/>
+              </xs:element>
+              <xs:element name="Undo" form="unqualified">
+                <xs:complexType/>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute ref="rdf:ID" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,1161 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.0.0\n"
+"PO-Revision-Date: 2015-04-30T09:08:06\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: zh-TW\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: zh-TW\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ../../\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#, tao-public
+msgid "\n"
+"            Create items, manage item and test banks, organize cohorts and deliveries, prepare reports, set up workflows."
+msgstr "\n"
+"建立題目，管理題目，管理題庫，組織班級，遞送考試，預備報告，和設定工作流程。"
+
+msgid " and "
+msgstr " 和 "
+
+msgid " has been deleted successfully"
+msgstr " 已成功刪除"
+
+msgid " has been installed"
+msgstr " 已安裝"
+
+msgid " next"
+msgstr " 下一個"
+
+msgid " requires a subgrid adapter"
+msgstr " 需要一個subgrid adapter"
+
+msgid "\"list saved\""
+msgstr "\"列表已儲存\""
+
+msgid "%d day"
+msgstr "%d天"
+
+msgid "%d days"
+msgstr "%d天"
+
+msgid "%h hour"
+msgstr "%h小時"
+
+msgid "%h hours"
+msgstr "%h小時"
+
+msgid "%i minute"
+msgstr "%i分鐘"
+
+msgid "%i minutes"
+msgstr "%i 分鐘"
+
+msgid "%m month"
+msgstr "%m 月"
+
+msgid "%m months"
+msgstr "%m 個月"
+
+msgid "%s (%s kb)"
+msgstr "%s (%s kb)"
+
+msgid "%s extension(s) to install."
+msgstr "%s 擴充程式需要安裝。"
+
+msgid "%s Locked', get_data('topclass-label"
+msgstr "%s Locked', get_data('topclass-label"
+
+msgid "%y year"
+msgstr "%y 年"
+
+msgid "%y years"
+msgstr "%y 年"
+
+msgid "(empty)"
+msgstr "(空白)"
+
+msgid "... reloading page."
+msgstr "。。。正在刷新頁面中。"
+
+msgid "<del>Filters</del>"
+msgstr "<del>過濾器</del>"
+
+msgid "<del>Options</del>"
+msgstr "<del>選項</del>"
+
+msgid "> Extension %s succesfully installed."
+msgstr "> 擴充程式 %s 已安裝成功。"
+
+msgid "> Installation done."
+msgstr "> 安裝已完成。"
+
+msgid "A fatal error occured during the installation process."
+msgstr "安裝下列項目時發生錯誤。"
+
+msgid "A similar resource has already been versioned"
+msgstr "類似的資源已經有版本"
+
+msgid "Access Denied"
+msgstr "存取遭拒"
+
+msgid "Access denied. Please renew your authentication!"
+msgstr "存取遭拒。請更新您的身份驗證!"
+
+msgid "Actions"
+msgstr "動作"
+
+msgid "Add"
+msgstr "新增"
+
+msgid "Add / Edit lists"
+msgstr "新增 / 編輯清單"
+
+msgid "Add a CSV file"
+msgstr "新增CSV檔案"
+
+#, tao-public
+msgid "Add a user"
+msgstr "新增使用者"
+
+msgid "Add an RDF/XML file"
+msgstr "新增 RDF/XML 檔案"
+
+msgid "Add file(s)"
+msgstr "新增檔案"
+
+msgid "Add property"
+msgstr ""
+
+msgid "Advanced Mode"
+msgstr "進階模式"
+
+msgid "all"
+msgstr "完全"
+
+msgid "All fields are required"
+msgstr "所有都是必填欄位"
+
+msgid "All rights reserved."
+msgstr "保留所有權利。"
+
+msgid "Allows the management of the repositories"
+msgstr "允許軟體庫管理"
+
+msgid "Alpha version"
+msgstr "Alpha版本"
+
+msgid "An error occured during user deletion"
+msgstr "刪除用戶時發生錯誤"
+
+msgid "Are you sure to delete the versioned resource?\n"
+"The history will be lost as well."
+msgstr "您確定要刪除該版本的資源?\n"
+"過去的紀錄將一併流失。"
+
+msgid "Are you sure you want to delete it?"
+msgstr "您確認要刪除吗？"
+
+msgid "Assign User to role"
+msgstr "分配用戶角色"
+
+#, tao-public
+msgid "Assign Users"
+msgstr ""
+
+msgid "Author"
+msgstr "作者"
+
+msgid "Author Item"
+msgstr "創作題目"
+
+msgid "Authoring"
+msgstr "創作"
+
+msgid "Available Extensions"
+msgstr "可用的擴充程式"
+
+msgid "Back to listing"
+msgstr "回到列表"
+
+msgid "Beta version"
+msgstr "Beta 版本"
+
+msgid "Browse"
+msgstr "瀏覽"
+
+msgid "Browse folders:"
+msgstr "瀏覽資料夾："
+
+msgid "Browse..."
+msgstr "瀏覽..."
+
+msgid "Calendar"
+msgstr "日曆"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Cannot be edited"
+msgstr "無法編輯"
+
+#, tao-public
+msgid "Change password"
+msgstr "更改密碼"
+
+msgid "Change the password"
+msgstr "更改密碼"
+
+msgid "Check All"
+msgstr "全部勾選"
+
+msgid "Check all"
+msgstr "全部勾選"
+
+msgid "Choose export format"
+msgstr "選擇匯出格式"
+
+msgid "Choose import format"
+msgstr "選擇匯入格式"
+
+msgid "class selected"
+msgstr "班級已選擇"
+
+msgid "Close tab"
+msgstr "關閉分頁"
+
+msgid "Collapse Message"
+msgstr "關閉訊息"
+
+msgid "Column"
+msgstr "欄"
+
+msgid "Commit message : "
+msgstr "提交訊息："
+
+msgid "Confirm"
+msgstr "確認"
+
+msgid "Connect to the TAO platform"
+msgstr "連結到 TAO 平台"
+
+msgid "Continue"
+msgstr "繼續"
+
+msgid "Create"
+msgstr "建立"
+
+msgid "Create a list"
+msgstr "建立一個清單"
+
+msgid "Create instance of "
+msgstr "建立實例"
+
+msgid "CSV"
+msgstr "CSV (以逗號分隔)"
+
+msgid "CSV Options"
+msgstr "CSV 選項"
+
+msgid "Current language"
+msgstr "目前的語言"
+
+msgid "Data imported"
+msgstr "已匯入的資料"
+
+msgid "Data imported successfully"
+msgstr "資料已成功匯入"
+
+msgid "Data Lang."
+msgstr "資料語言"
+
+msgid "Data Language"
+msgstr "資料語言"
+
+msgid "Data language"
+msgstr "資料語言"
+
+msgid "Date"
+msgstr "日期"
+
+msgid "Default user cannot be deleted"
+msgstr "無法刪除預設用戶"
+
+msgid "Define the default values"
+msgstr "設定預設值"
+
+#, tao-public
+msgid "Delete"
+msgstr "刪除"
+
+msgid "Delete this list"
+msgstr "刪除這個列表"
+
+msgid "Demo Sandbox"
+msgstr "演示用沙盤"
+
+msgid "Disabled %s', $this->getRequestParameter('id"
+msgstr "停止 %s', $this->getRequestParameter('id"
+
+msgid "Do you wish to install the following extension(s):\n"
+"%s?"
+msgstr "您希望安裝以下的擴充程式嗎:\n"
+"%s?"
+
+msgid "does not match"
+msgstr "不相符"
+
+msgid "Don't set"
+msgstr "不設定"
+
+msgid "Download"
+msgstr "下載"
+
+msgid "Download content"
+msgstr "下載內容"
+
+msgid "Download this file"
+msgstr "下載這個檔案"
+
+msgid "Drag file here"
+msgstr "把檔案拖到這裏"
+
+msgid "Drag files here"
+msgstr "把檔案拖到這裏"
+
+msgid "Drop the files to upload"
+msgstr "把要上傳的檔案拖到這裏"
+
+msgid "e-mail"
+msgstr "電子郵件地址"
+
+msgid "Edit"
+msgstr "編輯"
+
+#, tao-public
+msgid "Edit a user"
+msgstr "編輯使用者"
+
+msgid "Edit Instance"
+msgstr "編輯實例"
+
+msgid "Edit this list"
+msgstr "編輯這個清單"
+
+msgid "Element"
+msgstr "元素"
+
+msgid "element"
+msgstr "元素"
+
+msgid "Element deleted"
+msgstr "元素已刪除"
+
+msgid "Element deleted."
+msgstr "元素已被刪除。"
+
+msgid "Element not deleted"
+msgstr "元素沒刪除"
+
+msgid "Email"
+msgstr "電子郵件"
+
+msgid "Enter"
+msgstr "輸入"
+
+msgid "Entity with such field already present"
+msgstr "此欄位已經存在"
+
+msgid "Error"
+msgstr "錯誤"
+
+msgid "Error during file import"
+msgstr "匯入檔案時發生錯誤"
+
+msgid "Exclusive (OR)"
+msgstr "排除其他 (或)"
+
+#, tao-public
+msgid "Export"
+msgstr "匯出"
+
+msgid "Export "
+msgstr "匯出"
+
+msgid "Export Metadata as RDF/XML file"
+msgstr "用RDF/XML檔案格式將元數據導出"
+
+msgid "Extension "
+msgstr "擴展程序"
+
+#, tao-public
+msgid "Extensions manager"
+msgstr "擴展程序管理器"
+
+msgid "Field delimiter"
+msgstr "欄位分隔符"
+
+msgid "Field encloser"
+msgstr "欄位罩殼"
+
+msgid "File"
+msgstr "檔案"
+
+msgid "File name"
+msgstr "檔案名稱"
+
+msgid "File path"
+msgstr "檔案路徑"
+
+msgid "File Properties"
+msgstr "檔案屬性"
+
+msgid "File repository"
+msgstr "檔案套件庫"
+
+msgid "File revision"
+msgstr "檔案版本"
+
+msgid "file selected"
+msgstr "已選檔案"
+
+#, tao-public
+msgid "File sources"
+msgstr "檔案來源"
+
+msgid "File Uploader"
+msgstr "檔案上傳器"
+
+msgid "files selected"
+msgstr "已選檔案"
+
+#, tao-public
+msgid "Filter"
+msgstr "過濾條件"
+
+msgid "Filter results"
+msgstr "過濾結果"
+
+msgid "Filtering mode"
+msgstr "過濾模式"
+
+msgid "First Name"
+msgstr "名字（前名）"
+
+msgid "First row column names"
+msgstr "第一列欄位名稱"
+
+msgid "Force Release"
+msgstr "強制釋放"
+
+msgid "Go Back"
+msgstr "返回"
+
+msgid "Height"
+msgstr "長度"
+
+msgid "Hide detailed report"
+msgstr "隱藏詳細報告"
+
+msgid "hours"
+msgstr "小時"
+
+msgid "Import"
+msgstr "匯入"
+
+msgid "Import "
+msgstr "匯入"
+
+msgid "Import Metadata from CSV file"
+msgstr "匯入CSV檔案中的元數據"
+
+msgid "Import Metadata from RDF file"
+msgstr "用RDF檔案匯入元數據"
+
+msgid "Inclusive (AND)"
+msgstr "包容 (和)"
+
+#, tao-public
+msgid "Index"
+msgstr "索引"
+
+msgid "Install"
+msgstr "安裝"
+
+msgid "Installation done."
+msgstr "安裝已完成。"
+
+msgid "Installation..."
+msgstr "安装中..."
+
+msgid "Installed Extensions"
+msgstr "已安裝的擴展程序"
+
+msgid "Installing extension %s..."
+msgstr "正在安裝擴展程序 %s..."
+
+msgid "Instance saved"
+msgstr "實體已儲存"
+
+msgid "Interface Language"
+msgstr "介面語言"
+
+msgid "Interface language"
+msgstr "介面語言"
+
+msgid "Invalid date range"
+msgstr "無效的日期範圍"
+
+msgid "Invalid field length"
+msgstr "欄位長度無效"
+
+msgid "Invalid field range"
+msgstr "欄位範圍無效"
+
+msgid "Invalid file size"
+msgstr "檔案大小無效"
+
+msgid "Invalid file type!"
+msgstr "無效的檔案型態!"
+
+msgid "Invalid login or password. Please try again."
+msgstr "無效的登錄名或密碼。請再試一次。"
+
+msgid "invalid regular expression"
+msgstr "無效的正規表示式"
+
+msgid "Label"
+msgstr "標籤"
+
+msgid "Label *"
+msgstr "標籤*"
+
+msgid "Language"
+msgstr "語言"
+
+msgid "Language not supported"
+msgstr "不支持語言"
+
+msgid "Last Name"
+msgstr "姓氏"
+
+msgid "less than a minute"
+msgstr "少於一分鐘"
+
+msgid "List"
+msgstr "清單"
+
+msgid "List - Multiple choice - Check box"
+msgstr "清單 - 選擇題 - 複選框"
+
+msgid "List - Single choice - Drop down"
+msgstr "清單 - 單項選擇 - 下拉"
+
+msgid "List - Single choice - Radio button"
+msgstr "清單 - 單項選擇 - 按鈕"
+
+msgid "List deleted"
+msgstr "清單已刪除"
+
+msgid "List not deleted"
+msgstr "清單未刪除"
+
+msgid "List not saved"
+msgstr "清單未儲存"
+
+msgid "List values"
+msgstr "清單中的值"
+
+msgid "Lists"
+msgstr "清單"
+
+msgid "Loaded"
+msgstr "已載入"
+
+msgid "Loaded at Startup"
+msgstr "程式啟動時自動載入"
+
+msgid "Log in"
+msgstr "登入"
+
+msgid "Log Out"
+msgstr "登出"
+
+msgid "Login"
+msgstr "登錄名稱"
+
+msgid "Login available"
+msgstr "可用登錄名稱"
+
+msgid "Login failed"
+msgstr "登錄失敗"
+
+msgid "Manage data list"
+msgstr "管理數據清單"
+
+#, tao-public
+msgid "Manage roles"
+msgstr "管理角色"
+
+msgid "Manage Roles and apply them to users."
+msgstr "管理角色並設定用戶。"
+
+#, tao-public
+msgid "Manage users"
+msgstr "管理用戶"
+
+msgid "Manage Versioned File"
+msgstr "管理多版本的檔案"
+
+msgid "Map the properties to the CSV columns"
+msgstr "映射屬性設置為CSV列"
+
+msgid "maximum value: "
+msgstr "最大值: "
+
+msgid "minimum value: "
+msgstr "最小值: "
+
+msgid "minutes"
+msgstr "分鐘"
+
+msgid "More"
+msgstr "更多"
+
+#, tao-public
+msgid "Move role"
+msgstr ""
+
+msgid "Move to"
+msgstr "移動到"
+
+msgid "Moving this element will replace the properties of the previous class by those of the destination class :"
+msgstr "當您移動此元素時，您將會用目標類的屬性取代之前類別的屬性:"
+
+msgid "Moving this element will replace the properties of the previous class by those of the destination class:"
+msgstr "當您移動此元素時，您將會用目標類的屬性取代之前類別的屬性:"
+
+msgid "Multiple values delimiter"
+msgstr "多個值分隔符"
+
+msgid "must be after or the same as: "
+msgstr "必須是之後或相同: "
+
+msgid "must be after: "
+msgstr "必須是之後: "
+
+msgid "must be before or the same as: "
+msgstr "必須是之前或相同: "
+
+msgid "must be before: "
+msgstr "必須是之前: "
+
+msgid "must be numeric"
+msgstr "必須是數字"
+
+#, tao-public
+msgid "My settings"
+msgstr "我的設定"
+
+msgid "My settings (%s)"
+msgstr "我的設定 (%s)"
+
+msgid "Name"
+msgstr "姓名"
+
+msgid "New password"
+msgstr "新密碼"
+
+#, tao-public
+msgid "New repository"
+msgstr "新的存儲庫"
+
+#, tao-public
+msgid "New role"
+msgstr "新角色"
+
+msgid "Next"
+msgstr "下一個"
+
+msgid "No"
+msgstr "否"
+
+msgid "No extensions available."
+msgstr "沒有可用的擴展程序。"
+
+msgid "no file"
+msgstr "沒有檔案"
+
+msgid "no file not found in this location"
+msgstr "在這位置未找到檔案"
+
+msgid "No file selected"
+msgstr "未選取任何檔案"
+
+msgid "No files"
+msgstr "無檔案"
+
+msgid "no label"
+msgstr "無標籤"
+
+msgid "No Preview available"
+msgstr "沒有可用的預覽"
+
+msgid "No preview available"
+msgstr "沒有可用的預覽"
+
+msgid "No result found"
+msgstr "找不到任何資料"
+
+msgid "No results found"
+msgstr "找不到任何資料"
+
+msgid "Nothing imported"
+msgstr "沒有匯入任何物件"
+
+msgid "Nothing to install !"
+msgstr "沒有任何可安裝的物件"
+
+msgid "Number of elements"
+msgstr "元素的數量"
+
+msgid "of"
+msgstr "的"
+
+msgid "Old Password"
+msgstr "舊密碼"
+
+msgid "Option instanceUri is not an option !!"
+msgstr "instanceUri （實例統一資源標識符）不是選項"
+
+msgid "Option ownerUri is not an option !!"
+msgstr "ownerUri （主人統一資源標識符）不是選項"
+
+msgid "Option propertyUri is not an option !!"
+msgstr "propertyUri （屬性統一資源標識符）不是選項"
+
+msgid "or"
+msgstr "或"
+
+msgid "Page"
+msgstr "頁面"
+
+msgid "Password"
+msgstr "密碼"
+
+msgid "Password *"
+msgstr "密碼＊"
+
+msgid "Password changed"
+msgstr "密碼已變更"
+
+msgid "Passwords are not matching"
+msgstr "密碼不相符"
+
+msgid "Please confirm deletion"
+msgstr "請確認刪除"
+
+msgid "Please confirm property deletion!"
+msgstr "請確認屬性刪除!"
+
+msgid "Please confirm this operation."
+msgstr "請確認此行動。"
+
+msgid "Please confirm user deletion"
+msgstr "刪除用戶，請確認"
+
+msgid "Please confirm you want to delete this list element."
+msgstr "您將要刪除此清單元素，請確認。"
+
+msgid "Please confirm you want to delete this list. This operation cannot be undone."
+msgstr "請確認您將要刪除此清單元素。 此行動無法復取消。"
+
+msgid "Please contact %s or an administrator to release it', get_data('ownerHtml"
+msgstr "請聯絡 %s 或系統管理員才可以釋放它', get_data('ownerHtml"
+
+msgid "Please report bugs, ideas, comments or feedback on the TAO Forge"
+msgstr "請在 TAO Forge 上面報告錯誤,想法,意見或反饋"
+
+msgid "Post install processing"
+msgstr "安裝後處理過程"
+
+msgid "Preparing installation..."
+msgstr "正在準備安裝中"
+
+msgid "Preview"
+msgstr "預覽"
+
+msgid "Previous"
+msgstr "上一個"
+
+#, tao-public
+msgid "Properties"
+msgstr "屬性"
+
+msgid "RDF"
+msgstr "RDF"
+
+msgid "Release"
+msgstr "釋放"
+
+msgid "Releasing the lock might cause the work in progress by %s to be lost.', get_data('ownerHtml"
+msgstr "釋放鎖有可能會讓 %s 失去正在進行的工作 ', get_data('ownerHtml"
+
+msgid "Remove"
+msgstr "移除"
+
+msgid "Remove content"
+msgstr "移除內容"
+
+msgid "Remove Message"
+msgstr "移除信件"
+
+msgid "Remove this file"
+msgstr "移除此檔案"
+
+msgid "Rename"
+msgstr "重新命名"
+
+msgid "Repeat new password"
+msgstr "重複輸入新密嗎"
+
+msgid "Repeat password *"
+msgstr "重複輸入密碼*"
+
+msgid "Repository saved"
+msgstr "軟體庫已儲存"
+
+msgid "Repository saved and disabled"
+msgstr "軟體庫已儲存並停止"
+
+msgid "Repository saved and enabled"
+msgstr "軟體庫已儲存並啟用"
+
+msgid "Repository saved, but unable to disable"
+msgstr "軟體庫已儲存但無法停止"
+
+msgid "Repository saved, but unable to enable"
+msgstr "軟體庫已儲存但無法啟用"
+
+msgid "required length"
+msgstr "需要的長度"
+
+msgid "Requires"
+msgstr "需要"
+
+msgid "Reset"
+msgstr "重設"
+
+msgid "Resource"
+msgstr "資源"
+
+msgid "Resource not imported due to multiple super classes"
+msgstr "資源無法匯入，因為有多種超類超類別"
+
+msgid "Resource not imported due to multiple types"
+msgstr "資源有多種姓雷而無法匯入"
+
+msgid "Resource saved"
+msgstr "資源已儲存"
+
+msgid "Responsive mode"
+msgstr "回應模式"
+
+msgid "Revision control"
+msgstr "修訂控制"
+
+msgid "Right click the tree to manage your lists"
+msgstr "用右鍵點擊樹來管理您的列表"
+
+msgid "Role saved"
+msgstr "角色已儲存"
+
+msgid "Roles"
+msgstr "角色"
+
+#, tao-public
+msgid "Roles library"
+msgstr "角色書庫"
+
+msgid "Save"
+msgstr "儲存"
+
+msgid "Scope"
+msgstr "範圍"
+
+#, tao-public
+msgid "Search"
+msgstr "搜尋"
+
+msgid "Search sub-classes"
+msgstr "搜索子類別"
+
+msgid "seconds"
+msgstr "秒"
+
+msgid "Select"
+msgstr "選擇"
+
+msgid "select"
+msgstr "選擇"
+
+msgid "Select a language"
+msgstr "選擇語言"
+
+msgid "Select the element destination"
+msgstr "選擇元素的目的地"
+
+msgid "Select this file"
+msgstr "選擇此檔案"
+
+msgid "selected"
+msgstr "已選取"
+
+msgid "Selected file:"
+msgstr "已選檔案: "
+
+msgid "Selection saved successfully"
+msgstr "選取儲存成功"
+
+#, tao-public
+msgid "Settings"
+msgstr "設定值"
+
+msgid "Settings updated"
+msgstr "設定值已更新"
+
+msgid "Show detailed report"
+msgstr "顯示詳細回報"
+
+msgid "Simple Mode"
+msgstr "簡單模式"
+
+msgid "Size"
+msgstr "大小"
+
+msgid "Success"
+msgstr "完成"
+
+msgid "Supported export formats"
+msgstr "支援的匯出格式"
+
+msgid "Supported import formats"
+msgstr "支援的匯入格式"
+
+#, tao-public
+msgid "TAO Back Office"
+msgstr "TAO 後台"
+
+msgid "TAO Home"
+msgstr "TAO 首頁"
+
+msgid "Tao Home"
+msgstr "TAO 主頁"
+
+msgid "TAO Login"
+msgstr "TAO 登入"
+
+msgid "Text - Long - Box"
+msgstr "文字 - 長 - 方箱"
+
+msgid "Text - Long - HTML editor"
+msgstr "文字 - 長 - HTML編輯器"
+
+msgid "Text - Short - Field"
+msgstr "文字 - 短 - 欄位"
+
+msgid "The column "
+msgstr "欄"
+
+msgid "The format of this field is not valid."
+msgstr "這個欄位的格式是無效的。"
+
+msgid "The image resizes along with its container, e.g. 50% means half of the container size not half of the picture size."
+msgstr "圖片會依據容器而自動調整大小，例如縮小50％會使容器尺寸縮成一半，而不是圖片縮成一半。"
+
+msgid "The lock has been released"
+msgstr "鎖已被釋放"
+
+msgid "The uploaded file is too large"
+msgstr "上傳的檔案過大"
+
+msgid "The value of this field must be a valide date format, e.g. YYYY-MM-DD"
+msgstr "此欄位的值必須是有效的日期格式，如YYYY-MM-DD (西元年份-月份-日）"
+
+msgid "The value of this field must be an integer"
+msgstr "此欄位的值必須是一個整數"
+
+msgid "The value of this field must be numeric"
+msgstr "此欄位的值必須是數字"
+
+msgid "This %s is currently checked out', get_data('topclass-label"
+msgstr "這 %s 已經被借出', get_data('topclass-label"
+
+msgid "This field is required"
+msgstr "此欄位是必需的"
+
+msgid "This field is too long"
+msgstr "此欄位太長了"
+
+msgid "This field is too short"
+msgstr "此欄位太短了"
+
+msgid "this is required"
+msgstr "這是必需的"
+
+msgid "This Login is already in use"
+msgstr "此登錄已在使用"
+
+msgid "This resource is locked"
+msgstr "此資源被鎖定"
+
+msgid "This role is still given to one or more users. Please remove the role to these users first."
+msgstr "這角色仍然給了多個用戶。請先刪除這些用戶的角色。"
+
+msgid "This should equal "
+msgstr "這應該等於 "
+
+msgid "This should not equal "
+msgstr "這不應該等於 "
+
+msgid "Time zone"
+msgstr "時區"
+
+msgid "to translate"
+msgstr "翻譯"
+
+msgid "Translate"
+msgstr "翻譯"
+
+msgid "Translate to"
+msgstr "翻譯成"
+
+msgid "Translation parameters"
+msgstr "翻譯範圍"
+
+msgid "Translation saved"
+msgstr "翻譯已儲存"
+
+msgid "Type"
+msgstr "類型"
+
+msgid "UI Lang."
+msgstr "介面語言."
+
+msgid "Unable to change passwords in demo mode"
+msgstr "在試用模式無法更改密碼"
+
+msgid "Unable to delete the selected resource"
+msgstr "無法刪除所選的資源"
+
+msgid "Unable to release the lock"
+msgstr "無法解除鎖定"
+
+msgid "Unable to remove the property."
+msgstr ""
+
+msgid "Unable to upload file"
+msgstr "無法上傳檔案"
+
+msgid "Uncheck All"
+msgstr "全部取消勾選"
+
+msgid "Uncheck all"
+msgstr "全部取消勾選"
+
+msgid "Undo"
+msgstr "復原"
+
+msgid "Uninstall of %s failed', $this->getRequestParameter('id"
+msgstr "卸載 %s 失敗', $this->getRequestParameter('id"
+
+msgid "Uninstalled %s', $this->getRequestParameter('id"
+msgstr "已卸載 %s', $this->getRequestParameter('id"
+
+msgid "unknown"
+msgstr "不明"
+
+msgid "Unknown Error"
+msgstr "不明的錯誤"
+
+msgid "Upload"
+msgstr "上傳"
+
+msgid "Upload a new content"
+msgstr "上傳新的內容"
+
+msgid "Upload File"
+msgstr "上傳檔案"
+
+msgid "Upload into:"
+msgstr "上傳到:"
+
+msgid "Upload the file to version"
+msgstr "上傳檔案到版本"
+
+msgid "URL"
+msgstr "URL 網址"
+
+msgid "Use default value"
+msgstr "使用預設值"
+
+msgid "User"
+msgstr "使用者"
+
+msgid "User added"
+msgstr "已新增用戶"
+
+msgid "User deleted successfully"
+msgstr "刪除用戶成功"
+
+msgid "User deletion not permited on a demo instance"
+msgstr "試用實例不應許刪除用戶"
+
+msgid "User saved"
+msgstr "用戶已儲存"
+
+#, tao-public
+msgid "User Settings"
+msgstr "用戶設定"
+
+#, tao-public
+msgid "Users"
+msgstr "用戶"
+
+msgid "Version"
+msgstr "版本"
+
+msgid "Versioning"
+msgstr "版本"
+
+msgid "Width"
+msgstr "寬度"
+
+msgid "Yes"
+msgstr "是"
+
+msgid "You are not authorised to remove this lock"
+msgstr "您無權刪除該鎖"
+
+msgid "You can use * as a wildcard"
+msgstr "您可以使用 * 作為通配符"
+
+msgid "You cannot delete the root node"
+msgstr "您不能刪除根節點"
+
+msgid "You currently have no access to the platform"
+msgstr "您目前無權進入平台"
+
+msgid "You don't have sufficient permissions to access"
+msgstr "您沒有足夠的權限進入"
+
+msgid "You must activate JavaScript in your browser to run this application."
+msgstr "您必須在瀏覽器中啟用JavaScript才可以應用該程序。"
+
+msgid "You've not the required rights to edit this resource."
+msgstr "您沒有需要的權限來編輯這個資源。"
+
