@@ -1,0 +1,250 @@
+html, body {
+    padding:0;
+    margin: 0;
+}
+
+#runner {
+	overflow:hidden;
+}
+
+#qti-item {
+	width: 100%;
+	overflow: hidden;
+	display: none;
+	margin: 0;
+	padding: 0;
+}
+
+.qti-navigation {
+	display:none;
+}
+
+#qti-info {
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+	padding: 3px;
+	font-size: 12px;
+}
+
+#qti-info.info {
+	background-color: #f5fcff;
+	background-image: url(../img/information.png);
+	background-repeat: no-repeat;
+	background-position: 2px 2px;
+	border: 1px solid #005b7d;
+	color: #0c6485;
+	font-weight: bold;
+	padding: 4px 3px 3px 25px;
+	margin: 20px 100px;
+}
+
+#qti-timers {
+	margin: 20px 100px;
+	display: none;
+}
+
+.qti-timer {
+    -moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+	padding: 3px 6px;
+	background-color: #f3f3f3;
+	border: 1px solid #333;
+	margin: 10px 0;
+	font-weight: bold;
+	color: #333;
+	font-size: 12px;
+}
+
+#qti-rubrics {
+	margin: 0 auto;
+}
+
+#qti-comment {
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    width: 300px;
+    text-align: right;
+    padding: 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid #D6D6D6;
+    -webkit-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.20);
+    box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.20);
+}
+
+#qti-comment > textarea {
+    display: block;
+    height: 80px;
+    resize: none;
+    width: 100%;
+    padding: 2px;
+    margin: 3px  0 10px 0;
+    -moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	border-radius: 2px;
+	border: 1px solid #999;
+}
+
+#qti-comment-send {
+    margin:0 0 0 5px;
+}
+
+#qti-actions, #qti-navigation {
+    background-color: #ddd;
+    position: fixed;
+    width: 100%;
+}
+
+#qti-actions {
+    
+}
+
+#qti-navigation {
+    height: 37px;
+}
+
+#qti-actions {
+    height: 40px;
+    color: #fff;
+    top: 0;
+    border-bottom: 1px solid #555;
+    border-top: 1px solid #555;
+}
+
+#qti-test-context {
+    padding-top: 3px;
+    padding-left: 10px;
+    line-height: 1.1;
+    color: #222;
+    text-shadow: 1px 1px 0 #eee;
+}
+
+#qti-test-context .icon-right {
+    padding: 0 5px;
+}
+
+#qti-test-context > #qti-test-title,
+#qti-test-context > #qti-test-position {
+    width: 100%;
+    visibility: hidden;
+}
+
+#qti-test-context  #qti-test-title {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#qti-test-context  #qti-test-position {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+#qti-test-context  #qti-section-title {
+    font-weight: bold;
+    font-style: italic;
+}
+
+#qti-test-context #qti-part-title {
+    font-weight: bold;
+    font-style: italic;
+}
+
+#qti-navigation {
+    bottom: 0;
+    border-top: 1px solid #555;
+}
+
+#qti-navigation .col-4 {
+    margin: 0;
+}
+
+#qti-flow .btn-info,
+#qti-flow .btn-success,
+#qti-flow .btn-warning,
+#qti-flow .btn-error,
+#qti-tools .btn-info,
+#qti-comment > button {
+    margin: 5px 2px;
+    display: none;  
+    height: 25px;
+    line-height: 25px;
+}
+
+#comment {
+    float: left;
+}
+
+#move-forward, #move-backward, #move-end, #skip, #skip-end {
+    float: right;
+}
+
+#qti-comment-cancel, #qti-comment-send {
+    height: 24px;
+    line-height: 1.5;
+}
+
+#qti-content {
+    margin: 40px 0;
+    padding: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+#qti-test-progress {
+    margin-top: 5px;
+    visibility: hidden;
+    text-align: right;
+}
+
+#qti-test-progress > #qti-progress-label {
+    font-size: 12px;
+    color: #222;
+    text-shadow: 1px 1px 0 #eee;
+}
+
+#qti-test-time {
+
+}
+
+#qti-tools {
+    width: 25%;
+    padding-left: 15px;
+}
+
+#qti-flow {
+    width: 75%;
+    padding-right: 5px;
+}
+
+#qti-section-map .qti-map-button {
+    /*display: inline;*/
+    display: none;
+}
+
+.tao-scope .ui-progressbar {
+    border: 1px solid #555;
+}
+
+.tao-scope .ui-progressbar .ui-progressbar-value {
+    background-color: #7e949e;
+}
+
+#qti-flow .icon-backward, #qti-flow .icon-forward, #qti-flow .icon-fast-forward {
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 1.1);
+}
+
+#qti-flow > #move-backward, #qti-flow > #move-forward, #qti-flow > #skip, #qti-tools > #comment, #qti-comment > button {
+    min-width: 100px;
+}

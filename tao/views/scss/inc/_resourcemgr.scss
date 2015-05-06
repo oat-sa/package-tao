@@ -1,0 +1,213 @@
+@import 'inc/bootstrap';
+
+/* tooltip */
+.resourcemgr {
+
+    $activeColor:  whiten($uiClickableHoverBg, 0.5);
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    & > h2 {
+        @include font-size(15);
+    }
+
+   .file-browser, .file-selector, .file-preview { 
+        position: relative;
+        display: table-cell;
+        vertical-align: top;
+        height: 100% !important;
+
+        color: $textColor;
+
+        h1 {
+            @include font-size(16);
+            line-height: 1.6;
+
+            color: $textColor;
+            margin-top: 1px;
+            padding: 5px;
+            height: 38px;
+        }
+        h2 {
+            @include font-size(13);
+            line-height: 1.3;
+            background-color: $uiHeaderBg;
+            color: $textColor;
+            margin-top: 1px;
+            padding: 6px;
+            position: relative;
+            clear: both;
+        
+            &.toggler{
+                cursor: pointer;
+                &:after{
+                    position: absolute;
+                    right: 15px;
+                    top: 3px;
+                }
+            }
+        }
+    }
+
+    .file-browser{
+        background-color: $uiClickableDefaultBg;
+        & > h1 {
+            width: 200px;
+            background-color: $uiHeaderBg;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 5px;
+            ul {
+                padding-left: 18px;
+            }
+            li {
+                a {
+                    color: $textColor;
+                    &:before {
+                        @include icon('folder');
+                        margin: 0 3px;
+                    }
+                }
+
+                a.opened:before {
+                    font-style: italic;
+                    @include icon('folder-open');
+                }
+
+                &.active > a {
+                    background-color: $activeColor;
+                    
+                }
+            }
+        }
+    }
+
+    .file-preview{
+        max-width: 300px;
+        background-color: $uiClickableDefaultBg;
+        & > h1 {
+            width: 300px;
+            background-color: $uiHeaderBg;
+        }
+
+        .file-properties{
+            padding: 0 5px;
+        }
+
+        .previewer {
+            height: 300px;
+            overflow: hidden;
+        }
+    
+        .actions {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+
+    .file-selector{
+        position: relative;
+        width: 100%;
+        border: solid 1px #fff;
+        border-top: none;
+        border-bottom: none;       
+ 
+        background-color: $uiGeneralContentBg;
+        & > h1 {
+            position: relative;
+            background-color: $uiClickableDefaultBg;
+
+            .title {
+                margin-right: 75px;
+            }
+
+            .upload-switcher {
+                a {
+                    display: inline-block;
+                }
+                .listing {
+                    display:none;
+                }
+            }
+        }
+
+        .empty {
+            width: 100%;
+            color: #666;
+            font-style: italic;
+            @include font-size(18);
+            text-align: center;
+        }
+
+        ul.files {
+            position: relative;
+            margin-bottom: 0;
+            padding: 0;
+            list-style-type: none;
+            max-height: 550px;
+            overflow-y: auto;
+            li {
+                height: 35px;
+                line-height: 35px;
+                margin-bottom: 0;
+                padding: 0 0 0 5px;
+                overflow-y: hidden;
+
+                &:before {
+                    @include icon('document');
+                    margin: 0 4px;
+                    @include font-size(16);
+                    vertical-align: top;
+                }
+                &[data-type='image']:before{
+                    @include icon('image');
+                    margin: 0 2px 0 0;
+                }
+                &[data-type='audio']:before{
+                    @include icon('media');
+                    margin: 0 2px 0 0;
+                } 
+                &[data-type='video']:before{
+                    @include icon('video');
+                    margin: 0 2px 0 0;
+                }
+
+                &.active, &:hover {
+                    background-color: $activeColor;
+                    cursor: pointer;
+                }
+
+                .desc {
+                    display: inline-block;
+                    min-width:150px;
+                    max-width:250px;
+                }
+
+                .actions { 
+                    float: right;
+                    position: relative;
+                    height: 35px;
+                    width: 100px;
+                    .tlb {
+                        display: inline-block;
+                        background: none;
+                        @include font-size(14);
+                        .tlb-top {
+                            background: none !important;
+                            border-width: 0 !important;
+                            @include box-shadow(0, 0, 0);
+                        }
+                    }
+                }
+            }
+        }
+        .file-upload-container {
+            display: none;
+            padding: 0 5px;
+        }
+    }
+}

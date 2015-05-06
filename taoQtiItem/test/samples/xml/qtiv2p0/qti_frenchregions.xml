@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p0 imsqti_v2p0.xsd" identifier="i1297080093001849300" title="R&#xE9;gions Fran&#xE7;aises" label="R&#xE9;gions Fran&#xE7;aises" timeDependent="false" adaptive="false" lang="EN">
+    
+	<responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="pair">
+    
+            <correctResponse>
+                        	<value>region_1 choice_1</value>
+                        	<value>region_2 choice_2</value>
+                        	<value>region_3 choice_3</value>
+                        	<value>region_4 choice_4</value>
+                        	<value>region_5 choice_5</value>
+                        	<value>region_6 choice_6</value>
+                        	<value>region_7 choice_7</value>
+                        	<value>region_8 choice_8</value>
+                        	<value>region_9 choice_9</value>
+                        	<value>region_10 choice_10</value>
+                        	<value>region_11 choice_11</value>
+                        	<value>region_12 choice_12</value>
+                        	<value>region_13 choice_13</value>
+                        	<value>region_14 choice_14</value>
+                        	<value>region_15 choice_15</value>
+                        	<value>region_16 choice_16</value>
+                        	<value>region_17 choice_17</value>
+                        	<value>region_18 choice_18</value>
+                        	<value>region_19 choice_19</value>
+                        	<value>region_20 choice_20</value>
+                        	<value>region_21 choice_21</value>
+                        	<value>region_22 choice_22</value>
+                    </correctResponse>
+		
+		
+	</responseDeclaration>	
+	<outcomeDeclaration identifier="SCORE" baseType="integer" cardinality="single"/>
+	
+	
+	<itemBody>
+		<div>&#xA0;<br/>
+<br/>
+<graphicAssociateInteraction maxAssociations="22" responseIdentifier="RESPONSE">
+    
+        	<prompt><span>Lier chaque r&#xE9;gion fran&#xE7;aise sur la carte avec son
+nom.</span><br/>
+<br/>
+Pour cela:<br/>
+Cliquez sur le carr&#xE9; &#xE0; c&#xF4;t&#xE9; du nom, puis sur celui sur la carte
+correspondant &#xE0; la r&#xE9;gion.<br/>
+Pour supprimer un lien, il vous suffit de re-cliquer dessus.<br/></prompt>
+             	<object data="img/regions2.png" width="800" height="566" type="image/png"/>
+    
+	<associableHotspot identifier="region_1" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="273.73,109.48,7.81"/>
+	<associableHotspot identifier="choice_1" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="542.73,37.48,7.62"/>
+
+	<associableHotspot identifier="region_2" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="254.73,136.48,8.06"/>
+	<associableHotspot identifier="choice_2" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="543.73,63.48,7.28"/>
+	
+	<associableHotspot identifier="region_3" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="311.73,176.48,6.4"/>
+	<associableHotspot identifier="choice_3" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="542.73,479.48,8.54"/>
+
+	<associableHotspot identifier="region_4" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="359.73,169.48,9.43"/>
+	<associableHotspot identifier="choice_4" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="542.73,504.48,9.06"/>
+
+	<associableHotspot identifier="region_5" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="404.73,191.48,8.94"/>
+	<associableHotspot identifier="choice_5" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="541.73,452.48,9.43"/>
+
+	<associableHotspot identifier="region_6" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="355.73,244.48,8.6"/>
+	<associableHotspot identifier="choice_6" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="542.73,426.48,8.54"/>
+
+	<associableHotspot identifier="region_7" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="324.73,242.48,9.49"/>
+	<associableHotspot identifier="choice_7" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="541.73,402.48,8.49"/>
+
+	<associableHotspot identifier="region_8" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="252.73,180.48,9.22"/>
+	<associableHotspot identifier="choice_8" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="541.73,531.48,9.49"/>
+
+	<associableHotspot identifier="region_9" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="466.73,432.48,10.3"/>
+	<associableHotspot identifier="choice_9" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="541.73,556.48,8.54"/>
+
+	<associableHotspot identifier="region_10" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="231.73,221.48,13.45"/>
+	<associableHotspot identifier="choice_10" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="541.73,374.48,9.85"/>
+
+	<associableHotspot identifier="region_11" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="217.73,154.48,10"/>
+	<associableHotspot identifier="choice_11" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="541.73,88.48,8.6"/>
+
+	<associableHotspot identifier="region_12" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="175.73,162.48,10.63"/>
+	<associableHotspot identifier="choice_12" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="543.73,115.48,9.9"/>
+
+	<associableHotspot identifier="region_13" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="332.73,303.48,10.63"/>
+	<associableHotspot identifier="choice_13" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="542.73,348.48,10.63"/>
+
+	<associableHotspot identifier="region_14" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="135.73,200.48,12.08"/>
+	<associableHotspot identifier="choice_14" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="540.73,9.48,9.9"/>
+
+	<associableHotspot identifier="region_15" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="140.73,237.48,12.21"/>
+	<associableHotspot identifier="choice_15" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="543.73,140.48,10.63"/>
+
+	<associableHotspot identifier="region_16" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="189.73,266.48,12.04"/>
+	<associableHotspot identifier="choice_16" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="540.73,165.48,10"/>
+
+	<associableHotspot identifier="region_17" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="220.73,295.48,10.63"/>
+	<associableHotspot identifier="choice_17" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="542.73,244.48,8.6"/>
+
+	<associableHotspot identifier="region_18" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="369.73,371.48,11.4"/>
+	<associableHotspot identifier="choice_18" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="540.73,322.48,11.4"/>
+
+	<associableHotspot identifier="region_19" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="274.73,298.48,10.63"/>
+	<associableHotspot identifier="choice_19" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="541.73,270.48,10"/>
+
+	<associableHotspot identifier="region_20" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="296.73,384.48,12.81"/>
+	<associableHotspot identifier="choice_20" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="541.73,296.48,11.66"/>
+
+	<associableHotspot identifier="region_21" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="160.73,335.48,12.73"/>
+	<associableHotspot identifier="choice_21" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="540.73,192.48,12.21"/>
+
+	<associableHotspot identifier="region_22" matchGroup="choice_1 choice_2 choice_3 choice_4 choice_5 choice_6 choice_7 choice_8 choice_9 choice_10 choice_11 choice_12 choice_13 choice_14 choice_15 choice_16 choice_17 choice_18 choice_19 choice_20 choice_21 choice_22" matchMax="1" shape="circle" coords="223.73,379.48,14.32"/>
+	<associableHotspot identifier="choice_22" matchGroup="region_1 region_2 region_3 region_4 region_5 region_6 region_7 region_8 region_9 region_10 region_11 region_12 region_13 region_14 region_15 region_16 region_17 region_18 region_19 region_20 region_21 region_22" matchMax="1" shape="circle" coords="540.73,217.48,12.73"/>
+
+</graphicAssociateInteraction>
+&#xA0;<i>Sources: <a href="http://histgeo.ac-aix-marseille.fr">http://histgeo.ac-aix-marseille.fr</a></i><br/>
+</div>
+	</itemBody>
+	
+	<responseProcessing template="http://www.imsglobal.org/question/qti_v2p0/rptemplates/match_correct"/>
+</assessmentItem>

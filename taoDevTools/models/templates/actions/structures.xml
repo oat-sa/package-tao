@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension SYSTEM "../doc/structures.dtd">
+<structures>
+	<structure id="{id}_main" name="{name}" level="15" visible="true">
+		<description />
+		<sections>
+			<section id="{id}_main" name="{name}" url="/{id}/{classname}/index" />
+			<section id="{id}_other" name="Template" url="/{id}/{classname}/templateExample" />
+		</sections>
+	</structure>
+</structures>

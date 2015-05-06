@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ui Test - MediaSizer UI Component</title>
+  <base href="../../../../"/>
+  <link rel="stylesheet" type="text/css" href="js/lib/qunit/qunit.css">
+  <link rel="stylesheet" type="text/css" href="css/tao-main-style.css">
+  <link rel="stylesheet" type="text/css" href="../../taoQtiItem/views/css/item-creator.css">
+  <script type="text/javascript" src="js/lib/require.js"></script>
+  <script type="text/javascript" src="js/lib/qunit/qunit.js"></script>
+  <script type="text/javascript">
+
+    //don't start the test now
+    QUnit.config.autostart = false;
+
+    //load the config
+    require(['/tao/ClientConfig/config'], function () {
+
+      //load the test
+      require(['test/ui/mediasizer/test'], function () {
+
+        //Tests loaded, run tests
+        QUnit.start();
+      });
+    });
+  </script>
+  <style>
+    h1 {
+      width: 640px;
+      margin: 10px auto 0 auto;
+      font-size: 14px;
+      padding: 0
+    }
+
+    .cat {
+      min-height: 426px;
+      background: #eee;
+    }
+
+    .container {
+      display:none;
+      width: 50%;
+      max-width: 1000px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+<div id="qunit"></div>
+
+
+<div id="qunit-fixture-tmp" class="tao-scope">
+
+  <div id="media-sizer-container" class="item-editor-sidebar">
+
+  </div>
+
+
+  <div id="_nat" class="container">
+    <h1>Natural size (640px x 426px | 100%)</h1>
+    <div id="cat-container-natural" class="cat">
+      <img src="js/test/ui/mediasizer/cute-cat.jpg">
+    </div>
+  </div>
+
+  <div id="_px" class="container">
+    <h1>Size in px (320px x 213px | 50%)</h1>
+    <div id="cat-container-pixel" class="cat">
+      <img src="js/test/ui/mediasizer/cute-cat.jpg" width="320" height="213">
+    </div>
+  </div>
+
+  <div id="_pc" class="container">
+    <h1>Size in % (480px x 320px | 75%)</h1>
+    <div id="cat-container-percent" class="cat">
+      <img src="js/test/ui/mediasizer/cute-cat.jpg" width="75%" height="">
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

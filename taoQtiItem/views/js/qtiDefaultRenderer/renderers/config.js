@@ -1,0 +1,43 @@
+define(function(){
+    return {
+        name : 'defaultRenderer',
+        locations : {
+            '_container' : 'taoQtiItem/qtiDefaultRenderer/renderers/Container',
+            'assessmentItem' : 'taoQtiItem/qtiDefaultRenderer/renderers/Item',
+            'stylesheet' : 'taoQtiItem/qtiDefaultRenderer/renderers/Stylesheet',
+            'outcomeDeclaration' : 'taoQtiItem/qtiDefaultRenderer/renderers/OutcomeDeclaration',
+            'responseDeclaration' : 'taoQtiItem/qtiDefaultRenderer/renderers/ResponseDeclaration',
+            'responseProcessing' : 'taoQtiItem/qtiDefaultRenderer/renderers/ResponseProcessing',
+            'math' : 'taoQtiItem/qtiDefaultRenderer/renderers/Math',
+            'object' : 'taoQtiItem/qtiDefaultRenderer/renderers/Object',
+            'modalFeedback' : 'taoQtiItem/qtiDefaultRenderer/renderers/ModalFeedback',
+            'rubricBlock' : 'taoQtiItem/qtiDefaultRenderer/renderers/RubricBlock',
+            'associateInteraction' : 'taoQtiItem/qtiDefaultRenderer/renderers/interactions/AssociateInteraction',
+            'choiceInteraction' : 'taoQtiItem/qtiDefaultRenderer/renderers/interactions/ChoiceInteraction',
+            'extendedTextInteraction' : 'taoQtiItem/qtiDefaultRenderer/renderers/interactions/ExtendedTextInteraction',
+            'gapMatchInteraction' : 'taoQtiItem/qtiDefaultRenderer/renderers/interactions/GapMatchInteraction',
+            'graphicAssociateInteraction' : 'taoQtiItem/qtiDefaultRenderer/renderers/interactions/GraphicAssociateInteraction',
+            'graphicGapMatchInteraction' : 'taoQtiItem/qtiDefaultRenderer/renderers/interactions/GraphicGapMatchInteraction',
+            'graphicOrderInteraction' : 'taoQtiItem/qtiDefaultRenderer/renderers/interactions/GraphicOrderInteraction',
+            'hotspotInteraction' : 'taoQtiItem/qtiDefaultRenderer/renderers/interactions/HotspotInteraction',
+            'hottextInteraction' : 'taoQtiItem/qtiDefaultRenderer/renderers/interactions/HottextInteraction',
+            'inlineChoiceInteraction' : 'taoQtiItem/qtiDefaultRenderer/renderers/interactions/InlineChoiceInteraction',
+            'matchInteraction' : 'taoQtiItem/qtiDefaultRenderer/renderers/interactions/MatchInteraction',
+            'mediaInteraction' : 'taoQtiItem/qtiDefaultRenderer/renderers/interactions/MediaInteraction',
+            'orderInteraction' : 'taoQtiItem/qtiDefaultRenderer/renderers/interactions/OrderInteraction',
+            'selectPointInteraction' : 'taoQtiItem/qtiDefaultRenderer/renderers/interactions/SelectPointInteraction',
+            'sliderInteraction' : 'taoQtiItem/qtiDefaultRenderer/renderers/interactions/SliderInteraction',
+            'textEntryInteraction' : 'taoQtiItem/qtiDefaultRenderer/renderers/interactions/TextEntryInteraction',
+            'prompt' : 'taoQtiItem/qtiDefaultRenderer/renderers/interactions/Prompt',
+            'associableHotspot' : 'taoQtiItem/qtiDefaultRenderer/renderers/choices/AssociableHotspot',
+            'gap' : 'taoQtiItem/qtiDefaultRenderer/renderers/choices/Gap',
+            'gapImg' : 'taoQtiItem/qtiDefaultRenderer/renderers/choices/GapImg',
+            'gapText' : 'taoQtiItem/qtiDefaultRenderer/renderers/choices/GapText',
+            'hotspotChoice' : 'taoQtiItem/qtiDefaultRenderer/renderers/choices/HotspotChoice',
+            'hottext' : 'taoQtiItem/qtiDefaultRenderer/renderers/choices/Hottext',
+            'inlineChoice' : 'taoQtiItem/qtiDefaultRenderer/renderers/choices/InlineChoice',
+            'simpleAssociableChoice' : 'taoQtiItem/qtiDefaultRenderer/renderers/choices/SimpleAssociableChoice',
+            'simpleChoice' : 'taoQtiItem/qtiDefaultRenderer/renderers/choices/SimpleChoice'
+        }
+    }
+});

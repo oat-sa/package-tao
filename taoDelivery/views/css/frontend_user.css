@@ -1,0 +1,237 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+@import url(misc.css);
+
+/* The layout body is the main container of the entire view. This CSS tag selector
+   is relevant to the body HTML tag. */
+body 
+{
+	line-height: 1;
+	width:100%;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+	height:100%;
+	/*background: #FFFFFF url(../img/background.png) repeat-x;*/
+}
+
+div#content{
+	margin: 0px auto 0px auto;
+	padding: 0;
+}
+
+
+/* The control area contains a list of various actions/items that are always reachable
+   through the graphical user interface, such as change the UI language,
+   return to the main page and logoff. It also contains the identifier
+   of the current user. */
+#control
+{
+	height:17px;
+	margin: 0px auto 0px auto;
+	padding: 3px;
+	text-align:right;
+	background: #f3f3f3;
+	border: solid 1px #ccc;
+	font-size: 16px;
+	border-bottom: 1px solid;
+	border-bottom-color: #ddd;
+}
+
+.icon
+{
+background-repeat:no-repeat;
+background-position:0 -1px;
+padding-left:10px;
+padding-right:10px;
+}
+
+.separator
+{
+background-repeat:no-repeat;
+background-image:url('../img/separator.png');
+padding-left:5px;
+margin-left:5px;
+margin-right:5px;
+}
+
+#activityContentLanguages
+{
+background-image:url('../img/change_content_language.png');
+padding-top:5px;
+background-position: -1px 3px;
+}
+
+#uiLanguages
+{
+background-image:url('../img/change_language.png');
+background-position: 0px 0px;
+padding-top: 1px;
+padding-left: 22px;
+}
+#pause
+{
+background-image:url('../img/cup_key.png');
+}
+#connecteduser
+{
+/*background-image:url('../img/user.png');*/
+}
+
+#breakOff
+{
+background-image:url('../img/delete.png');
+}
+#debug
+{
+background-image:url('../img/bug.png');	
+}
+#logout
+{
+/*background-image:url('../img/door_in.png');*/
+}
+#export
+{
+background-image:url('../img/database_save.png');
+}
+#home
+{
+background-image:url('../img/home.png');	
+}
+
+/* The list of items available in the control area. */
+#control li
+{
+	display:inline;
+	font-size:14px;
+}
+
+/* Links of the control area relevant to the language. */
+#control li .language
+{
+	color: #000000;	
+	text-decoration: none;
+	padding:0; /*overrides padding set to other link of control*/
+}
+
+/* When a link of the control area relevant to the language is 
+   simply displayed, the following style attributes are applied to it.
+ */
+#control li .language:link, #control li .language:visited
+{
+	color: #000000;	
+	text-decoration: none;
+}
+
+/* When a link of the control area relevant to the language is 
+   flyed over by the mouse or clicked, the following style attributes 
+   are applied to it.
+ */
+#control li .language:hover, #control li .language:active
+{
+	color: #000000;
+	text-decoration: underline;	
+}
+
+/* Links of the control area relevant to basic actions such
+   as "go to the home page" or "logoff". */
+#control li .action
+{
+	color: #000000;	
+	text-decoration: none;
+}
+
+/* When an action link of the control area  is simply displayed, 
+   the following style attributes are applied to it.
+ */
+#control li .action:link, #control li .action:visited
+{
+	color: blue;
+	text-decoration: underline;
+}
+
+/* When an action link of the control area  is flyed over by the mouse or clicked, 
+   the following style attributes are applied to it.
+ */
+#control li .action:hover, #control li .action:active
+{
+	color: #D00239;
+	text-decoration: underline;
+	/*font-weight:bold;*/
+}
+
+
+/* The user's identifier in the control area. */
+#control li #username
+{
+	color: #000000;
+	font-weight: bold;
+	font-style: normal;
+}
+#control li #connecteduser
+{
+	font-style:normal;
+	
+}
+/* The business area containing the business'
+   graphical elements related to a specific template. */
+#business
+{
+	position: relative;
+	width: 100%;
+	padding:0;
+	margin: 0 auto 0 auto;
+}
+
+/* Utilities */	
+.hidden { visibility: hidden; }
+.nodisplay { display: none; }
+
+/* Debug widget*/
+div#debugWindow{
+	width:80%;
+	margin:auto;
+	border: solid #ccc 1px;
+	height: 400px;
+	overflow-y: scroll;
+}
+div#debugWindow fieldset{
+	border: solid #B3D0DC 1px;
+	margin:10px;
+}
+div#debugWindow fieldset legend{
+	font-weight: bold;
+	color:#5196B3;
+}
+div#debugWindow pre{
+	background-color:#e0e0e0;
+	margin:10px;
+	text-align:left;
+}
+
+#footer{
+	clear: both;
+	font-size:11px;
+	width:100%;
+	text-align:center;
+	bottom:0%;
+	margin:5px auto 0px auto;
+	color:#333;
+}

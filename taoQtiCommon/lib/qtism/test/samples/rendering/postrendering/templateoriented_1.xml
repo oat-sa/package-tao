@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem identifier="Q01" title="Question 01" timeDependent="false" xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+	<itemBody>
+		<!-- qtism-if (($qtismId = $qtismState['outcome1']) !== null && $qtismId instanceof qtism\common\datatypes\Identifier && $qtismId->getValue() == 'showoutcome1'): -->
+		<feedbackBlock outcomeIdentifier="outcome1" identifier="showoutcome1" showHide="show">
+			<!-- qtism-if (($qtismId = $qtismState['outcome2']) !== null && $qtismId instanceof qtism\common\datatypes\Identifier && $qtismId->getValue() != 'hideoutcome2'): -->
+			<feedbackInline outcomeIdentifier="outcome2" identifier="hideoutcome2" showHide="hide">
+				May I really, disappear?
+			</feedbackInline>
+			<!-- qtism-endif -->
+		</feedbackBlock>
+		<!-- qtism-endif -->
+		<div>
+			<!-- qtism-if (($qtismId = $qtismState['outcome3']) !== null && $qtismId instanceof qtism\common\datatypes\Identifier && $qtismId->getValue() != 'hideoutcome3'): -->
+			<feedbackInline outcomeIdentifier="outcome3" identifier="hideoutcome3" showHide="hide">May I disappear?</feedbackInline>
+			<!-- qtism-endif -->
+		</div>
+		<div><!-- qtism-printVariable($qtismState, "outcome5", "hello int %i!", false, 10, -1, ";", "", "=") --></div>
+	</itemBody>
+	<!-- qtism-if (($qtismId = $qtismState['outcome4']) !== null && $qtismId instanceof qtism\common\datatypes\Identifier && $qtismId->getValue() == 'showoutcome4'): -->
+	<modalFeedback outcomeIdentifier="outcome4" identifier="showoutcome4" showHide="show">May I pop-up?</modalFeedback>
+	<!-- qtism-endif -->
+</assessmentItem>

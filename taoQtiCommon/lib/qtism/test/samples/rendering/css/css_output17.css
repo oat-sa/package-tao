@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+#myId .qti-div > .qti-prompt {
+    font-weight: bold;
+}
+
+#myId .qti-prompt > .qti-b, #myId .qti-prompt > .qti-i {
+    color: Red;
+}

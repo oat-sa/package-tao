@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xml:base="http://www.tao.lu/Ontologies/taoResultsUdp.rdf#"
+	xmlns:resultserver="http://www.tao.lu/Ontologies/TAOResultServer.rdf#"
+	xmlns:basicresultfile="http://www.tao.lu/Ontologies/taoResultsUdp.rdf#"
+	xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#" 
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#"
+	xmlns:tao="http://www.tao.lu/Ontologies/TAO.rdf#"
+>
+
+   <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoResultsUdp.rdf#BasicUdpStorage">
+	<rdfs:label xml:lang="en-US"><![CDATA[Send the data over UDP]]></rdfs:label>
+	<rdfs:comment xml:lang="en-US"><![CDATA[Send the data over UDP]]></rdfs:comment>
+	<resultserver:implementation><![CDATA[taoResultsUdp_models_classes_taoResultsUdp]]></resultserver:implementation>
+	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServerModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoResultsUdp.rdf#taoResultsUdpRole">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#ManagementRole"/>
+  	<generis:includesRole rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#BackOfficeRole"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[taoResultsUdpRole]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[taoResultsUdpRole]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoResultsUdp.rdf#BasicUdpServer">
+	<rdfs:label xml:lang="en-US"><![CDATA[Warning : Example of Results Storage Result Server Example (udp)]]></rdfs:label>
+	<rdfs:comment xml:lang="en-US"><![CDATA[This is an example on the minimum required to add a new storgae policy in tao for resutls using basic udp messages]]></rdfs:comment>
+	<resultserver:hasResultServerModel rdf:resource="http://www.tao.lu/Ontologies/taoResultsUdp.rdf#BasicUdpStorage" />
+	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServer"/>
+  </rdf:Description>
+
+</rdf:RDF>

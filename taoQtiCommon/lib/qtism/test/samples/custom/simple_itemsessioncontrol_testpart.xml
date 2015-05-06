@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+    identifier="testId" title="testTitle">
+    <testPart navigationMode="linear" submissionMode="individual" identifier="testPartId">
+        <itemSessionControl maxAttempts="0" allowSkipping="true"/>
+        <assessmentSection identifier="assessmentSectionId" title="assessmentSectionTitle" visible="true" required="true">
+        </assessmentSection>
+    </testPart>
+</assessmentTest>

@@ -1,0 +1,23 @@
+{
+    "bitwise" : true,
+    "camelcase" : true,
+    "curly" : true,
+    "eqeqeq" : true,
+    "freeze" : true,
+    "latedef" : "nofunc",
+    "newcap" : true,
+    "noempty" : true,
+    "undef" : true,
+    "strict" : true,
+    "smarttabs" : true,
+    "immed" : true,
+    "browser" : true,
+    "globals" : {
+        "require" : true,
+        "define" : true,
+        "requirejs" : true,
+        "module" : true,
+        "Modernizr" : true,
+        "JSON" : true
+    }
+}

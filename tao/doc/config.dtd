@@ -1,0 +1,7 @@
+<!-- config root tag -->
+<!ELEMENT config (mode+, params+)>
+	<!ELEMENT mode (#PCDATA)>
+	<!ELEMENT params (param*)>
+	<!ELEMENT param (#PCDATA)>
+			<!ATTLIST param key CDATA #REQUIRED>
+			<!ATTLIST param value CDATA #IMPLIED>

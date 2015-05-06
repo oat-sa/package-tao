@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+	<structure id="subjects" name="Test-takers" level="2" visible="true">
+		<description>Record and manage test takers.</description>
+		<sections>
+			<section id="manage_test_takers" name="Manage test takers" url="/taoSubjects/Subjects/index">
+				<trees>
+					<tree name="Test takers library"
+						className="Test Taker"
+						dataUrl="/taoSubjects/Subjects/getOntologyData"
+						editClassUrl="/taoSubjects/Subjects/editSubjectClass"
+						editInstanceUrl="/taoSubjects/Subjects/editSubject"
+						addInstanceUrl="/taoSubjects/Subjects/addInstance"
+						addSubClassUrl="/taoSubjects/Subjects/addSubClass"
+						deleteUrl="/taoSubjects/Subjects/delete"
+						moveInstanceUrl="/taoSubjects/Subjects/moveInstance"
+					/>
+				</trees>
+				<actions>
+					<action name="search" url="/taoSubjects/Subjects/search" context="*" />
+					<action name="new class" js="subClass" url="/taoSubjects/Subjects/addSubClass" context="class" />
+					<action name="new test taker" js="instanciate" url="/taoSubjects/Subjects/addInstance" context="class" />
+					<action name="delete" js="removeNode" url="/taoSubjects/Subjects/delete" context="resource" />
+					<action name="move" js="moveNode" url="" context="instance" />
+					<action name="lists"  url="/tao/Lists/index"  context="*" />
+					<action name="meta data" js="loadMetaData" url="/tao/MetaData/getMetaData"  context="resource" />
+					<action name="export" url="/tao/Export/index"  context="resource" />
+					<action name="import" url="/taoSubjects/SubjectsImport/index"  context="class" />
+				</actions>
+			</section>
+		</sections>
+	</structure>
+</structures>

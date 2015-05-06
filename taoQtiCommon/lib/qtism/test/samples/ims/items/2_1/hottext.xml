@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+	identifier="IMS00004_StemError" title="Identifying Sentence Errors" adaptive="false"
+	timeDependent="false">
+	<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+		<correctResponse>
+			<value>B</value>
+		</correctResponse>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<itemBody>
+		<rubricBlock view="candidate">
+			<p>Select the error in the following passage of text (or <em>No Error</em> if there is
+				none).</p>
+		</rubricBlock>
+		<hottextInteraction responseIdentifier="RESPONSE" maxChoices="1">
+			<p>Sponsors of the Olympic Games <hottext identifier="A">who bought</hottext>
+				advertising time on United States television <hottext identifier="B">includes</hottext>
+				<hottext identifier="C">at least</hottext> a dozen international firms <hottext
+					identifier="D">whose</hottext> names are familiar to American consumers.
+					<hottext identifier="E">No error.</hottext>
+			</p>
+		</hottextInteraction>
+	</itemBody>
+	<responseProcessing
+		template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+</assessmentItem>

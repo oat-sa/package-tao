@@ -1,0 +1,764 @@
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/** Use icon within sass: @inclue icon('down'); */
+/* Fade animation */
+@keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-webkit-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-moz-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-o-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+/* Repeat animation */
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-before, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-before { content: "\123"; }
+
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-behind, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-behind { content: "\124"; }
+
+.qti-choiceInteraction .checked span.icon-radio:before { content: "\1b1"; }
+
+.qti-choiceInteraction .checked span.icon-checkbox:before { content: "\1b4"; }
+
+html, button, input, select, textarea { color: #222222; background: white; border-width: 1px; }
+
+html { line-height: 1.4; }
+
+html { font-size: 62.5%; }
+
+body { font-size: 14px; background-color: white; }
+
+h1 { font-size: 24px; font-size: 2.4rem; }
+
+h2 { font-size: 22px; font-size: 2.2rem; }
+
+h3 { font-size: 20px; font-size: 2rem; }
+
+h4 { font-size: 18px; font-size: 1.8rem; }
+
+h5 { font-size: 16px; font-size: 1.6rem; }
+
+h6 { font-size: 14px; font-size: 1.4rem; }
+
+/* Remove text-shadow in selection highlight: h5bp.com/i These selection rule sets have to be separate. Customize the background color to match your design. */
+::-moz-selection { background: #b3d4fc; text-shadow: none; }
+
+::selection { background: #b3d4fc; text-shadow: none; }
+
+/* A better looking default horizontal rule */
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+/* Remove the gap between images, videos, audio and canvas and the bottom of their containers: h5bp.com/i/440 */
+audio, canvas, img, video { vertical-align: middle; }
+
+/* Remove default fieldset styles. */
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* Allow only vertical resizing of textareas. */
+textarea { resize: vertical; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Clearfix: contain floats  For modern browsers 1. The space content is one way to avoid an Opera bug when the `contenteditable` attribute is included anywhere else in the document. Otherwise it causes space to appear at the top and bottom of elements that receive the `clearfix` class. 2. The use of `table` rather than `block` is only necessary if using `:before` to contain the top-margins of child elements. */
+.clearfix:before, .block-listing.horizontal:before, .qti-associateInteraction .result-area > li:before, .clearfix:after, .block-listing.horizontal:after, .qti-associateInteraction .result-area > li:after { content: " "; /* 1 */ display: table; /* 2 */ }
+
+.clearfix:after, .block-listing.horizontal:after, .qti-associateInteraction .result-area > li:after { clear: both; }
+
+/* For IE 6/7 only Include this rule to trigger hasLayout and contain floats. */
+.clearfix, .block-listing.horizontal, .qti-associateInteraction .result-area > li { background-repeat: no-repeat; }
+
+/* ========================================================================== EXAMPLE Media Queries for Responsive Design. These examples override the primary ('mobile first') styles. Modify as content requires. ========================================================================== */
+@media only screen and (min-width: 35em) { /* Style adjustments for viewports that meet the condition */ }
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) { /* Style adjustments for high resolution devices */ }
+/* ========================================================================== Print styles. Inlined to avoid required HTTP connection: h5bp.com/r ========================================================================== */
+@media print { * { background: transparent !important; color: #000 !important; /* Black prints faster: h5bp.com/s */ box-shadow: none !important; text-shadow: none !important; }
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  /* Don't show links for images, or javascript/internal links */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; /* h5bp.com/t */ }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; } }
+.qti-item { padding: 15px; background: white; margin: auto; max-width: 1024px; }
+.qti-item.runtime { min-height: 100%; }
+.qti-item [class*="col-"] img { max-width: auto; }
+
+.runtime .block-listing > li:hover, .qti-associateInteraction .empty:hover, .qti-graphicGapMatchInteraction ul.source > li:hover, .qti-graphicGapMatchInteraction ul.source > li.active.selectable:hover, .qti-graphicOrderInteraction ul.ordinals > li:hover, .qti-hottextInteraction .hottext:hover, .qti-gapMatchInteraction .gapmatch-content:hover { background: #f2f6f9 !important; cursor: pointer !important; }
+
+.runtime .block-listing > li.active:hover, .qti-associateInteraction .result-area > li > .target.active:hover { background: #e9f0f5 !important; }
+
+#modalFeedbacks { max-height: 0; }
+
+.mini-tlb .tlb-button { color: #222222 !important; padding-top: 3px; }
+.mini-tlb .tlb-button:hover { color: #3e7da7 !important; }
+.mini-tlb ul[data-button-group] { background: transparent !important; border: none; }
+.mini-tlb ul[data-button-group] > li { display: none; background: transparent !important; min-width: 0; padding: 0; float: none; }
+.mini-tlb ul[data-button-group] > li span { color: #222222; text-shadow: none !important; }
+.mini-tlb ul[data-button-group] > li.active { display: inline-block; }
+
+.edit-question .qti-blockInteraction .horizontal .add-option { margin-top: 25px; }
+.edit-question .qti-blockInteraction .horizontal .qti-choice { margin-top: 25px; }
+.edit-question .qti-blockInteraction .horizontal .qti-choice .mini-tlb { white-space: nowrap; top: -26px; right: -4px; }
+.edit-question .qti-blockInteraction .horizontal .qti-choice .mini-tlb .tlb-button { min-width: 25px; height: 20px; margin: 0; }
+
+.qti-choice p:last-child, .qti-prompt-container p:last-child { margin-bottom: 0 !important; }
+
+.runtime .block-listing > li.active { border-color: #3e7da7 !important; }
+
+.block-listing > li { border: 1px solid #e0e0e0; border-radius: 2px; -webkit-border-radius: 2px; background: transparent; padding: 5px; margin: 3px; cursor: pointer; position: relative; }
+.block-listing.horizontal > li { display: block; float: left; }
+.block-listing.solid, .block-listing.bordered { padding-top: 3px; padding-right: 3px; padding-bottom: 3px; }
+.block-listing.solid.none, .block-listing.bordered.none { padding-left: 3px; }
+
+.qti-block { border: 1px solid transparent; }
+
+.qti-interaction .solid { border: 6px solid #f5f3f2; }
+.qti-interaction .bordered { border: 1px solid #e0e0e0; border-radius: 2px; -webkit-border-radius: 2px; background: white; }
+.qti-interaction .empty { border: 1px #3e7da7 dashed !important; min-height: 50px; cursor: default; }
+.qti-interaction .add-option { border: 1px #3e7da7 dashed !important; list-style-type: none; position: relative; cursor: pointer !important; color: #0e5d91 !important; border-radius: 3px; background-color: #e6eef4; }
+.qti-interaction .add-option [class^="icon-"], .qti-interaction .add-option [class*=" icon-"] { font-size: 14px; font-size: 1.4rem; position: relative; top: 1px; left: 2px; color: #0e5d91; padding-right: 5px; }
+.qti-interaction .add-option > div { display: table; width: 100%; height: 100%; }
+.qti-interaction .add-option > div [class^="icon-"], .qti-interaction .add-option > div [class*=" icon-"] { display: table-cell; font-size: 60px; font-size: 6rem; position: static !important; vertical-align: middle; width: 100%; height: 100%; text-align: center; top: 0; left: auto; padding: 0; }
+.qti-interaction .add-option:hover { opacity: 0.8; }
+.qti-interaction input[type="color"], .qti-interaction input[type="date"], .qti-interaction input[type="datetime"], .qti-interaction input[type="datetime-local"], .qti-interaction input[type="email"], .qti-interaction input[type="month"], .qti-interaction input[type="number"], .qti-interaction input[type="range"], .qti-interaction input[type="search"], .qti-interaction input[type="tel"], .qti-interaction input[type="time"], .qti-interaction input[type="text"], .qti-interaction input[type="password"], .qti-interaction input[type="url"], .qti-interaction input[type="week"], .qti-interaction textarea, .qti-interaction select { border-top-color: #aaa; border-left-color: #aaaaaa; }
+
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/** Use icon within sass: @inclue icon('down'); */
+/* Fade animation */
+@keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-webkit-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-moz-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-o-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+/* Repeat animation */
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-before, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-before { content: "\123"; }
+
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-behind, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-behind { content: "\124"; }
+
+.qti-choiceInteraction .checked span.icon-radio:before { content: "\1b1"; }
+
+.qti-choiceInteraction .checked span.icon-checkbox:before { content: "\1b4"; }
+
+.qti-choiceInteraction .qti-choice .real-label { top: 1px; }
+.qti-choiceInteraction .block-listing > li { margin-top: 0; margin-bottom: 0; border-top: none; border-bottom: none; -moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px; }
+.qti-choiceInteraction .block-listing > li:first-child { margin-top: 3px; border-top: 1px solid #eee; -webkit-border-top-left-radius: 2px; -webkit-border-top-right-radius: 2px; -moz-border-radius-topleft: 2px; -moz-border-radius-topright: 2px; border-top-left-radius: 2px; border-top-right-radius: 2px; }
+.qti-choiceInteraction .block-listing > li:last-child { margin-bottom: 3px; border-bottom: 1px solid #eee; -webkit-border-bottom-right-radius: 2px; -webkit-border-bottom-left-radius: 2px; -moz-border-radius-bottomright: 2px; -moz-border-radius-bottomleft: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; }
+.qti-choiceInteraction .real-label input { position: absolute; left: -10000px; }
+
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/** Use icon within sass: @inclue icon('down'); */
+/* Fade animation */
+@keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-webkit-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-moz-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-o-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+/* Repeat animation */
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-before, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-before { content: "\123"; }
+
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-behind, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-behind { content: "\124"; }
+
+.qti-choiceInteraction .checked span.icon-radio:before { content: "\1b1"; }
+
+.qti-choiceInteraction .checked span.icon-checkbox:before { content: "\1b4"; }
+
+.qti-orderInteraction .arrow-bar { text-align: center; }
+.qti-orderInteraction .arrow-bar span { margin: 3px auto; font-size: 25px; font-size: 2.5rem; color: #909090; background: #f9f8f7; cursor: default; height: 40px; }
+.qti-orderInteraction .arrow-bar span.active { background: #f3f1ef; cursor: pointer; color: #222222; }
+.qti-orderInteraction .arrow-bar span.active:hover { color: white; background: #3e7da7; }
+.qti-orderInteraction .arrow-bar span.triggered { color: white; background: #3e7da7; }
+.qti-orderInteraction.qti-vertical .order-interaction-area { display: table; border-collapse: separate; border-spacing: 5px 5px 5px 0; width: 100%; }
+.qti-orderInteraction.qti-vertical ul.source, .qti-orderInteraction.qti-vertical ul.target, .qti-orderInteraction.qti-vertical ol.source, .qti-orderInteraction.qti-vertical ol.target { display: table-cell; width: 43%; }
+.qti-orderInteraction.qti-vertical .arrow-bar { display: table-cell; vertical-align: middle; padding: 5px; }
+.qti-orderInteraction.qti-vertical .arrow-bar span { padding: 8px 0; display: block; width: 50px; }
+.qti-orderInteraction.qti-vertical .arrow-bar span.inactive { visibility: hidden; }
+.qti-orderInteraction.qti-vertical .arrow-bar.middle span.inactive { display: none; }
+.qti-orderInteraction.qti-horizontal .block-listing { min-height: 38px; }
+.qti-orderInteraction.qti-horizontal .arrow-bar { margin-bottom: 10px; }
+.qti-orderInteraction.qti-horizontal .arrow-bar span { padding: 0 15px; display: inline-block; line-height: 1.6; }
+.qti-orderInteraction.qti-horizontal .arrow-bar span.inactive { visibility: hidden; }
+
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/** Use icon within sass: @inclue icon('down'); */
+/* Fade animation */
+@keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-webkit-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-moz-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-o-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+/* Repeat animation */
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-before, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-before { content: "\123"; }
+
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-behind, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-behind { content: "\124"; }
+
+.qti-choiceInteraction .checked span.icon-radio:before { content: "\1b1"; }
+
+.qti-choiceInteraction .checked span.icon-checkbox:before { content: "\1b4"; }
+
+.qti-extendedTextInteraction input { width: 100%; }
+.qti-extendedTextInteraction .solid > li, .qti-extendedTextInteraction .bordered > li { padding: 0; border: none; }
+.qti-extendedTextInteraction .solid ~ input, .qti-extendedTextInteraction .solid ~ textarea, .qti-extendedTextInteraction .bordered ~ input, .qti-extendedTextInteraction .bordered ~ textarea { border: 1px solid #eeeeee; border-radius: 2px; -webkit-border-radius: 2px; }
+.qti-extendedTextInteraction .active > input, .qti-extendedTextInteraction .active > textarea, .qti-extendedTextInteraction .active input.active, .qti-extendedTextInteraction .active textarea.active { border-color: #3e7da7; }
+.qti-extendedTextInteraction textarea { max-width: 100% !important; width: 100%; height: 150px; resize: none; }
+.qti-extendedTextInteraction textarea[disabled="disabled"] { background-color: white; opacity: 1 !important; }
+
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/** Use icon within sass: @inclue icon('down'); */
+/* Fade animation */
+@keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-webkit-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-moz-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-o-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+/* Repeat animation */
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-before, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-before { content: "\123"; }
+
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-behind, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-behind { content: "\124"; }
+
+.qti-choiceInteraction .checked span.icon-radio:before { content: "\1b1"; }
+
+.qti-choiceInteraction .checked span.icon-checkbox:before { content: "\1b4"; }
+
+.qti-associateInteraction .empty { cursor: pointer; min-height: 0; }
+.qti-associateInteraction .choice-area { margin-bottom: 30px; }
+.qti-associateInteraction .choice-area .deactivated { opacity: 0.2; cursor: default !important; }
+.qti-associateInteraction .choice-area > .qti-choice { min-width: 100px; min-height: 30px; max-width: 150px; }
+.qti-associateInteraction .result-area { width: 40%; min-width: 260px; margin: auto; }
+.qti-associateInteraction .result-area > li { display: block; margin-bottom: 30px; position: relative; }
+.qti-associateInteraction .result-area > li:before { border-top: 1px solid #86aec8; display: block; width: 80%; left: 10%; height: 1px; position: absolute; z-index: 1; top: 50%; }
+.qti-associateInteraction .result-area > li > .target { background: white; padding: 5px; margin: 5px; float: right; position: relative; z-index: 2; min-width: 100px; min-height: 30px; max-width: 150px; max-height: 150px; outline: 5px #f5f3f2 solid; border: 1px solid #eeeeee; border-radius: 2px; -webkit-border-radius: 2px; overflow: hidden; }
+.qti-associateInteraction .result-area > li > .target.active { border-color: #3e7da7; }
+.qti-associateInteraction .result-area > li > .target:first-child { float: left; }
+.qti-associateInteraction .result-area > li.removing > div { background-color: #eee; }
+.qti-associateInteraction .result-area > li.incomplete-pair { display: none; }
+.qti-associateInteraction .result-area > li.incomplete-pair > div { border: 1px dashed #ccc; }
+.qti-associateInteraction .result-area .remove-choice { cursor: pointer; position: absolute; right: 0; bottom: 0; margin: 0 2px 2px 0; color: #0e5d91; }
+.qti-associateInteraction .result-area .remove-choice:hover { opacity: 0.6; }
+.qti-associateInteraction .result-area .filled { cursor: pointer; }
+.qti-associateInteraction .result-area .filled:hover { background: #f2f6f9; }
+
+.result-area > li > div.filled ~ div.filled:before { border-top: 1px solid #86c8a5 !important; }
+
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/** Use icon within sass: @inclue icon('down'); */
+/* Fade animation */
+@keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-webkit-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-moz-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-o-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+/* Repeat animation */
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-before, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-before { content: "\123"; }
+
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-behind, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-behind { content: "\124"; }
+
+.qti-choiceInteraction .checked span.icon-radio:before { content: "\1b1"; }
+
+.qti-choiceInteraction .checked span.icon-checkbox:before { content: "\1b4"; }
+
+.qti-matchInteraction .matrix { table-layout: fixed; }
+.qti-matchInteraction .matrix tbody [data-edit] { width: 30px; }
+
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/** Use icon within sass: @inclue icon('down'); */
+/* Fade animation */
+@keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-webkit-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-moz-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-o-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+/* Repeat animation */
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-before, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-before { content: "\123"; }
+
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-behind, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-behind { content: "\124"; }
+
+.qti-choiceInteraction .checked span.icon-radio:before { content: "\1b1"; }
+
+.qti-choiceInteraction .checked span.icon-checkbox:before { content: "\1b4"; }
+
+.qti-mediaInteraction .mejs-container iframe { min-height: inherit; }
+.qti-mediaInteraction .overlay { background: #000; z-index: 999; position: relative; opacity: 0; width: 100%; height: 100%; }
+
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/** Use icon within sass: @inclue icon('down'); */
+/* Fade animation */
+@keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-webkit-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-moz-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-o-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+/* Repeat animation */
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-before, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-before { content: "\123"; }
+
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-behind, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-behind { content: "\124"; }
+
+.qti-choiceInteraction .checked span.icon-radio:before { content: "\1b1"; }
+
+.qti-choiceInteraction .checked span.icon-checkbox:before { content: "\1b4"; }
+
+.qti-graphicInteraction .source li > img { display: block; }
+.qti-graphicInteraction .active > input, .qti-graphicInteraction .active > textarea, .qti-graphicInteraction .active input.active, .qti-graphicInteraction .active textarea.active { border-color: #3e7da7; }
+.qti-graphicInteraction .image-editor { position: relative; float: left; padding: 3px; }
+.qti-graphicInteraction .image-editor .mapping-editor { display: none; position: absolute; width: 150px; height: 150px; text-align: left; z-index: 10009; }
+.qti-graphicInteraction .main-image-box { margin: 0 auto; padding: 0; text-align: center; overflow: visible; }
+
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/** Use icon within sass: @inclue icon('down'); */
+/* Fade animation */
+@keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-webkit-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-moz-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-o-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+/* Repeat animation */
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-before, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-before { content: "\123"; }
+
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-behind, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-behind { content: "\124"; }
+
+.qti-choiceInteraction .checked span.icon-radio:before { content: "\1b1"; }
+
+.qti-choiceInteraction .checked span.icon-checkbox:before { content: "\1b4"; }
+
+.qti-graphicGapMatchInteraction ul.source { width: 100%; margin: 10px auto; padding: 3px !important; clear: both; min-height: 60px; }
+.qti-graphicGapMatchInteraction ul.source > li { min-width: 60px; line-height: 60px; min-height: 60px; text-align: center; font-size: 20px; font-size: 2rem; margin: 0 3px 3px 0 !important; padding: 0; background: white; border: solid 1px #ddd !important; cursor: pointer; }
+.qti-graphicGapMatchInteraction ul.source > li.active { border: solid 1px #3e7da7 !important; -webkit-transition: background 0.4s ease-out; -moz-transition: background 0.4s ease-out; -o-transition: background 0.4s ease-out; transition: background 0.4s ease-out; }
+.qti-graphicGapMatchInteraction ul.source > li.active:hover { background: white !important; cursor: default !important; }
+.qti-graphicGapMatchInteraction ul.source > li.active.selectable:hover { cursor: pointer !important; }
+.qti-graphicGapMatchInteraction ul.source > li.disabled { border: none; cursor: default !important; color: #333 !important; background-color: transparent !important; }
+.qti-graphicGapMatchInteraction ul.source > li img { display: block; }
+.qti-graphicGapMatchInteraction .gap-filler { display: block; position: absolute; z-index: 20000; }
+
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/** Use icon within sass: @inclue icon('down'); */
+/* Fade animation */
+@keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-webkit-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-moz-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-o-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+/* Repeat animation */
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-before, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-before { content: "\123"; }
+
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-behind, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-behind { content: "\124"; }
+
+.qti-choiceInteraction .checked span.icon-radio:before { content: "\1b1"; }
+
+.qti-choiceInteraction .checked span.icon-checkbox:before { content: "\1b4"; }
+
+.qti-graphicOrderInteraction ul.ordinals { width: 100%; margin: 10px auto; padding: 0 !important; clear: both; min-height: 54px; }
+.qti-graphicOrderInteraction ul.ordinals > li { width: 30px; line-height: 30px; text-align: center; font-size: 20px; font-size: 2rem; margin: 0; background: white; margin-right: 1px; }
+.qti-graphicOrderInteraction ul.ordinals > li:hover { cursor: pointer; }
+.qti-graphicOrderInteraction ul.ordinals > li.active { border: solid 1px #3e7da7; -webkit-transition: background 0.4s ease-out; -moz-transition: background 0.4s ease-out; -o-transition: background 0.4s ease-out; transition: background 0.4s ease-out; }
+.qti-graphicOrderInteraction ul.ordinals > li.active:hover { background: white !important; cursor: default !important; }
+.qti-graphicOrderInteraction ul.ordinals > li.disabled { border: none; cursor: default !important; color: #666 !important; background-color: transparent !important; }
+
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/** Use icon within sass: @inclue icon('down'); */
+/* Fade animation */
+@keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-webkit-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-moz-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-o-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+/* Repeat animation */
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-before, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-before { content: "\123"; }
+
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-behind, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-behind { content: "\124"; }
+
+.qti-choiceInteraction .checked span.icon-radio:before { content: "\1b1"; }
+
+.qti-choiceInteraction .checked span.icon-checkbox:before { content: "\1b4"; }
+
+.qti-SelectPointInteraction .txt-success:hover { background: transparent !important; }
+
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/** Use icon within sass: @inclue icon('down'); */
+/* Fade animation */
+@keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-webkit-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-moz-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-o-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+/* Repeat animation */
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-before, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-before { content: "\123"; }
+
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-behind, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-behind { content: "\124"; }
+
+.qti-choiceInteraction .checked span.icon-radio:before { content: "\1b1"; }
+
+.qti-choiceInteraction .checked span.icon-checkbox:before { content: "\1b4"; }
+
+.qti-hottextInteraction .hottext { background: #f3f1ef; padding-right: 5px; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; position: relative; }
+.qti-hottextInteraction .hottext.error { color: #ba122b; }
+.qti-hottextInteraction .hottext .hottext-checkmark { padding-right: 0; min-width: auto; width: auto; }
+.qti-hottextInteraction .hottext [class^="icon-"].small, .qti-hottextInteraction .hottext [class*=" icon-"].small { font-size: 12px; font-size: 1.2rem; text-shadow: none; line-height: 10px; top: 1px; }
+.qti-hottextInteraction .hottext [class^="icon-"].error, .qti-hottextInteraction .hottext [class*=" icon-"].error { color: #ba122b; }
+.qti-hottextInteraction .hottext .mini-tlb[data-edit] { top: -2px; }
+.qti-hottextInteraction .hottext .mini-tlb[data-edit].icon-undo { padding-right: 8px; }
+.qti-hottextInteraction .hottext .mini-tlb[data-edit] label { padding: 0 3px; }
+.qti-hottextInteraction .hottext .mini-tlb[data-edit] [data-role="score"] { width: 30px; }
+
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/** Use icon within sass: @inclue icon('down'); */
+/* Fade animation */
+@keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-webkit-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-moz-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-o-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+/* Repeat animation */
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-before, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-before { content: "\123"; }
+
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-behind, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-behind { content: "\124"; }
+
+.qti-choiceInteraction .checked span.icon-radio:before { content: "\1b1"; }
+
+.qti-choiceInteraction .checked span.icon-checkbox:before { content: "\1b4"; }
+
+.qti-gapMatchInteraction .gapmatch-content { background: #f3f1ef; color: #222222; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; position: relative; top: 0px; min-width: 45px; min-height: 20px; display: inline-block; }
+.qti-gapMatchInteraction .gapmatch-content audio, .qti-gapMatchInteraction .gapmatch-content canvas, .qti-gapMatchInteraction .gapmatch-content img, .qti-gapMatchInteraction .gapmatch-content video { vertical-align: baseline; }
+.qti-gapMatchInteraction .gapmatch-content.empty { min-height: 20px; }
+.qti-gapMatchInteraction .gapmatch-content .remove { float: right; }
+.qti-gapMatchInteraction .gapmatch-content.filled { top: 0 !important; }
+.qti-gapMatchInteraction .choice-area .deactivated { cursor: default; opacity: 0.2; }
+
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/** Use icon within sass: @inclue icon('down'); */
+/* Fade animation */
+@keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-webkit-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-moz-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-o-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+/* Repeat animation */
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-before, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-before { content: "\123"; }
+
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-behind, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-behind { content: "\124"; }
+
+.qti-choiceInteraction .checked span.icon-radio:before { content: "\1b1"; }
+
+.qti-choiceInteraction .checked span.icon-checkbox:before { content: "\1b4"; }
+
+.qti-sliderInteraction .ui-slider-horizontal { margin: 0 20px; }
+.qti-sliderInteraction .ui-slider-vertical { margin: 0 20px; display: inline-block; }
+.qti-sliderInteraction .qti-slider-values { position: relative; }
+.qti-sliderInteraction.qti-slider-horizontal .qti-slider-values { height: 20px; margin: 0 20px; }
+.qti-sliderInteraction.qti-slider-horizontal .slider-min, .qti-sliderInteraction.qti-slider-horizontal .slider-max, .qti-sliderInteraction.qti-slider-horizontal .slider-middle { position: absolute; width: 40px; margin-left: -20px; text-align: center; font-size: 12px; font-size: 1.2rem; }
+.qti-sliderInteraction.qti-slider-horizontal .slider-min { left: 0%; }
+.qti-sliderInteraction.qti-slider-horizontal .slider-max { left: 100%; }
+.qti-sliderInteraction.qti-slider-vertical .qti-slider-values { width: 30px; display: inline-block; }
+.qti-sliderInteraction.qti-slider-vertical .slider-min, .qti-sliderInteraction.qti-slider-vertical .slider-max, .qti-sliderInteraction.qti-slider-vertical .slider-middle { position: absolute; }
+.qti-sliderInteraction.qti-slider-vertical .slider-min { bottom: -10px; }
+.qti-sliderInteraction.qti-slider-vertical .slider-max { top: -10px; }
+.qti-sliderInteraction.qti-slider-vertical .ui-slider-handle { width: 17px !important; height: 10px !important; margin-left: -4px !important; }
+
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/** Use icon within sass: @inclue icon('down'); */
+/* Fade animation */
+@keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-webkit-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-moz-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-o-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+/* Repeat animation */
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-before, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-before { content: "\123"; }
+
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-behind, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-behind { content: "\124"; }
+
+.qti-choiceInteraction .checked span.icon-radio:before { content: "\1b1"; }
+
+.qti-choiceInteraction .checked span.icon-checkbox:before { content: "\1b4"; }
+
+.qti-inlineChoiceInteraction { min-width: 150px; }
+
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/** Use icon within sass: @inclue icon('down'); */
+/* Fade animation */
+@keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-webkit-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-moz-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-o-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+/* Repeat animation */
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-before, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-before { content: "\123"; }
+
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-behind, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-behind { content: "\124"; }
+
+.qti-choiceInteraction .checked span.icon-radio:before { content: "\1b1"; }
+
+.qti-choiceInteraction .checked span.icon-checkbox:before { content: "\1b4"; }
+
+.qti-textEntryInteraction { /*background: rgba($uiClickableDefaultBg, .85);*/ /*padding: 50px 10px 10px 30px;*/ }
+.qti-textEntryInteraction table { border-collapse: separate; border-spacing: 2px; }
+.qti-textEntryInteraction tr { height: 27px; white-space: nowrap; }
+.qti-textEntryInteraction .icon-bin, .qti-textEntryInteraction .icon-pin, .qti-textEntryInteraction .icon-shuffle { text-align: center; padding: 0 5px; cursor: pointer; vertical-align: middle; }
+.qti-textEntryInteraction .icon-radio, .qti-textEntryInteraction .icon-checkbox, .qti-textEntryInteraction .icon-radio-checked, .qti-textEntryInteraction .icon-checkbox-checked { font-size: 13px !important; }
+.qti-textEntryInteraction .icon-bin:hover, .qti-textEntryInteraction .icon-pin:hover, .qti-textEntryInteraction .icon-shuffle:hover { color: #3e7da7; }
+.qti-textEntryInteraction td[contenteditable], .qti-textEntryInteraction .main-option { padding: 0 7px; background: white; border: 1px solid #dddddd; border-radius: 2px; -webkit-border-radius: 2px; }
+.qti-textEntryInteraction .main-option { border-top: 1px #dddddd solid; border-bottom: 1px #dddddd solid; padding-right: 29px; min-width: 180px; }
+
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/** Use icon within sass: @inclue icon('down'); */
+/* Fade animation */
+@keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-webkit-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-moz-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-o-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+/* Repeat animation */
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-before, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-before { content: "\123"; }
+
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-behind, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-behind { content: "\124"; }
+
+.qti-choiceInteraction .checked span.icon-radio:before { content: "\1b1"; }
+
+.qti-choiceInteraction .checked span.icon-checkbox:before { content: "\1b4"; }
+
+.qti-uploadInteraction { padding: 6px 6px 0 6px; }
+.qti-uploadInteraction .grid-row { margin-bottom: 0 !important; }
+.qti-uploadInteraction .progressbar { margin-bottom: 6px; }
+.qti-uploadInteraction .btn-info { padding-top: 0 !important; }
+.qti-uploadInteraction .file-name { padding: 2px 3px !important; }
+
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/** Use icon within sass: @inclue icon('down'); */
+/* Fade animation */
+@keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-webkit-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-moz-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@-o-keyframes fade { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+
+/* Repeat animation */
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-before, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-before { content: "\123"; }
+
+.qti-orderInteraction.qti-vertical .arrow-bar .icon-move-behind, .qti-orderInteraction.qti-horizontal .arrow-bar span.icon-move-behind { content: "\124"; }
+
+.qti-choiceInteraction .checked span.icon-radio:before { content: "\1b1"; }
+
+.qti-choiceInteraction .checked span.icon-checkbox:before { content: "\1b4"; }
+
+.qti-rubricBlock .qti-rubricBlock-body { border: 1px solid transparent; }
+.qti-rubricBlock > .col-12 { border: 1px solid #DDD !important; background-color: rgba(243, 241, 239, 0.3); }
+
+#qti-submit-response { display: block; width: 100px; margin-top: 20px; margin-right: auto; margin-left: auto; }
+
+/* Below is a temporary solution to address Bug #2768. Eventually this will be fixed by implementing feature #2771. */
+.qti-simpleChoice .mini-tlb[data-edit="question"] { right: -45px !important; top: 3px; }
+
+.qti-hottextInteraction .mini-tlb { right: -31px !important; }
+
+.qti-interaction .qti-prompt ~ .mini-tlb { right: -31px !important; top: 1px; }
+
+.widget-textBlock .mini-tlb { right: -60px !important; }
+
+.qti-flow-container .mini-tlb { right: -31px !important; }
+
+/* end tmp fix #2768 */

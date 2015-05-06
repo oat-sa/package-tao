@@ -1,0 +1,141 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2009-2012 (original work) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ *               
+ * 
+ */
+body {
+	margin:0px;
+	padding:0px;
+	font-size:12px;
+	font-family:Verdana,Arial,sans-serif;
+}
+a img{
+	border-style:none;
+}
+a{
+	text-decoration:none;
+}
+div#header{
+	width:94%;
+	margin:1% auto 1% auto;
+	text-align:center;
+	font-size:1.1em;
+	font-weight:bold;
+	padding:5px 0.5% 5px 0.5%;
+}
+div#main-container{
+	width:95%;
+	margin:10px auto;
+}
+div#file-browser{
+	border:none;
+	float:left;
+	width:38%;
+	height:94.5%;
+	margin-right:1.5%;
+}
+div#file-container-title{
+	padding:0.5% 1% 0.5% 1%;
+}
+div#file-container{
+	border:solid 1px #ccc;
+	border-top:none;
+	padding:1%;
+	overflow-y:auto;
+}
+div#file-data-container{
+	float:left;
+	width:60.5%;
+	height:100%;
+	background-color:#eee;
+}
+#file-data-container .ui-state-highlight,
+#file-data-container .ui-state-default,
+#file-data-container .ui-widget-content{
+	padding:10px;
+	margin:5px;
+}
+.data-container{
+	background-color:#ddd;
+	font-family:Courier;
+	font-size: 12px;
+	color:#000;
+}
+span.form-label{
+	width:100px;
+	position:absolute;
+}
+input{
+	margin-left:100px;
+}
+
+ul#actions {
+	padding: 0;
+	margin: 10px auto;
+	display: block;
+}
+
+ul#actions li {
+	display: inline-block;
+	padding: 5px 3px;
+}
+
+ul#actions li:hover {
+	background-color: rgba(238, 238, 238, 0.8);
+	box-shadow: 0 0 3px #000;
+}
+
+ul#actions a {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: top center;
+	width: 88px;
+	text-align: center;
+	padding-top: 50px;
+}
+
+.link.select { background-image: url(../img/select.png) }
+.link.select.disabled { background-image: url(../img/select_disabled.png) }
+.link.root { background-image: url(../img/root.png) }
+.link.root.disabled { background-image: url(../img/root_disabled.png) }
+.link.new-dir { background-image: url(../img/folder-new.png) }
+.link.new-dir.disabled { background-image: url(../img/folder-new_disabled.png) }
+.link.copy-url { background-image: url(../img/copy.png) }
+.link.copy-url.disabled { background-image: url(../img/copy_disabled.png) }
+.link.download { background-image: url(../img/download.png) }
+.link.download.disabled { background-image: url(../img/download_disabled.png) }
+.link.delete { background-image: url(../img/delete.png) }
+.link.delete.disabled { background-image: url(../img/delete_disabled.png) }
+.link.disabled { cursor: not-allowed }
+
+#file-preview{
+	overflow: auto;
+}
+
+.active{
+	background-color: #dfdfdf;
+}
+
+ul.jqueryFileTree A:hover{
+	background-color: #efefef;
+}
+
+#button-submit{cursor: pointer;}
+
+#url{
+	overflow-x: auto;
+}

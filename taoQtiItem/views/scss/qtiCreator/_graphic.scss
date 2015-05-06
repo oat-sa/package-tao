@@ -1,0 +1,68 @@
+@import "inc/bootstrap";
+
+.qti-graphicInteraction { 
+    
+    .dummy-element{
+        cursor: pointer;
+    }
+
+    .image-sidebar {
+        float: left;
+        width: 50px;
+        height: 100%;
+        min-height: 280px;
+        top: 0;
+        z-index: 1000;
+
+        .forms {
+            overflow: hidden;
+            min-height: 230px;
+            @include font-size(40);
+            border-right: solid 1px #fff;
+            li {
+                border: 1px solid transparent;
+                line-height: 40px;
+                padding: 5px 0 3px 0;
+                cursor: pointer;
+                text-align: center;
+                &.active {
+                    color: whiten($info, .2);
+                }
+                &:hover {
+                    background: $uiClickableHoverBg;
+                    color: $textHighlight;
+                }
+                &.separator {
+                    height: 1px;
+                    background-color: #ccc;
+                    padding: 0;
+                    margin: 0 3px;
+                }
+                &.disabled {
+                    background: whiten($uiClickableDefaultBg, .4) !important;
+                    color: #ccc !important;
+                }
+                &.bin {
+                    color: whiten($error, .2);
+                }
+                &.bin:hover {
+                    background: $error;
+                    color: $textHighlight;
+                }
+            }
+        }
+        & ~ .image-editor {
+            min-height: 292px;
+            float: left;
+        }
+        &.tall{
+            min-height: 320px;
+            .forms {
+                min-height: 320px;
+            }
+            & ~ .image-editor {
+                min-height: 332px;
+            }
+        }
+    }
+}

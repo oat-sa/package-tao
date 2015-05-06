@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JQuery Validator Tests</title>
+        <link rel="stylesheet" type="text/css" href="/tao/views/js/lib/qunit/qunit.css">
+        <script type="text/javascript" src="/tao/views/js/lib/require.js"></script>
+        <script type="text/javascript" src="/tao/views/js/lib/qunit/qunit.js"></script>
+
+        <script  type="text/javascript">
+            QUnit.config.autostart = false;
+            require(['/tao/ClientConfig/config'], function() {
+                require(['test/core/validator/validateForm/test'], function() {
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body class="tao-scope">
+        <div id="qunit"></div>
+        <div id="qunit-fixture"> 
+            <form id="form1">
+                <input id="text0" type="text" data-validate="" data-validate-option="$allowEmpty"/>
+                <input id="text1" type="text" data-validate="$notEmpty; $pattern(pattern=[A-Z][a-z]{3,}, modifier=i)" />
+                <input id="text2" type="text" />
+            </form>
+        </div>
+    </body>
+</html>

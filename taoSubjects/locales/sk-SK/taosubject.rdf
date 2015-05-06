@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage sk-SK
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAOSubject.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sk-SK
+    @source Test-taker
+    @subject http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="sk-SK"><![CDATA[Test-taker]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sk-SK
+    @source The Test-taker class
+    @subject http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="sk-SK"><![CDATA[The Test-taker class]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOSubject.rdf#SubjectsManagerRole">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sk-SK
+    @source Test Takers Manager
+    @subject http://www.tao.lu/Ontologies/TAOSubject.rdf#SubjectsManagerRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="sk-SK"><![CDATA[Test Takers Manager]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage sk-SK
+    @source The Test Takers Manager Role
+    @subject http://www.tao.lu/Ontologies/TAOSubject.rdf#SubjectsManagerRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="sk-SK"><![CDATA[The Test Takers Manager Role]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

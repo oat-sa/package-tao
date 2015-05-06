@@ -1,0 +1,54 @@
+@import "inc/bootstrap";
+.qti-associateInteraction {
+
+
+    .add-option{
+        position:relative;
+        padding: 5px 5px 5px 6px;
+        .icon-add{
+            font-size: 1.8rem;
+            left: 6px;
+            position: absolute;
+            top: 5px;
+        }
+    }
+
+    .choice-area {
+        .qti-choice {
+            &:not(th) {
+                azimuth: nonsense;
+                @include simple-border();
+                //border-color: #ddd !important;
+                &:hover {
+                    border-color: mix(#fff, $info, 20%);
+                }
+            }
+            & .mini-tlb[data-edit]{
+                top:-30px !important;
+            }
+        }
+    }
+
+    .result-area > li {
+        & > .mini-tlb[data-edit]{
+            top:40%;
+            right:-150px;
+        }
+        & > .target[data-edit] {
+            float: none;
+            position: absolute;
+            right: -230px;
+            outline: none;
+            width: 200px;
+            border: none;
+            cursor: default;
+            .col-3, .col-4, .col-5 {
+                text-align: center;
+                label {
+                    position: relative;
+                    top: 5px
+                }
+            }
+        }
+    }
+}

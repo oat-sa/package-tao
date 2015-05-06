@@ -1,0 +1,294 @@
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/**
+ * Use icon within sass: @inclue icon('down');
+ */
+/*
+ * Fade animation
+ */
+@keyframes fade {
+  0% {
+    opacity: 0; }
+
+  50% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0; }
+
+  50% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@-moz-keyframes fade {
+  0% {
+    opacity: 0; }
+
+  50% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@-o-keyframes fade {
+  0% {
+    opacity: 0; }
+
+  50% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+/*
+ * Repeat animation
+ */
+/* to be included into your scss files, don't forget to set the includePaths (--load-path) in your compiler  */
+/**
+ * Use icon within sass: @inclue icon('down');
+ */
+/*
+ * Fade animation
+ */
+@keyframes fade {
+  0% {
+    opacity: 0; }
+
+  50% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0; }
+
+  50% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@-moz-keyframes fade {
+  0% {
+    opacity: 0; }
+
+  50% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@-o-keyframes fade {
+  0% {
+    opacity: 0; }
+
+  50% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+/*
+ * Repeat animation
+ */
+.preview-overlay {
+  overflow: hidden;
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 9995;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7); }
+  .preview-overlay.preview-desktop .mobile-only,
+  .preview-overlay.preview-desktop .standard-only {
+    display: none !important; }
+  .preview-overlay.preview-mobile .desktop-only,
+  .preview-overlay.preview-mobile .standard-only {
+    display: none !important; }
+  .preview-overlay.preview-standard .desktop-only,
+  .preview-overlay.preview-standard .mobile-only {
+    display: none !important; }
+  .preview-overlay .preview-scale-container {
+    position: relative;
+    float: left; }
+  .preview-overlay .preview-container {
+    background: white;
+    overflow: auto; }
+  .preview-overlay .preview-container-outer {
+    display: table;
+    padding: 0 0 20px 0;
+    width: 100%;
+    height: 100%; }
+  .preview-overlay .preview-utility-bar {
+    background: #f2f0ee;
+    border-bottom: 1px solid #8d949e;
+    margin-bottom: 20px;
+    z-index: 9996;
+    overflow: hidden;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; }
+    .preview-overlay .preview-utility-bar .preview-heading {
+      min-width: 140px; }
+    .preview-overlay .preview-utility-bar .device-type-and-orientation {
+      min-width: 340px; }
+  .preview-overlay .preview-utility-bar-inner {
+    width: 900px;
+    margin: auto; }
+    .preview-overlay .preview-utility-bar-inner h1 {
+      font-size: 18px;
+      font-size: 1.8rem;
+      text-shadow: 1px 1px 0px #eee; }
+    .preview-overlay .preview-utility-bar-inner .icon-info {
+      top: 7px;
+      font-size: 15px;
+      font-size: 1.5rem; }
+    .preview-overlay .preview-utility-bar-inner li {
+      margin-left: 10px; }
+    .preview-overlay .preview-utility-bar-inner .btn-info {
+      margin-top: 1px; }
+    .preview-overlay .preview-utility-bar-inner .mobile-device-selector {
+      width: 200px; }
+    .preview-overlay .preview-utility-bar-inner .preview-type-selector {
+      width: 140px; }
+    .preview-overlay .preview-utility-bar-inner .orientation-selector,
+    .preview-overlay .preview-utility-bar-inner .desktop-device-selector {
+      width: 130px; }
+    .preview-overlay .preview-utility-bar-inner [class*=" col-"], .preview-overlay .preview-utility-bar-inner [class^="col-"] {
+      margin-bottom: 0 !important; }
+  .preview-overlay #preview-console {
+    margin: 0;
+    padding: 3px;
+    border: none;
+    z-index: auto;
+    background: #f2f0ee;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #8d949e; }
+    .preview-overlay #preview-console .preview-console-closer {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+      display: none; }
+      .preview-overlay #preview-console .preview-console-closer:hover {
+        color: #0e5d91; }
+    .preview-overlay #preview-console .preview-console-header {
+      width: 900px;
+      margin: auto;
+      padding: 2px 0; }
+    .preview-overlay #preview-console .preview-console-body {
+      margin: 2px;
+      display: none; }
+      .preview-overlay #preview-console .preview-console-body ul {
+        padding: 5px;
+        margin: 0;
+        height: 300px;
+        overflow: auto;
+        background: #2b2b2b;
+        border: 1px inset #8d949e;
+        font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+        color: white; }
+        .preview-overlay #preview-console .preview-console-body ul .log-time {
+          color: #999; }
+        .preview-overlay #preview-console .preview-console-body ul .log-type {
+          color: #eee; }
+        .preview-overlay #preview-console .preview-console-body ul .log-message {
+          color: #69f; }
+        .preview-overlay #preview-console .preview-console-body ul pre {
+          margin: 0; }
+  .preview-overlay .preview-message-box .feedback-info {
+    margin: 10px auto 0px;
+    width: 800px; }
+  .preview-overlay .preview-message-box a {
+    float: right;
+    padding-right: 10px; }
+  .preview-overlay .desktop-preview-container {
+    width: 1024px;
+    background: white url(data:image/gif;base64,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) no-repeat center 150px; }
+  .preview-overlay .desktop-preview-frame {
+    position: relative;
+    border: 3px #aaa solid;
+    border-radius: 5px;
+    background: #5a5a5a;
+    background: -moz-linear-gradient(-45deg, #5a5a5a 0%, #565656 7%, #444444 15%, #141414 30%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #5a5a5a), color-stop(7%, #565656), color-stop(15%, #444444), color-stop(30%, #141414));
+    background: -webkit-linear-gradient(-45deg, #5a5a5a 0%, #565656 7%, #444444 15%, #141414 30%);
+    background: -o-linear-gradient(-45deg, #5a5a5a 0%, #565656 7%, #444444 15%, #141414 30%);
+    background: -ms-linear-gradient(-45deg, #5a5a5a 0%, #565656 7%, #444444 15%, #141414 30%);
+    background: linear-gradient(135deg, #5a5a5a 0%, #565656 7%, #444444 15%, #141414 30%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5a5a5a', endColorstr='#141414', GradientType=1);
+    -webkit-box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.7); }
+    .preview-overlay .desktop-preview-frame.desktop-preview-landscape {
+      padding: 30px 30px; }
+      .preview-overlay .desktop-preview-frame.desktop-preview-landscape .desktop-device-toolbar {
+        padding-right: 30px; }
+    .preview-overlay .desktop-preview-frame.desktop-preview-portrait {
+      padding: 30px 30px; }
+      .preview-overlay .desktop-preview-frame.desktop-preview-portrait .desktop-device-toolbar {
+        padding-right: 30px; }
+  .preview-overlay .desktop-preview-item-container {
+    min-height: 500px;
+    -webkit-box-shadow: 0px 0px 8px #b7b1ac;
+    -moz-box-shadow: 0px 0px 8px #b7b1ac;
+    box-shadow: 0px 0px 8px #b7b1ac; }
+  .preview-overlay .preview-canvas {
+    display: table-cell;
+    text-align: center; }
+    .preview-overlay .preview-canvas * {
+      text-align: left; }
+  .preview-overlay .preview-outer-frame {
+    position: relative;
+    display: inline-block; }
+  .preview-overlay .mobile-preview-container {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    position: relative; }
+  .preview-overlay .mobile-preview-item-container {
+    height: 100%; }
+  .preview-overlay .mobile-preview-frame {
+    position: relative;
+    border: 3px #aaa ridge;
+    border-radius: 25px;
+    background: #5a5a5a;
+    background: -moz-linear-gradient(-45deg, #5a5a5a 0%, #565656 7%, #444444 15%, #141414 30%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #5a5a5a), color-stop(7%, #565656), color-stop(15%, #444444), color-stop(30%, #141414));
+    background: -webkit-linear-gradient(-45deg, #5a5a5a 0%, #565656 7%, #444444 15%, #141414 30%);
+    background: -o-linear-gradient(-45deg, #5a5a5a 0%, #565656 7%, #444444 15%, #141414 30%);
+    background: -ms-linear-gradient(-45deg, #5a5a5a 0%, #565656 7%, #444444 15%, #141414 30%);
+    background: linear-gradient(135deg, #5a5a5a 0%, #565656 7%, #444444 15%, #141414 30%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5a5a5a', endColorstr='#141414', GradientType=1);
+    -webkit-box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.7); }
+    .preview-overlay .mobile-preview-frame.mobile-preview-landscape {
+      padding: 40px 40px; }
+      .preview-overlay .mobile-preview-frame.mobile-preview-landscape .mobile-device-toolbar {
+        padding-right: 40px; }
+    .preview-overlay .mobile-preview-frame.mobile-preview-portrait {
+      padding: 40px 40px; }
+      .preview-overlay .mobile-preview-frame.mobile-preview-portrait .mobile-device-toolbar {
+        padding-right: 40px; }
+  .preview-overlay .mobile-preview-container {
+    background: white;
+    border-radius: 3px;
+    border: 2px solid;
+    border-color: #444 #999 #999 #444; }
+  .preview-overlay .standard-preview-frame {
+    -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7); }

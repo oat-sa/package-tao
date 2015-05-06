@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAOLTI.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIRole">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source LTI Roles
+    @subject http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[LTI Roles]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#RoleURN">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source URN
+    @subject http://www.tao.lu/Ontologies/TAOLTI.rdf#RoleURN
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[URN]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source LTI Uniform Resource Name(deprecated)
+    @subject http://www.tao.lu/Ontologies/TAOLTI.rdf#RoleURN
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[LTI Uniform Resource Name(deprecated)]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiBaseRole">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source LTI Base Role
+    @subject http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiBaseRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[LTI Base Role]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source The LTI Base Role
+    @subject http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiBaseRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[The LTI Base Role]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

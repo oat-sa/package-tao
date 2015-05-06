@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" 
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                identifier="Empty-Section"
+                title="An AssessmentTest with an empty AssessmentSection"
+                xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.taotesting.com/xsd/qticompact_v1p0.xsd">
+  <testPart identifier="TestPart-1" navigationMode="linear" submissionMode="individual">
+    <assessmentSection identifier="AssessmentSection-1" title="Section 1" visible="true">
+      <assessmentItemRef identifier="Q01" href="./Q01.xml" timeDependent="false"/>
+    </assessmentSection>
+    <assessmentSection identifier="AssessmentSection-2" title="Section 2" visible="true"/>
+  </testPart>
+</assessmentTest>

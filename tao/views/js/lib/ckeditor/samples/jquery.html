@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery Adapter &mdash; CKEditor Sample</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://raw.github.com/lodash/lodash/2.4.1/dist/lodash.min.js"></script>
+
+
+	<script src="../ckeditor.js"></script>
+	<script src="../adapters/jquery.js"></script>
+	<link href="sample.css" rel="stylesheet">
+	<style>
+
+		#editable
+		{
+			padding: 10px;
+			float: left;
+		}
+
+
+	</style>
+	<script>
+
+
+
+		// CKEDITOR.disableAutoInline = true;
+
+		// $( document ).ready( function() {
+		// 	$( '#editor1' ).ckeditor(); // Use CKEDITOR.replace() if element is <textarea>.
+		// 	$( '#editable' ).ckeditor(); // Use CKEDITOR.inline().
+		// 	$( '#editable2' ).ckeditor(); // Use CKEDITOR.inline().
+		// } );
+
+		// function setValue() {
+		// 	$( '#editor1' ).val( $( 'input#val' ).val() );
+		// }
+
+
+	</script>
+</head>
+<body>
+
+
+	<form action="sample_posteddata.php" method="post">
+
+    <div contenteditable="true" id="editable" class="qti-interaction qti-blockInteraction">
+    	<strong>I am a block interaction. </strong>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.
+
+Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac.
+</div>
+<hr style="clear:both; margin: 100px">    
+<div contenteditable="true" id="editable2">
+   <strong>I am everything but a block interaction. </strong> 	Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.
+
+Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac.
+</div>
+<hr style="clear:both; margin: 100px">
+
+
+		<textarea cols="80" id="editor1" name="editor1" rows="10">
+			&lt;p&gt;Launched by a Saturn V rocket from &lt;a href=&quot;http://en.wikipedia.org/wiki/Kennedy_Space_Center&quot; title=&quot;Kennedy Space Center&quot;&gt;Kennedy Space Center&lt;/a&gt; in Merritt Island, Florida on July 16, Apollo 11 was the fifth manned mission of &lt;a href=&quot;http://en.wikipedia.org/wiki/NASA&quot; title=&quot;NASA&quot;&gt;NASA&lt;/a&gt;&amp;#39;s Apollo program. The Apollo spacecraft had three parts:&lt;/p&gt;  &lt;p style=&quot;text-align: right;&quot;&gt&lt;/p&gt;
+		</textarea>
+
+
+	</form>
+</body>
+</html>
