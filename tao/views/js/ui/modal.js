@@ -18,7 +18,8 @@ define(['jquery', 'core/pluginifier', 'core/dataattrhandler'], function($, Plugi
         startClosed: false,
         disableClosing: false,
         width: 'responsive',
-        minWidth : false,
+        minWidth : 0,
+        minHeight : 0,
         vCenter : true
     };
 
@@ -189,16 +190,20 @@ define(['jquery', 'core/pluginifier', 'core/dataattrhandler'], function($, Plugi
         * @returns {undefined}
         */
        _resize: function($element){
-           var options = $element.data(dataNs);
-           var windowWidth = parseInt($(window).width(), 10);
+           
+            var options = $element.data(dataNs);
+            var windowWidth = parseInt($(window).width(), 10);
+            var css = {};
 
-           var modalWidth = options.width === 'responsive' ? windowWidth * 0.7 : parseInt(options.width, 10);
-           if(options.minWidth && modalWidth < options.minWidth){
-                modalWidth = options.minWidth;
-           }
-           $element.css({
-                'width': modalWidth + 'px'
-           });
+            //calculate the final width and height
+            var modalWidth = options.width === 'responsive' ? windowWidth * 0.7 : parseInt(options.width, 10);
+            css.width = Math.max(modalWidth, options.minWidth);
+            if(options.minHeight){
+                css.minHeight = parseInt(options.minHeight)+'px';
+            }
+
+            //apply style
+            $element.css(css);
        }
     };
 

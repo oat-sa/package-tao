@@ -1,26 +1,25 @@
-define(['jquery', 'iframeNotifier'], function($, iframeNotifier) {
+define(['jquery', 'iframeNotifier'], function($, iframeNotifier){
 
-    function ResultServerApi(endpoint, params) {
+    function ResultServerApi(endpoint, params){
 
         this.endpoint = endpoint;
         this.testServiceCallId = params.testServiceCallId;
         this.testDefinition = params.testDefinition;
         this.testCompilation = params.testCompilation;
         this.itemDataPath = params.itemDataPath;
-        
+
         //private variable
         var qtiRunner = null;
-        this.setQtiRunner = function(runner) {
+        this.setQtiRunner = function(runner){
             qtiRunner = runner;
         };
 
-        this.getQtiRunner = function() {
+        this.getQtiRunner = function(){
             return qtiRunner;
         };
     }
 
-    ResultServerApi.prototype.submitItemVariables = function(itemId,
-            serviceCallId, responses, scores, events, params, callback) {
+    ResultServerApi.prototype.submitItemVariables = function(itemId, serviceCallId, responses, scores, events, params, callback){
 
         var that = this;
         var error = function error(){
@@ -33,41 +32,48 @@ define(['jquery', 'iframeNotifier'], function($, iframeNotifier) {
         };
 
         iframeNotifier.parent('loading');
-        
+
+        function onShowCallback(){
+            iframeNotifier.parent('unloading');
+        }
+
         $.ajax({
             url : this.endpoint + 'storeItemVariableSet?serviceCallId='
-                    + encodeURIComponent(this.testServiceCallId)
-                    + '&QtiTestDefinition='
-                    + encodeURIComponent(this.testDefinition)
-                    + '&QtiTestCompilation='
-                    + encodeURIComponent(this.testCompilation)
-                    + '&itemDataPath='
-                    + encodeURIComponent(this.itemDataPath),
+                + encodeURIComponent(this.testServiceCallId)
+                + '&QtiTestDefinition='
+                + encodeURIComponent(this.testDefinition)
+                + '&QtiTestCompilation='
+                + encodeURIComponent(this.testCompilation)
+                + '&itemDataPath='
+                + encodeURIComponent(this.itemDataPath),
             data : JSON.stringify(responses),
             type : 'post',
             contentType : 'application/json',
             dataType : 'json',
-            success : function(reply) {
-                if (reply && reply.success) {
-                    var fbCount = 0;
-                    if (reply.itemSession) {
+            success : function(reply){
 
-                        var runner = that.getQtiRunner();
-                        var onShowCallback = function() {
-                            iframeNotifier.parent('unloading');
-                        };
-                        fbCount = runner.showFeedbacks(reply.itemSession, callback, onShowCallback);
+                var qtiRunner,
+                    fbCount = 0;
+                
+                if(reply && reply.success){
+                    qtiRunner = that.getQtiRunner();
+                    if(reply.itemSession && qtiRunner){
+                        //load feedbacks data into item instance
+                        qtiRunner.loadElements(reply.feedbacks, function(){
+                            //show feedbacks if required
+                            fbCount = qtiRunner.showFeedbacks(reply.itemSession, callback, onShowCallback);
+                            if(!fbCount){
+                                onShowCallback();
+                                callback(0);
+                            }
+                        });
                     }
 
-                    if (!fbCount) {
-                        iframeNotifier.parent('unloading');
-                        callback(0);
-                    }
-                } else {
+                }else{
                     error();
-                }           
+                }
             },
-            error : error 
+            error : error
         });
     };
 
