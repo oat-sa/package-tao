@@ -1,0 +1,14 @@
+Options +FollowSymLinks
+
+<IfModule mod_php5.c>
+	php_flag short_open_tag on
+	php_value mbstring.internal_encoding UTF-8
+</IfModule>
+
+<IfModule mod_rewrite.c>
+	# This environment variable indicates that mod rewrite is activated.
+	# Very useful for a later PHP check.
+	SetEnv HTTP_MOD_REWRITE On
+	RewriteEngine On
+
+</IfModule>

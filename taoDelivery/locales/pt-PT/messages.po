@@ -1,0 +1,302 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO v2.6-RC03\n"
+"PO-Revision-Date: 2014-06-20T16:27:37\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: pt-PT\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "%1s has been published on the %2s', get_data('label"
+msgstr ""
+
+msgid "%s test-taker(s) are excluded.', get_data('ttexcluded"
+msgstr ""
+
+msgid "Actions"
+msgstr "Acções"
+
+msgid "Add the source file."
+msgstr ""
+
+msgid "An error occured during history deletion"
+msgstr "Ocorreu um erro durante a eliminação do histórico"
+
+msgid "An error occured during the import"
+msgstr ""
+
+msgid "An undefined error has occured"
+msgstr "Ocorreu um erro indefinido"
+
+msgid "Assembly"
+msgstr ""
+
+msgid "Assembly import"
+msgstr ""
+
+msgid "Assigned test-takers"
+msgstr ""
+
+msgid "Assigned Tests"
+msgstr ""
+
+msgid "Assigned to"
+msgstr ""
+
+msgid "Attempt(s)"
+msgstr ""
+
+msgid "Attempts"
+msgstr ""
+
+msgid "Be careful, later modifications on its content are not  taken into account. You have to publish it again to make your modifications available to test takers."
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Completed Tests"
+msgstr ""
+
+msgid "Configured LTI Link"
+msgstr ""
+
+msgid "Content driver selected"
+msgstr ""
+
+msgid "Create Delivery"
+msgstr ""
+
+msgid "delete"
+msgstr "eliminar"
+
+msgid "Delete"
+msgstr "Eliminar"
+
+msgid "Delete delivery"
+msgstr ""
+
+msgid "Delete History"
+msgstr "Histórico de eliminação"
+
+#, tao-public
+msgid "Deliveries"
+msgstr "Distribuição"
+
+msgid "Deliveries %s', get_data('class"
+msgstr ""
+
+msgid "Deliveries library"
+msgstr "Biblioteca de distribuição"
+
+msgid "Delivery Class saved"
+msgstr "Distribuição de disciplina guardada"
+
+msgid "Delivery could not be published"
+msgstr ""
+
+msgid "delivery executions"
+msgstr "Execuções de distribuição"
+
+msgid "Delivery is assigned to %s test-takers.', get_data('ttassigned"
+msgstr ""
+
+msgid "Delivery is not assigned to any test-taker."
+msgstr ""
+
+msgid "Delivery properties"
+msgstr "Propriedades da distribuição"
+
+msgid "Delivery saved"
+msgstr "Distribuição guardada"
+
+msgid "Delivery Templates"
+msgstr ""
+
+msgid "Download delivery"
+msgstr ""
+
+msgid "Edit delivery"
+msgstr ""
+
+msgid "Edit delivery class"
+msgstr "Editar distribuição de disciplina"
+
+msgid "Enables you to export a published delivery"
+msgstr ""
+
+msgid "Excluded test-takers"
+msgstr ""
+
+msgid "Execution History"
+msgstr "Histórico de execução"
+
+msgid "Export Options"
+msgstr ""
+
+msgid "History"
+msgstr "Histórico"
+
+msgid "History deleted successfully"
+msgstr "Historico eliminado com sucesso"
+
+msgid "Import"
+msgstr ""
+
+msgid "Items"
+msgstr ""
+
+msgid "Logout"
+msgstr "Terminar sessão"
+
+msgid "LTI"
+msgstr ""
+
+msgid "Manifest not found in assembly"
+msgstr ""
+
+msgid "move"
+msgstr "mover"
+
+msgid "My Tests"
+msgstr ""
+
+msgid "new class"
+msgstr "nova disciplina"
+
+msgid "new delivery"
+msgstr "nova distribuição"
+
+msgid "new template"
+msgstr ""
+
+msgid "No attempt has been started yet."
+msgstr ""
+
+msgid "No informations available"
+msgstr ""
+
+msgid "Ok"
+msgstr ""
+
+msgid "Paused Tests"
+msgstr ""
+
+msgid "Please confirm history deletion"
+msgstr "Por favor confirme eliminação do histórico"
+
+msgid "Please upload a published delivery assembly ."
+msgstr ""
+
+#, tao-public
+msgid "Prepare, publish deliveries sessions."
+msgstr "Prepare, publique sessões de distribuição."
+
+msgid "Properties"
+msgstr ""
+
+msgid "Publish"
+msgstr ""
+
+msgid "Publish again"
+msgstr ""
+
+msgid "Publish New"
+msgstr ""
+
+msgid "Publishing"
+msgstr ""
+
+msgid "Publishing \"%s\"', get_data('deliveryLabel"
+msgstr ""
+
+msgid "Publishing is in progress, please wait..."
+msgstr ""
+
+msgid "Publishing Report"
+msgstr ""
+
+msgid "Recompile the delivery"
+msgstr "Recompilar distribuição"
+
+msgid "Resume"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "search"
+msgstr "Procurar"
+
+msgid "Select a test"
+msgstr "Seleccione um teste"
+
+msgid "Select delivery mode"
+msgstr ""
+
+msgid "Selection saved successfully"
+msgstr ""
+
+msgid "Start"
+msgstr ""
+
+msgid "Started at "
+msgstr ""
+
+#, tao-public
+msgid "Take or continue a test."
+msgstr ""
+
+msgid "TAO - An Open and Versatile Computer-Based Assessment Platform"
+msgstr "TAO - Uma Plataforma de Avaliação baseada em sistemas de informação aberta e versátil"
+
+#, tao-public
+msgid "TAO Delivery Server"
+msgstr "Servidor de distribuição TAO"
+
+msgid "Test Taker"
+msgstr "Examinado"
+
+msgid "Test-takers"
+msgstr ""
+
+msgid "The Deliveries module allows users to define tests deliveries parameters."
+msgstr "O modulo de distribuição permite aos utilizadores testarem os parâmetros de distribuição."
+
+msgid "There are currently"
+msgstr "Actualmente"
+
+msgid "There are currently %s attempts', get_data('exec"
+msgstr ""
+
+msgid "There are no tests associated with the delivery"
+msgstr ""
+
+msgid "There is currently 1 attempt"
+msgstr ""
+
+msgid "There is currently no delivery execution."
+msgstr "Actualmente não existem execuções de distribuições"
+
+msgid "Time"
+msgstr "Tempo"
+
+msgid "To be accessible by test takers on the specified dates, you have to publish your delivery."
+msgstr ""
+
+msgid "Translate"
+msgstr ""
+
+msgid "Unkown error during impoort"
+msgstr ""
+
+msgid "Unlimited"
+msgstr ""
+
+msgid "Upload an assembly"
+msgstr ""
+
+msgid "View History"
+msgstr "Ver histórico"
+

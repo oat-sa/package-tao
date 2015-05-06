@@ -1,0 +1,18 @@
+@import "inc/bootstrap";
+.qti-uploadInteraction {
+
+    //background: whiten($uiClickableDefaultBg, .5);
+    padding: 6px 6px 0 6px;
+    .grid-row {
+        margin-bottom: 0 !important;
+    }
+    .progressbar {
+        margin-bottom: 6px;
+    }
+    .btn-info {
+        padding-top: 0 !important;
+    }
+    .file-name {
+        padding: 2px 3px !important;
+    }
+}

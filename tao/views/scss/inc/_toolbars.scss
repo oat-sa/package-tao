@@ -1,0 +1,152 @@
+@import "ckeditor/skins/tao/scss/inc/toolbar";
+@import "ckeditor/skins/tao/scss/editor";
+@import "ckeditor/skins/tao/scss/inc/tao";
+@import "ckeditor/skins/tao/scss/inc/mainui";
+@import "ckeditor/skins/tao/scss/inc/ck-icons";
+
+.tlb {
+    @extend .cke;
+}
+
+.tlb-bar {
+    @extend .cke_toolbar;
+}
+
+.tlb-box {
+    @extend .cke_toolbox !optional;
+}
+
+.tlb-break {
+    @extend .cke_toolbar_break;
+}
+
+.tlb .tlb-bar .tlb-button-on,
+.tlb .tlb-bar .tlb-button-off,
+.tlb .tlb-bar .tlb-button-disabled {
+    @extend .cke_button;
+    height: 18px;
+    padding: 4px 6px;
+    [class^="icon-"], [class*=" icon-"] {
+        @extend .cke_button_icon;
+    }
+}
+
+.tlb-button-off {
+    @extend .cke_button_off;
+}
+
+.tlb-button-on, .tlb-button-off:focus {
+    @extend .cke_button_on;
+}
+
+.tlb .tlb-top .tlb-bar .tlb-button-disabled,
+.tlb .tlb-top .tlb-bar .disabled{
+    opacity: .5;
+    background: white !important;
+    &:hover {
+        background: white !important;
+        color: $textColor !important;
+    }
+    span {
+        opacity: 0.3
+    }
+}
+
+.tlb-end {
+    @extend .cke_toolbar_end !optional;
+}
+
+.tlb-group {
+    @extend .cke_toolgroup;
+}
+
+.tlb-separator {
+    @extend .cke_toolbar_separator;
+}
+
+.tlb-start {
+    @extend .cke_toolbar_start !optional;
+}
+
+.tlb-top {
+    @extend .cke_top;
+}
+
+.tlb-spacer {
+    @extend .cke_toolbar;
+    display: inline-block;
+    min-width: 28px;
+    height: 2px;
+}
+
+.tlb-title {
+    @extend .truncate;
+    line-height: 2.5;
+    float: left;
+    padding: 0 6px;
+    cursor: default
+}
+
+.tlb-wrapper {
+    background: $uiClickableDefaultBg;
+    @include box-shadow();
+    .tlb {
+        float: right;
+    }
+    .tlb, .tlb-top {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+.tlb-text-button-box {
+    @extend .cke_combo;
+    [class^="tlb-text-button-"], [class*=" tlb-text-button-"] {
+        @extend .cke_combo_button;
+        @include border-radius(2);
+        &:hover {
+            background: $uiClickableHoverBg;
+            color: $textHighlight;
+            .tlb-text , [class^="icon-"], [class*=" icon-"] {
+                color: $textHighlight;
+                text-shadow: none;
+            }
+        }
+        .tlb-text {
+            cursor: pointer;
+            @extend .cke_combo_text;
+            padding-left: 7px !important;
+            padding-right: 7px;
+            width: auto;
+            color: $textColor;
+        }
+        [class^="icon-"], [class*=" icon-"] {
+            cursor: pointer;
+            color: $textColor;
+            line-height: 26px;
+            float: left;
+            padding-left: 6px;;
+        }
+    }
+    .tlb-text-button-disabled, .disabled {
+        cursor: default !important;
+        background: white !important;
+        .tlb-text, [class^="icon-"], [class*=" icon-"]  {
+            color: $textColor !important;
+            cursor: default !important;
+            text-shadow: 1px 1px 0 rgba(255, 255, 255, 1) !important;
+            opacity: .4;
+        }
+    }
+    .tlb-text-button-on, &:focus {
+        background-color: $info;
+        color: $textHighlight;
+        text-shadow: 1px 1px 0 black(.2) !important;
+        .tlb-text , [class^="icon-"], [class*=" icon-"] {
+            text-shadow: none;
+            color: $textHighlight;
+        }
+    }
+}
+

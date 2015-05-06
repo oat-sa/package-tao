@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+	<structure id="results" name="Results" level="5" visible="true">
+		<description>View and format the collected results.</description>
+	<sections>
+	    <section id="manage_results" name="Manage Results" url="/taoResults/Results/index">
+		<trees>
+		    <tree name="Results library"
+			className="Result"
+			dataUrl="/taoResults/Results/getOntologyData"
+			addSubClassUrl="/taoResults/Results/addSubClass"
+			editClassUrl="/taoResults/Results/index"
+			editInstanceUrl="/taoResults/Results/viewResult"
+			moveInstanceUrl="/taoResults/Results/moveInstance"
+		    />
+		</trees>
+		<actions>
+		<action name="new class" js="subClass" url="/taoResults/Results/addSubClass" context="class" />
+		<action name="move" js="moveNode" url="" context="instance" />
+		<action name="delete" js="removeNode" url="/taoResults/Results/delete" context="resource" />
+		<action name="summary report" url="/taoResults/SimpleReport/build" context="class" />
+		</actions>
+	    </section>
+	    <section id="inspect_results" name="Inspect Results" url="/taoResults/InspectResults/index" />
+	  </sections>
+	</structure>
+</structures>

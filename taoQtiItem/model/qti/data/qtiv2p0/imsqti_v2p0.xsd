@@ -1,0 +1,4793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	IPR, License and Distribution Notices
+	This machine readable file is derived from IMS specification IMS Question and Test Interoperability XML Binding Version 2.0 Final Specification
+	found at http://www.imsglobal.org/question/ and the original IMS schema binding or code base 
+	http://www.imsglobal.org/question/qti_v2p0/imsqti_bindv2p0.html.
+	
+	Recipients of this document are requested to submit, with their comments, notification of any relevant patent 
+	claims or other intellectual property rights of which they may be aware that might be infringed by the schema 
+	binding contained in this document.
+	
+	IMS takes no position regarding the validity or scope of any intellectual property or other rights that might be 
+	claimed to pertain to the implementation or use of the technology described in this document or the extent to 
+	which any license under such rights might or might not be available; neither does it represent that it has made 
+	any effort to identify any such rights. Information on IMS’s procedures with respect to rights in IMS specifications 
+	can be found at the IMS Intellectual Property Rights web page: http://www.imsglobal.org/ipr/imsipr_policyFinal.pdf.
+	
+	Copyright © IMS Global Learning Consortium 1999-2007. All Rights Reserved.
+	
+	License Notice for Users
+	Users of products or services that include this document are hereby granted a worldwide, royalty-free, 
+	non-exclusive license to use this document.
+	
+	Distribution Notice for Developers
+	Developers of products or services that provide distribution of this document as is or with modifications are 
+	required to register with the IMS community on the IMS website as described in the following two paragraphs:
+	
+	- If you wish to distribute this document as is, with no modifications, you are hereby granted permission to copy, 
+	display and distribute the contents of this document in any medium for any purpose without fee or royalty provided 
+	that you include this IPR, License and Distribution notice in its entirety on ALL copies, or portions thereof, that you 
+	make and you complete a valid license registration with IMS and receive an email from IMS granting the license. 
+	To register, follow the instructions on the IMS website: http://www.imsglobal.org/specificationdownload.cfm. Once 
+	registered you are granted permission to transfer unlimited distribution rights of this document for the purposes 
+	of third-party or other distribution of your product or service that incorporates this document as long as this IPR, 
+	License and Distribution notice remains in place in its entirety.
+	
+	- If you wish to create and distribute a derived work from this document, you are hereby granted permission to copy, 
+	display and distribute the contents of the derived work in any medium for any purpose without fee or royalty provided 
+	that you include this IPR, License and Distribution notice in its entirety on ALL copies, or portions thereof, that you 
+	make and you complete a valid profile registration with IMS and receive an email from IMS granting the license. To 
+	register, follow the instructions on the IMS website: http://www.imsglobal.org/profile/. Once registered you are 
+	granted permission to transfer unlimited distribution rights of the derived work for the purposes of third-party or 
+	other distribution of your product or service that incorporates the derived work as long as this IPR, License and 
+	Distribution notice remains in place in its entirety.
+	
+	The limited permissions granted above are perpetual and will not be revoked by IMS or its successors or assigns.
+	
+	THIS SPECIFICATION IS BEING OFFERED WITHOUT ANY WARRANTY WHATSOEVER, AND IN PARTICULAR, 
+	ANY WARRANTY OF NONINFRINGEMENT IS EXPRESSLY DISCLAIMED. ANY USE OF THIS SPECIFICATION 
+	SHALL BE MADE ENTIRELY AT THE IMPLEMENTER’S OWN RISK, AND NEITHER THE CONSORTIUM, NOR 
+	ANY OF ITS MEMBERS OR SUBMITTERS, SHALL HAVE ANY LIABILITY WHATSOEVER TO ANY IMPLEMENTER 
+	OR THIRD PARTY FOR ANY DAMAGES OF ANY NATURE WHATSOEVER, DIRECTLY OR INDIRECTLY, ARISING 
+	FROM THE USE OF THIS SPECIFICATION.
+-->
+<!-- ***********************************************************************************-->
+<!--                                                                                    -->
+<!-- Author:    Steve Lay                                                               -->
+<!-- Version:   2.0.0                                                                   -->
+<!-- Date:      10th February, 2005                                                     -->
+<!--                                                                                    -->
+<!-- Comments:  This is the XSD for the IMS QTI (Item) v2.0 specification.       		-->
+<!-- 			This version replaces the IMS QTI XSD v1.2.1 for the Item parts of      -->
+<!--			that specification.														-->
+<!--                                                                                    -->
+<!-- History:	First release of the v2 specification.									-->
+<!--                                                                                    -->
+<!-- ================================================================================== -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.imsglobal.org/xsd/imsqti_v2p0" xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0" xmlns:m="http://www.w3.org/1998/Math/MathML" version="IMS QTI-Item 2.0.0">
+
+<xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="../w3/xml.xsd"/>
+<xsd:import namespace="http://www.w3.org/1998/Math/MathML" schemaLocation="../w3/mathml2/mathml2.xsd"/>
+ 
+<!-- Class: a -->
+
+<xsd:attributeGroup name="a.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+	<xsd:attribute name="href" type="uri.Type" use="required"/>
+	<xsd:attribute name="type" type="mimeType.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="a.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="a.Type" mixed="true">
+	<xsd:group ref="a.ContentGroup"/>
+	<xsd:attributeGroup ref="a.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="a" type="a.Type"/>
+
+
+<!-- Class: abbr -->
+
+<xsd:attributeGroup name="abbr.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="abbr.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="abbr.Type" mixed="true">
+	<xsd:group ref="abbr.ContentGroup"/>
+	<xsd:attributeGroup ref="abbr.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="abbr" type="abbr.Type"/>
+
+
+<!-- Class: acronym -->
+
+<xsd:attributeGroup name="acronym.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="acronym.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="acronym.Type" mixed="true">
+	<xsd:group ref="acronym.ContentGroup"/>
+	<xsd:attributeGroup ref="acronym.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="acronym" type="acronym.Type"/>
+
+
+<!-- Pseudo-class: adaptive -->
+
+<xsd:element name="adaptive" type="boolean.Type"/>
+
+
+<!-- Class: address -->
+
+<xsd:attributeGroup name="address.AttrGroup">
+	<xsd:attributeGroup ref="atomicBlock.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="address.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="atomicBlock.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="address.Type" mixed="true">
+	<xsd:group ref="address.ContentGroup"/>
+	<xsd:attributeGroup ref="address.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="address" type="address.Type"/>
+
+
+<!-- Class: and -->
+
+<xsd:group name="and.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="and.Type" mixed="false">
+	<xsd:group ref="and.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="and" type="and.Type"/>
+
+
+<!-- Class: anyN -->
+
+<xsd:attributeGroup name="anyN.AttrGroup">
+	<xsd:attribute name="min" type="integer.Type" use="required"/>
+	<xsd:attribute name="max" type="integer.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="anyN.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="anyN.Type" mixed="false">
+	<xsd:group ref="anyN.ContentGroup"/>
+	<xsd:attributeGroup ref="anyN.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="anyN" type="anyN.Type"/>
+
+
+<!-- Class: areaMapEntry -->
+
+<xsd:attributeGroup name="areaMapEntry.AttrGroup">
+	<xsd:attribute name="shape" type="shape.Type" use="required"/>
+	<xsd:attribute name="coords" type="coords.Type" use="required"/>
+	<xsd:attribute name="mappedValue" type="float.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="areaMapEntry.Type" mixed="false">
+	<xsd:attributeGroup ref="areaMapEntry.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="areaMapEntry" type="areaMapEntry.Type"/>
+
+
+<!-- Class: areaMapping -->
+
+<xsd:attributeGroup name="areaMapping.AttrGroup">
+	<xsd:attribute name="lowerBound" type="float.Type" use="optional"/>
+	<xsd:attribute name="upperBound" type="float.Type" use="optional"/>
+	<xsd:attribute name="defaultValue" type="float.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="areaMapping.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="areaMapEntry" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="areaMapping.Type" mixed="false">
+	<xsd:group ref="areaMapping.ContentGroup"/>
+	<xsd:attributeGroup ref="areaMapping.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="areaMapping" type="areaMapping.Type"/>
+
+
+<!-- Class: assessmentItem -->
+
+<xsd:attributeGroup name="assessmentItem.AttrGroup">
+	<xsd:attribute name="identifier" type="string.Type" use="required"/>
+	<xsd:attribute name="title" type="string.Type" use="required"/>
+	<xsd:attribute name="label" type="string256.Type" use="optional"/>
+	<xsd:attribute name="lang" type="string.Type" use="optional" />
+	<xsd:attribute name="adaptive" type="boolean.Type" use="required"/>
+	<xsd:attribute name="timeDependent" type="boolean.Type" use="required"/>
+	<xsd:attribute name="toolName" type="string256.Type" use="optional"/>
+	<xsd:attribute name="toolVersion" type="string256.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="assessmentItem.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="responseDeclaration" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element ref="outcomeDeclaration" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element ref="templateDeclaration" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element ref="templateProcessing" minOccurs="0" maxOccurs="1"/>
+		<xsd:element ref="stylesheet" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element ref="itemBody" minOccurs="0" maxOccurs="1"/>
+		<xsd:element ref="responseProcessing" minOccurs="0" maxOccurs="1"/>
+		<xsd:element ref="modalFeedback" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="assessmentItem.Type" mixed="false">
+	<xsd:group ref="assessmentItem.ContentGroup"/>
+	<xsd:attributeGroup ref="assessmentItem.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="assessmentItem" type="assessmentItem.Type"/>
+
+
+<!-- Class: associableChoice -->
+
+<!-- Following definition is not used but improves readability of the binding document -->
+<xsd:group name="associableChoice.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="gap"/>
+		<xsd:element ref="gapText"/>
+		<xsd:element ref="gapImg"/>
+		<xsd:element ref="associableHotspot"/>
+		<xsd:element ref="simpleAssociableChoice"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="associableChoice.AttrGroup">
+	<xsd:attributeGroup ref="choice.AttrGroup"/>
+	<xsd:attribute name="matchGroup" use="optional">
+		<xsd:simpleType>
+			<xsd:list itemType="identifier.Type"/>
+		</xsd:simpleType>
+	</xsd:attribute>
+</xsd:attributeGroup>
+
+
+<!-- Class: associableHotspot -->
+
+<xsd:attributeGroup name="associableHotspot.AttrGroup">
+	<xsd:attributeGroup ref="associableChoice.AttrGroup"/>
+	<xsd:attributeGroup ref="hotspot.AttrGroup"/>
+	<xsd:attribute name="matchMax" type="integer.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="associableHotspot.Type" mixed="false">
+	<xsd:attributeGroup ref="associableHotspot.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="associableHotspot" type="associableHotspot.Type"/>
+
+
+<!-- Class: associateInteraction -->
+
+<xsd:attributeGroup name="associateInteraction.AttrGroup">
+	<xsd:attributeGroup ref="blockInteraction.AttrGroup"/>
+	<xsd:attribute name="shuffle" type="boolean.Type" use="required"/>
+	<xsd:attribute name="maxAssociations" type="integer.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="associateInteraction.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="blockInteraction.ContentGroup"/>
+		<xsd:element ref="simpleAssociableChoice" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="associateInteraction.Type" mixed="false">
+	<xsd:group ref="associateInteraction.ContentGroup"/>
+	<xsd:attributeGroup ref="associateInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="associateInteraction" type="associateInteraction.Type"/>
+
+
+<!-- Class: atomicBlock -->
+
+<!-- Following definition is not used but improves readability of the binding document -->
+<xsd:group name="atomicBlock.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="pre"/>
+		<xsd:element ref="h2"/>
+		<xsd:element ref="h3"/>
+		<xsd:element ref="h1"/>
+		<xsd:element ref="h6"/>
+		<xsd:element ref="h4"/>
+		<xsd:element ref="h5"/>
+		<xsd:element ref="p"/>
+		<xsd:element ref="address"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="atomicBlock.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="atomicBlock.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="inline.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+
+<!-- Class: atomicInline -->
+
+<!-- Following definition is not used but improves readability of the binding document -->
+<xsd:group name="atomicInline.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="img"/>
+		<xsd:element ref="br"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="atomicInline.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+
+<!-- Class: b -->
+
+<xsd:attributeGroup name="b.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="b.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="b.Type" mixed="true">
+	<xsd:group ref="b.ContentGroup"/>
+	<xsd:attributeGroup ref="b.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="b" type="b.Type"/>
+
+
+<!-- Class: bankProfile -->
+
+<xsd:group name="bankProfile.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="usageDataVocabulary" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element ref="metadataProfile" minOccurs="1" maxOccurs="1"/>
+	<xsd:any namespace="##other" minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="bankProfile.Type" mixed="false">
+	<xsd:group ref="bankProfile.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="bankProfile" type="bankProfile.Type"/>
+
+
+<!-- Enumeration: baseType -->
+
+<xsd:simpleType name="baseType.Type">
+	<xsd:restriction base="xsd:NMTOKEN">
+		<xsd:enumeration value="boolean"/>
+		<xsd:enumeration value="directedPair"/>
+		<xsd:enumeration value="duration"/>
+		<xsd:enumeration value="file"/>
+		<xsd:enumeration value="float"/>
+		<xsd:enumeration value="identifier"/>
+		<xsd:enumeration value="integer"/>
+		<xsd:enumeration value="pair"/>
+		<xsd:enumeration value="point"/>
+		<xsd:enumeration value="string"/>
+		<xsd:enumeration value="uri"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+
+<!-- Class: baseValue -->
+
+<xsd:attributeGroup name="baseValue.AttrGroup">
+	<xsd:attribute name="baseType" type="baseType.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="baseValue.Type">
+	<xsd:simpleContent>
+		<xsd:extension base="xsd:string">
+			<xsd:attributeGroup ref="baseValue.AttrGroup"/>
+		</xsd:extension>
+	</xsd:simpleContent>
+</xsd:complexType>
+
+<xsd:element name="baseValue" type="baseValue.Type"/>
+
+
+<!-- Class: big -->
+
+<xsd:attributeGroup name="big.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="big.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="big.Type" mixed="true">
+	<xsd:group ref="big.ContentGroup"/>
+	<xsd:attributeGroup ref="big.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="big" type="big.Type"/>
+
+
+<!-- Class: block -->
+
+<xsd:group name="block.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="positionObjectStage"/>
+		<xsd:element ref="customInteraction"/>
+		<xsd:element ref="drawingInteraction"/>
+		<xsd:element ref="gapMatchInteraction"/>
+		<xsd:element ref="matchInteraction"/>
+		<xsd:element ref="graphicGapMatchInteraction"/>
+		<xsd:element ref="hotspotInteraction"/>
+		<xsd:element ref="graphicOrderInteraction"/>
+		<xsd:element ref="selectPointInteraction"/>
+		<xsd:element ref="graphicAssociateInteraction"/>
+		<xsd:element ref="sliderInteraction"/>
+		<xsd:element ref="choiceInteraction"/>
+		<xsd:element ref="hottextInteraction"/>
+		<xsd:element ref="orderInteraction"/>
+		<xsd:element ref="extendedTextInteraction"/>
+		<xsd:element ref="uploadInteraction"/>
+		<xsd:element ref="associateInteraction"/>
+		<xsd:element ref="pre"/>
+		<xsd:element ref="h2"/>
+		<xsd:element ref="h3"/>
+		<xsd:element ref="h1"/>
+		<xsd:element ref="h6"/>
+		<xsd:element ref="h4"/>
+		<xsd:element ref="h5"/>
+		<xsd:element ref="p"/>
+		<xsd:element ref="address"/>
+		<xsd:element ref="dl"/>
+		<xsd:element ref="ol"/>
+		<xsd:element ref="hr"/>
+		<xsd:element ref="rubricBlock"/>
+		<xsd:element ref="blockquote"/>
+		<xsd:element ref="feedbackBlock"/>
+		<xsd:element ref="ul"/>
+		<xsd:element ref="templateBlock"/>
+		<xsd:element ref="table"/>
+		<xsd:element ref="div"/>
+		<xsd:element ref="m:math"/>
+	</xsd:choice>
+</xsd:group>
+
+
+<!-- Class: blockInteraction -->
+
+<!-- Following definition is not used but improves readability of the binding document -->
+<xsd:group name="blockInteraction.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="drawingInteraction"/>
+		<xsd:element ref="gapMatchInteraction"/>
+		<xsd:element ref="matchInteraction"/>
+		<xsd:element ref="graphicGapMatchInteraction"/>
+		<xsd:element ref="hotspotInteraction"/>
+		<xsd:element ref="graphicOrderInteraction"/>
+		<xsd:element ref="selectPointInteraction"/>
+		<xsd:element ref="graphicAssociateInteraction"/>
+		<xsd:element ref="sliderInteraction"/>
+		<xsd:element ref="choiceInteraction"/>
+		<xsd:element ref="hottextInteraction"/>
+		<xsd:element ref="orderInteraction"/>
+		<xsd:element ref="extendedTextInteraction"/>
+		<xsd:element ref="uploadInteraction"/>
+		<xsd:element ref="associateInteraction"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="blockInteraction.AttrGroup">
+	<xsd:attributeGroup ref="interaction.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="blockInteraction.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="prompt" minOccurs="0" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+
+<!-- Class: blockStatic -->
+
+<xsd:group name="blockStatic.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="pre"/>
+		<xsd:element ref="h2"/>
+		<xsd:element ref="h3"/>
+		<xsd:element ref="h1"/>
+		<xsd:element ref="h6"/>
+		<xsd:element ref="h4"/>
+		<xsd:element ref="h5"/>
+		<xsd:element ref="p"/>
+		<xsd:element ref="address"/>
+		<xsd:element ref="dl"/>
+		<xsd:element ref="ol"/>
+		<xsd:element ref="hr"/>
+		<xsd:element ref="rubricBlock"/>
+		<xsd:element ref="blockquote"/>
+		<xsd:element ref="feedbackBlock"/>
+		<xsd:element ref="ul"/>
+		<xsd:element ref="templateBlock"/>
+		<xsd:element ref="table"/>
+		<xsd:element ref="div"/>
+		<xsd:element ref="m:math"/>
+	</xsd:choice>
+</xsd:group>
+
+
+<!-- Class: blockquote -->
+
+<xsd:attributeGroup name="blockquote.AttrGroup">
+	<xsd:attributeGroup ref="simpleBlock.AttrGroup"/>
+	<xsd:attribute name="cite" type="uri.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="blockquote.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleBlock.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="blockquote.Type" mixed="false">
+	<xsd:group ref="blockquote.ContentGroup"/>
+	<xsd:attributeGroup ref="blockquote.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="blockquote" type="blockquote.Type"/>
+
+
+<!-- Class: bodyElement -->
+
+<!-- Following definition is not used but improves readability of the binding document -->
+<xsd:group name="bodyElement.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="pre"/>
+		<xsd:element ref="h2"/>
+		<xsd:element ref="h3"/>
+		<xsd:element ref="h1"/>
+		<xsd:element ref="h6"/>
+		<xsd:element ref="h4"/>
+		<xsd:element ref="h5"/>
+		<xsd:element ref="p"/>
+		<xsd:element ref="address"/>
+		<xsd:element ref="prompt"/>
+		<xsd:element ref="dt"/>
+		<xsd:element ref="dd"/>
+		<xsd:element ref="td"/>
+		<xsd:element ref="th"/>
+		<xsd:element ref="itemBody"/>
+		<xsd:element ref="table"/>
+		<xsd:element ref="img"/>
+		<xsd:element ref="br"/>
+		<xsd:element ref="ul"/>
+		<xsd:element ref="tr"/>
+		<xsd:element ref="tbody"/>
+		<xsd:element ref="rubricBlock"/>
+		<xsd:element ref="blockquote"/>
+		<xsd:element ref="feedbackBlock"/>
+		<xsd:element ref="li"/>
+		<xsd:element ref="tfoot"/>
+		<xsd:element ref="thead"/>
+		<xsd:element ref="dl"/>
+		<xsd:element ref="hr"/>
+		<xsd:element ref="object"/>
+		<xsd:element ref="hottext"/>
+		<xsd:element ref="gap"/>
+		<xsd:element ref="gapText"/>
+		<xsd:element ref="gapImg"/>
+		<xsd:element ref="associableHotspot"/>
+		<xsd:element ref="simpleAssociableChoice"/>
+		<xsd:element ref="hotspotChoice"/>
+		<xsd:element ref="inlineChoice"/>
+		<xsd:element ref="simpleChoice"/>
+		<xsd:element ref="em"/>
+		<xsd:element ref="a"/>
+		<xsd:element ref="code"/>
+		<xsd:element ref="span"/>
+		<xsd:element ref="sub"/>
+		<xsd:element ref="acronym"/>
+		<xsd:element ref="big"/>
+		<xsd:element ref="tt"/>
+		<xsd:element ref="kbd"/>
+		<xsd:element ref="q"/>
+		<xsd:element ref="i"/>
+		<xsd:element ref="dfn"/>
+		<xsd:element ref="feedbackInline"/>
+		<xsd:element ref="abbr"/>
+		<xsd:element ref="strong"/>
+		<xsd:element ref="sup"/>
+		<xsd:element ref="var"/>
+		<xsd:element ref="small"/>
+		<xsd:element ref="samp"/>
+		<xsd:element ref="b"/>
+		<xsd:element ref="cite"/>
+		<xsd:element ref="textEntryInteraction"/>
+		<xsd:element ref="inlineChoiceInteraction"/>
+		<xsd:element ref="endAttemptInteraction"/>
+		<xsd:element ref="positionObjectInteraction"/>
+		<xsd:element ref="customInteraction"/>
+		<xsd:element ref="drawingInteraction"/>
+		<xsd:element ref="gapMatchInteraction"/>
+		<xsd:element ref="matchInteraction"/>
+		<xsd:element ref="graphicGapMatchInteraction"/>
+		<xsd:element ref="hotspotInteraction"/>
+		<xsd:element ref="graphicOrderInteraction"/>
+		<xsd:element ref="selectPointInteraction"/>
+		<xsd:element ref="graphicAssociateInteraction"/>
+		<xsd:element ref="sliderInteraction"/>
+		<xsd:element ref="choiceInteraction"/>
+		<xsd:element ref="hottextInteraction"/>
+		<xsd:element ref="orderInteraction"/>
+		<xsd:element ref="extendedTextInteraction"/>
+		<xsd:element ref="uploadInteraction"/>
+		<xsd:element ref="associateInteraction"/>
+		<xsd:element ref="ol"/>
+		<xsd:element ref="colgroup"/>
+		<xsd:element ref="printedVariable"/>
+		<xsd:element ref="caption"/>
+		<xsd:element ref="templateBlock"/>
+		<xsd:element ref="templateInline"/>
+		<xsd:element ref="div"/>
+		<xsd:element ref="col"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="bodyElement.AttrGroup">
+	<xsd:attribute name="id" type="identifier.Type" use="optional"/>
+	<xsd:attribute name="class" use="optional">
+		<xsd:simpleType>
+			<xsd:list itemType="styleclass.Type"/>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute ref="xml:lang"/>
+	<xsd:attribute name="label" type="string256.Type" use="optional"/>
+</xsd:attributeGroup>
+
+
+<!-- Datatype: boolean -->
+
+<xsd:simpleType name="boolean.Type">
+	<xsd:restriction base="xsd:boolean"/>
+</xsd:simpleType>
+
+
+<!-- Class: br -->
+
+<xsd:attributeGroup name="br.AttrGroup">
+	<xsd:attributeGroup ref="atomicInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="br.Type" mixed="false">
+	<xsd:attributeGroup ref="br.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="br" type="br.Type"/>
+
+
+<!-- Class: caption -->
+
+<xsd:attributeGroup name="caption.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="caption.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="inline.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="caption.Type" mixed="true">
+	<xsd:group ref="caption.ContentGroup"/>
+	<xsd:attributeGroup ref="caption.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="caption" type="caption.Type"/>
+
+
+<!-- Enumeration: cardinality -->
+
+<xsd:simpleType name="cardinality.Type">
+	<xsd:restriction base="xsd:NMTOKEN">
+		<xsd:enumeration value="multiple"/>
+		<xsd:enumeration value="ordered"/>
+		<xsd:enumeration value="record"/>
+		<xsd:enumeration value="single"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+
+<!-- Class: categorizedStatistic -->
+
+<xsd:attributeGroup name="categorizedStatistic.AttrGroup">
+	<xsd:attributeGroup ref="itemStatistic.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="categorizedStatistic.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="itemStatistic.ContentGroup"/>
+		<xsd:element ref="mapping" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="categorizedStatistic.Type" mixed="false">
+	<xsd:group ref="categorizedStatistic.ContentGroup"/>
+	<xsd:attributeGroup ref="categorizedStatistic.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="categorizedStatistic" type="categorizedStatistic.Type"/>
+
+
+<!-- Class: choice -->
+
+<!-- Following definition is not used but improves readability of the binding document -->
+<xsd:group name="choice.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="hottext"/>
+		<xsd:element ref="gap"/>
+		<xsd:element ref="gapText"/>
+		<xsd:element ref="gapImg"/>
+		<xsd:element ref="associableHotspot"/>
+		<xsd:element ref="simpleAssociableChoice"/>
+		<xsd:element ref="hotspotChoice"/>
+		<xsd:element ref="inlineChoice"/>
+		<xsd:element ref="simpleChoice"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="choice.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+	<xsd:attribute name="identifier" type="identifier.Type" use="required"/>
+	<xsd:attribute name="fixed" type="boolean.Type" use="optional"/>
+</xsd:attributeGroup>
+
+
+<!-- Class: choiceInteraction -->
+
+<xsd:attributeGroup name="choiceInteraction.AttrGroup">
+	<xsd:attributeGroup ref="blockInteraction.AttrGroup"/>
+	<xsd:attribute name="shuffle" type="boolean.Type" use="required"/>
+	<xsd:attribute name="maxChoices" type="integer.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="choiceInteraction.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="blockInteraction.ContentGroup"/>
+		<xsd:element ref="simpleChoice" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="choiceInteraction.Type" mixed="false">
+	<xsd:group ref="choiceInteraction.ContentGroup"/>
+	<xsd:attributeGroup ref="choiceInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="choiceInteraction" type="choiceInteraction.Type"/>
+
+
+<!-- Class: cite -->
+
+<xsd:attributeGroup name="cite.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="cite.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="cite.Type" mixed="true">
+	<xsd:group ref="cite.ContentGroup"/>
+	<xsd:attributeGroup ref="cite.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="cite" type="cite.Type"/>
+
+
+<!-- Class: code -->
+
+<xsd:attributeGroup name="code.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="code.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="code.Type" mixed="true">
+	<xsd:group ref="code.ContentGroup"/>
+	<xsd:attributeGroup ref="code.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="code" type="code.Type"/>
+
+
+<!-- Class: col -->
+
+<xsd:attributeGroup name="col.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="col.Type" mixed="false">
+	<xsd:attributeGroup ref="col.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="col" type="col.Type"/>
+
+
+<!-- Class: colgroup -->
+
+<xsd:attributeGroup name="colgroup.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="colgroup.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="col" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="colgroup.Type" mixed="false">
+	<xsd:group ref="colgroup.ContentGroup"/>
+	<xsd:attributeGroup ref="colgroup.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="colgroup" type="colgroup.Type"/>
+
+
+<!-- Pseudo-class: composite -->
+
+<xsd:element name="composite" type="boolean.Type"/>
+
+
+<!-- Class: contains -->
+
+<xsd:group name="contains.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="contains.Type" mixed="false">
+	<xsd:group ref="contains.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="contains" type="contains.Type"/>
+
+
+<!-- Class: contentProfile -->
+
+<xsd:group name="contentProfile.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="composite" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="adaptive" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="timeDependent" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="templates" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="textElements" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="listElements" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="objectElements" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="objectType" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element ref="presentationElements" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="tableElements" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="imageElement" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="imageType" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element ref="hypertextElement" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="mathElement" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="mathVariable" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="feedbackIntegrated" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="feedbackModal" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="rubric" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="printedVariables" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="interactionType" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element ref="responseRules" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="rpTemplate" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element ref="rounding" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="regexp" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="metadataProfile" minOccurs="1" maxOccurs="1"/>
+	<xsd:any namespace="##other" minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="contentProfile.Type" mixed="false">
+	<xsd:group ref="contentProfile.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="contentProfile" type="contentProfile.Type"/>
+
+
+<!-- Datatype: coords -->
+
+<xsd:simpleType name="coords.Type">
+	<xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+
+<!-- Class: correct -->
+
+<xsd:attributeGroup name="correct.AttrGroup">
+	<xsd:attribute name="identifier" type="identifier.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="correct.Type" mixed="false">
+	<xsd:attributeGroup ref="correct.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="correct" type="correct.Type"/>
+
+
+<!-- Class: correctResponse -->
+
+<xsd:attributeGroup name="correctResponse.AttrGroup">
+	<xsd:attribute name="interpretation" type="string.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="correctResponse.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="value" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="correctResponse.Type" mixed="false">
+	<xsd:group ref="correctResponse.ContentGroup"/>
+	<xsd:attributeGroup ref="correctResponse.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="correctResponse" type="correctResponse.Type"/>
+
+
+<!-- Class: customInteraction -->
+
+<xsd:attributeGroup name="customInteraction.AttrGroup">
+	<xsd:attributeGroup ref="interaction.AttrGroup"/>
+	<xsd:anyAttribute namespace="##other"/>
+</xsd:attributeGroup>
+
+<xsd:group name="customInteraction.ContentGroup">
+	<xsd:sequence>
+	<xsd:any namespace="##any" minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="customInteraction.Type" mixed="false">
+	<xsd:group ref="customInteraction.ContentGroup"/>
+	<xsd:attributeGroup ref="customInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="customInteraction" type="customInteraction.Type"/>
+
+
+<!-- Class: customOperator -->
+
+<xsd:attributeGroup name="customOperator.AttrGroup">
+	<xsd:attribute name="class" type="identifier.Type" use="optional"/>
+	<xsd:attribute name="definition" type="uri.Type" use="optional"/>
+	<xsd:anyAttribute namespace="##other"/>
+</xsd:attributeGroup>
+
+<xsd:group name="customOperator.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="customOperator.Type" mixed="false">
+	<xsd:group ref="customOperator.ContentGroup"/>
+	<xsd:attributeGroup ref="customOperator.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="customOperator" type="customOperator.Type"/>
+
+
+<!-- Datatype: date -->
+
+<xsd:simpleType name="date.Type">
+	<xsd:restriction base="xsd:date"/>
+</xsd:simpleType>
+
+
+<!-- Class: dd -->
+
+<xsd:attributeGroup name="dd.AttrGroup">
+	<xsd:attributeGroup ref="dlElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="dd.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="flow.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="dd.Type" mixed="true">
+	<xsd:group ref="dd.ContentGroup"/>
+	<xsd:attributeGroup ref="dd.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="dd" type="dd.Type"/>
+
+
+<!-- Class: default -->
+
+<xsd:attributeGroup name="default.AttrGroup">
+	<xsd:attribute name="identifier" type="identifier.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="default.Type" mixed="false">
+	<xsd:attributeGroup ref="default.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="default" type="default.Type"/>
+
+
+<!-- Class: defaultValue -->
+
+<xsd:attributeGroup name="defaultValue.AttrGroup">
+	<xsd:attribute name="interpretation" type="string.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="defaultValue.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="value" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="defaultValue.Type" mixed="false">
+	<xsd:group ref="defaultValue.ContentGroup"/>
+	<xsd:attributeGroup ref="defaultValue.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="defaultValue" type="defaultValue.Type"/>
+
+
+<!-- Class: delete -->
+
+<xsd:group name="delete.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="delete.Type" mixed="false">
+	<xsd:group ref="delete.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="delete" type="delete.Type"/>
+
+
+<!-- Class: dfn -->
+
+<xsd:attributeGroup name="dfn.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="dfn.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="dfn.Type" mixed="true">
+	<xsd:group ref="dfn.ContentGroup"/>
+	<xsd:attributeGroup ref="dfn.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="dfn" type="dfn.Type"/>
+
+
+<!-- Class: div -->
+
+<xsd:attributeGroup name="div.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="div.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="flow.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="div.Type" mixed="true">
+	<xsd:group ref="div.ContentGroup"/>
+	<xsd:attributeGroup ref="div.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="div" type="div.Type"/>
+
+
+<!-- Class: divide -->
+
+<xsd:group name="divide.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="divide.Type" mixed="false">
+	<xsd:group ref="divide.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="divide" type="divide.Type"/>
+
+
+<!-- Class: dl -->
+
+<xsd:attributeGroup name="dl.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="dl.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="dlElement.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="dl.Type" mixed="false">
+	<xsd:group ref="dl.ContentGroup"/>
+	<xsd:attributeGroup ref="dl.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="dl" type="dl.Type"/>
+
+
+<!-- Class: dlElement -->
+
+<xsd:group name="dlElement.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="dt"/>
+		<xsd:element ref="dd"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="dlElement.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+
+<!-- Class: drawingInteraction -->
+
+<xsd:attributeGroup name="drawingInteraction.AttrGroup">
+	<xsd:attributeGroup ref="blockInteraction.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="drawingInteraction.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="blockInteraction.ContentGroup"/>
+		<xsd:element ref="object" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="drawingInteraction.Type" mixed="false">
+	<xsd:group ref="drawingInteraction.ContentGroup"/>
+	<xsd:attributeGroup ref="drawingInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="drawingInteraction" type="drawingInteraction.Type"/>
+
+
+<!-- Class: dt -->
+
+<xsd:attributeGroup name="dt.AttrGroup">
+	<xsd:attributeGroup ref="dlElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="dt.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="inline.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="dt.Type" mixed="true">
+	<xsd:group ref="dt.ContentGroup"/>
+	<xsd:attributeGroup ref="dt.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="dt" type="dt.Type"/>
+
+
+<!-- Class: durationGTE -->
+
+<xsd:group name="durationGTE.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="durationGTE.Type" mixed="false">
+	<xsd:group ref="durationGTE.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="durationGTE" type="durationGTE.Type"/>
+
+
+<!-- Class: durationLT -->
+
+<xsd:group name="durationLT.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="durationLT.Type" mixed="false">
+	<xsd:group ref="durationLT.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="durationLT" type="durationLT.Type"/>
+
+
+<!-- Class: em -->
+
+<xsd:attributeGroup name="em.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="em.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="em.Type" mixed="true">
+	<xsd:group ref="em.ContentGroup"/>
+	<xsd:attributeGroup ref="em.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="em" type="em.Type"/>
+
+
+<!-- Class: endAttemptInteraction -->
+
+<xsd:attributeGroup name="endAttemptInteraction.AttrGroup">
+	<xsd:attributeGroup ref="inlineInteraction.AttrGroup"/>
+	<xsd:attribute name="title" type="string.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="endAttemptInteraction.Type" mixed="false">
+	<xsd:attributeGroup ref="endAttemptInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="endAttemptInteraction" type="endAttemptInteraction.Type"/>
+
+
+<!-- Class: equal -->
+
+<xsd:attributeGroup name="equal.AttrGroup">
+	<xsd:attribute name="toleranceMode" type="toleranceMode.Type" use="required"/>
+	<xsd:attribute name="tolerance" use="optional">
+		<xsd:simpleType>
+			<xsd:list itemType="float.Type"/>
+		</xsd:simpleType>
+	</xsd:attribute>
+</xsd:attributeGroup>
+
+<xsd:group name="equal.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="equal.Type" mixed="false">
+	<xsd:group ref="equal.ContentGroup"/>
+	<xsd:attributeGroup ref="equal.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="equal" type="equal.Type"/>
+
+
+<!-- Class: equalRounded -->
+
+<xsd:attributeGroup name="equalRounded.AttrGroup">
+	<xsd:attribute name="roundingMode" type="roundingMode.Type" use="required"/>
+	<xsd:attribute name="figures" type="integer.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="equalRounded.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="equalRounded.Type" mixed="false">
+	<xsd:group ref="equalRounded.ContentGroup"/>
+	<xsd:attributeGroup ref="equalRounded.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="equalRounded" type="equalRounded.Type"/>
+
+
+<!-- Class: exitResponse -->
+
+<xsd:complexType name="exitResponse.Type"/>
+
+<xsd:element name="exitResponse" type="exitResponse.Type"/>
+
+
+<!-- Class: exitTemplate -->
+
+<xsd:complexType name="exitTemplate.Type"/>
+
+<xsd:element name="exitTemplate" type="exitTemplate.Type"/>
+
+
+<!-- Class: expression -->
+
+<xsd:group name="expression.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="and"/>
+		<xsd:element ref="gt"/>
+		<xsd:element ref="ordered"/>
+		<xsd:element ref="divide"/>
+		<xsd:element ref="customOperator"/>
+		<xsd:element ref="random"/>
+		<xsd:element ref="substring"/>
+		<xsd:element ref="variable"/>
+		<xsd:element ref="equalRounded"/>
+		<xsd:element ref="integerToFloat"/>
+		<xsd:element ref="null"/>
+		<xsd:element ref="index"/>
+		<xsd:element ref="integerDivide"/>
+		<xsd:element ref="gte"/>
+		<xsd:element ref="durationLT"/>
+		<xsd:element ref="contains"/>
+		<xsd:element ref="member"/>
+		<xsd:element ref="lt"/>
+		<xsd:element ref="correct"/>
+		<xsd:element ref="match"/>
+		<xsd:element ref="product"/>
+		<xsd:element ref="multiple"/>
+		<xsd:element ref="power"/>
+		<xsd:element ref="mapResponsePoint"/>
+		<xsd:element ref="mapResponse"/>
+		<xsd:element ref="randomFloat"/>
+		<xsd:element ref="stringMatch"/>
+		<xsd:element ref="not"/>
+		<xsd:element ref="integerModulus"/>
+		<xsd:element ref="subtract"/>
+		<xsd:element ref="durationGTE"/>
+		<xsd:element ref="anyN"/>
+		<xsd:element ref="round"/>
+		<xsd:element ref="baseValue"/>
+		<xsd:element ref="default"/>
+		<xsd:element ref="inside"/>
+		<xsd:element ref="equal"/>
+		<xsd:element ref="fieldValue"/>
+		<xsd:element ref="randomInteger"/>
+		<xsd:element ref="isNull"/>
+		<xsd:element ref="patternMatch"/>
+		<xsd:element ref="lte"/>
+		<xsd:element ref="sum"/>
+		<xsd:element ref="truncate"/>
+		<xsd:element ref="or"/>
+		<xsd:element ref="delete"/>
+	</xsd:choice>
+</xsd:group>
+
+
+<!-- Class: extendedTextInteraction -->
+
+<xsd:attributeGroup name="extendedTextInteraction.AttrGroup">
+	<xsd:attributeGroup ref="blockInteraction.AttrGroup"/>
+	<xsd:attributeGroup ref="stringInteraction.AttrGroup"/>
+	<xsd:attribute name="maxStrings" type="integer.Type" use="optional"/>
+	<xsd:attribute name="expectedLines" type="integer.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="extendedTextInteraction.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="blockInteraction.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="extendedTextInteraction.Type" mixed="false">
+	<xsd:group ref="extendedTextInteraction.ContentGroup"/>
+	<xsd:attributeGroup ref="extendedTextInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="extendedTextInteraction" type="extendedTextInteraction.Type"/>
+
+
+<!-- Class: feedbackBlock -->
+
+<xsd:attributeGroup name="feedbackBlock.AttrGroup">
+	<xsd:attributeGroup ref="feedbackElement.AttrGroup"/>
+	<xsd:attributeGroup ref="simpleBlock.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="feedbackBlock.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleBlock.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="feedbackBlock.Type" mixed="false">
+	<xsd:group ref="feedbackBlock.ContentGroup"/>
+	<xsd:attributeGroup ref="feedbackBlock.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="feedbackBlock" type="feedbackBlock.Type"/>
+
+
+<!-- Class: feedbackElement -->
+
+<!-- Following definition is not used but improves readability of the binding document -->
+<xsd:group name="feedbackElement.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="feedbackInline"/>
+		<xsd:element ref="feedbackBlock"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="feedbackElement.AttrGroup">
+	<xsd:attribute name="outcomeIdentifier" type="identifier.Type" use="required"/>
+	<xsd:attribute name="showHide" type="showHide.Type" use="required"/>
+	<xsd:attribute name="identifier" type="identifier.Type" use="required"/>
+</xsd:attributeGroup>
+
+
+<!-- Class: feedbackInline -->
+
+<xsd:attributeGroup name="feedbackInline.AttrGroup">
+	<xsd:attributeGroup ref="feedbackElement.AttrGroup"/>
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="feedbackInline.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="feedbackInline.Type" mixed="true">
+	<xsd:group ref="feedbackInline.ContentGroup"/>
+	<xsd:attributeGroup ref="feedbackInline.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="feedbackInline" type="feedbackInline.Type"/>
+
+
+<!-- Pseudo-class: feedbackIntegrated -->
+
+<xsd:element name="feedbackIntegrated" type="boolean.Type"/>
+
+
+<!-- Pseudo-class: feedbackModal -->
+
+<xsd:element name="feedbackModal" type="boolean.Type"/>
+
+
+<!-- Enumeration: feedbackType -->
+
+<xsd:simpleType name="feedbackType.Type">
+	<xsd:restriction base="xsd:NMTOKEN">
+		<xsd:enumeration value="adaptive"/>
+		<xsd:enumeration value="nonadaptive"/>
+		<xsd:enumeration value="none"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:element name="feedbackType" type="feedbackType.Type"/>
+
+
+<!-- Class: fieldValue -->
+
+<xsd:attributeGroup name="fieldValue.AttrGroup">
+	<xsd:attribute name="fieldIdentifier" type="identifier.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="fieldValue.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="fieldValue.Type" mixed="false">
+	<xsd:group ref="fieldValue.ContentGroup"/>
+	<xsd:attributeGroup ref="fieldValue.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="fieldValue" type="fieldValue.Type"/>
+
+
+<!-- Datatype: float -->
+
+<xsd:simpleType name="float.Type">
+	<xsd:restriction base="xsd:float"/>
+</xsd:simpleType>
+
+
+<!-- Class: flow -->
+
+<xsd:group name="flow.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="pre"/>
+		<xsd:element ref="h2"/>
+		<xsd:element ref="h3"/>
+		<xsd:element ref="h1"/>
+		<xsd:element ref="h6"/>
+		<xsd:element ref="h4"/>
+		<xsd:element ref="h5"/>
+		<xsd:element ref="p"/>
+		<xsd:element ref="address"/>
+		<xsd:element ref="dl"/>
+		<xsd:element ref="ol"/>
+		<xsd:element ref="img"/>
+		<xsd:element ref="br"/>
+		<xsd:element ref="ul"/>
+		<xsd:element ref="hr"/>
+		<xsd:element ref="printedVariable"/>
+		<xsd:element ref="object"/>
+		<xsd:element ref="rubricBlock"/>
+		<xsd:element ref="blockquote"/>
+		<xsd:element ref="feedbackBlock"/>
+		<xsd:element ref="hottext"/>
+		<xsd:element ref="em"/>
+		<xsd:element ref="a"/>
+		<xsd:element ref="code"/>
+		<xsd:element ref="span"/>
+		<xsd:element ref="sub"/>
+		<xsd:element ref="acronym"/>
+		<xsd:element ref="big"/>
+		<xsd:element ref="tt"/>
+		<xsd:element ref="kbd"/>
+		<xsd:element ref="q"/>
+		<xsd:element ref="i"/>
+		<xsd:element ref="dfn"/>
+		<xsd:element ref="feedbackInline"/>
+		<xsd:element ref="abbr"/>
+		<xsd:element ref="strong"/>
+		<xsd:element ref="sup"/>
+		<xsd:element ref="var"/>
+		<xsd:element ref="small"/>
+		<xsd:element ref="samp"/>
+		<xsd:element ref="b"/>
+		<xsd:element ref="cite"/>
+		<xsd:element ref="templateInline"/>
+		<xsd:element ref="templateBlock"/>
+		<xsd:element ref="table"/>
+		<xsd:element ref="div"/>
+		<xsd:element ref="m:math"/>
+		<xsd:element ref="textEntryInteraction"/>
+		<xsd:element ref="inlineChoiceInteraction"/>
+		<xsd:element ref="endAttemptInteraction"/>
+		<xsd:element ref="customInteraction"/>
+		<xsd:element ref="drawingInteraction"/>
+		<xsd:element ref="gapMatchInteraction"/>
+		<xsd:element ref="matchInteraction"/>
+		<xsd:element ref="graphicGapMatchInteraction"/>
+		<xsd:element ref="hotspotInteraction"/>
+		<xsd:element ref="graphicOrderInteraction"/>
+		<xsd:element ref="selectPointInteraction"/>
+		<xsd:element ref="graphicAssociateInteraction"/>
+		<xsd:element ref="sliderInteraction"/>
+		<xsd:element ref="choiceInteraction"/>
+		<xsd:element ref="hottextInteraction"/>
+		<xsd:element ref="orderInteraction"/>
+		<xsd:element ref="extendedTextInteraction"/>
+		<xsd:element ref="uploadInteraction"/>
+		<xsd:element ref="associateInteraction"/>
+	</xsd:choice>
+</xsd:group>
+
+
+<!-- Class: flowStatic -->
+
+<xsd:group name="flowStatic.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="pre"/>
+		<xsd:element ref="h2"/>
+		<xsd:element ref="h3"/>
+		<xsd:element ref="h1"/>
+		<xsd:element ref="h6"/>
+		<xsd:element ref="h4"/>
+		<xsd:element ref="h5"/>
+		<xsd:element ref="p"/>
+		<xsd:element ref="address"/>
+		<xsd:element ref="dl"/>
+		<xsd:element ref="ol"/>
+		<xsd:element ref="img"/>
+		<xsd:element ref="br"/>
+		<xsd:element ref="ul"/>
+		<xsd:element ref="hr"/>
+		<xsd:element ref="printedVariable"/>
+		<xsd:element ref="object"/>
+		<xsd:element ref="rubricBlock"/>
+		<xsd:element ref="blockquote"/>
+		<xsd:element ref="feedbackBlock"/>
+		<xsd:element ref="hottext"/>
+		<xsd:element ref="em"/>
+		<xsd:element ref="a"/>
+		<xsd:element ref="code"/>
+		<xsd:element ref="span"/>
+		<xsd:element ref="sub"/>
+		<xsd:element ref="acronym"/>
+		<xsd:element ref="big"/>
+		<xsd:element ref="tt"/>
+		<xsd:element ref="kbd"/>
+		<xsd:element ref="q"/>
+		<xsd:element ref="i"/>
+		<xsd:element ref="dfn"/>
+		<xsd:element ref="feedbackInline"/>
+		<xsd:element ref="abbr"/>
+		<xsd:element ref="strong"/>
+		<xsd:element ref="sup"/>
+		<xsd:element ref="var"/>
+		<xsd:element ref="small"/>
+		<xsd:element ref="samp"/>
+		<xsd:element ref="b"/>
+		<xsd:element ref="cite"/>
+		<xsd:element ref="templateInline"/>
+		<xsd:element ref="templateBlock"/>
+		<xsd:element ref="table"/>
+		<xsd:element ref="div"/>
+		<xsd:element ref="m:math"/>
+	</xsd:choice>
+</xsd:group>
+
+
+<!-- Class: gap -->
+
+<xsd:attributeGroup name="gap.AttrGroup">
+	<xsd:attributeGroup ref="associableChoice.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="gap.Type" mixed="false">
+	<xsd:attributeGroup ref="gap.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="gap" type="gap.Type"/>
+
+
+<!-- Class: gapChoice -->
+
+<xsd:group name="gapChoice.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="gapText"/>
+		<xsd:element ref="gapImg"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="gapChoice.AttrGroup">
+	<xsd:attributeGroup ref="associableChoice.AttrGroup"/>
+	<xsd:attribute name="matchMax" type="integer.Type" use="required"/>
+</xsd:attributeGroup>
+
+
+<!-- Class: gapImg -->
+
+<xsd:attributeGroup name="gapImg.AttrGroup">
+	<xsd:attributeGroup ref="gapChoice.AttrGroup"/>
+	<xsd:attribute name="objectLabel" type="string.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="gapImg.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="object" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="gapImg.Type" mixed="false">
+	<xsd:group ref="gapImg.ContentGroup"/>
+	<xsd:attributeGroup ref="gapImg.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="gapImg" type="gapImg.Type"/>
+
+
+<!-- Class: gapMatchInteraction -->
+
+<xsd:attributeGroup name="gapMatchInteraction.AttrGroup">
+	<xsd:attributeGroup ref="blockInteraction.AttrGroup"/>
+	<xsd:attribute name="shuffle" type="boolean.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="gapMatchInteraction.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="blockInteraction.ContentGroup"/>
+		<xsd:group ref="gapChoice.ElementGroup" minOccurs="1" maxOccurs="unbounded"/>
+		<xsd:group ref="blockStatic.ElementGroup" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="gapMatchInteraction.Type" mixed="false">
+	<xsd:group ref="gapMatchInteraction.ContentGroup"/>
+	<xsd:attributeGroup ref="gapMatchInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="gapMatchInteraction" type="gapMatchInteraction.Type"/>
+
+
+<!-- Class: gapText -->
+
+<xsd:attributeGroup name="gapText.AttrGroup">
+	<xsd:attributeGroup ref="gapChoice.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="gapText.Type">
+	<xsd:simpleContent>
+		<xsd:extension base="xsd:string">
+			<xsd:attributeGroup ref="gapText.AttrGroup"/>
+		</xsd:extension>
+	</xsd:simpleContent>
+</xsd:complexType>
+
+<xsd:element name="gapText" type="gapText.Type"/>
+
+
+<!-- Class: graphicAssociateInteraction -->
+
+<xsd:attributeGroup name="graphicAssociateInteraction.AttrGroup">
+	<xsd:attributeGroup ref="graphicInteraction.AttrGroup"/>
+	<xsd:attribute name="maxAssociations" type="integer.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="graphicAssociateInteraction.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="graphicInteraction.ContentGroup"/>
+		<xsd:element ref="associableHotspot" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="graphicAssociateInteraction.Type" mixed="false">
+	<xsd:group ref="graphicAssociateInteraction.ContentGroup"/>
+	<xsd:attributeGroup ref="graphicAssociateInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="graphicAssociateInteraction" type="graphicAssociateInteraction.Type"/>
+
+
+<!-- Class: graphicGapMatchInteraction -->
+
+<xsd:attributeGroup name="graphicGapMatchInteraction.AttrGroup">
+	<xsd:attributeGroup ref="graphicInteraction.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="graphicGapMatchInteraction.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="graphicInteraction.ContentGroup"/>
+		<xsd:element ref="gapImg" minOccurs="1" maxOccurs="unbounded"/>
+		<xsd:element ref="associableHotspot" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="graphicGapMatchInteraction.Type" mixed="false">
+	<xsd:group ref="graphicGapMatchInteraction.ContentGroup"/>
+	<xsd:attributeGroup ref="graphicGapMatchInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="graphicGapMatchInteraction" type="graphicGapMatchInteraction.Type"/>
+
+
+<!-- Class: graphicInteraction -->
+
+<!-- Following definition is not used but improves readability of the binding document -->
+<xsd:group name="graphicInteraction.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="graphicGapMatchInteraction"/>
+		<xsd:element ref="hotspotInteraction"/>
+		<xsd:element ref="graphicOrderInteraction"/>
+		<xsd:element ref="selectPointInteraction"/>
+		<xsd:element ref="graphicAssociateInteraction"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="graphicInteraction.AttrGroup">
+	<xsd:attributeGroup ref="blockInteraction.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="graphicInteraction.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="blockInteraction.ContentGroup"/>
+		<xsd:element ref="object" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+
+<!-- Class: graphicOrderInteraction -->
+
+<xsd:attributeGroup name="graphicOrderInteraction.AttrGroup">
+	<xsd:attributeGroup ref="graphicInteraction.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="graphicOrderInteraction.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="graphicInteraction.ContentGroup"/>
+		<xsd:element ref="hotspotChoice" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="graphicOrderInteraction.Type" mixed="false">
+	<xsd:group ref="graphicOrderInteraction.ContentGroup"/>
+	<xsd:attributeGroup ref="graphicOrderInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="graphicOrderInteraction" type="graphicOrderInteraction.Type"/>
+
+
+<!-- Class: gt -->
+
+<xsd:group name="gt.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="gt.Type" mixed="false">
+	<xsd:group ref="gt.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="gt" type="gt.Type"/>
+
+
+<!-- Class: gte -->
+
+<xsd:group name="gte.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="gte.Type" mixed="false">
+	<xsd:group ref="gte.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="gte" type="gte.Type"/>
+
+
+<!-- Class: h1 -->
+
+<xsd:attributeGroup name="h1.AttrGroup">
+	<xsd:attributeGroup ref="atomicBlock.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="h1.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="atomicBlock.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="h1.Type" mixed="true">
+	<xsd:group ref="h1.ContentGroup"/>
+	<xsd:attributeGroup ref="h1.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="h1" type="h1.Type"/>
+
+
+<!-- Class: h2 -->
+
+<xsd:attributeGroup name="h2.AttrGroup">
+	<xsd:attributeGroup ref="atomicBlock.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="h2.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="atomicBlock.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="h2.Type" mixed="true">
+	<xsd:group ref="h2.ContentGroup"/>
+	<xsd:attributeGroup ref="h2.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="h2" type="h2.Type"/>
+
+
+<!-- Class: h3 -->
+
+<xsd:attributeGroup name="h3.AttrGroup">
+	<xsd:attributeGroup ref="atomicBlock.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="h3.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="atomicBlock.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="h3.Type" mixed="true">
+	<xsd:group ref="h3.ContentGroup"/>
+	<xsd:attributeGroup ref="h3.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="h3" type="h3.Type"/>
+
+
+<!-- Class: h4 -->
+
+<xsd:attributeGroup name="h4.AttrGroup">
+	<xsd:attributeGroup ref="atomicBlock.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="h4.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="atomicBlock.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="h4.Type" mixed="true">
+	<xsd:group ref="h4.ContentGroup"/>
+	<xsd:attributeGroup ref="h4.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="h4" type="h4.Type"/>
+
+
+<!-- Class: h5 -->
+
+<xsd:attributeGroup name="h5.AttrGroup">
+	<xsd:attributeGroup ref="atomicBlock.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="h5.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="atomicBlock.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="h5.Type" mixed="true">
+	<xsd:group ref="h5.ContentGroup"/>
+	<xsd:attributeGroup ref="h5.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="h5" type="h5.Type"/>
+
+
+<!-- Class: h6 -->
+
+<xsd:attributeGroup name="h6.AttrGroup">
+	<xsd:attributeGroup ref="atomicBlock.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="h6.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="atomicBlock.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="h6.Type" mixed="true">
+	<xsd:group ref="h6.ContentGroup"/>
+	<xsd:attributeGroup ref="h6.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="h6" type="h6.Type"/>
+
+
+<!-- Class: hotspot -->
+
+<!-- Following definition is not used but improves readability of the binding document -->
+<xsd:group name="hotspot.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="hotspotChoice"/>
+		<xsd:element ref="associableHotspot"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="hotspot.AttrGroup">
+	<xsd:attribute name="shape" type="shape.Type" use="required"/>
+	<xsd:attribute name="coords" type="coords.Type" use="required"/>
+	<xsd:attribute name="hotspotLabel" type="string256.Type" use="optional"/>
+</xsd:attributeGroup>
+
+
+<!-- Class: hotspotChoice -->
+
+<xsd:attributeGroup name="hotspotChoice.AttrGroup">
+	<xsd:attributeGroup ref="choice.AttrGroup"/>
+	<xsd:attributeGroup ref="hotspot.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="hotspotChoice.Type" mixed="false">
+	<xsd:attributeGroup ref="hotspotChoice.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="hotspotChoice" type="hotspotChoice.Type"/>
+
+
+<!-- Class: hotspotInteraction -->
+
+<xsd:attributeGroup name="hotspotInteraction.AttrGroup">
+	<xsd:attributeGroup ref="graphicInteraction.AttrGroup"/>
+	<xsd:attribute name="maxChoices" type="integer.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="hotspotInteraction.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="graphicInteraction.ContentGroup"/>
+		<xsd:element ref="hotspotChoice" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="hotspotInteraction.Type" mixed="false">
+	<xsd:group ref="hotspotInteraction.ContentGroup"/>
+	<xsd:attributeGroup ref="hotspotInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="hotspotInteraction" type="hotspotInteraction.Type"/>
+
+
+<!-- Class: hottext -->
+
+<xsd:attributeGroup name="hottext.AttrGroup">
+	<xsd:attributeGroup ref="choice.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="hottext.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="inlineStatic.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="hottext.Type" mixed="true">
+	<xsd:group ref="hottext.ContentGroup"/>
+	<xsd:attributeGroup ref="hottext.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="hottext" type="hottext.Type"/>
+
+
+<!-- Class: hottextInteraction -->
+
+<xsd:attributeGroup name="hottextInteraction.AttrGroup">
+	<xsd:attributeGroup ref="blockInteraction.AttrGroup"/>
+	<xsd:attribute name="maxChoices" type="integer.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="hottextInteraction.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="blockInteraction.ContentGroup"/>
+		<xsd:group ref="blockStatic.ElementGroup" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="hottextInteraction.Type" mixed="false">
+	<xsd:group ref="hottextInteraction.ContentGroup"/>
+	<xsd:attributeGroup ref="hottextInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="hottextInteraction" type="hottextInteraction.Type"/>
+
+
+<!-- Class: hr -->
+
+<xsd:attributeGroup name="hr.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="hr.Type" mixed="false">
+	<xsd:attributeGroup ref="hr.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="hr" type="hr.Type"/>
+
+
+<!-- Pseudo-class: hypertextElement -->
+
+<xsd:element name="hypertextElement" type="boolean.Type"/>
+
+
+<!-- Class: i -->
+
+<xsd:attributeGroup name="i.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="i.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="i.Type" mixed="true">
+	<xsd:group ref="i.ContentGroup"/>
+	<xsd:attributeGroup ref="i.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="i" type="i.Type"/>
+
+
+<!-- Datatype: identifier -->
+
+<xsd:simpleType name="identifier.Type">
+	<xsd:restriction base="xsd:NMTOKEN"/>
+</xsd:simpleType>
+
+
+<!-- Pseudo-class: imageElement -->
+
+<xsd:element name="imageElement" type="boolean.Type"/>
+
+
+<!-- Pseudo-class: imageType -->
+
+<xsd:element name="imageType" type="mimeType.Type"/>
+
+
+<!-- Class: img -->
+
+<xsd:attributeGroup name="img.AttrGroup">
+	<xsd:attributeGroup ref="atomicInline.AttrGroup"/>
+	<xsd:attribute name="src" type="uri.Type" use="required"/>
+	<xsd:attribute name="alt" type="string256.Type" use="required"/>
+	<xsd:attribute name="longdesc" type="uri.Type" use="optional"/>
+	<xsd:attribute name="height" type="length.Type" use="optional"/>
+	<xsd:attribute name="width" type="length.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="img.Type" mixed="false">
+	<xsd:attributeGroup ref="img.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="img" type="img.Type"/>
+
+
+<!-- Pseudo-class: imsmd -->
+
+<xsd:element name="imsmd" type="boolean.Type"/>
+
+
+<!-- Pseudo-class: imsqtimd -->
+
+<xsd:element name="imsqtimd" type="boolean.Type"/>
+
+
+<!-- Class: index -->
+
+<xsd:attributeGroup name="index.AttrGroup">
+	<xsd:attribute name="n" type="integer.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="index.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="index.Type" mixed="false">
+	<xsd:group ref="index.ContentGroup"/>
+	<xsd:attributeGroup ref="index.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="index" type="index.Type"/>
+
+
+<!-- Class: inline -->
+
+<xsd:group name="inline.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="textEntryInteraction"/>
+		<xsd:element ref="inlineChoiceInteraction"/>
+		<xsd:element ref="endAttemptInteraction"/>
+		<xsd:element ref="hottext"/>
+		<xsd:element ref="img"/>
+		<xsd:element ref="br"/>
+		<xsd:element ref="printedVariable"/>
+		<xsd:element ref="object"/>
+		<xsd:element ref="gap"/>
+		<xsd:element ref="em"/>
+		<xsd:element ref="a"/>
+		<xsd:element ref="code"/>
+		<xsd:element ref="span"/>
+		<xsd:element ref="sub"/>
+		<xsd:element ref="acronym"/>
+		<xsd:element ref="big"/>
+		<xsd:element ref="tt"/>
+		<xsd:element ref="kbd"/>
+		<xsd:element ref="q"/>
+		<xsd:element ref="i"/>
+		<xsd:element ref="dfn"/>
+		<xsd:element ref="feedbackInline"/>
+		<xsd:element ref="abbr"/>
+		<xsd:element ref="strong"/>
+		<xsd:element ref="sup"/>
+		<xsd:element ref="var"/>
+		<xsd:element ref="small"/>
+		<xsd:element ref="samp"/>
+		<xsd:element ref="b"/>
+		<xsd:element ref="cite"/>
+		<xsd:element ref="templateInline"/>
+		<xsd:element ref="m:math"/>
+	</xsd:choice>
+</xsd:group>
+
+
+<!-- Class: inlineChoice -->
+
+<xsd:attributeGroup name="inlineChoice.AttrGroup">
+	<xsd:attributeGroup ref="choice.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="inlineChoice.Type">
+	<xsd:simpleContent>
+		<xsd:extension base="xsd:string">
+			<xsd:attributeGroup ref="inlineChoice.AttrGroup"/>
+		</xsd:extension>
+	</xsd:simpleContent>
+</xsd:complexType>
+
+<xsd:element name="inlineChoice" type="inlineChoice.Type"/>
+
+
+<!-- Class: inlineChoiceInteraction -->
+
+<xsd:attributeGroup name="inlineChoiceInteraction.AttrGroup">
+	<xsd:attributeGroup ref="inlineInteraction.AttrGroup"/>
+	<xsd:attribute name="shuffle" type="boolean.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="inlineChoiceInteraction.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="inlineChoice" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="inlineChoiceInteraction.Type" mixed="false">
+	<xsd:group ref="inlineChoiceInteraction.ContentGroup"/>
+	<xsd:attributeGroup ref="inlineChoiceInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="inlineChoiceInteraction" type="inlineChoiceInteraction.Type"/>
+
+
+<!-- Class: inlineInteraction -->
+
+<!-- Following definition is not used but improves readability of the binding document -->
+<xsd:group name="inlineInteraction.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="textEntryInteraction"/>
+		<xsd:element ref="inlineChoiceInteraction"/>
+		<xsd:element ref="endAttemptInteraction"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="inlineInteraction.AttrGroup">
+	<xsd:attributeGroup ref="interaction.AttrGroup"/>
+</xsd:attributeGroup>
+
+
+<!-- Class: inlineStatic -->
+
+<xsd:group name="inlineStatic.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="hottext"/>
+		<xsd:element ref="img"/>
+		<xsd:element ref="br"/>
+		<xsd:element ref="printedVariable"/>
+		<xsd:element ref="object"/>
+		<xsd:element ref="gap"/>
+		<xsd:element ref="em"/>
+		<xsd:element ref="a"/>
+		<xsd:element ref="code"/>
+		<xsd:element ref="span"/>
+		<xsd:element ref="sub"/>
+		<xsd:element ref="acronym"/>
+		<xsd:element ref="big"/>
+		<xsd:element ref="tt"/>
+		<xsd:element ref="kbd"/>
+		<xsd:element ref="q"/>
+		<xsd:element ref="i"/>
+		<xsd:element ref="dfn"/>
+		<xsd:element ref="feedbackInline"/>
+		<xsd:element ref="abbr"/>
+		<xsd:element ref="strong"/>
+		<xsd:element ref="sup"/>
+		<xsd:element ref="var"/>
+		<xsd:element ref="small"/>
+		<xsd:element ref="samp"/>
+		<xsd:element ref="b"/>
+		<xsd:element ref="cite"/>
+		<xsd:element ref="templateInline"/>
+		<xsd:element ref="m:math"/>
+	</xsd:choice>
+</xsd:group>
+
+
+<!-- Class: inside -->
+
+<xsd:attributeGroup name="inside.AttrGroup">
+	<xsd:attribute name="shape" type="shape.Type" use="required"/>
+	<xsd:attribute name="coords" type="coords.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="inside.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="inside.Type" mixed="false">
+	<xsd:group ref="inside.ContentGroup"/>
+	<xsd:attributeGroup ref="inside.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="inside" type="inside.Type"/>
+
+
+<!-- Datatype: integer -->
+
+<xsd:simpleType name="integer.Type">
+	<xsd:restriction base="xsd:integer"/>
+</xsd:simpleType>
+
+
+<!-- Class: integerDivide -->
+
+<xsd:group name="integerDivide.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="integerDivide.Type" mixed="false">
+	<xsd:group ref="integerDivide.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="integerDivide" type="integerDivide.Type"/>
+
+
+<!-- Class: integerModulus -->
+
+<xsd:group name="integerModulus.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="integerModulus.Type" mixed="false">
+	<xsd:group ref="integerModulus.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="integerModulus" type="integerModulus.Type"/>
+
+
+<!-- Class: integerToFloat -->
+
+<xsd:group name="integerToFloat.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="integerToFloat.Type" mixed="false">
+	<xsd:group ref="integerToFloat.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="integerToFloat" type="integerToFloat.Type"/>
+
+
+<!-- Class: interaction -->
+
+<!-- Following definition is not used but improves readability of the binding document -->
+<xsd:group name="interaction.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="textEntryInteraction"/>
+		<xsd:element ref="inlineChoiceInteraction"/>
+		<xsd:element ref="endAttemptInteraction"/>
+		<xsd:element ref="positionObjectInteraction"/>
+		<xsd:element ref="customInteraction"/>
+		<xsd:element ref="drawingInteraction"/>
+		<xsd:element ref="gapMatchInteraction"/>
+		<xsd:element ref="matchInteraction"/>
+		<xsd:element ref="graphicGapMatchInteraction"/>
+		<xsd:element ref="hotspotInteraction"/>
+		<xsd:element ref="graphicOrderInteraction"/>
+		<xsd:element ref="selectPointInteraction"/>
+		<xsd:element ref="graphicAssociateInteraction"/>
+		<xsd:element ref="sliderInteraction"/>
+		<xsd:element ref="choiceInteraction"/>
+		<xsd:element ref="hottextInteraction"/>
+		<xsd:element ref="orderInteraction"/>
+		<xsd:element ref="extendedTextInteraction"/>
+		<xsd:element ref="uploadInteraction"/>
+		<xsd:element ref="associateInteraction"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="interaction.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+	<xsd:attribute name="responseIdentifier" type="identifier.Type" use="required"/>
+</xsd:attributeGroup>
+
+
+<!-- Enumeration: interactionType -->
+
+<xsd:simpleType name="interactionType.Type">
+	<xsd:restriction base="xsd:NMTOKEN">
+		<xsd:enumeration value="associateInteraction"/>
+		<xsd:enumeration value="choiceInteraction"/>
+		<xsd:enumeration value="customInteraction"/>
+		<xsd:enumeration value="drawingInteraction"/>
+		<xsd:enumeration value="endAttemptInteraction"/>
+		<xsd:enumeration value="extendedTextInteraction"/>
+		<xsd:enumeration value="gapMatchInteraction"/>
+		<xsd:enumeration value="graphicAssociateInteraction"/>
+		<xsd:enumeration value="graphicGapMatchInteraction"/>
+		<xsd:enumeration value="graphicOrderInteraction"/>
+		<xsd:enumeration value="hotspotInteraction"/>
+		<xsd:enumeration value="hottextInteraction"/>
+		<xsd:enumeration value="inlineChoiceInteraction"/>
+		<xsd:enumeration value="matchInteraction"/>
+		<xsd:enumeration value="orderInteraction"/>
+		<xsd:enumeration value="positionObjectInteraction"/>
+		<xsd:enumeration value="selectPointInteraction"/>
+		<xsd:enumeration value="sliderInteraction"/>
+		<xsd:enumeration value="textEntryInteraction"/>
+		<xsd:enumeration value="uploadInteraction"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:element name="interactionType" type="interactionType.Type"/>
+
+
+<!-- Class: isNull -->
+
+<xsd:group name="isNull.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="isNull.Type" mixed="false">
+	<xsd:group ref="isNull.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="isNull" type="isNull.Type"/>
+
+
+<!-- Class: itemBody -->
+
+<xsd:attributeGroup name="itemBody.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="itemBody.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="block.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="itemBody.Type" mixed="false">
+	<xsd:group ref="itemBody.ContentGroup"/>
+	<xsd:attributeGroup ref="itemBody.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="itemBody" type="itemBody.Type"/>
+
+
+<!-- Class: itemSession -->
+
+<xsd:attributeGroup name="itemSession.AttrGroup">
+	<xsd:attribute name="completionStatus" type="identifier.Type" use="required"/>
+	<xsd:attribute name="duration" type="float.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="itemSession.ContentGroup">
+	<xsd:sequence>
+	</xsd:sequence>
+</xsd:group>
+
+
+<!-- Class: itemStatistic -->
+
+<xsd:group name="itemStatistic.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="ordinaryStatistic"/>
+		<xsd:element ref="categorizedStatistic"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="itemStatistic.AttrGroup">
+	<xsd:attribute name="name" type="identifier.Type" use="required"/>
+	<xsd:attribute name="glossary" type="uri.Type" use="optional"/>
+	<xsd:attribute name="context" type="uri.Type" use="required"/>
+	<xsd:attribute name="caseCount" type="integer.Type" use="optional"/>
+	<xsd:attribute name="stdError" type="float.Type" use="optional"/>
+	<xsd:attribute name="stdDeviation" type="float.Type" use="optional"/>
+	<xsd:attribute name="lastUpdated" type="date.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="itemStatistic.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="targetObject" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+
+<!-- Pseudo-class: itemTemplate -->
+
+<xsd:element name="itemTemplate" type="boolean.Type"/>
+
+
+<!-- Class: itemVariable -->
+
+<xsd:attributeGroup name="itemVariable.AttrGroup">
+	<xsd:attribute name="identifier" type="identifier.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="itemVariable.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="value" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+
+<!-- Class: kbd -->
+
+<xsd:attributeGroup name="kbd.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="kbd.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="kbd.Type" mixed="true">
+	<xsd:group ref="kbd.ContentGroup"/>
+	<xsd:attributeGroup ref="kbd.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="kbd" type="kbd.Type"/>
+
+
+<!-- Datatype: language -->
+
+<xsd:simpleType name="language.Type">
+	<xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+
+<!-- Datatype: length -->
+
+<xsd:simpleType name="length.Type">
+	<xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+
+<!-- Class: li -->
+
+<xsd:attributeGroup name="li.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="li.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="flow.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="li.Type" mixed="true">
+	<xsd:group ref="li.ContentGroup"/>
+	<xsd:attributeGroup ref="li.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="li" type="li.Type"/>
+
+
+<!-- Pseudo-class: listElements -->
+
+<xsd:element name="listElements" type="boolean.Type"/>
+
+
+<!-- Pseudo-class: lomMetadata -->
+
+<xsd:element name="lomMetadata" type="boolean.Type"/>
+
+
+<!-- Class: lt -->
+
+<xsd:group name="lt.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="lt.Type" mixed="false">
+	<xsd:group ref="lt.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="lt" type="lt.Type"/>
+
+
+<!-- Class: lte -->
+
+<xsd:group name="lte.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="lte.Type" mixed="false">
+	<xsd:group ref="lte.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="lte" type="lte.Type"/>
+
+
+<!-- Class: mapEntry -->
+
+<xsd:attributeGroup name="mapEntry.AttrGroup">
+	<xsd:attribute name="mapKey" type="xsd:string" use="required"/>
+	<xsd:attribute name="mappedValue" type="float.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="mapEntry.Type" mixed="false">
+	<xsd:attributeGroup ref="mapEntry.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="mapEntry" type="mapEntry.Type"/>
+
+
+<!-- Class: mapResponse -->
+
+<xsd:attributeGroup name="mapResponse.AttrGroup">
+	<xsd:attribute name="identifier" type="identifier.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="mapResponse.Type" mixed="false">
+	<xsd:attributeGroup ref="mapResponse.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="mapResponse" type="mapResponse.Type"/>
+
+
+<!-- Class: mapResponsePoint -->
+
+<xsd:attributeGroup name="mapResponsePoint.AttrGroup">
+	<xsd:attribute name="identifier" type="identifier.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="mapResponsePoint.Type" mixed="false">
+	<xsd:attributeGroup ref="mapResponsePoint.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="mapResponsePoint" type="mapResponsePoint.Type"/>
+
+
+<!-- Class: mapping -->
+
+<xsd:attributeGroup name="mapping.AttrGroup">
+	<xsd:attribute name="lowerBound" type="float.Type" use="optional"/>
+	<xsd:attribute name="upperBound" type="float.Type" use="optional"/>
+	<xsd:attribute name="defaultValue" type="float.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="mapping.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="mapEntry" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="mapping.Type" mixed="false">
+	<xsd:group ref="mapping.ContentGroup"/>
+	<xsd:attributeGroup ref="mapping.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="mapping" type="mapping.Type"/>
+
+
+<!-- Class: match -->
+
+<xsd:group name="match.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="match.Type" mixed="false">
+	<xsd:group ref="match.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="match" type="match.Type"/>
+
+
+<!-- Class: matchInteraction -->
+
+<xsd:attributeGroup name="matchInteraction.AttrGroup">
+	<xsd:attributeGroup ref="blockInteraction.AttrGroup"/>
+	<xsd:attribute name="shuffle" type="boolean.Type" use="required"/>
+	<xsd:attribute name="maxAssociations" type="integer.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="matchInteraction.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="blockInteraction.ContentGroup"/>
+		<xsd:element ref="simpleMatchSet" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="matchInteraction.Type" mixed="false">
+	<xsd:group ref="matchInteraction.ContentGroup"/>
+	<xsd:attributeGroup ref="matchInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="matchInteraction" type="matchInteraction.Type"/>
+
+
+<!-- Pseudo-class: mathElement -->
+
+<xsd:element name="mathElement" type="boolean.Type"/>
+
+
+<!-- Pseudo-class: mathVariable -->
+
+<xsd:element name="mathVariable" type="boolean.Type"/>
+
+
+<!-- Class: member -->
+
+<xsd:group name="member.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="member.Type" mixed="false">
+	<xsd:group ref="member.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="member" type="member.Type"/>
+
+
+<!-- Class: metadataProfile -->
+
+<xsd:group name="metadataProfile.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="imsmd" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="lomMetadata" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="imsqtimd" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="metadataProfile.Type" mixed="false">
+	<xsd:group ref="metadataProfile.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="metadataProfile" type="metadataProfile.Type"/>
+
+
+<!-- Datatype: mimeType -->
+
+<xsd:simpleType name="mimeType.Type">
+	<xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+
+<!-- Class: modalFeedback -->
+
+<xsd:attributeGroup name="modalFeedback.AttrGroup">
+	<xsd:attribute name="outcomeIdentifier" type="identifier.Type" use="required"/>
+	<xsd:attribute name="showHide" type="showHide.Type" use="required"/>
+	<xsd:attribute name="identifier" type="identifier.Type" use="required"/>
+	<xsd:attribute name="title" type="string.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="modalFeedback.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="flowStatic.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="modalFeedback.Type" mixed="true">
+	<xsd:group ref="modalFeedback.ContentGroup"/>
+	<xsd:attributeGroup ref="modalFeedback.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="modalFeedback" type="modalFeedback.Type"/>
+
+
+<!-- Class: multiple -->
+
+<xsd:group name="multiple.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="multiple.Type" mixed="false">
+	<xsd:group ref="multiple.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="multiple" type="multiple.Type"/>
+
+
+<!-- Class: not -->
+
+<xsd:group name="not.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="not.Type" mixed="false">
+	<xsd:group ref="not.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="not" type="not.Type"/>
+
+
+<!-- Class: null -->
+
+<xsd:complexType name="null.Type"/>
+
+<xsd:element name="null" type="null.Type"/>
+
+
+<!-- Class: object -->
+
+<xsd:attributeGroup name="object.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+	<xsd:attribute name="data" type="string.Type" use="required"/>
+	<xsd:attribute name="type" type="mimeType.Type" use="required"/>
+	<xsd:attribute name="width" type="length.Type" use="optional"/>
+	<xsd:attribute name="height" type="length.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="object.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="objectFlow.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="object.Type" mixed="true">
+	<xsd:group ref="object.ContentGroup"/>
+	<xsd:attributeGroup ref="object.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="object" type="object.Type"/>
+
+
+<!-- Pseudo-class: objectElements -->
+
+<xsd:element name="objectElements" type="boolean.Type"/>
+
+
+<!-- Class: objectFlow -->
+
+<xsd:group name="objectFlow.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="pre"/>
+		<xsd:element ref="h2"/>
+		<xsd:element ref="h3"/>
+		<xsd:element ref="h1"/>
+		<xsd:element ref="h6"/>
+		<xsd:element ref="h4"/>
+		<xsd:element ref="h5"/>
+		<xsd:element ref="p"/>
+		<xsd:element ref="address"/>
+		<xsd:element ref="dl"/>
+		<xsd:element ref="ol"/>
+		<xsd:element ref="img"/>
+		<xsd:element ref="br"/>
+		<xsd:element ref="ul"/>
+		<xsd:element ref="hr"/>
+		<xsd:element ref="printedVariable"/>
+		<xsd:element ref="object"/>
+		<xsd:element ref="rubricBlock"/>
+		<xsd:element ref="blockquote"/>
+		<xsd:element ref="feedbackBlock"/>
+		<xsd:element ref="hottext"/>
+		<xsd:element ref="em"/>
+		<xsd:element ref="a"/>
+		<xsd:element ref="code"/>
+		<xsd:element ref="span"/>
+		<xsd:element ref="sub"/>
+		<xsd:element ref="acronym"/>
+		<xsd:element ref="big"/>
+		<xsd:element ref="tt"/>
+		<xsd:element ref="kbd"/>
+		<xsd:element ref="q"/>
+		<xsd:element ref="i"/>
+		<xsd:element ref="dfn"/>
+		<xsd:element ref="feedbackInline"/>
+		<xsd:element ref="abbr"/>
+		<xsd:element ref="strong"/>
+		<xsd:element ref="sup"/>
+		<xsd:element ref="var"/>
+		<xsd:element ref="small"/>
+		<xsd:element ref="samp"/>
+		<xsd:element ref="b"/>
+		<xsd:element ref="cite"/>
+		<xsd:element ref="templateInline"/>
+		<xsd:element ref="templateBlock"/>
+		<xsd:element ref="table"/>
+		<xsd:element ref="div"/>
+		<xsd:element ref="m:math"/>
+		<xsd:element ref="textEntryInteraction"/>
+		<xsd:element ref="inlineChoiceInteraction"/>
+		<xsd:element ref="endAttemptInteraction"/>
+		<xsd:element ref="customInteraction"/>
+		<xsd:element ref="drawingInteraction"/>
+		<xsd:element ref="gapMatchInteraction"/>
+		<xsd:element ref="matchInteraction"/>
+		<xsd:element ref="graphicGapMatchInteraction"/>
+		<xsd:element ref="hotspotInteraction"/>
+		<xsd:element ref="graphicOrderInteraction"/>
+		<xsd:element ref="selectPointInteraction"/>
+		<xsd:element ref="graphicAssociateInteraction"/>
+		<xsd:element ref="sliderInteraction"/>
+		<xsd:element ref="choiceInteraction"/>
+		<xsd:element ref="hottextInteraction"/>
+		<xsd:element ref="orderInteraction"/>
+		<xsd:element ref="extendedTextInteraction"/>
+		<xsd:element ref="uploadInteraction"/>
+		<xsd:element ref="associateInteraction"/>
+		<xsd:element ref="param"/>
+	</xsd:choice>
+</xsd:group>
+
+
+<!-- Pseudo-class: objectType -->
+
+<xsd:element name="objectType" type="mimeType.Type"/>
+
+
+<!-- Class: ol -->
+
+<xsd:attributeGroup name="ol.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="ol.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="li" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="ol.Type" mixed="false">
+	<xsd:group ref="ol.ContentGroup"/>
+	<xsd:attributeGroup ref="ol.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="ol" type="ol.Type"/>
+
+
+<!-- Class: or -->
+
+<xsd:group name="or.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="or.Type" mixed="false">
+	<xsd:group ref="or.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="or" type="or.Type"/>
+
+
+<!-- Class: orderInteraction -->
+
+<xsd:attributeGroup name="orderInteraction.AttrGroup">
+	<xsd:attributeGroup ref="blockInteraction.AttrGroup"/>
+	<xsd:attribute name="shuffle" type="boolean.Type" use="required"/>
+	<xsd:attribute name="orientation" type="orientation.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="orderInteraction.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="blockInteraction.ContentGroup"/>
+		<xsd:element ref="simpleChoice" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="orderInteraction.Type" mixed="false">
+	<xsd:group ref="orderInteraction.ContentGroup"/>
+	<xsd:attributeGroup ref="orderInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="orderInteraction" type="orderInteraction.Type"/>
+
+
+<!-- Class: ordered -->
+
+<xsd:group name="ordered.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="ordered.Type" mixed="false">
+	<xsd:group ref="ordered.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="ordered" type="ordered.Type"/>
+
+
+<!-- Class: ordinaryStatistic -->
+
+<xsd:attributeGroup name="ordinaryStatistic.AttrGroup">
+	<xsd:attributeGroup ref="itemStatistic.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="ordinaryStatistic.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="itemStatistic.ContentGroup"/>
+		<xsd:element ref="value" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="ordinaryStatistic.Type" mixed="false">
+	<xsd:group ref="ordinaryStatistic.ContentGroup"/>
+	<xsd:attributeGroup ref="ordinaryStatistic.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="ordinaryStatistic" type="ordinaryStatistic.Type"/>
+
+
+<!-- Enumeration: orientation -->
+
+<xsd:simpleType name="orientation.Type">
+	<xsd:restriction base="xsd:NMTOKEN">
+		<xsd:enumeration value="horizontal"/>
+		<xsd:enumeration value="vertical"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+
+<!-- Class: outcomeDeclaration -->
+
+<xsd:attributeGroup name="outcomeDeclaration.AttrGroup">
+	<xsd:attributeGroup ref="variableDeclaration.AttrGroup"/>
+	<xsd:attribute name="interpretation" type="string.Type" use="optional"/>
+	<xsd:attribute name="longInterpretation" type="uri.Type" use="optional"/>
+	<xsd:attribute name="normalMaximum" type="float.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="outcomeDeclaration.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="variableDeclaration.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="outcomeDeclaration.Type" mixed="false">
+	<xsd:group ref="outcomeDeclaration.ContentGroup"/>
+	<xsd:attributeGroup ref="outcomeDeclaration.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="outcomeDeclaration" type="outcomeDeclaration.Type"/>
+
+
+<!-- Class: outcomeVariable -->
+
+<xsd:attributeGroup name="outcomeVariable.AttrGroup">
+	<xsd:attributeGroup ref="itemVariable.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="outcomeVariable.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="itemVariable.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+
+<!-- Class: p -->
+
+<xsd:attributeGroup name="p.AttrGroup">
+	<xsd:attributeGroup ref="atomicBlock.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="p.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="atomicBlock.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="p.Type" mixed="true">
+	<xsd:group ref="p.ContentGroup"/>
+	<xsd:attributeGroup ref="p.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="p" type="p.Type"/>
+
+
+<!-- Class: param -->
+
+<xsd:attributeGroup name="param.AttrGroup">
+	<xsd:attribute name="name" type="string.Type" use="required"/>
+	<xsd:attribute name="value" type="string.Type" use="required"/>
+	<xsd:attribute name="valuetype" type="paramType.Type" use="required"/>
+	<xsd:attribute name="type" type="mimeType.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="param.Type" mixed="false">
+	<xsd:attributeGroup ref="param.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="param" type="param.Type"/>
+
+
+<!-- Enumeration: paramType -->
+
+<xsd:simpleType name="paramType.Type">
+	<xsd:restriction base="xsd:NMTOKEN">
+		<xsd:enumeration value="DATA"/>
+		<xsd:enumeration value="REF"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+
+<!-- Class: patternMatch -->
+
+<xsd:attributeGroup name="patternMatch.AttrGroup">
+	<xsd:attribute name="pattern" type="string.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="patternMatch.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="patternMatch.Type" mixed="false">
+	<xsd:group ref="patternMatch.ContentGroup"/>
+	<xsd:attributeGroup ref="patternMatch.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="patternMatch" type="patternMatch.Type"/>
+
+
+<!-- Class: positionObjectInteraction -->
+
+<xsd:attributeGroup name="positionObjectInteraction.AttrGroup">
+	<xsd:attributeGroup ref="interaction.AttrGroup"/>
+	<xsd:attribute name="centerPoint" use="optional">
+		<xsd:simpleType>
+			<xsd:list itemType="integer.Type"/>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="maxChoices" type="integer.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="positionObjectInteraction.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="object" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="positionObjectInteraction.Type" mixed="false">
+	<xsd:group ref="positionObjectInteraction.ContentGroup"/>
+	<xsd:attributeGroup ref="positionObjectInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="positionObjectInteraction" type="positionObjectInteraction.Type"/>
+
+
+<!-- Class: positionObjectStage -->
+
+<xsd:group name="positionObjectStage.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="object" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="positionObjectInteraction" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="positionObjectStage.Type" mixed="false">
+	<xsd:group ref="positionObjectStage.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="positionObjectStage" type="positionObjectStage.Type"/>
+
+
+<!-- Class: power -->
+
+<xsd:group name="power.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="power.Type" mixed="false">
+	<xsd:group ref="power.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="power" type="power.Type"/>
+
+
+<!-- Class: pre -->
+
+<xsd:attributeGroup name="pre.AttrGroup">
+	<xsd:attributeGroup ref="atomicBlock.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="pre.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="atomicBlock.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="pre.Type" mixed="true">
+	<xsd:group ref="pre.ContentGroup"/>
+	<xsd:attributeGroup ref="pre.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="pre" type="pre.Type"/>
+
+
+<!-- Pseudo-class: presentationElements -->
+
+<xsd:element name="presentationElements" type="boolean.Type"/>
+
+
+<!-- Class: printedVariable -->
+
+<xsd:attributeGroup name="printedVariable.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+	<xsd:attribute name="identifier" type="identifier.Type" use="required"/>
+	<xsd:attribute name="format" type="string256.Type" use="optional"/>
+	<xsd:attribute name="base" type="integer.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="printedVariable.Type" mixed="false">
+	<xsd:attributeGroup ref="printedVariable.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="printedVariable" type="printedVariable.Type"/>
+
+
+<!-- Pseudo-class: printedVariables -->
+
+<xsd:element name="printedVariables" type="boolean.Type"/>
+
+
+<!-- Class: product -->
+
+<xsd:group name="product.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="product.Type" mixed="false">
+	<xsd:group ref="product.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="product" type="product.Type"/>
+
+
+<!-- Class: prompt -->
+
+<xsd:attributeGroup name="prompt.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="prompt.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="inlineStatic.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="prompt.Type" mixed="true">
+	<xsd:group ref="prompt.ContentGroup"/>
+	<xsd:attributeGroup ref="prompt.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="prompt" type="prompt.Type"/>
+
+
+<!-- Class: q -->
+
+<xsd:attributeGroup name="q.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+	<xsd:attribute name="cite" type="uri.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="q.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="q.Type" mixed="true">
+	<xsd:group ref="q.ContentGroup"/>
+	<xsd:attributeGroup ref="q.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="q" type="q.Type"/>
+
+
+<!-- Class: qtiMetadata -->
+
+<xsd:group name="qtiMetadata.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="itemTemplate" minOccurs="0" maxOccurs="1"/>
+		<xsd:element ref="timeDependent" minOccurs="0" maxOccurs="1"/>
+		<xsd:element ref="composite" minOccurs="0" maxOccurs="1"/>
+		<xsd:element ref="interactionType" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element ref="feedbackType" minOccurs="0" maxOccurs="1"/>
+		<xsd:element ref="solutionAvailable" minOccurs="0" maxOccurs="1"/>
+		<xsd:element ref="toolName" minOccurs="0" maxOccurs="1"/>
+		<xsd:element ref="toolVersion" minOccurs="0" maxOccurs="1"/>
+		<xsd:element ref="toolVendor" minOccurs="0" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="qtiMetadata.Type" mixed="false">
+	<xsd:group ref="qtiMetadata.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="qtiMetadata" type="qtiMetadata.Type"/>
+
+
+<!-- Class: random -->
+
+<xsd:group name="random.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="random.Type" mixed="false">
+	<xsd:group ref="random.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="random" type="random.Type"/>
+
+
+<!-- Class: randomFloat -->
+
+<xsd:attributeGroup name="randomFloat.AttrGroup">
+	<xsd:attribute name="min" type="float.Type" use="required"/>
+	<xsd:attribute name="max" type="float.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="randomFloat.Type" mixed="false">
+	<xsd:attributeGroup ref="randomFloat.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="randomFloat" type="randomFloat.Type"/>
+
+
+<!-- Class: randomInteger -->
+
+<xsd:attributeGroup name="randomInteger.AttrGroup">
+	<xsd:attribute name="min" type="integer.Type" use="required"/>
+	<xsd:attribute name="max" type="integer.Type" use="required"/>
+	<xsd:attribute name="step" type="integer.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="randomInteger.Type" mixed="false">
+	<xsd:attributeGroup ref="randomInteger.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="randomInteger" type="randomInteger.Type"/>
+
+
+<!-- Pseudo-class: regexp -->
+
+<xsd:element name="regexp" type="boolean.Type"/>
+
+
+<!-- Class: responseCondition -->
+
+<xsd:group name="responseCondition.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="responseIf" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="responseElseIf" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element ref="responseElse" minOccurs="0" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="responseCondition.Type" mixed="false">
+	<xsd:group ref="responseCondition.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="responseCondition" type="responseCondition.Type"/>
+
+
+<!-- Class: responseDeclaration -->
+
+<xsd:attributeGroup name="responseDeclaration.AttrGroup">
+	<xsd:attributeGroup ref="variableDeclaration.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="responseDeclaration.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="variableDeclaration.ContentGroup"/>
+		<xsd:element ref="correctResponse" minOccurs="0" maxOccurs="1"/>
+		<xsd:element ref="mapping" minOccurs="0" maxOccurs="1"/>
+		<xsd:element ref="areaMapping" minOccurs="0" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="responseDeclaration.Type" mixed="false">
+	<xsd:group ref="responseDeclaration.ContentGroup"/>
+	<xsd:attributeGroup ref="responseDeclaration.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="responseDeclaration" type="responseDeclaration.Type"/>
+
+
+<!-- Class: responseElse -->
+
+<xsd:group name="responseElse.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="responseRule.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="responseElse.Type" mixed="false">
+	<xsd:group ref="responseElse.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="responseElse" type="responseElse.Type"/>
+
+
+<!-- Class: responseElseIf -->
+
+<xsd:group name="responseElseIf.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="1"/>
+		<xsd:group ref="responseRule.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="responseElseIf.Type" mixed="false">
+	<xsd:group ref="responseElseIf.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="responseElseIf" type="responseElseIf.Type"/>
+
+
+<!-- Class: responseIf -->
+
+<xsd:group name="responseIf.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="1"/>
+		<xsd:group ref="responseRule.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="responseIf.Type" mixed="false">
+	<xsd:group ref="responseIf.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="responseIf" type="responseIf.Type"/>
+
+
+<!-- Class: responseProcessing -->
+
+<xsd:attributeGroup name="responseProcessing.AttrGroup">
+	<xsd:attribute name="template" type="uri.Type" use="optional"/>
+	<xsd:attribute name="templateLocation" type="uri.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="responseProcessing.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="responseRule.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="responseProcessing.Type" mixed="false">
+	<xsd:group ref="responseProcessing.ContentGroup"/>
+	<xsd:attributeGroup ref="responseProcessing.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="responseProcessing" type="responseProcessing.Type"/>
+
+
+<!-- Class: responseRule -->
+
+<xsd:group name="responseRule.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="setOutcomeValue"/>
+		<xsd:element ref="responseCondition"/>
+		<xsd:element ref="exitResponse"/>
+	</xsd:choice>
+</xsd:group>
+
+
+<!-- Pseudo-class: responseRules -->
+
+<xsd:element name="responseRules" type="boolean.Type"/>
+
+
+<!-- Class: responseVariable -->
+
+<xsd:attributeGroup name="responseVariable.AttrGroup">
+	<xsd:attributeGroup ref="itemVariable.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="responseVariable.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="itemVariable.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+
+<!-- Class: round -->
+
+<xsd:group name="round.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="round.Type" mixed="false">
+	<xsd:group ref="round.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="round" type="round.Type"/>
+
+
+<!-- Pseudo-class: rounding -->
+
+<xsd:element name="rounding" type="boolean.Type"/>
+
+
+<!-- Enumeration: roundingMode -->
+
+<xsd:simpleType name="roundingMode.Type">
+	<xsd:restriction base="xsd:NMTOKEN">
+		<xsd:enumeration value="decimalPlaces"/>
+		<xsd:enumeration value="significantFigures"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+
+<!-- Pseudo-class: rpTemplate -->
+
+<xsd:element name="rpTemplate" type="uri.Type"/>
+
+
+<!-- Pseudo-class: rubric -->
+
+<xsd:element name="rubric" type="boolean.Type"/>
+
+
+<!-- Class: rubricBlock -->
+
+<xsd:attributeGroup name="rubricBlock.AttrGroup">
+	<xsd:attributeGroup ref="simpleBlock.AttrGroup"/>
+	<xsd:attribute name="view" use="required">
+		<xsd:simpleType>
+			<xsd:list itemType="view.Type"/>
+		</xsd:simpleType>
+	</xsd:attribute>
+</xsd:attributeGroup>
+
+<xsd:group name="rubricBlock.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleBlock.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="rubricBlock.Type" mixed="false">
+	<xsd:group ref="rubricBlock.ContentGroup"/>
+	<xsd:attributeGroup ref="rubricBlock.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="rubricBlock" type="rubricBlock.Type"/>
+
+
+<!-- Class: samp -->
+
+<xsd:attributeGroup name="samp.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="samp.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="samp.Type" mixed="true">
+	<xsd:group ref="samp.ContentGroup"/>
+	<xsd:attributeGroup ref="samp.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="samp" type="samp.Type"/>
+
+
+<!-- Class: selectPointInteraction -->
+
+<xsd:attributeGroup name="selectPointInteraction.AttrGroup">
+	<xsd:attributeGroup ref="graphicInteraction.AttrGroup"/>
+	<xsd:attribute name="maxChoices" type="integer.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="selectPointInteraction.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="graphicInteraction.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="selectPointInteraction.Type" mixed="false">
+	<xsd:group ref="selectPointInteraction.ContentGroup"/>
+	<xsd:attributeGroup ref="selectPointInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="selectPointInteraction" type="selectPointInteraction.Type"/>
+
+
+<!-- Class: sessionContext -->
+
+
+<!-- Class: setCorrectResponse -->
+
+<xsd:attributeGroup name="setCorrectResponse.AttrGroup">
+	<xsd:attribute name="identifier" type="identifier.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="setCorrectResponse.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="setCorrectResponse.Type" mixed="false">
+	<xsd:group ref="setCorrectResponse.ContentGroup"/>
+	<xsd:attributeGroup ref="setCorrectResponse.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="setCorrectResponse" type="setCorrectResponse.Type"/>
+
+
+<!-- Class: setDefaultValue -->
+
+<xsd:attributeGroup name="setDefaultValue.AttrGroup">
+	<xsd:attribute name="identifier" type="identifier.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="setDefaultValue.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="setDefaultValue.Type" mixed="false">
+	<xsd:group ref="setDefaultValue.ContentGroup"/>
+	<xsd:attributeGroup ref="setDefaultValue.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="setDefaultValue" type="setDefaultValue.Type"/>
+
+
+<!-- Class: setOutcomeValue -->
+
+<xsd:attributeGroup name="setOutcomeValue.AttrGroup">
+	<xsd:attribute name="identifier" type="identifier.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="setOutcomeValue.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="setOutcomeValue.Type" mixed="false">
+	<xsd:group ref="setOutcomeValue.ContentGroup"/>
+	<xsd:attributeGroup ref="setOutcomeValue.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="setOutcomeValue" type="setOutcomeValue.Type"/>
+
+
+<!-- Class: setTemplateValue -->
+
+<xsd:attributeGroup name="setTemplateValue.AttrGroup">
+	<xsd:attribute name="identifier" type="identifier.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="setTemplateValue.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="setTemplateValue.Type" mixed="false">
+	<xsd:group ref="setTemplateValue.ContentGroup"/>
+	<xsd:attributeGroup ref="setTemplateValue.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="setTemplateValue" type="setTemplateValue.Type"/>
+
+
+<!-- Enumeration: shape -->
+
+<xsd:simpleType name="shape.Type">
+	<xsd:restriction base="xsd:NMTOKEN">
+		<xsd:enumeration value="circle"/>
+		<xsd:enumeration value="default"/>
+		<xsd:enumeration value="ellipse"/>
+		<xsd:enumeration value="poly"/>
+		<xsd:enumeration value="rect"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+
+<!-- Enumeration: showHide -->
+
+<xsd:simpleType name="showHide.Type">
+	<xsd:restriction base="xsd:NMTOKEN">
+		<xsd:enumeration value="hide"/>
+		<xsd:enumeration value="show"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+
+<!-- Datatype: sign -->
+
+<xsd:simpleType name="sign.Type">
+	<xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+
+<!-- Class: simpleAssociableChoice -->
+
+<xsd:attributeGroup name="simpleAssociableChoice.AttrGroup">
+	<xsd:attributeGroup ref="associableChoice.AttrGroup"/>
+	<xsd:attribute name="matchMax" type="integer.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="simpleAssociableChoice.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="flowStatic.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="simpleAssociableChoice.Type" mixed="true">
+	<xsd:group ref="simpleAssociableChoice.ContentGroup"/>
+	<xsd:attributeGroup ref="simpleAssociableChoice.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="simpleAssociableChoice" type="simpleAssociableChoice.Type"/>
+
+
+<!-- Class: simpleBlock -->
+
+<!-- Following definition is not used but improves readability of the binding document -->
+<xsd:group name="simpleBlock.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="rubricBlock"/>
+		<xsd:element ref="blockquote"/>
+		<xsd:element ref="feedbackBlock"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="simpleBlock.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="simpleBlock.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="block.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+
+<!-- Class: simpleChoice -->
+
+<xsd:attributeGroup name="simpleChoice.AttrGroup">
+	<xsd:attributeGroup ref="choice.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="simpleChoice.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="flowStatic.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="simpleChoice.Type" mixed="true">
+	<xsd:group ref="simpleChoice.ContentGroup"/>
+	<xsd:attributeGroup ref="simpleChoice.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="simpleChoice" type="simpleChoice.Type"/>
+
+
+<!-- Class: simpleInline -->
+
+<!-- Following definition is not used but improves readability of the binding document -->
+<xsd:group name="simpleInline.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="em"/>
+		<xsd:element ref="a"/>
+		<xsd:element ref="code"/>
+		<xsd:element ref="span"/>
+		<xsd:element ref="sub"/>
+		<xsd:element ref="acronym"/>
+		<xsd:element ref="big"/>
+		<xsd:element ref="tt"/>
+		<xsd:element ref="kbd"/>
+		<xsd:element ref="q"/>
+		<xsd:element ref="i"/>
+		<xsd:element ref="dfn"/>
+		<xsd:element ref="feedbackInline"/>
+		<xsd:element ref="abbr"/>
+		<xsd:element ref="strong"/>
+		<xsd:element ref="sup"/>
+		<xsd:element ref="var"/>
+		<xsd:element ref="small"/>
+		<xsd:element ref="samp"/>
+		<xsd:element ref="b"/>
+		<xsd:element ref="cite"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="simpleInline.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="simpleInline.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="inline.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+
+<!-- Class: simpleMatchSet -->
+
+<xsd:group name="simpleMatchSet.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="simpleAssociableChoice" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="simpleMatchSet.Type" mixed="false">
+	<xsd:group ref="simpleMatchSet.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="simpleMatchSet" type="simpleMatchSet.Type"/>
+
+
+<!-- Class: sliderInteraction -->
+
+<xsd:attributeGroup name="sliderInteraction.AttrGroup">
+	<xsd:attributeGroup ref="blockInteraction.AttrGroup"/>
+	<xsd:attribute name="lowerBound" type="float.Type" use="required"/>
+	<xsd:attribute name="upperBound" type="float.Type" use="required"/>
+	<xsd:attribute name="step" type="integer.Type" use="optional"/>
+	<xsd:attribute name="stepLabel" type="boolean.Type" use="optional"/>
+	<xsd:attribute name="orientation" type="orientation.Type" use="optional"/>
+	<xsd:attribute name="reverse" type="boolean.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="sliderInteraction.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="blockInteraction.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="sliderInteraction.Type" mixed="false">
+	<xsd:group ref="sliderInteraction.ContentGroup"/>
+	<xsd:attributeGroup ref="sliderInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="sliderInteraction" type="sliderInteraction.Type"/>
+
+
+<!-- Class: small -->
+
+<xsd:attributeGroup name="small.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="small.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="small.Type" mixed="true">
+	<xsd:group ref="small.ContentGroup"/>
+	<xsd:attributeGroup ref="small.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="small" type="small.Type"/>
+
+
+<!-- Pseudo-class: solutionAvailable -->
+
+<xsd:element name="solutionAvailable" type="boolean.Type"/>
+
+
+<!-- Class: span -->
+
+<xsd:attributeGroup name="span.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="span.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="span.Type" mixed="true">
+	<xsd:group ref="span.ContentGroup"/>
+	<xsd:attributeGroup ref="span.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="span" type="span.Type"/>
+
+
+<!-- Datatype: string -->
+
+<xsd:simpleType name="string.Type">
+	<xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+
+<!-- Datatype: string256 -->
+
+<xsd:simpleType name="string256.Type">
+	<xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+
+<!-- Class: stringInteraction -->
+
+<!-- Following definition is not used but improves readability of the binding document -->
+<xsd:group name="stringInteraction.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="textEntryInteraction"/>
+		<xsd:element ref="extendedTextInteraction"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="stringInteraction.AttrGroup">
+	<xsd:attribute name="base" type="integer.Type" use="optional"/>
+	<xsd:attribute name="stringIdentifier" type="identifier.Type" use="optional"/>
+	<xsd:attribute name="expectedLength" type="integer.Type" use="optional"/>
+	<xsd:attribute name="patternMask" type="string.Type" use="optional"/>
+	<xsd:attribute name="placeholderText" type="string.Type" use="optional"/>
+</xsd:attributeGroup>
+
+
+<!-- Class: stringMatch -->
+
+<xsd:attributeGroup name="stringMatch.AttrGroup">
+	<xsd:attribute name="caseSensitive" type="boolean.Type" use="required"/>
+	<xsd:attribute name="substring" type="boolean.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="stringMatch.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="stringMatch.Type" mixed="false">
+	<xsd:group ref="stringMatch.ContentGroup"/>
+	<xsd:attributeGroup ref="stringMatch.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="stringMatch" type="stringMatch.Type"/>
+
+
+<!-- Class: strong -->
+
+<xsd:attributeGroup name="strong.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="strong.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="strong.Type" mixed="true">
+	<xsd:group ref="strong.ContentGroup"/>
+	<xsd:attributeGroup ref="strong.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="strong" type="strong.Type"/>
+
+
+<!-- Datatype: styleclass -->
+
+<xsd:simpleType name="styleclass.Type">
+	<xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+
+<!-- Class: stylesheet -->
+
+<xsd:attributeGroup name="stylesheet.AttrGroup">
+	<xsd:attribute name="href" type="uri.Type" use="required"/>
+	<xsd:attribute name="type" type="mimeType.Type" use="required"/>
+	<xsd:attribute name="media" type="string.Type" use="optional"/>
+	<xsd:attribute name="title" type="string.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="stylesheet.Type" mixed="false">
+	<xsd:attributeGroup ref="stylesheet.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="stylesheet" type="stylesheet.Type"/>
+
+
+<!-- Class: sub -->
+
+<xsd:attributeGroup name="sub.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="sub.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="sub.Type" mixed="true">
+	<xsd:group ref="sub.ContentGroup"/>
+	<xsd:attributeGroup ref="sub.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="sub" type="sub.Type"/>
+
+
+<!-- Class: substring -->
+
+<xsd:attributeGroup name="substring.AttrGroup">
+	<xsd:attribute name="caseSensitive" type="boolean.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="substring.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="substring.Type" mixed="false">
+	<xsd:group ref="substring.ContentGroup"/>
+	<xsd:attributeGroup ref="substring.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="substring" type="substring.Type"/>
+
+
+<!-- Class: subtract -->
+
+<xsd:group name="subtract.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="2" maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="subtract.Type" mixed="false">
+	<xsd:group ref="subtract.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="subtract" type="subtract.Type"/>
+
+
+<!-- Class: sum -->
+
+<xsd:group name="sum.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="sum.Type" mixed="false">
+	<xsd:group ref="sum.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="sum" type="sum.Type"/>
+
+
+<!-- Class: sup -->
+
+<xsd:attributeGroup name="sup.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="sup.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="sup.Type" mixed="true">
+	<xsd:group ref="sup.ContentGroup"/>
+	<xsd:attributeGroup ref="sup.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="sup" type="sup.Type"/>
+
+
+<!-- Class: table -->
+
+<xsd:attributeGroup name="table.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+	<xsd:attribute name="summary" type="string.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="table.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="caption" minOccurs="0" maxOccurs="1"/>
+		<xsd:element ref="col" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element ref="colgroup" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element ref="thead" minOccurs="0" maxOccurs="1"/>
+		<xsd:element ref="tfoot" minOccurs="0" maxOccurs="1"/>
+		<xsd:element ref="tbody" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="table.Type" mixed="false">
+	<xsd:group ref="table.ContentGroup"/>
+	<xsd:attributeGroup ref="table.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="table" type="table.Type"/>
+
+
+<!-- Class: tableCell -->
+
+<xsd:group name="tableCell.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="td"/>
+		<xsd:element ref="th"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="tableCell.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+	<xsd:attribute name="headers" use="optional">
+		<xsd:simpleType>
+			<xsd:list itemType="identifier.Type"/>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="scope" type="tableCellScope.Type" use="optional"/>
+	<xsd:attribute name="abbr" type="string.Type" use="optional"/>
+	<xsd:attribute name="axis" type="string.Type" use="optional"/>
+	<xsd:attribute name="rowspan" type="integer.Type" use="optional"/>
+	<xsd:attribute name="colspan" type="integer.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="tableCell.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="flow.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+
+<!-- Enumeration: tableCellScope -->
+
+<xsd:simpleType name="tableCellScope.Type">
+	<xsd:restriction base="xsd:NMTOKEN">
+		<xsd:enumeration value="col"/>
+		<xsd:enumeration value="colgroup"/>
+		<xsd:enumeration value="row"/>
+		<xsd:enumeration value="rowgroup"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+
+<!-- Pseudo-class: tableElements -->
+
+<xsd:element name="tableElements" type="boolean.Type"/>
+
+
+<!-- Class: targetObject -->
+
+<xsd:attributeGroup name="targetObject.AttrGroup">
+	<xsd:attribute name="identifier" type="string.Type" use="required"/>
+	<xsd:attribute name="partIdentifier" type="identifier.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="targetObject.Type" mixed="false">
+	<xsd:attributeGroup ref="targetObject.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="targetObject" type="targetObject.Type"/>
+
+
+<!-- Class: tbody -->
+
+<xsd:attributeGroup name="tbody.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="tbody.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="tr" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="tbody.Type" mixed="false">
+	<xsd:group ref="tbody.ContentGroup"/>
+	<xsd:attributeGroup ref="tbody.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="tbody" type="tbody.Type"/>
+
+
+<!-- Class: td -->
+
+<xsd:attributeGroup name="td.AttrGroup">
+	<xsd:attributeGroup ref="tableCell.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="td.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="tableCell.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="td.Type" mixed="true">
+	<xsd:group ref="td.ContentGroup"/>
+	<xsd:attributeGroup ref="td.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="td" type="td.Type"/>
+
+
+<!-- Class: templateBlock -->
+
+<xsd:attributeGroup name="templateBlock.AttrGroup">
+	<xsd:attributeGroup ref="templateElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="templateBlock.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="blockStatic.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="templateBlock.Type" mixed="false">
+	<xsd:group ref="templateBlock.ContentGroup"/>
+	<xsd:attributeGroup ref="templateBlock.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="templateBlock" type="templateBlock.Type"/>
+
+
+<!-- Class: templateCondition -->
+
+<xsd:group name="templateCondition.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="templateIf" minOccurs="1" maxOccurs="1"/>
+		<xsd:element ref="templateElseIf" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element ref="templateElse" minOccurs="0" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="templateCondition.Type" mixed="false">
+	<xsd:group ref="templateCondition.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="templateCondition" type="templateCondition.Type"/>
+
+
+<!-- Class: templateDeclaration -->
+
+<xsd:attributeGroup name="templateDeclaration.AttrGroup">
+	<xsd:attributeGroup ref="variableDeclaration.AttrGroup"/>
+	<xsd:attribute name="paramVariable" type="boolean.Type" use="required"/>
+	<xsd:attribute name="mathVariable" type="boolean.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:group name="templateDeclaration.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="variableDeclaration.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="templateDeclaration.Type" mixed="false">
+	<xsd:group ref="templateDeclaration.ContentGroup"/>
+	<xsd:attributeGroup ref="templateDeclaration.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="templateDeclaration" type="templateDeclaration.Type"/>
+
+
+<!-- Class: templateElement -->
+
+<!-- Following definition is not used but improves readability of the binding document -->
+<xsd:group name="templateElement.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="templateBlock"/>
+		<xsd:element ref="templateInline"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="templateElement.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+	<xsd:attribute name="templateIdentifier" type="identifier.Type" use="required"/>
+	<xsd:attribute name="showHide" type="showHide.Type" use="required"/>
+	<xsd:attribute name="identifier" type="identifier.Type" use="required"/>
+</xsd:attributeGroup>
+
+
+<!-- Class: templateElse -->
+
+<xsd:group name="templateElse.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="templateRule.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="templateElse.Type" mixed="false">
+	<xsd:group ref="templateElse.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="templateElse" type="templateElse.Type"/>
+
+
+<!-- Class: templateElseIf -->
+
+<xsd:group name="templateElseIf.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="1"/>
+		<xsd:group ref="templateRule.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="templateElseIf.Type" mixed="false">
+	<xsd:group ref="templateElseIf.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="templateElseIf" type="templateElseIf.Type"/>
+
+
+<!-- Class: templateIf -->
+
+<xsd:group name="templateIf.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="1"/>
+		<xsd:group ref="templateRule.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="templateIf.Type" mixed="false">
+	<xsd:group ref="templateIf.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="templateIf" type="templateIf.Type"/>
+
+
+<!-- Class: templateInline -->
+
+<xsd:attributeGroup name="templateInline.AttrGroup">
+	<xsd:attributeGroup ref="templateElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="templateInline.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="inlineStatic.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="templateInline.Type" mixed="true">
+	<xsd:group ref="templateInline.ContentGroup"/>
+	<xsd:attributeGroup ref="templateInline.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="templateInline" type="templateInline.Type"/>
+
+
+<!-- Class: templateProcessing -->
+
+<xsd:group name="templateProcessing.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="templateRule.ElementGroup" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="templateProcessing.Type" mixed="false">
+	<xsd:group ref="templateProcessing.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="templateProcessing" type="templateProcessing.Type"/>
+
+
+<!-- Class: templateRule -->
+
+<xsd:group name="templateRule.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="setTemplateValue"/>
+		<xsd:element ref="exitTemplate"/>
+		<xsd:element ref="templateCondition"/>
+		<xsd:element ref="setDefaultValue"/>
+		<xsd:element ref="setCorrectResponse"/>
+	</xsd:choice>
+</xsd:group>
+
+
+<!-- Class: templateVariable -->
+
+<xsd:attributeGroup name="templateVariable.AttrGroup">
+	<xsd:attributeGroup ref="itemVariable.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="templateVariable.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="itemVariable.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+
+<!-- Pseudo-class: templates -->
+
+<xsd:element name="templates" type="boolean.Type"/>
+
+
+<!-- Pseudo-class: textElements -->
+
+<xsd:element name="textElements" type="boolean.Type"/>
+
+
+<!-- Class: textEntryInteraction -->
+
+<xsd:attributeGroup name="textEntryInteraction.AttrGroup">
+	<xsd:attributeGroup ref="inlineInteraction.AttrGroup"/>
+	<xsd:attributeGroup ref="stringInteraction.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="textEntryInteraction.Type" mixed="false">
+	<xsd:attributeGroup ref="textEntryInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="textEntryInteraction" type="textEntryInteraction.Type"/>
+
+
+<!-- Class: textRun bound to PCDATA -->
+
+
+<!-- Class: tfoot -->
+
+<xsd:attributeGroup name="tfoot.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="tfoot.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="th" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="tfoot.Type" mixed="false">
+	<xsd:group ref="tfoot.ContentGroup"/>
+	<xsd:attributeGroup ref="tfoot.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="tfoot" type="tfoot.Type"/>
+
+
+<!-- Class: th -->
+
+<xsd:attributeGroup name="th.AttrGroup">
+	<xsd:attributeGroup ref="tableCell.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="th.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="tableCell.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="th.Type" mixed="true">
+	<xsd:group ref="th.ContentGroup"/>
+	<xsd:attributeGroup ref="th.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="th" type="th.Type"/>
+
+
+<!-- Class: thead -->
+
+<xsd:attributeGroup name="thead.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="thead.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="tr" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="thead.Type" mixed="false">
+	<xsd:group ref="thead.ContentGroup"/>
+	<xsd:attributeGroup ref="thead.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="thead" type="thead.Type"/>
+
+
+<!-- Pseudo-class: timeDependent -->
+
+<xsd:element name="timeDependent" type="boolean.Type"/>
+
+
+<!-- Enumeration: toleranceMode -->
+
+<xsd:simpleType name="toleranceMode.Type">
+	<xsd:restriction base="xsd:NMTOKEN">
+		<xsd:enumeration value="absolute"/>
+		<xsd:enumeration value="exact"/>
+		<xsd:enumeration value="relative"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+
+<!-- Pseudo-class: toolName -->
+
+<xsd:element name="toolName" type="string256.Type"/>
+
+
+<!-- Pseudo-class: toolVendor -->
+
+<xsd:element name="toolVendor" type="string256.Type"/>
+
+
+<!-- Pseudo-class: toolVersion -->
+
+<xsd:element name="toolVersion" type="string256.Type"/>
+
+
+<!-- Class: tr -->
+
+<xsd:attributeGroup name="tr.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="tr.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="tableCell.ElementGroup" minOccurs="1" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="tr.Type" mixed="false">
+	<xsd:group ref="tr.ContentGroup"/>
+	<xsd:attributeGroup ref="tr.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="tr" type="tr.Type"/>
+
+
+<!-- Class: truncate -->
+
+<xsd:group name="truncate.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="expression.ElementGroup" minOccurs="1" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="truncate.Type" mixed="false">
+	<xsd:group ref="truncate.ContentGroup"/>
+</xsd:complexType>
+
+<xsd:element name="truncate" type="truncate.Type"/>
+
+
+<!-- Class: tt -->
+
+<xsd:attributeGroup name="tt.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="tt.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="tt.Type" mixed="true">
+	<xsd:group ref="tt.ContentGroup"/>
+	<xsd:attributeGroup ref="tt.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="tt" type="tt.Type"/>
+
+
+<!-- Class: ul -->
+
+<xsd:attributeGroup name="ul.AttrGroup">
+	<xsd:attributeGroup ref="bodyElement.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="ul.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="li" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="ul.Type" mixed="false">
+	<xsd:group ref="ul.ContentGroup"/>
+	<xsd:attributeGroup ref="ul.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="ul" type="ul.Type"/>
+
+
+<!-- Class: uploadInteraction -->
+
+<xsd:attributeGroup name="uploadInteraction.AttrGroup">
+	<xsd:attributeGroup ref="blockInteraction.AttrGroup"/>
+	<xsd:attribute name="type" type="mimeType.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="uploadInteraction.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="blockInteraction.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="uploadInteraction.Type" mixed="false">
+	<xsd:group ref="uploadInteraction.ContentGroup"/>
+	<xsd:attributeGroup ref="uploadInteraction.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="uploadInteraction" type="uploadInteraction.Type"/>
+
+
+<!-- Datatype: uri -->
+
+<xsd:simpleType name="uri.Type">
+	<xsd:restriction base="xsd:anyURI"/>
+</xsd:simpleType>
+
+
+<!-- Class: usageData -->
+
+<xsd:attributeGroup name="usageData.AttrGroup">
+	<xsd:attribute name="glossary" type="uri.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="usageData.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="itemStatistic.ElementGroup" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="usageData.Type" mixed="false">
+	<xsd:group ref="usageData.ContentGroup"/>
+	<xsd:attributeGroup ref="usageData.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="usageData" type="usageData.Type"/>
+
+
+<!-- Pseudo-class: usageDataVocabulary -->
+
+<xsd:element name="usageDataVocabulary" type="uri.Type"/>
+
+
+<!-- Class: value -->
+
+<xsd:attributeGroup name="value.AttrGroup">
+	<xsd:attribute name="fieldIdentifier" type="identifier.Type" use="optional"/>
+	<xsd:attribute name="baseType" type="baseType.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="value.Type">
+	<xsd:simpleContent>
+		<xsd:extension base="xsd:string">
+			<xsd:attributeGroup ref="value.AttrGroup"/>
+		</xsd:extension>
+	</xsd:simpleContent>
+</xsd:complexType>
+
+<xsd:element name="value" type="value.Type"/>
+
+
+<!-- Class: var -->
+
+<xsd:attributeGroup name="var.AttrGroup">
+	<xsd:attributeGroup ref="simpleInline.AttrGroup"/>
+</xsd:attributeGroup>
+
+<xsd:group name="var.ContentGroup">
+	<xsd:sequence>
+		<xsd:group ref="simpleInline.ContentGroup"/>
+	</xsd:sequence>
+</xsd:group>
+
+<xsd:complexType name="var.Type" mixed="true">
+	<xsd:group ref="var.ContentGroup"/>
+	<xsd:attributeGroup ref="var.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="var" type="var.Type"/>
+
+
+<!-- Class: variable -->
+
+<xsd:attributeGroup name="variable.AttrGroup">
+	<xsd:attribute name="identifier" type="identifier.Type" use="required"/>
+</xsd:attributeGroup>
+
+<xsd:complexType name="variable.Type" mixed="false">
+	<xsd:attributeGroup ref="variable.AttrGroup"/>
+</xsd:complexType>
+
+<xsd:element name="variable" type="variable.Type"/>
+
+
+<!-- Class: variableDeclaration -->
+
+<!-- Following definition is not used but improves readability of the binding document -->
+<xsd:group name="variableDeclaration.ElementGroup">
+	<xsd:choice>
+		<xsd:element ref="responseDeclaration"/>
+		<xsd:element ref="outcomeDeclaration"/>
+		<xsd:element ref="templateDeclaration"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:attributeGroup name="variableDeclaration.AttrGroup">
+	<xsd:attribute name="identifier" type="identifier.Type" use="required"/>
+	<xsd:attribute name="cardinality" type="cardinality.Type" use="required"/>
+	<xsd:attribute name="baseType" type="baseType.Type" use="optional"/>
+</xsd:attributeGroup>
+
+<xsd:group name="variableDeclaration.ContentGroup">
+	<xsd:sequence>
+		<xsd:element ref="defaultValue" minOccurs="0" maxOccurs="1"/>
+	</xsd:sequence>
+</xsd:group>
+
+
+<!-- Enumeration: view -->
+
+<xsd:simpleType name="view.Type">
+	<xsd:restriction base="xsd:NMTOKEN">
+		<xsd:enumeration value="author"/>
+		<xsd:enumeration value="candidate"/>
+		<xsd:enumeration value="proctor"/>
+		<xsd:enumeration value="scorer"/>
+		<xsd:enumeration value="tutor"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+</xsd:schema>

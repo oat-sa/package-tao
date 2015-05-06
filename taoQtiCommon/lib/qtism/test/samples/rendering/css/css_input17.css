@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+div > prompt {
+    font-weight: bold;
+}
+
+prompt > b, prompt > i {
+    color: Red;
+}

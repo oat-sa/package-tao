@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p0 imsqti_v2p0.xsd"
+    identifier="graphicGapfill" title="Airport Tags" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="directedPair">
+        <correctResponse>
+            <value>GLA A</value>
+            <value>EDI B</value>
+            <value>MAN C</value>
+        </correctResponse>
+        <mapping lowerBound="0" defaultValue="-1">
+            <mapEntry mapKey="GLA A" mappedValue="1"/>
+            <mapEntry mapKey="EDI B" mappedValue="1"/>
+            <mapEntry mapKey="MAN C" mappedValue="1"/>
+        </mapping>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+    <itemBody>
+        <p>The International Air Transport Association assigns three-letter codes to identify
+            airports worldwide. For example, London Heathrow has code LHR.</p>            
+        <graphicGapMatchInteraction responseIdentifier="RESPONSE">
+            <prompt>Some of the labels on the following diagram are missing: can you identify the
+                correct three-letter codes for the unlabelled airports?</prompt>
+            <object type="image/png" data="images/ukairtags.png" width="206" height="280"/>
+            <gapImg identifier="CBG" matchMax="1">
+                <object type="image/png" data="images/CBG.png" width="20" height="9"/>
+            </gapImg>
+            <gapImg identifier="EBG" matchMax="1">
+                <object type="image/png" data="images/EBG.png" width="18" height="9"/>
+            </gapImg>
+            <gapImg identifier="EDI" matchMax="1">
+                <object type="image/png" data="images/EDI.png" width="14" height="9"/>
+            </gapImg>
+            <gapImg identifier="GLA" matchMax="1">
+                <object type="image/png" data="images/GLA.png" width="17" height="9"/>
+            </gapImg>
+            <gapImg identifier="MAN" matchMax="1">
+                <object type="image/png" data="images/MAN.png" width="21" height="9"/>
+            </gapImg>
+            <gapImg identifier="MCH" matchMax="1">
+                <object type="image/png" data="images/MCH.png" width="22" height="9"/>
+            </gapImg>
+            <associableHotspot identifier="A" matchMax="1" shape="rect" coords="12,108,39,121"/>
+            <associableHotspot identifier="B" matchMax="1" shape="rect" coords="128,103,155,126"/>
+            <associableHotspot identifier="C" matchMax="1" shape="rect" coords="66,165,93,178"/>
+        </graphicGapMatchInteraction>
+    </itemBody>
+    <responseProcessing template="http://www.imsglobal.org/question/qti_v2p0/rptemplates/map_response"/>
+</assessmentItem>

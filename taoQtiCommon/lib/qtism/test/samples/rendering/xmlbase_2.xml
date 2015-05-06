@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div id="animals" xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+	<div id="farm" xml:base="http://www.qtism-project.org/farm/">
+		<img src="dog.png" alt="A dog"/>
+		<img src="chicken.png" alt="A chicken"/>
+		<img src="cat.png" alt="A cat"/>
+	</div>
+	<div id="birds" xml:base="http://www.qtism-project.org/birds/">
+		<img src="eagle.png" alt="An eagle"/>
+		<img src="hummingbird.png" alt="A hummingbird"/>
+	</div>
+</div>

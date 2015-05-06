@@ -1,0 +1,100 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2002-2008 (original work) Public Research Centre Henri Tudor & University of Luxembourg (under the project TAO & TAO2);
+ *               2008-2010 (update and modification) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+/* form check */
+#forms_content {
+    position: absolute;
+    top: 170px;
+    width: 585px;
+    height: 253px;
+    margin-left: 200px;
+}
+
+#forms_content form {
+    
+    margin-top: 0px;
+}
+
+input[type="radio"] {
+    width:15px;
+    clear:both;
+    margin:13px 0 0 5px;
+}
+
+p#comments {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#forge-account {
+    position: relative;
+    top: 10px;
+    visibility: hidden;
+    line-height: 20px;
+}
+
+#forge-account > span {
+    font-size: 10px;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 20px;
+}
+
+#formComment {
+    position:absolute;
+    width: 330px;
+    top: 283px;
+}
+
+ul#support_fields, ul#registration_fields {
+    margin-left: 15px;
+}
+
+form ul li {
+    margin: 5px 5px 0 0;
+}
+
+#submitForm {
+    width: 120px;
+}
+
+#redoForm {
+    position: absolute;
+    right: 145px;
+    bottom: -50px;
+    font-size: 0.8em;
+    background: #e5e5e5;
+    border-top: none;
+    border: none;
+    padding: 5px;
+    width: 85px;
+}
+
+#forge-account {
+    width: 543px;
+    padding: 7px 5px 7px 10px;
+    height: 15px;
+    margin: 4px 0 4px 0;
+    //background: rgb(229,229,229);
+}
+
+#submitForm {
+    bottom: -50px;
+}

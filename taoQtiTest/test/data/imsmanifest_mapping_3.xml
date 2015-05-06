@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:imsqti="http://www.imsglobal.org/xsd/imsqti_v2p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd http://www.imsglobal.org/xsd/imsqti_v2p0 imsqti_v2p0.xsd" identifier="QTI-MANIFEST-astronomy">
+	<organizations/>
+	<resources>
+        	<resource identifier="Q01" type="imsqti_item_xmlv2p1" href="Q01/qti.xml">
+            		<metadata>
+                		<schema>IMS QTI Item</schema>
+                		<schemaversion>2.1</schemaversion>      
+                		<imsqti:qtiMetadata>
+                    			<imsqti:timeDependent>false</imsqti:timeDependent>
+                        		<imsqti:interactionType>choice</imsqti:interactionType>
+                        		<imsqti:feedbackType>nonadaptive</imsqti:feedbackType>
+                    			<imsqti:solutionAvailable/>
+                    			<imsqti:toolName>TAO</imsqti:toolName>
+                    			<imsqti:toolVersion>2.5</imsqti:toolVersion>
+                    		<imsqti:toolVendor>Open Assessment Technologies</imsqti:toolVendor>
+	        		</imsqti:qtiMetadata>
+            		</metadata>
+            		<file href="Q01/qti.xml"/>
+		</resource>
+		<resource identifier="Q02" type="imsqti_item_xmlv2p1" href="./././Q02/../Q02/././qti.xml">
+            		<metadata>
+                		<schema>IMS QTI Item</schema>
+                		<schemaversion>2.1</schemaversion>      
+                		<imsqti:qtiMetadata>
+                    			<imsqti:timeDependent>false</imsqti:timeDependent>
+                        		<imsqti:interactionType>choice</imsqti:interactionType>
+                        		<imsqti:feedbackType>nonadaptive</imsqti:feedbackType>
+                    			<imsqti:solutionAvailable/>
+                    			<imsqti:toolName>TAO</imsqti:toolName>
+                    			<imsqti:toolVersion>2.5</imsqti:toolVersion>
+                    		<imsqti:toolVendor>Open Assessment Technologies</imsqti:toolVendor>
+	        		</imsqti:qtiMetadata>
+            		</metadata>
+            		<file href="Q02/././../Q02/qti.xml"/>
+		</resource>
+		<resource identifier="Q03" type="imsqti_item_xmlv2p1" href="Q03/./../Q03/./qti.xml">
+            		<metadata>
+                		<schema>IMS QTI Item</schema>
+                		<schemaversion>2.1</schemaversion>      
+                		<imsqti:qtiMetadata>
+                    			<imsqti:timeDependent>false</imsqti:timeDependent>
+                        		<imsqti:interactionType>choice</imsqti:interactionType>
+                        		<imsqti:feedbackType>nonadaptive</imsqti:feedbackType>
+                    			<imsqti:solutionAvailable/>
+                    			<imsqti:toolName>TAO</imsqti:toolName>
+                    			<imsqti:toolVersion>2.5</imsqti:toolVersion>
+                    		<imsqti:toolVendor>Open Assessment Technologies</imsqti:toolVendor>
+	        		</imsqti:qtiMetadata>
+            		</metadata>
+            		<file href="Q03/qti.xml"/>
+		</resource>
+		<resource identifier="T01" type="imsqti_test_xmlv2p1" href="test.xml">
+			<file href="test.xml"/>
+			<dependency identifierref="Q01"/>
+			<dependency identifierref="Q02"/>
+			<dependency identifierref="Q03"/>
+		</resource>
+	</resources>
+</manifest>

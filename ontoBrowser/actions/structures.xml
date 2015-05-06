@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<structures>
+	<structure id="model" name="Model Browser" level="7" visible="true">
+		<description>Browse the ontology.</description>
+		<sections>
+			<section name="Browse" url="/ontoBrowser/Browse/index"></section>
+		</sections>
+	</structure>
+</structures>

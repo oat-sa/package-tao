@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemBody xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+	<p>
+		Identify the missing word in this famous quote from Shakespeare's Richard III.
+	</p>
+	<blockquote>
+		<p>
+			Now is the winter of our discontent
+			<br/>
+			Made glorious summer by this sun of
+			<inlineChoiceInteraction responseIdentifier="RESPONSE" shuffle="false">
+				<inlineChoice identifier="G">Gloucester</inlineChoice>
+				<inlineChoice identifier="L">Lancaster</inlineChoice>
+				<inlineChoice identifier="Y">York</inlineChoice>
+			</inlineChoiceInteraction>
+			;
+			<br/>
+			And all the clouds that lour'd upon our house
+			<br/>
+			In the deep bosom of the ocean buried.
+		</p>
+	</blockquote>
+</itemBody>

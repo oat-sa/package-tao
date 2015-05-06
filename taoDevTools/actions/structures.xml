@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension SYSTEM "../doc/structures.dtd">
+<structures>
+	<structure id="settings" name="Settings" level="8" visible="false">
+		<description />
+		<sections>
+			<section id="settings_ext_mng" name="Extensions manager" url="/taoDevTools/ExtensionsManager/index" />
+		</sections>
+	</structure>
+	<structure id="user_settings" name="User Settings" level="12" visible="false">
+		<description />
+		<sections>
+			<section id="settings_debug_roles" name="Restrict Roles" url="/taoDevTools/UserDebug/roles" />
+		</sections>
+	</structure>
+</structures>

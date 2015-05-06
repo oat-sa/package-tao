@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Qti Grid Editor Test - QTI flow content editor </title>
+        <link rel="stylesheet" href="/tao/views/js/lib/qunit/qunit.css">
+        <link rel="stylesheet" href="/tao/views/css/tao-main-style.css">
+        <link rel="stylesheet" href="/taoQtiItem/views/css/qti.css">
+        <link rel="stylesheet" href="/taoQtiItem/views/css/item-creator.css">
+
+        <script src="/tao/views/js/lib/require.js"></script>
+        <script src="/tao/views/js/lib/qunit/qunit.js"></script>
+        <script>
+            QUnit.config.autostart = false;
+            require(['/tao/ClientConfig/config'], function(){
+                require(['taoQtiItem/qtiCreator/test/gridEditor/test'], function(){
+                    QUnit.start();
+                });
+            });
+        </script>
+        <style>
+            #item-creator{position:relative;padding:20px;}
+            #new-interaction{cursor:pointer;}
+            #toolbar{position:absolute;top:0;left:0;width:15%;height:1100px;background: #eee;}
+            div.qti-menu-item {
+                cursor: pointer;
+                float: left;
+                margin: 3px 5px;
+                padding: 5px;
+                text-align: center;
+                width: 50px;
+            }
+            div.qti-menu-item a{text-decoration: none;color:#333}
+            #item-editor-scope{position:absolute;top:0;left:15%;width:70%;height:1100px;padding:20px;overflow: auto;z-index:0;}
+
+            .qti-authoring-canvas{position:absolute;}
+
+            .qti-droppable-ready{outline: 1px solid green;}
+            .qti-droppable-active{outline: 1px solid yellow;}
+            .qti-droppable{outline: 0px dotted green;}
+            .qti-droppable-highlight{display: inline-block;width:0.3em; height:0.9em; padding: 0px; outline:2px dotted #ccc; background-color: #eee;}
+            /*too jumpy*/.qti-droppable-hover{display: inline-block;width:5em; height:0.9em; padding: 0px; outline:2px dotted #ccc; background-color: #eee;}
+            .qti-droppable-hover{display: inline-block;width:0.5em; height:0.9em; padding: 0px; outline:2px solid green; background-color: lightgreen;}
+
+            .qti-droppable-block-highlight{height:1em; width:100%;outline:2px dotted #ccc; background-color: #efefef;margin:0;}
+            .qti-droppable-block-hover{min-height: 30px; width:100%;border: 2px dashed #3e7da7; background-color: #e6eef4;margin:0;opacity:0.5;}
+
+            .qti-droppable-inline-hover{display: inline-block;width:0.5em; height:0.9em; padding: 0px; border:2px dotted #3e7da7; background-color: #e6eef4;}
+
+            .qti-interaction{padding: 0.5em; border:2px solid #ccc; background-color: #eee;}
+            /*.qti-interaction{width: 200px; height: 20px; padding: 0.5em; border:2px solid #ccc; background-color: #eee;}*/
+
+            .qti-authoring-element-box{position:relative;}
+
+            .qti-element-focus{outline:1px solid black;z-index:900;}
+            .qti-element-hover{outline:1px solid blue;}
+            .qti-element-hover-label{position:absolute;left:0;top:-20px;outline:blue solid 1px;background-color: white;}
+
+            .qti-position-cursor{outline: 1px solid black;}
+
+            .qti-overlay{position:absolute; top:0; left:0; background-color:#ccc; opacity:0.35;}
+
+            .qti-authoring-shielded{position: relative; display: inline-block;outline: 1px dashed rgba(0, 0, 0, 0.6);}
+            .qti-authoring-element-button{position: absolute; z-index: 2; top: 0; left: 0; width:100%; height:100%; background: #ccc; opacity:0.5; border:none; cursor: pointer;}
+
+
+            #item-editor-scope{max-height: 1000px;}
+            [class^="col-"], [class*=" col-"]{position: relative;outline:0px dashed blue;}
+            
+            [class*=" col-"]:first-child, [class^="col-"]:first-child{margin-left: 1.42857%;}
+            
+            .grid-edit-resizing{cursor:col-resize;}
+            .grid-edit-resizable-zone{position : absolute; cursor:col-resize; text-align : center; outline: 0px dotted blue}
+            .grid-edit-resizable-handle{position : relative; display:inline-block; width : 1px; height:100%;}
+            .grid-edit-resizable-zone-active:hover .grid-edit-resizable-handle{border-width:0 1px;border-color: #ccc; border-style: solid;}
+            .grid-edit-resizable-active{width:0;border:0px dashed #3e7da7;border-left-width: 1px;}
+            .grid-edit-resizable-outline{position:absolute; top:0; left:0;height:100%;border:1px solid #3e7da7;background-color:#e4ecef;opacity:0.5;z-index:9;}
+
+            .grid-edit-insert-box{position : absolute; height:100%; text-align : center; opacity:0.5; z-index:9;}
+            .grid-edit-insert-box:hover{opacity:0.3;}
+            .grid-edit-insert-square{position : relative; width: 20px; height: 20px; background-color:#3e7da7; border-top-left-radius: 3px; border-top-right-radius: 3px;}
+            .grid-edit-insert-triangle{position : relative; width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 12px solid #3e7da7;}
+            .grid-edit-insert-line{position:absolute; top:0; left:10px; height:100%; border-left:1px dashed #3e7da7}
+
+            .grid-draggable-helper{z-index: 99; max-height: 200px; max-width:50%;overflow:hidden;border:1px solid #ddd;padding:6px;}
+            .grid-draggable-helper:after{content:'...';position:absolute; bottom:0px;right:6px;}
+
+            .grid-draggable{cursor:pointer;}
+            .grid-draggable:hover{opacity:0.8;}
+            .grid-draggable:active, .grid-draggable-active{cursor:all-scroll;}
+            
+            .debug [class^="col-"], .debug [class*=" col-"] {border: 0px dotted gray;position: relative;background-color:#efefef;}
+        </style>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+        <div id="item-creator" class="tao-scope">
+            <div id="toolbar">
+                <div id="add_choice_interaction" class="qti-interaction qti-block qti-menu-item" data-qti-class="choiceInteraction"><img title="choice" src="/taoQtiItem/views/img/qtiAuthoring/QTI_choice.png"><br><a href="#">choice</a></div>
+                <div id="add_inlinechoice_interaction" class="qti-interaction qti-inline qti-menu-item" data-qti-class="inlineChoiceInteraction"><img title="inline choice" src="/taoQtiItem/views/img/qtiAuthoring/QTI_inlineChoice.png"><br><a href="#">inline choice</a></div>
+            </div>
+            <div id="item-editor-scope">
+                <div class="item-editor-item clearfix">
+                    <div class="item-editor-drop-area">
+                        <div id="item-grid" class="item-editor-drop-area">
+                            <div class="grid-row">
+                                <div class="col-12">
+                                    <div class="item-editor-widget" data-qti-class="block">
+                                        1 - "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-row">
+                                <div class="col-5">
+                                    2 - Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                                </div>
+                                <div class="col-3">
+                                    3 - Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+                                </div>
+                                <div class="col-4">
+                                    4 - Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+                                </div>
+                            </div>
+                            <div class="grid-row">
+                                <div class="col-4">
+                                    <div class="item-editor-widget" data-qti-class="block">
+                                        5 - <img border="0" src="http://www.taotesting.com/sites/tao/themes/tao/img/tao_logo.png" alt="TAO Testing" >
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    6 - Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                                </div>
+                                <div class="col-3">
+                                    7 - Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+                                </div>
+                            </div>
+                            <div class="grid-row">
+                                <div class="col-4">
+                                    8 - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+                                </div>
+                                <div class="col-2">
+                                    9 - Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

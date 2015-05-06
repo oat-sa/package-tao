@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemBody xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+	<choiceInteraction responseIdentifier="RESPONSE" shuffle="true" maxChoices="0">
+		<prompt>
+			Which of the following elements are used to form water?
+		</prompt>
+		<simpleChoice identifier="H" fixed="false">Hydrogen</simpleChoice>
+		<simpleChoice identifier="He" fixed="false">Helium</simpleChoice>
+		<simpleChoice identifier="C" fixed="false">Carbon</simpleChoice>
+		<simpleChoice identifier="O" fixed="false">Oxygen</simpleChoice>
+		<simpleChoice identifier="N" fixed="false">Nitrogen</simpleChoice>
+		<simpleChoice identifier="Cl" fixed="false">Chlorine</simpleChoice>
+	</choiceInteraction>
+</itemBody>

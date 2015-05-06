@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentSection xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+	identifier="Sektion_181865064" fixed="false" title="Sektion"
+			visible="false">
+			<assessmentItemRef identifier="Choicetruefalse_176040516" href="./items/Choicetruefalse_176040516.xml" fixed="false"/>
+			<assessmentItemRef identifier="Choicesingle_853928446" href="items/Choicesingle_853928446.xml" fixed="false"/>
+			<assessmentItemRef identifier="Choicemultiple_2014410822" href="./items/Choicemultiple_2014410822.xml" fixed="false"/>
+			<assessmentItemRef identifier="Choicemultiple_871212949" href="items/Choicemultiple_871212949.xml" fixed="false"/>
+			<assessmentItemRef identifier="Hotspot_278940407" href="./items/Hotspot_278940407.xml" fixed="false"/>
+			<assessmentItemRef identifier="Order_913967682" href="items/Order_913967682.xml" fixed="false"/>
+			<assessmentItemRef identifier="Matchsingle_143114773" href="./items/Matchsingle_143114773.xml" fixed="false"/>
+			<assessmentItemRef identifier="Matchmultiple_1038910213" href="items/Matchmultiple_1038910213.xml" fixed="false"/>
+			<assessmentItemRef identifier="TextEntry_883368511" href="./items/TextEntry_883368511.xml" fixed="false"/>
+			<assessmentItemRef identifier="TextEntrynumeric_2040297025" href="items/TextEntrynumeric_2040297025.xml" fixed="false"/>
+			<assessmentItemRef identifier="TextEntrynumeric_770468849" href="items/TextEntrynumeric_770468849.xml" fixed="false"/>
+			<assessmentItemRef identifier="TextEntrysubset_806481421" href="./items/TextEntrysubset_806481421.xml" fixed="false"/>
+			<assessmentItemRef identifier="Hottext_801974120" href="items/Hottext_801974120.xml" fixed="false"/>
+		</assessmentSection>
