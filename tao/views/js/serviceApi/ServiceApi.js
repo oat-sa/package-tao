@@ -23,21 +23,23 @@ define(['jquery', 'urlParser', 'iframeResizer'], function($, UrlParser, iframeRe
         var callUrl = this.getCallUrl();        
         var isCORSAllowed = new UrlParser(callUrl).checkCORS();
 
-
-        $frame.on('load.cors', function(e){
-            //if we are  in the same domain, we add a variable
-            //to the frame window, so the frame knows it can communicate
-            //with the parent
-            if(isCORSAllowed === true){
-                frame.contentWindow.__knownParent__ = true;
-            }
-
-        }).one('load', function(){
-
+        $frame.on('load', function(e){
+             //if we are  in the same domain, we add a variable
+             //to the frame window, so the frame knows it can communicate
+             //with the parent
             $(document).on('serviceready', function(){
-                self.connect(frame, connected );
+                self.connect(frame, function(){
+                    $(document).off('serviceready');
+                    if(typeof connected === 'function'){
+                        connected();
+                    }
+                });
             });
-        });
+             if(isCORSAllowed === true){
+                 frame.contentWindow.__knownParent__ = true;
+             }
+         });
+         
         $frame.attr('src', callUrl);
     };
 

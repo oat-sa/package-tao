@@ -80,7 +80,9 @@ define(['jquery', 'lodash', 'iframeResizer', 'iframeNotifier', 'urlParser'],
                     };
 
                     //tell the parent he can trigger onServiceApiReady
-                    iframeNotifier.parent('serviceready');
+                    _.defer(function(){ 
+                        iframeNotifier.parent('serviceready');
+                    });
                 });
             }
         };
