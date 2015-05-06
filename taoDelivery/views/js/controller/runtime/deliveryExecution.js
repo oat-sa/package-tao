@@ -17,7 +17,7 @@
  *
  *
  */
-define(['jquery', 'iframeResizer', 'spin'], function($, iframeResizer, Spinner){
+define(['jquery', 'iframeResizer', 'spin', 'helpers'], function($, iframeResizer, Spinner, helpers){
     
     function loading(reverse) {
         if($('#overlay').length === 0){
@@ -80,6 +80,10 @@ define(['jquery', 'iframeResizer', 'spin'], function($, iframeResizer, Spinner){
             $('#tools').css('height', 'auto');
             
             var serviceApi = options.serviceApi;
+
+            $(document).on('serviceforbidden', function() {
+                 window.location = helpers._url('index', 'DeliveryServer', 'taoDelivery');
+            });
 
             serviceApi.onFinish(function() {
                 $.ajax({
