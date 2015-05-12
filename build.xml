@@ -1,0 +1,135 @@
+<project name="TAO Tools" default="help" basedir=".">
+		
+	<property file="../build.properties" />
+	<resolvepath propertyName="basedir.resolved" file="${tao.root}" />
+	<tstamp>
+		<format property="TSTAMP" pattern="%Y%m%d_%H%M%S" />
+	</tstamp>
+
+	<target name="help">
+		<echo msg ="Available Command : " />
+		<exec executable="phing" passthru="true">
+			<arg value="-l" />
+		</exec>
+	</target>
+
+	<target name="prepare">
+		<gitclone
+			repository="git@github.com:oat-sa/phing-task-tao.git"
+			targetPath="./build/tasks" />
+	</target>
+
+	<target name="backup_db" description="Create a DB backup">
+
+		<echo msg="Backup db ${db.name}"/>
+		<mkdir dir="${backup.folder}" />
+		<exec command="mysqldump -u${db.user} -p${db.pass} ${db.name} > ${backup.folder}/${db.name}${TSTAMP}.sql" />
+		<tar destfile="${backup.folder}/${db.name}${TSTAMP}.tar.bz2" compression="bzip2">
+			<fileset dir="${backup.folder}">
+				<include name="${db.name}${TSTAMP}.sql"/>
+			</fileset>
+		</tar>
+		<delete file="${backup.folder}/${db.name}${TSTAMP}.sql" />
+	</target>
+
+	<target name="backup_data" description="Create backup folder data and config">
+		<echo msg="Backup folder config and data" />
+		<mkdir dir="${backup.folder}" />
+		<tar destfile="${backup.folder}/file_${TSTAMP}.tar.bz2" compression="bzip2">
+			<fileset dir=".">
+				<include name="config/**"/>
+				<include name="data/**" />
+				<exclude name="data/generis/cache/**" />
+			</fileset>
+		</tar>
+	</target>
+
+
+	<target name="empty_cache" description="Empty application cahce" >
+		<delete dir="./data/generis/cache/" includeemptydirs="true" />
+		<mkdir dir="./data/generis/cache" />
+	</target>
+
+	<target name="enable_maintenance" description="Enable Maintenance Mode">
+
+		<exec executable="sed">
+			<arg value="-i" />
+			<arg value="-r" />
+			<arg value="s/^define\('SYS_READY', .*\);/define('SYS_READY', false);/g" />
+			<arg path="config/generis.conf.php" />
+		</exec>
+	</target>
+
+	<target name="disable_maintenance" description="Disable Maintenance Mode">
+
+		<exec executable="sed">
+			<arg value="-i" />
+			<arg value="-r" />
+			<arg value="s/^define\('SYS_READY', .*\);/define('SYS_READY', true);/g" />
+			<arg path="config/generis.conf.php" />
+		</exec>
+	</target>
+
+	<target name="update_package" description="Update package" >
+		<gitpull 
+			repository="."
+			source="origin"
+			refspec="${package.branch}" />
+
+	</target>
+
+	<target name="composer_update" description="Update extensions and 3rd part lib using composer" >
+		<composer command="update" composer="/usr/local/bin/composer" />
+	</target>
+
+	<target name="composer_install" description="Install extensions and 3rd part lib using composer" >
+		<composer command="install" composer="/usr/local/bin/composer">
+			 <arg value="--working-dir" />
+			 <arg path="${basedir.resolved}" />
+		</composer>
+	</target>
+
+	<target name="extension_update" description="Update TAO extensions installation" >
+		<exec executable="php" passthru="true">
+			<arg path="tao/scripts/taoUpdate.php" />
+		</exec> 
+	</target>
+
+	<target name="taoinstall" description="Install TAO">
+		<includepath classpath="build/tasks" />
+		<taskdef name="taoinstall" classname="InstallTaoTask" />
+	    <typedef name="taoDbConfig" classname="TaoDbConfig" />
+	    <typedef name="generisConfig" classname="GenerisConfig" />
+	    <typedef name="taoConfig" classname="TaoConfig" />
+
+	    <echo msg="${basedir.resolved}" />
+    	<taoinstall taoPath="${basedir.resolved}" >
+	      	<taoConfig 	
+	      		login="${tao.login}"
+	      		pass="${tao.pass}">
+	      	<taoDbConfig 
+	      		dbDriver="${db.driver}" 
+	      		dbHost="${db.host}"
+	      		dbUser="${db.user}"
+	      		dbPass="${db.pass}"
+	      		dbName="${db.name}"
+	      	/>
+	      	<generisConfig       		
+	      		instanceName="dev"
+	      		moduleUrl="${tao.url}"
+	      		moduleNs="${tao.ns}"
+	      		moduleMode="${tao.mode}"
+	      		dataPath="${basedir.resolved}/data/"
+	      		extensions="${tao.extensions}"
+	      	/>
+	      	</taoConfig>
+      	</taoinstall>
+	</target>
+
+	<target name="install_mathjax" description="Install 3rd part lib mathjax"> 
+
+		<exec command="${mathjax.installer.dir}/MathJax_Install_TAO_3x.sh ${basedir.resolved}" passthru="true" />
+
+	</target>
+
+</project>
