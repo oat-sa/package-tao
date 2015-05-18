@@ -25,9 +25,8 @@
 
 $root_dir = __DIR__ . '/../../';
 
-//load config
-require_once  $root_dir. 'generis/common/class.Config.php';
-common_Config::load();
-
 // autoloader
-require_once ROOT_PATH.'vendor/autoload.php';
+require_once $root_dir.'vendor/autoload.php';
+
+//load config
+common_Config::load();
