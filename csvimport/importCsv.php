@@ -54,6 +54,7 @@ $expected = array(
 );
 $keys = array_keys($expected);
 $userService = new AuthKeyValueUserService();
+$persistence = \common_persistence_Manager::getPersistence('default')
 
 $row = 1;
 if (($handle = fopen($csvfile, "r")) !== FALSE) {
@@ -78,7 +79,15 @@ if (($handle = fopen($csvfile, "r")) !== FALSE) {
                 echo 'User "'.$toAdd[PROPERTY_USER_LOGIN].'" already exists.'.PHP_EOL;
                 die(1); 
             }
-            DataGeneration::createUser($toAdd);
+            $userData = DataGeneration::createUser($toAdd);
+            $persistence->insert(
+                'redis',
+                array(
+                    'subject' => $userData['uri'],
+                    'predicate' => PROPERTY_USER_LOGIN,
+                    'object' => $userData[PROPERTY_USER_LOGIN]
+                )
+            );
         }
         $row++;
     }
