@@ -54,7 +54,7 @@ $expected = array(
 );
 $keys = array_keys($expected);
 $userService = new AuthKeyValueUserService();
-$persistence = \common_persistence_Manager::getPersistence('default')
+$persistence = \common_persistence_Manager::getPersistence('default');
 
 $row = 1;
 if (($handle = fopen($csvfile, "r")) !== FALSE) {
