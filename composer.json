@@ -49,6 +49,12 @@
         "oat",
         "computer-based-assessment"
     ],
+	"repositories": [
+        {
+            "type" : "vcs",
+            "url" : "https://github.com/oat-sa/ZendSearch"
+         }
+	],
     "minimum-stability": "dev",
     "homepage": "http://www.taotesting.com",
     "require": {
