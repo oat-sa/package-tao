@@ -91,13 +91,15 @@
 		"oat-sa/extension-tao-ontobrowser" : "dev-develop",
 		"oat-sa/extension-tao-revision" : "dev-develop",
 		"oat-sa/extension-generis-hard" : "dev-develop",
-                "oat-sa/extension-tao-mediamanager" : "dev-develop",
+        "oat-sa/extension-tao-mediamanager" : "dev-develop",
 		"oat-sa/extension-tao-deliverytemplate" : "dev-develop",
 		"oat-sa/extension-tao-cssdevkit" : "dev-develop",
 		"oat-sa/extension-tao-clientdiag" : "dev-develop",
-        	"oat-sa/extension-pcisample" : "dev-develop",
+        "oat-sa/extension-pcisample" : "dev-develop",
 		"oat-sa/extension-tao-theming-platform": "dev-develop",
-		"oat-sa/extension-tao-backoffice": "dev-develop"
+		"oat-sa/extension-tao-backoffice": "dev-develop",
+		"oat-sa/extension-tao-testcenter": "dev-develop",
+		"oat-sa/extension-tao-proctoring": "dev-develop"
 	},
     "require-dev": {
         "phpunit/phpunit": "~4.4@dev",
