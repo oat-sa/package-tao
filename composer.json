@@ -2,9 +2,7 @@
     "name": "oat-sa/tao",
     "license": "GPL-2.0",
     "require-dev": {
-        "mikey179/vfsStream": "1.4.0",
-        "sebastian/global-state": "~1.0@dev",
-        "phpunit/phpunit": "~4.4@dev"
+    	"oat-sa/tao-build" : "dev-develop"
     },
     "support": {
         "issues": "http://forge.taotesting.com",
