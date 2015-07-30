@@ -57,7 +57,6 @@
     "homepage": "http://www.taotesting.com",
     "require": {
  	"oat-sa/extension-tao-delivery": "dev-master",
-        "oat-sa/extension-tao-deliverysimple": "dev-master",
         "oat-sa/extension-tao-lti": "dev-master",
         "oat-sa/extension-tao-itemqti": "dev-master",
         "oat-sa/extension-tao-testqti": "dev-master",
@@ -78,9 +77,10 @@
         "oat-sa/extension-tao-testlinear" : "dev-master",
         "oat-sa/extension-tao-outcome": "dev-master",
         "oat-sa/tao-core": "dev-master",
-	"oat-sa/extension-tao-deliverytemplate" : "dev-master",
         "oat-sa/extension-tao-community": "dev-master",
-        "oat-sa/extension-tao-devtools": "dev-master"
+        "oat-sa/extension-tao-devtools": "dev-master",
+	"oat-sa/extension-tao-backoffice" : "dev-master",
+	"oat-sa/extension-tao-frontoffice" : "dev-master"
 
      },
     "description": "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online \u2013 in any language or subject matter."
