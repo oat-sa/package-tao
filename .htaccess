@@ -1,0 +1,19 @@
+Options +FollowSymLinks
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+SetEnv HTTP_MOD_REWRITE on
+
+#don't match resources and tests
+RewriteCond %{REQUEST_URI} 	!/views/  	[NC]
+RewriteCond %{REQUEST_URI} 	!/tao/install/	[NC]
+RewriteCond %{REQUEST_URI}  !/tao/getFile.php	[NC]
+
+#call entry point for url resolving and framework bootstrap
+RewriteRule ^(.*)$ index.php [L]
+
+#required by token based access system
+RewriteCond %{REQUEST_URI} (.*)/tao/getFile.php/  [NC]
+RewriteRule ^(.*)$ tao/getFile.php [L]
+
+</IfModule>
