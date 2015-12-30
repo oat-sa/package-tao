@@ -11,71 +11,115 @@ define([
 ], function ($, __, component, passwordResetTpl) {
 
     /**
-     * Creates a set of password input fields. One will be receiving the old Pass, the next one will hold the new pass, and the last will confirm the new pass.
-     * @param {jQueryElement} $contaier - the div element to append actions to
-     * @returns {passwordReset} the component
+     * Defines the validations rules through passwordReset.methods()
+     * @type {Object}
      */
 
-    return function passwordResetFactor(options) {
-        return component({})
+    var passwordReset = {
+
+        /**
+         * Some default values
+         * @type {Object}
+         * @private
+         */
+
+        defaults : {
+            rules : {
+                 minLength : 4,
+                 lower: true
+             },
+            messages: {
+                emptyField : "Please fill the field"
+            },
+            password : {
+                message : "The password is not valid",
+                displayPass : false
+            }
+        },
+
+        setMin : function setMin (minLength) {
+            if(minLength === undefined){
+                minLength = passwordReset.defaults.rules.minLength;
+                return passwordReset.defaults.rules.minLength;
+            } else {
+                return passwordReset.defaults.rules.minLength = minLength;
+            }
+        },
+
+        isPasswordValid : function isPasswordValid() {
+            return $(this).val().length > passwordReset.defaults.rules.minLength;
+        },
+
+        arePasswordsMatching : function arePasswordsMatching($password, $passwordConfirmation) {
+            return $password.val() === $passwordConfirmation.val();
+        },
+
+        areFieldsEmpty : function areFieldsEmpty ($password, $passwordConfirmation) {
+           return $password.val() === "" && $passwordConfirmation.val() === "";
+        }
+
+
+/*        validateCaps : function () {
+            if (value === value.toLowerCase()) {
+                return false;
+            }
+            if (value === value.toUpperCase()) {
+                return false;
+            }
+        },*/
+
+
+    };
+
+    var passwordResetatory = function passwordResetatory (options) {
+
+        return component(passwordReset, passwordReset.defaults)
+
             .setTemplate(passwordResetTpl)
 
-            // renders the component
-            .on('render', function render() {
-               // here will be the logic for checking all the input checkings
+            .on('render', function() {
+                passwordReset.setMin(5);
 
-                // define any needed variables
-                var $container = $('#password-resetter'),
-                    $containerElements = $container.find('input'),
-                    $oldPass = $('#oldPass'),
-                    $password = $('#password'),
-                    $passVal = $password.val(),
-                    $confPass = $('#conf-password'),
-                    $confPassVal = $confPass.val();
-                    $validateButton = $('#validation-button');
 
-                options = {
-                   isPassVisible : false
+                this.controls = {
+                    $password: this.$component.find('.password'),
+                    $passwordConfirmation: this.$component.find('.confirmation-password'),
+                    $validationButton: this.$component.find('.validation-button')
+                    //$passwordInputs : this.$component.find('input[type="password"]')
                 };
 
-                // then initialize the component
+                var $button = this.controls.$validationButton,
+                    $password = this.controls.$password,
+                    $passwordConfirmation = this.controls.$passwordConfirmation;
 
-                // Provide possibility for the user to see the password he typed
-                // we will set a checkbox which if checked, will switch the password input type to text so the user can see his password. We will access the options object
 
 
-                // Check that the passwords are 4 characters or more
-                var validateCharsLength = function validateCharsLength () {
-                    var value = $(this).val();
-                    var valid = value.length >= 4;
-                    if (!valid) {
-                        //setErrorMessage(password, 'Please make sure your password has at least 4 characters');
+                $button.on('click', function(e){
+                    if (passwordReset.areFieldsEmpty($password, $passwordConfirmation)) {
+                        e.preventDefault();
+                        //$(this).attr('disabled', true);
                     }
-                    return valid;
-                };
+                });
 
-                var validateEquality = function validateEquality () {
-                    var valid = ($passVal == $confPass);
-                    if (valid && $passVal !='' && $confPassVal !='') {
-                        // we allow to submit
+                $password.on('input', function(){
+                    console.log(passwordReset.isPasswordValid.call($(this)));
+                });
+
+                $passwordConfirmation.on('blur', function(){
+                    if(passwordReset.arePasswordsMatching($password, $passwordConfirmation)){
+                        console.log('reussi');
+                    } else {
+                        console.log('byebye');
                     }
-                };
+                })
 
-
-                // Event handling
-
-                $containerElements.on('input',  validateCharsLength);
-                $confPass.on('blur', validateEquality);
-
-                return {
-                    validateCharsLength : validateCharsLength,
-                    validateEquality : validateEquality
-                }
 
             })
 
-            .init(options);
+            .init(options)
+
     };
 
+    return passwordResetatory;
 
 });
