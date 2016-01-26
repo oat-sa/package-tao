@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" identifier="TEST1" title="Sample Nonlinear Test with TC-HF-R" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+  <outcomeDeclaration identifier="tao-testTaker-firstName" cardinality="single" baseType="string"/>
+  <outcomeDeclaration identifier="tao-testTaker-lastName" cardinality="single" baseType="string"/>
+  <outcomeDeclaration identifier="tao-testTaker-companyName" cardinality="single" baseType="string"/>
+  <testPart identifier="testPartTermsCondition" navigationMode="linear" submissionMode="individual">
+    <itemSessionControl maxAttempts="1" showFeedback="true" allowReview="true" showSolution="false" allowComment="false" allowSkipping="true" validateResponses="false"/>
+    <assessmentSection identifier="termsSection" required="false" fixed="false" title="Terms and Conditions" visible="true" keepTogether="true">
+      <itemSessionControl maxAttempts="1" showFeedback="false" allowReview="true" showSolution="false" allowComment="false" allowSkipping="false" validateResponses="false"/>
+      <rubricBlock view="candidate" id="terms-conditions">
+        <h1 class="title">GNU GENERAL PUBLIC LICENSE</h1>
+        <div class="container">
+          <p>
+            <em>Version 2, June 1991</em>
+          </p>
+        </div>
+      </rubricBlock>
+      <assessmentItemRef identifier="acceptance" required="false" fixed="false" href="../../items/i1437549554752175/qti.xml">
+        <branchRule target="EXIT_SECTION">
+          <match>
+            <variable identifier="acceptance.TERMS1"/>
+            <baseValue baseType="integer">1</baseValue>
+          </match>
+        </branchRule>
+      </assessmentItemRef>
+      <assessmentItemRef identifier="confirmation" required="false" fixed="false" href="../../items/i1437549555417177/qti.xml">
+        <branchRule target="EXIT_TEST">
+          <match>
+            <variable identifier="confirmation.TERMS2"/>
+            <baseValue baseType="integer">0</baseValue>
+          </match>
+        </branchRule>
+      </assessmentItemRef>
+    </assessmentSection>
+  </testPart>
+</assessmentTest>

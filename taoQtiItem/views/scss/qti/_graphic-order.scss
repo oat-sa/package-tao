@@ -1,0 +1,40 @@
+@import "inc/bootstrap";
+
+.qti-graphicOrderInteraction {
+
+    ul.ordinals {
+        width: 100%;
+        margin: 10px auto;
+        padding: 0 !important;
+        clear: both;
+        min-height: 54px;
+        & > li {
+            width: 30px;
+            line-height: 30px;
+            text-align: center;
+            @include font-size(20);
+            margin: 0;
+            background: white();
+            font-family: helvetica, arial, sans-serif;
+            margin-right: 1px;
+            &:hover{
+                @extend %selectableHover;
+                cursor: pointer;
+            }
+            &.active {
+                border: solid 1px $uiClickableHoverBg;
+                @include transition(background, 0.4s);
+                &:hover{
+                    background: white() !important;
+                    cursor: default !important;
+                }
+            }
+            &.disabled {
+                border: none;
+                cursor: default !important;
+                color: #666 !important;
+                background-color: transparent !important;
+            }
+        }
+    }
+}

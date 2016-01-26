@@ -1,0 +1,127 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.1.0-sprint15\n"
+"PO-Revision-Date: 2015-12-23T12:59:08\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: es-ES\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: es-ES\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#Index
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Index"
+msgstr "Índice"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#Index
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Index class"
+msgstr "Clase índice"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexIdentifier
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Identifier"
+msgstr "Identificador"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexIdentifier
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Humanreadable identifier of the index"
+msgstr "Identificador del índice legible para humanos"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexTokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Tokenizer of index"
+msgstr "Divisor del índice"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexTokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Tokenizer to be used to extract search strings"
+msgstr "Divisor a ser utilizado para extraer cadenas de búsqueda"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexFuzzyMatching
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Fuzzy matching"
+msgstr "Comparación por búsqueda difusa"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexFuzzyMatching
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Should the string matching be exact or fuzzy"
+msgstr "Deberá la cadena coincidir exactamente o de manera difusa"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexDefaultSearch
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Use by default"
+msgstr "Uso por defecto"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexDefaultSearch
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Should this property be used implicitly in the defautl search"
+msgstr "Deberá esta propiedad ser usada de manera implícita en la búsqueda por defecto"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#Tokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Tokenizer"
+msgstr "Divisor"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#Tokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Tokenizer class"
+msgstr "Clase divisor"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#TokenizerClass
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Tokenizer implementation"
+msgstr "Implementación divisor"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#TokenizerClass
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Classname of the tokenizer implementation"
+msgstr "Nombre de la clase de la implementación del divisor"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#PropertyIndex
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Property Indexation"
+msgstr "Indexación de propiedad"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#PropertyIndex
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "How a property should be indexed"
+msgstr "Cómo una propiedad debe ser indexada"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#RawValueTokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Raw Value Tokenizer"
+msgstr "Divisor de Valores Crudos"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#RawValueTokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Tokenizer using the raw property value"
+msgstr "Divisor que usa el valor crudo de la propiedad"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LabelTokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Label Tokenizer"
+msgstr "Divisor de etiqueta"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LabelTokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Tokenizer using the resource labels"
+msgstr "Divisor que usa las etiquetas de recurso"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LabelIndex
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Label Index"
+msgstr "Índice de etiqueta"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#TypeIndex
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Type Index"
+msgstr "Índice de tipo"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LoginIndex
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Login Index"
+msgstr "Índice de Login"
+

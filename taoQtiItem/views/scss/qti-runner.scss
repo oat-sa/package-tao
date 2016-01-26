@@ -1,0 +1,13 @@
+/*
+ * Item Runner CSS.
+ */
+@charset "UTF-8";
+
+$fontPath : '../../../tao/views/css/font/';
+$mainContainer : '.qti-item';
+@import "inc/bootstrap";
+@import "inc/fonts/tao-icon-def";
+@import "inc/fonts/tao-icon-vars";
+
+@import "qti/qti-base";
+

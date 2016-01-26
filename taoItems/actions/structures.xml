@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+    <structure id="items" name="Items" level="0" group="main">
+        <description>Create and design items and exercises.</description>
+        <icon id="icon-item"/>
+        <sections>
+            <section id="manage_items" name="Manage items" url="/taoItems/Items/index">
+                <trees>
+                    <tree name="Items library"
+                        className="Item"
+                        dataUrl="/taoItems/Items/getOntologyData"
+                        rootNode="http://www.tao.lu/Ontologies/TAOItem.rdf#Item"
+                        selectClass="item-class-properties"
+                        selectInstance="item-properties"
+                        moveInstance="item-move"
+                        delete="item-delete" 
+                    />
+                </trees>
+                <actions allowClassActions="true">
+                    <action id="item-class-properties" name="Properties" url="/taoItems/Items/editItemClass" group="content" context="class">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="item-properties" name="Properties"  url="/taoItems/Items/editItem"      group="content" context="instance">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="item-preview" name="Preview" url="/taoItems/ItemPreview/index" context="instance" group="content" binding="itemPreview">
+                        <icon id="icon-preview"/>
+                    </action>
+                    <action id="item-authoring" name="Authoring" url="/taoItems/Items/authoring" group="content" context="instance" binding="launchEditor">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="item-filter" name="Filter" context="*" group="search" binding="filter">
+                        <icon id="icon-filter"/>
+                    </action>
+                    <action id="item-search" name="Search" url="/taoItems/Items/search" context="*" group="search" binding="launchFinder">
+                        <icon id="icon-find"/>
+                    </action>
+                    <action id="item-class-new" name="New class" url="/taoItems/Items/addSubClass" context="resource" group="tree" binding="subClass">
+                        <icon id="icon-folder-open"/>
+                    </action>
+                    <action id="item-delete" name="Delete" url="/taoItems/Items/deleteItem" context="instance" group="tree" binding="removeNode" >
+                        <icon id="icon-bin"/>
+                    </action>
+                    <action id="item-class-delete" name="Delete" url="/taoItems/Items/deleteClass" context="class" group="tree" binding="removeNode" >
+                        <icon id="icon-bin"/>
+                    </action>
+                    <action id="item-move" name="Move" url="/taoItems/Items/moveInstance" context="instance" group="none" binding="moveNode">
+                        <icon id="icon-move-item"/>
+                    </action>
+                    <action id="item-import" name="Import" url="/taoItems/ItemImport/index" context="resource" group="tree" binding="loadClass">
+                        <icon id="icon-import"/>
+                    </action>
+                    <action id="item-export" name="Export" url="/taoItems/ItemExport/index" context="resource" group="tree">
+                        <icon id="icon-export"/>
+                    </action>
+                    <action id="item-translate" name="Translate" url="/taoItems/Items/translateInstance" context="instance" group="content">
+                        <icon id="icon-translate"/>
+                    </action>
+                    <action id="item-duplicate" name="Duplicate" url="/taoItems/Items/cloneInstance" context="instance" group="tree" binding="duplicateNode">
+                        <icon id="icon-copy"/>
+                    </action>
+                </actions>
+            </section>
+        </sections>
+    </structure>
+</structures>

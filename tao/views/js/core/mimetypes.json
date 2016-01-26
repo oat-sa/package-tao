@@ -1,0 +1,87 @@
+{
+    "video" : {
+       "category" : "media", 
+       "mimes" : ["application/ogg", "video/*"], 
+       "extensions" : ["avi", "mp4", "ogg", "mpeg", "flv"] 
+    },  
+    "audio" : {
+        "category" : "media", 
+        "mimes" : ["audio/*"], 
+        "extensions" : ["mp3", "wav", "aac"] 
+    },
+    "image" : {
+        "category" : "media",
+        "mimes" : ["image/*", "application/x-gzip"],
+        "extensions" : ["png", "jpg", "jpeg", "gif", "svg", "svgz", "ico"]
+    },
+    "flash" : {
+        "category" : "media", 
+        "mimes" : ["application/x-shockwave-flash"],
+        "extensions" : ["flv", "swf"]
+    },
+    "geogebra" : {
+        "category" : "media",
+        "mimes" : ["application/vnd.geogebra.file", "application/vnd.geogebra.tool"],
+        "extensions" : ["ggb", "ggt"]
+    },
+    "rdf" : {
+        "category" : "sources", 
+        "mimes" : ["application/rdf+xml"], 
+        "extensions" : ["rdf"] 
+    },
+    "xml" : {
+        "category" : "sources", 
+        "mimes" : ["application/xml", "application/xml-dtd", "text/xml"],
+        "extensions" : ["xml", "dtd", "qti"] 
+     },
+     "html" : {
+        "category" : "sources", 
+        "mimes" : ["text/html", "text/xhtml", "application/xhtml+xml", "application/qti+xml"],
+        "extensions" : ["html", "htm", "html5", "xhtml"] 
+    },
+    "font" : {
+        "category": "sources", 
+        "mimes" : ["application/font-woff"], 
+        "extensions" : ["woff", "eot", "ttf"]
+    }, 
+    "js" : {
+        "category": "sources", 
+        "mimes" : ["application/javascript", "application/json", "text/javascript"], 
+        "extensions" : ["js", "json"]
+    }, 
+    "css" : {
+        "category": "sources", 
+        "mimes" : ["text/css"], 
+        "extensions" : ["css", "sass", "scss", "less"]
+    }, 
+    "shell" : {
+        "category" : "sources",
+        "mimes" : ["application/x-sh"],
+        "extensions" : ["sh"]
+    },
+    "mathml" : {
+        "category" : "sources", 
+        "mimes" : ["application/mathml+xml"], 
+        "extensions" : ["mathml"] 
+    },
+    "pdf" :  {
+        "category" : "document", 
+        "mimes" : ["application/pdf"], 
+        "extensions" : ["pdf"] 
+    }, 
+    "office" :  {
+        "category" : "document", 
+        "mimes" : ["application/vnd.oasis.opendocument.text", "application/vnd.oasis.opendocument.spreadsheet", "application/vnd.oasis.opendocument.presentation", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.ms-powerpoint", "application/vnd.ms-excel", "application/msword" ], 
+        "extensions" : ["doc", "odt", "docx", "xls", "xlsx", "ods", "ppt", "pptx", "odp"] 
+    }, 
+    "text" : {
+        "category" : ["document"],
+        "mimes" : ["text/*"],
+        "extensions" : ["txt", "csv"]
+    },
+    "archive" : {
+        "category" : "archive",
+        "mimes" : ["application/zip", "application/gzip", "application/rar", "application/x-7z-compressed", "application/x-bzip", "application/x-bzip2"],
+        "extensions" : ["zip", "gz", "bz", "bz2", "rar", "p7z", "7z"]
+    }
+}

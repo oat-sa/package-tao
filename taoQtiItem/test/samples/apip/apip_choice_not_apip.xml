@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" adaptive="false" identifier="EL411948891" timeDependent="false" title="EL411948891" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+    <responseDeclaration baseType="identifier" cardinality="single" identifier="RESPONSE">
+        <correctResponse>
+            <value>ChoiceA</value>
+        </correctResponse>
+    </responseDeclaration>
+    <outcomeDeclaration baseType="float" cardinality="single" identifier="SCORE"/>
+    <itemBody>
+        <choiceInteraction maxChoices="1" minChoices="1" orientation="vertical" responseIdentifier="RESPONSE" shuffle="false">
+            <simpleChoice identifier="ChoiceA">
+                <p id="p1">Yep</p>
+            </simpleChoice>
+            <simpleChoice identifier="ChoiceB">
+                <p id="p2">Nope</p>
+            </simpleChoice>
+            <simpleChoice identifier="ChoiceC">
+                <p id="p3">I do not know</p>
+            </simpleChoice>
+        </choiceInteraction>
+    </itemBody>
+    <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+</assessmentItem>

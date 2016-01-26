@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>TAO is running in Production Mode</title>
+	<script type="text/javascript" src="../../tao/views/js/lib/jquery-1.8.0.min.js "></script>
+	<script type="text/javascript" src="../../tao/views/js/lib/jquery-ui-1.8.23.custom.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../tao/views/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../../tao/views/css/custom-theme/jquery-ui-1.8.22.custom.css" />
+	<link rel="stylesheet" type="text/css" href="../../tao/views/css/errors.css" />
+	<link rel="stylesheet" type="text/css" href="../../tao/install/css/production.css" />
+</head>
+
+<body>
+	<div id="main" class="ui-widget-content ui-corner-all">
+		<div id="content">
+			<h1>Production Mode</h1>
+			<p id="warning_msg">
+				<img src="../../tao/views/img/warning_error_tpl.png" alt="warning" class="embedWarning" />
+				TAO is currently running in <strong>Production Mode</strong>. In this context, the Installation Wizard is not available
+				anymore for obvious security reasons. If you want to <strong>install the platform again</strong>, remove the according
+				.htaccess file in the installation folder. You can of course <strong>remove the related XHTML</strong> file if you do not want to see this
+				message displayed to end users.
+			</p>
+			<div id="redirect">
+				<a href="../../" id="go_to_tao_bt">TAO Home</a>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

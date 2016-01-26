@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p0 imsqti_v2p0.xsd"
+    identifier="questionnaire" title="QTI Questionnaire" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier"/>
+    <itemBody class="likert">
+        <rubricBlock view="candidate">
+            <p>Read the following question and indicate your agreement on a
+            scale of 1 = strongly disagree to 5 = strongly agree.</p>
+        </rubricBlock>
+        <choiceInteraction responseIdentifier="RESPONSE" shuffle="false" maxChoices="1">
+            <prompt>The QTI specification makes
+            the exchange of assessment items much easier.</prompt>
+            <simpleChoice identifier="L1">1</simpleChoice>
+            <simpleChoice identifier="L2">2</simpleChoice>
+            <simpleChoice identifier="L3">3</simpleChoice>
+            <simpleChoice identifier="L4">4</simpleChoice>
+            <simpleChoice identifier="L5">5</simpleChoice>
+        </choiceInteraction>
+    </itemBody>
+</assessmentItem>

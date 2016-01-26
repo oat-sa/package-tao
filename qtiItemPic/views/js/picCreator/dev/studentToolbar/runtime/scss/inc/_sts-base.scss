@@ -1,0 +1,337 @@
+// this combines the most common features from normalize, h5bp main and tao base
+@charset "UTF-8";
+
+.sts-scope {
+
+    address, article, aside, audio, blockquote, dd, div, dl, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header,
+    hgroup, hr, noscript, ol, output, p, pre, section, summary, table, tfoot, ul, main {
+        display: block;
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        white-space: normal;
+    }
+
+    blockquote, dd, dl, fieldset, figure, h1, h2, h3, h4, h5, h6,
+    hr, ol, p, pre, table, ul {
+        display: block;
+        margin-bottom: 10px;
+        white-space: normal;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: normal;
+        font-style: normal;
+        font-family: $stsHeadingFont;
+    }
+
+    iframe {
+        border: none;
+    }
+
+    audio,
+    canvas,
+    video,
+    svg {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+
+    button,
+    input,
+    select,
+    textarea {
+        font-family: $stsRegularFont;
+    }
+
+    a {    
+        background: transparent;
+        text-decoration: none;
+        outline: 0;
+        &:hover {
+            text-decoration: underline;
+            &:before, &:after {
+                text-decoration: none !important;
+            }
+        }
+        &.block {
+            color: $stsTextColor;
+            text-decoration: none;        
+        }
+    }
+
+    b, .b, strong, .strong {
+        font-weight: bold;
+    }
+
+    i, .i, em, .em {
+        font-style: italic
+    }
+
+    code,
+    pre {
+        font-family: $stsMonospaceFont;
+        font-size: 1.4rem;
+    }
+
+    pre {
+        white-space: pre;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 1em 0;
+        padding: 0;
+    }
+
+
+    q {
+        quotes: "\201C" "\201D" "\2018" "\2019";
+        &:before, 
+        &:after {
+            content: '';
+            content: none;  
+        }
+    }
+
+    small {
+        font-size: 1.1rem;
+    }
+
+
+    sub,
+    sup {
+        font-size: .75rem;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+    }
+
+    sup {
+        top: -0.5em;
+    }
+
+    sub {
+        bottom: -0.25em;
+    }
+
+    img {
+        border: 0; 
+        max-width: 100%;
+    }
+
+    label, button {
+        cursor: pointer;
+    }
+
+    button {
+        vertical-align: middle;
+        outline: 0;
+        overflow: visible;
+        border: none
+    }
+
+    button, input {
+        &::-moz-focus-inner {
+            border: 0;
+            padding: 0;
+        }
+    }
+
+    svg:not(:root) {
+        overflow: hidden;
+    }
+
+
+    ul, ol {
+        padding-left: 40px;
+        &.plain {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        li {
+            vertical-align: text-top !important;
+        }
+    }
+
+    nav {
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+    }
+
+    fieldset {
+        border: 1px solid $stsBorderColor;
+    }
+
+    legend {
+        border: 0; 
+        padding: 0; 
+    }
+
+    textarea {
+        overflow: auto;
+        vertical-align: top;
+        resize: vertical; 
+    }
+
+    fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+        font-family: $stsRegularFont;
+        font-weight: normal;
+        line-height: normal;
+        text-transform: none;
+        vertical-align: baseline;
+    }
+
+    button,
+    html input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+        -webkit-appearance: button; 
+        cursor: pointer; 
+    }
+
+
+    input {
+        &[type="search"] {
+            -webkit-appearance: textfield;
+            -moz-box-sizing: content-box;
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+            &::-webkit-search-cancel-button,
+            &::-webkit-search-decoration {
+                -webkit-appearance: none;
+            }
+        }
+        
+        &[type="checkbox"],
+        &[type="radio"] {
+            box-sizing: border-box;
+            padding: 0; 
+        }
+    }
+
+    audio:not([controls]),
+    [hidden], template,
+    .hidden, .deleted,
+    .js .js-hide {
+        display: none !important;
+    }
+
+    .visuallyhidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        &.focusable {
+            &:active,
+            &:focus{
+                clip: auto;
+                height: auto;
+                margin: 0;
+                overflow: visible;
+                position: static;
+                width: auto;
+            }
+        }
+    }
+
+
+    .invisible {
+        visibility: hidden;
+    }
+
+    .viewport-hidden {
+        position: absolute;
+        left: -10000px;
+        top: -10000px
+    }
+
+    .clearfix {
+        &:before, &:after {
+            content: " ";
+            display: table;
+        }
+        &:after {
+            clear: both;
+        }
+    }
+
+    .clear {
+        display: block;
+        clear: both;
+    }
+
+    .lft {
+        display: inline;
+        float: left;
+    }
+
+    .rgt {
+        display: inline;
+        float: right;
+    }
+
+    ::-moz-selection {
+        background: #b3d4fc;
+        text-shadow: none;
+    }
+
+    ::selection {
+        background: #b3d4fc;
+        text-shadow: none;
+    }
+
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+    .placeholder {
+        color: #777 !important;
+    }
+
+    ::-webkit-input-placeholder {
+        color: #777 !important;
+    }
+
+    :-moz-placeholder {
+        color: #777 !important;
+    }
+
+    .truncate {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .disabled, *:disabled {
+        cursor: default;
+        opacity: .7;
+    }
+}

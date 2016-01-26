@@ -1,0 +1,1 @@
+<{{tag}}{{#if attributes}} {{{join attributes '=' ' ' '"'}}}{{/if}} />

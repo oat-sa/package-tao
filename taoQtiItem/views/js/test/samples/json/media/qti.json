@@ -1,0 +1,159 @@
+{
+    "identifier": "i1429259831305858",
+    "serial": "item_5530c8298a9b6075951451",
+    "qtiClass": "assessmentItem",
+    "attributes": {
+        "identifier": "i1429259831305858",
+        "title": "Item title",
+        "label": "",
+        "adaptive": false,
+        "timeDependent": false,
+        "toolName": "TAO",
+        "toolVersion": "3.0.0"
+    },
+    "body": {
+        "serial": "container_containeritembody_5530c8298a976705403298",
+        "body": "<div class=\"grid-row\">\n      <div class=\"col-12\">\n        {{interaction_mediainteraction_5530c82990e4d481234371}}\n      <\/div>\n    <\/div>",
+        "elements": {
+            "interaction_mediainteraction_5530c82990e4d481234371": {
+                "serial": "interaction_mediainteraction_5530c82990e4d481234371",
+                "qtiClass": "mediaInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE",
+                    "autostart": false,
+                    "minPlays": 0,
+                    "maxPlays": 0,
+                    "loop": false
+                },
+                "choices": [],
+                "prompt": {
+                    "serial": "container_containerstatic_5530c82992230509730174",
+                    "body": "",
+                    "elements": [],
+                    "debug": {
+                        "relatedItem": "item_5530c8298a9b6075951451"
+                    }
+                },
+                "object": {
+                    "serial": "object_5530c82992e1b401216320",
+                    "qtiClass": "object",
+                    "attributes": {
+                        "data": "sample.mp4",
+                        "type": "video\/mp4",
+                        "width": 395,
+                        "height": 270
+                    }
+                }
+            }
+        },
+        "debug": {
+            "relatedItem": "item_5530c8298a9b6075951451"
+        }
+    },
+    "namespaces": {
+        "xml": "http:\/\/www.w3.org\/XML\/1998\/namespace",
+        "m": "http:\/\/www.w3.org\/1998\/Math\/MathML",
+        "xsi": "http:\/\/www.w3.org\/2001\/XMLSchema-instance",
+        "": "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1"
+    },
+    "stylesheets": {
+    },
+    "outcomes": {
+        "outcomedeclaration_5530c8298f185097883591": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_5530c8298f185097883591",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "defaultValue": null
+        }
+    },
+    "responses": {
+        "responsedeclaration_5530c8298e640583330185": {
+            "identifier": "RESPONSE",
+            "serial": "responsedeclaration_5530c8298e640583330185",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE",
+                "cardinality": "single",
+                "baseType": "integer"
+            },
+            "correctResponses": [],
+            "mapping": [],
+            "areaMapping": [],
+            "howMatch": "http:\/\/www.imsglobal.org\/question\/qti_v2p1\/rptemplates\/match_correct",
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": []
+        }
+    },
+    "feedbacks": [],
+    "responseProcessing": {
+        "serial": "response_templatesdriven_5530c82993d8f206059909",
+        "qtiClass": "responseProcessing",
+        "attributes": [],
+        "processingType": "templateDriven",
+        "responseRules": [
+            {
+                "qtiClass": "responseCondition",
+                "responseIf": {
+                    "qtiClass": "responseIf",
+                    "expression": {
+                        "qtiClass": "match",
+                        "expressions": [
+                            {
+                                "qtiClass": "variable",
+                                "attributes": {
+                                    "identifier": "RESPONSE"
+                                }
+                            },
+                            {
+                                "qtiClass": "correct",
+                                "attributes": {
+                                    "identifier": "RESPONSE"
+                                }
+                            }
+                        ]
+                    },
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "SCORE"
+                            },
+                            "expression": {
+                                "qtiClass": "baseValue",
+                                "attributes": {
+                                    "baseType": "float"
+                                },
+                                "value": "1"
+                            }
+                        }
+                    ]
+                },
+                "responseElse": {
+                    "qtiClass": "responseElse",
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "SCORE"
+                            },
+                            "expression": {
+                                "qtiClass": "baseValue",
+                                "attributes": {
+                                    "baseType": "float"
+                                },
+                                "value": "0"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

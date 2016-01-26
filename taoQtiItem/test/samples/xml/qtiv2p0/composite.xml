@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p0 imsqti_v2p0.xsd" identifier="composite" title="Composite manual and correct" timeDependent="false" adaptive="false" lang="en-US">
+  <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="string">
+    <correctResponse>
+      <value>Correct Answer Nr 1</value>
+    </correctResponse>
+  </responseDeclaration>
+  <responseDeclaration identifier="response_1" cardinality="single" baseType="identifier">
+    <correctResponse>
+      <value>choice_2</value>
+    </correctResponse>
+  </responseDeclaration>
+  <outcomeDeclaration identifier="SCORE" baseType="integer" cardinality="single"/>
+  <outcomeDeclaration identifier="outcome_2" baseType="integer" cardinality="single" interpretation="guideline Nr 1"/>
+  <outcomeDeclaration identifier="outcome_1" baseType="integer" cardinality="single"/>
+  <itemBody>
+    <div>&#xA0;Stimulus<br/>
+<extendedTextInteraction responseIdentifier="RESPONSE"><prompt>Example question nr 1<br/></prompt></extendedTextInteraction>
+ &#xA0;<br/>
+Second Stimulus<br/>
+<br/>
+<choiceInteraction shuffle="true" maxChoices="1" responseIdentifier="response_1"><prompt>Prompt 2<br/></prompt><simpleChoice identifier="choice_1">bad Choice</simpleChoice><simpleChoice identifier="choice_2">good choice<br/></simpleChoice><simpleChoice identifier="choice_3">bad as well<br/></simpleChoice></choiceInteraction>
+<br/></div>
+  </itemBody>
+  <responseProcessing>
+    <responseCondition>
+      <responseIf>
+        <isNull>
+          <variable identifier="RESPONSE"/>
+        </isNull>
+        <setOutcomeValue identifier="outcome_2">
+          <baseValue baseType="string">0</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="response_1"/>
+          <correct identifier="response_1"/>
+        </match>
+        <setOutcomeValue identifier="outcome_1">
+          <baseValue baseType="integer">1</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <setOutcomeValue identifier="SCORE">
+      <sum>
+        <variable identifier="outcome_2"/>
+        <variable identifier="outcome_1"/>
+      </sum>
+    </setOutcomeValue>
+  </responseProcessing>
+</assessmentItem>

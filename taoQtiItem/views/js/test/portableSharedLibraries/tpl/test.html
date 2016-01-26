@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>portable shared lib "tpl" Test</title>
+        <base href="../../../../../../../tao/views/" />
+
+        <link rel="stylesheet" type="text/css" href="js/lib/qunit/qunit.css">
+        <link rel="stylesheet" type="text/css" href="css/tao-main-style.css">
+        <script type="text/javascript" src="js/lib/require.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit.js"></script>
+        <script type="text/javascript" src="js/lib/blanket/blanket.min.js" data-cover-only="tpl"></script>
+
+        <script  type="text/javascript">
+
+            //don't start the test now
+            QUnit.config.autostart = false;
+
+            //load the config
+            require(['/tao/ClientConfig/config'], function(){
+                
+                require.config({
+                    paths : {
+                        'IMSGlobal/jquery_2_1_1':   '../../../taoQtiItem/views/js/portableSharedLibraries/IMSGlobal/jquery_2_1_1',
+                        'OAT/handlebars':               '../../../taoQtiItem/views/js/portableSharedLibraries/OAT/handlebars',
+                        'OAT/util/tpl':               '../../../taoQtiItem/views/js/portableSharedLibraries/OAT/util/tpl'
+                    }
+                });
+                
+                //load the test
+                require(['taoQtiItem/test/portableSharedLibraries/tpl/test'], function(){
+
+                    //Tests loaded, run tests
+                    QUnit.config.reorder = false;
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+            <div id="interaction-container">
+                <script type="text/x-template-manifest">
+                    <template data-template-id="list" type="handlebars">
+                        <ul class="nav-list">
+                            {{#each items}}
+                            <li class="nav-item">
+                                <a href="#" data-nav-id="{{id}}">{{title}}</a>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </template>
+                    <template data-template-id="page" type="handlebars">
+                        <div class="page">
+                            {{{content}}}
+                        </div>
+                    </template>
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

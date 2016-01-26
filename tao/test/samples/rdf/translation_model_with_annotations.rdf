@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@sourceLanguage EN
+@targetLanguage es
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAO.rdf">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#TAOObject">
+    <!--
+    @source TAO Object
+    @sourceLanguage EN
+    @targetLanguage es
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#TAOObject
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="es"><![CDATA[TAO objeto]]></rdfs:label>
+    <!--
+    @source Any ressource related to etesting
+    @sourceLanguage EN
+    @targetLanguage es
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#TAOObject
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="es"><![CDATA[Cualquier recurso relacionado con eTesting]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#List">
+    <!--
+    @source List
+    @sourceLanguage EN
+    @targetLanguage es
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#List
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="es"><![CDATA[Lista]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#level">
+    <!--
+    @source level
+    @sourceLanguage EN
+    @targetLanguage es
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#level
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="es"><![CDATA[nivel]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#Languages">
+    <!--
+    @source Languages
+    @sourceLanguage EN
+    @targetLanguage es
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#Languages
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="es"><![CDATA[Idiomas]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#TaoManagerRole">
+    <!--
+    @source TaoManager
+    @sourceLanguage EN
+    @targetLanguage es
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#TaoManagerRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="es"><![CDATA[TaoGerente]]></rdfs:label>
+    <!--
+    @source Tao Manager
+    @sourceLanguage EN
+    @targetLanguage es
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#TaoManagerRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="es"><![CDATA[Tao Gerente]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#TaoSubjectRole">
+    <!--
+    @source TaoSubjectRole
+    @sourceLanguage EN
+    @targetLanguage es
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#TaoSubjectRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="es"><![CDATA[TaoPapelSujeto]]></rdfs:label>
+    <!--
+    @source Tao Subject Role
+    @sourceLanguage EN
+    @targetLanguage es
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#TaoSubjectRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="es"><![CDATA[Tao Papel Sujeto]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#WorkflowUserRole">
+    <!--
+    @source Workflow User Role
+    @sourceLanguage EN
+    @targetLanguage es
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#WorkflowUserRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="es"><![CDATA[Flujo de trabajo de usuario]]></rdfs:label>
+    <!--
+    @source Workflow User Role: default role assigned to every backend user, not deletable
+    @sourceLanguage EN
+    @targetLanguage es
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#WorkflowUserRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="es"><![CDATA[Función de usuario de flujo de trabajo: el papel asignado por defecto a todos los usuarios backend, no eliminable]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#WorkflowUser">
+    <!--
+    @source WfUser
+    @sourceLanguage EN
+    @targetLanguage es
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#WorkflowUser
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="es"><![CDATA[WfPapel]]></rdfs:label>
+    <!--
+    @source Workflow User: sub class to group the workflow user, not deletable
+    @sourceLanguage EN
+    @targetLanguage es
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#WorkflowUser
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="es"><![CDATA[Flujo de trabajo del usuario: subclase de grupo del usuario de flujo de trabajo, no eliminable]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#FrontOffice">
+    <!--
+    @source FrontOffice
+    @sourceLanguage EN
+    @targetLanguage es
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#FrontOffice
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="es"><![CDATA[FrontOffice]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#BackOffice">
+    <!--
+    @source BackOffice
+    @sourceLanguage EN
+    @targetLanguage es
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#BackOffice
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="es"><![CDATA[BackOffice]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#TAOGUIOrder">
+    <!--
+    @source Form Field Order
+    @sourceLanguage EN
+    @targetLanguage es
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#TAOGUIOrder
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="es"><![CDATA[Formulario de Orden de los campos]]></rdfs:label>
+    <!--
+    @source The order of the property within the class
+    @sourceLanguage EN
+    @targetLanguage es
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#TAOGUIOrder
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="es"><![CDATA[El orden de la propiedad dentro de la clase]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

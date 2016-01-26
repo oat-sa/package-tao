@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xml:base="http://www.tao.lu/Ontologies/generis.rdf#" 
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#" 
+	xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#"
+>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#generis_Ressource">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[generis_Ressource]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[generis_Ressource]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#Model">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Model]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Model]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#Plugin">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Plugin]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Plugin]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#Model"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#is_language_dependent">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Is language dependent?]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[is_language_dependent]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#Boolean"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#RadioBox"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#Multiple">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Has multiple values?]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[If the cardinality of the property allows multiple values]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#Boolean"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#RadioBox"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#Boolean">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#generis_Ressource"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Boolean]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Boolean]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#True">
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#Boolean"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[True]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[True]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#False">
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#Boolean"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[False]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[False]]></rdfs:comment>
+  </rdf:Description>
+
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#File">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#generis_Ressource"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[generis_File]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[generis_File]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#FilePath">
+    <rdfs:label><![CDATA[FilePath]]></rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#File"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#FileName">
+    <rdfs:label><![CDATA[FileName]]></rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#File"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#VersionedRepository">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#generis_Ressource"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Repository]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[generis_VersionedRepository]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#VersionedRepositoryUrl">
+    <rdfs:label><![CDATA[Repository Url]]></rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#VersionedRepository"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#VersionedRepositoryPath">
+    <rdfs:label><![CDATA[Local Path]]></rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#VersionedRepository"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#VersionedRepositoryEnabled">
+    <rdfs:label><![CDATA[Enabled]]></rdfs:label>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#Boolean"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#VersionedRepository"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#RadioBox"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#VersionedRepositoryType">
+    <rdfs:label><![CDATA[Repository Type]]></rdfs:label>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#VersioningControlSystem"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#RadioBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#VersionedRepository"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#VersionedRepositoryLogin">
+    <rdfs:label><![CDATA[Repository Login]]></rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#VersionedRepository"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#VersionedRepositoryPassword">
+    <rdfs:label><![CDATA[Repository Password]]></rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#VersionedRepository"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#VersioningControlSystem">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#generis_Ressource"/>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Versioning Control System]]></rdfs:comment>
+    <rdfs:label xml:lang="en-US"><![CDATA[Versioning Control System]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#VCSTypeSubversion">
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#VersioningControlSystem"/>
+    <rdf:value xml:lang="en-US"><![CDATA[subversion]]></rdf:value>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Subversion]]></rdfs:comment>
+    <rdfs:label xml:lang="en-US"><![CDATA[Subversion]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#VCSTypeSubversionWindows">
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#VersioningControlSystem"/>
+    <rdf:value xml:lang="en-US"><![CDATA[subversion]]></rdf:value>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Subversion for Windows]]></rdfs:comment>
+    <rdfs:label xml:lang="en-US"><![CDATA[Subversion for Windows]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#VCSTypeCvs">
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#VersioningControlSystem"/>
+    <rdf:value xml:lang="en-US"><![CDATA[cvs]]></rdf:value>
+    <rdfs:comment xml:lang="en-US"><![CDATA[CVS]]></rdfs:comment>
+    <rdfs:label xml:lang="en-US"><![CDATA[CVS]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#VCSLocalDirectory">
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#VersioningControlSystem"/>
+    <rdf:value xml:lang="en-US"><![CDATA[local]]></rdf:value>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Local unversioned directory]]></rdfs:comment>
+    <rdfs:label xml:lang="en-US"><![CDATA[Local directory]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#FileRepository">
+    <rdfs:label><![CDATA[Versioned File Repository]]></rdfs:label>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#VersionedRepository"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#RadioBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#File"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#RepositoryRootFile">
+    <rdfs:label><![CDATA[Repository Root File]]></rdfs:label>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#VersionedRepository"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#File"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#Subscription">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#generis_Ressource"/>
+    <rdfs:label><![CDATA[Subscription]]></rdfs:label>
+    <rdfs:comment><![CDATA[Subscribtion Class to manage distributed data]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#Mask">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#generis_Ressource"/>
+    <rdfs:label><![CDATA[Mask]]></rdfs:label>
+    <rdfs:comment><![CDATA[Mask Class to manage right]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#SubscriptionUrl">
+    <rdfs:label><![CDATA[Url]]></rdfs:label>
+    <rdfs:comment><![CDATA[Distributed Generis Url of the subscription]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#Subscription"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#SubscriptionMask">
+    <rdfs:label><![CDATA[Mask]]></rdfs:label>
+    <rdfs:comment><![CDATA[Distributed Generis Mask of the subscription]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#Mask"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#Subscription"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#MaskSubject">
+    <rdfs:label><![CDATA[Subject]]></rdfs:label>
+    <rdfs:comment><![CDATA[Allowed Subject by the mask]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#Mask"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#MaskPredicate">
+    <rdfs:label><![CDATA[Predicate]]></rdfs:label>
+    <rdfs:comment><![CDATA[Allowed Predicate by the mask]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#Mask"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#MaskObject">
+    <rdfs:label><![CDATA[Object]]></rdfs:label>
+    <rdfs:comment><![CDATA[Allowed Object by the mask]]></rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#Mask"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  
+  <!-- Users Management -->
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#User">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#generis_Ressource"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[User]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Class that will gather all Generis' Users]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#userFirstName">
+    <rdfs:label xml:lang="en-US"><![CDATA[First Name]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[User First Name]]></rdfs:comment>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#userLastName">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#User"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Last Name]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[User Last Name]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#login">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#User"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Login]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[User Login]]></rdfs:comment>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#password">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#User"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#HiddenBox"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Password]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[User Password]]></rdfs:comment>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#userMail">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <rdfs:comment xml:lang="en-US"><![CDATA[User Mail]]></rdfs:comment>
+    <rdfs:label xml:lang="en-US"><![CDATA[Mail]]></rdfs:label>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#userDefLg">
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#Languages"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <rdfs:comment xml:lang="en-US"><![CDATA[User Data Language]]></rdfs:comment>
+    <rdfs:label xml:lang="en-US"><![CDATA[Data Language]]></rdfs:label>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#userUILg">
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#Languages"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <rdfs:comment xml:lang="en-US"><![CDATA[User Interface Language]]></rdfs:comment>
+    <rdfs:label xml:lang="en-US"><![CDATA[Interface Language]]></rdfs:label>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#userTimezone">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <rdfs:comment xml:lang="en-US"><![CDATA[User timezone]]></rdfs:comment>
+    <rdfs:label xml:lang="en-US"><![CDATA[Timezone]]></rdfs:label>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#User"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#userRoles">
+  	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Roles]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[The roles a user has]]></rdfs:comment>
+  	<rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#User"/>
+  	<rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#UserRole"/>
+  	<generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  	<generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True"/>
+  	<widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#ClassRole">
+    <rdfs:label xml:lang="en-US"><![CDATA[Role]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Role]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#generis_Ressource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#includesRole">
+  	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Includes Roles]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[Other role(s) to be included]]></rdfs:comment>
+  	<rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#ClassRole"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#ClassRole"/>
+	<widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+	<generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#isSystem">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#ClassRole"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#Boolean"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Is a system role]]></rdfs:label>
+	<rdfs:comment xml:lang="en-US"><![CDATA[Is a system role]]></rdfs:comment>
+	<generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#AbstractRole">
+  	<rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#ClassRole"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Abstract]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The Abstract Role Class]]></rdfs:comment>	
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#UserRole">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#ClassRole"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[User Role]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The user centric Role Class]]></rdfs:comment>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#GenerisRole">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#AbstractRole"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Generis]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[The Generis Role]]></rdfs:comment>
+  	<generis:isSystem rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#AnonymousRole">
+   	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#AbstractRole"/>
+   	<rdfs:label xml:lang="en-US"><![CDATA[Anonymous]]></rdfs:label>
+	<rdfs:comment xml:lang="en-US"><![CDATA[Anonymous Role]]></rdfs:comment>
+	<generis:includesRole rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#GenerisRole"/>
+  </rdf:Description>
+
+</rdf:RDF>

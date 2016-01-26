@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ui Test - contextualPopup UI Component</title>
+        <base href="../../../../" />
+
+        <link rel="stylesheet" type="text/css" href="css/tao-main-style.css" />
+        <link rel="stylesheet" type="text/css" href="js/lib/qunit/qunit.css">
+        <link rel="stylesheet" type="text/css" href="js/test/ui/contextualPopup/test.css">
+
+        <script type="text/javascript" src="js/lib/require.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit.js"></script>
+        <script  type="text/javascript">
+            QUnit.config.autostart = false;
+            require(['/tao/ClientConfig/config'], function(){
+                require(['test/ui/contextualPopup/test'], function(){
+                    QUnit.config.reorder = false;
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+            <div id="main-container">
+                <div class="center center1"></div>
+                <div class="center center2"></div>
+                <div class="center center3"></div>
+                <div class="center center4"></div>
+            </div>
+        </div>
+        <div id="visual-test">
+            <div class="center center1"></div>
+            <div class="center center2"></div>
+            <div class="center center3"></div>
+            <div class="center center4"></div>
+        </div>
+    </body>
+</html>

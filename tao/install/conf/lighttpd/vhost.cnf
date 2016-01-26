@@ -1,0 +1,5 @@
+$HTTP["host"] =~ "(^|\.)tao\.local$" {
+	server.name = "tao.local"
+	server.document-root = "/home/crp/workspace/transferAll"
+	server.error-handler-404 = "/e404.php"
+}

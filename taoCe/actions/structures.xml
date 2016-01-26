@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+	<structure id="help" name="Help" level="100" group="settings" binding="taoCe/controller/help">
+		<description></description>
+		<icon id="icon-help" src=""/>
+		<sections>
+			<section id="help" name="Help" url="/taoCe/Main/index" binding="taoCe/controller/help"></section>
+		</sections>
+	</structure>
+</structures>

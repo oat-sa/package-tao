@@ -1,0 +1,661 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.1.0-sprint15\n"
+"PO-Revision-Date: 2015-12-23T13:29:00\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: is-IS\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: is-IS\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ../../\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+
+msgid "%1$s - item %2$s/%3$s"
+msgstr ""
+
+msgid "A QTI Item involved in the QTI Test '%s' could not be compiled."
+msgstr ""
+
+msgid "A QTI Test must contain at least one QTI Item to be compiled. None found."
+msgstr "Í QTI prófi verður að vera að minnsta kosti eitt QTI atriði til að nota. Ekkert fannst."
+
+msgid "A qti testpackage"
+msgstr "QTI prófpakki"
+
+msgid "A remote resource referenced in QTI test '%s' could not be retrieved."
+msgstr ""
+
+msgid "A visible section is one that is identifiable by the candidate."
+msgstr "Sýnilegur hluti er merkjanlegur af próftaka."
+
+msgid "Add a zip file containing QTI tests and items"
+msgstr "Bættu við zip skrá með QTI prófum og atriðum"
+
+msgid "Add selected item(s) here."
+msgstr "Bættu völdu atriði/völdum atriðum við hér."
+
+msgid "Add the source file"
+msgstr "Bættu grunnskránni við"
+
+msgid "After you complete the section it would be impossible to return to this section to make changes. Are you sure you want to end the section?"
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+msgid "Allow Comment"
+msgstr "Leyfa athugasemdir"
+
+msgid "Allow Review"
+msgstr "Leyfðu endurskoðun"
+
+msgid "Allow Skipping"
+msgstr "Leyfðu að sleppa"
+
+msgid "Allow the candidate to review his answers."
+msgstr "Leyfa próftaka að skoða svörin sín."
+
+msgid "An error occurs, please contact your administrator"
+msgstr ""
+
+msgid "An invisible section with a parent that is subject to shuffling can specify whether or not its children, which will appear to the candidate as if they were part of the parent, are shuffled as a block or mixed up with the other children of the parent section."
+msgstr "Ósýnilegur hluti með foreldri sem hægt er að stokka getur tilgreint hvort börn þess, sem birtast próftaka eins og þau væru hluti af foreldrinu, stokkast sem blokk eða blandast við önnur börn foreldrahlutans."
+
+msgid "An item involved in the test cannot be read or is not QTI compliant."
+msgstr "Atriði í prófinu sem ekki er hægt að lesa eða fellur ekki undir QTI."
+
+msgid "An item involved in the test cannot be written."
+msgstr "Atriði í prófinu sem ekki er hægt að skrifa."
+
+msgid "An unknown error occured while compiled QTI Test '%s'."
+msgstr "Óþekkt villa kom upp þegar QTI Próf hafði náð '%'."
+
+msgid "An unknown error occured while compiling QTI test '%s'."
+msgstr "Óþekkt villa kom upp þegar QTI próf hafði keyrt '%'."
+
+msgid "Answered"
+msgstr ""
+
+msgid "Are you sure you want to end the test?"
+msgstr ""
+
+msgid "Author"
+msgstr "Höfundur"
+
+msgid "Auxiliary file not found at location \"%s\"."
+msgstr ""
+
+msgid "Cancel"
+msgstr "Hætta við"
+
+msgid "Candidate"
+msgstr "Þátttakandi"
+
+msgid "Categories"
+msgstr "Flokkar"
+
+msgid "Collapse the review panel"
+msgstr ""
+
+msgid "Comment"
+msgstr "Athugasemd"
+
+msgid "Completed items"
+msgstr ""
+
+msgid "Controls the maximum number of attempts allowed. 0 means unlimited."
+msgstr "Stýrir fjölda leyfilegra tilrauna. 0 þýðir ótakmarkað."
+
+msgid "Disable validation"
+msgstr "Aftengið staðfestingu"
+
+msgid "Enable selection"
+msgstr "Virkja val"
+
+msgid "End Test"
+msgstr "Ljúka prófi"
+
+msgid "Enter a category"
+msgstr "Veldu flokk"
+
+msgid "Error"
+msgstr "Villa"
+
+msgid "Error during file import"
+msgstr "Villa við skráarinnflutning"
+
+msgid "Error found in the IMS QTI Test:\n"
+"%s"
+msgstr ""
+
+msgid "Expand the review panel"
+msgstr ""
+
+msgid "Export"
+msgstr "Flytja út"
+
+msgid "Export error in test : %s"
+msgstr ""
+
+msgid "Export QTI 2.1 Test Package"
+msgstr "Flytja út QTI 2.1 prófapakka"
+
+msgid "File name"
+msgstr "Skráarheiti"
+
+msgid "Filter"
+msgstr "Sía"
+
+msgid "finished"
+msgstr ""
+
+msgid "Fixed"
+msgstr "Fast"
+
+msgid "Fixed position in a shuffled the selection."
+msgstr "Föst staðsetning í stokkuðu vali."
+
+msgid "Flagged"
+msgstr ""
+
+msgid "Identifier"
+msgstr "Auðkenni"
+
+msgid "If required it must appear (at least once) in the selection."
+msgstr "Ef þörf krefur verður það að birtast (að minnsta kosti einu sinni) í kostinum."
+
+msgid "If required, it must appears at least once in the selection."
+msgstr "Ef þörf krefur, þarf það að birtast að minnsta kosti einu sinni í kostinum."
+
+msgid "If set, it causes the order of the child elements to be randomized, otherwise it uses the order in which the child elements are defined."
+msgstr "Ef valið, veldur það því að röð barnahlutanna verði tilviljanakennd, annars er notuð röðin eins og barnahlutarnir eru skilgreindir."
+
+msgid "If the candidate can skip the item, without submitting a response."
+msgstr "Ef próftaki getur sleppt atriðinu, án þess að senda svar."
+
+msgid "Import"
+msgstr "Flytja inn"
+
+msgid "Import a QTI 2.1 Test Package"
+msgstr "Flytja inn QTI 2.1 prófapakka"
+
+msgid "IMS QTI Item referenced as \"%s\" in the IMS Manifest file could not be imported."
+msgstr ""
+
+msgid "IMS QTI Item referenced as \"%s\" in the IMS Manifest file successfully imported."
+msgstr ""
+
+msgid "IMS QTI Test Package successfully imported."
+msgstr "Innflutningur á IMS QTI prófapakka tókst."
+
+msgid "IMS QTI Test referenced as \"%s\" in the IMS Manifest file successfully imported."
+msgstr ""
+
+msgid "In this part of the test navigation is not allowed."
+msgstr ""
+
+msgid "Inconsistency at line %1d:"
+msgstr ""
+
+msgid "Individual"
+msgstr "Einstaklingur"
+
+msgid "is already used in the test."
+msgstr "er nú þegar notað í prófinu."
+
+msgid "is not a valid identifier (alphanum, underscore, dash and dots)"
+msgstr ""
+
+msgid "is not a valid identifier (everything except spaces)"
+msgstr ""
+
+msgid "Item %d of %d"
+msgstr ""
+
+msgid "Item Reference Properties"
+msgstr "Tilvísunareiginleikar atriðis"
+
+msgid "Item Session Control"
+msgstr "Stjórn á atriðisaðgerð"
+
+msgid "Items"
+msgstr "Atriði"
+
+msgid "Items can optionally be assigned to one or more categories."
+msgstr "Atriði má tengja við einn eða fleiri flokka."
+
+msgid "Items Compilation"
+msgstr "Samsetning atriða"
+
+msgid "Items marked for later review"
+msgstr ""
+
+msgid "Keep Together"
+msgstr "Halda saman"
+
+msgid "Late submission allowed"
+msgstr "Sein skil leyfð"
+
+msgid "Linear"
+msgstr "Línuleg"
+
+msgid "Manage Rubric Blocks"
+msgstr "Sýsla fyrirmælablokkir"
+
+msgid "Manage test properties"
+msgstr "Sýsla með eiginleika prófs"
+
+msgid "Manage Tests"
+msgstr "Sýsla með próf"
+
+msgid "Mark for review"
+msgstr ""
+
+msgid "Max Attempts"
+msgstr "Hámarksfjöldi tilrauna"
+
+msgid "Maximum Duration"
+msgstr "Hámarkstími"
+
+msgid "Maximum duration for the all test."
+msgstr "Hámarkstími fyrir allt prófið."
+
+msgid "Maximum duration for this item."
+msgstr "Hámarkstími fyrir þetta atriði."
+
+msgid "Maximum duration for this section."
+msgstr "Hámarkstími fyrir þennan hluta."
+
+msgid "Maximum duration for this test part."
+msgstr "Hámarkstími á þessum prófhluta."
+
+msgid "Minimum Duration"
+msgstr "Lágmarkstími"
+
+msgid "Minimum duration for the test."
+msgstr "Lágmarkstími fyrir prófið."
+
+msgid "Minimum duration for this item."
+msgstr "Lágmarkstími fyrir þetta atriði."
+
+msgid "Minimum duration for this section."
+msgstr "Lágmarkstími fyrir þennan hluta."
+
+msgid "Minimum duration for this test part."
+msgstr "Lágmarkstími fyrir þennan prófhluta."
+
+msgid "Move Down"
+msgstr "Færa niður"
+
+msgid "Move Up"
+msgstr "Færa upp"
+
+msgid "Navigation"
+msgstr "Stýringar"
+
+msgid "New Rubric Block"
+msgstr "Ný fyrirmælablokk"
+
+msgid "New test part"
+msgstr "Nýr prófhluti"
+
+msgid "Next"
+msgstr "Næsta"
+
+msgid "Next Section"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "No file found at location \"%s\"."
+msgstr ""
+
+msgid "No more attempts allowed for item \"%s\"."
+msgstr "Fleiri tilraunir eru óleyfilegar á atriði \"%s\"."
+
+msgid "No reference to any IMS QTI Item found."
+msgstr "Engin tilvísun í neitt IMS QTI atriði fannst."
+
+msgid "Non Linear"
+msgstr "Ólínuleg"
+
+msgid "Not all test could be export"
+msgstr ""
+
+msgid "Not shuffled, the position remains fixed."
+msgstr "Ekki stokkað, staðsetning föst."
+
+msgid "Ok"
+msgstr ""
+
+msgid "One or more dependent IMS QTI Items could not be imported."
+msgstr "Eitt eða fleiri háð IMS QTI atriði var ekki hægt að flytja inn."
+
+msgid "Only display the items marked for review"
+msgstr ""
+
+msgid "Only display the unanswered items"
+msgstr ""
+
+msgid "Ordering"
+msgstr "Röðun"
+
+msgid "Package is valid but no tests were found. Make sure that it contains valid QTI tests."
+msgstr ""
+
+msgid "Part %d"
+msgstr ""
+
+msgid "Previous"
+msgstr "Fyrri"
+
+msgid "Proctor"
+msgstr "Umsjónarmaður"
+
+msgid "Properties"
+msgstr "Stillingar"
+
+msgid "QTI 2.1 Test Driver"
+msgstr ""
+
+msgid "QTI Item Runner"
+msgstr ""
+
+msgid "QTI Test \"%s\" publishing failed."
+msgstr ""
+
+msgid "QTI Test \"%s\" successfully published."
+msgstr ""
+
+msgid "QTI Test Package"
+msgstr "QTI prófapakki"
+
+msgid "QTI Test Package 2.1"
+msgstr "QTI prófapakki 2.1"
+
+msgid "Reference"
+msgstr "Tilvísun"
+
+msgid "Remove Item Reference"
+msgstr "Fjarlægja atriðatilvísun"
+
+msgid "Remove Rubric Block"
+msgstr "Fjarlægja fyrirmælablokk"
+
+msgid "Remove Section"
+msgstr "Fjarlægja einingu"
+
+msgid "Required"
+msgstr "Nauðsynlegt"
+
+msgid "Required field"
+msgstr "Nauðsynlegt svið"
+
+msgid "Reset filters"
+msgstr ""
+
+msgid "Review"
+msgstr ""
+
+msgid "Rubric Block"
+msgstr "Fyrirmælablokk"
+
+msgid "Rubric Block Properties"
+msgstr "Eiginleikar fyrirmælablokkar"
+
+msgid "Rubric Blocks"
+msgstr "Fyrirmælablokkir"
+
+msgid "Save"
+msgstr "Vista"
+
+msgid "Scorer"
+msgstr "Teljari"
+
+msgid "Section level category enables configuring the categories of its composing items all at once. A category in gray means that all items have that category. A category in white means that only a few items have that category."
+msgstr ""
+
+msgid "Section Properties"
+msgstr "Eiginleikar einingu"
+
+msgid "Select"
+msgstr "Velja"
+
+msgid "Select Items"
+msgstr "Velja atriði"
+
+msgid "Selection"
+msgstr "Val"
+
+msgid "Send"
+msgstr "Senda"
+
+msgid "Show Feedback"
+msgstr "Sýna endurgjöf"
+
+msgid "Show Solution"
+msgstr "Sýna lausn"
+
+msgid "Show the solution once the answer is submitted."
+msgstr "Sýna lausn eftir svörun"
+
+msgid "Show/Hide the review screen"
+msgstr ""
+
+msgid "Shuffle"
+msgstr "Stokka"
+
+msgid "Simultaneous"
+msgstr "Samtímis"
+
+msgid "Skip"
+msgstr "Sleppa"
+
+msgid "Skip &amp; End Test"
+msgstr ""
+
+msgid "Skip to the end of the test"
+msgstr ""
+
+msgid "Skip to the next item"
+msgstr ""
+
+msgid "Skip to the next section"
+msgstr ""
+
+msgid "Start Test-part"
+msgstr ""
+
+msgid "Submission"
+msgstr "Sending/Skil"
+
+msgid "Submit and go to the end of the test"
+msgstr ""
+
+msgid "Submit and go to the next item"
+msgstr ""
+
+msgid "Submit and go to the previous item"
+msgstr ""
+
+msgid "Test"
+msgstr "Próf"
+
+msgid "Test constructor"
+msgstr "Prófsmiður"
+
+msgid "Test Saved"
+msgstr "Próf vistað"
+
+msgid "Test status"
+msgstr ""
+
+msgid "The 'imsmanifest.xml' file found in the archive is not valid."
+msgstr "'imsmanifest.xml' skráin sem fannst í safninu er ekki gild."
+
+msgid "The candidate is not allowed to submit wrong responses."
+msgstr "Próftaki má ekki senda röng svör."
+
+msgid "The dependency to the IMS QTI AssessmentItemRef \"%s\" in the IMS Manifest file could not be resolved."
+msgstr ""
+
+msgid "The identifier of the item reference."
+msgstr "Auðkenni atriðistilvísunar."
+
+msgid "The identifier of the section."
+msgstr "Auðkenni hlutans."
+
+msgid "The IMS QTI Item referenced as \"%s\" in the IMS Manifest file was already stored in the Item Bank."
+msgstr ""
+
+msgid "The IMS QTI Test Package could not be imported."
+msgstr "Ekki var hægt að flytja inn IMS QTI prófapakkann."
+
+msgid "The IMS QTI Test referenced as \"%s\" in the IMS Manifest file could not be imported."
+msgstr ""
+
+msgid "The navigation mode determines the general paths that the candidate may take. A linear mode restricts the candidate to attempt each item in turn. Non Linear removes this restriction."
+msgstr "Leiðsögusnið ákvarðar almennar leiðir sem próftaki getur farið.  Línulegt snið takmarkar val próftaka til að reyna eitt atriði á eftir öðru. Ólínulegt fjarlægir þessar hömlur."
+
+msgid "The number of child elements to be selected."
+msgstr "Heildarfjöldi barnaatriða sem velja þarf."
+
+msgid "The principle identifier of the test."
+msgstr "Aðalkenni prófsins."
+
+msgid "The provided archive is invalid. Make sure it is not corrupted and that it contains an 'imsmanifest.xml' file."
+msgstr "Þetta safn er ógilt.  Gakktu úr skugga um að það sé ekki skemmt og að í því sé 'imsmanifest.xml' skrá."
+
+msgid "The QTI Test '%s' to be compiled must contain at least 1 QTI Item. None found."
+msgstr " '%' QTI prófs sem á að setja saman þarf að innihalda að minnsta kosti 1 QTI atriði. Ekkert fannst."
+
+msgid "The QTI test could not be retrieved correctly."
+msgstr "Ekki var hægt að endurheimta QTI prófið á réttan hátt."
+
+msgid "The QTI Test XML or one of its dependencies is malformed or empty."
+msgstr "XML QTI prófsins eða skrá því háð er skemmd eða tóm."
+
+msgid "The QTI-XML test could not be written correctly."
+msgstr "Ekki var hægt að skrifa QTI-XML prófið á réttan hátt."
+
+msgid "The reference."
+msgstr "TIlvísunin."
+
+msgid "The resources related to the IMS QTI Test referenced as \"%s\" in the IMS Manifest file were rolled back."
+msgstr ""
+
+msgid "The section title."
+msgstr "Titill einingu."
+
+msgid "The submission mode determines when the candidate's responses are submitted for response processing. A testPart in individual mode requires the candidate to submit their responses on an item-by-item basis. In simultaneous mode the candidate's responses are all submitted together at the end of the testPart."
+msgstr "Skilahamurinn ákvarðar hvenær svör próftaka eru send til að meta svörin. Prófhluti í stykkjaham krefst þess að próftaki sendi svör sín hvert fyrir sig. Í fjölham eru svör próftaka öll send saman í lok prófhlutans."
+
+msgid "The test part identifier."
+msgstr "Prófhlutakenni."
+
+msgid "The test title."
+msgstr "Titill prófs."
+
+msgid "This constraint affects the visibility of feedback after the end of the last attempt."
+msgstr "Þessi takmörkun hefur áhrif á sýnileika endurgjafar í lok síðustu tilraunar."
+
+msgid "This constraint controls whether or not the candidate is allowed to provide a comment on the item during the session. Comments are not part of the assessed responses."
+msgstr "Þessi takmörkun stjórnar því hvort próftaki má tjá sig um atriðið á meðan á próftöku stendur. Ummæli eru ekki hluti af metnum svörum."
+
+msgid "This test has been suspended"
+msgstr ""
+
+msgid "This test has been terminated"
+msgstr ""
+
+msgid "Time limit reached for item \"%s\"."
+msgstr ""
+
+msgid "Time limit reached, this part of the test has ended."
+msgstr ""
+
+msgid "Time Limits"
+msgstr "Tímatakmarkanir"
+
+msgid "Title"
+msgstr "Titill"
+
+msgid "Tutor"
+msgstr "Leiðbeinandi"
+
+msgid "Unanswered"
+msgstr ""
+
+msgid "Unanswered items"
+msgstr ""
+
+msgid "Unknown error."
+msgstr "Óþekkt villa."
+
+msgid "Upload a QTI 2.1 Test Package File"
+msgstr "Hlaða upp QTI 2.1 prófapakkaskrá"
+
+msgid "Use Ctrl/Meta key or Lasso for multiple selection"
+msgstr "Notaðu Ctrl/Meta lykil eða Lasso til að velja margt"
+
+msgid "Validate Responses"
+msgstr "Staðfestu svör"
+
+msgid "Viewed"
+msgstr ""
+
+msgid "Viewed items"
+msgstr ""
+
+msgid "Views"
+msgstr "Skoðanir"
+
+msgid "Visible"
+msgstr "Sýnilegt"
+
+msgid "Warning – You have %s remaining to complete the test."
+msgstr ""
+
+msgid "When selecting child elements each element is normally eligible for selection once only."
+msgstr "Þegar valin eru barnaatriði er yfirleitt aðeins hægt að velja hvert einu sinni."
+
+msgid "Whether a candidate's response that is beyond the maximum duration of the item should still be accepted."
+msgstr "Hvort svar próftaka sem hefur notað meira en hámarkstíma í atriðið skuli tekið gilt."
+
+msgid "Whether a candidate's response that is beyond the maximum duration of the section should still be accepted."
+msgstr "Hvort svar próftaka sem hefur notað meira en hámarkstíma í prófþáttinn skuli tekið gilt."
+
+msgid "Whether a candidate's response that is beyond the maximum duration of the test part should still be accepted."
+msgstr "Hvort svar próftaka sem hefur notað meira en hámarkstíma í prófhlutann skuli tekið gilt."
+
+msgid "Whether a candidate's response that is beyond the maximum duration should still be accepted."
+msgstr "Hvort svar próftaka sem hefur notað meira en hámarkstíma skuli tekið gilt."
+
+msgid "Who can view the rubric block during the delivery."
+msgstr "Hver getur skoðað fyrirmælin meðan á próftöku stendur."
+
+msgid "With Replacement"
+msgstr "Með uppbót"
+
+msgid "XML error at line %1$d column %2$d \"%3$s\"."
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "You have %s item(s) marked for review."
+msgstr ""
+
+msgid "You have %s unanswered question(s) and have %s item(s) marked for review."
+msgstr ""
+
+msgid "You have %s unanswered question(s)."
+msgstr ""
+
+msgid "Your comment…"
+msgstr ""
+

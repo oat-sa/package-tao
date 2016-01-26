@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xml:base="http://www.tao.lu/Ontologies/TAOItem.rdf#"
+	xmlns:tao="http://www.tao.lu/Ontologies/TAO.rdf#"
+>
+  
+  <!-- Item model index -->
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModelIndex">
+  	<tao:IndexDefaultSearch rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False" />
+  </rdf:Description>
+  
+  <!-- Item content index -->
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContentIndex">
+  	<tao:IndexDefaultSearch rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+  
+</rdf:RDF>

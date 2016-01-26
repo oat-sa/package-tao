@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xml:base="http://www.tao.lu/Ontologies/TAO.rdf#"
+	xmlns:tao="http://www.tao.lu/Ontologies/TAO.rdf#"
+	xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#"
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#"
+>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#Index">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#TAOObject"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Index]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Index class]]></rdfs:comment>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#IndexIdentifier">
+  	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  	<rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#Index"/>
+  	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Identifier]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[Humanreadable identifier of the index]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#IndexTokenizer">
+  	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  	<rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#Index"/>
+  	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Tokenizer of index]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[Tokenizer to be used to extract search strings]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#IndexFuzzyMatching">
+  	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  	<rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#Index"/>
+  	<rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#Boolean"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Fuzzy matching]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[Should the string matching be exact or fuzzy]]></rdfs:comment>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#Tokenizer">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#TAOObject"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Tokenizer]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Tokenizer class]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#TokenizerClass">
+  	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  	<rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#Tokenizer"/>
+  	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Tokenizer implementation]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[Classname of the tokenizer implementation]]></rdfs:comment>
+  </rdf:Description>
+  
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#PropertyIndex">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Property Indexation]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[How a property should be indexed]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#TAOIndex"/>
+    <generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+  
+  <!-- Tokenizers -->
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#RawValueTokenizer">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#Tokenizer"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Raw Value Tokenizer]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[Tokenizer using the raw property value]]></rdfs:comment>
+  	<tao:TokenizerClass xml:lang="en-US"><![CDATA[oat\tao\model\search\tokenizer\RawValue]]></tao:TokenizerClass>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#LabelTokenizer">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#Tokenizer"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Label Tokenizer]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[Tokenizer using the resource labels]]></rdfs:comment>
+  	<tao:TokenizerClass xml:lang="en-US"><![CDATA[oat\tao\model\search\tokenizer\Label]]></tao:TokenizerClass>
+  </rdf:Description>
+
+  <!-- Indexes -->
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#LabelIndex">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#Index"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Label Index]]></rdfs:label>
+  	<tao:IndexIdentifier><![CDATA[label]]></tao:IndexIdentifier>
+  	<tao:IndexFuzzyMatching rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  	<tao:IndexTokenizer rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#RawValueTokenizer"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+  	<tao:PropertyIndex rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#LabelIndex"/>
+  </rdf:Description>
+  
+  
+</rdf:RDF>

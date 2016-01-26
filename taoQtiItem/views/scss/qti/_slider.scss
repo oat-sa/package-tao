@@ -1,0 +1,53 @@
+@import "inc/bootstrap";
+
+.qti-sliderInteraction {
+    .ui-slider-horizontal {
+        margin: 0 20px;
+    }
+    .ui-slider-vertical {
+        margin: 0 20px;
+        display: inline-block;
+    }
+    .qti-slider-values {
+        position: relative;
+    }
+    &.qti-slider-horizontal {
+        .qti-slider-values {
+            height: 20px;
+            margin: 0 10px;
+        }
+        .slider-min, .slider-max, .slider-middle {
+            position: absolute;
+            width: 40px;
+            margin-left: -20px;
+            text-align: center;
+            @include font-size(12);
+        }
+        .slider-min{
+            left: 0%;
+        }
+        .slider-max{
+            left: 100%;
+        }
+    }
+    &.qti-slider-vertical {
+        .qti-slider-values {
+            width: 30px;
+            display: inline-block;
+        }
+        .slider-min, .slider-max, .slider-middle {
+            position: absolute;
+        }
+        .slider-min{
+            bottom: -10px;
+        }
+        .slider-max{
+            top: -10px;
+        }
+        .ui-slider-handle {
+            width: 17px !important;
+            height: 10px !important;
+            margin-left: -4px !important;
+        }
+    }
+}

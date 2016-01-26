@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i143081955832458" title="Item title" adaptive="false" timeDependent="false" label="" xml:lang="en-US" toolName="TAO" toolVersion="3.0.0">
+  <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="integer"/>
+  <responseDeclaration identifier="RESPONSE_1" cardinality="multiple" baseType="identifier"/>
+  <responseDeclaration baseType="integer" cardinality="single" identifier="RESPONSE_2"/>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <stylesheet href="style-custom-tao-user-styles.css" type="text/css" media="all" title=""/>
+  <itemBody>
+    <div class="grid-row">
+      <div class="col-12">
+        <mediaInteraction responseIdentifier="RESPONSE" autostart="false" minPlays="0" maxPlays="0" loop="false">
+          <prompt/>
+          <object data="sample.mp4" type="video/mp4" width="984" height="270"/>
+        </mediaInteraction>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="col-12">
+        <mediaInteraction autostart="false" minPlays="0" maxPlays="0" loop="false" responseIdentifier="RESPONSE_2">
+          <prompt/>
+          <object type="video/youtube" width="984" height="270" data="https://www.youtube.com/watch?v=J1c2KzJbcGA"/>
+        </mediaInteraction>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="col-12">
+        <hotspotInteraction responseIdentifier="RESPONSE_1" maxChoices="0" minChoices="0" class="responsive">
+          <prompt/>
+          <object data="egyptian-symbol-ouroboros-300x300.png" type="image/png" width="300" height="300"/>
+          <hotspotChoice identifier="hotspot_1" fixed="false" shape="rect" coords="68,7,116,66"/>
+        </hotspotInteraction>
+      </div>
+    </div>
+  </itemBody>
+  <responseProcessing>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE"/>
+          <correct identifier="RESPONSE"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_1"/>
+          <correct identifier="RESPONSE_1"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_2"/>
+          <correct identifier="RESPONSE_2"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+  </responseProcessing>
+</assessmentItem>

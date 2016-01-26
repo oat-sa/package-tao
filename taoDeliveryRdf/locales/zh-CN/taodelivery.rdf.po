@@ -1,0 +1,257 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.1.0-sprint15\n"
+"PO-Revision-Date: 2015-12-22T16:41:41\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: zh-CN\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: zh-CN\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#Delivery
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Delivery"
+msgstr "递送"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#Delivery
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Delivery"
+msgstr "递送"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#PeriodStart
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Start Date"
+msgstr "开始日期"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#PeriodStart
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The start date of the delivery"
+msgstr "递送开始的日期"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#PeriodEnd
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "End Date"
+msgstr "结束日期"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#PeriodEnd
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The end date of the delivery"
+msgstr "递送结束的日期"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#Maxexec
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Max. number of executions (default: unlimited)"
+msgstr "最多执行次数(默认值：无限)"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#Maxexec
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Maximum Times of Execution per subject"
+msgstr "每主题最多执行次数"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#AccessSettings
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Access"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#AccessSettings
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Access"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#ExcludedSubjects
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Excluded Subjects"
+msgstr "被排除的对象"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#ExcludedSubjects
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Excluded Subjects"
+msgstr "被排除的对象"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryResultServer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Result Server"
+msgstr "结果服务器"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryResultServer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Result Server"
+msgstr "结果服务器"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecution
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Delivery execution"
+msgstr "执行递送"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecution
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Execution of a delivery"
+msgstr "执行一个递送"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionDelivery
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Execution's delivery"
+msgstr "执行的递送"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionDelivery
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Delivery of this execution"
+msgstr "这个执行的递送"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionSubject
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "DeliveryExecution Subject"
+msgstr "执行递送对象"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionSubject
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "test-taker of the delivery execution"
+msgstr "执行递送的考生"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStart
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "DeliveryExecution start"
+msgstr "执行递送开始"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStart
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Timestamp of the delivery execution start"
+msgstr "开始执行递送的时间戳"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionEnd
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "DeliveryExecution end"
+msgstr "执行递送结束"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionEnd
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Timestamp of the delivery finish"
+msgstr "结束执行递送的时间戳"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#StatusOfDeliveryExecution
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "DeliveryExecutions Status"
+msgstr "执行递送的状态"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#StatusOfDeliveryExecution
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The current status of the DeliveryExecution"
+msgstr "执行递送的现在状态"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatus
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "DeliveryExecution status"
+msgstr "执行递送状态"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatus
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Status of a delivery execution"
+msgstr "执行递送的状态"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusActive
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Active"
+msgstr "现行"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusActive
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Activ status of a delivery execution"
+msgstr "执行递送的现行状态"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusAbandoned
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Finished"
+msgstr "已完成"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusFinished
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Finished status of a delivery execution"
+msgstr "执行递送的已完成状态"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusAbandoned
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Abandoned status of a delivery execution"
+msgstr "执行递送的离弃状态"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDelivery
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Assembled Delivery "
+msgstr "收集好的递送"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDelivery
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "An assembled Delivery"
+msgstr "一个收集好的递送"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDeliveryCompilationTime
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Compilation Time"
+msgstr "编译时间"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDeliveryCompilationTime
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The time of the compilation of the delivery"
+msgstr "递送编译的时间"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDeliveryCompilationDirectory
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Compilation Directory"
+msgstr "编译目录"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDeliveryCompilationDirectory
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The directory of the compilation of the delivery"
+msgstr "递送的编译目录"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDeliveryOrigin
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Delivery origin"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDeliveryOrigin
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The original test/template of the delivery"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDeliveryRuntime
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Runtime"
+msgstr "运行时间"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDeliveryRuntime
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Service call to run the compiled delivery"
+msgstr "服务调用来执行已编译的递送"
+
+# http://www.tao.lu/Ontologies/TAOGroup.rdf#Deliveries
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Deliveries"
+msgstr "递送"
+
+# http://www.tao.lu/Ontologies/TAOGroup.rdf#Deliveries
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Deliveries of the group"
+msgstr "团体的遞送"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryManagerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Delivery Manager"
+msgstr "递送主管"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryManagerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The Delivery Manager Role"
+msgstr "递送主管角色"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#GuestAccess
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Guest Access"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#GuestAccess
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Guest Access"
+msgstr ""
+

@@ -1,0 +1,171 @@
+@charset "utf-8";
+@import "inc/sts-bootstrap";
+// base is already namespaced
+@import "inc/sts-base";
+
+
+.sts-tmp-element {
+    display: none;
+}
+
+.sts-toolcontainer {
+    display: none;
+}
+.sts-scope {
+
+    &.sts-tmp-element {
+        display: none;
+    }
+
+    // list of sccs that are _not_ name spaced
+    @import "inc/sts-grid";
+    @import "inc/sts-controls";
+
+    %visible-container {
+        background: $stsCanvas;
+        .sts-title-bar {
+            visibility: visible;
+        }
+        .sts-content { 
+            border: 1px solid #ccc;  
+            border-top: none !important;      
+        }
+        [class*=" sts-handle-"], [class^="sts-handle-"] {
+            &:not(.sts-handle-move) {                
+                display:none;
+            }
+        }
+    }
+
+    %invisible-container {
+        background: transparent !important;
+        box-shadow: none;
+        border: none;
+        .sts-title-bar {
+            visibility: hidden;
+        }
+    }
+
+    
+    .sts-container {
+        display:inline-block;
+        width: auto;
+        @extend %visible-container;
+        position: absolute;
+        z-index: 1001;
+        left:0;
+        top: 100px;
+        &.sts-hidden-container {
+            display:none;
+        }
+        &.sts-transparent-container {
+            @extend %invisible-container; 
+            .sts-content {   
+                border-color: transparent; 
+            }
+            &:hover {
+                @extend %visible-container;
+                background: transparent;
+                .sts-content {  
+                    border-style: dashed; 
+                }
+            }
+        } 
+                  
+        [class*=" sts-handle-"], [class^="sts-handle-"] {
+            &:not(.sts-handle-move) {                 
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                z-index: 1100;
+                overflow: hidden;
+                border-radius: 15px;
+                cursor: pointer;
+                &.active {
+                    background: none;
+                }
+                &.lurking {
+                    opacity: .25;
+                }               
+            }
+        }     
+
+           
+
+        .sts-button {
+            display: block;
+            @include simple-border();
+            cursor: default;
+            text-align:center;
+            &.sts-launch-button {
+                cursor: pointer;
+            }
+        }
+        .sts-title-bar {
+            background: $stsTitleBar;             
+            position: relative;
+            padding: 2px 1px;
+            .sts-title {           
+                &::selection, &::-moz-selection {
+                    background: $stsTitleBar !important;
+                }
+                padding: 0 10px 0 5px;
+                line-height: 1.6;
+                display: inline-block;
+                color: white;
+                @include font-size(13);
+                text-shadow: 1px 1px 1px blacken($stsTitleBar, .2)
+            }
+            .sts-header-controls {
+                position: absolute;
+                padding:  4px 5px 3px 10px;
+                margin: 0;
+                list-style: none;
+                overflow: hidden;
+                right: 1px;
+                top: 2px;
+                cursor: default;
+                .sts-close:before {
+                    content: '×';
+                    font-size: 20px;
+                }
+                .sts-button {
+                    float: left;
+                    display:block;
+                    width: 12px;
+                    height: 12px;
+                    color: white;
+                    line-height: 12px;
+                    border:none;
+                }
+            }
+        }
+        .sts-content {
+            padding: 3px;
+            overflow:hidden;
+            cursor: default;
+            .sts-header-controls {
+                .sts-button {
+                    margin: auto;
+                    padding: 0px;
+                }
+            }
+            .sts-button {
+                margin: 2px;
+                float: left;
+                width: 32px;
+                height: 32px;
+                padding: 5px;  
+                img {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media print {
+    .sts-scope {
+        display: none;
+    }
+}

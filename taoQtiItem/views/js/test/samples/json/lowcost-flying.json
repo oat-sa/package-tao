@@ -1,0 +1,205 @@
+{
+    "identifier": "graphicAssociate",
+    "serial": "item_547dd6b98b5d9725406677",
+    "qtiClass": "assessmentItem",
+    "attributes": {
+        "identifier": "graphicAssociate",
+        "title": "Low-cost Flying",
+        "label": "",
+        "adaptive": false,
+        "timeDependent": false,
+        "toolName": "TAO",
+        "toolVersion": "3.0"
+    },
+    "body": {
+        "serial": "container_containeritembody_547dd6b98b5c1339656603",
+        "body": "<p>Frizz, a new low cost airline, already operates a service connecting Manchester and\n\t\t\tEdinburgh but has recently opened two new routes: a service between London and Edinburgh\n\t\t\tand one between London and Manchester.</p>\n    {{interaction_graphicassociateinteraction_547dd6b98d28d814892882}}",
+        "elements": {
+            "interaction_graphicassociateinteraction_547dd6b98d28d814892882": {
+                "serial": "interaction_graphicassociateinteraction_547dd6b98d28d814892882",
+                "qtiClass": "graphicAssociateInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE",
+                    "maxAssociations": 3,
+                    "minAssociations": 0
+                },
+                "choices": {
+                    "choice_associablehotspot_547dd6b98d92f499532741": {
+                        "identifier": "A",
+                        "serial": "choice_associablehotspot_547dd6b98d92f499532741",
+                        "qtiClass": "associableHotspot",
+                        "attributes": {
+                            "identifier": "A",
+                            "fixed": false,
+                            "matchMax": 3,
+                            "matchMin": 0,
+                            "shape": "circle",
+                            "coords": "77,115,8"
+                        }
+                    },
+                    "choice_associablehotspot_547dd6b98db4e771189683": {
+                        "identifier": "B",
+                        "serial": "choice_associablehotspot_547dd6b98db4e771189683",
+                        "qtiClass": "associableHotspot",
+                        "attributes": {
+                            "identifier": "B",
+                            "fixed": false,
+                            "matchMax": 3,
+                            "matchMin": 0,
+                            "shape": "circle",
+                            "coords": "118,184,8"
+                        }
+                    },
+                    "choice_associablehotspot_547dd6b98dbf4037425744": {
+                        "identifier": "C",
+                        "serial": "choice_associablehotspot_547dd6b98dbf4037425744",
+                        "qtiClass": "associableHotspot",
+                        "attributes": {
+                            "identifier": "C",
+                            "fixed": false,
+                            "matchMax": 3,
+                            "matchMin": 0,
+                            "shape": "circle",
+                            "coords": "150,235,8"
+                        }
+                    },
+                    "choice_associablehotspot_547dd6b98dc89745742172": {
+                        "identifier": "D",
+                        "serial": "choice_associablehotspot_547dd6b98dc89745742172",
+                        "qtiClass": "associableHotspot",
+                        "attributes": {
+                            "identifier": "D",
+                            "fixed": false,
+                            "matchMax": 3,
+                            "matchMin": 0,
+                            "shape": "circle",
+                            "coords": "96,114,8"
+                        }
+                    }
+                },
+                "prompt": {
+                    "serial": "container_containerstatic_547dd6b98d3ff769595498",
+                    "body": "Mark the airline's new routes on the airport map:",
+                    "elements": [],
+                    "debug": {
+                        "relatedItem": "item_547dd6b98b5d9725406677"
+                    }
+                },
+                "object": {
+                    "serial": "object_547dd6b98dd47368788870",
+                    "qtiClass": "object",
+                    "attributes": {
+                        "data": "images/ukair.png",
+                        "type": "image/png",
+                        "width": 206,
+                        "height": 280
+                    },
+                    "_alt": "UK Map"
+                }
+            }
+        },
+        "debug": {
+            "relatedItem": "item_547dd6b98b5d9725406677"
+        }
+    },
+    "namespaces": {
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "": "http://www.imsglobal.org/xsd/imsqti_v2p1"
+    },
+    "stylesheets": [],
+    "outcomes": {
+        "outcomedeclaration_547dd6b98be6c947256752": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_547dd6b98be6c947256752",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "defaultValue": null
+        }
+    },
+    "responses": {
+        "responsedeclaration_547dd6b98b875594184481": {
+            "identifier": "RESPONSE",
+            "serial": "responsedeclaration_547dd6b98b875594184481",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE",
+                "cardinality": "multiple",
+                "baseType": "pair"
+            },
+            "correctResponses": [
+                "C B",
+                "C D"
+            ],
+            "mapping": {
+                "A B": "-1",
+                "A C": "-1",
+                "A D": "-1",
+                "B C": "1",
+                "B D": "-1",
+                "C D": "1"
+            },
+            "areaMapping": [],
+            "howMatch": "http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response",
+            "mappingAttributes": {
+                "defaultValue": 0,
+                "lowerBound": "0"
+            },
+            "feedbackRules": []
+        }
+    },
+    "feedbacks": [],
+    "responseProcessing": {
+        "serial": "response_templatesdriven_547dd6b98e0c2599340802",
+        "qtiClass": "responseProcessing",
+        "attributes": [],
+        "processingType": "templateDriven",
+        "responseRules": [{
+            "qtiClass": "responseCondition",
+            "responseIf": {
+                "qtiClass": "responseIf",
+                "expression": {
+                    "qtiClass": "isNull",
+                    "expressions": [{
+                        "qtiClass": "variable",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }]
+                },
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "baseValue",
+                        "attributes": {
+                            "baseType": "float"
+                        },
+                        "value": "0.0"
+                    }
+                }]
+            },
+            "responseElse": {
+                "qtiClass": "responseElse",
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "mapResponse",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }
+                }]
+            }
+        }]
+    }
+}

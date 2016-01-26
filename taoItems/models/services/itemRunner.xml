@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE services SYSTEM "../../tao/doc/sas.dtd">
+<services>
+	<description>Item Runner services</description>
+	<!-- item container service -->
+	<service>
+		<name>Item Runner</name>
+		<description>Embed a run an item into a Delivery. This service initialize the TAO Apis and contexts</description>
+		<location url="/taoItemRunner/ItemRunner/index">
+			<param key="itemUri" value="^itemUri" />
+			<param key="testUri" value="^testUri" />
+			<param key="deliveryUri" value="^deliveryUri" />
+		</location>
+	</service>
+	
+</services>

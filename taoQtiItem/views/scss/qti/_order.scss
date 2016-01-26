@@ -1,0 +1,90 @@
+@import "inc/bootstrap";
+
+.qti-orderInteraction {
+    .arrow-bar {
+        text-align: center;
+        span {
+            margin: 3px auto;
+            @include font-size(25);
+            color: mix(#fff, $textColor, 50%);
+            background: mix(#fff, $uiClickableDefaultBg, 50%);
+            cursor: default;
+            height: 40px;
+            &.active {
+                background: $uiClickableDefaultBg;
+                cursor: pointer;
+                color: $textColor;
+                &:hover {
+                    color: $textHighlight;
+                    background: $uiClickableHoverBg;
+                }
+            }
+            &.triggered {
+                color: $textHighlight;
+                background: $uiClickableHoverBg;
+            }
+        }
+    }
+
+    &.qti-vertical {
+        .order-interaction-area {
+            display: table;
+            border-collapse: separate;
+            border-spacing: 5px 5px 5px 0;
+            width: 100%;
+        }
+        ul.source, ul.target,
+        ol.source, ol.target {
+            display: table-cell;
+            width: 43%;
+        }
+        .arrow-bar {
+            .icon-move-before {
+                @include icon-up;
+            }
+            .icon-move-behind {
+                @include icon-down;
+            }
+            display: table-cell;
+            vertical-align: middle;
+            padding: 5px;
+            span {
+                padding: 8px 0;
+                display: block;
+                width: 50px;
+                &.inactive {
+                    visibility: hidden;
+                }
+            }
+            &.middle {
+                span.inactive {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &.qti-horizontal {
+        .block-listing {
+            min-height: 38px;
+        }
+        .arrow-bar {
+            margin-bottom: 10px;
+
+            span {
+                padding: 0 15px;
+                display: inline-block;
+                line-height: 1.6;
+                &.inactive {
+                    visibility: hidden;
+                }
+                &.icon-move-before {
+                    @include icon-up;
+                }
+                &.icon-move-behind {
+                    @include icon-down;
+                }
+            }
+        }
+    }
+}

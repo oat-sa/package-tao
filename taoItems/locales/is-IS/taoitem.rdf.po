@@ -1,0 +1,208 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.1.0-sprint15\n"
+"PO-Revision-Date: 2015-12-23T13:13:55\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: is-IS\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: is-IS\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#Item
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Item"
+msgstr "Atriði"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#Item
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Item"
+msgstr "Atriði"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContent
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Item Content"
+msgstr "Innihald atriðis"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContent
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Item Content"
+msgstr "Innihald atriðis"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContentSourceName
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Original Filename"
+msgstr "Upprunalegt skráarheiti"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContentSourceName
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Original Filename"
+msgstr "Upprunalegt skráarheiti"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModels
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Item Models"
+msgstr "Atriðalíkön"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModels
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Item Models"
+msgstr "Atriðalíkön"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModel
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Item Model"
+msgstr "Atriðislíkan"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModel
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Item Model"
+msgstr "Atriðalíkön"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemRuntime
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Runtime"
+msgstr "Keyrslutími"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemRuntime
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Runtime"
+msgstr "Keyrslutími"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ModelService
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "itemmodel service"
+msgstr "atriðalíkana þjónusta"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ModelService
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "service of the item model"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#DataFileName
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Data File Name"
+msgstr "Nafn gagnaskráar"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#DataFileName
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "the filename used to store the item content for this model"
+msgstr "skráarnafnið sem notað var til að geyma atriðisinnihald fyrir þetta líkan"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ModelStatus
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Model Status"
+msgstr "Staða Líkans"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#StatusStable
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Stable"
+msgstr "Stöðugt"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#StatusStable
+#, fuzzy
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "This item  model can be used in production"
+msgstr "Þetta atriði... ...líkan má nota í framleiðslu"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#StatusDeprecated
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Deprecated"
+msgstr "Úrelt"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#StatusDeprecated
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "This item model is not supported anymore, we advise to migrate your items"
+msgstr "Þetta atriðislíkan er ekki lengur stutt, við leggjum til að þú flytjir atriðin þín"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#StatusDevelopment
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Development"
+msgstr "Þróun"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#StatusDevelopment
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "this item model has not been tested in a production environment, we advise to be carefull with it"
+msgstr "þetta atriðislíkam hefur ekki verið prófað í framleiðsluumhverfi, við ráðleggum þér að fara varlega með það"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#StatusExperimental
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Experimental"
+msgstr "Á tilraunastigi"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#StatusExperimental
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "this item model is still in conception, but you can try it, give your feedback and it will be improved."
+msgstr "þetta atriðislíkan er enn í smíði, en þú getur reynt það, skilað endurgjöf og það verður bætt."
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModelStatus
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Status"
+msgstr "Staða"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModelStatus
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The status of an item model"
+msgstr "Staða atriðislíkans"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemsManagerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Items Manager"
+msgstr "Atriðastjóri"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemsManagerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The Items Manager Role"
+msgstr "Hlutverk atriðastjóra"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemAuthor
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Item Author"
+msgstr "Höfundur atriðis"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemAuthor
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The Item Author Role"
+msgstr "Hlutverk atriðastjóra"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ModelTarget
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Deliverable"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ModelTarget
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Items of model are deliverable"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#DeliveryTarget
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Delivery Target"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#DeliveryTarget
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Delivery Target"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#OnlineTarget
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Online Delivery Target"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#OnlineTarget
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Online Delivery Target"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#PaperbasedTarget
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Paper-based Delivery Target"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#PaperbasedTarget
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Paper-based Delivery Target"
+msgstr ""
+

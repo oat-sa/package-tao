@@ -1,0 +1,661 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.1.0-sprint15\n"
+"PO-Revision-Date: 2015-12-23T13:29:05\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: pt-PT\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: pt-PT\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ../../\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+
+msgid "%1$s - item %2$s/%3$s"
+msgstr ""
+
+msgid "A QTI Item involved in the QTI Test '%s' could not be compiled."
+msgstr ""
+
+msgid "A QTI Test must contain at least one QTI Item to be compiled. None found."
+msgstr ""
+
+msgid "A qti testpackage"
+msgstr "Pacote de teste QTI"
+
+msgid "A remote resource referenced in QTI test '%s' could not be retrieved."
+msgstr ""
+
+msgid "A visible section is one that is identifiable by the candidate."
+msgstr ""
+
+msgid "Add a zip file containing QTI tests and items"
+msgstr ""
+
+msgid "Add selected item(s) here."
+msgstr ""
+
+msgid "Add the source file"
+msgstr "Adicionar ficheiro font"
+
+msgid "After you complete the section it would be impossible to return to this section to make changes. Are you sure you want to end the section?"
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+msgid "Allow Comment"
+msgstr ""
+
+msgid "Allow Review"
+msgstr ""
+
+msgid "Allow Skipping"
+msgstr ""
+
+msgid "Allow the candidate to review his answers."
+msgstr ""
+
+msgid "An error occurs, please contact your administrator"
+msgstr ""
+
+msgid "An invisible section with a parent that is subject to shuffling can specify whether or not its children, which will appear to the candidate as if they were part of the parent, are shuffled as a block or mixed up with the other children of the parent section."
+msgstr ""
+
+msgid "An item involved in the test cannot be read or is not QTI compliant."
+msgstr "Um item envolvido no teste não pode ser lido ou não está em conformidade com QTI"
+
+msgid "An item involved in the test cannot be written."
+msgstr "Um item envolvido no teste não pode ser escrito"
+
+msgid "An unknown error occured while compiled QTI Test '%s'."
+msgstr ""
+
+msgid "An unknown error occured while compiling QTI test '%s'."
+msgstr "Um erro desconhecido ocorreu quando compilava teste QTI '%s'."
+
+msgid "Answered"
+msgstr ""
+
+msgid "Are you sure you want to end the test?"
+msgstr ""
+
+msgid "Author"
+msgstr ""
+
+msgid "Auxiliary file not found at location \"%s\"."
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Candidate"
+msgstr ""
+
+msgid "Categories"
+msgstr ""
+
+msgid "Collapse the review panel"
+msgstr ""
+
+msgid "Comment"
+msgstr ""
+
+msgid "Completed items"
+msgstr ""
+
+msgid "Controls the maximum number of attempts allowed. 0 means unlimited."
+msgstr ""
+
+msgid "Disable validation"
+msgstr ""
+
+msgid "Enable selection"
+msgstr ""
+
+msgid "End Test"
+msgstr ""
+
+msgid "Enter a category"
+msgstr ""
+
+msgid "Error"
+msgstr "Erro"
+
+msgid "Error during file import"
+msgstr "Erro durante a importação do ficheiro"
+
+msgid "Error found in the IMS QTI Test:\n"
+"%s"
+msgstr ""
+
+msgid "Expand the review panel"
+msgstr ""
+
+msgid "Export"
+msgstr ""
+
+msgid "Export error in test : %s"
+msgstr ""
+
+msgid "Export QTI 2.1 Test Package"
+msgstr ""
+
+msgid "File name"
+msgstr ""
+
+msgid "Filter"
+msgstr ""
+
+msgid "finished"
+msgstr ""
+
+msgid "Fixed"
+msgstr ""
+
+msgid "Fixed position in a shuffled the selection."
+msgstr ""
+
+msgid "Flagged"
+msgstr ""
+
+msgid "Identifier"
+msgstr ""
+
+msgid "If required it must appear (at least once) in the selection."
+msgstr ""
+
+msgid "If required, it must appears at least once in the selection."
+msgstr ""
+
+msgid "If set, it causes the order of the child elements to be randomized, otherwise it uses the order in which the child elements are defined."
+msgstr ""
+
+msgid "If the candidate can skip the item, without submitting a response."
+msgstr ""
+
+msgid "Import"
+msgstr "Importar"
+
+msgid "Import a QTI 2.1 Test Package"
+msgstr ""
+
+msgid "IMS QTI Item referenced as \"%s\" in the IMS Manifest file could not be imported."
+msgstr ""
+
+msgid "IMS QTI Item referenced as \"%s\" in the IMS Manifest file successfully imported."
+msgstr ""
+
+msgid "IMS QTI Test Package successfully imported."
+msgstr ""
+
+msgid "IMS QTI Test referenced as \"%s\" in the IMS Manifest file successfully imported."
+msgstr ""
+
+msgid "In this part of the test navigation is not allowed."
+msgstr ""
+
+msgid "Inconsistency at line %1d:"
+msgstr ""
+
+msgid "Individual"
+msgstr "Individual"
+
+msgid "is already used in the test."
+msgstr ""
+
+msgid "is not a valid identifier (alphanum, underscore, dash and dots)"
+msgstr ""
+
+msgid "is not a valid identifier (everything except spaces)"
+msgstr ""
+
+msgid "Item %d of %d"
+msgstr ""
+
+msgid "Item Reference Properties"
+msgstr ""
+
+msgid "Item Session Control"
+msgstr ""
+
+msgid "Items"
+msgstr ""
+
+msgid "Items can optionally be assigned to one or more categories."
+msgstr ""
+
+msgid "Items Compilation"
+msgstr ""
+
+msgid "Items marked for later review"
+msgstr ""
+
+msgid "Keep Together"
+msgstr ""
+
+msgid "Late submission allowed"
+msgstr ""
+
+msgid "Linear"
+msgstr "Linear"
+
+msgid "Manage Rubric Blocks"
+msgstr ""
+
+msgid "Manage test properties"
+msgstr ""
+
+msgid "Manage Tests"
+msgstr ""
+
+msgid "Mark for review"
+msgstr ""
+
+msgid "Max Attempts"
+msgstr ""
+
+msgid "Maximum Duration"
+msgstr ""
+
+msgid "Maximum duration for the all test."
+msgstr ""
+
+msgid "Maximum duration for this item."
+msgstr ""
+
+msgid "Maximum duration for this section."
+msgstr ""
+
+msgid "Maximum duration for this test part."
+msgstr ""
+
+msgid "Minimum Duration"
+msgstr ""
+
+msgid "Minimum duration for the test."
+msgstr ""
+
+msgid "Minimum duration for this item."
+msgstr ""
+
+msgid "Minimum duration for this section."
+msgstr ""
+
+msgid "Minimum duration for this test part."
+msgstr ""
+
+msgid "Move Down"
+msgstr ""
+
+msgid "Move Up"
+msgstr ""
+
+msgid "Navigation"
+msgstr ""
+
+msgid "New Rubric Block"
+msgstr ""
+
+msgid "New test part"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Next Section"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "No file found at location \"%s\"."
+msgstr ""
+
+msgid "No more attempts allowed for item \"%s\"."
+msgstr "Não tem mais tentativas para o item '%s'"
+
+msgid "No reference to any IMS QTI Item found."
+msgstr ""
+
+msgid "Non Linear"
+msgstr "Não linear"
+
+msgid "Not all test could be export"
+msgstr ""
+
+msgid "Not shuffled, the position remains fixed."
+msgstr ""
+
+msgid "Ok"
+msgstr ""
+
+msgid "One or more dependent IMS QTI Items could not be imported."
+msgstr ""
+
+msgid "Only display the items marked for review"
+msgstr ""
+
+msgid "Only display the unanswered items"
+msgstr ""
+
+msgid "Ordering"
+msgstr ""
+
+msgid "Package is valid but no tests were found. Make sure that it contains valid QTI tests."
+msgstr ""
+
+msgid "Part %d"
+msgstr ""
+
+msgid "Previous"
+msgstr ""
+
+msgid "Proctor"
+msgstr ""
+
+msgid "Properties"
+msgstr ""
+
+msgid "QTI 2.1 Test Driver"
+msgstr ""
+
+msgid "QTI Item Runner"
+msgstr ""
+
+msgid "QTI Test \"%s\" publishing failed."
+msgstr ""
+
+msgid "QTI Test \"%s\" successfully published."
+msgstr ""
+
+msgid "QTI Test Package"
+msgstr ""
+
+msgid "QTI Test Package 2.1"
+msgstr ""
+
+msgid "Reference"
+msgstr ""
+
+msgid "Remove Item Reference"
+msgstr ""
+
+msgid "Remove Rubric Block"
+msgstr ""
+
+msgid "Remove Section"
+msgstr ""
+
+msgid "Required"
+msgstr ""
+
+msgid "Required field"
+msgstr ""
+
+msgid "Reset filters"
+msgstr ""
+
+msgid "Review"
+msgstr ""
+
+msgid "Rubric Block"
+msgstr ""
+
+msgid "Rubric Block Properties"
+msgstr ""
+
+msgid "Rubric Blocks"
+msgstr ""
+
+msgid "Save"
+msgstr "Guardar"
+
+msgid "Scorer"
+msgstr ""
+
+msgid "Section level category enables configuring the categories of its composing items all at once. A category in gray means that all items have that category. A category in white means that only a few items have that category."
+msgstr ""
+
+msgid "Section Properties"
+msgstr ""
+
+msgid "Select"
+msgstr ""
+
+msgid "Select Items"
+msgstr ""
+
+msgid "Selection"
+msgstr ""
+
+msgid "Send"
+msgstr ""
+
+msgid "Show Feedback"
+msgstr ""
+
+msgid "Show Solution"
+msgstr ""
+
+msgid "Show the solution once the answer is submitted."
+msgstr ""
+
+msgid "Show/Hide the review screen"
+msgstr ""
+
+msgid "Shuffle"
+msgstr "Baralhar"
+
+msgid "Simultaneous"
+msgstr "Simultâneo"
+
+msgid "Skip"
+msgstr ""
+
+msgid "Skip &amp; End Test"
+msgstr ""
+
+msgid "Skip to the end of the test"
+msgstr ""
+
+msgid "Skip to the next item"
+msgstr ""
+
+msgid "Skip to the next section"
+msgstr ""
+
+msgid "Start Test-part"
+msgstr ""
+
+msgid "Submission"
+msgstr ""
+
+msgid "Submit and go to the end of the test"
+msgstr ""
+
+msgid "Submit and go to the next item"
+msgstr ""
+
+msgid "Submit and go to the previous item"
+msgstr ""
+
+msgid "Test"
+msgstr "Teste"
+
+msgid "Test constructor"
+msgstr ""
+
+msgid "Test Saved"
+msgstr ""
+
+msgid "Test status"
+msgstr ""
+
+msgid "The 'imsmanifest.xml' file found in the archive is not valid."
+msgstr ""
+
+msgid "The candidate is not allowed to submit wrong responses."
+msgstr ""
+
+msgid "The dependency to the IMS QTI AssessmentItemRef \"%s\" in the IMS Manifest file could not be resolved."
+msgstr ""
+
+msgid "The identifier of the item reference."
+msgstr ""
+
+msgid "The identifier of the section."
+msgstr ""
+
+msgid "The IMS QTI Item referenced as \"%s\" in the IMS Manifest file was already stored in the Item Bank."
+msgstr ""
+
+msgid "The IMS QTI Test Package could not be imported."
+msgstr ""
+
+msgid "The IMS QTI Test referenced as \"%s\" in the IMS Manifest file could not be imported."
+msgstr ""
+
+msgid "The navigation mode determines the general paths that the candidate may take. A linear mode restricts the candidate to attempt each item in turn. Non Linear removes this restriction."
+msgstr ""
+
+msgid "The number of child elements to be selected."
+msgstr ""
+
+msgid "The principle identifier of the test."
+msgstr ""
+
+msgid "The provided archive is invalid. Make sure it is not corrupted and that it contains an 'imsmanifest.xml' file."
+msgstr ""
+
+msgid "The QTI Test '%s' to be compiled must contain at least 1 QTI Item. None found."
+msgstr ""
+
+msgid "The QTI test could not be retrieved correctly."
+msgstr "O teste QTI não pode ser carregado correctamente."
+
+msgid "The QTI Test XML or one of its dependencies is malformed or empty."
+msgstr ""
+
+msgid "The QTI-XML test could not be written correctly."
+msgstr "O teste QTI-XML não pode ser escrito correctamente."
+
+msgid "The reference."
+msgstr ""
+
+msgid "The resources related to the IMS QTI Test referenced as \"%s\" in the IMS Manifest file were rolled back."
+msgstr ""
+
+msgid "The section title."
+msgstr ""
+
+msgid "The submission mode determines when the candidate's responses are submitted for response processing. A testPart in individual mode requires the candidate to submit their responses on an item-by-item basis. In simultaneous mode the candidate's responses are all submitted together at the end of the testPart."
+msgstr ""
+
+msgid "The test part identifier."
+msgstr ""
+
+msgid "The test title."
+msgstr ""
+
+msgid "This constraint affects the visibility of feedback after the end of the last attempt."
+msgstr ""
+
+msgid "This constraint controls whether or not the candidate is allowed to provide a comment on the item during the session. Comments are not part of the assessed responses."
+msgstr ""
+
+msgid "This test has been suspended"
+msgstr ""
+
+msgid "This test has been terminated"
+msgstr ""
+
+msgid "Time limit reached for item \"%s\"."
+msgstr ""
+
+msgid "Time limit reached, this part of the test has ended."
+msgstr ""
+
+msgid "Time Limits"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Tutor"
+msgstr ""
+
+msgid "Unanswered"
+msgstr ""
+
+msgid "Unanswered items"
+msgstr ""
+
+msgid "Unknown error."
+msgstr ""
+
+msgid "Upload a QTI 2.1 Test Package File"
+msgstr ""
+
+msgid "Use Ctrl/Meta key or Lasso for multiple selection"
+msgstr ""
+
+msgid "Validate Responses"
+msgstr ""
+
+msgid "Viewed"
+msgstr ""
+
+msgid "Viewed items"
+msgstr ""
+
+msgid "Views"
+msgstr ""
+
+msgid "Visible"
+msgstr ""
+
+msgid "Warning – You have %s remaining to complete the test."
+msgstr ""
+
+msgid "When selecting child elements each element is normally eligible for selection once only."
+msgstr ""
+
+msgid "Whether a candidate's response that is beyond the maximum duration of the item should still be accepted."
+msgstr ""
+
+msgid "Whether a candidate's response that is beyond the maximum duration of the section should still be accepted."
+msgstr ""
+
+msgid "Whether a candidate's response that is beyond the maximum duration of the test part should still be accepted."
+msgstr ""
+
+msgid "Whether a candidate's response that is beyond the maximum duration should still be accepted."
+msgstr ""
+
+msgid "Who can view the rubric block during the delivery."
+msgstr ""
+
+msgid "With Replacement"
+msgstr ""
+
+msgid "XML error at line %1$d column %2$d \"%3$s\"."
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "You have %s item(s) marked for review."
+msgstr ""
+
+msgid "You have %s unanswered question(s) and have %s item(s) marked for review."
+msgstr ""
+
+msgid "You have %s unanswered question(s)."
+msgstr ""
+
+msgid "Your comment…"
+msgstr ""
+

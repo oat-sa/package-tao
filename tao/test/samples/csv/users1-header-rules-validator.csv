@@ -1,0 +1,8 @@
+"label";"First Name";"Last Name";"Login";"Mail";"password";"UserUILg"
+"Correct row";"Jérôme";"Bogaerts";"jbogaerts";"jerome.bogaerts@tudor.lu";"jbogaerts!!!111Ok";"http://www.tao.lu/Ontologies/TAO.rdf#LangEN"
+"Error: with too many label chars here";"Jérôme";"Bogaerts";"jbogaerts";"jerome.bogaerts@tudor.lu";"jbogaerts";"http://www.tao.lu/Ontologies/TAO.rdf#LangEN"
+"without name";"";"Bogaerts";"jbogaerts";"jerome.bogaerts@tudor.lu";"jbogaerts!!!111Ok";"http://www.tao.lu/Ontologies/TAO.rdf#LangEN"
+"too short name";"J";"Bogaerts";"jbogaerts";"jerome.bogaerts@tudor.lu";"jbogaerts!!!111Ok";"http://www.tao.lu/Ontologies/TAO.rdf#LangEN"
+"incorrect login symbol";"Jérôme";"Bogaerts";"!jbogaerts";"jerome.bogaerts@tudor.lu";"jbogaerts!!!111Ok";"http://www.tao.lu/Ontologies/TAO.rdf#LangEN"
+"incorrect email";"Jérôme";"Bogaerts";"jbogaerts";"jerome.bogaerts_tudor.lu";"jbogaerts!!!111Ok";"http://www.tao.lu/Ontologies/TAO.rdf#LangEN"
+"all fields with some errors, just very bad row";"";"";"";"";"";"http://www.tao.lu/Ontologies/TAO.rdf#LangEN"

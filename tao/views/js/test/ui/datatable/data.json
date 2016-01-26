@@ -1,0 +1,36 @@
+{
+
+    "data": [
+        {
+            "id": "1",
+            "login": "bertrand",
+            "name": "Bertrand Chevrier",
+            "email": "bertrand@taotesting.com",
+            "roles": "Global Manager, System Administrator",
+            "dataLg": "English",
+            "guiLg": "English"
+        },
+        {
+            "id": "2",
+            "login": "jdoe",
+            "name": "John Doe",
+            "email": "jdoe@nowhere.org",
+            "roles": "Items Manager",
+            "dataLg": "English",
+            "guiLg": "English"
+        },
+        {
+            "id": "3",
+            "login": "jfoo",
+            "name": "Jack Foo",
+            "email": "jack@foo.me",
+            "roles": ["Back Office", "Global Manager", "TAO Manager"],
+            "dataLg": "English",
+            "guiLg": "English"
+        }
+    ],
+    "page": 1,
+    "total": 1,
+    "records": 3
+
+}

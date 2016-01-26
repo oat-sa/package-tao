@@ -1,0 +1,167 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.1.0-sprint15\n"
+"PO-Revision-Date: 2015-12-23T13:18:55\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: es-ES\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: es-ES\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiObject
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "LTI Object"
+msgstr "Objecto LTI"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#ServiceLtiConsumer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "LTI Consumer"
+msgstr "Consumidor LTI"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIUser
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "LTI User"
+msgstr "Usuario LTI"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#UserKey
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "LTI Consumer User Key"
+msgstr "Clave de Usuario Consumidor LTI"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#UserKey
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Key of LTI User"
+msgstr "Llave de LTI Usuario"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#UserConsumer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "LTI Consumer of User"
+msgstr "LTI Consumidor de Usuario"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#LTITool
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "LTI Tool"
+msgstr "Herramienta LTI"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#ToolService
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "LTI Tool Service"
+msgstr "Herramienta de Servicio LTI"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#ToolService
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Service to implemnt the Tool"
+msgstr "La herramienta de Servicio a implemnt"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#LTILink
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "LTI Link"
+msgstr "Enlace LTI"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#LTILink
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Link between Tool and Consumer"
+msgstr "Vinculo entre Herramienta y Consumidor"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#LTILinkConsumer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "LTI link consumer"
+msgstr "Enlace de consumidor LTI"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiIncomingLink
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Incoming LTI link"
+msgstr "Enlace entrante LTI"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiIncomingLink
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "An external link calling TAO as tool provider"
+msgstr "Un vinculo externo llamando a TAO como herramienta de proveedor"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#LTILinkId
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "LTI link ID"
+msgstr "ID de enlace LTI"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiOutgoingLink
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Outgoing LTI link"
+msgstr "Enlace saliente LTI"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiOutgoingLink
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "An link in TAO calling a remote tool provider"
+msgstr "Un vinculo en TAO llamando un herramienta de proveedor remota"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#ResourceLinkLaunchUrl
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Launch URL"
+msgstr "Inciar URL"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#ResourceLinkLaunchUrl
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "LTI launch url"
+msgstr "LTI Lanzar url"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiLaunchUrl
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "LTI Launch Url"
+msgstr "Iniciar Url LTI"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiLaunchUrl
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "LTI Launch Url"
+msgstr "Iniciar Url LTI"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiConsumerUri
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "LTI Consumer Uri"
+msgstr "Consumidor Uri LTI"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiConsumerUri
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "LTI Consumer Uri"
+msgstr "Consumidor Uri LTI"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#ServiceLtiConsumer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "LTI Consumer service calls an LTI Producer"
+msgstr "Servicio al Consumidor LTI llama un Productor LTI"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#UserKey
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "LTI Consumer User Key"
+msgstr "Key of LTI User"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#ServiceLtiConsumer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "LTI Consumer"
+msgstr "LTI Consumer service calls an LTI Producer"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#ToolService
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "LTI Tool Service"
+msgstr "LTI Servicio Herramienta"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#LTILink
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "LTI Link"
+msgstr "Enlace LTI"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiIncomingLink
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Incoming LTI link"
+msgstr "Enlace Entrante LTI"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#LtiOutgoingLink
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Outgoing LTI link"
+msgstr "Enlace Saliente LTI"
+
+# http://www.tao.lu/Ontologies/TAOLTI.rdf#ResourceLinkLaunchUrl
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Launch URL"
+msgstr "Lanzar URL"
+

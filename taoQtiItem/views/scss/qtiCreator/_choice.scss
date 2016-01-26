@@ -1,0 +1,29 @@
+@import "inc/bootstrap";
+.qti-choiceInteraction {
+    .real-label input[disabled] ~ [class^="icon-"]{
+        cursor:pointer !important;
+    }
+    .mini-tlb[data-edit=answer]{
+        .tlb-button{
+            margin:0;
+            padding:0;
+        }
+    }
+    .add-option{
+        position:relative;
+        padding: 5px 5px 5px 6px;
+        .icon-add{
+            font-size: 1.8rem;
+            left: 6px;
+            position: absolute;
+            top: 5px;
+        }
+    }
+    .horizontal {
+        .qti-choice.edit-choice {
+            padding-top: 5px;
+        }
+    }
+}
+
+

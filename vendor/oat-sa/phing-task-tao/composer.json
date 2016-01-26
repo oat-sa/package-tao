@@ -1,0 +1,51 @@
+{
+    "name": "oat-sa/phing-task-tao",
+    "license" : "GPL-2.0",
+    "support": {
+        "issues": "http://forge.taotesting.com",
+        "forum": "http://forum.taotesting.com"
+    },
+    "authors": [
+        {
+            "homepage": "http://www.taotesting.com",
+            "name": "Open Assessment Technologies S.A."
+        },
+        {
+            "role": "Developer",
+            "name": "Jérome Bogaerts"
+        },
+        {
+            "role": "Developer",
+            "name": "Joel Bout"
+        },
+        {
+            "role": "Developer",
+            "name": "Bertrand Chevrier"
+        },
+        {
+            "role": "Developer",
+            "name": "Lionel Lecaque"
+        },
+        {
+            "role": "Developer",
+            "name": "Patrick Plichart"
+        },
+        {
+            "role": "Developer",
+            "name": "Dieter Raber"
+        },
+        {
+            "role": "Developer",
+            "name": "Somsack Sipasseuth"
+        }
+    ],
+    "keywords": [
+        "tao",
+        "oat",
+        "computer-based-assessment",
+	"phing"
+    ],
+    "homepage": "http://www.taotesting.com",
+    "description": "Phing task to install TAO"
+	
+}

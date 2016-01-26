@@ -1,0 +1,313 @@
+@import "inc/bootstrap";
+@import "inc/loading-bar";
+@import "inc/action-bars";
+@import "inc/section-container";
+@import "inc/navigator";
+
+.qti-test-scope {
+
+    // action bars
+    .action-bar {
+        li {
+            margin: 0 5px;
+            &.btn-info {
+                border-color: white(.3);
+                &.btn-group {
+                    border:none !important;
+                    overflow:hidden;
+                    padding:0;
+                    a {
+                        float:left;
+                        margin: 0 2px;
+                        padding: 0 15px;
+                        border: 1px solid white(.3);
+                        border-radius: 0px;
+                        display: inline-block;
+                        height: inherit;
+                        &:first-of-type {
+                            border-top-left-radius: 3px;
+                            border-bottom-left-radius: 3px;
+                            margin-left: 0;
+                        }
+                        &:last-of-type {
+                            border-top-right-radius: 3px;
+                            border-bottom-right-radius: 3px;
+                            margin-right: 0;
+                        }
+                        &:hover, &.active {
+                            border-color: white(.8);
+                        }
+                        .no-label {
+                            padding-right: 0;
+                        }
+                    }
+                }
+                &:hover, &.active {
+                    border-color: white(.8);
+                }
+            }
+        }
+        &.horizontal-action-bar {
+            opacity: 0;
+
+            .title-box {
+                padding-top: 4px;
+            }
+            .progress-box, .timer-box, .item-number-box {
+                padding-top: 4px;
+                display: inline-block;
+                white-space: nowrap;
+                -webkit-flex: 0 0 auto;
+                flex: 0 1 auto;
+                .qti-controls {
+                    display: inline-block;
+                    margin-left: 20px;
+                    white-space: nowrap;
+                }
+            }
+            .progressbar {
+                margin-top: 5px;
+                min-width: 150px;
+                max-width: 200px;
+                height: 0.6em;
+            }
+
+            &.top-action-bar > .control-box {
+                display: -webkit-flex;
+                -webkit-justify-content: space-between; // Safari
+                -webkit-flex-flow: row nowrap;
+
+                display: flex;
+                justify-content: space-between;
+                flex-flow: row nowrap;
+            }
+
+            & > .control-box {
+                color: white(.9);
+                text-shadow: 1px 1px 0 black;
+                .lft, .rgt {
+                    padding-left: 20px;
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                    &:last-child {
+                        //text-align: right;
+                        ul {
+                            display: inline-block;
+                        }
+                    }
+                }
+                [class^="btn-"], [class*=" btn-"] {
+                    white-space: nowrap;
+                }
+            }
+            .tools-box {
+                .action {
+                    position: relative;
+                    overflow: visible;
+                }
+
+                .menu {
+                    color: $textColor;
+                    background: $canvas;
+                    overflow: auto;
+                    list-style: none;
+                    min-width: 150px;
+
+                    margin: 0;
+                    padding: 0;
+
+                    position: absolute;
+                    bottom: 30px;
+                    left: 0;
+
+                    .action {
+                        display: inline-block;
+                        text-align: left;
+                        width: 100%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        color: $textColor;
+                        margin: 0;
+                        @include border-radius(0);
+                        height: 32px;
+                        padding: 6px 15px;
+                        line-height: 1;
+
+                        &.selected {
+                            background-color: whiten($info, .2);
+                            color: $textHighlight;
+                            .label, .icon {
+                                color: $textHighlight;
+                            }
+                        }
+                        &:hover {
+                            background-color: $info;
+                            color: $textHighlight;
+                            .label, .icon {
+                                color: $textHighlight;
+                            }
+                        }
+
+                        .label, .icon {
+                            @include font-size(14);
+                            text-shadow: none;
+                            color: $textColor;
+                        }
+                    }
+                }
+            }
+
+            &.bottom-action-bar {
+                overflow: visible;
+                .action {
+                    line-height: 1.6;
+                }
+            }
+            &.has-timers {
+                height: 47px;
+                .progress-box,
+                .title-box {
+                    padding-top: 10px;
+                }
+            }
+
+            // navigation elements
+            .bottom-action-bar .action {
+                display:none;
+            }
+        }
+    }
+
+    // main blocks
+    .test-sidebar {
+        background:$canvas;
+        overflow: auto;
+    }
+
+    .test-sidebar-left {
+        border-right: 1px #ddd solid;
+    }
+
+    .test-sidebar-right {
+        border-left: 1px #ddd solid;
+    }
+
+    .content-panel {
+        height: auto !important;
+        #qti-content{
+            overflow-y:auto;
+            font-size: 0; //avoid white spaces to screw the height
+            #qti-rubrics {
+                font-size: 14px; //avoid white spaces to screw the height
+            }
+        }
+    }
+
+    #qti-item {
+        width: 100%;
+        min-width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+
+    .size-wrapper {
+        max-width: 1280px;
+        margin: auto;
+        width: 100%;
+    }
+
+    // comment
+    .tools-box {
+        position: relative;
+        overflow:visible
+    }
+
+    [data-control="qti-comment"]{
+        background-color: $canvas;
+        position: absolute;
+        bottom: 33px;
+        left: 8px;
+        z-index: 9999;
+        text-align: right;
+        padding: 5px;
+        @include simple-border();
+        @include box-shadow(0, 0, 15px, 1px, rgba(0,0,0,0.20));
+        textarea {
+            display: block;
+            height: 100px;
+            resize: none;
+            width: 350px;
+            padding: 3px;
+            margin: 0  0 10px 0;
+            border: none;
+            @include font-size(13);
+            @include simple-border();
+        }
+    }
+
+
+    #qti-timers {
+        display: none;
+    }
+
+    [data-control="exit"]{
+        margin-left: 20px;
+    }
+
+    [data-control="comment-toggle"] {
+        display:none;
+    }
+
+    .qti-timer {
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+        line-height: 1.2;
+        position: relative;
+        padding: 0 20px;
+        .qti-timer_label {
+            max-width: 130px;
+            @include font-size(12);
+        }
+        &.qti-timer__warning {
+            .qti-timer_time {
+                color: $warning;
+            }
+        }
+        &::before {
+            content: ' ';
+            background: white(.3);
+            width: 1px;
+            height: 20px;
+            position: absolute;
+            left: 0;
+            top: 5px
+        }
+        &:first-child {
+            &::before {
+                content: none;
+            }
+        }
+
+    }
+    &.non-lti-context {
+        .title-box {
+            display:none;
+        }
+    }
+
+    #qti-rubrics{
+        margin: auto;
+        max-width: 1024px;
+        width: 100%;
+        padding: 15px;
+        .qti-rubricBlock {
+            margin: 20px 0;
+        }
+        .hidden{
+            display:none;
+        }
+    }
+
+}

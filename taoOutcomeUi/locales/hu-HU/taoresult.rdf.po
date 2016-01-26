@@ -1,0 +1,192 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO v3.0\n"
+"PO-Revision-Date: 2014-10-21T07:53:06\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: hu-HU\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: hu-HU\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#DeliveryResult
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Result"
+msgstr "Result"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#DeliveryResult
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Result"
+msgstr "Result"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#resultOfSubject
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Test taker of result"
+msgstr "Test taker of result"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#resultOfSubject
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Test taker of result"
+msgstr "Test taker of result"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#ItemResult
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Item Result"
+msgstr "Item Result"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#ItemResult
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Item Result"
+msgstr "Result"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#RelatedTest
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Related Item"
+msgstr "Related Item"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#RelatedTest
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Related Item"
+msgstr "Related Item"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#resultOfDelivery
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Delivery of result"
+msgstr "Delivery of result"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#resultOfDelivery
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Delivery of result"
+msgstr "Delivery of result"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#Identifier
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Result Identifier"
+msgstr "Result Identifier"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#Identifier
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Result Identifier"
+msgstr "An identifier related to the instanciation of a delivery a test an item or a variable . If the item is used twice, different ids are setup"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#Variable
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Result Variable"
+msgstr "Result Variable"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#Variable
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Result Variable"
+msgstr "Variable of a DeliveryResult"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#relatedItemResult
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Related Item result"
+msgstr "Related Item result"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#relatedItemResult
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Related Item result"
+msgstr "Related Item result"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#ResponseVariable
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Response Variable"
+msgstr "Response Variable"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#ResponseVariable
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Response Variable"
+msgstr "Response to an interaction"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#correctResponse
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "The correct expected response"
+msgstr "The correct expected response"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#correctResponse
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The correct expected response"
+msgstr "Related Item result"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#candidateResponse
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "The candidate response"
+msgstr "The candidate response"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#candidateResponse
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The candidate response"
+msgstr "The candidate response"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#OutcomeVariable
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "OutCome Variable"
+msgstr "OutCome Variable"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#OutcomeVariable
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "OutCome Variable"
+msgstr "OutCome Variable"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#TraceVariable
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Trace Variable"
+msgstr "Trace Variable"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#TraceVariable
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Trace Variable"
+msgstr "Trace Variable"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#variableEpoch
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "The epoch when the variable got stored"
+msgstr "The epoch when the variable got stored"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#variableEpoch
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The epoch when the variable got stored"
+msgstr "The epoch when the variable got stored"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#variableComment
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Variable Comment"
+msgstr "Variable Comment"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#variableComment
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Variable Comment"
+msgstr "Variable Comment"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#ResultsManagerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Results Manager"
+msgstr "Results Manager"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#ResultsManagerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Results Manager"
+msgstr "The Results Manager Role"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#taoResultServerModel
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "taoResults storage (database)"
+msgstr "taoResults storage (database)"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#taoResultServerModel
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "taoResults storage (database)"
+msgstr "TAO Result Server 2.5 (DB storage)"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#taoResultServer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "TAO Result Server 2.5 (DB storage)"
+msgstr "TAO Result Server 2.5 (DB storage)"
+
+# http://www.tao.lu/Ontologies/TAOResult.rdf#taoResultServer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "TAO Result Server 2.5 (DB storage)"
+msgstr "TAO Result Server 2.5 (using DB storage)"
+

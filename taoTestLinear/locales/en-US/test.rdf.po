@@ -1,0 +1,42 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.1.0-sprint15\n"
+"PO-Revision-Date: 2015-12-23T13:37:55\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: en-US\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: en-US\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# http://www.tao.lu/Ontologies/TAOTest.rdf#LinearTestModel
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Linear Test Driver"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAOTest.rdf#LinearTestModel
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Driver and configuration/authoring tool implementing the test interface for driving simple linear tests"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamLinearTestRunner
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Linear Test Compilation"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamLinearTestRunner
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Linear Test Compilation"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAOTest.rdf#ServiceLinearTestRunner
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "linear test runner"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAOTest.rdf#ServiceLinearTestRunner
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "runs a linear test"
+msgstr ""
+

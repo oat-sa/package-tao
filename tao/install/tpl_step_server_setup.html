@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Installation Process</title>
+	<link rel="stylesheet" type="text/css" href="../views/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../views/css/custom-theme/jquery-ui-1.8.22.custom.css"/>
+	<link rel="stylesheet" type="text/css" href="css/installation_main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/step_server_setup.css"/>
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/step_ie8.css"/>
+	<![endif]-->
+
+	<script type="text/javascript" src="../views/js/lib/require.js" data-main="js/step_server_setup"></script>
+</head>
+
+<body>
+    <div id="installation_form" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+        <h2>TAO Installation Wizard</h2>
+        <h1>Server Setup</h1>
+        <ul id="install_seq">
+            <li><h3>Installation Steps</h3></li>
+            <li id="step_requirements">1. <a href="#">Requirements Check</a></li>
+            <li id="step_server_setup" class="currentStep">2. Server Setup</li>
+            <li id="step_database_setup">3. Database Setup</li>
+            <li id="step_admin_setup">4. Administrator Setup</li>
+            <li id="step_licenses">5. Licensing Agreement</li>
+            <li id="step_finalization">6. Finalize Installation</li>
+        </ul>
+        <p id="comments">Now, we will configure your web server for TAO. Please complete the form below to proceed. Click on "?" for additional information.</p>
+        <div id="forms_content">
+            <form autocomplete="off">
+                <ul>
+                    <li>
+                        <label for="host_name">Enter the host name of the server on which TAO is going to be deployed.</label><br />
+                        <input type="text" id="host_name" name="host_name" class="tao-input" title="http://myplatform.mywebsite.com" autocomplete="off"/>
+                        <div title="learn more on this topic" class="icons ui-state-default ui-corner-all"><a id="hlp_host_name" class="ui-icon ui-icon-help"></a></div><span class="formMandatory">*</span>
+                    </li>
+                    <li>
+                        <label for="instance_name">Give a unique name to your TAO installation to make it identifiable among others.</label><br />
+                        <input type="text" id="instance_name" name="instance_name" class="tao-input" title="e.g. instance name" autocomplete="off"/>
+                        <div title="learn more on this topic" class="icons ui-state-default ui-corner-all"><a id="hlp_instance_name" class="ui-icon ui-icon-help"></a></div><span class="formMandatory">*</span>
+                    </li>
+                    <li>
+                    	<label for="timezone">Enter the time zone under which your TAO installation will operate.</label><br/>
+                    	<select id="timezone" class="tao-input" autocomplete="off">
+                    	</select>
+                    	<div title="learn more on this topic" class="icons ui-state-default ui-corner-all"><a id="hlp_timezone" class="ui-icon ui-icon-help"></a></div>
+                    </li>
+                    <li>
+                        <label for="deployment_mode">Select whether your TAO installation will be operated in production mode or development mode.</label><br />
+                        <select id="deployment_mode" class="tao-input" autocomplete="off">
+                        	<option value="debug">Development</option>
+                            <option value="production" selected="selected">Production</option>
+                        </select>
+                        <div title="learn more on this topic" class="icons ui-state-default ui-corner-all"><a id="hlp_deployment_mode" class="ui-icon ui-icon-help"></a></div>
+                    </li>
+                </ul>
+                <input id="default_language" type="hidden" value="en-US" class="tao-input"/>        
+                <input id="submitForm" class="disabled" type="submit" value="Next" role="button" disabled="disabled"/>
+                <p id="formComment"><span class="formExample">*</span> Required</p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

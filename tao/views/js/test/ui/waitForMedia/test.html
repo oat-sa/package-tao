@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ui Test - Wait For Media UI Component</title>
+        <base href="../../../../" />
+        <link rel="stylesheet" type="text/css" href="js/lib/qunit/qunit.css">
+        <script type="text/javascript" src="js/lib/require.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit.js"></script>
+        <script  type="text/javascript">
+            
+            //don't start the test now
+            QUnit.config.autostart = false;
+            
+            //load the config
+            require(['/tao/ClientConfig/config'], function(){
+                
+                //load the test
+                require(['test/ui/waitForMedia/test'], function(){
+                    
+                    //Tests loaded, run tests
+                    QUnit.config.reorder = false;
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+            <div id="div1">
+                <p>
+                    <img />
+                    <img src=""/>
+                    <img src="js/test/ui/waitForMedia/img/oat-header-logo-X.png"/>
+                    <img src="js/test/ui/waitForMedia/img/oat-header-logo.png"/>
+                    <img src="http://placehold.it/350x150"/>
+                </p>
+            </div>
+            <div id="div2">
+                <p>No media</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+@import "inc/bootstrap";
+
+.qti-matchInteraction {
+    .matrix {
+        table-layout: fixed;
+        tbody [data-edit] {
+            width: 30px
+        }
+        td, th {
+            // table cells and headings within the match interaction
+            &:not(.qti-choice){
+                position: relative;
+                label {
+                    position: absolute;
+                    top: 0;
+                    left:0;
+                    width: 100%;
+                    padding: inherit;
+                    height: 100%;
+                    .icon-checkbox{
+                        position: absolute;
+                        top: calc(50% - .8rem);
+                    }
+                }
+            }
+        }
+    }
+}

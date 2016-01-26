@@ -1,0 +1,212 @@
+@import 'inc/bootstrap';
+
+
+.section-container {
+
+    // some variations of flex children
+    $flexCols: full, half, third, quarter;
+    @for $i from 1 through length($flexCols) {
+        $width: (100 / ($i)) * 1%;
+        $flexCol: #{nth($flexCols, $i)};
+        .flex-container-#{$flexCol} {
+            @include simple-flex-box($width);
+        }
+    }
+
+    // 'whatever-is-left' container
+    .flex-container-remaining {
+        @include simple-flex-box(auto, 480px);
+    }
+
+    // main form on left hand side
+    .flex-container-main-form {
+        @include simple-flex-box(500px);
+        margin: 0 20px 20px 0;
+    }
+
+    // the one for the sidebar that usually holds tree
+    .flex-container-navi {
+        @include simple-flex-box($treeSidebar * 1px);
+    }
+
+    // @todo all simple-flex-box references below should be removed once all templates are upgraded
+
+    top: 0 !important;
+
+    .section-header {
+        border: none;
+    }
+
+    .content-panel {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: none !important;
+        @include flex-container();
+    }
+
+    .tab-container {
+        border: none;
+        display: none;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+            float: left;
+            position: relative;
+            top: 0;
+            padding: 0;
+            margin: 0 1px 0px 0;
+            border-top: 1px solid $canvas !important;
+            border-bottom: 1px solid $canvas !important;
+            background: $canvas !important;
+            a {
+                top: 0 !important;
+                margin-bottom: 0 !important;
+                padding: 6px 16px;
+                text-decoration: none;
+                min-height: 32px;
+                color: $textColor;
+                float: left;
+            }
+            &.active, &:hover {
+                border-bottom-color: whiten($info, .25) !important;
+                border-top-color: whiten($info, .4) !important;
+                background: whiten($info, .1) !important;
+                a {
+                    background: transparent !important;
+                    border-color:  transparent !important;
+                    color: $textHighlight !important;
+                    text-shadow: 1px 1px 0 black(.2);
+                }
+            }
+            &.disabled:hover {
+                background: $canvas !important;
+                a {
+                    cursor: not-allowed !important;
+                    color: $textColor !important;
+                }
+            }
+        }
+    }
+
+
+    .navi-container {
+        display:none;
+        background:  $canvas;
+        @include simple-flex-box($treeSidebar * 1px);
+        border-right: 1px $uiGeneralContentBorder solid;
+        .block-title {
+            @include font-size(14);
+            padding: 2px 8px;
+            margin: 0;
+        }
+        .tree-action-bar-box {
+            margin: 10px 0;
+            opacity: 0;
+            &.active {
+                opacity: 1;
+                @include vendor-prefix(opacity, .25s ease-in-out, property, (-webkit-, -moz-, ''));
+            }
+        }
+    }
+
+    .content-container {
+        border: none;
+        @include simple-flex-box();
+    }
+
+    .content-block {
+        padding: 20px;
+        overflow-y: auto;
+        @include flex-container(wrap);
+        & > .grid-container {
+            width : 100%;
+        }
+
+        .data-container-wrapper {
+            padding: 0px 20px 0 0;
+            &:before, &:after {
+                content: " ";
+                display: table;
+            }
+            &:after {
+                clear: both;
+            }
+            & > section, .data-container {
+                width: 260px;
+                margin: 0 20px 20px 0;
+                float: left;
+                @include simple-border();
+                &.double {
+                    width: 540px;
+                }
+                .emptyContentFooter {
+                    display: none;
+                }
+                .tree {
+                    border: none;
+                    max-width: none;
+                    max-height: none;
+                }
+                form {
+                    background: none;
+                    border: none;
+                    margin: 0;
+                    padding: 0;
+                }
+                & > header, .ui-widget-header {
+                    background: $canvas;
+                    border-width: 0px !important;
+                    border-bottom: 1px #ddd solid !important;
+                    h1, h6 {
+                        padding: 4px;
+                        margin: 0;
+                        @include font-size(14);
+                    }   
+                }
+                & > div, .ui-widget-content, .container-content {
+                    border-width: 0px !important;
+                    overflow-y: auto;
+                    min-height: 250px;
+                    padding: 5px;
+                    .icon-grip {
+                        cursor: move;
+                    }
+                }
+                & > footer, .data-container-footer {
+                    background: $canvas;
+                    text-align: right !important;
+                    padding: 4px;
+                    border-width: 0px !important;
+                    border-top: 1px #ddd solid !important;
+                    .square {
+                        width: 28px;
+                        span {
+                            padding: 0;
+                            left: 0
+                        }
+                    }
+                }
+                ol {
+                    margin: 0 0 0 15px;
+                    padding: 10px;
+                }
+            }
+         }
+
+        #form-container.ui-widget-content {
+            border:none !important
+        }
+        form:not(.list-container) {
+            border: 1px $uiGeneralContentBorder solid;
+            background: $canvas;
+            padding: 30px;
+            @include simple-border();
+        }
+        [class^="btn-"], [class*=" btn-"] {
+            margin: 0 2px;
+        }
+    }
+}

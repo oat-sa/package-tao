@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+    identifier="RTEST-06" title="Specifiying the Number of Allowed Attempts">
+    <testPart navigationMode="linear" submissionMode="individual" identifier="RTEST-06-A">
+        <itemSessionControl maxAttempts="0"/>
+        <assessmentSection identifier="introduction" title="Introduction" visible="true">
+            <assessmentItemRef identifier="item820" href="item820.xml"/>
+            <assessmentItemRef identifier="item716" href="item716.xml"/>
+            <assessmentItemRef identifier="item204" href="item204.xml"/>
+        </assessmentSection>
+    </testPart>
+    <testPart navigationMode="linear" submissionMode="individual" identifier="RTEST-06-B">
+        <itemSessionControl maxAttempts="1"/>
+        <assessmentSection identifier="sectionA" title="Section A" visible="true">
+            <rubricBlock view="candidate">
+                <p>Instructions for Section A</p>
+            </rubricBlock>
+            <assessmentItemRef identifier="item034" href="item034.xml"/>
+            <assessmentItemRef identifier="item160" href="item160.xml"/>
+            <assessmentItemRef identifier="item063" href="item063.xml"/>
+        </assessmentSection>
+        <assessmentSection identifier="sectionB" title="Section B" visible="true">
+            <rubricBlock view="candidate">
+                <p>Instructions for Section B</p>
+            </rubricBlock>
+            <assessmentItemRef identifier="item434" href="item434.xml"/>
+            <assessmentItemRef identifier="item065" href="item065.xml"/>
+            <assessmentItemRef identifier="item365" href="item365.xml"/>
+            <assessmentItemRef identifier="item656" href="item656.xml"/>
+        </assessmentSection>
+    </testPart>
+</assessmentTest>

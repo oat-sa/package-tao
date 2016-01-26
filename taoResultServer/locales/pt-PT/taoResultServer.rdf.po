@@ -1,0 +1,117 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.1.0-sprint15\n"
+"PO-Revision-Date: 2015-12-23T13:36:45\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: pt-PT\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: pt-PT\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Result Server"
+msgstr "Result Server"
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "the Result Server for the Delivery"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#hasResultServerModel
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Result Storage Engine"
+msgstr "Result Storage Engine"
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#hasResultServerModel
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Result Storage Engine"
+msgstr "Result Storage Engine"
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServerEndpoint
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Result Server Endpoint"
+msgstr "Result Server Endpoint"
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServerEndpoint
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Endpoint of the Result Server"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServerModel
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Result Storage"
+msgstr "Result Storage"
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServerModel
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Result Storage"
+msgstr "Result Storage"
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#fileStorage
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "tao logger"
+msgstr "tao logger"
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#fileStorage
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Data about the storage is sent into the logger"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#implementation
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Link to the implementation Class"
+msgstr "Link to the implementation Class"
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#implementation
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Link to the implementation Class"
+msgstr "Link to the implementation Class"
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#void
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "No storage"
+msgstr "No storage"
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#void
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "No storage "
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Result Server Manager"
+msgstr "Result Server Manager"
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Result Server Manager Role"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Result Server"
+msgstr "the Result Server for the Delivery"
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServerEndpoint
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Result Server Endpoint"
+msgstr "Endpoint of the Result Server"
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#fileStorage
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "tao logger"
+msgstr "Data about the storage is sent into the logger"
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#void
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "No storage"
+msgstr "No storage "
+
+# http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Result Server Manager"
+msgstr "Result Server Manager Role"
+

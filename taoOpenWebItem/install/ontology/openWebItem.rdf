@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<rdf:RDF
+	xml:base="http://www.tao.lu/Ontologies/TAOItem.rdf#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:item="http://www.tao.lu/Ontologies/TAOItem.rdf#"
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#"
+>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#XHTML">
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModels"/>
+    <rdf:value xml:lang="en-US"/>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Open Web Items model]]></rdfs:comment>
+    <rdfs:label xml:lang="en-US"><![CDATA[Open Web Item]]></rdfs:label>
+    <rdfs:seeAlso xml:lang="en-US"/>
+    <rdfs:isDefinedBy xml:lang="en-US"/>
+    <item:DataFileName><![CDATA[index.html]]></item:DataFileName>
+    <item:ItemModelStatus rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#StatusStable"/>
+    <item:ItemAuthoring xml:lang="en-US"><![CDATA[taoOpenWebItem/Authoring/index]]></item:ItemAuthoring>    
+    <item:ModelService><![CDATA[oat\taoOpenWebItem\model\OwiItemModel]]></item:ModelService>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#OWIManagerRole">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#ManagementRole"/>
+  	<generis:includesRole rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#BackOfficeRole"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Open Web Items Manager]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Open Web Items Manager Role]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#ItemAuthor">
+  	<generis:includesRole rdf:resource="http://www.tao.lu/Ontologies/TAOItem.rdf#OWIManagerRole"/>
+  </rdf:Description>
+</rdf:RDF>

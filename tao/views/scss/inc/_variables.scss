@@ -1,0 +1,21 @@
+$sidebarWidth: 180;
+$sidebarGutter: 0;
+$toolbarHeight: 50;
+$treeSidebar: 280;
+
+// fonts
+$fontPath : 'font/' !default;
+$monospaceFont: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+$regularFont: 'Franklin Gothic', 'Franklin Gothic Medium', 'Source Sans Pro', sans-serif;
+$headingFont: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+
+
+%clearfix {
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}

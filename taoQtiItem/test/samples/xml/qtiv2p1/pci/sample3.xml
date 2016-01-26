@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pci="http://www.imsglobal.org/xsd/portableCustomInteraction" xmlns:html5="html5" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i1410866381424289" title="Item title" adaptive="false" timeDependent="false" label="" xml:lang="en-US" toolName="TAO" toolVersion="2.7">
+  <responseDeclaration baseType="integer" cardinality="single" identifier="RESPONSE"/>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <stylesheet href="style/custom/tao-user-styles.css" type="text/css" media="all" title=""/>
+  <stylesheet href="runtime/css/likertScaleInteraction.css" type="text/css" media="all" title=""/>
+  <itemBody>
+    <div class="grid-row">
+      <div class="col-12">
+        <customInteraction responseIdentifier="RESPONSE">
+          <pci:portableCustomInteraction customInteractionTypeIdentifier="likertScaleInteraction" hook="runtime/likertScaleInteraction.amd.js">
+            <pci:responseSchema href="http://imsglobal.org/schema/json/v1.0/response.json"/>
+            <pci:resources location="http://imsglobal.org/pci/1.0.15/sharedLibraries.xml">
+              <pci:libraries>
+                <pci:lib name="IMSGlobal/jquery_2_1_1"/>
+              </pci:libraries>
+            </pci:resources>
+            <pci:properties>
+              <pci:entry key="level">5</pci:entry>
+              <pci:entry key="label-min">min</pci:entry>
+              <pci:entry key="label-max">max</pci:entry>
+            </pci:properties>
+            <pci:markup>
+              <html5:div class="likertScaleInteraction">
+                <html5:div class="prompt">Hello</html5:div>
+                <html5:ul class="likert"/>
+              </html5:div>
+            </pci:markup>
+          </pci:portableCustomInteraction>
+        </customInteraction>
+      </div>
+    </div>
+  </itemBody>
+  <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+</assessmentItem>

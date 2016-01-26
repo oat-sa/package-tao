@@ -1,0 +1,85 @@
+%generic-btn-code {
+    @include border-radius(3);
+    font-size: 14px !important;
+    font-size: 1.4rem !important;
+    color: white() !important;
+    cursor: pointer;
+    text-decoration: none !important;
+    vertical-align: middle;
+    outline: 0;
+    overflow: visible;
+    border: none;
+    display: inline-block;
+    line-height: 2.5;
+    padding: 0 15px;
+    background-color: whiten($uiClickableActiveBg, .1);
+    text-shadow: 1px 1px 0 blacken($uiClickableActiveBg, .2);
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    height: 35px;
+    &.small {
+        line-height: 1.8;
+        height: 25px;
+        [class^="icon-"], [class*=" icon-"] {
+            @include font-size(13);
+        }
+    }
+    [class^="icon-"], [class*=" icon-"] {
+        font: tao !important;
+        font-family:tao;
+        @include font-size(14);
+        line-height: 1;
+        padding: 0 9px 0 0;
+        position: relative;
+        top: 1px;
+        left: -1px;
+        text-shadow: 0 1px 0 black(.1);
+        &.r {
+            padding: 0 0 0 9px;
+        }
+    }
+    &:hover {
+        opacity: .85;
+    }
+    &.btn-info {
+        background-color: whiten($info, .1);
+        text-shadow: 1px 1px 0 blacken($info, .2);
+    }
+    &.btn-error {
+        background-color: whiten($error, .1);
+        text-shadow: 1px 1px 0 blacken($error, .2);
+    }
+
+    &.btn-success {
+        background-color: whiten($success, .1);
+        text-shadow: 1px 1px 0 blacken($success, .2);
+    }
+
+    &.btn-warning {
+        background-color: whiten($warning, .1);
+        text-shadow: 1px 1px 0 blacken($warning, .2);
+    }
+}
+
+// this construction was needed to avoid problems with extending this code elsewhere
+[class^="btn-"], [class*=" btn-"], .btn-default,
+button, input[type="submit"], input[type="reset"] {
+    @extend %generic-btn-code;
+}
+
+/* todo move to main ? */
+.disabled, button[disabled] {
+    background-color: whiten($websiteBorder, .3) !important;
+    text-shadow: 1px 1px 0 white(.8) !important;
+    cursor: not-allowed !important;
+    opacity: .55 !important;
+    color: #000 !important;
+}
+
+// jquery ui
+.ui-button {
+    [class^="icon-"], [class*=" icon-"] {
+        font-family: tao !important;
+    }
+}

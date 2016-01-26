@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+    <structure id="TestTaker" name="Test-takers" level="2" group="main">
+        <description>Record and manage test takers.</description>
+        <icon id="icon-test-taker" src=""/>
+        <sections>
+            <section id="manage_test_takers" name="Manage test takers" url="/taoTestTaker/TestTaker/index">
+                <trees>
+                    <tree name="Test takers library"
+                          className="Test Taker"
+                          dataUrl="/taoTestTaker/TestTaker/getOntologyData"
+                          rootNode="http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject"
+                          selectClass="testtaker-class-properties"
+                          selectInstance="testtaker-properties"
+                          moveInstance="testtaker-move"
+                          delete="testtaker-delete" 
+                        />
+                </trees>
+                <actions>
+                	<action id="testtaker-class-properties" name="Properties" url="/tao/PropertiesAuthoring/index" group="content" context="class">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="testtaker-properties" name="Properties"  url="/taoTestTaker/TestTaker/editSubject" group="content" context="instance">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="testtaker-filter" name="Filter" context="*" group="search" binding="filter">
+                        <icon id="icon-filter"/>
+                    </action>
+                    <action id="testtaker-search" name="Search" url="/taoTestTaker/TestTaker/search" context="*" group="search" binding="launchFinder">
+                        <icon id="icon-find"/>
+                    </action>
+                    <action id="testtaker-class-new" name="New class" url="/taoTestTaker/TestTaker/addSubClass" context="resource" group="tree" binding="subClass">
+                        <icon id="icon-folder-open"/>
+                    </action>
+                    <action id="testtaker-delete" name="Delete" url="/taoTestTaker/TestTaker/delete" context="resource" group="tree" binding="removeNode">
+                        <icon id="icon-bin"/>
+                    </action>
+                    <action id="testtaker-move" name="Move" url="/taoTestTaker/TestTaker/moveInstance" context="instance" group="none" binding="moveNode">
+                        <icon id="icon-move-item"/>
+                    </action>
+                    <action id="testtaker-import" name="Import" url="/taoTestTaker/Import/index" context="resource" group="tree">
+                        <icon id="icon-import"/>
+                    </action>
+                    <action id="testtaker-export" name="Export" url="/tao/Export/index" context="resource" group="tree">
+                        <icon id="icon-export"/>
+                    </action>
+                    <action id="testtaker-new" name="New test-taker" url="/taoTestTaker/TestTaker/addInstance" context="resource" group="tree" binding="instanciate">
+                        <icon id="icon-test-taker"/>
+                    </action>
+                </actions>
+            </section>
+        </sections>
+    </structure>
+</structures>

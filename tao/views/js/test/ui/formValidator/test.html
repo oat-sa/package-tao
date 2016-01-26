@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JQuery Validator Tests</title>
+        <base href="../../../../../../../../tao/views/" />
+        <link rel="stylesheet" type="text/css" href="js/lib/qunit/qunit.css">
+        <script type="text/javascript" src="js/lib/require.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit-parameterize.js"></script>
+        <script type="text/javascript" src="js/lib/blanket/blanket.min.js" data-cover-flag="branchTracking" data-cover-only="formValidator.js"></script>
+
+        <script  type="text/javascript">
+            QUnit.config.autostart = false;
+            require(['/tao/ClientConfig/config'], function() {
+                require(['test/ui/formValidator/test'], function() {
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body class="tao-scope">
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+            <form id="form_1">
+                <input name="field_1" id="field_1" type="text" data-validate="$numeric"/>
+                <input name="field_2" id="field_2" type="text" data-validate="$notEmpty"/>
+                <input name="field_3" id="field_3" type="text" data-validate="$pattern(pattern=\w{3}\s\w{3}\sbaz, modifier=i)"/>
+                <input name="field_5" id="field_5" type="text" data-validate="$length(min=4, max=10)"/>
+
+                <!-- this field should be ignored -->
+                <input name="field_6" id="field_6" class="ignore" type="text" data-validate="$length(min=4, max=10)"/>
+
+                <!-- two rules -->
+                <input name="field_7" id="field_7" type="text" data-validate="$length(min=4, max=10, message='length should be from 4 to 10'); $numeric(message='must be numeric')"/>
+            </form>
+        </div>
+    </body>
+</html>

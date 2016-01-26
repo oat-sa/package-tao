@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assessmentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 ../../../xsd/imsqti_v2p1.xsd"
+    xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:m="http://www.w3.org/1998/Math/MathML"
+    toolVersion="0.5.1" toolName="Mathqurate" title="Adaptive - choice of input type"
+    timeDependent="false" identifier="Example05-feedbackBlock-adaptive" adaptive="true">
+    <responseDeclaration identifier="RESPONSE1" cardinality="single" baseType="identifier"/>
+    <responseDeclaration identifier="RESPONSE21" cardinality="single" baseType="identifier">
+        <correctResponse>
+            <value>OPTION210</value>
+        </correctResponse>
+    </responseDeclaration>
+    <responseDeclaration identifier="RESPONSE22" cardinality="single" baseType="identifier">
+        <correctResponse>
+            <value>OPTION221</value>
+        </correctResponse>
+    </responseDeclaration>
+    <responseDeclaration identifier="RESPONSE23" cardinality="single" baseType="identifier">
+        <correctResponse>
+            <value>OPTION231</value>
+        </correctResponse>
+    </responseDeclaration>
+    <responseDeclaration identifier="RESPONSE24" cardinality="single" baseType="identifier">
+        <correctResponse>
+            <value>OPTION241</value>
+        </correctResponse>
+    </responseDeclaration>
+    <responseDeclaration identifier="RESPONSE25" cardinality="single" baseType="string">
+        <correctResponse>
+            <value>cooks</value>
+        </correctResponse>
+    </responseDeclaration>
+    <responseDeclaration identifier="RESPONSE26" cardinality="single" baseType="string">
+        <correctResponse>
+            <value>spoil</value>
+        </correctResponse>
+    </responseDeclaration>
+    <responseDeclaration identifier="RESPONSE27" cardinality="single" baseType="string">
+        <correctResponse>
+            <value>broth</value>
+        </correctResponse>
+    </responseDeclaration>
+    <outcomeDeclaration baseType="float" cardinality="single" identifier="SCORE"
+        normalMaximum="10.0" normalMinimum="0.0">
+        <defaultValue>
+            <value>0.0</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <outcomeDeclaration baseType="identifier" cardinality="single" identifier="FEEDBACK"/>
+    
+    <!--￼Define a feedback variable; its cardinality is "multiple" so that it can contain the identifiers of several 
+                feedback elements, and in this case it is initialised to the identifier, part1, of the first part of this adaptive 
+                question-->            
+    
+    <outcomeDeclaration baseType="identifier" cardinality="multiple" identifier="BODY">
+        <defaultValue>
+            <value>part1</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <itemBody class="">
+        <div class="">
+            
+            <!--￼This feedbackBlock is the first part of this adaptive question to appear, since the BODY variable initially 
+                contains its identifier, part1; it contains the first multiple choice interaction in this question. When BODY is 
+                set to part2, this feedbackBlock is no longer visible.-->            
+            
+            <feedbackBlock id="feedbackBlock0" identifier="part1" outcomeIdentifier="BODY"
+                showHide="show">
+                <p>This is the first part of this question: Which of these input methods do you wish
+                    to use?</p>
+                <choiceInteraction id="choiceInteraction0" maxChoices="1"
+                    responseIdentifier="RESPONSE1" shuffle="true">
+                    <simpleChoice id="simpleChoice0" identifier="OPTION1">Multiple choice </simpleChoice>
+                    <simpleChoice id="simpleChoice1" identifier="OPTION2">Drop-down menu </simpleChoice>
+                    <simpleChoice id="simpleChoice2" identifier="OPTION3">Typed input
+                    </simpleChoice>
+                </choiceInteraction>
+            </feedbackBlock>
+            
+            <!--￼This feedbackBlock is the second part of the question ; it appears when the BODY variable contains its identifier, 
+                part2. BODY is a multiple cardinality variable, so it can contain the identifiers of several feedbackBlocks (and 
+                feedbackInlines) at the same time, each of which is visible if their show attribute is set to show, or hidden if 
+                their show attribute is set to hide.-->            
+            
+            <feedbackBlock identifier="part2" outcomeIdentifier="BODY" showHide="show">
+                <p>OK, this is the type of input you have chosen. Now please answer this, the second
+                    part of the question.</p>
+            </feedbackBlock>
+            
+            <!--￼This feedbackBlock appears if the user chose to use multiple choice in the first part of the question – it contains
+                the selected type of interaction.-->            
+            
+            <feedbackBlock identifier="option1" outcomeIdentifier="BODY" showHide="show">
+                <p class="">Choose the correct saying:</p>
+                <choiceInteraction maxChoices="1" responseIdentifier="RESPONSE21" shuffle="true">
+                    <simpleChoice identifier="OPTION210">Too many cooks spoil the
+                        broth</simpleChoice>
+                    <simpleChoice identifier="OPTION211">Too many cooks burn the
+                        dinner</simpleChoice>
+                    <simpleChoice identifier="OPTION212">Too many children spill the
+                        broth</simpleChoice>
+                    <simpleChoice identifier="OPTION213">Too many hands spill the
+                        beans</simpleChoice>
+                    <simpleChoice identifier="OPTION214">Too many children spoil the
+                        broth</simpleChoice>
+                </choiceInteraction>
+            </feedbackBlock>
+            
+            <!--￼This feedbackBlock appears if the user chose to use drop-down menus in the first part of the question – it contains
+                the selected type of interaction.-->            
+            
+            <feedbackBlock identifier="option2" outcomeIdentifier="BODY" showHide="show">
+                <p class="">Complete the saying below by selecting from the lists:</p>
+                <p class="">Too many&#160; <inlineChoiceInteraction responseIdentifier="RESPONSE22"
+                        shuffle="true">
+                        <inlineChoice identifier="OPTION221">cooks</inlineChoice>
+                        <inlineChoice identifier="OPTION222">children</inlineChoice>
+                        <inlineChoice identifier="OPTION223">hands</inlineChoice>
+                    </inlineChoiceInteraction>&#160; <inlineChoiceInteraction
+                        responseIdentifier="RESPONSE23" shuffle="true">
+                        <inlineChoice identifier="OPTION231">spoil</inlineChoice>
+                        <inlineChoice identifier="OPTION232">spill</inlineChoice>
+                        <inlineChoice identifier="OPTION233">burn</inlineChoice>
+                    </inlineChoiceInteraction> the&#160; <inlineChoiceInteraction
+                        responseIdentifier="RESPONSE24" shuffle="true">
+                        <inlineChoice identifier="OPTION241">broth</inlineChoice>
+                        <inlineChoice identifier="OPTION242">dinner</inlineChoice>
+                        <inlineChoice identifier="OPTION243">beans</inlineChoice>
+                    </inlineChoiceInteraction>. </p>
+            </feedbackBlock>
+            
+            <!--￼This feedbackBlock appears if the user chose to type answers in text boxes in the first part of the question – it 
+                contains the selected type of interaction.-->            
+            
+            <feedbackBlock identifier="option3" outcomeIdentifier="BODY" showHide="show">
+                <p class="">Complete the saying below:</p>
+                <p class="">Too many&#160; <textEntryInteraction expectedLength="20"
+                        responseIdentifier="RESPONSE25"/>&#160; <textEntryInteraction
+                        expectedLength="20" responseIdentifier="RESPONSE26"/> the&#160;
+                        <textEntryInteraction expectedLength="20" responseIdentifier="RESPONSE27"/>.
+                </p>
+            </feedbackBlock>
+            <div class="">
+                
+          <!--￼These feedbackInline elements provide feedback on the input given by the user in the second part of the question.-->                
+                
+                <feedbackInline id="feedbackInline1" identifier="CORRECT"
+                    outcomeIdentifier="FEEDBACK" showHide="show"> That's the correct answer. </feedbackInline>
+                <feedbackInline id="feedbackInline1" identifier="PARTIAL"
+                    outcomeIdentifier="FEEDBACK" showHide="show"> Your answer is partially correct;
+                    the correct answer is "Too many <b>cooks</b>
+                    <b>spoil</b> the <b>broth</b>". </feedbackInline>
+                <feedbackInline id="feedbackInline1" identifier="INCORRECT"
+                    outcomeIdentifier="FEEDBACK" showHide="show"> Sorry, that's not correct; the
+                    correct answer is "Too many <b>cooks</b>
+                    <b>spoil</b> the <b>broth</b>". </feedbackInline>
+            </div>
+        </div>
+    </itemBody>
+    <responseProcessing>
+        <responseCondition>
+            <responseIf>
+                <member>
+                    
+                    <!--￼Check whether "part1" is contained in the BODY variable, and if it is, set up the second part of the 
+                        question.-->                    
+                    
+                    <baseValue baseType="identifier">part1</baseValue>
+                    <variable identifier="BODY"/>
+                </member>
+                <setOutcomeValue identifier="BODY">
+                    <multiple>
+                        
+                        <!--Put "part2" into the BODY variable.-->                        
+                        
+                        <baseValue baseType="identifier">part2</baseValue>
+                    </multiple>
+                </setOutcomeValue>
+                <responseCondition>
+                    <responseIf>
+                        <match>
+                            <variable identifier="RESPONSE1"/>
+                            
+                            <!--￼If the user selected OPTION1 (MCQ) put the identifier, option1, of the feedbackBlock containing 
+                                the second MCQ into BODY .-->                            
+                            
+                            <baseValue baseType="identifier">OPTION1</baseValue>
+                        </match>
+                        <setOutcomeValue identifier="BODY">
+                            <multiple>
+                                <variable identifier="BODY"/>
+                                <baseValue baseType="identifier">option1</baseValue>
+                            </multiple>
+                        </setOutcomeValue>
+                    </responseIf>
+                    <responseElseIf>
+                        <match>
+                            <variable identifier="RESPONSE1"/>
+                            
+                            <!--￼If the user selected OPTION2 (drop-down menus) put the identifier, option2, of the feedbackBlock 
+                                containing the drop-down menus into BODY .-->                            
+                            
+                            <baseValue baseType="identifier">OPTION2</baseValue>
+                        </match>
+                        <setOutcomeValue identifier="BODY">
+                            <multiple>
+                                <variable identifier="BODY"/>
+                                <baseValue baseType="identifier">option2</baseValue>
+                            </multiple>
+                        </setOutcomeValue>
+                    </responseElseIf>
+                    <responseElseIf>
+                        <match>
+                            <variable identifier="RESPONSE1"/>
+                            
+                            <!--￼If the user selected OPTION3 (text input) put the identifier, option3, of the feedbackBlock 
+                                containing the text boxes into BODY .-->                            
+                            
+                            <baseValue baseType="identifier">OPTION3</baseValue>
+                        </match>
+                        <setOutcomeValue identifier="BODY">
+                            <multiple>
+                                <variable identifier="BODY"/>
+                                <baseValue baseType="identifier">option3</baseValue>
+                            </multiple>
+                        </setOutcomeValue>
+                    </responseElseIf>
+                </responseCondition>
+            </responseIf>
+            <responseElseIf>
+                <member>
+                    
+                    <!--￼If BODY contains part2, the second part of the question has been displayed, so we process the user’s input
+                        to the chosen interaction.-->
+
+                    <baseValue baseType="identifier">part2</baseValue>
+                    <variable identifier="BODY"/>
+                </member>
+                <responseCondition>
+                    <responseIf>
+                        <member>
+                            <baseValue baseType="identifier">option1</baseValue>
+                            <variable identifier="BODY"/>
+                        </member>
+                        <responseCondition>
+                            <responseIf>
+                                <match>
+                                    <variable identifier="RESPONSE21"/>
+                                    <correct identifier="RESPONSE21"/>
+                                </match>
+                                <setOutcomeValue identifier="FEEDBACK">
+                                    <baseValue baseType="identifier">CORRECT</baseValue>
+                                </setOutcomeValue>
+                                <setOutcomeValue identifier="SCORE">
+                                    <baseValue baseType="float">10.0</baseValue>
+                                </setOutcomeValue>
+                            </responseIf>
+                            <responseElse>
+                                <setOutcomeValue identifier="FEEDBACK">
+                                    <baseValue baseType="identifier">INCORRECT</baseValue>
+                                </setOutcomeValue>
+                                <setOutcomeValue identifier="SCORE">
+                                    <baseValue baseType="float">0.0</baseValue>
+                                </setOutcomeValue>
+                            </responseElse>
+                        </responseCondition>
+                    </responseIf>
+                    <responseElseIf>
+                        <member>
+                            <baseValue baseType="identifier">option2</baseValue>
+                            <variable identifier="BODY"/>
+                        </member>
+                        <responseCondition>
+                            <responseIf>
+                                <and>
+                                    <match>
+                                        <variable identifier="RESPONSE22"/>
+                                        <correct identifier="RESPONSE22"/>
+                                    </match>
+                                    <match>
+                                        <variable identifier="RESPONSE23"/>
+                                        <correct identifier="RESPONSE23"/>
+                                    </match>
+                                    <match>
+                                        <variable identifier="RESPONSE24"/>
+                                        <correct identifier="RESPONSE24"/>
+                                    </match>
+                                </and>
+                                <setOutcomeValue identifier="FEEDBACK">
+                                    <baseValue baseType="identifier">CORRECT</baseValue>
+                                </setOutcomeValue>
+                                <setOutcomeValue identifier="SCORE">
+                                    <baseValue baseType="float">10.0</baseValue>
+                                </setOutcomeValue>
+                            </responseIf>
+                            <responseElseIf>
+                                <or>
+                                    <match>
+                                        <variable identifier="RESPONSE22"/>
+                                        <correct identifier="RESPONSE22"/>
+                                    </match>
+                                    <match>
+                                        <variable identifier="RESPONSE23"/>
+                                        <correct identifier="RESPONSE23"/>
+                                    </match>
+                                    <match>
+                                        <variable identifier="RESPONSE24"/>
+                                        <correct identifier="RESPONSE24"/>
+                                    </match>
+                                </or>
+                                <setOutcomeValue identifier="FEEDBACK">
+                                    <baseValue baseType="identifier">PARTIAL</baseValue>
+                                </setOutcomeValue>
+                                <setOutcomeValue identifier="SCORE">
+                                    <baseValue baseType="float">5.0</baseValue>
+                                </setOutcomeValue>
+                            </responseElseIf>
+                            <responseElse>
+                                <setOutcomeValue identifier="FEEDBACK">
+                                    <baseValue baseType="identifier">INCORRECT</baseValue>
+                                </setOutcomeValue>
+                                <setOutcomeValue identifier="SCORE">
+                                    <baseValue baseType="float">0.0</baseValue>
+                                </setOutcomeValue>
+                            </responseElse>
+                        </responseCondition>
+                    </responseElseIf>
+                    <responseElseIf>
+                        <member>
+                            <baseValue baseType="identifier">option3</baseValue>
+                            <variable identifier="BODY"/>
+                        </member>
+                        <responseCondition>
+                            <responseIf>
+                                <and>
+                                    <match>
+                                        <variable identifier="RESPONSE25"/>
+                                        <correct identifier="RESPONSE25"/>
+                                    </match>
+                                    <match>
+                                        <variable identifier="RESPONSE26"/>
+                                        <correct identifier="RESPONSE26"/>
+                                    </match>
+                                    <match>
+                                        <variable identifier="RESPONSE27"/>
+                                        <correct identifier="RESPONSE27"/>
+                                    </match>
+                                </and>
+                                <setOutcomeValue identifier="FEEDBACK">
+                                    <baseValue baseType="identifier">CORRECT</baseValue>
+                                </setOutcomeValue>
+                                <setOutcomeValue identifier="SCORE">
+                                    <baseValue baseType="float">10.0</baseValue>
+                                </setOutcomeValue>
+                            </responseIf>
+                            <responseElseIf>
+                                <or>
+                                    <match>
+                                        <variable identifier="RESPONSE25"/>
+                                        <correct identifier="RESPONSE25"/>
+                                    </match>
+                                    <match>
+                                        <variable identifier="RESPONSE26"/>
+                                        <correct identifier="RESPONSE26"/>
+                                    </match>
+                                    <match>
+                                        <variable identifier="RESPONSE27"/>
+                                        <correct identifier="RESPONSE27"/>
+                                    </match>
+                                </or>
+                                <setOutcomeValue identifier="FEEDBACK">
+                                    <baseValue baseType="identifier">PARTIAL</baseValue>
+                                </setOutcomeValue>
+                                <setOutcomeValue identifier="SCORE">
+                                    <baseValue baseType="float">5.0</baseValue>
+                                </setOutcomeValue>
+                            </responseElseIf>
+                            <responseElse>
+                                <setOutcomeValue identifier="FEEDBACK">
+                                    <baseValue baseType="identifier">INCORRECT</baseValue>
+                                </setOutcomeValue>
+                                <setOutcomeValue identifier="SCORE">
+                                    <baseValue baseType="float">0.0</baseValue>
+                                </setOutcomeValue>
+                            </responseElse>
+                        </responseCondition>
+                    </responseElseIf>
+                </responseCondition>
+                <!-- completionStatus must be specifically set to completed in adaptive questions -->
+                <setOutcomeValue identifier="completionStatus">
+                    <baseValue baseType="identifier">completed</baseValue>
+                </setOutcomeValue>
+            </responseElseIf>
+        </responseCondition>
+    </responseProcessing>
+</assessmentItem>

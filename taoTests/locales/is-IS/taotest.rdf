@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAOTest.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOTest.rdf#Test">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Test
+    @subject http://www.tao.lu/Ontologies/TAOTest.rdf#Test
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Test]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Test
+    @subject http://www.tao.lu/Ontologies/TAOTest.rdf#Test
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[Test]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOTest.rdf#TestContent">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Test Content
+    @subject http://www.tao.lu/Ontologies/TAOTest.rdf#TestContent
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Test Content]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Test Content
+    @subject http://www.tao.lu/Ontologies/TAOTest.rdf#TestContent
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[Test Content]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOTest.rdf#TestModel">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Test Model
+    @subject http://www.tao.lu/Ontologies/TAOTest.rdf#TestModel
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Test Model]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Test Model
+    @subject http://www.tao.lu/Ontologies/TAOTest.rdf#TestModel
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[Test Model]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOTest.rdf#TestTestModel">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Test Model
+    @subject http://www.tao.lu/Ontologies/TAOTest.rdf#TestTestModel
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Test Model]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Test Model
+    @subject http://www.tao.lu/Ontologies/TAOTest.rdf#TestTestModel
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[Test Model]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOTest.rdf#TestModelImplementation">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Testmodel implementation
+    @subject http://www.tao.lu/Ontologies/TAOTest.rdf#TestModelImplementation
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Testmodel implementation]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Implementation of the test model
+    @subject http://www.tao.lu/Ontologies/TAOTest.rdf#TestModelImplementation
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[Implementation of the test model]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOTest.rdf#TestsManagerRole">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Tests Manager
+    @subject http://www.tao.lu/Ontologies/TAOTest.rdf#TestsManagerRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Tests Manager]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source The Tests Manager Role
+    @subject http://www.tao.lu/Ontologies/TAOTest.rdf#TestsManagerRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[The Tests Manager Role]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAOGroup.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOGroup.rdf#Group">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Group
+    @subject http://www.tao.lu/Ontologies/TAOGroup.rdf#Group
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Group]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Group
+    @subject http://www.tao.lu/Ontologies/TAOGroup.rdf#Group
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[Group]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOGroup.rdf#Members">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Members
+    @subject http://www.tao.lu/Ontologies/TAOGroup.rdf#Members
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Members]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Members of the group
+    @subject http://www.tao.lu/Ontologies/TAOGroup.rdf#Members
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[Members of the group]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOGroup.rdf#GroupsManagerRole">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Groups Manager
+    @subject http://www.tao.lu/Ontologies/TAOGroup.rdf#GroupsManagerRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Groups Manager]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source The Groups Manager Role
+    @subject http://www.tao.lu/Ontologies/TAOGroup.rdf#GroupsManagerRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[The Groups Manager Role]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

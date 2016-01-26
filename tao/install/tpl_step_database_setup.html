@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Installation Process</title>
+	<link rel="stylesheet" type="text/css" href="../views/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../views/css/custom-theme/jquery-ui-1.8.22.custom.css"/>
+	<link rel="stylesheet" type="text/css" href="css/installation_main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/step_database_setup.css"/>
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/step_ie8.css"/>
+	<![endif]-->
+
+	<script type="text/javascript" src="../views/js/lib/require.js" data-main="js/step_database_setup"></script>
+
+</head>
+
+<body>
+    <div id="installation_form" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+        <h2>TAO Installation Wizard</h2>
+        <h1>Database Configuration</h1>
+        <ul id="install_seq">
+            <li><h3>Installation Steps</h3></li>
+            <li id="step_requirements">1. <a href="#">Requirements Check</a></li>
+            <li id="step_server_setup">2. <a href="#">Server Setup</a></li>
+            <li id="step_database_setup" class="currentStep">3. Database Setup</li>
+            <li id="step_admin_setup">4. Administrator Setup</li>
+            <li id="step_licenses">5. Licensing Agreement</li>
+            <li id="step_finalization">6. Finalize Installation</li>
+        </ul>
+        <p id="comments">
+            Now, we will set up the database for storing TAO data.  Please fill out the fields below to proceed <span style="text-decoration: underline">or press 'autoconfiguration' button</span>.  Click on "?" for additional information.
+            <!--TAO stores the data in a database. We need to get the information to set it up. Please fill in the form below to proceed. "?" gives more information about each field.-->
+        </p>
+        <div id="forms_content">
+          <form autocomplete="off">
+                <ul>
+                    <li>
+                        <label for="database_driver">Select your preferred database.</label><br />
+                        <select id="database_driver" name="database_driver" class="tao-input unselectable" autocomplete="off">
+                        </select>
+                        <div title="learn more on this topic" class="icons ui-state-default ui-corner-all"><a id="hlp_database_driver" class="ui-icon ui-icon-help"></a></div><span class="formMandatory">*</span>
+                    </li>
+                    <li>
+                        <label for="database_host">Enter database host name.</label><br />
+                        <input type="text" id="database_host" name="database_host" class="tao-input" title="e.g. localhost" autocomplete="off"/>
+                        <div title="learn more on this topic" class="icons ui-state-default ui-corner-all"><a id="hlp_database_host" class="ui-icon ui-icon-help"></a></div><span class="formMandatory">*</span>
+                    </li>
+                    <li>
+                        <label for="database_user">Enter the Username for database account.</label><br />
+                        <input type="text" id="database_user" name="database_user" class="tao-input" title="e.g. user" autocomplete="off"/>
+                        <div title="learn more on this topic" class="icons ui-state-default ui-corner-all"><a id="hlp_database_user" class="ui-icon ui-icon-help"></a></div><span class="formMandatory">*</span>
+                    </li>
+                    <li>
+                        <label for="database_password">Enter the Password for database account.</label><br />
+                        <input type="password" id="database_password" name="database_password" class="tao-input" title="e.g. password" autocomplete="off"/>
+                        <div title="learn more on this topic" class="icons ui-state-default ui-corner-all"><a id="hlp_database_password" class="ui-icon ui-icon-help"></a></div>
+                    </li>
+                    <li>
+                        <label for="database_name">Give a unique name to your database.</label><br />
+                        <input type="text" id="database_name" name="database_named" class="tao-input" title="e.g. tao_db" autocomplete="off"/>
+                        <div title="learn more on this topic" class="icons ui-state-default ui-corner-all"><a id="hlp_database_name" class="ui-icon ui-icon-help"></a></div><span class="formMandatory">*</span>
+                    </li>
+                    <li>
+                        <label for="database_overwrite">Overwrite database if it already exists?</label><br/>
+                        <input type="checkbox" id="database_overwrite" class="tao-input" value="overwrite" autocomplete="off"/><span class="checkboxLabel">Overwrite</span>
+                        <div title="learn more on this topic" class="icons ui-state-default ui-corner-all"><a id="hlp_database_overwrite" class="ui-icon ui-icon-help"></a></div>
+                    </li>
+                    <li>
+                        <label for="sample_data">Pre-load TAO with sample data?</label><br/>
+                        <input type="checkbox" id="sample_data" class="tao-input" value="sample_data" autocomplete="off"/><span class="checkboxLabel">Pre-load</span>
+                        <!--<select id="sampledata" class="tao-input" autocomplete="off"></select>-->
+                        <div title="learn more on this topic" class="icons ui-state-default ui-corner-all"><a id="hlp_sample_data" class="ui-icon ui-icon-help"></a></div>
+                    </li>
+                </ul>  
+                <div id="database" data-autoconfiguration = "Trying to auto-configure database settings.." data-next="Checking database connection..."><span></span></div>
+                <input id="reCheckDefaults" class="enabled" type="button" value="Autoconfiguration" role="button"/>
+              <input id="submitForm" class="disabled" type="submit" value="Next" role="button" disabled="disabled"/>
+                <p id="formComment"><span class="formExample">*</span> Required</p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

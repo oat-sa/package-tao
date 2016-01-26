@@ -1,0 +1,467 @@
+{
+    "identifier": "TextEntrynumeric_2040297025",
+    "serial": "item_54eee7e72d523928870944",
+    "qtiClass": "assessmentItem",
+    "attributes": {
+        "identifier": "TextEntrynumeric_2040297025",
+        "title": "textEntry (numeric)",
+        "label": "",
+        "adaptive": false,
+        "timeDependent": false,
+        "toolName": "TAO",
+        "toolVersion": "3.0-RC01"
+    },
+    "body": {
+        "serial": "container_containeritembody_54eee7e72d503419349811",
+        "body": "<div>Das Bundesland Sachsen grenzt an {{interaction_textentryinteraction_54eee7e72dd70410792878}} andere deutsche Bundesl\u00e4nder und {{interaction_textentryinteraction_54eee7e72deb1352618389}}  L\u00e4nder au\u00dferhalb Deutschlands.<\/div>",
+        "elements": {
+            "interaction_textentryinteraction_54eee7e72dd70410792878": {
+                "serial": "interaction_textentryinteraction_54eee7e72dd70410792878",
+                "qtiClass": "textEntryInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE_1",
+                    "base": 10
+                },
+                "choices": []
+            },
+            "interaction_textentryinteraction_54eee7e72deb1352618389": {
+                "serial": "interaction_textentryinteraction_54eee7e72deb1352618389",
+                "qtiClass": "textEntryInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE_2",
+                    "base": 10
+                },
+                "choices": []
+            }
+        },
+        "debug": {
+            "relatedItem": "item_54eee7e72d523928870944"
+        }
+    },
+    "namespaces": {
+        "xml": "http:\/\/www.w3.org\/XML\/1998\/namespace",
+        "xsi": "http:\/\/www.w3.org\/2001\/XMLSchema-instance",
+        "": "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1"
+    },
+    "stylesheets": [],
+    "outcomes": {
+        "outcomedeclaration_54eee7e72d863437475870": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_54eee7e72d863437475870",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "defaultValue": "0.0"
+        },
+        "outcomedeclaration_54eee7e72d91c293295387": {
+            "identifier": "MAXSCORE",
+            "serial": "outcomedeclaration_54eee7e72d91c293295387",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "MAXSCORE",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "defaultValue": "2.0"
+        },
+        "outcomedeclaration_54eee7e72d9ba246153996": {
+            "identifier": "FEEDBACKBASIC",
+            "serial": "outcomedeclaration_54eee7e72d9ba246153996",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "FEEDBACKBASIC",
+                "cardinality": "single",
+                "baseType": "identifier"
+            },
+            "defaultValue": "empty"
+        },
+        "outcomedeclaration_54eee7e72da56920415625": {
+            "identifier": "FEEDBACK_1666978",
+            "serial": "outcomedeclaration_54eee7e72da56920415625",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "FEEDBACK_1666978",
+                "cardinality": "single",
+                "baseType": "boolean",
+                "view": [
+                    "testConstructor"
+                ]
+            },
+            "defaultValue": "false"
+        },
+        "outcomedeclaration_54eee7e72db19332447122": {
+            "identifier": "FEEDBACK_9473961",
+            "serial": "outcomedeclaration_54eee7e72db19332447122",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "FEEDBACK_9473961",
+                "cardinality": "single",
+                "baseType": "boolean",
+                "view": [
+                    "testConstructor"
+                ]
+            },
+            "defaultValue": "false"
+        }
+    },
+    "responses": {
+        "responsedeclaration_54eee7e72d6ba722266575": {
+            "identifier": "RESPONSE_1",
+            "serial": "responsedeclaration_54eee7e72d6ba722266575",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE_1",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "correctResponses": [
+                "4.0"
+            ],
+            "mapping": [],
+            "areaMapping": [],
+            "howMatch": null,
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": []
+        },
+        "responsedeclaration_54eee7e72d7a9024788652": {
+            "identifier": "RESPONSE_2",
+            "serial": "responsedeclaration_54eee7e72d7a9024788652",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE_2",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "correctResponses": [
+                "2.0"
+            ],
+            "mapping": [],
+            "areaMapping": [],
+            "howMatch": null,
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": []
+        }
+    },
+    "feedbacks": [],
+    "responseProcessing": {
+        "serial": "response_custom_54eee7e72e34d335209624",
+        "qtiClass": "responseProcessing",
+        "attributes": [],
+        "processingType": "custom",
+        "data": "<responseProcessing>\n\t\t<responseCondition>\n\t\t\t<responseIf>\n\t\t\t\t<equal toleranceMode=\"exact\">\n\t\t\t\t\t<variable identifier=\"RESPONSE_1\"\/>\n\t\t\t\t\t<correct identifier=\"RESPONSE_1\"\/>\n\t\t\t\t<\/equal>\n\t\t\t\t<setOutcomeValue identifier=\"SCORE\">\n\t\t\t\t\t<sum>\n\t\t\t\t\t\t<variable identifier=\"SCORE\"\/>\n\t\t\t\t\t\t<baseValue baseType=\"float\">1.0<\/baseValue>\n\t\t\t\t\t<\/sum>\n\t\t\t\t<\/setOutcomeValue>\n\t\t\t<\/responseIf>\n\t\t<\/responseCondition>\n\t\t<responseCondition>\n\t\t\t<responseIf>\n\t\t\t\t<not>\n\t\t\t\t\t<isNull>\n\t\t\t\t\t\t<variable identifier=\"RESPONSE_1\"\/>\n\t\t\t\t\t<\/isNull>\n\t\t\t\t<\/not>\n\t\t\t\t<setOutcomeValue identifier=\"FEEDBACKBASIC\">\n\t\t\t\t\t<baseValue baseType=\"identifier\">incorrect<\/baseValue>\n\t\t\t\t<\/setOutcomeValue>\n\t\t\t<\/responseIf>\n\t\t<\/responseCondition>\n\t\t<responseCondition>\n\t\t\t<responseIf>\n\t\t\t\t<equal toleranceMode=\"exact\">\n\t\t\t\t\t<variable identifier=\"RESPONSE_2\"\/>\n\t\t\t\t\t<correct identifier=\"RESPONSE_2\"\/>\n\t\t\t\t<\/equal>\n\t\t\t\t<setOutcomeValue identifier=\"SCORE\">\n\t\t\t\t\t<sum>\n\t\t\t\t\t\t<variable identifier=\"SCORE\"\/>\n\t\t\t\t\t\t<baseValue baseType=\"float\">1.0<\/baseValue>\n\t\t\t\t\t<\/sum>\n\t\t\t\t<\/setOutcomeValue>\n\t\t\t<\/responseIf>\n\t\t<\/responseCondition>\n\t\t<responseCondition>\n\t\t\t<responseIf>\n\t\t\t\t<not>\n\t\t\t\t\t<isNull>\n\t\t\t\t\t\t<variable identifier=\"RESPONSE_2\"\/>\n\t\t\t\t\t<\/isNull>\n\t\t\t\t<\/not>\n\t\t\t\t<setOutcomeValue identifier=\"FEEDBACKBASIC\">\n\t\t\t\t\t<baseValue baseType=\"identifier\">incorrect<\/baseValue>\n\t\t\t\t<\/setOutcomeValue>\n\t\t\t<\/responseIf>\n\t\t<\/responseCondition>\n\t\t<responseCondition>\n\t\t\t<responseIf>\n\t\t\t\t<and>\n\t\t\t\t\t<not>\n\t\t\t\t\t\t<match>\n\t\t\t\t\t\t\t<variable identifier=\"FEEDBACKBASIC\"\/>\n\t\t\t\t\t\t\t<baseValue baseType=\"identifier\">empty<\/baseValue>\n\t\t\t\t\t\t<\/match>\n\t\t\t\t\t<\/not>\n\t\t\t\t\t<equal toleranceMode=\"exact\">\n\t\t\t\t\t\t<variable identifier=\"SCORE\"\/>\n\t\t\t\t\t\t<variable identifier=\"MAXSCORE\"\/>\n\t\t\t\t\t<\/equal>\n\t\t\t\t<\/and>\n\t\t\t\t<setOutcomeValue identifier=\"FEEDBACKBASIC\">\n\t\t\t\t\t<baseValue baseType=\"identifier\">correct<\/baseValue>\n\t\t\t\t<\/setOutcomeValue>\n\t\t\t<\/responseIf>\n\t\t<\/responseCondition>\n\t\t<setOutcomeValue identifier=\"FEEDBACK_1666978\">\n\t\t\t<and>\n\t\t\t\t<match>\n\t\t\t\t\t<baseValue baseType=\"identifier\">correct<\/baseValue>\n\t\t\t\t\t<variable identifier=\"FEEDBACKBASIC\"\/>\n\t\t\t\t<\/match>\n\t\t\t<\/and>\n\t\t<\/setOutcomeValue>\n\t\t<setOutcomeValue identifier=\"FEEDBACK_9473961\">\n\t\t\t<and>\n\t\t\t\t<match>\n\t\t\t\t\t<baseValue baseType=\"identifier\">incorrect<\/baseValue>\n\t\t\t\t\t<variable identifier=\"FEEDBACKBASIC\"\/>\n\t\t\t\t<\/match>\n\t\t\t<\/and>\n\t\t<\/setOutcomeValue>\n\t<\/responseProcessing>",
+        "responseRules": [
+            {
+                "qtiClass": "responseCondition",
+                "responseIf": {
+                    "qtiClass": "responseIf",
+                    "expression": {
+                        "qtiClass": "equal",
+                        "attributes": {
+                            "toleranceMode": "exact"
+                        },
+                        "expressions": [
+                            {
+                                "qtiClass": "variable",
+                                "attributes": {
+                                    "identifier": "RESPONSE_1"
+                                }
+                            },
+                            {
+                                "qtiClass": "correct",
+                                "attributes": {
+                                    "identifier": "RESPONSE_1"
+                                }
+                            }
+                        ]
+                    },
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "SCORE"
+                            },
+                            "expression": {
+                                "qtiClass": "sum",
+                                "expressions": [
+                                    {
+                                        "qtiClass": "variable",
+                                        "attributes": {
+                                            "identifier": "SCORE"
+                                        }
+                                    },
+                                    {
+                                        "qtiClass": "baseValue",
+                                        "attributes": {
+                                            "baseType": "float"
+                                        },
+                                        "value": "1.0"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "qtiClass": "responseCondition",
+                "responseIf": {
+                    "qtiClass": "responseIf",
+                    "expression": {
+                        "qtiClass": "not",
+                        "expressions": [
+                            {
+                                "qtiClass": "isNull",
+                                "expressions": [
+                                    {
+                                        "qtiClass": "variable",
+                                        "attributes": {
+                                            "identifier": "RESPONSE_1"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "FEEDBACKBASIC"
+                            },
+                            "expression": {
+                                "qtiClass": "baseValue",
+                                "attributes": {
+                                    "baseType": "identifier"
+                                },
+                                "value": "incorrect"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "qtiClass": "responseCondition",
+                "responseIf": {
+                    "qtiClass": "responseIf",
+                    "expression": {
+                        "qtiClass": "equal",
+                        "attributes": {
+                            "toleranceMode": "exact"
+                        },
+                        "expressions": [
+                            {
+                                "qtiClass": "variable",
+                                "attributes": {
+                                    "identifier": "RESPONSE_2"
+                                }
+                            },
+                            {
+                                "qtiClass": "correct",
+                                "attributes": {
+                                    "identifier": "RESPONSE_2"
+                                }
+                            }
+                        ]
+                    },
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "SCORE"
+                            },
+                            "expression": {
+                                "qtiClass": "sum",
+                                "expressions": [
+                                    {
+                                        "qtiClass": "variable",
+                                        "attributes": {
+                                            "identifier": "SCORE"
+                                        }
+                                    },
+                                    {
+                                        "qtiClass": "baseValue",
+                                        "attributes": {
+                                            "baseType": "float"
+                                        },
+                                        "value": "1.0"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "qtiClass": "responseCondition",
+                "responseIf": {
+                    "qtiClass": "responseIf",
+                    "expression": {
+                        "qtiClass": "not",
+                        "expressions": [
+                            {
+                                "qtiClass": "isNull",
+                                "expressions": [
+                                    {
+                                        "qtiClass": "variable",
+                                        "attributes": {
+                                            "identifier": "RESPONSE_2"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "FEEDBACKBASIC"
+                            },
+                            "expression": {
+                                "qtiClass": "baseValue",
+                                "attributes": {
+                                    "baseType": "identifier"
+                                },
+                                "value": "incorrect"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "qtiClass": "responseCondition",
+                "responseIf": {
+                    "qtiClass": "responseIf",
+                    "expression": {
+                        "qtiClass": "and",
+                        "expressions": [
+                            {
+                                "qtiClass": "not",
+                                "expressions": [
+                                    {
+                                        "qtiClass": "match",
+                                        "expressions": [
+                                            {
+                                                "qtiClass": "variable",
+                                                "attributes": {
+                                                    "identifier": "FEEDBACKBASIC"
+                                                }
+                                            },
+                                            {
+                                                "qtiClass": "baseValue",
+                                                "attributes": {
+                                                    "baseType": "identifier"
+                                                },
+                                                "value": "empty"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "qtiClass": "equal",
+                                "attributes": {
+                                    "toleranceMode": "exact"
+                                },
+                                "expressions": [
+                                    {
+                                        "qtiClass": "variable",
+                                        "attributes": {
+                                            "identifier": "SCORE"
+                                        }
+                                    },
+                                    {
+                                        "qtiClass": "variable",
+                                        "attributes": {
+                                            "identifier": "MAXSCORE"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "FEEDBACKBASIC"
+                            },
+                            "expression": {
+                                "qtiClass": "baseValue",
+                                "attributes": {
+                                    "baseType": "identifier"
+                                },
+                                "value": "correct"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "qtiClass": "setOutcomeValue",
+                "attributes": {
+                    "identifier": "FEEDBACK_1666978"
+                },
+                "expression": {
+                    "qtiClass": "and",
+                    "expressions": [
+                        {
+                            "qtiClass": "match",
+                            "expressions": [
+                                {
+                                    "qtiClass": "baseValue",
+                                    "attributes": {
+                                        "baseType": "identifier"
+                                    },
+                                    "value": "correct"
+                                },
+                                {
+                                    "qtiClass": "variable",
+                                    "attributes": {
+                                        "identifier": "FEEDBACKBASIC"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "qtiClass": "setOutcomeValue",
+                "attributes": {
+                    "identifier": "FEEDBACK_9473961"
+                },
+                "expression": {
+                    "qtiClass": "and",
+                    "expressions": [
+                        {
+                            "qtiClass": "match",
+                            "expressions": [
+                                {
+                                    "qtiClass": "baseValue",
+                                    "attributes": {
+                                        "baseType": "identifier"
+                                    },
+                                    "value": "incorrect"
+                                },
+                                {
+                                    "qtiClass": "variable",
+                                    "attributes": {
+                                        "identifier": "FEEDBACKBASIC"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

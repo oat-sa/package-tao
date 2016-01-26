@@ -1,0 +1,2130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+**** BEGIN LICENSE BLOCK *****
+The contents of this file are subject to the Mozilla Public License
+Version 1.1 (the "License"); you may not use this file except in
+compliance with the License. You may obtain a copy of the License at
+http://www.mozilla.org/MPL/
+
+Software distributed under the License is distributed on an "AS IS"
+basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+License for the specific language governing rights and limitations
+under the License.
+
+The Original Code is XUL Schema.
+
+The Initial Developer of the Original Code is Mihailo Lalevic.
+Copyright (C) 2009, Mihailo Lalevic. All Rights Reserved.
+
+Contributor(s): 
+**** END LICENSE BLOCK ****
+-->
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+>
+
+  <xs:simpleType name="alignAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:align" />
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="start">
+        <xs:annotation>
+          <xs:documentation>Child elements are aligned starting from the left or top edge of the box. If the box is larger than the total size of the children, the extra space is placed on the right or bottom side.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="center">
+        <xs:annotation>
+          <xs:documentation>
+            Extra space is split equally along each side of the child elements, resulting the children being placed in the center of the box.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="end">
+        <xs:annotation>
+          <xs:documentation>Child elements are placed on the right or bottom edge of the box. If the box is larger than the total size of the children, the extra space is placed on the left or top side.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="baseline">
+        <xs:annotation>
+          <xs:documentation>This value applies to horizontally oriented boxes only. It causes the child elements to be aligned so that their text labels are lined up.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="stretch">
+        <xs:annotation>
+          <xs:documentation>The child elements are stretched to fit the size of the box. For a horizontal box, the children are stretched to be the height of the box. For a vertical box, the children are stretched to be the width of the box. If the size of the box changes, the children stretch to fit. Use the flex attribute to create elements that stretch in the opposite direction.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="left">
+        <xs:annotation>
+          <xs:documentation>
+            Deprecated!
+            The elements are aligned on their left edges.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="center">
+        <xs:annotation>
+          <xs:documentation>
+            Deprecated!
+            The elements are centered horizontally.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="right">
+        <xs:annotation>
+          <xs:documentation>
+            Deprecated!
+            The elements are aligned on their right edges
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="classAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/class">
+        The style class of the element. Multiple classes may be specified by separating them with spaces.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:list itemType="xs:string"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="containmentAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:containment">
+        This attribute specifies RDF properties that indicate that a resource is a container. When generating content from a template this is used to determine which resources from the datasource are containers and thus can have child nodes and which ones are not containers.
+
+        This attribute should be placed on the same element that the datasources and the ref attribute is on. It may be set to a space-separated list of RDF properties or resources.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:list itemType="xs:anyURI" />
+  </xs:simpleType>
+
+  <xs:simpleType name="contextAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:context">
+        Should be set to the value of the id of the popup element that should appear when the user context-clicks on the element. A context-click varies on each platform. Usually it will be a right click. You can use the special value '_child' to indicate the first menupopup child of the element.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="xs:IDREF contextAttributeSpecialValues" />
+  </xs:simpleType>
+
+  <xs:simpleType name="contextAttributeSpecialValues">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="_child">
+        <xs:annotation>
+          <xs:documentation>You can use the special value '_child' to indicate the first menupopup child of the element.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="datasourcesAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:datasources">
+        A space-separated list of datasources that an element's template will use for content generation. These can be either internal datasources such as rdf:bookmarks or a URL. The datasources attribute may be placed on most elements, although it will usually be found on trees and menu related elements. The element should have a template element as a child.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:list itemType="xs:anyURI" />
+  </xs:simpleType>
+
+  <xs:simpleType name="dirAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:dir">
+        The direction in which the child elements of the element are placed.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+
+      <xs:enumeration value="normal">
+        <xs:annotation>
+          <xs:documentation>The elements are placed left to right or top to bottom in the order they appear in the XUL code.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="reverse">
+        <xs:annotation>
+          <xs:documentation>The elements are placed right to left or bottom to top. This is reverse of the order in which they appear in the XUL code.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="equalsizeAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:equalsize">
+        This attribute can be used to make the children of the element equal in size.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+
+      <xs:enumeration value="always">
+        <xs:annotation>
+          <xs:documentation>For a horizontally oriented element, this will make all of its children have the width of the widest child. For a vertically oriented element, this will make its children all have the height of the tallest child.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="never">
+        <xs:annotation>
+          <xs:documentation>All of the children are displayed at the size required by the content or as specified by the width and height attributes or the CSS width and height properties. </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="flagsAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:flags">
+        A set of flags used for miscellaneous purposes. Two flags are defined, which may be the value of this attribute.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+
+      <xs:enumeration value="dont-test-empty">
+        <xs:annotation>
+          <xs:documentation>For template generated content, the builder will not check that a container is empty.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="dont-build-content">
+        <xs:annotation>
+          <xs:documentation>This flag may be used on a tree to indicate that content elements should not be generated. This results in a performace enhancement, but you will not be able to use the DOM functions to retreive the tree rows. </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="mousethroughAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:mousethrough">
+        Determines whether mouse events are passed to the element or not. If this attribute is not specified, the value is inherited from the parent of the element. If no ancestor has the mousethrough attribute set, the default value is never.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+
+      <xs:enumeration value="always">
+        <xs:annotation>
+          <xs:documentation>Mouse events are transparent to the element. This means that the element will not receive any mouse events due to either clicking or movement. Child elements may override this if they specify mousethrough="never".</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="never">
+        <xs:annotation>
+          <xs:documentation>Mouse events are passed to the element as normal. </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="orientAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:orient">
+        Used to specify whether the children of the element are oriented horizontally or vertically. The default value depends on the element. You can also use the -moz-box-orient style property.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+
+      <xs:enumeration value="horizontal">
+        <xs:annotation>
+          <xs:documentation>Child elements of the element are placed next to each other in a row in the order that they appear in the XUL source.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="vertical">
+        <xs:annotation>
+          <xs:documentation>Child elements of the element are placed under each other in a column in the order that they appear in the XUL source. </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="separatorOrientAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:separator.orient">
+        Used to specify whether the separator  is a horizontal or vertical separator. Note that the values are the reverse of what seems more likely.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+
+      <xs:enumeration value="horizontal">
+        <xs:annotation>
+          <xs:documentation>horizontal: The separator separates vertically placed elements</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="vertical">
+        <xs:annotation>
+          <xs:documentation>vertical: The separator separates horizontally placed elements.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="packAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:pack">
+        The pack attribute specifies where child elements of the box are placed when the box is larger that the size of the children. For boxes with horizontal orientation, it is used to indicate the position of children horizontally. For boxes with vertical orientation, it is used to indicate the position of children vertically. The align attribute is used to specify the position in the opposite direction. You can also specify the value of pack using the style property -moz-box-pack.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="start">
+        <xs:annotation>
+          <xs:documentation>Child elements are placed starting from the left or top edge of the box. If the box is larger than the total size of the children, the extra space is placed on the right or bottom side.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="center">
+        <xs:annotation>
+          <xs:documentation>Extra space is split equally along each side of the child elements, resulting the children being placed in the center of the box.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="end">
+        <xs:annotation>
+          <xs:documentation>Child elements are placed on the right or bottom edge of the box. If the box is larger than the total size of the children, the extra space is placed on the left or top side. </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="persistAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:persist">
+        A space-separated list of attributes that are maintained when the window is closed. When the window is re-opened, the values of persistent attributes are restored. In Mozilla, persistent attributes are stored in the per-profile file localstore.rdf. Persistence can also be stored using the document.persist function. In order for persistence to work, the element must also have an id.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:list itemType="xs:string" />
+  </xs:simpleType>
+
+  <xs:simpleType name="specificQuerytypeAttributeTypes">
+    <xs:restriction base="xs:string">
+
+      <xs:enumeration value="rdf">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="xml">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="storage">
+        <xs:annotation>
+          <xs:documentation></xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="querytypeAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:querytype">
+        Indicates the type of datasource used in a template. Firefox 3 provides 3 built-in datasources: 'rdf', default, 'xml' and 'storage'. Extensions may provide support for additional datasources.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="xs:string specificQuerytypeAttributeTypes" />
+  </xs:simpleType>
+
+  <xs:simpleType name="sortDirectionAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:sortDirection">
+        Set this attribute to set the direction that template-generated content is sorted. Use the sortResource attribute to specify the sort key.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+
+      <xs:enumeration value="ascending">
+        <xs:annotation>
+          <xs:documentation>The data is sorted in ascending order.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="descending">
+        <xs:annotation>
+          <xs:documentation>The data is sorted in descending order.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="natural">
+        <xs:annotation>
+          <xs:documentation>The data is sorted in natural order, which means the order that it is stored in. </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="specificTooltipAttributeValues">
+    <xs:restriction base="xs:string">
+
+      <xs:enumeration value="_child">
+        <xs:annotation>
+          <xs:documentation>If this attribute is set to '_child', the first tooltip child element inside the element is used.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tooltipAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:tooltip">
+        Should be set to the value of the id of the popup element that should be used as a tooltip window when the mouse hovers over the element for a moment. The tooltip will automatically disappear when the mouse is moved. If this attribute is set to '_child', the first tooltip child element inside the element is used.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:union memberTypes="specificTooltipAttributeValues xs:IDREF" />
+  </xs:simpleType>
+
+  <xs:simpleType name="sizemodeAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:sizemode">
+        The state of the window. The following values may be used:
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+
+      <xs:enumeration value="maximized">
+        <xs:annotation>
+          <xs:documentation>The window is maximized, and occupies the full size of the screen.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="minimized">
+        <xs:annotation>
+          <xs:documentation>The window is minimized, or hidden.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="normal">
+        <xs:annotation>
+          <xs:documentation>The window appears in a normal state at the desired size. </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="htmlColorList">
+    <xs:annotation>
+      <xs:documentation>
+        A list of colors supported by most of the browsers
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AliceBlue" />
+      <xs:enumeration value="AntiqueWhite" />
+      <xs:enumeration value="Aqua" />
+      <xs:enumeration value="Aquamarine" />
+      <xs:enumeration value="Azure" />
+      <xs:enumeration value="Beige" />
+      <xs:enumeration value="Bisque" />
+      <xs:enumeration value="Black" />
+      <xs:enumeration value="BlanchedAlmond" />
+      <xs:enumeration value="Blue" />
+      <xs:enumeration value="BlueViolet" />
+      <xs:enumeration value="Brown" />
+      <xs:enumeration value="BurlyWood" />
+      <xs:enumeration value="CadetBlue" />
+      <xs:enumeration value="Chartreuse" />
+      <xs:enumeration value="Chocolate" />
+      <xs:enumeration value="Coral" />
+      <xs:enumeration value="CornflowerBlue" />
+      <xs:enumeration value="Cornsilk" />
+      <xs:enumeration value="Crimson" />
+      <xs:enumeration value="Cyan" />
+      <xs:enumeration value="DarkBlue" />
+      <xs:enumeration value="DarkCyan" />
+      <xs:enumeration value="DarkGoldenRod" />
+      <xs:enumeration value="DarkGray" />
+      <xs:enumeration value="DarkGrey" />
+      <xs:enumeration value="DarkGreen" />
+      <xs:enumeration value="DarkKhaki" />
+      <xs:enumeration value="DarkMagenta" />
+      <xs:enumeration value="DarkOliveGreen" />
+      <xs:enumeration value="Darkorange" />
+      <xs:enumeration value="DarkOrchid" />
+      <xs:enumeration value="DarkRed" />
+      <xs:enumeration value="DarkSalmon" />
+      <xs:enumeration value="DarkSeaGreen" />
+      <xs:enumeration value="DarkSlateBlue" />
+      <xs:enumeration value="DarkSlateGray" />
+      <xs:enumeration value="DarkSlateGrey" />
+      <xs:enumeration value="DarkTurquoise" />
+      <xs:enumeration value="DarkViolet" />
+      <xs:enumeration value="DeepPink" />
+      <xs:enumeration value="DeepSkyBlue" />
+      <xs:enumeration value="DimGray" />
+      <xs:enumeration value="DimGrey" />
+      <xs:enumeration value="DodgerBlue" />
+      <xs:enumeration value="FireBrick" />
+      <xs:enumeration value="FloralWhite" />
+      <xs:enumeration value="ForestGreen" />
+      <xs:enumeration value="Fuchsia" />
+      <xs:enumeration value="Gainsboro" />
+      <xs:enumeration value="GhostWhite" />
+      <xs:enumeration value="Gold" />
+      <xs:enumeration value="GoldenRod" />
+      <xs:enumeration value="Gray" />
+      <xs:enumeration value="Grey" />
+      <xs:enumeration value="Green" />
+      <xs:enumeration value="GreenYellow" />
+      <xs:enumeration value="HoneyDew" />
+      <xs:enumeration value="HotPink" />
+      <xs:enumeration value="IndianRed" />
+      <xs:enumeration value="Indigo" />
+      <xs:enumeration value="Ivory" />
+      <xs:enumeration value="Khaki" />
+      <xs:enumeration value="Lavender" />
+      <xs:enumeration value="LavenderBlush" />
+      <xs:enumeration value="LawnGreen" />
+      <xs:enumeration value="LemonChiffon" />
+      <xs:enumeration value="LightBlue" />
+      <xs:enumeration value="LightCoral" />
+      <xs:enumeration value="LightCyan" />
+      <xs:enumeration value="LightGoldenRodYellow" />
+      <xs:enumeration value="LightGray" />
+      <xs:enumeration value="LightGrey" />
+      <xs:enumeration value="LightGreen" />
+      <xs:enumeration value="LightPink" />
+      <xs:enumeration value="LightSalmon" />
+      <xs:enumeration value="LightSeaGreen" />
+      <xs:enumeration value="LightSkyBlue" />
+      <xs:enumeration value="LightSlateGray" />
+      <xs:enumeration value="LightSlateGrey" />
+      <xs:enumeration value="LightSteelBlue" />
+      <xs:enumeration value="LightYellow" />
+      <xs:enumeration value="Lime" />
+      <xs:enumeration value="LimeGreen" />
+      <xs:enumeration value="Linen" />
+      <xs:enumeration value="Magenta" />
+      <xs:enumeration value="Maroon" />
+      <xs:enumeration value="MediumAquaMarine" />
+      <xs:enumeration value="MediumBlue" />
+      <xs:enumeration value="MediumOrchid" />
+      <xs:enumeration value="MediumPurple" />
+      <xs:enumeration value="MediumSeaGreen" />
+      <xs:enumeration value="MediumSlateBlue" />
+      <xs:enumeration value="MediumSpringGreen" />
+      <xs:enumeration value="MediumTurquoise" />
+      <xs:enumeration value="MediumVioletRed" />
+      <xs:enumeration value="MidnightBlue" />
+      <xs:enumeration value="MintCream" />
+      <xs:enumeration value="MistyRose" />
+      <xs:enumeration value="Moccasin" />
+      <xs:enumeration value="NavajoWhite" />
+      <xs:enumeration value="Navy" />
+      <xs:enumeration value="OldLace" />
+      <xs:enumeration value="Olive" />
+      <xs:enumeration value="OliveDrab" />
+      <xs:enumeration value="Orange" />
+      <xs:enumeration value="OrangeRed" />
+      <xs:enumeration value="Orchid" />
+      <xs:enumeration value="PaleGoldenRod" />
+      <xs:enumeration value="PaleGreen" />
+      <xs:enumeration value="PaleTurquoise" />
+      <xs:enumeration value="PaleVioletRed" />
+      <xs:enumeration value="PapayaWhip" />
+      <xs:enumeration value="PeachPuff" />
+      <xs:enumeration value="Peru" />
+      <xs:enumeration value="Pink" />
+      <xs:enumeration value="Plum" />
+      <xs:enumeration value="PowderBlue" />
+      <xs:enumeration value="Purple" />
+      <xs:enumeration value="Red" />
+      <xs:enumeration value="RosyBrown" />
+      <xs:enumeration value="RoyalBlue" />
+      <xs:enumeration value="SaddleBrown" />
+      <xs:enumeration value="Salmon" />
+      <xs:enumeration value="SandyBrown" />
+      <xs:enumeration value="SeaGreen" />
+      <xs:enumeration value="SeaShell" />
+      <xs:enumeration value="Sienna" />
+      <xs:enumeration value="Silver" />
+      <xs:enumeration value="SkyBlue" />
+      <xs:enumeration value="SlateBlue" />
+      <xs:enumeration value="SlateGray" />
+      <xs:enumeration value="SlateGrey" />
+      <xs:enumeration value="Snow" />
+      <xs:enumeration value="SpringGreen" />
+      <xs:enumeration value="SteelBlue" />
+      <xs:enumeration value="Tan" />
+      <xs:enumeration value="Teal" />
+      <xs:enumeration value="Thistle" />
+      <xs:enumeration value="Tomato" />
+      <xs:enumeration value="Turquoise" />
+      <xs:enumeration value="Violet" />
+      <xs:enumeration value="Wheat" />
+      <xs:enumeration value="White" />
+      <xs:enumeration value="WhiteSmoke" />
+      <xs:enumeration value="Yellow" />
+      <xs:enumeration value="YellowGreen" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="colorHex">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="^#[0-9A-Fa-f]{6}$" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="colorRgb">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="^rgb\(((1?[0-9]{1,2}|2[0-4][0-9]|25[0-5]),){2}(1?[0-9]{1,2}|2[0-4][0-9]|25[0-5])\)$" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="color">
+    <xs:union memberTypes="htmlColorList colorHex colorRgb" />
+  </xs:simpleType>
+
+  <xs:simpleType name="dialogDefaultButtonAttributeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="accept">
+        <xs:annotation>
+          <xs:documentation>
+            The OK button, which will accept the changes when pressed. This button will also be the default button.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cancel">
+        <xs:annotation>
+          <xs:documentation>
+            The cancel button which will cancel the operation.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="help">
+        <xs:annotation>
+          <xs:documentation>
+            A help button for displaying help about the dialog.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="disclosure">
+        <xs:annotation>
+          <xs:documentation>
+            A button to show more information. This might be a button or a disclosure triangle.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="extra1">
+        <xs:annotation>
+          <xs:documentation>
+            An optional additional button. You can set its label with the buttonlabelextra1 attribute.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="extra2">
+        <xs:annotation>
+          <xs:documentation>
+            A second optional additional button. You can set its label with the buttonlabelextra2 attribute.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="dialogButtonsAttributeType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="^((accept|cancel|help|disclosure|extra1|extra2)\s*,\s*){0,5}(accept|cancel|help|disclosure|extra1|extra2)$" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="cropAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:crop">
+        If the label of the element is too big to fit in its given space, the text will be cropped on the side specified by the crop attribute. An ellipsis will be used in place of the cropped text. If the box direction is reversed, the cropping is reversed.
+
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="start">
+        <xs:annotation>
+          <xs:documentation>
+            start: The text will be cropped on its left side.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="end">
+        <xs:annotation>
+          <xs:documentation>
+            end: The text will be cropped on its right side.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="left">
+        <xs:annotation>
+          <xs:documentation>
+            left: Deprecated The text will be cropped on its left side.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="right">
+        <xs:annotation>
+          <xs:documentation>
+            right: Deprecated The text will be cropped on its right side.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="center">
+        <xs:annotation>
+          <xs:documentation>
+            center: The text will be cropped in the middle, showing both the start and end of the text normally.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="none">
+        <xs:annotation>
+          <xs:documentation>
+            none: The text will be not be cropped using an ellipsis. However, the text will simply be cut off if it is too large. The side depends on the CSS text alignment.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="sizetopopupAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:sizetopopup">
+        Indicates how the menu width and the menupopup width are determined. If the sizetopopup attribute is left out or set to none, the menu will be its preferred width and the popup may extend outside of this width, unaffected by the maximum width of the menu itself.
+
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="none">
+        <xs:annotation>
+          <xs:documentation>
+            none: The width of the popup will not be constrained to the size of the menu.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="always">
+        <xs:annotation>
+          <xs:documentation>
+            always: If set to always, the menu's width will be the same as that necessary for the menupopup. If the menu has a maximum width, the popup will also be this width.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="positionAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:popup.position">
+        The position attribute determines where the popup appears relative to the element the user clicked to invoke the popup. This allows you to place the popup on one side of a button.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="after_start">
+        <xs:annotation>
+          <xs:documentation>
+            after_start: The popup appears underneath the element with the popup's upper-left corner aligned with the lower-left corner of the element. The left edges of the element and the popup are aligned. This is typically used for drop-down menus.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="after_end">
+        <xs:annotation>
+          <xs:documentation>
+            after_end: The popup appears underneath the element with the popup's upper-right corner aligned with the lower-right corner of the element. The right edges of the element and the popup are aligned.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="before_start">
+        <xs:annotation>
+          <xs:documentation>
+            before_start: The popup appears above the element with the popup's lower-left corner aligned with the upper-left corner of the element. The left edges of the element and the popup are aligned.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="before_end">
+        <xs:annotation>
+          <xs:documentation>
+            before_end: The popup appears above the element with the popup's lower-right corner aligned with the upper-right corner of the element. The right edges of the element and the popup are aligned.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="end_after">
+        <xs:annotation>
+          <xs:documentation>
+            end_after: The popup appears to the right of the element with the popup's lower-left corner aligned with the lower-right corner of the element. The bottom edges of the element and the popup are aligned.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="end_before">
+        <xs:annotation>
+          <xs:documentation>
+            end_before: The popup appears to the right of the element with the popup's upper-left corner aligned with the upper-right corner of the element. The top edges of the element and the popup are aligned.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="start_after">
+        <xs:annotation>
+          <xs:documentation>
+            start_after: The popup appears to the left of the element with the popup's lower-right corner aligned with the lower-left corner of the element. The bottom edges of the element and the popup are aligned.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="start_before">
+        <xs:annotation>
+          <xs:documentation>
+            start_before: The popup appears to the left of the element with the popup's upper-right corner aligned with the upper-left corner of the element. The top edges of the element and the popup are aligned.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="overlap">
+        <xs:annotation>
+          <xs:documentation>
+            overlap: The popup appears over top of the element with the upper-left corners aligned.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="at_pointer">
+        <xs:annotation>
+          <xs:documentation>
+            at_pointer: The popup appears at the same position as the mouse pointer.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="after_pointer">
+        <xs:annotation>
+          <xs:documentation>
+            after_pointer: The popup appears at the same horizontal position as the mouse pointer, but vertically, it is placed just below the element.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="typeAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:type">
+        Can be used to create checkable menuitems or for radio button menuitems.
+
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="checkbox">
+        <xs:annotation>
+          <xs:documentation>
+            checkbox: The menuitem is checked. The checked attribute determines whether the menuitem is checked or not.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="radio">
+        <xs:annotation>
+          <xs:documentation>
+            radio: The menuitem becomes part of a radio group. Other menuitems that have the same value for their name attributes are part of the same radio group. Only one menuitem in the same radio group can be checked at once.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="validateAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:validate">
+        This attribute indicates whether to load the image from the cache or not. This would be useful if the images are stored remotely or you plan on swapping the image frequently. The following values are accepted, or leave out the attribute entirely for default handling:
+
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="always">
+        <xs:annotation>
+          <xs:documentation>
+            always: The image is always checked to see whether it should be reloaded.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="never">
+        <xs:annotation>
+          <xs:documentation>
+            never: The image will be loaded from the cache if possible.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="character">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="chromeOrRegularUrl">
+    <xs:restriction base="xs:string"></xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="substateAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:substate">
+        On splitters which have state="collapsed" and collapse="both", determines which direction the splitter is actually collapsed in. Since collapse="both" is a Gecko 1.9+ feature, this will have no effect on earlier versions.
+
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="before">
+        <xs:annotation>
+          <xs:documentation>
+            before: The element immediately before the splitter is collapsed.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="after">
+        <xs:annotation>
+          <xs:documentation>
+            after: The element immediately after the splitter is collapsed.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="stateAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:state">
+        Indicates whether the splitter has collapsed content or not. This attribute will be updated automatically as the splitter is moved, and is generally used in a stylesheet to apply a different appearance for each state.
+
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="open">
+        <xs:annotation>
+          <xs:documentation>
+            open: The content either before or after the splitter, depending on the value of the collapsed attribute, is currently displayed.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="collapsed">
+        <xs:annotation>
+          <xs:documentation>
+            collapsed: The content either before or after the splitter is collapsed and is not visible.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="dragging">
+        <xs:annotation>
+          <xs:documentation>
+            dragging: The user is current adjusting the position of the splitter, typically by dragging it with the mouse.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="resizebeforeAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:resizebefore">
+        This attribute indicates which element to the left or above the splitter should be resized when the splitter is repositioned.
+
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="closest">
+        <xs:annotation>
+          <xs:documentation>
+            closest: The element immediately to the left or above the splitter resizes.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="farthest">
+        <xs:annotation>
+          <xs:documentation>
+            farthest: The element that is the farthest away from the splitter to the left or above the splitter resizes.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="flex">
+        <xs:annotation>
+          <xs:documentation>
+            flex: The closest flexible element resizes. New in Firefox 3
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="resizeafterAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:resizeafter">
+        This attribute indicates which element to the right or below the splitter should be resized when the splitter is repositioned.
+
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="closest">
+        <xs:annotation>
+          <xs:documentation>
+            closest: The element immediately to the right or below the splitter resizes.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="farthest">
+        <xs:annotation>
+          <xs:documentation>
+            farthest: The element that is the farthest away from the splitter to the right or below the splitter resizes.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="grow">
+        <xs:annotation>
+          <xs:documentation>
+            grow: The elements to the right or below the splitter do not change size (unless they are flexible) when the splitter is dragged, but instead the entire container changes size.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="flex">
+        <xs:annotation>
+          <xs:documentation>
+            flex: The closest flexible element resizes. New in Firefox 3
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="collapseAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/docs/XUL:Attribute:collapse">
+        Determines which side of the splitter is collapsed when its grippy is clicked. If this attribute is not specified, the splitter will not cause a collapse. You should put a grippy element inside the splitter when it is used for collapsing.
+
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="none">
+        <xs:annotation>
+          <xs:documentation>
+            none: No collapsing occurs.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="before">
+        <xs:annotation>
+          <xs:documentation>
+            before: When the grippy is clicked, the element immediately before the splitter in the same parent is collapsed so that its width or height is 0.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="after">
+        <xs:annotation>
+          <xs:documentation>
+            after: When the grippy is clicked, the element immediately after the splitter in the same parent is collapsed so that its width or height is 0.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="both">
+        <xs:annotation>
+          <xs:documentation>
+            both: Either the element immediately before the splitter, or the element immediately after the splitter can be collapsed, if the size of that element would fall below the minimum size due to the position of the splitter. New in Firefox 3
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="relAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/rel">
+        The type of comparison to perform.
+
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="equals">
+        <xs:annotation>
+          <xs:documentation>
+            equals: The subject and value must match exactly.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="less">
+        <xs:annotation>
+          <xs:documentation>
+            less: The numeric value of the subject must be less than the value
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="greater">
+        <xs:annotation>
+          <xs:documentation>
+            greater: The numeric value of the subject must be greater than the value
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="before">
+        <xs:annotation>
+          <xs:documentation>
+            before: The string value of subject must come before value alphabetically
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="after">
+        <xs:annotation>
+          <xs:documentation>
+            after: The string value of subject must come after value alphabetically
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="startswith">
+        <xs:annotation>
+          <xs:documentation>
+            startswith: The value of subject must start with the value
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="endswith">
+        <xs:annotation>
+          <xs:documentation>
+            endswith: The value of subject must end with the value
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="contains">
+        <xs:annotation>
+          <xs:documentation>
+            contains: The value of subject must contain the value as a substring
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="dlgtypeAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/dlgtype">
+        The dialog type of the button, used only when the button is in a dialog box. You can use this feature to replace the standard dialog box buttons with custom buttons, yet the dialog event methods will still function. For example, if the dlgType is set to accept, the button will replace the dialog box's accept button, which is usually labeled OK. Using this attribute on a button that is not in a dialog box has no effect. The following values can be used as the dialog type:
+
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="accept">
+        <xs:annotation>
+          <xs:documentation>
+            accept: The OK button, which will accept the changes when pressed.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cancel">
+        <xs:annotation>
+          <xs:documentation>
+            cancel: The cancel button which will cancel the operation.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="help">
+        <xs:annotation>
+          <xs:documentation>
+            help: A help button for displaying help about the dialog.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="disclosure">
+        <xs:annotation>
+          <xs:documentation>
+            disclosure: A button to show more information. This might be a button or a disclosure triangle.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="buttontypeAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/type">
+        The type of button. If this attribute is not present, a normal button is created. Leave the attribute out for a normal button.
+
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="checkbox">
+        <xs:annotation>
+          <xs:documentation>
+            checkbox: This type of button can be in two states. The user can click the button to switch between the states. This is not the same as a checkbox because it looks like a button.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="menutypemenu">
+        <xs:annotation>
+          <xs:documentation>
+            menu: Set the type attribute to the value menu to create a button with a menu popup. Place a menupopup
+            element inside the button in this case. The user may click anywhere on the button to open and close the menu.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="menu-buttonmenu-buttonmenu">
+        <xs:annotation>
+          <xs:documentation>
+            menu-button: You can also use the value menu-button to create a button with a menu. Unlike the menu type, this type requires the user to press the arrow to open the menu, but a different command may be invoked when the main part of the button is pressed.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="radio">
+        <xs:annotation>
+          <xs:documentation>
+            radio: The button acts like a radio button. Only one button in the group can be on a once.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="repeat">
+        <xs:annotation>
+          <xs:documentation>
+            repeat: This button will fire its command event repeatedly while the mouse button is held down. New in Firefox 3
+
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="browsertypeAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/browser.type">
+        The type of browser, which can be used to set the access of the document loaded inside the browser. If this is not set, the loaded document has the same access as the window containing the browser
+        .
+
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="content">
+        <xs:annotation>
+          <xs:documentation>
+            content: A browser for content. The content that is loaded inside the browser is not allowed to access the chrome above it.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="content-primary">
+        <xs:annotation>
+          <xs:documentation>
+            content-primary: The primary browser for content. The content that is loaded inside the browser is not allowed to access the chrome above it. For instance, in a web browser, this would be the element that displays the web page. The window for the primary content can be retrieved more conveniently using window.content.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="content-targetablebrowser
+">
+        <xs:annotation>
+          <xs:documentation>
+            content-targetable: One browser among many for content. The content that is loaded inside the browser is not allowed to access the chrome above it. This is the preferred value for any browser
+            element in an application that will use multiple browsers of equal privileges and is unselected at the moment.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="eventsAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/commandset">
+        A comma-separated list of event names that the command updater will update upon. If this attribute is not specified, or you set it to the value '*', all events are valid. Valid events are listed below, or you can use your own events. You can send a custom event by calling the UpdateCommands  method of the command dispatcher.
+
+        * focus: Occurs when the focused element changes.
+        * select: Occurs when the selected text changed.
+        * clipboard: Occurs when the clipboard is changed.
+        * undo: Occurs when the undo buffer is changed.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="^\*|(((focus|select|clipboard|undo),)*(focus|select|clipboard|undo))$" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="datepickervalueAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/datepicker">
+        The initial value of the datepicker in the form YYYY-MM-DD.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="^\d{4}-(0\d|1[012])-([0-2]\d|3[01])$" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="datapickertypeAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/datapicker.type">
+        You can set the type attribute to one of the values below to specify the type of datepicker to use
+
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="normal">
+        <xs:annotation>
+          <xs:documentation>
+            normal: A datepicker with three fields for entering the year, month and date. This is the default value so do not specify the type attribute if this kind is desired.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="grid">
+        <xs:annotation>
+          <xs:documentation>
+            grid: A datepicker that displays a calendar grid where one month is shown at a time.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="popup">
+        <xs:annotation>
+          <xs:documentation>
+            popup: A datepicker with three entry fields but an additional dropdown button, which, when pressed, will display a popup calendar grid.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="editortypeAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/editortype">
+        The type of editor to use. This value will be overridden depending on the content type of the document in the editor.
+
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="html">
+        <xs:annotation>
+          <xs:documentation>
+            html: An HTML editor.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="text">
+        <xs:annotation>
+          <xs:documentation>
+            text: A plaintext editor.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="modifiersEnumType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/modifiers">
+        A list of modifier keys that should be pressed to invoke the keyboard shortcut. Multiple keys may be separated by spaces or commas. Keys will map to other keys on platforms that do not have them.
+
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="shift">
+        <xs:annotation>
+          <xs:documentation>
+            shift: The Shift key.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="alt">
+        <xs:annotation>
+          <xs:documentation>
+            alt: The Alt key. On the Macintosh, this is the Option key. On Macintosh this can only be used in conjunction with another modifier, since Alt+Letter combinations are reserved for entering special characters in text.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="meta">
+        <xs:annotation>
+          <xs:documentation>
+            meta: The Meta key. On the Macintosh, this is the Command key.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="control">
+        <xs:annotation>
+          <xs:documentation>
+            control: The Control key.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="accel">
+        <xs:annotation>
+          <xs:documentation>
+            accel: The key used for keyboard shortcuts on the user's platform. Usually, this would be the value you would use.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="access">
+        <xs:annotation>
+          <xs:documentation>
+            access: The access key for activating menus and other elements. On Windows, this is the Alt key, used in conjuction with an element's accesskey.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="any">
+        <xs:annotation>
+          <xs:documentation>
+            any: Indicates that all modifiers preceding it are optional.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="modifiersAttributeType">
+    <xs:list itemType="modifiersEnumType" />
+  </xs:simpleType>
+
+
+  <xs:simpleType name="keycodes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="VK_CANCEL" />
+      <xs:enumeration value="VK_BACK" />
+      <xs:enumeration value="VK_TAB" />
+      <xs:enumeration value="VK_CLEAR" />
+      <xs:enumeration value="VK_RETURN" />
+      <xs:enumeration value="VK_ENTER" />
+      <xs:enumeration value="VK_SHIFT" />
+      <xs:enumeration value="VK_CONTROL" />
+      <xs:enumeration value="VK_ALT" />
+      <xs:enumeration value="VK_PAUSE" />
+      <xs:enumeration value="VK_CAPS_LOCK" />
+      <xs:enumeration value="VK_ESCAPE" />
+      <xs:enumeration value="VK_SPACE" />
+      <xs:enumeration value="VK_PAGE_UP" />
+      <xs:enumeration value="VK_PAGE_DOWN" />
+      <xs:enumeration value="VK_END" />
+      <xs:enumeration value="VK_HOME" />
+      <xs:enumeration value="VK_LEFT" />
+      <xs:enumeration value="VK_UP" />
+      <xs:enumeration value="VK_RIGHT" />
+      <xs:enumeration value="VK_DOWN" />
+      <xs:enumeration value="VK_PRINTSCREEN" />
+      <xs:enumeration value="VK_INSERT" />
+      <xs:enumeration value="VK_DELETE" />
+      <xs:enumeration value="VK_0" />
+      <xs:enumeration value="VK_1" />
+      <xs:enumeration value="VK_2" />
+      <xs:enumeration value="VK_3" />
+      <xs:enumeration value="VK_4" />
+      <xs:enumeration value="VK_5" />
+      <xs:enumeration value="VK_6" />
+      <xs:enumeration value="VK_7" />
+      <xs:enumeration value="VK_8" />
+      <xs:enumeration value="VK_9" />
+      <xs:enumeration value="VK_SEMICOLON" />
+      <xs:enumeration value="VK_EQUALS" />
+      <xs:enumeration value="VK_A" />
+      <xs:enumeration value="VK_B" />
+      <xs:enumeration value="VK_C" />
+      <xs:enumeration value="VK_D" />
+      <xs:enumeration value="VK_E" />
+      <xs:enumeration value="VK_F" />
+      <xs:enumeration value="VK_G" />
+      <xs:enumeration value="VK_H" />
+      <xs:enumeration value="VK_I" />
+      <xs:enumeration value="VK_J" />
+      <xs:enumeration value="VK_K" />
+      <xs:enumeration value="VK_L" />
+      <xs:enumeration value="VK_M" />
+      <xs:enumeration value="VK_N" />
+      <xs:enumeration value="VK_O" />
+      <xs:enumeration value="VK_P" />
+      <xs:enumeration value="VK_Q" />
+      <xs:enumeration value="VK_R" />
+      <xs:enumeration value="VK_S" />
+      <xs:enumeration value="VK_T" />
+      <xs:enumeration value="VK_U" />
+      <xs:enumeration value="VK_V" />
+      <xs:enumeration value="VK_W" />
+      <xs:enumeration value="VK_X" />
+      <xs:enumeration value="VK_Y" />
+      <xs:enumeration value="VK_Z" />
+      <xs:enumeration value="VK_NUMPAD0" />
+      <xs:enumeration value="VK_NUMPAD1" />
+      <xs:enumeration value="VK_NUMPAD2" />
+      <xs:enumeration value="VK_NUMPAD3" />
+      <xs:enumeration value="VK_NUMPAD4" />
+      <xs:enumeration value="VK_NUMPAD5" />
+      <xs:enumeration value="VK_NUMPAD6" />
+      <xs:enumeration value="VK_NUMPAD7" />
+      <xs:enumeration value="VK_NUMPAD8" />
+      <xs:enumeration value="VK_NUMPAD9" />
+      <xs:enumeration value="VK_MULTIPLY" />
+      <xs:enumeration value="VK_ADD" />
+      <xs:enumeration value="VK_SEPARATOR" />
+      <xs:enumeration value="VK_SUBTRACT" />
+      <xs:enumeration value="VK_DECIMAL" />
+      <xs:enumeration value="VK_DIVIDE" />
+      <xs:enumeration value="VK_F1" />
+      <xs:enumeration value="VK_F2" />
+      <xs:enumeration value="VK_F3" />
+      <xs:enumeration value="VK_F4" />
+      <xs:enumeration value="VK_F5" />
+      <xs:enumeration value="VK_F6" />
+      <xs:enumeration value="VK_F7" />
+      <xs:enumeration value="VK_F8" />
+      <xs:enumeration value="VK_F9" />
+      <xs:enumeration value="VK_F10" />
+      <xs:enumeration value="VK_F11" />
+      <xs:enumeration value="VK_F12" />
+      <xs:enumeration value="VK_F13" />
+      <xs:enumeration value="VK_F14" />
+      <xs:enumeration value="VK_F15" />
+      <xs:enumeration value="VK_F16" />
+      <xs:enumeration value="VK_F17" />
+      <xs:enumeration value="VK_F18" />
+      <xs:enumeration value="VK_F19" />
+      <xs:enumeration value="VK_F20" />
+      <xs:enumeration value="VK_F21" />
+      <xs:enumeration value="VK_F22" />
+      <xs:enumeration value="VK_F23" />
+      <xs:enumeration value="VK_F24" />
+      <xs:enumeration value="VK_NUM_LOCK" />
+      <xs:enumeration value="VK_SCROLL_LOCK" />
+      <xs:enumeration value="VK_COMMA" />
+      <xs:enumeration value="VK_PERIOD" />
+      <xs:enumeration value="VK_SLASH" />
+      <xs:enumeration value="VK_BACK_QUOTE" />
+      <xs:enumeration value="VK_OPEN_BRACKET" />
+      <xs:enumeration value="VK_BACK_SLASH" />
+      <xs:enumeration value="VK_CLOSE_BRACKET" />
+      <xs:enumeration value="VK_QUOTE" />
+      <xs:enumeration value="VK_HELP" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="seltypeAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/seltype">
+        Used to indicate whether multiple selection is allowed.
+
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="single">
+        <xs:annotation>
+          <xs:documentation>
+            single: Only one row may be selected at a time. (Default in listbox.)
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="multiple">
+        <xs:annotation>
+          <xs:documentation>
+            multiple: Multiple rows may be selected at once. (Default in tree.)
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="notificationTypeAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/type">
+        Indicates the type of notification, determined from the priority.
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="info">
+        <xs:annotation>
+          <xs:documentation>info: a notification that is of lesser importance.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="warning">
+        <xs:annotation>
+          <xs:documentation>warning: a normal warning notification.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="critical">
+        <xs:annotation>
+          <xs:documentation>critical: a critical notification.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="panelpositionAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/position">
+        The position attribute determines where the popup appears relative to the element the user clicked to invoke the popup. This allows you to place the popup on one side of a button.
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="after_start">
+        <xs:annotation>
+          <xs:documentation>after_start: The popup appears underneath the element with the popup's upper-left corner aligned with the lower-left corner of the element. The left edges of the element and the popup are aligned. This is typically used for drop-down menus.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="after_end">
+        <xs:annotation>
+          <xs:documentation>after_end: The popup appears underneath the element with the popup's upper-right corner aligned with the lower-right corner of the element. The right edges of the element and the popup are aligned.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="before_start">
+        <xs:annotation>
+          <xs:documentation>before_start: The popup appears above the element with the popup's lower-left corner aligned with the upper-left corner of the element. The left edges of the element and the popup are aligned.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="before_end">
+        <xs:annotation>
+          <xs:documentation>before_end: The popup appears above the element with the popup's lower-right corner aligned with the upper-right corner of the element. The right edges of the element and the popup are aligned.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="end_after">
+        <xs:annotation>
+          <xs:documentation>end_after: The popup appears to the right of the element with the popup's lower-left corner aligned with the lower-right corner of the element. The bottom edges of the element and the popup are aligned.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="end_before">
+        <xs:annotation>
+          <xs:documentation>end_before: The popup appears to the right of the element with the popup's upper-left corner aligned with the upper-right corner of the element. The top edges of the element and the popup are aligned.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="start_after">
+        <xs:annotation>
+          <xs:documentation>start_after: The popup appears to the left of the element with the popup's lower-right corner aligned with the lower-left corner of the element. The bottom edges of the element and the popup are aligned.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="start_before">
+        <xs:annotation>
+          <xs:documentation>start_before: The popup appears to the left of the element with the popup's upper-right corner aligned with the upper-left corner of the element. The top edges of the element and the popup are aligned.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="overlap">
+        <xs:annotation>
+          <xs:documentation>overlap: The popup appears over top of the element with the upper-left corners aligned.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="at_pointer">
+        <xs:annotation>
+          <xs:documentation>at_pointer: The popup appears at the same position as the mouse pointer.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="after_pointer">
+        <xs:annotation>
+          <xs:documentation>after_pointer: The popup appears at the same horizontal position as the mouse pointer, but vertically, it is placed just below the element.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="paramtypeAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/type">
+        The type of the parameter's value
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="integer">
+        <xs:annotation>
+          <xs:documentation>integer: 32 bit integer</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="int64">
+        <xs:annotation>
+          <xs:documentation>int64: 64 bit integer</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="double">
+        <xs:annotation>
+          <xs:documentation>double: double-precision floating-point number</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="string">
+        <xs:annotation>
+          <xs:documentation>string: string literal, the default value</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="progressmodeAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/mode">
+        A determined progressmeter
+        is used in cases where you know how long an operation will take. An undetermined progressmeter
+        can be used when you don't and will typically be drawn as a spinning barber pole.
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="determined">
+        <xs:annotation>
+          <xs:documentation>determined: The progress meter uses its value attribute to determine the amount of the bar that is filled in.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="undetermined">
+        <xs:annotation>
+          <xs:documentation>undetermined: The progressmeter is indeterminate.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="resizerdirAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/dir ">
+        The direction that the window is resized.
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="left">
+        <xs:annotation>
+          <xs:documentation>left: Resized to the left.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="right">
+        <xs:annotation>
+          <xs:documentation>right: Resized to the right.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="top">
+        <xs:annotation>
+          <xs:documentation>top: Resized up.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="bottom">
+        <xs:annotation>
+          <xs:documentation>bottom: Resized down.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="bottomleft">
+        <xs:annotation>
+          <xs:documentation>bottomleft: Resized down and to the left.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="bottomright">
+        <xs:annotation>
+          <xs:documentation>bottomright: Resized down and to the right.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="topleft">
+        <xs:annotation>
+          <xs:documentation>topleft: Resized up and to the left.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="topright">
+        <xs:annotation>
+          <xs:documentation>topright: Resized up and to the right.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="preferencetypeAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/preference.type">
+        The preference type which should be one of the following values.
+
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="bool">
+        <xs:annotation>
+          <xs:documentation>
+            bool: A boolean set to either true or false. Usually a checkbox
+            would be connected to these preferences.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="int">
+        <xs:annotation>
+          <xs:documentation>
+            int: An integer
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="string">
+        <xs:annotation>
+          <xs:documentation>
+            string: A string
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="unichar">
+        <xs:annotation>
+          <xs:documentation>
+            unichar: A Unicode string
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="wstring">
+        <xs:annotation>
+          <xs:documentation>
+            wstring: A localized string. In this situation the preference will save the path to a property file which contains the actual value of the preference.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="file">
+        <xs:annotation>
+          <xs:documentation>
+            file: A file. The file path will be stored in the preferences.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="mimeTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="application/envoy" />
+      <xs:enumeration value="application/fractals" />
+      <xs:enumeration value="application/futuresplash" />
+      <xs:enumeration value="application/hta" />
+      <xs:enumeration value="application/internet-property-stream" />
+      <xs:enumeration value="application/mac-binhex40" />
+      <xs:enumeration value="application/msword" />
+      <xs:enumeration value="application/octet-stream" />
+      <xs:enumeration value="application/oda" />
+      <xs:enumeration value="application/olescript" />
+      <xs:enumeration value="application/pdf" />
+      <xs:enumeration value="application/pics-rules" />
+      <xs:enumeration value="application/pkcs10" />
+      <xs:enumeration value="application/pkix-crl" />
+      <xs:enumeration value="application/postscript" />
+      <xs:enumeration value="application/rtf" />
+      <xs:enumeration value="application/set-payment-initiation" />
+      <xs:enumeration value="application/set-registration-initiation" />
+      <xs:enumeration value="application/vnd.ms-excel" />
+      <xs:enumeration value="application/vnd.ms-outlook" />
+      <xs:enumeration value="application/vnd.ms-pkicertstore" />
+      <xs:enumeration value="application/vnd.ms-pkiseccat" />
+      <xs:enumeration value="application/vnd.ms-pkistl" />
+      <xs:enumeration value="application/vnd.ms-powerpoint" />
+      <xs:enumeration value="application/vnd.ms-project" />
+      <xs:enumeration value="application/vnd.ms-works" />
+      <xs:enumeration value="application/winhlp" />
+      <xs:enumeration value="application/x-bcpio" />
+      <xs:enumeration value="application/x-cdf" />
+      <xs:enumeration value="application/x-compress" />
+      <xs:enumeration value="application/x-compressed" />
+      <xs:enumeration value="application/x-cpio" />
+      <xs:enumeration value="application/x-csh" />
+      <xs:enumeration value="application/x-director" />
+      <xs:enumeration value="application/x-dvi" />
+      <xs:enumeration value="application/x-gtar" />
+      <xs:enumeration value="application/x-gzip" />
+      <xs:enumeration value="application/x-hdf" />
+      <xs:enumeration value="application/x-internet-signup" />
+      <xs:enumeration value="application/x-iphone" />
+      <xs:enumeration value="application/x-javascript" />
+      <xs:enumeration value="application/x-latex" />
+      <xs:enumeration value="application/x-msaccess" />
+      <xs:enumeration value="application/x-mscardfile" />
+      <xs:enumeration value="application/x-msclip" />
+      <xs:enumeration value="application/x-msdownload" />
+      <xs:enumeration value="application/x-msmediaview" />
+      <xs:enumeration value="application/x-msmetafile" />
+      <xs:enumeration value="application/x-msmoney" />
+      <xs:enumeration value="application/x-mspublisher" />
+      <xs:enumeration value="application/x-msschedule" />
+      <xs:enumeration value="application/x-msterminal" />
+      <xs:enumeration value="application/x-mswrite" />
+      <xs:enumeration value="application/x-netcdf" />
+      <xs:enumeration value="application/x-perfmon" />
+      <xs:enumeration value="application/x-pkcs12" />
+      <xs:enumeration value="application/x-pkcs7-certificates" />
+      <xs:enumeration value="application/x-pkcs7-certreqresp" />
+      <xs:enumeration value="application/x-pkcs7-mime" />
+      <xs:enumeration value="application/x-pkcs7-signature" />
+      <xs:enumeration value="application/x-sh" />
+      <xs:enumeration value="application/x-shar" />
+      <xs:enumeration value="application/x-shockwave-flash" />
+      <xs:enumeration value="application/x-stuffit" />
+      <xs:enumeration value="application/x-sv4cpio" />
+      <xs:enumeration value="application/x-sv4crc" />
+      <xs:enumeration value="application/x-tar" />
+      <xs:enumeration value="application/x-tcl" />
+      <xs:enumeration value="application/x-tex" />
+      <xs:enumeration value="application/x-texinfo" />
+      <xs:enumeration value="application/x-troff" />
+      <xs:enumeration value="application/x-troff-man" />
+      <xs:enumeration value="application/x-troff-me" />
+      <xs:enumeration value="application/x-troff-ms" />
+      <xs:enumeration value="application/x-ustar" />
+      <xs:enumeration value="application/x-wais-source" />
+      <xs:enumeration value="application/x-x509-ca-cert" />
+      <xs:enumeration value="application/ynd.ms-pkipko" />
+      <xs:enumeration value="application/zip" />
+      <xs:enumeration value="audio/basic" />
+      <xs:enumeration value="audio/mid" />
+      <xs:enumeration value="audio/mpeg" />
+      <xs:enumeration value="audio/x-aiff" />
+      <xs:enumeration value="audio/x-mpegurl" />
+      <xs:enumeration value="audio/x-pn-realaudio" />
+      <xs:enumeration value="audio/x-wav" />
+      <xs:enumeration value="image/bmp" />
+      <xs:enumeration value="image/cis-cod" />
+      <xs:enumeration value="image/gif" />
+      <xs:enumeration value="image/ief" />
+      <xs:enumeration value="image/jpeg" />
+      <xs:enumeration value="image/pipeg" />
+      <xs:enumeration value="image/svg+xml" />
+      <xs:enumeration value="image/tiff" />
+      <xs:enumeration value="image/x-cmu-raster" />
+      <xs:enumeration value="image/x-cmx" />
+      <xs:enumeration value="image/x-icon" />
+      <xs:enumeration value="image/x-portable-anymap" />
+      <xs:enumeration value="image/x-portable-bitmap" />
+      <xs:enumeration value="image/x-portable-graymap" />
+      <xs:enumeration value="image/x-portable-pixmap" />
+      <xs:enumeration value="image/x-rgb" />
+      <xs:enumeration value="image/x-xbitmap" />
+      <xs:enumeration value="image/x-xpixmap" />
+      <xs:enumeration value="image/x-xwindowdump" />
+      <xs:enumeration value="message/rfc822" />
+      <xs:enumeration value="text/css" />
+      <xs:enumeration value="text/h323" />
+      <xs:enumeration value="text/html" />
+      <xs:enumeration value="text/iuls" />
+      <xs:enumeration value="text/plain" />
+      <xs:enumeration value="text/richtext" />
+      <xs:enumeration value="text/scriptlet" />
+      <xs:enumeration value="text/tab-separated-values" />
+      <xs:enumeration value="text/webviewhtml" />
+      <xs:enumeration value="text/x-component" />
+      <xs:enumeration value="text/x-setext" />
+      <xs:enumeration value="text/x-vcard" />
+      <xs:enumeration value="video/mpeg" />
+      <xs:enumeration value="video/quicktime" />
+      <xs:enumeration value="video/x-la-asf" />
+      <xs:enumeration value="video/x-ms-asf" />
+      <xs:enumeration value="video/x-msvideo" />
+      <xs:enumeration value="video/x-sgi-movie" />
+      <xs:enumeration value="x-world/x-vrml" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="eventnodeAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/eventnode">
+        Indicates where keyboard navigation events are listened to. If this attribute is not specified, events are listened to from the tabbox
+        . Thus, if this attribute is not used, the tabbox
+        or an element inside it must have the focus for the keyboard navigation to apply.
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="parent">
+        <xs:annotation>
+          <xs:documentation>
+            parent: Keyboard navigation is captured at the parent of the tabbox
+            .
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="window">
+        <xs:annotation>
+          <xs:documentation>window: Keyboard navigation is captured at the window level. Tab navigation will occur as long as any element in the window is focused.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="document">
+        <xs:annotation>
+          <xs:documentation>document: Keyboard navigation is captured at the document level. Tab navigation will occur as long as any element in the document is focused.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="textboxtypeAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/type">
+        You can set the type attribute to one of the values below for a more specialized type of textbox. Don't set the type if you wish to use a regular textbox.
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="autocomplete">
+        <xs:annotation>
+          <xs:documentation>autocomplete: A textbox that supports autocomplete. For more information about autocomplete textboxes, see the autocomplete documentation (Mozilla) (Firefox)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="number">
+        <xs:annotation>
+          <xs:documentation>
+            number: A textbox that only allows the user to enter numbers. In addition, arrow buttons appear next to the textbox to let the user step through values. There are several attributes that allow the number textbox to be configured, including min , max , increment , wraparound , and hidespinbuttons . New in Firefox 3
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="password">
+        <xs:annotation>
+          <xs:documentation>password: A textbox that hides what is typed, used for entering passwords.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="timed">
+        <xs:annotation>
+          <xs:documentation>timed: This textbox will fire a command event after the user types characters and a certain time has passed. The delay is set with the timeout  attribute. You might use this type, for instance, to update information elsewhere in the window as the user types, without the need for continuous updates since the timer will not fire if the user types more keys in the meantime. The command event will also fire if the user presses the Enter key.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="currentsetAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/currentset">
+        The current set of displayed items on the toolbar . This will be modified when the user customizes the toolbar. The value of this attribute should be a comma-separated list of item IDs from the toolbarpalette  or, additionally, any of the following strings: "separator", "spring", "spacer".
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="separator">
+        <xs:annotation>
+          <xs:documentation>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="spring">
+        <xs:annotation>
+          <xs:documentation>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="spacer">
+        <xs:annotation>
+          <xs:documentation>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="modeAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/mode">
+        How the toolbarbutton s on the toolbar are displayed.
+
+        * icons: Show only icons.
+        * text: Show only text.
+        * full: Show both.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="icons">
+        <xs:annotation>
+          <xs:documentation>
+            Show only icons.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="text">
+        <xs:annotation>
+          <xs:documentation>
+            Show only text.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="full">
+        <xs:annotation>
+          <xs:documentation>
+            Show both.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="integer012">
+    <xs:annotation>
+      <xs:documentation>
+        Values 0, 1, 2
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="flagsArrayAttributeType">
+    <xs:list itemType="flagsAttributeType" />
+  </xs:simpleType>
+
+  <xs:simpleType name="stringArray">
+    <xs:list itemType="xs:string" />
+  </xs:simpleType>
+
+  <xs:simpleType name="modetreecellAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/treecell.mode">
+        For columns that are progress meters, this determines the type of progress meter to use.
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="none">
+        <xs:annotation>
+          <xs:documentation>none: No progress meter is displayed. The cell text is displayed instead.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="normal">
+        <xs:annotation>
+          <xs:documentation>normal: The cell uses its value attribute to determine the amount of the bar that is filled in.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="undetermined">
+        <xs:annotation>
+          <xs:documentation>undetermined: The progressmeter is indeterminate.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="typeTreeColAttributeType">
+    <xs:annotation>
+      <xs:documentation source="http://developer.mozilla.org/en/XUL/Attribute/type">
+        The type of tree column. The default is a text column that displays the content as text.
+
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="checkbox">
+        <xs:annotation>
+          <xs:documentation>checkbox: The content of the columns are checkboxes.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="progressmeter">
+        <xs:annotation>
+          <xs:documentation>progressmeter: The content of the columns are a progress meters. This is used in Mozilla's download manager window.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="text">
+        <xs:annotation>
+          <xs:documentation>text: The content of the columns is text.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tagname">
+
+    <xs:restriction base="xs:string"></xs:restriction>
+  </xs:simpleType>
+  <!-- end xulElementAttribute types -->
+
+</xs:schema>

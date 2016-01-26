@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>portable shared lib "asset" Test</title>
+        <base href="../../../../../../../tao/views/" />
+
+        <link rel="stylesheet" type="text/css" href="js/lib/qunit/qunit.css">
+        <link rel="stylesheet" type="text/css" href="css/tao-main-style.css">
+        <script type="text/javascript" src="js/lib/require.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit.js"></script>
+        <script type="text/javascript" src="js/lib/blanket/blanket.min.js" data-cover-only="asset"></script>
+
+        <script  type="text/javascript">
+
+            //don't start the test now
+            QUnit.config.autostart = false;
+
+            //load the config
+            require(['/tao/ClientConfig/config'], function(){
+                
+                require.config({
+                    paths : {
+                        'IMSGlobal/jquery_2_1_1':   '../../../taoQtiItem/views/js/portableSharedLibraries/IMSGlobal/jquery_2_1_1',
+                        'OAT/lodash':               '../../../taoQtiItem/views/js/portableSharedLibraries/OAT/lodash',
+                        'OAT/util/asset':               '../../../taoQtiItem/views/js/portableSharedLibraries/OAT/util/asset'
+                    }
+                });
+                
+                //load the test
+                require(['taoQtiItem/test/portableSharedLibraries/asset/test'], function(){
+
+                    //Tests loaded, run tests
+                    QUnit.config.reorder = false;
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+            <div id="interaction-container">
+                <script type="text/x-asset-manifest">
+                    <asset data-asset-id="asset/add.png" src="some/path/to/asset/icon_add.png"/>
+                    <asset data-asset-id="asset/eraser.png" src="some/path/to/asset/icon_eraser.png"/>
+                    <asset data-asset-id="asset/hand.png" src="some/path/to/asset/icon_hand.png"/>
+                    <asset data-asset-id="asset/notepad.png" src="some/path/to/asset/icon_notepad.png"/>
+                    <asset data-asset-id="asset/pen.png" src="some/path/to/asset/icon_pen.png"/>
+                    <asset data-asset-id="asset/tape.mp4" src="some/path/to/asset/tape.mp4"/>
+                    <asset data-asset-id="asset/sample.ogg" src="some/path/to/asset/sample.ogg"/>
+                    <asset data-asset-id="asset/runtime.swf" src="some/path/to/asset/runtime.swf"/>
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

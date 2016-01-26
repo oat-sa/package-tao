@@ -1,0 +1,321 @@
+{
+    "identifier": "Choicemultiple_2014410822",
+    "serial": "item_54eee7e293dec834786872",
+    "qtiClass": "assessmentItem",
+    "attributes": {
+        "identifier": "Choicemultiple_2014410822",
+        "title": "choice (multiple)",
+        "label": "",
+        "adaptive": false,
+        "timeDependent": false,
+        "toolName": "TAO",
+        "toolVersion": "3.0-RC01"
+    },
+    "body": {
+        "serial": "container_containeritembody_54eee7e293dca711004067",
+        "body": "<div>Welche St\u00e4dte verf\u00fcgen <b>nicht<\/b> \u00fcber einen Internationalen Flughafen?<\/div>\n\t\t{{interaction_choiceinteraction_54eee7e29587e008835740}}",
+        "elements": {
+            "interaction_choiceinteraction_54eee7e29587e008835740": {
+                "serial": "interaction_choiceinteraction_54eee7e29587e008835740",
+                "qtiClass": "choiceInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE_13390220",
+                    "shuffle": false,
+                    "maxChoices": 0,
+                    "minChoices": 0
+                },
+                "choices": {
+                    "choice_simplechoice_54eee7e295f0e149379540": {
+                        "identifier": "choice_998819535",
+                        "serial": "choice_simplechoice_54eee7e295f0e149379540",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "choice_998819535",
+                            "fixed": false
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_54eee7e296084479999718",
+                            "body": "Leipzig",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_54eee7e293dec834786872"
+                            }
+                        }
+                    },
+                    "choice_simplechoice_54eee7e296174656152767": {
+                        "identifier": "choice_693643701",
+                        "serial": "choice_simplechoice_54eee7e296174656152767",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "choice_693643701",
+                            "fixed": false
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_54eee7e2961b8330325074",
+                            "body": "Chemnitz",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_54eee7e293dec834786872"
+                            }
+                        }
+                    },
+                    "choice_simplechoice_54eee7e29627c456578906": {
+                        "identifier": "choice_1658152974",
+                        "serial": "choice_simplechoice_54eee7e29627c456578906",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "choice_1658152974",
+                            "fixed": false
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_54eee7e2962be388438612",
+                            "body": "Dresden",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_54eee7e293dec834786872"
+                            }
+                        }
+                    },
+                    "choice_simplechoice_54eee7e296382435739685": {
+                        "identifier": "choice_853818748",
+                        "serial": "choice_simplechoice_54eee7e296382435739685",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "choice_853818748",
+                            "fixed": false
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_54eee7e2963d2942480168",
+                            "body": "Zwickau",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_54eee7e293dec834786872"
+                            }
+                        }
+                    }
+                },
+                "prompt": {
+                    "serial": "container_containerstatic_54eee7e295d49495402105",
+                    "body": "",
+                    "elements": [],
+                    "debug": {
+                        "relatedItem": "item_54eee7e293dec834786872"
+                    }
+                }
+            }
+        },
+        "debug": {
+            "relatedItem": "item_54eee7e293dec834786872"
+        }
+    },
+    "namespaces": {
+        "xml": "http:\/\/www.w3.org\/XML\/1998\/namespace",
+        "xsi": "http:\/\/www.w3.org\/2001\/XMLSchema-instance",
+        "": "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1"
+    },
+    "stylesheets": [],
+    "outcomes": {
+        "outcomedeclaration_54eee7e294d80799248410": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_54eee7e294d80799248410",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "defaultValue": "0.0"
+        },
+        "outcomedeclaration_54eee7e295133639495498": {
+            "identifier": "MAXSCORE",
+            "serial": "outcomedeclaration_54eee7e295133639495498",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "MAXSCORE",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "defaultValue": "1.0"
+        },
+        "outcomedeclaration_54eee7e2951dd803849934": {
+            "identifier": "FEEDBACKBASIC",
+            "serial": "outcomedeclaration_54eee7e2951dd803849934",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "FEEDBACKBASIC",
+                "cardinality": "single",
+                "baseType": "identifier"
+            },
+            "defaultValue": "empty"
+        },
+        "outcomedeclaration_54eee7e295281517864135": {
+            "identifier": "FEEDBACK_32452563",
+            "serial": "outcomedeclaration_54eee7e295281517864135",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "FEEDBACK_32452563",
+                "cardinality": "single",
+                "baseType": "boolean",
+                "view": [
+                    "testConstructor"
+                ]
+            },
+            "defaultValue": "false"
+        },
+        "outcomedeclaration_54eee7e29534a134313274": {
+            "identifier": "FEEDBACK_12539715",
+            "serial": "outcomedeclaration_54eee7e29534a134313274",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "FEEDBACK_12539715",
+                "cardinality": "single",
+                "baseType": "boolean",
+                "view": [
+                    "testConstructor"
+                ]
+            },
+            "defaultValue": "false"
+        }
+    },
+    "responses": {
+        "responsedeclaration_54eee7e294a80959346863": {
+            "identifier": "RESPONSE_13390220",
+            "serial": "responsedeclaration_54eee7e294a80959346863",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE_13390220",
+                "cardinality": "multiple",
+                "baseType": "identifier"
+            },
+            "correctResponses": [
+                "choice_693643701",
+                "choice_853818748"
+            ],
+            "mapping": [],
+            "areaMapping": [],
+            "howMatch": null,
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": []
+        }
+    },
+    "feedbacks": [],
+    "responseProcessing": {
+        "serial": "response_custom_54eee7e296c2c499331606",
+        "qtiClass": "responseProcessing",
+        "attributes": [],
+        "processingType": "custom",
+        "data": "<responseProcessing>\n\t\t<responseCondition>\n\t\t\t<responseIf>\n\t\t\t\t<isNull>\n\t\t\t\t\t<variable identifier=\"RESPONSE_13390220\"\/>\n\t\t\t\t<\/isNull>\n\t\t\t\t<setOutcomeValue identifier=\"FEEDBACKBASIC\">\n\t\t\t\t\t<baseValue baseType=\"identifier\">empty<\/baseValue>\n\t\t\t\t<\/setOutcomeValue>\n\t\t\t<\/responseIf>\n\t\t\t<responseElseIf>\n\t\t\t\t<match>\n\t\t\t\t\t<variable identifier=\"RESPONSE_13390220\"\/>\n\t\t\t\t\t<correct identifier=\"RESPONSE_13390220\"\/>\n\t\t\t\t<\/match>\n\t\t\t\t<setOutcomeValue identifier=\"SCORE\">\n\t\t\t\t\t<sum>\n\t\t\t\t\t\t<variable identifier=\"SCORE\"\/>\n\t\t\t\t\t\t<variable identifier=\"MAXSCORE\"\/>\n\t\t\t\t\t<\/sum>\n\t\t\t\t<\/setOutcomeValue>\n\t\t\t\t<setOutcomeValue identifier=\"FEEDBACKBASIC\">\n\t\t\t\t\t<baseValue baseType=\"identifier\">correct<\/baseValue>\n\t\t\t\t<\/setOutcomeValue>\n\t\t\t<\/responseElseIf>\n\t\t\t<responseElse>\n\t\t\t\t<setOutcomeValue identifier=\"FEEDBACKBASIC\">\n\t\t\t\t\t<baseValue baseType=\"identifier\">incorrect<\/baseValue>\n\t\t\t\t<\/setOutcomeValue>\n\t\t\t<\/responseElse>\n\t\t<\/responseCondition>\n\t\t<setOutcomeValue identifier=\"FEEDBACK_32452563\">\n\t\t\t<and>\n\t\t\t\t<match>\n\t\t\t\t\t<baseValue baseType=\"identifier\">correct<\/baseValue>\n\t\t\t\t\t<variable identifier=\"FEEDBACKBASIC\"\/>\n\t\t\t\t<\/match>\n\t\t\t<\/and>\n\t\t<\/setOutcomeValue>\n\t\t<setOutcomeValue identifier=\"FEEDBACK_12539715\">\n\t\t\t<and>\n\t\t\t\t<match>\n\t\t\t\t\t<baseValue baseType=\"identifier\">incorrect<\/baseValue>\n\t\t\t\t\t<variable identifier=\"FEEDBACKBASIC\"\/>\n\t\t\t\t<\/match>\n\t\t\t<\/and>\n\t\t<\/setOutcomeValue>\n\t<\/responseProcessing>",
+        "responseRules": [
+            {
+                "qtiClass": "responseCondition",
+                "responseIf": {
+                    "qtiClass": "responseIf",
+                    "expression": {
+                        "qtiClass": "isNull",
+                        "expressions": [
+                            {
+                                "qtiClass": "variable",
+                                "attributes": {
+                                    "identifier": "RESPONSE_13390220"
+                                }
+                            }
+                        ]
+                    },
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "FEEDBACKBASIC"
+                            },
+                            "expression": {
+                                "qtiClass": "baseValue",
+                                "attributes": {
+                                    "baseType": "identifier"
+                                },
+                                "value": "empty"
+                            }
+                        }
+                    ]
+                },
+                "responseElseIfs": [{
+                    "qtiClass": "responseElseIf",
+                    "expression": {
+                        "qtiClass": "match",
+                        "expressions": [
+                            {
+                                "qtiClass": "variable",
+                                "attributes": {
+                                    "identifier": "RESPONSE_13390220"
+                                }
+                            },
+                            {
+                                "qtiClass": "correct",
+                                "attributes": {
+                                    "identifier": "RESPONSE_13390220"
+                                }
+                            }
+                        ]
+                    },
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "SCORE"
+                            },
+                            "expression": {
+                                "qtiClass": "sum",
+                                "expressions": [
+                                    {
+                                        "qtiClass": "variable",
+                                        "attributes": {
+                                            "identifier": "SCORE"
+                                        }
+                                    },
+                                    {
+                                        "qtiClass": "variable",
+                                        "attributes": {
+                                            "identifier": "MAXSCORE"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "FEEDBACKBASIC"
+                            },
+                            "expression": {
+                                "qtiClass": "baseValue",
+                                "attributes": {
+                                    "baseType": "identifier"
+                                },
+                                "value": "correct"
+                            }
+                        }
+                    ]
+                }],
+                "responseElse": {
+                    "qtiClass": "responseElse",
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "FEEDBACKBASIC"
+                            },
+                            "expression": {
+                                "qtiClass": "baseValue",
+                                "attributes": {
+                                    "baseType": "identifier"
+                                },
+                                "value": "incorrect"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

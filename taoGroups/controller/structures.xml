@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+    <structure id="groups" name="Groups" level="3" group="main">
+        <description>Group test takers according to global features and classifications.</description>
+        <icon id="icon-test-takers" src=""/>
+        <sections>
+            <section id="manage_groups" name="Manage groups" url="/taoGroups/Groups/index">
+                <trees>
+                    <tree name="Groups library"
+                          className="Group"
+                          rootNode="http://www.tao.lu/Ontologies/TAOGroup.rdf#Group"
+                          dataUrl="/taoGroups/Groups/getOntologyData"
+                          selectClass="group-class-properties"
+                          selectInstance="group-properties"
+                          moveInstance="group-move"
+                          delete="group-delete" 
+                      />
+                </trees>
+                <actions>
+                	<action id="group-class-properties" name="Properties" url="/tao/PropertiesAuthoring/index" group="content" context="class">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="group-properties" name="Properties"  url="/taoGroups/Groups/editGroup" group="content" context="instance">
+                        <icon id="icon-edit"/>
+                    </action> 
+                    <action id="group-filter" name="Filter" context="*" group="search" binding="filter">
+                        <icon id="icon-filter"/>
+                    </action>
+                    <action id="group-search" name="Search" url="/taoGroups/Groups/search" context="*" group="search" binding="launchFinder">
+                        <icon id="icon-find"/>
+                    </action>
+                    <action id="group-class-new" name="New class" url="/taoGroups/Groups/addSubClass" context="resource" group="tree" binding="subClass">
+                        <icon id="icon-folder-open"/>
+                    </action>
+                    <action id="group-delete" name="Delete" url="/taoGroups/Groups/delete" context="resource" group="tree" binding="removeNode">
+                        <icon id="icon-bin"/>
+                    </action>
+                    <action id="group-move" name="Move" url="/taoGroups/Groups/moveInstance" context="instance" group="none" binding="moveNode">
+                        <icon id="icon-move-item"/>
+                    </action>
+                    <action id="group-import" name="Import" url="/tao/Import/index" context="resource" group="tree">
+                        <icon id="icon-import"/>
+                    </action>
+                    <action id="group-export" name="Export" url="/tao/Export/index" context="resource" group="tree">
+                        <icon id="icon-export"/>
+                    </action>
+                    <action id="group-duplicate" name="Duplicate" url="/taoGroups/Groups/cloneInstance" context="instance" group="tree" binding="duplicateNode">
+                        <icon id="icon-copy"/>
+                    </action>
+                    <action id="group-new" name="New Group" url="/taoGroups/Groups/addInstance" context="resource" group="tree" binding="instanciate">
+                        <icon id="icon-users"/>
+                    </action>
+                </actions>
+            </section>
+        </sections>
+    </structure>
+</structures>

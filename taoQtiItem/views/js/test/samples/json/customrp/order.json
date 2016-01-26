@@ -1,0 +1,200 @@
+{
+    "identifier": "order",
+    "serial": "item_54fd564835524083023723",
+    "qtiClass": "assessmentItem",
+    "attributes": {
+        "identifier": "order",
+        "title": "Grand Prix of Bahrain",
+        "label": "",
+        "adaptive": false,
+        "timeDependent": false,
+        "toolName": "TAO",
+        "toolVersion": "3.0-RC01"
+    },
+    "body": {
+        "serial": "container_containeritembody_54fd5648354eb270188009",
+        "body": "{{interaction_orderinteraction_54fd56483a8a6486484054}}",
+        "elements": {
+            "interaction_orderinteraction_54fd56483a8a6486484054": {
+                "serial": "interaction_orderinteraction_54fd56483a8a6486484054",
+                "qtiClass": "orderInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE",
+                    "shuffle": true
+                },
+                "choices": {
+                    "choice_simplechoice_54fd56483c815917874527": {
+                        "identifier": "DriverA",
+                        "serial": "choice_simplechoice_54fd56483c815917874527",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "DriverA",
+                            "fixed": false
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_54fd56483d085994114755",
+                            "body": "Rubens Barrichello",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_54fd564835524083023723"
+                            }
+                        }
+                    },
+                    "choice_simplechoice_54fd56483d1f9878327686": {
+                        "identifier": "DriverB",
+                        "serial": "choice_simplechoice_54fd56483d1f9878327686",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "DriverB",
+                            "fixed": false
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_54fd56483d258164684266",
+                            "body": "Jenson Button",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_54fd564835524083023723"
+                            }
+                        }
+                    },
+                    "choice_simplechoice_54fd56483d347768181968": {
+                        "identifier": "DriverC",
+                        "serial": "choice_simplechoice_54fd56483d347768181968",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "DriverC",
+                            "fixed": true
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_54fd56483d3bd757433282",
+                            "body": "Michael Schumacher",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_54fd564835524083023723"
+                            }
+                        }
+                    }
+                },
+                "prompt": {
+                    "serial": "container_containerstatic_54fd56483c075635705749",
+                    "body": "The following F1 drivers finished on the podium in the first ever Grand Prix of\n\t\t\t\tBahrain. Can you rearrange them into the correct finishing order?",
+                    "elements": [],
+                    "debug": {
+                        "relatedItem": "item_54fd564835524083023723"
+                    }
+                }
+            }
+        },
+        "debug": {
+            "relatedItem": "item_54fd564835524083023723"
+        }
+    },
+    "namespaces": {
+        "xml": "http:\/\/www.w3.org\/XML\/1998\/namespace",
+        "xsi": "http:\/\/www.w3.org\/2001\/XMLSchema-instance",
+        "": "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1"
+    },
+    "stylesheets": [],
+    "outcomes": {
+        "outcomedeclaration_54fd564838bb4125597054": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_54fd564838bb4125597054",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "defaultValue": null
+        }
+    },
+    "responses": {
+        "responsedeclaration_54fd564837d49107453257": {
+            "identifier": "RESPONSE",
+            "serial": "responsedeclaration_54fd564837d49107453257",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE",
+                "cardinality": "ordered",
+                "baseType": "identifier"
+            },
+            "correctResponses": [
+                "DriverC",
+                "DriverA",
+                "DriverB"
+            ],
+            "mapping": [],
+            "areaMapping": [],
+            "howMatch": "http:\/\/www.imsglobal.org\/question\/qti_v2p1\/rptemplates\/match_correct",
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": []
+        }
+    },
+    "feedbacks": [],
+    "responseProcessing": {
+        "serial": "response_templatesdriven_54fd56483e125467187007",
+        "qtiClass": "responseProcessing",
+        "attributes": [],
+        "processingType": "templateDriven",
+        "responseRules": [
+            {
+                "qtiClass": "responseCondition",
+                "responseIf": {
+                    "qtiClass": "responseIf",
+                    "expression": {
+                        "qtiClass": "match",
+                        "expressions": [
+                            {
+                                "qtiClass": "variable",
+                                "attributes": {
+                                    "identifier": "RESPONSE"
+                                }
+                            },
+                            {
+                                "qtiClass": "correct",
+                                "attributes": {
+                                    "identifier": "RESPONSE"
+                                }
+                            }
+                        ]
+                    },
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "SCORE"
+                            },
+                            "expression": {
+                                "qtiClass": "baseValue",
+                                "attributes": {
+                                    "baseType": "float"
+                                },
+                                "value": "1"
+                            }
+                        }
+                    ]
+                },
+                "responseElse": {
+                    "qtiClass": "responseElse",
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "SCORE"
+                            },
+                            "expression": {
+                                "qtiClass": "baseValue",
+                                "attributes": {
+                                    "baseType": "float"
+                                },
+                                "value": "0"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,195 @@
+{
+    "identifier": "graphicOrder",
+    "serial": "item_547dd734651aa272971469",
+    "qtiClass": "assessmentItem",
+    "attributes": {
+        "identifier": "graphicOrder",
+        "title": "Flying Home",
+        "label": "",
+        "adaptive": false,
+        "timeDependent": false,
+        "toolName": "TAO",
+        "toolVersion": "3.0"
+    },
+    "body": {
+        "serial": "container_containeritembody_547dd73465191813531642",
+        "body": "<p>Lorna is flying back home to the UK. Ideally, she would like to fly in directly to her\n\t\t\thome town of Glasgow. Edinburgh is her second choice and, if necessary, she could fly\n\t\t\tinto London and pick up an internal connecting flight. Although she has been offered a\n\t\t\tcheap flight to Manchester it remains her least favourite option as connecting flights\n\t\t\tto Glasgow are not very reliable from there.</p>\n    {{interaction_graphicorderinteraction_547dd734662de783873637}}",
+        "elements": {
+            "interaction_graphicorderinteraction_547dd734662de783873637": {
+                "serial": "interaction_graphicorderinteraction_547dd734662de783873637",
+                "qtiClass": "graphicOrderInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE"
+                },
+                "choices": {
+                    "choice_hotspotchoice_547dd734669b5397676078": {
+                        "identifier": "A",
+                        "serial": "choice_hotspotchoice_547dd734669b5397676078",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "A",
+                            "fixed": false,
+                            "shape": "circle",
+                            "coords": "77,115,8"
+                        }
+                    },
+                    "choice_hotspotchoice_547dd73466aa1509482181": {
+                        "identifier": "B",
+                        "serial": "choice_hotspotchoice_547dd73466aa1509482181",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "B",
+                            "fixed": false,
+                            "shape": "circle",
+                            "coords": "118,184,8"
+                        }
+                    },
+                    "choice_hotspotchoice_547dd73466ae3712668688": {
+                        "identifier": "C",
+                        "serial": "choice_hotspotchoice_547dd73466ae3712668688",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "C",
+                            "fixed": false,
+                            "shape": "circle",
+                            "coords": "150,235,8"
+                        }
+                    },
+                    "choice_hotspotchoice_547dd73466b20205726368": {
+                        "identifier": "D",
+                        "serial": "choice_hotspotchoice_547dd73466b20205726368",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "D",
+                            "fixed": false,
+                            "shape": "circle",
+                            "coords": "96,114,8"
+                        }
+                    }
+                },
+                "prompt": {
+                    "serial": "container_containerstatic_547dd734666ae901036932",
+                    "body": "Mark the airports shown on the map according to Lorna's preferences.",
+                    "elements": [],
+                    "debug": {
+                        "relatedItem": "item_547dd734651aa272971469"
+                    }
+                },
+                "object": {
+                    "serial": "object_547dd73466b6d608435192",
+                    "qtiClass": "object",
+                    "attributes": {
+                        "data": "images/ukair.png",
+                        "type": "image/png",
+                        "width": 206,
+                        "height": 280
+                    },
+                    "_alt": "UK Map"
+                }
+            }
+        },
+        "debug": {
+            "relatedItem": "item_547dd734651aa272971469"
+        }
+    },
+    "namespaces": {
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "": "http://www.imsglobal.org/xsd/imsqti_v2p1"
+    },
+    "stylesheets": [],
+    "outcomes": {
+        "outcomedeclaration_547dd7346556b677678795": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_547dd7346556b677678795",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "defaultValue": null
+        }
+    },
+    "responses": {
+        "responsedeclaration_547dd7346544f639101653": {
+            "identifier": "RESPONSE",
+            "serial": "responsedeclaration_547dd7346544f639101653",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE",
+                "cardinality": "ordered",
+                "baseType": "identifier"
+            },
+            "correctResponses": [
+                "A",
+                "D",
+                "C",
+                "B"
+            ],
+            "mapping": [],
+            "areaMapping": [],
+            "howMatch": "http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct",
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": []
+        }
+    },
+    "feedbacks": [],
+    "responseProcessing": {
+        "serial": "response_templatesdriven_547dd73466d3a315823347",
+        "qtiClass": "responseProcessing",
+        "attributes": [],
+        "processingType": "templateDriven",
+        "responseRules": [{
+            "qtiClass": "responseCondition",
+            "responseIf": {
+                "qtiClass": "responseIf",
+                "expression": {
+                    "qtiClass": "match",
+                    "expressions": [{
+                        "qtiClass": "variable",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }, {
+                        "qtiClass": "correct",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }]
+                },
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "baseValue",
+                        "attributes": {
+                            "baseType": "float"
+                        },
+                        "value": "1"
+                    }
+                }]
+            },
+            "responseElse": {
+                "qtiClass": "responseElse",
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "baseValue",
+                        "attributes": {
+                            "baseType": "float"
+                        },
+                        "value": "0"
+                    }
+                }]
+            }
+        }]
+    }
+}

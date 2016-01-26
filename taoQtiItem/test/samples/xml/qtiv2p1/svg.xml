@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Thie example adapted from the PET Handbook, copyright University of Cambridge ESOL Examinations -->
+<assessmentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+ xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+ xmlns:svg="http://www.w3.org/2000/svg"
+ identifier="SVG"
+ title="Coulours"
+ adaptive="false"
+ timeDependent="false">
+	<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+		<correctResponse>
+			<value>E</value>
+		</correctResponse>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+	<itemBody>
+		<choiceInteraction responseIdentifier="RESPONSE" shuffle="true" maxChoices="1">
+			<prompt>What colour is the rectangle below
+				<object data="rectangle.svg" type="image/svg+xml" width="800" height="600"/> ?</prompt>
+			<simpleChoice identifier="E">Red</simpleChoice>
+			<simpleChoice identifier="G">Blue</simpleChoice>
+			<simpleChoice identifier="H">Green</simpleChoice>
+			<simpleChoice identifier="N">Magenta</simpleChoice>
+		</choiceInteraction>
+	</itemBody>
+	<responseProcessing
+		template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+</assessmentItem>

@@ -1,0 +1,92 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.1.0-sprint15\n"
+"PO-Revision-Date: 2015-12-23T12:59:56\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: is-IS\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: is-IS\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#AbstractModel
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Abstract Model"
+msgstr "Formlegt Líkan"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#AbstractModel
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "An abstract model to differentiate implementations of resources of the same type"
+msgstr "Formlegt líkan til að greina á milli útfærslu tilfanga af sömu gerð "
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelImplementation
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Model implementation"
+msgstr "Líkansútfærsla"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelStatus
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Model Status"
+msgstr "Líkansstaða"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusStable
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Stable"
+msgstr "Stöðugt"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusStable
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "This model can be used in production"
+msgstr "Þetta líkan má nota í framleiðslu"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusDeprecated
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Deprecated"
+msgstr "Úrelt"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusDeprecated
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "This model is not supported anymore, we advise to migrate"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusDevelopment
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Development"
+msgstr "Þróun"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusDevelopment
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "this model has not been tested in a production environment, we advise to be carefull with it"
+msgstr "þetta líkan hefur ekki verið prófað í framleiðsluumhverfi, við ráðleggjum varfærni við meðferð þess"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusExperimental
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Experimental"
+msgstr "Á tilraunastigi"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusExperimental
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "this model is still in conception, but you can try it, give your feedback and it will be improved."
+msgstr "þetta líkan er enn á vinnslustigi, en það má reyna það, sendu endurgjöf og það verður bætt."
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelAbstractModelStatus
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Status"
+msgstr "Staða"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelAbstractModelStatus
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The status of a model"
+msgstr "Staða líkans"
+
+# http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ModelSelector
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Model"
+msgstr "Líkan"
+
+# http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ModelSelector
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Select the associated model"
+msgstr "Veljið tengt líkan"
+

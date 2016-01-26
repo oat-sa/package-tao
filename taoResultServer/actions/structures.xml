@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+    <structure id="settings" name="Settings" level="11" group="invisible">
+        <description>Manage Result Servers</description>
+        <sections>
+            <section id="manage_resultservers" name="Result Server Manager"
+                     url="/taoResultServer/ResultServerMgt/index">
+                <trees>
+                    <tree name="Result Servers library"
+                          className="Result Server"
+                          dataUrl="/taoResultServer/ResultServerMgt/getResultServers"
+                          selectClass="results-server-class-properties"
+                          selectInstance="results-server-properties"
+                          moveInstance="results-server-move"
+                          delete="results-server-delete"
+                     />
+                </trees>
+                <actions>
+                    <action id="results-server-class-properties" name="Properties" url="/taoResultServer/ResultServerMgt/editClassProperties" group="content" context="class">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="results-server-properties" name="Edit result server" url="/taoResultServer/ResultServerMgt/editResultServer" group="content" context="instance">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="results-server-class-new" name="New class" js="subClass" url="/taoResultServer/ResultServerMgt/addResultServerClass" context="class" group="content">
+                        <icon id="icon-folder-open"/>
+                    </action>
+                    <action id="results-server-new" name="New result server" js="instanciate" url="/taoResultServer/ResultServerMgt/addResultServer" context="class" group="content">
+                        <icon id="icon-result-server"/>
+                    </action>                    
+                    <action id="results-server-delete" name="Delete" js="removeNode" url="/taoResultServer/ResultServerMgt/delete" context="resource" group="tree">
+                        <icon id="icon-bin"/>
+                    </action>
+                    <action id="results-server-move" name="Move" js="moveNode" url="/taoResultServer/ResultServerMgt/moveInstance" context="instance" group="none">
+                        <icon id="icon-move-item"/>
+                    </action>
+                    <action id="results-server-migrate" name="Migrate" url="/taoResultServer/ResultServerMgt/migrate" context="*" group="tree">
+                        <icon id="icon-external"/>
+                    </action>   
+                </actions>
+            </section>
+        </sections>
+    </structure>
+</structures>

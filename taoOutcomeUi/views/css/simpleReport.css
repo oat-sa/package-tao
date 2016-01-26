@@ -1,0 +1,42 @@
+/* 
+    Document   : result
+    Created on : Mar 15, 2013, 2:25:29 PM
+    Author     : plichart
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+@media print {
+  body{
+        background-color: #eee;
+        font-family: Verdana, Arial, sans-serif;
+        color: #3A3A3A;
+  }
+  body * {
+    visibility:hidden;
+  }
+
+  #section_to_print {
+    visibility:visible;
+    position:absolute;
+    left:0;
+    top:0;
+  }
+}
+/*.report{*/
+    /*padding: 15px;*/
+    /*font-size: 11px;*/
+/*}*/
+
+/*.minimal td{*/
+   /*border: 1px dashed #3A3A3A;*/
+/*border-collapse:collapse;*/
+    /*padding:5px;*/
+/*}*/
+
+/*table, th, td*/
+/*{*/
+/*vertical-align:top;*/
+/*width:100%;*/
+/*}*/

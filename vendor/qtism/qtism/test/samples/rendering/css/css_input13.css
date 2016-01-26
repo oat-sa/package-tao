@@ -1,0 +1,10 @@
+/*
+ * Try to make the system crazy by adding specific compositions
+ * of characters...
+ * "hello!" "\\\nhello"
+ */
+
+.myClass {
+    border:1px solid #fff;/*"foo'bar\"baz*/
+    background-color: white;
+}

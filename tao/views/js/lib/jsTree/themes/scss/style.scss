@@ -1,0 +1,374 @@
+@import "inc/bootstrap";
+
+.tree {
+
+    overflow:auto;
+    max-height: 75vh;
+    max-width: 280px;
+    background: white;
+    border-right: 5px $canvas solid;
+
+    .ltr, .rtl {
+        margin-top: 8px;
+        min-height: 150px;
+        overflow: visible;
+    }
+    ul {
+        margin: 0 8px;
+        padding: 5px 0;
+        list-style-type: none;
+        li {
+            padding-left: 12px;
+            margin: 0 1px;
+        }
+        ins {
+            display: inline-block;
+            background-repeat: no-repeat;
+            text-decoration: none;
+            width: 16px;
+            height: 19px;
+            position: relative;
+            left: 2px;
+            top: 1px;
+            font-family: 'tao';
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            @include font-size(14);
+
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            color: whiten($info, .2);
+        }
+        &.ltr {
+            ins {
+                margin: 0 4px 0 0px;
+            }
+        }
+    }
+
+    li {
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABAAgMAAADwqRilAAAACVBMVEX///8kbHeAgIB/SOz/AAAAAXRSTlMAQObYZgAAAEVJREFUeNpjYIACBwY4EICzArAJhoQiAH6VWM0cBUDAMUQEuVaMxhWBEMIq2IBNcAHRKom2fVgBplXYQmgVthDSGiwhBAAx4grYHitHZwAAAABJRU5ErkJggg==) no-repeat -1000px -1000px;
+        display: block;
+        padding: 0 0 0 11px;
+        margin: 0;
+        ul {
+            display: none;
+            margin: 0;
+            padding: 0;
+        }
+        a, span {
+            height: 20px;
+            color: $textColor;
+            white-space: nowrap;
+            text-decoration: none;
+            margin: 0;
+            display: block;
+            @include font-size(13);
+            @include simple-border(transparent);
+            overflow: visible;
+            text-overflow: ellipsis;
+            &:hover {
+                color: $info;
+            }
+            &.clicked {
+                background: $lightBlueGrey;
+                border-color: $darkBlueGrey;
+            }
+            &:focus {
+                outline: none;
+            }
+            input {
+                margin: 0;
+                padding: 0 0;
+                display: inline-block;
+                height: 12px !important;
+                border: 1px solid white;
+                background: white;
+                font-size: 10px;
+                &:not([class="xxx"]) {
+                    padding: 1px 0;
+                }
+            }
+        }
+
+        &.open {
+            background-position: -32px -46px;
+        }
+        &.closed {
+            background-position: -48px -30px;
+        }
+        &.more a {
+            text-align: left;
+            color: $info;
+        }
+
+        &.paginate {
+            padding-left: 12px;
+            background-image: none !important;
+            display: inline !important;
+            a {
+                &:hover, &.hover {
+                    background: #91c7ff;
+                    border: 1px solid blue;
+                    padding: 0px;
+                    @include font-size(13);
+                }
+                &.clicked {
+                    background: whiten($info, .1);
+                    border: none;
+                }
+            }
+            span.clicked {
+                background: none;
+                border: none;
+            }
+        }
+        &.paginate-more ins {
+            background-image: url("paginate_more.png");
+        }
+        &.paginate-all ins {
+            background-image: url("paginate_all.png");
+        }
+        
+        &.private ins:after, &.permissions-partial ins:after, &.permissions-none ins:after {
+            display: inline-block;
+            position: relative;
+            left: -15px;
+            top: 4px;
+            @include tao-icon-setup;
+            text-shadow: 0px 0px 1px #666;
+            @include font-size(14);
+        }
+        
+        &.permissions-partial ins:after {
+            color: #EED401;
+            @include icon-lock;
+        }
+        
+        &.private ins:after, &.permissions-none ins:after {
+            color: #BA122B;
+            @include icon-lock;
+        }
+        
+        &.open ul {
+            display: block;
+        }
+        &.closed ul {
+            display: none !important;
+        }
+        li {
+            overflow: visible;
+        }
+    }
+
+    .locked li a {
+        color: gray;
+    }
+    .no_dots {
+        background: transparent;
+        ul {
+            background: transparent;
+        }
+        li.leaf {
+            background-image: none;
+            background-color: transparent;
+        }
+    }
+
+    .node-class {
+        & > a > ins:before {
+            @include icon-folder;
+            color: $warning;
+            top: 2px;
+            text-shadow: 1px 1px 0 blacken($warning, .2);
+        }
+        &.open {
+            & > a > ins:before {
+                @include icon-folder-open;
+            }
+        }
+    }
+    .node-instance ins {
+        background-image: none;
+    }
+    ul li a.loading ins {
+        background-image: url("throbber.gif") !important;
+        background-position: 0 0 !important;
+    }
+    li a ins.forbidden {
+        background-position: -16px -16px;
+    }
+    .locked li a ins {
+        background-position: 0 -48px;
+    }
+    li span ins {
+        background-position: -16px 0;
+    }
+}
+
+.taotree-delivery .node-instance ins:before{
+    @include icon-delivery;
+}
+
+.taotree-booklet .node-instance ins:before{
+    @include icon-delivery;
+}
+
+.taotree-group .node-instance ins:before{
+    @include icon-users;
+}
+
+.taotree-item .node-instance ins:before{
+    @include icon-item;
+}
+
+.taotree-result_server .node-instance ins:before{
+    @include icon-result-server;
+}
+
+.taotree-result{
+  .node-instance ins:before{
+    @include icon-result;
+  }
+  .node-class {
+    & > a > ins:before {
+      @include icon-delivery;
+      color: $colorWheel-06;
+      text-shadow: 1px 1px 0 blacken($warning, .2);
+    }
+    &.open {
+      & > a > ins:before {
+        @include icon-delivery;
+        color: $colorWheel-06;
+        text-shadow: 1px 1px 0 blacken($warning, .2);
+      }
+    }
+  }
+}
+
+.taotree-role .node-instance ins:before{
+      @include icon-user;
+  }
+
+.taotree-test_taker .node-instance ins:before{
+    @include icon-test-taker;
+}
+
+.taotree-test .node-instance ins:before{
+    @include icon-test;
+}
+
+.taotree-media .node-instance ins:before{
+  @include icon-media;
+}
+
+.taotree-trees .node-instance ins:before {
+    @include icon-tree;
+}
+
+.taotree-default{
+    @include icon-new-page;
+}
+
+#jstree-dragged {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    margin: 0;
+    padding: 0;
+    ul ul ul {
+        display: none;
+    }
+}
+
+#jstree-marker {
+    padding: 0;
+    margin: 0;
+    line-height: 5px;
+    font-size: 1px;
+    overflow: hidden;
+    height: 5px;
+    position: absolute;
+    left: -45px;
+    top: -30px;
+    z-index: 1000;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    display: none;
+    &.marker {
+        width: 45px;
+        background-position: -32px top;
+    }
+    &.marker_plus {
+        width: 5px;
+        background-position: right top;
+    }
+
+    background-image: url("icons.png");
+}
+
+
+
+#jstree-dragged {
+   ul{
+        background: none !important;
+        min-height: inherit;
+        max-height: inherit;
+        padding: 0;
+        margin: 0;
+        li {
+            margin: 0;
+            a {
+                padding: 0 6px;
+                ins {
+                  display: none;
+                }
+            }
+        }
+   }
+}
+
+.tree-css-context {
+    a ins {
+        background-image: url("icons.png");
+        /* background-repeat:no-repeat; */
+        background-position: -64px -64px;
+        &.create {
+            background-position: 0 -16px;
+        }
+        &.rename {
+            background-position: -16px 0px;
+        }
+        &.remove {
+            background-position: 0 -32px;
+        }
+    }
+    li a.disabled span {
+        color: #b0b0b0;
+    }
+}
+
+.tree-checkbox {
+    li > a.clicked {
+        background: none;
+        border: none;
+    }
+    li.node-instance >  a {
+        ins:before {
+            @include tao-icon-setup;
+            @include icon-checkbox;
+        }
+
+        &.checked {
+            ins:before {
+                @include tao-icon-setup;
+                @include icon-checkbox-checked;
+            }
+        }
+    }
+}

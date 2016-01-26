@@ -1,0 +1,62 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.1.0-sprint15\n"
+"PO-Revision-Date: 2015-12-23T13:13:53\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: da-DK\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: da-DK\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamItemPath
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Item Path"
+msgstr "Item Path"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamItemPath
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Item Path"
+msgstr "Item Path"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamItemDataPath
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Item Private Data Path"
+msgstr "Item Private Data Path"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamItemDataPath
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Item Private Data Path"
+msgstr "Item Private Data Path"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamResultserver
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Resultserver"
+msgstr "Resultserver"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamResultserver
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Resultserver"
+msgstr "Resultserver"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamItemUri
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Item Uri"
+msgstr "Item Uri"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamItemUri
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Item Uri"
+msgstr "Item Uri"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#ServiceItemRunner
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Item Runner"
+msgstr "Item Runner"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#ServiceItemRunner
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Embed a run an item into a Delivery. This service initialize the TAO Apis and contexts"
+msgstr ""
+

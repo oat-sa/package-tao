@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file was created using: Onyx Editor, Version 3.4.1 (Full, licensed version), (c)2011 BPS Bildungsportal Sachsen GmbH-->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 imsqti_v2p1.xsd" identifier="Choicesingle_853928446" title="choice (single)" adaptive="false" timeDependent="false">
+	<responseDeclaration identifier="RESPONSE_30705996" cardinality="single" baseType="identifier">
+		<correctResponse>
+			<value>choice_685440446</value>
+		</correctResponse>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>0.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>1.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+		<defaultValue>
+			<value>empty</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_12552501" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_17794055" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_31451854" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_21527026" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_25663374" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<itemBody>
+		<div>Das Bundesland Sachsen hat die folgende Flagge...</div>
+		<choiceInteraction responseIdentifier="RESPONSE_30705996" shuffle="true" maxChoices="1">
+			<simpleChoice identifier="choice_685440446">
+				<img src="media/3d92a0b7b7be4480a582f62ce823d908.jpg" alt="flag" />
+			</simpleChoice>
+			<simpleChoice identifier="choice_1542121788">
+				<img src="media/65fe9d73f0b24800ab836b3bf6973639.jpg" alt="flag" />
+			</simpleChoice>
+			<simpleChoice identifier="choice_313388598">
+				<img src="media/d9a879873c1f44c7ad0428278ebdcd10.jpg" alt="flag" />
+			</simpleChoice>
+			<simpleChoice identifier="choice_2057964872">
+				<img src="media/90e3978ab9fd44a1838f6fc9a8a02d30.jpg" alt="flag" />
+			</simpleChoice>
+		</choiceInteraction>
+	</itemBody>
+	<responseProcessing>
+		<responseCondition>
+			<responseIf>
+				<isNull>
+					<variable identifier="RESPONSE_30705996" />
+				</isNull>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">empty</baseValue>
+				</setOutcomeValue>
+			</responseIf>
+			<responseElseIf>
+				<match>
+					<variable identifier="RESPONSE_30705996" />
+					<correct identifier="RESPONSE_30705996" />
+				</match>
+				<setOutcomeValue identifier="SCORE">
+					<sum>
+						<variable identifier="SCORE" />
+						<variable identifier="MAXSCORE" />
+					</sum>
+				</setOutcomeValue>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">correct</baseValue>
+				</setOutcomeValue>
+			</responseElseIf>
+			<responseElse>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">incorrect</baseValue>
+				</setOutcomeValue>
+			</responseElse>
+		</responseCondition>
+		<setOutcomeValue identifier="FEEDBACK_12552501">
+			<and>
+				<match>
+					<baseValue baseType="identifier">correct</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+		<setOutcomeValue identifier="FEEDBACK_17794055">
+			<and>
+				<match>
+					<baseValue baseType="identifier">incorrect</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+		<setOutcomeValue identifier="FEEDBACK_31451854">
+			<and>
+				<match>
+					<baseValue baseType="identifier">choice_1542121788</baseValue>
+					<variable identifier="RESPONSE_30705996" />
+				</match>
+			</and>
+		</setOutcomeValue>
+		<setOutcomeValue identifier="FEEDBACK_21527026">
+			<and>
+				<match>
+					<baseValue baseType="identifier">choice_313388598</baseValue>
+					<variable identifier="RESPONSE_30705996" />
+				</match>
+			</and>
+		</setOutcomeValue>
+		<setOutcomeValue identifier="FEEDBACK_25663374">
+			<and>
+				<match>
+					<baseValue baseType="identifier">choice_2057964872</baseValue>
+					<variable identifier="RESPONSE_30705996" />
+				</match>
+			</and>
+		</setOutcomeValue>
+	</responseProcessing>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_12552501" showHide="show" title="Richtig!">Die sächsischen Landesfarben sind weiß-grün.</modalFeedback>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_17794055" showHide="show" title="Leider Falsch!">Die sächsischen Landesfarben sind weiß-grün.</modalFeedback>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_31451854" showHide="show" title="">Deine Auswahl zeigt die Flagge vom Land Thüringen.</modalFeedback>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_21527026" showHide="show" title="">Deine Auswahl zeigt die Flagge vom Land Baden-Württemberg.</modalFeedback>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_25663374" showHide="show" title="">Deine Auswahl zeigt die Flagge vom Land Sachsen-Anhalt.</modalFeedback>
+</assessmentItem>

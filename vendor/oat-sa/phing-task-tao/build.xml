@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<project name="taoinstall" basedir="." default="test.install">
+    <property file="../../build.properties" />
+    <property file="../../db.local.properties" />
+
+    <taskdef name="taoinstall" classname="InstallTaoTask" />
+    <typedef name="taoDbConfig" classname="TaoDbConfig" />
+    <typedef name="generisConfig" classname="GenerisConfig" />
+    <typedef name="taoConfig" classname="TaoConfig" />
+
+	<exec command="if [ -f '${basedir.resolved}/config/generis.conf.php' ]; then echo 'true'; else echo 'false'; fi;" outputProperty="tao.is_installed" />
+
+	<taoDbConfig id="maindb" taoInstalled="${tao.is_installed}" taoPath="${basedir.resolved}" dbDriver="${db.driver}"
+				 dbHost="${db.host}" dbPass="${db.pass}" dbUser="${db.user}" dbName="${db.prefix}${buildstamp}${package.name}"/>
+
+    <resolvepath propertyName="src.dir.resolved" file="../src" />
+
+    <target name="test.install">
+      <taoinstall taoPath="${src.dir.resolved}" >
+      	<taoConfig 	
+      		login="${user.login}"
+      		pass="${user.pass}">
+      	<taoDbConfig refid="maindb"/>
+      	<generisConfig       		
+      		instanceName="${module.name}"
+      		moduleUrl="${module.url}"
+      		moduleNs="${module.namespace}"
+      		moduleMode="${module.mode}"
+      		dataPath="${src.dir.resolved}/data/"/>
+      </taoConfig>
+      </taoinstall>
+    </target>
+</project>

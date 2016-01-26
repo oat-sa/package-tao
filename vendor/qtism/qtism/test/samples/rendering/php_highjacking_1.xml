@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemBody xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+	<div>
+		<![CDATA[<?php echo 'highjack'; ?>]]>
+	</div>
+	<div>
+		<![CDATA[<?= $var ?>]]>
+	</div>
+	<div><code><![CDATA[<?php echo 'highjack'; ?>]]></code></div>
+	<!-- Considered safe if entities are still encoded. -->
+	<div><code>&lt;?php echo 'highjack';?&gt;</code></div>
+</itemBody>

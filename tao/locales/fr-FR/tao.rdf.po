@@ -1,0 +1,327 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.1.0-sprint15\n"
+"PO-Revision-Date: 2015-12-23T12:59:27\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: fr-FR\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: fr-FR\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#TAOObject
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "TAO User Object"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAO.rdf#TAOObject
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Any user-level resource related to etesting"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAO.rdf#SystemObject
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "System Object"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAO.rdf#SystemObject
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Any system resource related to etesting"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAO.rdf#List
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "List"
+msgstr "Liste"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#level
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "level"
+msgstr "niveau"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#Languages
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Languages"
+msgstr "Langues"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LanguageUsages
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Usage"
+msgstr "Utilisation"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LanguageUsages
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Usage of a language"
+msgstr "Utilisation d'un langage"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LanguagesUsages
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Language Usage"
+msgstr "Utilisation de langages"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LanguagesUsages
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Language usage class"
+msgstr "Catégorie d'utilisation de langages"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LanguageUsageGUI
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "GUI Usage"
+msgstr "Utilisation GUI"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LanguageUsageGUI
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Graphical User Interface language usage"
+msgstr "Interface d'utilisation graphique d'une utilisation de langages"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LanguageUsageData
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Data Usage"
+msgstr "Utilisation des données"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LanguageUsageData
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Data language usage"
+msgstr "Utilisation du langage de données"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LanguageOrientations
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Language orientation"
+msgstr "Orientation du langage"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LanguageOrientations
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Language orientation class"
+msgstr "Classe d'orientation du langage"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LanguageOrientation
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Orientation"
+msgstr "Orientation"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LanguageOrientation
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Orientation of a language"
+msgstr "Orientation de langage"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#OrientationLeftToRight
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Left-to-right orientation"
+msgstr "Orientation de gauche à droite"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#OrientationLeftToRight
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Left-to-right language orientation"
+msgstr "Orientation du langage de gauche à droite"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#OrientationRightToLeft
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Right-to-left orientation"
+msgstr "Orientation de droite à gauche"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#OrientationRightToLeft
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Right-to-left language orientation"
+msgstr "Orientation du langage de droite à gauche"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#User
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "User"
+msgstr "Utilisateur"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#User
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "TAO User Class"
+msgstr "Catégorie d'utilisateurs TAO"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ManagementRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Management"
+msgstr "Gestion"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ManagementRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The Management Role Class"
+msgstr "La gestion des catégories de rôles"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#BackOfficeRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Back Office"
+msgstr "Back Office"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#BackOfficeRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The BackOffice Role"
+msgstr "Le rôle du Back Office"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#FrontOfficeRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Front Office"
+msgstr "Services administratifs"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#FrontOfficeRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The FrontOffice Role"
+msgstr "Le rôle du service administratif"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ServiceRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Service"
+msgstr "Service"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ServiceRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The Service Role"
+msgstr "Le rôle du service"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#TaoManagerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "TAO Manager"
+msgstr "Gestionnaire de TAO"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#TaoManagerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The TAO Manager Role"
+msgstr "Le rôle du gestionnaire de TAO"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#PropertyManagerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Metadata Manager Role"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAO.rdf#PropertyManagerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The Metadata Manager Role allows you to modify the properties of the classes."
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAO.rdf#GlobalManagerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Global Manager"
+msgstr "Gestionnaire global"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#GlobalManagerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The Global Manager Role"
+msgstr "Le rôle du gestionnaire global"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LockManagerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Lock Manager"
+msgstr "Gestionnaire de fermeture"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LockManagerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The role that can unlock all resources"
+msgstr "Le rôle qui peut ouvrir toutes les ressources"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#SysAdminRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "System Administrator"
+msgstr "Administrateur de système"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#SysAdminRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The System Administrator Role"
+msgstr "Le rôle de l'administrateur du système"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#DeliveryRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Test Taker"
+msgstr "Participant"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#DeliveryRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The Test Taker Role"
+msgstr "Le rôle du participant"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#TAOGUIOrder
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Form Field Order"
+msgstr "L'ordre du champ du formulaire"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#TAOGUIOrder
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The order of the property within the class"
+msgstr "L'ordre de la propriété dans une catégorie"
+
+# http://www.tao.lu/Ontologies/generis.rdf#passwordRecoveryToken
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Password recovery token"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/generis.rdf#passwordRecoveryToken
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Password recovery token"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/TAO.rdf#Lock
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Lock"
+msgstr "Verrou"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#Lock
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Lock information related to the resource"
+msgstr "Vérouiller l'information en relation à la ressource"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LastExtensionUsed
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "LastExtensionUsed"
+msgstr "Dernière extension utilisée"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LastExtensionUsed
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Saves the last extension the user had visited."
+msgstr "Sauvegarder la dernière extension que l'utilisateur a visité."
+
+# http://www.tao.lu/Ontologies/TAO.rdf#FirstTimeInTao
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "First Time In Tao"
+msgstr "Première fois dans TAO"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#FirstTimeInTao
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Is it the first the user connects to TAO?"
+msgstr "Est-ce la première fois que l'utilisateur se connecte à TAO?"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#TAOObject
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "TAO Object"
+msgstr "Objet TAO"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#TAOObject
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Any resource related to etesting"
+msgstr "Toutes ressources en relation au e-évaluation"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#WorkerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Worker"
+msgstr "Travailleur"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#WorkerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The Worker Role Class"
+msgstr "La classe du rôle du travailleur"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#WorkflowRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Workflow Participant"
+msgstr "Le flux de travail du participant"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#WorkflowRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The Workflow Participant Role"
+msgstr "Le rôle du flux de travail du participant"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#WorkflowUser
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "WfUser"
+msgstr "UtilisateurduFt"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#WorkflowUser
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Workflow User: sub class to group the workflow user, not deletable"
+msgstr "Flux de travail de l'utilisateur : catégoriser le flux de travail de l'utilisateur en groupe, impossible à supprimer"
+

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+    <structure id="items" name="Items" url="/taoItems/Items/index" level="0" group="main">
+        <description>Create and design items and exercises.</description>
+        <icon id="icon-item"/>
+        <sections>
+            <section id="manage_items" name="Manage items" url="/taoItems/Items/index">
+                <trees>
+                    <tree name="Items library"
+                          dataUrl="/taoItems/Items/getOntologyData"
+                          editClassUrl="/taoItems/Items/editItemClass"
+                          editInstanceUrl="/taoItems/Items/editItem"
+                          addInstanceUrl="/taoItems/Items/addInstance"
+                          addSubClassUrl="/taoItems/Items/addItemClass"
+                          deleteUrl="/taoItems/Items/delete"
+                          duplicateUrl="/taoItems/Items/cloneInstance"
+                          moveInstanceUrl="/taoItems/Items/moveInstance"
+                            />
+                </trees>
+                <actions>
+                	
+                		<action name="Edit class" url="/taoItems/Items/editItemClass" group="content" context="class">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action name="Edit item"  url="/taoItems/Items/editItem" group="content" context="instance">
+                        <icon id="icon-edit"/>
+                    </action> 
+                    <action name="Filter" context="*" group="search" binding="launchFinder">
+                        <icon id="icon-filter"/>
+                    </action>
+                    <action name="Search" url="/taoItems/Items/search" context="*" group="filter">
+                        <icon id="icon-find" src=""/>
+                    </action>
+                    <action name="New class" js="GenerisAction.subClass" url="/taoItems/Items/addItemClass" context="class" group="content">
+                        <icon id="icon-folder-open"/>
+                    </action>
+                    <action name="New item" js="GenerisAction.instanciate" url="/taoItems/Items/addInstance" context="class" group="content">
+                        <icon id="icon-item"/>
+                    </action>
+                    <action name="Delete" js="GenerisAction.removeNode" url="/taoItems/Items/delete" context="resource" group="tree">
+                        <icon id="icon-bin"/>
+                    </action>
+                    <action name="Duplicate" js="GenerisAction.duplicateNode" url="/taoItems/Items/cloneInstance" context="instance" group="tree">
+                        <icon id="icon-copy"/>
+                    </action>
+                    <action name="Move" js="GenerisAction.moveNode" url="" context="instance" group="tree">
+                        <icon id="icon-move-item"/>
+                    </action>
+                    <action name="Preview" js="GenerisAction.fullScreen" url="/taoItems/Items/fullScreenPreview" context="instance" group="content">
+                        <icon id="icon-preview"/>
+                    </action>
+                    <action name="Lists" url="/tao/Lists/index" context="*" group="tree">
+                        <icon id="icon-ul"/>
+                    </action>
+                    <action name="Create table" url="/taoResults/LegacyResults/createTable" context="class" group="content">
+                        <icon id="icon-table"/>
+                    </action>
+                    <action name="Export" url="/taoItems/ItemExport/index" context="*" group="content">
+                        <icon id="icon-export"/>
+                    </action>
+                    <action name="Import" url="/taoItems/ItemImport/index" context="class" group="content">
+                        <icon id="icon-import"/>
+                    </action>
+                </actions>
+            </section>
+            <section id="items_authoring" name="Authoring" url="/taoItems/Items/authoring"/>
+            <section id="items_preview" name="Full preview" url="/taoItems/Items/preview"/>
+        </sections>
+    </structure>
+</structures>

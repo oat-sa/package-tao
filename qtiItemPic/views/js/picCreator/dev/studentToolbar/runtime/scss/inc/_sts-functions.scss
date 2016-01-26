@@ -1,0 +1,175 @@
+@mixin iterate-sprite($iconList, $x, $y, $direction, $prefix:'') {
+    @each $icon in $iconList {
+        #{$prefix}#{$icon} {
+            background-position: $x * 1px $y * 1px;
+        }
+        @if $direction == 'x' {
+            $x: $x - 16;
+        } @else {
+            $y: $y - 16;
+        }
+    }
+}
+
+
+@mixin grid-unit($span, $numCols: 12, $gutter: 0) {
+    $gridPx: 840;
+    $rawSpanPx: (($gridPx - ($numCols * $gutter)) / $numCols);
+    $spanPx: $rawSpanPx * $span + (($span - 1) * $gutter);
+    $spanPercent: widthPerc($spanPx, $gridPx);
+    $marginPercent: widthPerc($gutter, $gridPx);
+    margin-left: $marginPercent;
+    width: $spanPercent;
+}
+
+
+@mixin vendor-prefix($property, $value, $whatToPrefix, $prefixes: (-webkit-, -moz-, -ms-, -o-, '')) {
+    @if $whatToPrefix == 'property' {
+        @each $prefix in $prefixes {
+            #{$prefix + $property}: #{$value};
+        }
+    }
+    @else if $whatToPrefix == 'value' {
+        @each $prefix in $prefixes {
+            #{$property}: #{$prefix + $value};
+        }
+    }
+}
+
+@mixin flex-container($wrapBehavior: nowrap) {
+    @include vendor-prefix(display, flex, value, (-ms-, -webkit-, ''));
+    @include vendor-prefix(direction, row, property, (-ms-, -webkit-, ''));
+    @include vendor-prefix(flex-wrap, $wrapBehavior, property, (-ms-, -webkit-, ''));
+    @include vendor-prefix(justify-content, flex-start, property, (-webkit-, ''));
+    @include vendor-prefix(align-content, flex-start, property, (-webkit-, ''));
+    @include vendor-prefix(align-items, stretch, property, (-webkit-, ''));
+    -ms-flex-pack: start;
+    -ms-flex-line-pack: start;
+    -ms-flex-align: stretch;
+}
+
+@mixin simple-flex-box($width: auto) {
+
+    @include vendor-prefix(order, 0, property, (-ms-, -webkit-, ''));
+    @include vendor-prefix(align-self, stretch, property, (-webkit-, ''));
+    -ms-flex-item-align: stretch;
+
+    @if ($width == auto) {
+        @include vendor-prefix(flex, 1 1 auto, property, (-ms-, -webkit-, ''));
+    }
+    @else {
+        @include vendor-prefix(flex, 0 0 $width, property, (-ms-, -webkit-, ''));
+    }
+}
+
+
+
+@mixin box-shadow($horiz: 1px, $vert: 1px, $blur: 2px, $spread: 0, $color: rgba(0, 0, 0, .2)) {
+    @include vendor-prefix(box-shadow, $horiz $vert $blur $spread $color, property);
+}
+
+
+@mixin border-radius($radius: 2) {
+    -moz-border-radius: $radius * 1px;
+    -webkit-border-radius: $radius * 1px;
+    border-radius: $radius * 1px;
+}
+
+@mixin simple-border($color: #ddd) {
+    border: 1px solid $color;
+    @include border-radius()
+}
+
+@function whiten($color, $white: 0.3) {
+    @return mix(#fff, $color, ($white * 100) * 1%);
+}
+
+@function blacken($color, $black: 0.3) {
+    @return mix(#000, $color, ($black * 100) * 1%);
+}
+
+@function widthPerc($colWidth, $context) {
+    @return ($colWidth * 100 / $context) * 1%
+}
+
+@function remDist($fontSizePx) {
+    @return ($fontSizePx / 10) * 1rem
+}
+
+@function black($alpha: 1) {
+    @return (rgba(0, 0, 0, $alpha))
+}
+
+@function white($alpha: 1) {
+    @return (rgba(255, 255, 255, $alpha))
+}
+
+@mixin font-size($remPx, $important: false) {
+    @if $important == true {
+        font-size: ($remPx) * 1px !important;
+        font-size: ($remPx / 10) * 1rem !important;
+    }
+    @else {
+        font-size: ($remPx) * 1px;
+        font-size: ($remPx / 10) * 1rem;
+    }
+}
+
+
+@mixin keyframes($name) {
+    @-o-keyframes #{$name} { @content };
+    @-moz-keyframes #{$name} { @content };
+    @-webkit-keyframes #{$name} { @content };
+    @keyframes #{$name} { @content };
+}
+
+
+
+@mixin animation($value, $type:'') {
+    $animation: animation;
+    @if $type != '' {
+        $animation:  $animation + '-' + $type;
+    }
+    @include vendor-prefix($animation, $value, property);
+}
+
+@mixin transition($type : all, $duration : 0.5s, $effect : ease-out){
+    -webkit-transition: $type $duration $effect;
+    -moz-transition: $type $duration $effect;
+    -o-transition: $type $duration $effect;
+    transition: $type $duration $effect;
+}
+
+@mixin fade($duration: 1s, $frames: null){
+
+    @if $frames == null {        
+        $frames: (0,0), (50,1), (100,0);
+    }
+
+    @include keyframes(fade) {
+        @each $percentage, $opacity in $frames {
+            #{$percentage}% { opacity: #{$opacity}; }
+        }
+    }
+
+    @include vendor-prefix(animation, fade 1s forwards, property);
+}
+
+
+@mixin control-handles($handles, $bgColor) {
+
+    @each $handleType, $handleVal in $handles {
+        .sts-handle-#{$handleType} {
+            @if($handleType != 'move') {
+                background: $bgColor url(#{$handleVal}) no-repeat center;
+                &.active {
+                   cursor: url(#{$handleVal}) 12 12, auto !important;
+                }
+            }
+            @else {
+                cursor: url(#{$handleVal}) 12 12, auto !important;
+            }
+        }
+    }
+}
+

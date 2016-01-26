@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+    <structure id="delivery" name="Deliveries" level="4" group="main">
+        <sections>
+            <section id="manage_delivery_assembly" name="Deliveries" url="/taoDeliveryRdf/DeliveryMgmt/index">
+                <actions>
+                    <action id="lti-delivery-link" name="LTI" url="/ltiDeliveryProvider/DeliveryLinks/index" context="instance" group="tree">
+                        <icon id="icon-link"/>
+                    </action>
+                </actions>
+            </section>
+        </sections>
+    </structure>
+</structures>

@@ -1,0 +1,11 @@
+@import "inc/bootstrap";
+
+.qti-rubricBlock{
+    .qti-rubricBlock-body{
+        border:1px solid transparent;
+    }
+    > .col-12{
+        border: 1px solid #DDD !important;
+        background-color:rgba($uiClickableDefaultBg, .3);
+    }
+}

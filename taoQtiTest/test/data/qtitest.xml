@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" identifier="testId" title="testTitle" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+  <testPart identifier="testPartId" navigationMode="linear" submissionMode="individual">
+    <itemSessionControl maxAttempts="0" showFeedback="false" allowReview="true" showSolution="false" allowComment="false" allowSkipping="true" validateResponses="false"/>
+    <assessmentSection identifier="assessmentSectionId" required="true" fixed="false" title="assessmentSectionTitle" visible="false" keepTogether="true">
+      <ordering shuffle="true"/>
+      <assessmentItemRef identifier="astronomy" required="false" fixed="false" href="http://tao.localdomain/bertao.rdf#i137968191265683"/>
+      <assessmentItemRef identifier="elections-in-the-united-states-2004" required="false" fixed="false" href="http://tao.localdomain/bertao.rdf#i137968191389526"/>
+      <assessmentItemRef identifier="periods-of-history" required="false" fixed="false" href="http://tao.localdomain/bertao.rdf#i137968191388459"/>
+      <assessmentItemRef identifier="space-shuttle-30-years-of-adventure" required="false" fixed="false" href="http://tao.localdomain/bertao.rdf#i1379681914588612"/>
+    </assessmentSection>
+  </testPart>
+</assessmentTest>

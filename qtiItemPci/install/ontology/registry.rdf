@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+	xml:base="http://www.tao.lu/Ontologies/TAO.rdf#" 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#" 
+>
+    
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/QtiItemPci.rdf#PciCreatorHook">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#SystemObject"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[QTI-PCI-Creator Hooks]]></rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/QtiItemPci.rdf#PciCreatorIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[typeIdentifier]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Unique Identifier of the PCI]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/QtiItemPci.rdf#PciCreatorHook"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/QtiItemPci.rdf#PciCreatorDirectory">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[directory]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[the location containing the unzipped source of the PCI creator]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/QtiItemPci.rdf#PciCreatorHook"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#File"/>
+  </rdf:Description>
+  
+ </rdf:RDF>

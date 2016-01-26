@@ -1,0 +1,49 @@
+.report {
+    position: relative;
+}
+
+.report > .feedback-nesting-0 {
+    padding-top: 20px;
+}
+
+.report > .feedback-nesting-0 > div {
+    display: none;
+}
+
+.report > .hierarchical .hierarchical {
+    background-color: transparent;
+    border-color: transparent;
+    margin: 0;
+    padding: 10px 10px 10px 20px;
+}
+
+.report > .hierarchical .hierarchical .hierarchical-icon {
+    top: 10px;
+    left: -10px;
+}
+
+.report > .hierarchical {
+    margin: 0;
+}
+
+.leaf {
+    margin: 10px 0;
+}
+
+span.icon-success.leaf-icon {
+    top: 19px;
+    left: 15px;
+}
+
+#fold {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 1000;
+}
+
+.report p {
+    margin: 10px 0 0 0;
+    padding: 0;
+    text-align: right; 
+}

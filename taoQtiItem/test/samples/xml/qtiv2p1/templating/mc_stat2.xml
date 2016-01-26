@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem adaptive="false" identifier="stat2" timeDependent="false"
+    title="Test of statistics functions" toolName="Exo+" toolVersion="0.0.9-SNAPSHOT" xml:lang="en"
+    xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+    <responseDeclaration baseType="integer" cardinality="single" identifier="RESPONSE0"/>
+    <responseDeclaration baseType="integer" cardinality="single" identifier="RESPONSE1"/>
+    <responseDeclaration baseType="float" cardinality="single" identifier="RESPONSE2"/>
+    <responseDeclaration baseType="float" cardinality="single" identifier="RESPONSE3"/>
+    <outcomeDeclaration baseType="identifier" cardinality="single" identifier="FEEDBACK"/>
+    <outcomeDeclaration baseType="float" cardinality="single" identifier="SCORE"/>
+    <templateDeclaration baseType="integer" cardinality="single" identifier="n" mathVariable="true"
+        paramVariable="true"/>
+    <templateDeclaration baseType="integer" cardinality="ordered" identifier="t" mathVariable="true"
+        paramVariable="true"/>
+    <templateDeclaration baseType="integer" cardinality="single" identifier="SOLUTION0_0"
+        mathVariable="true" paramVariable="true"/>
+    <templateDeclaration baseType="integer" cardinality="single" identifier="SOLUTION1_0"
+        mathVariable="true" paramVariable="true"/>
+    <templateDeclaration baseType="float" cardinality="single" identifier="SOLUTION2_0"
+        mathVariable="true" paramVariable="true"/>
+    <templateDeclaration baseType="float" cardinality="single" identifier="SOLUTION3_0"
+        mathVariable="true" paramVariable="true"/>
+    <templateProcessing>
+        <setTemplateValue identifier="n">
+            <randomInteger max="10" min="2"/>
+        </setTemplateValue>
+        <setTemplateValue identifier="t">
+            <ordered>
+                <repeat numberRepeats="n">
+                    <randomInteger max="100" min="-100"/>
+                </repeat>
+            </ordered>
+        </setTemplateValue>
+        <setTemplateValue identifier="SOLUTION0_0">
+            <min>
+                <variable identifier="t"/>
+            </min>
+        </setTemplateValue>
+        <setCorrectResponse identifier="RESPONSE0">
+            <variable identifier="SOLUTION0_0"/>
+        </setCorrectResponse>
+        <setTemplateValue identifier="SOLUTION1_0">
+            <max>
+                <variable identifier="t"/>
+            </max>
+        </setTemplateValue>
+        <setCorrectResponse identifier="RESPONSE1">
+            <variable identifier="SOLUTION1_0"/>
+        </setCorrectResponse>
+        <setTemplateValue identifier="SOLUTION2_0">
+            <divide>
+                <round>
+                    <product>
+                        <statsOperator name="mean">
+                            <variable identifier="t"/>
+                        </statsOperator>
+                        <baseValue baseType="integer">100</baseValue>
+                    </product>
+                </round>
+                <baseValue baseType="integer">100</baseValue>
+            </divide>
+        </setTemplateValue>
+        <setCorrectResponse identifier="RESPONSE2">
+            <variable identifier="SOLUTION2_0"/>
+        </setCorrectResponse>
+        <setTemplateValue identifier="SOLUTION3_0">
+            <divide>
+                <round>
+                    <product>
+                        <statsOperator name="popSD">
+                            <variable identifier="t"/>
+                        </statsOperator>
+                        <baseValue baseType="integer">100</baseValue>
+                    </product>
+                </round>
+                <baseValue baseType="integer">100</baseValue>
+            </divide>
+        </setTemplateValue>
+        <setCorrectResponse identifier="RESPONSE3">
+            <variable identifier="SOLUTION3_0"/>
+        </setCorrectResponse>
+
+    </templateProcessing>
+    <itemBody>
+        <div> Here is a set of numbers: <printedVariable identifier="t"/><br/>
+            <br/>- What is the smallest number of this set? <textEntryInteraction expectedLength="5"
+                responseIdentifier="RESPONSE0"/>
+            <br/>- What is the greatest number of this set? <textEntryInteraction expectedLength="5"
+                responseIdentifier="RESPONSE1"/>
+            <br/>- What is the mean of this set (rounded to two decimal places)?
+                <textEntryInteraction expectedLength="5" responseIdentifier="RESPONSE2"/>
+            <br/>- What is the standard deviation of this set (rounded to two decimal places)?
+                <textEntryInteraction expectedLength="5" responseIdentifier="RESPONSE3"/>
+        </div>
+    </itemBody>
+    <responseProcessing>
+        <responseCondition>
+            <responseIf>
+                <and>
+                    <equal toleranceMode="exact">
+                        <variable identifier="RESPONSE0"/>
+                        <correct identifier="RESPONSE0"/>
+                    </equal>
+                    <equal toleranceMode="exact">
+                        <variable identifier="RESPONSE1"/>
+                        <correct identifier="RESPONSE1"/>
+                    </equal>
+                    <equal toleranceMode="exact">
+                        <variable identifier="RESPONSE2"/>
+                        <correct identifier="RESPONSE2"/>
+                    </equal>
+                    <equal toleranceMode="exact">
+                        <variable identifier="RESPONSE3"/>
+                        <correct identifier="RESPONSE3"/>
+                    </equal>
+                </and>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <baseValue baseType="identifier">FEEDBACK0</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="SCORE">
+                    <baseValue baseType="float">8.0</baseValue>
+                </setOutcomeValue>
+            </responseIf>
+            <responseElseIf>
+                <and>
+                    <equal toleranceMode="exact">
+                        <variable identifier="RESPONSE0"/>
+                        <correct identifier="RESPONSE0"/>
+                    </equal>
+                    <equal toleranceMode="exact">
+                        <variable identifier="RESPONSE1"/>
+                        <correct identifier="RESPONSE1"/>
+                    </equal>
+                </and>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <baseValue baseType="identifier">FEEDBACK1</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="SCORE">
+                    <baseValue baseType="float">4.0</baseValue>
+                </setOutcomeValue>
+            </responseElseIf>
+            <responseElseIf>
+                <and>
+                    <equal toleranceMode="exact">
+                        <variable identifier="RESPONSE0"/>
+                        <correct identifier="RESPONSE0"/>
+                    </equal>
+                    <equal toleranceMode="exact">
+                        <variable identifier="RESPONSE2"/>
+                        <correct identifier="RESPONSE2"/>
+                    </equal>
+                </and>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <baseValue baseType="identifier">FEEDBACK2</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="SCORE">
+                    <baseValue baseType="float">4.0</baseValue>
+                </setOutcomeValue>
+            </responseElseIf>
+            <responseElseIf>
+                <and>
+                    <equal toleranceMode="exact">
+                        <variable identifier="RESPONSE2"/>
+                        <correct identifier="RESPONSE2"/>
+                    </equal>
+                    <equal toleranceMode="exact">
+                        <variable identifier="RESPONSE3"/>
+                        <correct identifier="RESPONSE3"/>
+                    </equal>
+                </and>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <baseValue baseType="identifier">FEEDBACK3</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="SCORE">
+                    <baseValue baseType="float">4.0</baseValue>
+                </setOutcomeValue>
+            </responseElseIf>
+            <responseElse>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <baseValue baseType="identifier">DEFAULT_FEEDBACK</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="SCORE">
+                    <baseValue baseType="float">0.0</baseValue>
+                </setOutcomeValue>
+            </responseElse>
+        </responseCondition>
+    </responseProcessing>
+    <modalFeedback identifier="FEEDBACK0" outcomeIdentifier="FEEDBACK" showHide="show">Bravo
+        !</modalFeedback>
+    <modalFeedback identifier="FEEDBACK1" outcomeIdentifier="FEEDBACK" showHide="show">The mean was: <m:math>
+            <m:mi>SOLUTION2_0</m:mi>
+        </m:math> and the standard deviation was: <m:math>
+            <m:mi>SOLUTION3_0</m:mi>
+        </m:math>. </modalFeedback>
+    <modalFeedback identifier="FEEDBACK2" outcomeIdentifier="FEEDBACK" showHide="show">The greatest
+        one was: <m:math>
+            <m:mi>SOLUTION1_0</m:mi>
+        </m:math> and the standard deviation was: <m:math>
+            <m:mi>SOLUTION3_0</m:mi>
+        </m:math>. </modalFeedback>
+    <modalFeedback identifier="FEEDBACK3" outcomeIdentifier="FEEDBACK" showHide="show">The smallest
+        one was: <m:math>
+            <m:mi>SOLUTION0_0</m:mi>
+        </m:math> and the standard deviation was: <m:math>
+            <m:mi>SOLUTION3_0</m:mi>
+        </m:math>. </modalFeedback>
+    <modalFeedback identifier="DEFAULT_FEEDBACK" outcomeIdentifier="FEEDBACK" showHide="show">At
+        least two incorrect responses. The smallest one was: <m:math>
+            <m:mi>SOLUTION0_0</m:mi>
+        </m:math>, the greatest one was: <m:math>
+            <m:mi>SOLUTION1_0</m:mi>
+        </m:math>, the mean was: <m:math>
+            <m:mi>SOLUTION2_0</m:mi>
+        </m:math> and the standard deviation was <m:math>
+            <m:mi>SOLUTION3_0</m:mi>
+        </m:math>. </modalFeedback>
+</assessmentItem>

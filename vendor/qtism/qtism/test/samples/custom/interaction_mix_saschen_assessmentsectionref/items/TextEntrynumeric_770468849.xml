@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file was created using: Onyx Editor, Version 3.4.1 (Full, licensed version), (c)2011 BPS Bildungsportal Sachsen GmbH-->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 imsqti_v2p1.xsd" identifier="TextEntrynumeric_770468849" title="textEntry (numeric, relative)" adaptive="false" timeDependent="false">
+	<responseDeclaration identifier="RESPONSE_1" cardinality="single" baseType="float">
+		<correctResponse>
+			<value>4.136</value>
+		</correctResponse>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>0.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>1.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+		<defaultValue>
+			<value>empty</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_18920566" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_23396239" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<itemBody>
+		<p>Wieviele Einwohner hat der Freistaat Sachsen?</p>
+		<div>
+			<textEntryInteraction responseIdentifier="RESPONSE_1" /> Mio. (Stand: 31. August 2011)</div>
+	</itemBody>
+	<responseProcessing>
+		<responseCondition>
+			<responseIf>
+				<equal toleranceMode="relative" tolerance="5.0" includeLowerBound="true" includeUpperBound="true">
+					<variable identifier="RESPONSE_1" />
+					<correct identifier="RESPONSE_1" />
+				</equal>
+				<setOutcomeValue identifier="SCORE">
+					<sum>
+						<variable identifier="SCORE" />
+						<baseValue baseType="float">1.0</baseValue>
+					</sum>
+				</setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+		<responseCondition>
+			<responseIf>
+				<not>
+					<isNull>
+						<variable identifier="RESPONSE_1" />
+					</isNull>
+				</not>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">incorrect</baseValue>
+				</setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+		<responseCondition>
+			<responseIf>
+				<and>
+					<not>
+						<match>
+							<variable identifier="FEEDBACKBASIC" />
+							<baseValue baseType="identifier">empty</baseValue>
+						</match>
+					</not>
+					<equal toleranceMode="exact">
+						<variable identifier="SCORE" />
+						<variable identifier="MAXSCORE" />
+					</equal>
+				</and>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">correct</baseValue>
+				</setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+		<setOutcomeValue identifier="FEEDBACK_18920566">
+			<and>
+				<match>
+					<baseValue baseType="identifier">correct</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+		<setOutcomeValue identifier="FEEDBACK_23396239">
+			<and>
+				<match>
+					<baseValue baseType="identifier">incorrect</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+	</responseProcessing>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_18920566" showHide="show" title="Richtig!">Sachsen hat rund 4,1 Millionen Einwohner bei einer Fläche von rund 18.400 Quadratkilometern und gehört damit zu den kleineren Ländern der Bundesrepublik.</modalFeedback>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_23396239" showHide="show" title="Leider Falsch!">Sachsen hat rund 4,1 Millionen Einwohner bei einer Fläche von rund 18.400 Quadratkilometern und gehört damit zu den kleineren Ländern der Bundesrepublik.</modalFeedback>
+</assessmentItem>

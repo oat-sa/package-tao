@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Custom Theme Loader Test</title>
+
+        <!-- In this runner paths are kept relative to use the css files in the same folder -->
+        <link rel="stylesheet" type="text/css" href="../../../lib/qunit/qunit.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/tao-main-style.css">
+        <script type="text/javascript" src="../../../lib/require.js"></script>
+        <script type="text/javascript" src="../../../lib/qunit/qunit.js"></script>
+        <script type="text/javascript" src="../../../lib/blanket/blanket.min.js" data-cover-only="ui/themeLoader"></script>
+
+        <script  type="text/javascript">
+
+            //don't start the test now
+            QUnit.config.autostart = false;
+
+            //load the config
+            require(['/tao/ClientConfig/config'], function(){
+
+                //load the test
+                require(['test/ui/themes/test'], function(){
+
+                    //Tests loaded, run tests
+                    QUnit.config.reorder = false;
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+            <div id="qti-item"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE services SYSTEM "../../tao/doc/sas.dtd">
+<services>
+	<description>LTI services</description>
+	
+	<!-- item container service -->
+	<service>
+		<name>LTI Consumer</name>
+		<description>LTI Consumer service calls an LTI Producer</description>
+		<location url="/taoLti/LtiConsumer/call">
+			<param key="ltiLaunchUrl" />
+			<param key="ltiConsumerUri" />
+		</location>
+	</service>
+	
+</services>
