@@ -1,10 +1,8 @@
 .project
 .buildpath
 .settings/
-filemanager/
 funcAcl/
 generis/
-generisHard/
 ltiDeliveryProvider/
 ltiTestConsumer/
 ontoBrowser/
@@ -12,7 +10,6 @@ qtiItemPci/
 qtiItemPic/
 tao/
 taoAltResultStorage/
-taoCampaign/
 taoCe/
 taoDacSimple/
 taoDelivery/
@@ -26,7 +23,6 @@ taoQtiItem/
 taoQtiTest/
 taoResultServer/
 taoResults/
-taoResultsUdp/
 taoSimpleDelivery/
 taoTestTaker/
 taoTests/
@@ -37,3 +33,9 @@ wfAuthoring/
 wfEngine/
 taoOutcomeRds/
 taoOutcomeUi/
+taoBackOffice/
+taoDeliveryRdf/
+taoMediaManager/
+taoRevision/
+taoTestLinear/
+taoWorkspace/
