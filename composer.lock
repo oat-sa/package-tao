@@ -8,59 +8,6 @@
     "content-hash": "0afd79cca1e97d01fb2fab2920a9dc86",
     "packages": [
         {
-            "name": "alroniks/dtms",
-            "version": "v0.5.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Alroniks/dtms.git",
-                "reference": "fc48c95868feface8b769dd956509b54c5dd8ab5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Alroniks/dtms/zipball/fc48c95868feface8b769dd956509b54c5dd8ab5",
-                "reference": "fc48c95868feface8b769dd956509b54c5dd8ab5",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "alroniks\\dtms\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ivan Klimchuk",
-                    "email": "ivan@klimchuk.com",
-                    "homepage": "http://klimchuk.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Classes for manipulate dates and intervals with microseconds precision",
-            "homepage": "http://alroniks.github.io/dtms",
-            "keywords": [
-                "date",
-                "datetime",
-                "fractions",
-                "interval",
-                "iso8601",
-                "microseconds",
-                "milliseconds",
-                "ms",
-                "time"
-            ],
-            "time": "2015-08-26 15:24:59"
-        },
-        {
             "name": "clearfw/clearfw",
             "version": "v1.0.1",
             "source": {
@@ -292,12 +239,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "9f89fd349fd2b537be8a0a0c41f87f2f640dfc8a"
+                "reference": "46a476a6ac1f614442c7e4b1a6dca44f0b34f892"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/9f89fd349fd2b537be8a0a0c41f87f2f640dfc8a",
-                "reference": "9f89fd349fd2b537be8a0a0c41f87f2f640dfc8a",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/46a476a6ac1f614442c7e4b1a6dca44f0b34f892",
+                "reference": "46a476a6ac1f614442c7e4b1a6dca44f0b34f892",
                 "shasum": ""
             },
             "require": {
@@ -350,7 +297,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2016-03-31 10:10:15"
+            "time": "2016-05-27 12:51:06"
         },
         {
             "name": "doctrine/common",
@@ -492,12 +439,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae"
+                "reference": "803a2ed9fea02f9ca47cd45395089fe78769a392"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/90b2128806bfde671b6952ab8bea493942c1fdae",
-                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/803a2ed9fea02f9ca47cd45395089fe78769a392",
+                "reference": "803a2ed9fea02f9ca47cd45395089fe78769a392",
                 "shasum": ""
             },
             "require": {
@@ -551,7 +498,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2015-11-06 14:35:42"
+            "time": "2016-05-12 17:23:41"
         },
         {
             "name": "doctrine/lexer",
@@ -675,12 +622,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "85cb758d7367f3aaaa8ffc9269e777919c5f68bb"
+                "reference": "6a37496c2b7855f5c88cac89c5f56a07e326d63c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/85cb758d7367f3aaaa8ffc9269e777919c5f68bb",
-                "reference": "85cb758d7367f3aaaa8ffc9269e777919c5f68bb",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/6a37496c2b7855f5c88cac89c5f56a07e326d63c",
+                "reference": "6a37496c2b7855f5c88cac89c5f56a07e326d63c",
                 "shasum": ""
             },
             "require": {
@@ -729,20 +676,20 @@
                 "rest",
                 "web service"
             ],
-            "time": "2016-04-06 17:59:33"
+            "time": "2016-06-04 22:16:20"
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "bb9024c526b22f3fe6ae55a561fd70653d470aa8"
+                "reference": "c10d860e2a9595f8883527fa0021c7da9e65f579"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/bb9024c526b22f3fe6ae55a561fd70653d470aa8",
-                "reference": "bb9024c526b22f3fe6ae55a561fd70653d470aa8",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/c10d860e2a9595f8883527fa0021c7da9e65f579",
+                "reference": "c10d860e2a9595f8883527fa0021c7da9e65f579",
                 "shasum": ""
             },
             "require": {
@@ -780,20 +727,20 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2016-03-08 01:15:46"
+            "time": "2016-05-18 16:56:05"
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.2.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "2e89629ff057ebb49492ba08e6995d3a6a80021b"
+                "reference": "7e9749008f75ab798168371cf3f6a2a36850576a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/2e89629ff057ebb49492ba08e6995d3a6a80021b",
-                "reference": "2e89629ff057ebb49492ba08e6995d3a6a80021b",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/7e9749008f75ab798168371cf3f6a2a36850576a",
+                "reference": "7e9749008f75ab798168371cf3f6a2a36850576a",
                 "shasum": ""
             },
             "require": {
@@ -809,7 +756,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -838,7 +785,7 @@
                 "stream",
                 "uri"
             ],
-            "time": "2016-02-18 21:54:00"
+            "time": "2016-06-05 19:42:18"
         },
         {
             "name": "league/flysystem",
@@ -846,12 +793,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "a8294fb7d939433abfaeb0fc1a34a278acfa5b39"
+                "reference": "d94b118d3d2abf1ab182c3f4173b1720528f5dcd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/94294e4b9feec0b9a126d729812eb411ec7b577d",
-                "reference": "a8294fb7d939433abfaeb0fc1a34a278acfa5b39",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/d94b118d3d2abf1ab182c3f4173b1720528f5dcd",
+                "reference": "d94b118d3d2abf1ab182c3f4173b1720528f5dcd",
                 "shasum": ""
             },
             "require": {
@@ -921,20 +868,20 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2016-04-04 14:52:20"
+            "time": "2016-06-05 15:56:21"
         },
         {
             "name": "nikic/fast-route",
-            "version": "v0.6.0",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/FastRoute.git",
-                "reference": "31fa86924556b80735f98b294a7ffdfb26789f22"
+                "reference": "79843dce62ac52e9b628e73d5f1264cad10c65a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/31fa86924556b80735f98b294a7ffdfb26789f22",
-                "reference": "31fa86924556b80735f98b294a7ffdfb26789f22",
+                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/79843dce62ac52e9b628e73d5f1264cad10c65a6",
+                "reference": "79843dce62ac52e9b628e73d5f1264cad10c65a6",
                 "shasum": ""
             },
             "require": {
@@ -964,7 +911,7 @@
                 "router",
                 "routing"
             ],
-            "time": "2015-06-18 19:15:47"
+            "time": "2016-04-18 11:33:20"
         },
         {
             "name": "oat-sa/extension-tao-backoffice",
@@ -2676,23 +2623,79 @@
             "time": "2016-04-05 09:23:52"
         },
         {
+            "name": "oat-sa/lib-tao-dtms",
+            "version": "v0.5.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oat-sa/lib-tao-dtms.git",
+                "reference": "3b123a58922325cfe98052d1ee66e5da71e9710c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oat-sa/lib-tao-dtms/zipball/3b123a58922325cfe98052d1ee66e5da71e9710c",
+                "reference": "3b123a58922325cfe98052d1ee66e5da71e9710c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "oat\\dtms\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv2"
+            ],
+            "authors": [
+                {
+                    "name": "Open Assessment Technologies S.A.",
+                    "homepage": "http://www.taotesting.com"
+                },
+                {
+                    "name": "Ivan Klimchuk",
+                    "email": "ivan@klimchuk.com",
+                    "homepage": "http://klimchuk.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Classes for manipulate dates and intervals with microseconds precision",
+            "keywords": [
+                "date",
+                "datetime",
+                "fractions",
+                "interval",
+                "iso8601",
+                "microseconds",
+                "milliseconds",
+                "ms",
+                "time"
+            ],
+            "time": "2015-10-19 14:21:30"
+        },
+        {
             "name": "oat-sa/lib-tao-qti",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/lib-tao-qti.git",
-                "reference": "5992e63c0a48c59d3df25060b2e56bf4b3fd3d6c"
+                "reference": "249fe469f5798f68a0b62f84b1ca335b2c9d42de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/lib-tao-qti/zipball/5992e63c0a48c59d3df25060b2e56bf4b3fd3d6c",
-                "reference": "5992e63c0a48c59d3df25060b2e56bf4b3fd3d6c",
+                "url": "https://api.github.com/repos/oat-sa/lib-tao-qti/zipball/249fe469f5798f68a0b62f84b1ca335b2c9d42de",
+                "reference": "249fe469f5798f68a0b62f84b1ca335b2c9d42de",
                 "shasum": ""
             },
             "require": {
                 "oat-sa/lib-beeme": "0.0.0",
                 "php": ">=5.3.10",
-                "qtism/qtism": "~0.9"
+                "qtism/qtism": "~0.9.0"
             },
             "require-dev": {
                 "phpunit/phpunit": ">=3.7.20"
@@ -2734,7 +2737,7 @@
                 "QTI",
                 "TAO"
             ],
-            "time": "2016-04-05 15:35:24"
+            "time": "2016-05-09 09:41:34"
         },
         {
             "name": "oat-sa/oatbox-extension-installer",
@@ -2929,12 +2932,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "0f7182213a65bcdfc34a7caf976cc45c62a10b23"
+                "reference": "1d85f9ef3ecfc42bbc4f3c70d5e37ca9a65f629a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/b04ab34d77e59082a22f893b7b720613b172d5fe",
-                "reference": "0f7182213a65bcdfc34a7caf976cc45c62a10b23",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/1d85f9ef3ecfc42bbc4f3c70d5e37ca9a65f629a",
+                "reference": "1d85f9ef3ecfc42bbc4f3c70d5e37ca9a65f629a",
                 "shasum": ""
             },
             "require": {
@@ -2981,7 +2984,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2016-04-11 13:28:11"
+            "time": "2016-06-06 09:09:37"
         },
         {
             "name": "pimple/pimple",
@@ -3080,20 +3083,20 @@
         },
         {
             "name": "qtism/qtism",
-            "version": "0.9.25",
+            "version": "0.9.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/qti-sdk.git",
-                "reference": "0b0b9704cab5194d670a3681992cce373a4d9fa5"
+                "reference": "bbed471d2d72da2f99e07aa9bf190e6437567fb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/qti-sdk/zipball/0b0b9704cab5194d670a3681992cce373a4d9fa5",
-                "reference": "0b0b9704cab5194d670a3681992cce373a4d9fa5",
+                "url": "https://api.github.com/repos/oat-sa/qti-sdk/zipball/bbed471d2d72da2f99e07aa9bf190e6437567fb4",
+                "reference": "bbed471d2d72da2f99e07aa9bf190e6437567fb4",
                 "shasum": ""
             },
             "require": {
-                "alroniks/dtms": "0.5.2",
+                "oat-sa/lib-tao-dtms": "~0.5",
                 "php": ">=5.3.0"
             },
             "require-dev": {
@@ -3133,7 +3136,7 @@
                 "QTI",
                 "TAO"
             ],
-            "time": "2016-04-08 14:07:08"
+            "time": "2016-05-30 09:18:40"
         },
         {
             "name": "slim/slim",
@@ -3141,20 +3144,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Slim.git",
-                "reference": "e08856b997891e9303c72120d766434b13874b71"
+                "reference": "30cfe3c07dac28ec1129c0577e64b90ba11a54c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Slim/zipball/b2e82a75467c12d94f038d433363e4aa7e8bf603",
-                "reference": "e08856b997891e9303c72120d766434b13874b71",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/30cfe3c07dac28ec1129c0577e64b90ba11a54c4",
+                "reference": "30cfe3c07dac28ec1129c0577e64b90ba11a54c4",
                 "shasum": ""
             },
             "require": {
                 "container-interop/container-interop": "^1.1",
-                "nikic/fast-route": "^0.6",
+                "nikic/fast-route": "^1.0",
                 "php": ">=5.5.0",
                 "pimple/pimple": "^3.0",
                 "psr/http-message": "^1.0"
+            },
+            "provide": {
+                "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.0",
@@ -3200,7 +3206,7 @@
                 "micro",
                 "router"
             ],
-            "time": "2016-03-23 16:54:43"
+            "time": "2016-05-26 08:20:33"
         },
         {
             "name": "zendframework/zend-servicemanager",
