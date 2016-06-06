@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" 
+  identifier="i13801862578773243" title="Test item 3" label="" xml:lang="en-US" adaptive="false" timeDependent="false">
+  <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="identifier">
+    <correctResponse>
+      <value>Choice_1</value>
+      <value>Choice_2</value>
+      <value>Choice_3</value>
+    </correctResponse>
+    <mapping defaultValue="0">
+      <mapEntry mapKey="Choice_1" mappedValue="5"/>
+      <mapEntry mapKey="Choice_2" mappedValue="5"/>
+      <mapEntry mapKey="Choice_3" mappedValue="5"/>
+    </mapping>
+  </responseDeclaration>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <itemBody>
+    <div>Are you a good unit test?<br/>
+<choiceInteraction responseIdentifier="RESPONSE" shuffle="true" maxChoices="3" minChoices="0"><prompt>Yes, I am:<br/></prompt><simpleChoice identifier="Choice_1" fixed="false">atomic</simpleChoice><simpleChoice identifier="Choice_2" fixed="false">idempotent</simpleChoice><simpleChoice identifier="Choice_3" fixed="false">decoupled<br/></simpleChoice></choiceInteraction>
+<br/></div>
+  </itemBody>
+  <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response"/>
+</assessmentItem>

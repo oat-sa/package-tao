@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+    xmlns:xi="http://www.w3.org/2001/XInclude"    
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:m="http://www.w3.org/1998/Math/MathML" toolName="Mathqurate" toolVersion="1.0" xml:lang="en" 
+    identifier="multi-input" title="Legend" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE1" cardinality="single" baseType="identifier">
+        <correctResponse>
+            <value>ChoiceA</value>
+        </correctResponse>
+    </responseDeclaration>
+    <responseDeclaration identifier="RESPONSE2" cardinality="single" baseType="identifier">
+        <correctResponse>
+            <value>A2</value>
+        </correctResponse>
+    </responseDeclaration>
+    <responseDeclaration identifier="RESPONSE3" cardinality="single" baseType="string">
+        <correctResponse>
+            <value>wicked king</value>
+        </correctResponse>
+    </responseDeclaration>
+    <responseDeclaration identifier="RESPONSE4" cardinality="multiple" baseType="directedPair">
+        <correctResponse>
+            <value>F G1</value>
+            <value>C G2</value>
+            <value>H G3</value>
+        </correctResponse>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+        <defaultValue>
+            <value>0.0</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <outcomeDeclaration identifier="SCORE1" cardinality="single" baseType="float">
+        <defaultValue>
+            <value>0.0</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <outcomeDeclaration identifier="SCORE2" cardinality="single" baseType="float">
+        <defaultValue>
+            <value>0.0</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <outcomeDeclaration identifier="SCORE3" cardinality="single" baseType="float">
+        <defaultValue>
+            <value>0.0</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <outcomeDeclaration identifier="SCORE4" cardinality="single" baseType="float">
+        <defaultValue>
+            <value>0.0</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <outcomeDeclaration identifier="FEEDBACK" cardinality="multiple" baseType="identifier"/>
+    
+    <itemBody>
+        <blockquote>
+            <p>Many people who live near the Theme Park are afraid to go into the Forest area. There is
+            a legend, that a woman named Marion, who once lived in the forest as an outlaw hundreds and hundreds
+            of years ago, still walks there as a ghost at night. The legend says, she was a great
+            warrior from a rich family, but the wicked king, who ruled the country, killed her
+            family, burned her castle and rode away on her horse. The castle is quite close to the Theme Park.</p>
+        </blockquote>
+        <choiceInteraction responseIdentifier="RESPONSE1" shuffle="true" maxChoices="1">
+            <prompt>Why are some people afraid of the Forest Area in the Theme Park?</prompt>
+            <simpleChoice identifier="ChoiceA">Some people are afraid of a woman who walks around at
+                night as a ghost.</simpleChoice>
+            <simpleChoice identifier="ChoiceB">Some people are afraid of the dark.</simpleChoice>
+            <simpleChoice identifier="ChoiceC">Some people are afraid of a man who walks around at
+                night as a ghost.</simpleChoice>
+        </choiceInteraction>
+        <p>
+            <feedbackInline outcomeIdentifier="FEEDBACK" showHide="show" identifier="ReasonOK">Yes,
+                that's the right reason.</feedbackInline>
+            <feedbackInline outcomeIdentifier="FEEDBACK" showHide="show"
+                identifier="ReasonIncorrect">No, that's not the right reason.</feedbackInline>
+        </p>
+        <div>The woman, whose name was <inlineChoiceInteraction responseIdentifier="RESPONSE2"
+                shuffle="true">
+            <inlineChoice identifier="P2" fixed="true">Please choose...</inlineChoice>
+            <inlineChoice identifier="C2">Marine</inlineChoice>
+            <inlineChoice identifier="B2">Maureen</inlineChoice>
+                <inlineChoice identifier="A2">Marion</inlineChoice>
+        </inlineChoiceInteraction>, became angry with the <textEntryInteraction
+                responseIdentifier="RESPONSE3"/>.</div>
+        <gapMatchInteraction responseIdentifier="RESPONSE4" shuffle="true">
+            <gapText identifier="F" matchMax="1">family</gapText>
+            <gapText identifier="C" matchMax="1">castle</gapText>
+            <gapText identifier="S" matchMax="1">sword</gapText>
+            <gapText identifier="H" matchMax="1">horse</gapText>
+            <blockquote>
+                <p>He killed her <gap identifier="G1"/> and burned her <gap identifier="G2"/>, then jumped on her <gap identifier="G3"/> and rode away.</p>
+            </blockquote>
+        </gapMatchInteraction>
+        <p>
+            <feedbackInline outcomeIdentifier="FEEDBACK" showHide="show" identifier="NameOK"> You've
+                got the right name for our heroine.</feedbackInline>
+            <feedbackInline outcomeIdentifier="FEEDBACK" showHide="show" identifier="WrongName"> You've
+                got the wrong name for our heroine.</feedbackInline>
+            <feedbackInline outcomeIdentifier="FEEDBACK" showHide="show" identifier="BaddyOK">
+                Right, he was a wicked king!</feedbackInline>
+            <feedbackInline outcomeIdentifier="FEEDBACK" showHide="show" identifier="BaddyAlmost">
+                Not quite, he was a wicked king!</feedbackInline>
+            <feedbackInline outcomeIdentifier="FEEDBACK" showHide="show" identifier="BaddyNo">
+                No, he was a wicked king!</feedbackInline>
+            <feedbackInline outcomeIdentifier="FEEDBACK" showHide="show" identifier="BaddyBad">
+                No, it was the wicked king!</feedbackInline>
+            <feedbackInline outcomeIdentifier="FEEDBACK" showHide="show" identifier="GapsOK">
+                Yes, that's what he did.</feedbackInline>
+            <feedbackInline outcomeIdentifier="FEEDBACK" showHide="show" identifier="GapsNo">
+                No, that's not what he did.</feedbackInline>
+        </p>
+    </itemBody>
+    <responseProcessing>
+        <responseCondition>
+            <responseIf>
+                <match>
+                    <variable identifier="RESPONSE1"/>
+                    <correct identifier="RESPONSE1"/>
+                </match>
+                <setOutcomeValue identifier="SCORE1">
+                    <baseValue baseType="float">1.0</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <multiple>
+                        <baseValue baseType="identifier">ReasonOK</baseValue>
+                    </multiple>
+                </setOutcomeValue>
+            </responseIf>
+            <responseElse>
+                <setOutcomeValue identifier="SCORE1">
+                    <baseValue baseType="float">0.0</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <multiple>
+                        <baseValue baseType="identifier">ReasonIncorrect</baseValue>
+                    </multiple>
+                </setOutcomeValue>
+            </responseElse>
+        </responseCondition>
+        <responseCondition>
+            <responseIf>
+                <match>
+                    <variable identifier="RESPONSE2"/>
+                    <correct identifier="RESPONSE2"/>
+                </match>
+                <setOutcomeValue identifier="SCORE2">
+                    <baseValue baseType="float">1.0</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <multiple>
+                        <variable identifier="FEEDBACK"/>
+                        <baseValue baseType="identifier">NameOK</baseValue>
+                    </multiple>
+                </setOutcomeValue>
+            </responseIf>
+            <responseElse>
+                <setOutcomeValue identifier="SCORE2">
+                    <baseValue baseType="float">0.0</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <multiple>
+                        <variable identifier="FEEDBACK"/>
+                        <baseValue baseType="identifier">WrongName</baseValue>
+                    </multiple>
+                </setOutcomeValue>
+            </responseElse>
+        </responseCondition>
+        <responseCondition>
+            <responseIf>
+                <match>
+                    <variable identifier="RESPONSE3"/>
+                    <correct identifier="RESPONSE3"/>
+                </match>
+                <setOutcomeValue identifier="SCORE3">
+                    <baseValue baseType="float">1.0</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <multiple>
+                        <variable identifier="FEEDBACK"/>
+                        <baseValue baseType="identifier">BaddyOK</baseValue>
+                    </multiple>
+                </setOutcomeValue>
+            </responseIf>
+            <responseElseIf>
+                <or>
+                    <match>
+                        <variable identifier="RESPONSE3"/>
+                        <baseValue baseType="string">bad king</baseValue>
+                    </match>
+                    <match>
+                        <variable identifier="RESPONSE3"/>
+                        <baseValue baseType="string">evil king</baseValue>
+                    </match>
+                </or>
+                <setOutcomeValue identifier="SCORE3">
+                    <baseValue baseType="float">0.5</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <multiple>
+                        <variable identifier="FEEDBACK"/>
+                        <baseValue baseType="identifier">BaddyAlmost</baseValue>
+                    </multiple>
+                </setOutcomeValue>
+            </responseElseIf>
+            <responseElseIf>
+                <substring caseSensitive="false">
+                   <baseValue baseType="string">king</baseValue>
+                   <variable identifier="RESPONSE3"/>
+                </substring>
+                <setOutcomeValue identifier="SCORE3">
+                    <baseValue baseType="float">0.2</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <multiple>
+                        <variable identifier="FEEDBACK"/>
+                        <baseValue baseType="identifier">BaddyNo</baseValue>
+                    </multiple>
+                </setOutcomeValue>
+            </responseElseIf>
+            <responseElse>
+                <setOutcomeValue identifier="SCORE3">
+                    <baseValue baseType="float">0.0</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <multiple>
+                        <variable identifier="FEEDBACK"/>
+                        <baseValue baseType="identifier">BaddyBad</baseValue>
+                    </multiple>
+                </setOutcomeValue>
+            </responseElse>
+        </responseCondition>
+        <responseCondition>
+            <responseIf>
+                <match>
+                    <variable identifier="RESPONSE4"/>
+                    <correct identifier="RESPONSE4"/>
+                </match>
+                <setOutcomeValue identifier="SCORE4">
+                    <baseValue baseType="float">1.0</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <multiple>
+                        <variable identifier="FEEDBACK"/>
+                        <baseValue baseType="identifier">GapsOK</baseValue>
+                    </multiple>
+                </setOutcomeValue>
+            </responseIf>
+            <responseElse>
+                <setOutcomeValue identifier="SCORE4">
+                    <baseValue baseType="float">0.0</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <multiple>
+                        <variable identifier="FEEDBACK"/>
+                        <baseValue baseType="identifier">GapsNo</baseValue>
+                    </multiple>
+                </setOutcomeValue>
+            </responseElse>
+        </responseCondition>
+        <setOutcomeValue identifier="SCORE">
+            <sum>
+                <variable identifier="SCORE1"/>
+                <variable identifier="SCORE2"/>
+                <variable identifier="SCORE3"/>
+                <variable identifier="SCORE4"/>
+            </sum>
+        </setOutcomeValue>
+    </responseProcessing>
+</assessmentItem>

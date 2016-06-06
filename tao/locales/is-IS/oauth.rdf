@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAO.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#OauthConsumer">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Oauth Credentials
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#OauthConsumer
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Oauth Credentials]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#OauthKey">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source OAuth consumer key
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#OauthKey
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[OAuth consumer key]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source identifier of OAuth consumer
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#OauthKey
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[identifier of OAuth consumer]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#OauthSecret">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Oauth consumer secret
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#OauthSecret
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Oauth consumer secret]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Secret used for signatures
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#OauthSecret
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[Secret used for signatures]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#OauthCallbackUrl">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source OAuth consumer callback URL
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#OauthCallbackUrl
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[OAuth consumer callback URL]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source URL to call after autentification
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#OauthCallbackUrl
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[URL to call after autentification]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,661 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.1.0-sprint15\n"
+"PO-Revision-Date: 2015-12-23T13:29:09\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: zh-CN\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: zh-CN\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ../../\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+
+msgid "%1$s - item %2$s/%3$s"
+msgstr ""
+
+msgid "A QTI Item involved in the QTI Test '%s' could not be compiled."
+msgstr ""
+
+msgid "A QTI Test must contain at least one QTI Item to be compiled. None found."
+msgstr "没有找到任何题目。 一个QTI考试必须有至少一个QTI项目才能进行编译。"
+
+msgid "A qti testpackage"
+msgstr "一个QTI的考试包"
+
+msgid "A remote resource referenced in QTI test '%s' could not be retrieved."
+msgstr ""
+
+msgid "A visible section is one that is identifiable by the candidate."
+msgstr "一个可见的章节是要让考生能看见的。"
+
+msgid "Add a zip file containing QTI tests and items"
+msgstr "添加一个有包含QTI考试和QTI题目的ZIP文件"
+
+msgid "Add selected item(s) here."
+msgstr "在此处添加所选的题目。"
+
+msgid "Add the source file"
+msgstr "添加来源文件"
+
+msgid "After you complete the section it would be impossible to return to this section to make changes. Are you sure you want to end the section?"
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+msgid "Allow Comment"
+msgstr "允许备注"
+
+msgid "Allow Review"
+msgstr "允许复审"
+
+msgid "Allow Skipping"
+msgstr "允许跳过"
+
+msgid "Allow the candidate to review his answers."
+msgstr "允许考生复审答案。"
+
+msgid "An error occurs, please contact your administrator"
+msgstr ""
+
+msgid "An invisible section with a parent that is subject to shuffling can specify whether or not its children, which will appear to the candidate as if they were part of the parent, are shuffled as a block or mixed up with the other children of the parent section."
+msgstr "一个隐藏章节若有随机顺序的父代部分，当显示章节给考生时，您可以设定它的子章节：1.是否属于父代的随机顺序部分； 2.属于自己的随机顺序区块； 3.与其它子章节混合成为另一个随机顺序部分"
+
+msgid "An item involved in the test cannot be read or is not QTI compliant."
+msgstr "一个牵涉考试使用的题目无法被读取或不兼容QTI。"
+
+msgid "An item involved in the test cannot be written."
+msgstr "一个在考试的题目不能被写入。"
+
+msgid "An unknown error occured while compiled QTI Test '%s'."
+msgstr "在编译QTI考试'%s'时出现了一个不明错误。"
+
+msgid "An unknown error occured while compiling QTI test '%s'."
+msgstr "在汇集QTI考试'%s'中时出现了一个不明错误。"
+
+msgid "Answered"
+msgstr ""
+
+msgid "Are you sure you want to end the test?"
+msgstr ""
+
+msgid "Author"
+msgstr "作者"
+
+msgid "Auxiliary file not found at location \"%s\"."
+msgstr ""
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Candidate"
+msgstr "考生"
+
+msgid "Categories"
+msgstr "分类"
+
+msgid "Collapse the review panel"
+msgstr ""
+
+msgid "Comment"
+msgstr "备注"
+
+msgid "Completed items"
+msgstr ""
+
+msgid "Controls the maximum number of attempts allowed. 0 means unlimited."
+msgstr "允许最大的使用次数.输入0为无限制。"
+
+msgid "Disable validation"
+msgstr "停用验证"
+
+msgid "Enable selection"
+msgstr "启用选择"
+
+msgid "End Test"
+msgstr "结束考试"
+
+msgid "Enter a category"
+msgstr "输入一个类别"
+
+msgid "Error"
+msgstr "错误"
+
+msgid "Error during file import"
+msgstr "文件导入时出现错误"
+
+msgid "Error found in the IMS QTI Test:\n"
+"%s"
+msgstr ""
+
+msgid "Expand the review panel"
+msgstr ""
+
+msgid "Export"
+msgstr "导出"
+
+msgid "Export error in test : %s"
+msgstr ""
+
+msgid "Export QTI 2.1 Test Package"
+msgstr "导出 QTI 2.1考试包"
+
+msgid "File name"
+msgstr "文件名"
+
+msgid "Filter"
+msgstr "过滤条件"
+
+msgid "finished"
+msgstr ""
+
+msgid "Fixed"
+msgstr "固定"
+
+msgid "Fixed position in a shuffled the selection."
+msgstr "在随机顺序中固定位置。"
+
+msgid "Flagged"
+msgstr ""
+
+msgid "Identifier"
+msgstr "识别码"
+
+msgid "If required it must appear (at least once) in the selection."
+msgstr "如果为必要，出现(至少一次)在选择部分。"
+
+msgid "If required, it must appears at least once in the selection."
+msgstr "如果为必要，出现(至少一次)在选择部分。"
+
+msgid "If set, it causes the order of the child elements to be randomized, otherwise it uses the order in which the child elements are defined."
+msgstr "如果设定，它会使子元素的顺序随机化，否则它会使用被定义的子元素的顺序。"
+
+msgid "If the candidate can skip the item, without submitting a response."
+msgstr "考生是否可以不提交回应而跳过题目。"
+
+msgid "Import"
+msgstr "导入"
+
+msgid "Import a QTI 2.1 Test Package"
+msgstr "导入一个QTI 2.1考试包"
+
+msgid "IMS QTI Item referenced as \"%s\" in the IMS Manifest file could not be imported."
+msgstr ""
+
+msgid "IMS QTI Item referenced as \"%s\" in the IMS Manifest file successfully imported."
+msgstr ""
+
+msgid "IMS QTI Test Package successfully imported."
+msgstr "IMS QTI考试包已经成功导入。"
+
+msgid "IMS QTI Test referenced as \"%s\" in the IMS Manifest file successfully imported."
+msgstr ""
+
+msgid "In this part of the test navigation is not allowed."
+msgstr ""
+
+msgid "Inconsistency at line %1d:"
+msgstr ""
+
+msgid "Individual"
+msgstr "个别"
+
+msgid "is already used in the test."
+msgstr "已经在考试中被使用。"
+
+msgid "is not a valid identifier (alphanum, underscore, dash and dots)"
+msgstr ""
+
+msgid "is not a valid identifier (everything except spaces)"
+msgstr ""
+
+msgid "Item %d of %d"
+msgstr ""
+
+msgid "Item Reference Properties"
+msgstr "题目参考属性"
+
+msgid "Item Session Control"
+msgstr "题目时域控制"
+
+msgid "Items"
+msgstr "题目"
+
+msgid "Items can optionally be assigned to one or more categories."
+msgstr "题目可以选择性的被分配到一个或多个类别。"
+
+msgid "Items Compilation"
+msgstr "题目编译"
+
+msgid "Items marked for later review"
+msgstr ""
+
+msgid "Keep Together"
+msgstr "保持在一起"
+
+msgid "Late submission allowed"
+msgstr "允许迟交"
+
+msgid "Linear"
+msgstr "直线性"
+
+msgid "Manage Rubric Blocks"
+msgstr "管理指导语区块"
+
+msgid "Manage test properties"
+msgstr "管理考试属性"
+
+msgid "Manage Tests"
+msgstr "管理考试"
+
+msgid "Mark for review"
+msgstr ""
+
+msgid "Max Attempts"
+msgstr "最多使用次数"
+
+msgid "Maximum Duration"
+msgstr "最长时限"
+
+msgid "Maximum duration for the all test."
+msgstr "所有考试的最长时限。"
+
+msgid "Maximum duration for this item."
+msgstr "这个题目的最长时限。"
+
+msgid "Maximum duration for this section."
+msgstr "这个区域的最长时限。"
+
+msgid "Maximum duration for this test part."
+msgstr "这个考试部分的最长时限。"
+
+msgid "Minimum Duration"
+msgstr "最短时限"
+
+msgid "Minimum duration for the test."
+msgstr "考试最短时限。"
+
+msgid "Minimum duration for this item."
+msgstr "这个题目的最短时限。"
+
+msgid "Minimum duration for this section."
+msgstr "这个区域的最短时限。"
+
+msgid "Minimum duration for this test part."
+msgstr "这个考试部分的最短时限。"
+
+msgid "Move Down"
+msgstr "向下移"
+
+msgid "Move Up"
+msgstr "向上移"
+
+msgid "Navigation"
+msgstr "导览"
+
+msgid "New Rubric Block"
+msgstr "新指导语区块"
+
+msgid "New test part"
+msgstr "新考试部分"
+
+msgid "Next"
+msgstr "下一个"
+
+msgid "Next Section"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "No file found at location \"%s\"."
+msgstr ""
+
+msgid "No more attempts allowed for item \"%s\"."
+msgstr "题目\"%s\"已经无剩余的使用次数。"
+
+msgid "No reference to any IMS QTI Item found."
+msgstr "没有找到任何对照IMS QTI的题目。"
+
+msgid "Non Linear"
+msgstr "非线性"
+
+msgid "Not all test could be export"
+msgstr ""
+
+msgid "Not shuffled, the position remains fixed."
+msgstr "不是随机顺序，该位置保持固定。"
+
+msgid "Ok"
+msgstr ""
+
+msgid "One or more dependent IMS QTI Items could not be imported."
+msgstr "有一个或多个独立IMS QTI题目无法被导入。"
+
+msgid "Only display the items marked for review"
+msgstr ""
+
+msgid "Only display the unanswered items"
+msgstr ""
+
+msgid "Ordering"
+msgstr "排序"
+
+msgid "Package is valid but no tests were found. Make sure that it contains valid QTI tests."
+msgstr ""
+
+msgid "Part %d"
+msgstr ""
+
+msgid "Previous"
+msgstr "上一个"
+
+msgid "Proctor"
+msgstr "监考人"
+
+msgid "Properties"
+msgstr "属性"
+
+msgid "QTI 2.1 Test Driver"
+msgstr ""
+
+msgid "QTI Item Runner"
+msgstr ""
+
+msgid "QTI Test \"%s\" publishing failed."
+msgstr ""
+
+msgid "QTI Test \"%s\" successfully published."
+msgstr ""
+
+msgid "QTI Test Package"
+msgstr "QTI考试包"
+
+msgid "QTI Test Package 2.1"
+msgstr "QTI 2.1考试包"
+
+msgid "Reference"
+msgstr "参照"
+
+msgid "Remove Item Reference"
+msgstr "参照"
+
+msgid "Remove Rubric Block"
+msgstr "移除指导语区块"
+
+msgid "Remove Section"
+msgstr "移除区域"
+
+msgid "Required"
+msgstr "必要的"
+
+msgid "Required field"
+msgstr "必填栏"
+
+msgid "Reset filters"
+msgstr ""
+
+msgid "Review"
+msgstr ""
+
+msgid "Rubric Block"
+msgstr "指导语区块"
+
+msgid "Rubric Block Properties"
+msgstr "指导语区块属性"
+
+msgid "Rubric Blocks"
+msgstr "指导语区块"
+
+msgid "Save"
+msgstr "储存"
+
+msgid "Scorer"
+msgstr "评分人"
+
+msgid "Section level category enables configuring the categories of its composing items all at once. A category in gray means that all items have that category. A category in white means that only a few items have that category."
+msgstr ""
+
+msgid "Section Properties"
+msgstr "章节属性"
+
+msgid "Select"
+msgstr "选取"
+
+msgid "Select Items"
+msgstr "选取题目"
+
+msgid "Selection"
+msgstr "选取区域"
+
+msgid "Send"
+msgstr "传送"
+
+msgid "Show Feedback"
+msgstr "显示回馈"
+
+msgid "Show Solution"
+msgstr "显示解答"
+
+msgid "Show the solution once the answer is submitted."
+msgstr "考生提交答案后就立刻显示解答。"
+
+msgid "Show/Hide the review screen"
+msgstr ""
+
+msgid "Shuffle"
+msgstr "随机顺序"
+
+msgid "Simultaneous"
+msgstr "同时"
+
+msgid "Skip"
+msgstr "跳过"
+
+msgid "Skip &amp; End Test"
+msgstr ""
+
+msgid "Skip to the end of the test"
+msgstr ""
+
+msgid "Skip to the next item"
+msgstr ""
+
+msgid "Skip to the next section"
+msgstr ""
+
+msgid "Start Test-part"
+msgstr ""
+
+msgid "Submission"
+msgstr "提交"
+
+msgid "Submit and go to the end of the test"
+msgstr ""
+
+msgid "Submit and go to the next item"
+msgstr ""
+
+msgid "Submit and go to the previous item"
+msgstr ""
+
+msgid "Test"
+msgstr "考试"
+
+msgid "Test constructor"
+msgstr "考试建造器"
+
+msgid "Test Saved"
+msgstr "考试已储存"
+
+msgid "Test status"
+msgstr ""
+
+msgid "The 'imsmanifest.xml' file found in the archive is not valid."
+msgstr "发现'imsmanifest.xml'文件未有效存档。"
+
+msgid "The candidate is not allowed to submit wrong responses."
+msgstr "考生不可提供错误的回应。"
+
+msgid "The dependency to the IMS QTI AssessmentItemRef \"%s\" in the IMS Manifest file could not be resolved."
+msgstr ""
+
+msgid "The identifier of the item reference."
+msgstr "该题目引用的标识符。"
+
+msgid "The identifier of the section."
+msgstr "区域引用的标识符。"
+
+msgid "The IMS QTI Item referenced as \"%s\" in the IMS Manifest file was already stored in the Item Bank."
+msgstr ""
+
+msgid "The IMS QTI Test Package could not be imported."
+msgstr "无法汇入IMS QTI考试包。"
+
+msgid "The IMS QTI Test referenced as \"%s\" in the IMS Manifest file could not be imported."
+msgstr ""
+
+msgid "The navigation mode determines the general paths that the candidate may take. A linear mode restricts the candidate to attempt each item in turn. Non Linear removes this restriction."
+msgstr "导航模 ​​式决定了报考者可采取的一般途径。 线性模式限制了报考者依次尝试每一个题目。 非线性模式移除了这个限制。"
+
+msgid "The number of child elements to be selected."
+msgstr "要被选的子元素数量。"
+
+msgid "The principle identifier of the test."
+msgstr "考试的主要标识符。"
+
+msgid "The provided archive is invalid. Make sure it is not corrupted and that it contains an 'imsmanifest.xml' file."
+msgstr "该提供的存档无效。 请确认它没有被损坏并且它包含了一个'imsmanifest.xml'文件。"
+
+msgid "The QTI Test '%s' to be compiled must contain at least 1 QTI Item. None found."
+msgstr "该QTI考试必须有至少1个QTI题目'%s'才能进行编译。 没有找到。"
+
+msgid "The QTI test could not be retrieved correctly."
+msgstr "该QTI考试不能被正确检索。"
+
+msgid "The QTI Test XML or one of its dependencies is malformed or empty."
+msgstr "该QTI XML考试或它的一个相依性索引是不正常的或空的。"
+
+msgid "The QTI-XML test could not be written correctly."
+msgstr "该QTI-XML考试未能被正确写入。"
+
+msgid "The reference."
+msgstr "参照"
+
+msgid "The resources related to the IMS QTI Test referenced as \"%s\" in the IMS Manifest file were rolled back."
+msgstr ""
+
+msgid "The section title."
+msgstr "区域标题。"
+
+msgid "The submission mode determines when the candidate's responses are submitted for response processing. A testPart in individual mode requires the candidate to submit their responses on an item-by-item basis. In simultaneous mode the candidate's responses are all submitted together at the end of the testPart."
+msgstr "考试提交模式决定考生回应什么时候被送回服务器处理。 在个别(individual)模式 ​​中，考生需要各自提交每一个题目，每个回应都会各自被送回服务器处理。 在同时(simultaneous)模式 ​​中，考生只需要考试没提交一次，所有的回应是同时在考试没被送回。"
+
+msgid "The test part identifier."
+msgstr "考试部分的标识符。"
+
+msgid "The test title."
+msgstr "考试标题。"
+
+msgid "This constraint affects the visibility of feedback after the end of the last attempt."
+msgstr "这个约束影响到考生考完试以后是否可以看得见题目的回馈。"
+
+msgid "This constraint controls whether or not the candidate is allowed to provide a comment on the item during the session. Comments are not part of the assessed responses."
+msgstr "这个约束控制考生是否可以在考试中对题目提供评论。 评论不是回应的一部分，也不会被评分。"
+
+msgid "This test has been suspended"
+msgstr ""
+
+msgid "This test has been terminated"
+msgstr ""
+
+msgid "Time limit reached for item \"%s\"."
+msgstr ""
+
+msgid "Time limit reached, this part of the test has ended."
+msgstr ""
+
+msgid "Time Limits"
+msgstr "时间限制"
+
+msgid "Title"
+msgstr "标题"
+
+msgid "Tutor"
+msgstr "导师"
+
+msgid "Unanswered"
+msgstr ""
+
+msgid "Unanswered items"
+msgstr ""
+
+msgid "Unknown error."
+msgstr "不明的错误。"
+
+msgid "Upload a QTI 2.1 Test Package File"
+msgstr "上传一个QTI 2.1考试包文件"
+
+msgid "Use Ctrl/Meta key or Lasso for multiple selection"
+msgstr "使用Ctrl/Meta键或套索的多重选择"
+
+msgid "Validate Responses"
+msgstr "验证回应"
+
+msgid "Viewed"
+msgstr ""
+
+msgid "Viewed items"
+msgstr ""
+
+msgid "Views"
+msgstr "显示"
+
+msgid "Visible"
+msgstr "可见"
+
+msgid "Warning – You have %s remaining to complete the test."
+msgstr ""
+
+msgid "When selecting child elements each element is normally eligible for selection once only."
+msgstr "当选择子元素时，每个子元素通常都只能被选一次而已。"
+
+msgid "Whether a candidate's response that is beyond the maximum duration of the item should still be accepted."
+msgstr "考生的回应如果超出题目时限，项目是否还被接受。"
+
+msgid "Whether a candidate's response that is beyond the maximum duration of the section should still be accepted."
+msgstr "考生的回应如果超出区域时限，区域是否还被接受。"
+
+msgid "Whether a candidate's response that is beyond the maximum duration of the test part should still be accepted."
+msgstr "考生的回应如果超出部分时限，部分是否还被接受。"
+
+msgid "Whether a candidate's response that is beyond the maximum duration should still be accepted."
+msgstr "考生的回应如果超出时限，回应是否还被接受。"
+
+msgid "Who can view the rubric block during the delivery."
+msgstr "递送时,谁可以浏览指导语区块。"
+
+msgid "With Replacement"
+msgstr "跟取代"
+
+msgid "XML error at line %1$d column %2$d \"%3$s\"."
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "You have %s item(s) marked for review."
+msgstr ""
+
+msgid "You have %s unanswered question(s) and have %s item(s) marked for review."
+msgstr ""
+
+msgid "You have %s unanswered question(s)."
+msgstr ""
+
+msgid "Your comment…"
+msgstr ""
+

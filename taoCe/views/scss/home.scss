@@ -1,0 +1,365 @@
+@import 'inc/bootstrap';
+
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+
+/* Mixins */
+@mixin border-right-radius($rad) {
+	-webkit-border-radius: 0 $rad $rad 0;
+	-moz-border-radius: 0 $rad $rad 0;
+	border-radius: 0 $rad $rad 0;
+}
+
+@mixin drop-shadow($offset: 2px, $color: rgba(0, 0, 0, 0.3)) {
+    -moz-box-shadow: $offset $offset 1px $color;
+	-webkit-box-shadow: $offset $offset 1px $color;
+	box-shadow: $offset $offset 1px $color;
+}
+
+/* Splash screen styles */
+.splash-screen-wrapper {
+    position: absolute;
+    top: 0;
+    height: 0;
+    left: 0;
+    right: 0;
+}
+
+.modal.splash-modal {
+	padding: 75px 0 0 0;
+    min-width: 900px;
+    min-height: 650px;
+    position: absolute;
+}
+
+
+.modal-title {
+    background-color: $logoRed;
+    @include border-right-radius(3px);
+    position: absolute;
+    line-height: 25px;
+    top: 20px;
+    left: -10px;
+    color: #fff;
+    padding: 5px 30px 5px 30px;
+    font-size: 20px;
+    @include drop-shadow(2px);
+}
+
+.modal-nav.plain {
+    background-color: $uiClickableDefaultBg;
+    width: 100%;
+    display:none !important;
+    
+        li {
+            float: left;
+            
+            &.active a {
+                background-color: $uiClickableActiveBg;
+                color: $textColor;
+            }
+            
+            &:hover a {
+                background-color: $uiClickableHoverBg;
+                color: $textHighlight;
+            }
+            
+            a {
+                line-height: 20px;
+                display: block;
+                padding: 5px 15px;
+                color: $textColor;
+            }
+        }
+}
+
+.modal-content {
+    margin: 0 20px;
+
+    .panels {
+        display: none;
+
+        .icon {
+            font-size: 40px;
+            line-height: 50px;
+            margin: 0;
+            padding: 0;
+        }
+
+        &>p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            line-height: 20px;
+        }
+
+        .diagram {
+            height: 460px;
+            width: 280px;
+            margin-bottom: 20px;
+            position: absolute;
+            left: 0;
+            
+            .col-6 {
+                margin: 0;
+                width: 50%;
+            }
+            
+            .grid-row {
+                width: 100%;
+            }
+            
+            .block {
+                width: 120px;
+                height: 100px;
+                background: $uiClickableDefaultBg;
+                text-align: center;
+                position: relative;
+                @include font-size(16);
+                color: $darkBrown;
+                float: right;
+                margin-bottom: 30px;
+                
+                &.test-takers {
+                    height: 120px;
+                    margin-bottom: 0;
+                }
+                
+                &.pentagon {
+                    height: 90px;
+                    &:after {
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        border-style: solid;
+                        border-color:  $uiClickableDefaultBg transparent transparent transparent;
+                        border-width:  20px 60px 0px 60px;
+                        top: 90px;
+                        left: 0;
+                    }
+                    
+                    &.wide:after {
+                        border-width:  20px 130px 0px 130px;
+                    }
+                }
+                
+                &.wide {
+                    width: 260px;
+                }
+                
+                span:before {
+                    display:block;
+                    @include font-size(40);
+                    padding: 20px 0 5px 0 ;
+                    line-height: 1;
+                    color: $darkBrown;
+                }
+                
+                span {
+                    width: 100%;
+                    display: block;
+                }
+                
+                &:hover, &.active {
+                    background: $uiClickableHoverBg;
+                    color: $textHighlight !important;
+                }
+                
+                &:hover:after, &.active:after {
+                    border-color: $uiClickableHoverBg transparent transparent transparent;
+                }
+                
+                &:hover span:before, &.active span:before {
+                    color: $textHighlight;
+                }
+
+                &.disabled, &.disabled:hover, &.disabled span:before {
+                    color: $darkBrown !important;
+                    background: $uiClickableDefaultBg !important;
+                    opacity: .9;
+                }
+                
+                &.disabled:hover:after {
+                    border-color: $uiClickableDefaultBg transparent transparent transparent !important;
+                }
+                
+                .icon-lock:before {
+                    @include font-size(40);
+                }
+            }
+        }
+
+        .desc {
+            border: solid 10px $uiClickableDefaultBg;
+            background-color: $uiGeneralContentBg;
+            margin-left: 280px;
+            min-height: 100%;
+            height: 460px;
+            margin-bottom: 20px;
+
+            
+
+            .module-desc {
+                padding: 5px;
+                display: none;
+                
+                &.default {
+                    @include font-size(35);
+                    color: $darkBrown;
+                    text-align: center;
+                    font-style: italic;
+                    display: block;
+                    margin-top: 150px;
+                }
+
+                span[class*="icon-"] {
+                    color: $uiClickableActiveBg - 90;
+                    @include font-size(40);
+                    display: block;
+                    width: 37px;
+                    height: 46px;
+                    position: absolute;
+                    right: 20px;
+                    top: 20px;
+                }
+
+                h1 {
+                    font-weight: bold; 
+                    @include font-size(28);
+                }
+            }
+        }
+
+        .more {	
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .icon-extension {
+            font-size: 15px;
+            line-height: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .new-module {
+            display: inline-block;
+            line-height: 20px;
+            margin: 0 10px 5px 0;
+            cursor: pointer;
+            color: $uiClickableActiveBg - 90;
+
+            &:hover, &.active{
+                color: $uiClickableHoverBg;
+            }
+        }
+    }
+}
+
+.modal-footer {
+    margin: 15px 20px;
+
+    .checkbox-wrapper {
+        font-size: 13px;
+        float: left;
+        
+        label {
+            margin: 0;
+        }
+        
+        .note {
+            font-size: 13px;
+            font-style: italic;
+            display: block;
+            margin-left: 25px;
+        }
+    }
+    
+    .btn-info {
+        float: right;
+    }
+}
+
+.scrollable {
+    position: relative;
+
+    &:focus {
+        outline: 0;
+    }
+    
+    .viewport {
+        position: relative;
+        overflow: hidden;
+        
+        .overview {
+            position: absolute;
+            width: 100%;
+        }
+    }
+    
+    .scroll-bar {
+        display: none;
+        
+        &.vertical {
+            position: absolute;
+            right: 0;
+            height: 100%;
+            
+            .thumb {
+                width: 100%;
+                min-height: 10px;
+                margin: 0 1px;
+                width: 14px;
+            }
+        }
+        
+        .thumb {
+            position: absolute;
+        }
+    }
+    
+    &.gray-skin {
+        padding-right: 17px;
+        
+        .scroll-bar {
+            border-left: 1px solid #e0e0e0;
+            background-color: #fff;
+            
+            &.vertical {
+                width: 16px;
+            }
+            
+            .thumb {
+                background-color: #c7c7c7;
+            }
+        }
+    }
+}
+
+.not-selectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

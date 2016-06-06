@@ -1,0 +1,8 @@
+/*-------------------------------------------    
+    Base     
+-------------------------------------------*/
+* { margin: 0; padding: 0; }
+html { font-size: 62.5%; } /* for rems */
+body { font-family: Helvetica, Arial, sans-serif; color: #333; background: #e8ecf0 url(i/denim2.png) no-repeat 50% 350px; }
+
+.viewall { margin-left: 0; }

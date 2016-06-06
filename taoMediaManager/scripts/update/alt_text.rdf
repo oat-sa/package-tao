@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xml:base="http://www.tao.lu/Ontologies/TAOMedia.rdf#"
+	xmlns:item="http://www.tao.lu/Ontologies/TAOMedia.rdf#"
+	xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#"
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#"
+	xmlns:tao="http://www.tao.lu/Ontologies/TAO.rdf#"
+>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOMedia.rdf#AltText">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Alternative Text]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Alternative Text]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOMedia.rdf#Media"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True"/>
+  </rdf:Description>
+</rdf:RDF>

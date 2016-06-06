@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i1454490656636166" title="Item 9" adaptive="false" timeDependent="false">
+  <responseDeclaration baseType="pair" cardinality="multiple" identifier="RESPONSE">
+    <correctResponse>
+      <value><![CDATA[choice_1 choice_2]]></value>
+    </correctResponse>
+  </responseDeclaration>
+  <outcomeDeclaration cardinality="single" baseType="float" identifier="SCORE"/>
+  <outcomeDeclaration cardinality="single" baseType="identifier" identifier="FEEDBACK_1"/>
+  <itemBody>
+    <div class="grid-row">
+      <div class="col-12">
+        <associateInteraction shuffle="false" maxAssociations="3" minAssociations="3" responseIdentifier="RESPONSE">
+          <prompt/>
+          <simpleAssociableChoice fixed="false" showHide="show" matchMax="0" matchMin="0" identifier="choice_1">choice #1</simpleAssociableChoice>
+          <simpleAssociableChoice fixed="false" showHide="show" matchMax="0" matchMin="0" identifier="choice_2">choice #2</simpleAssociableChoice>
+          <simpleAssociableChoice fixed="false" showHide="show" matchMax="0" matchMin="0" identifier="choice_3">choice #3</simpleAssociableChoice>
+          <simpleAssociableChoice fixed="false" showHide="show" matchMax="0" matchMin="0" identifier="choice_4">choice #4</simpleAssociableChoice>
+        </associateInteraction>
+      </div>
+    </div>
+  </itemBody>
+  <responseProcessing>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE"/>
+          <correct identifier="RESPONSE"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <not>
+          <match>
+            <variable identifier="RESPONSE"/>
+            <correct identifier="RESPONSE"/>
+          </match>
+        </not>
+        <setOutcomeValue identifier="FEEDBACK_1">
+          <baseValue baseType="identifier">feedbackModal_1</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+  </responseProcessing>
+  <modalFeedback title="modal feedback title" showHide="show" outcomeIdentifier="FEEDBACK_1" identifier="feedbackModal_1">
+    <div class="x-tao-wrapper x-tao-modalFeedback-negative x-tao-relatedOutcome-RESPONSE">Some feedback text.</div>
+  </modalFeedback>
+</assessmentItem>

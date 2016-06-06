@@ -1,0 +1,52 @@
+@import "inc/bootstrap";
+
+.revision-container {
+
+    .msg-edit-area {
+        border: 1px $uiGeneralContentBorder solid;
+        background: $canvas;
+        padding: 30px 30px 20px 30px;
+        margin-bottom: 10px;
+        @include simple-border();
+    }
+
+    table {
+        &.revision-table {
+            td {
+                vertical-align: top;
+                padding: 5px;
+                &.numeric, &.date, &.user {
+                    @include font-size(12);
+                    white-space: nowrap;
+                }
+                &.numeric {
+                    width: 60px;
+                }
+                &.date {
+                    width: 140px;
+                }
+                &.user {
+                    width: 120px;
+                }
+                &.message {
+                    text-align: justify;
+                }
+                &.actions {
+                    width: 120px;
+                }
+                .restore_revision{
+                  white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    #message{
+        max-width: none;
+        width: 100%;
+    }
+}
+
+
+
+

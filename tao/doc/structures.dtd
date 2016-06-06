@@ -1,0 +1,86 @@
+<!-- Root Tag -->
+<!ELEMENT structures  (( structure )*) >
+	<!ELEMENT structure  ( (description)? , (icon)?, sections )>
+	
+		<!-- The id of the structure -->
+		<!ATTLIST structure id ID #REQUIRED>
+		<!-- The name of the structure -->
+		<!ATTLIST structure name CDATA #REQUIRED>
+		<!-- The level of that structure regarding the others (to order them)  -->
+		<!ATTLIST structure level CDATA #REQUIRED>
+		<!-- What group the structure belongs to -->
+		<!ATTLIST structure group CDATA "main">
+        <!-- The JS binding to run instead of loading the URL. The binding is the name of an AMD module within TAO -->
+        <!ATTLIST structure binding CDATA #IMPLIED>
+	
+		<!ELEMENT description (#PCDATA)>
+		
+        <!-- extension icon -->
+        <!ELEMENT icon  EMPTY>
+        <!-- this is considered a temp solution, eventually we might switch to svg -->
+        <!-- source of the icon -->
+        <!ATTLIST icon src CDATA #IMPLIED>
+        <!-- id of the icon if svg is a sprite -->
+        <!ATTLIST icon id CDATA #IMPLIED>
+
+		
+		<!-- sub division, each section of the extension will be displayed in a separated tab -->
+		<!ELEMENT sections  ( section )*>
+			<!ELEMENT section  ( trees | actions )*>
+				<!-- identifier of the section -->
+				<!ATTLIST section id CDATA #REQUIRED>
+				<!-- displayed name of the section -->
+				<!ATTLIST section name CDATA #REQUIRED>
+				<!-- The URL of the action to load -->
+				<!ATTLIST section url CDATA #REQUIRED>
+				<!-- The policy on how to handle duplicate section keys -->
+				<!ATTLIST section policy (merge|override) "merge">
+                <!-- The JS binding to run instead of loading the URL. The binding is the name of an AMD module within TAO -->
+                <!ATTLIST section binding CDATA #IMPLIED>
+                <!-- if a section is disabled -->
+                <!ATTLIST section disabled CDATA #IMPLIED>
+	
+				<!-- The list of trees to load in the section panel -->
+				<!ELEMENT trees  ( tree )*>
+					<!ELEMENT tree  EMPTY>
+					<!-- the name of the tree  -->
+					<!ATTLIST tree name CDATA #REQUIRED>
+					<!-- the URL to populate the tree with (must return JSON data)  -->
+					<!ATTLIST tree dataUrl CDATA #REQUIRED>
+					<!-- the URL to execute contextual actions from the tree -->
+					<!ATTLIST tree className CDATA #IMPLIED>
+					<!-- the name of the main class that resources are instances of in the tree -->
+					<!ATTLIST tree
+						selectClass CDATA #IMPLIED
+						selectInstance CDATA #IMPLIED
+						moveInstance CDATA #IMPLIED
+						delete CDATA #IMPLIED
+						rootNode CDATA #IMPLIED
+                        init CDATA #IMPLIED
+					>
+	
+				<!-- The list of contextual actions to load in the section panel -->
+				<!ELEMENT actions  ( action )*>
+					<!ATTLIST actions
+						allowClassActions (true | false) #IMPLIED
+					>
+					<!ELEMENT action (icon)?>
+					<!-- Id of the action -->
+					<!ATTLIST action id CDATA #REQUIRED>
+                    <!-- Name of the action -->
+                    <!ATTLIST action name CDATA #REQUIRED>
+					<!-- The URL of the action -->
+					<!ATTLIST action url CDATA #IMPLIED>
+					<!-- The context of the action: (class|instance|resource|*) -->
+					<!ATTLIST action context CDATA #REQUIRED>
+					<!-- Reload the complete page if true -->
+					<!ATTLIST action reload CDATA #IMPLIED>
+                    <!-- the action is disabled if true -->
+                    <!ATTLIST action disabled CDATA #IMPLIED>
+					<!-- Where to position the action -->
+					<!ATTLIST action group CDATA #REQUIRED>
+					<!-- DEPRECATED : use binding instead -->
+					<!ATTLIST action js CDATA "_load">
+					<!-- The JS binding of this action -->
+					<!ATTLIST action binding CDATA "_load">
+		

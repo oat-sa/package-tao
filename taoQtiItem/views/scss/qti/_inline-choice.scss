@@ -1,0 +1,26 @@
+@import "inc/bootstrap";
+
+select.qti-inlineChoiceInteraction {
+    min-width: 150px;
+    max-width: 100%;
+    width: auto;
+    padding-right: 20px;
+    font-size: 14px;
+}
+
+.qti-inlineChoiceInteraction .select2-chosen {
+    margin-right: 30px;
+}
+.qti-inlineChoiceInteraction .select2-chosen, 
+select.qti-inlineChoiceInteraction,
+.qti-inlineChoiceInteraction-dropdown .select2-result-label {
+    font-family: $regularFont !important;
+    font-weight: normal !important;
+}
+
+// shadow like focused element
+.qti-inlineChoiceInteraction.select2-container-active {
+    outline-color: $colorWheel-05;
+    outline-style: auto;
+    outline-width: 5px;
+}

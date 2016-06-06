@@ -1,0 +1,400 @@
+@import "inc/bootstrap";
+
+
+$navHeight: 64;
+
+@mixin menu-states($state: normal) {
+    @if($state == 'hover') {
+        -webkit-transition: opacity .7s, top 0s;
+        transition: opacity .5s, top 0s;
+        transition-delay: .5s;
+        opacity: 1;
+        top: $navHeight * 1px;
+    }
+    @else {
+        top: -5000px;
+        opacity: .3;
+    }
+}
+
+#requirement-check {
+    margin: 40px auto;
+    width: 60%;
+    min-width: 500px;
+    max-width: 1000px
+}
+
+.version-warning {
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    padding: 0 20px 0 45px !important;
+    line-height: 2;
+    border-bottom: 1px $uiGeneralContentBorder solid;
+    span {
+        top: 5px !important;
+    }
+}
+
+
+
+// html.no-version-warning added by JS
+.no-version-warning {
+    .version-warning {
+        display:none;
+    }
+}
+
+#tao-main-logo {
+    margin: 6px 30px 6px 30px;
+    display: block;
+    max-width: 200px;
+    height: 52px;
+
+}
+
+//Navigation
+.dark-bar {
+    // requires extra space for bottom border
+    max-height: ($navHeight + 1) * 1px;
+    background: $darkBar;
+    color: $darkBarTxt;
+
+    // when resizing the window .settings-menu can slip under .main-menu
+    // until the JS class toggle kicks in
+    overflow-y: hidden;
+
+    // this makes sure that after the previous fix
+    // sub menus are still available
+    &:hover {
+        overflow-y: visible;
+    }
+
+    a {
+        color: $darkBarTxt;
+        &:hover {
+            color: white;
+            text-decoration: none;
+        }
+    }
+    nav {
+        background:inherit;
+        position: relative;
+        z-index: 8000;
+        li {
+            float: left;
+            position: relative;
+            @include font-size(13);
+            & > a, & > .a {
+                text-align: center;
+                display: block;
+                height: $navHeight * 1px;
+                outline: 0 !important;
+                [class^="icon-"], [class*=" icon-"] {
+                    text-shadow: 0 0 0 transparent !important;
+                    line-height: 1;
+                    color: inherit;
+                    position: relative;
+                    top: 2px;
+                }
+            }
+            & > a {
+                &:hover {
+                    @include vendor-prefix(transition, background-color 1s ease);
+                    background-color: rgba($info, .5);
+                    text-decoration: none;
+                    span {
+                        color: inherit;
+                    }
+                }
+            }
+            & > .a {
+                cursor: default
+            }
+            &.active {
+                & > a {
+                    background-color: whiten($info, .05);
+                    opacity: 1;
+                    color: white(.9);
+                    &.hover {
+                        color: white;
+                    }
+                }
+            }
+
+            //override default disabled style
+            &.disabled {
+                background: none !important;
+                text-shadow: inherit !important;
+                opacity : 0.45 !important;
+                color: inherit !important;
+                a {
+                    cursor: not-allowed !important;
+                }
+            }
+
+            // sub menu
+            ul {
+                background: $darkBar;
+                position: absolute;
+                li {
+                    display: block;
+                    width: 100%;
+                    a {
+                        background: $darkBar;
+                        padding: 6px 20px !important;
+                        text-align: left;
+                        display: block;
+                        height: auto;
+                        white-space: nowrap;
+                        &:hover {
+                            background: rgba($info, .5);
+                        }
+                    }
+                }
+            }
+        }
+
+        .main-menu, .settings-menu {
+            background:inherit;
+            ul {
+                background:inherit;
+            }
+            li {
+                @include font-size(13);
+                background:inherit;
+                ul {
+                    min-width: 130px;
+                    background:inherit;
+                    position: absolute;
+                    left: 0px;
+                    border-top: 1px solid #666;
+                    padding: 5px 0 !important;
+                    @include menu-states(normal);
+                    li {
+                        background:inherit;
+                    }
+                }
+                // display sub menu on hover
+                &:hover {
+                    & > ul {
+                        @include menu-states(hover);
+                    }
+                }
+            }
+        }
+
+        .main-menu {
+            li {
+                min-width: 80px;
+                @include font-size(13);
+                & > a {
+                    padding: 13px 15px 11px;
+                    span {
+                        @include font-size(20);
+                        padding-bottom: 3px;
+                        display: block;
+                    }
+                }
+            }
+        }
+        .settings-menu {
+            .reduced-menu-trigger {
+                display:none;
+            }
+            padding-right: 20px;
+            li {
+                min-width: 25px;
+
+                @include font-size(13);
+                & > a, & > .a {
+                    padding: 22px 8px 0px 8px;
+                    span {
+                        @include font-size(13);
+                        display: inline-block;
+                    }
+                    [class^="icon-"], [class*=" icon-"] {
+                        @include font-size(18);
+                        padding: 0 2px;
+                    }
+                }
+                &.li-help, &.li-user_settings, &.sep-before {
+                    padding-left: 15px;
+                    position: relative;
+                    &:before {
+                        content: ' ';
+                        background: #666;
+                        width: 1px;
+                        position: absolute;
+                        top: 25px;
+                        left: 7px;
+                        height: 20px;
+                    }
+                }
+                ul {
+                    left: auto;
+                    right: -1px;
+                }
+            }
+
+        }
+    }
+}
+
+
+.content-wrap > header, body > header {
+    position: relative;
+    border-bottom: 1px $uiGeneralContentBorder solid;
+}
+
+// Footer
+body > footer, .content-wrap:after {
+    // must be the same height as footer
+    height: 34px;
+}
+
+body > footer {
+    font-size: 11px;
+    padding: 10px;
+    border-top: 1px $uiGeneralContentBorder solid;
+    a {
+        text-decoration: underline
+    }
+    .icon-warning {
+        text-shadow: 0 0 0 transparent;
+        color: #fc6;
+        padding-right: 2px;
+        position: relative;
+        top: 1px;
+    }
+}
+
+.content-wrap {
+    min-height: 100%;
+    // equal to footer height
+    margin-bottom: -34px;
+}
+
+.content-wrap:after {
+    content: "";
+    display: block;
+}
+
+// everything required for mobile navi
+@mixin mobile-navi () {
+    .dark-bar {
+        nav {
+
+            .main-menu {
+                li {
+                    min-width: 0;
+                    & > a {
+                        padding: 13px 10px 11px;
+                    }
+                }
+            }
+
+            .settings-menu {
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                &:hover {
+                    & > ul {
+                        right: 20px;
+                        left: auto;
+                        @include menu-states(hover);
+                    }
+                }
+                .reduced-menu-trigger {
+                    text-align: center;
+                    display: block;
+                    height: $navHeight * 1px;
+                    outline: 0 !important;
+                    cursor:pointer;
+                    min-width: 70px;
+                    padding: 13px 10px 11px;
+
+                    &.active {
+                        background-color: whiten($info, .05);
+                        opacity: 1;
+                        color: white(.9) !important;
+                        &.hover {
+                            color: white !important;
+                        }
+                    }
+                    &:hover {
+                        background: rgba($info, .5);
+                        text-decoration: none;
+                        span {
+                            color: white;
+                        }
+                    }
+                    [class^="icon-"], [class*=" icon-"] {
+                        text-shadow: 0 0 0 transparent !important;
+                        line-height: 1;
+                        color: $darkBarIcon;
+                        position: relative;
+                        top: 2px;
+                        @include font-size(20);
+                        padding-bottom: 3px;
+                        display: block;
+                        margin: auto;
+                    }
+                }
+                & > ul {
+                    border-top: 1px #666 solid;
+                    position: absolute;
+                    @include menu-states(normal);
+                    left: -20000px;
+                    right: auto;
+                    white-space: nowrap;
+                    background: $darkBar;
+                    padding: 5px 0;
+                    .username {
+                        display:none;
+                    }
+                    & > li {
+                        float:none;
+                        display: list-item;
+                        overflow:hidden;
+                        padding: 0 !important;
+                        &:before {
+                            display:none !important;
+                        }
+                        a {
+                            height: auto;
+                            line-height: 2.2;
+                            padding: 0 20px;
+                            text-align: left;
+                            &:after {
+                                content: attr(title)
+                            }
+                            span {
+                                padding: 0px 3px 0 0 !important;
+                                display:inline-block;
+                                width: 20px;
+                                top: 0px;
+                                @include font-size(13, true);
+                            }
+                        }
+                        ul {
+                            display:none;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    body:not(.delivery-scope){
+        @include mobile-navi();
+    }
+}
+
+// works in conjunction with layout/nav.js
+body.oversized-nav:not(.delivery-scope){
+    @include mobile-navi();
+}

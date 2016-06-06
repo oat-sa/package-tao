@@ -1,0 +1,30 @@
+[class*=" sts-col-"], [class^="sts-col-"] {
+    float: left;
+    min-height: 1rem;
+    &:first-child {
+        margin-left: 0;
+    }
+    &.sts-grid-container {
+        margin-bottom: 0;
+    }
+}
+
+.sts-col-12 {
+    float: none;
+}
+
+.sts-grid-container {
+    overflow-x: hidden; 
+}
+
+.sts-grid-row {
+    @extend %clearfix;
+    width: widthPerc(852, 840);
+}
+
+@for $i from 1 through 12 {
+    .sts-col-#{$i} {
+        @include grid-unit($i, 12, 12);
+        margin-bottom: 12px;
+    }
+}

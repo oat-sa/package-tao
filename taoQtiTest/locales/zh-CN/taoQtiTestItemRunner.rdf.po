@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.1.0-sprint15\n"
+"PO-Revision-Date: 2015-12-23T13:29:09\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: zh-CN\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: zh-CN\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamQtiTestParentServiceCallId
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "QTI Test Parent Service Call ID"
+msgstr "QTI考试父服务调用ID"
+
+# http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamQtiTestParentServiceCallId
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "QTI Test Parent Service Call ID"
+msgstr "QTI考试父服务调用ID"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#ServiceQtiTestItemRunner
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "QTI Test Item Runner"
+msgstr "QTI考试题目运行器"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#ServiceQtiTestItemRunner
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Embed and run an item into a QTI Test. This service initialize the TAO Apis and contexts"
+msgstr "将题目嵌入和执行到QTI考试。 这个服务将启动TAO的API和上下文。"
+

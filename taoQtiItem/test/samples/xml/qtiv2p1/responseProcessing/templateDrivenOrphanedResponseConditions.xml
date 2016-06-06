@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="x123456789942611223" title="Orphaned Responses" adaptive="false" timeDependent="false" label="" xml:lang="en-US" toolName="TAO" toolVersion="3.1.0-sprint17">
+
+  <responseDeclaration identifier="RESPONSE_1" cardinality="single" baseType="string">
+    <correctResponse>
+      <value><![CDATA[100]]></value>
+    </correctResponse>
+  </responseDeclaration>
+
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <itemBody>
+    <div class="grid-row">
+      <div class="col-12">
+        <textEntryInteraction responseIdentifier="RESPONSE_1" base="10" placeholderText=""/>
+      </div>
+    </div>
+  </itemBody>
+  
+  <responseProcessing>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_1"/>
+          <correct identifier="RESPONSE_1"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_2"/>
+          <correct identifier="RESPONSE_2"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+
+  </responseProcessing>
+</assessmentItem>

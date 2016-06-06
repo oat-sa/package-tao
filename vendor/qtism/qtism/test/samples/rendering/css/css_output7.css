@@ -1,0 +1,438 @@
+/* css Zen Garden submission 220 - 'Garments', by Dan Mall, http://www.danielmall.com/  */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/*
+*************************************************
+
+CSS ZEN GARDEN
+General Screen Styles
+
+Created by the epic SuperFriendly team.
+http://superfriend.ly/
+
+*************************************************
+*/
+
+/* TYPEKIT_KIT_ID: qoj3gsc */
+
+/*-------------------------------------------    
+    Base     
+-------------------------------------------*/
+#myId * { margin: 0; padding: 0; }
+#myId html { font-size: 62.5%; } /* for rems */
+#myId body { font-family: Helvetica, Arial, sans-serif; color: #333; background: #e8ecf0 url(i/denim2.png) no-repeat 50% 350px; }
+
+
+/* block level */
+
+#myId h1 { font: bold 4.2rem Helvetica, Arial, sans-serif; margin: 0 0 0.5em; }
+#myId h2 { font: bold 1.8rem Helvetica, Arial, sans-serif; margin: 0 0 1em; }
+#myId h3 { font: bold 1.5rem Helvetica, Arial, sans-serif; margin: 0 0 1em; }
+#myId h4, #myId h5, #myId h6 { font: bold 1.2rem Helvetica, Arial, sans-serif; margin: 0 0 1em; }
+
+#myId .wf-active body,
+#myId .wf-active h1,
+#myId .wf-active h2,
+#myId .wf-active h3,
+#myId .wf-active h4,
+#myId .wf-active h5,
+#myId .wf-active h6 { font-family: "effra"; }
+
+#myId p, #myId ul, #myId dl, #myId ol, #myId table { font-size: 16px; margin: 0 0 1.5em; }
+#myId .wf-active p { font-weight: 300; }
+
+#myId form { margin: 0 0 1.5em; }
+
+/* inline */
+
+#myId label { font-size: 1.6rem; }
+#myId input, #myId select, #myId textarea {  }
+#myId input::-webkit-input-placeholder, #myId textarea::-webkit-input-placeholder { }
+#myId input.empty::-webkit-input-placeholder, #myId textarea.empty::-webkit-input-placeholder { color: red; }
+#myId input.empty:-moz-placeholder, #myId textarea.empty:-moz-placeholder { color: red; }
+#myId .error { color: red; }
+
+#myId table { }
+    #myId td { padding: 0.25em 1em; border-top: 1px solid #aaa; }
+
+#myId em { font-style: italic; }
+#myId strong { font-weight: bold; }
+
+#myId mark { background: none; font-style: normal; }
+
+#myId video { width: 100%; height: auto; }
+
+#myId a { 
+	text-decoration: none; color: #a28351; position: relative; 
+	    transition: all 0.25s linear;
+   -moz-transition: all 0.25s linear;
+-webkit-transition: all 0.25s linear;
+	 -o-transition: all 0.25s linear;
+}
+
+#myId a:after { 
+	content: ""; display: block; background: #a28351; height: 2px; width: 100%; position: absolute; bottom: -0.2em; left: 0; opacity: 0; 
+	    transition: all 0.25s linear;
+   -moz-transition: all 0.25s linear;
+-webkit-transition: all 0.25s linear;
+	 -o-transition: all 0.25s linear;
+}
+
+#myId a:hover, #myId a:focus { color: #000; }
+#myId a:hover:after, #myId a:focus:after { opacity: 1; bottom: 0; }
+
+#myId img { display: block; margin: 0 10px 10px 0; max-width: 100%; }
+
+#myId a img { border: none; }
+
+#myId i { font-style: normal; }
+#myId b { font-weight: normal; }
+
+#myId abbr, #myId abbr[title], #myId acronym { font-size: 75%; letter-spacing: 0.2em; text-transform: uppercase; border: none; }
+
+#myId code { font: 1.4rem/1 Consolas, 'Courier New', Courier, monospace; color: #999; }
+
+#myId sub, #myId sup { line-height: 0; }
+
+#myId ::selection { background: #d5d9dc; color: #333; }
+#myId ::-moz-selection { background: #d5d9dc; color: #333; }
+
+
+/*-------------------------------------------    
+    Global
+-------------------------------------------*/
+ 
+/* Phark Image Replacement - http://phark.typepad.com/phark/2003/08/accessible_imag.html */
+#myId .phark { display: block; text-indent: -9999px; background-position: 0 0; background-repeat: no-repeat; background-color: transparent; }
+
+/* Trimming Outline in Firefox - http://snook.ca/archives/html_and_css/trimming_long_o  */
+/*\*/ #myId .phark-link { overflow: hidden; } /**/
+
+/* Easy Clearing - http://www.positioniseverything.net/easyclearing.html */ 
+#myId .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+#myId .offscreen { position: absolute; left: -9999px; display: block; }
+#myId .onscreen { left: 0; }
+
+#myId .hide { display: none; }
+
+#myId .no-bullets { list-style: none; }
+
+#myId .bulleted { list-style: disc; }
+
+#myId .uppercase { text-transform: uppercase; }
+
+#myId .rwd-break { display: block; }
+
+#myId .kellum { display: block; text-indent: 100%; white-space: nowrap; overflow: hidden; }
+
+/*-------------------------------------------    
+	Modules
+-------------------------------------------*/
+#myId .page-wrapper { width: 90%; margin: 0 auto; }
+
+#myId .main h3, #myId .preamble h3, #myId .select { visibility: hidden; font-size: 2rem; text-transform: uppercase; letter-spacing: 0.1em; color: #263358; }
+#myId .wf-active .main h3, #myId .wf-active .preamble h3 { font-weight: 900; }
+
+#myId .main h3:after, #myId .preamble h3:after, #myId .select:after { visibility: visible; display: block; }
+
+#myId .main p, #myId .preamble p { font-size: 2rem; }
+#myId .wf-active .main p, #myId .wf-active .preamble p { line-height: 1.4; }
+
+#myId .next a,
+#myId .previous a,
+#myId .viewall a,
+#myId .zen-resources a,
+#myId .summary p:nth-child(2) a
+{	
+        transition-property: none;
+   -moz-transition-property: none;
+-webkit-transition-property: none;
+     -o-transition-property: none;
+}
+
+#myId .next a:after,
+#myId .previous a:after,
+#myId .viewall a:after,
+#myId .zen-resources a:after,
+#myId .summary p:nth-child(2) a:after 
+{ opacity: 0; }
+
+
+
+/*-------------------------------------------    
+	Banner
+-------------------------------------------*/
+#myId [role="banner"] h1 { padding: 1em 0 0; text-transform: uppercase; letter-spacing: 0.1em; font-size: 3.5rem; font-weight: 900; color: #182e4f; visibility: hidden; }
+#myId [role="banner"] h1:before { content: "CSS Zen Garments"; visibility: visible; display: block; }
+#myId [role="banner"] h1:after { content: "Made Locally"; visibility: visible; display: block; color: #aaa; letter-spacing: 0.5em; font-size: 1.4rem; font-weight: normal; margin: 0.5em 0 3em; color: rgba(24, 46, 79, 0.4); }
+
+#myId [role="banner"] h2 { visibility: hidden; display: none; text-transform: uppercase; font-weight: 400; color: rgba(41, 78, 134, 0.5); }
+#myId [role="banner"] h2:after { content: "Impeccable Quality"; visibility: visible; display: block; }
+
+
+
+/*-------------------------------------------    
+    Preamble
+-------------------------------------------*/
+#myId .summary p { text-transform: uppercase; letter-spacing: 0.1em; font-size: 1.8rem; line-height: 1.6; }
+
+
+/*-------------------------------------------    
+    Preamble
+-------------------------------------------*/
+#myId .preamble { background: transparent url(i/sep.png) no-repeat 50% 0; }
+	#myId .preamble h3:after { visibility: visible; content: "A Fashion-Forward Future";  }
+
+
+/*-------------------------------------------    
+	Explanation
+-------------------------------------------*/
+#myId .explanation h3:after { content: "See Yourself in a Different Way";  }
+
+
+/*-------------------------------------------    
+	Participation
+-------------------------------------------*/
+#myId .participation h3:after { content: "Get Into a Brand New Pair";  }
+
+
+/*-------------------------------------------    
+	Benefits
+-------------------------------------------*/
+#myId .benefits h3:after { content: "Look Great\2026  and Feel Great Too!";  }
+
+
+/*-------------------------------------------    
+	Requirements
+-------------------------------------------*/
+#myId .requirements h3:after { content: "“One Size Fits” All Be Damned!"; text-indent: -0.5em; }
+
+
+
+/*-------------------------------------------    
+	Design Selection
+-------------------------------------------*/
+#myId .design-selection { margin: 3em 0 0; }
+	#myId .design-selection ul { list-style: none; width: 94%; margin: 0 auto; }
+	#myId .design-selection ul:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+		#myId .design-selection li { float: left; width: 50%; font-size: 1.2rem; margin: 0 0 1em; color: #aaa; }
+		#myId .design-selection li:nth-child(odd) { width: 47%; padding-right: 3%; clear: left; }
+
+			#myId .design-name { display: block; font-size: 1.4rem; font-weight: bold; margin: 0 0 0.24em; text-transform: uppercase; letter-spacing: 0.1em; position: relative; }
+			#myId .design-name:after { background: none; opacity: 0; }
+			#myId .design-name:hover { font-style: italic; }
+			
+			#myId .designer-name { color: #7989a3; }
+			#myId .designer-name:after, #myId footer a:after { height: 1px; }
+
+
+#myId .select:after { content: "Washes & Styles"; font-size: 1.8rem; text-align: center; width: 7em; margin: 0 auto 2em; background: transparent url(i/waves.png) no-repeat 50% 0; padding: 2em 0 0; color: #182e4f; visibility: visible; }
+
+#myId .archives, #myId .resources { position: absolute; left: -9999px;  }
+
+#myId .design-archives ul { list-style: none; margin: 1em 0 0; width: 100%; text-align: center; }
+	#myId .design-archives li { display: inline-block; position: relative; }
+	#myId .design-archives a { display: block; text-indent: 100%; white-space: nowrap; overflow: hidden; }
+
+#myId .next { margin-right: 3em; }
+	#myId .next a { background: transparent url(s/czg.svg) no-repeat 10px -56px; width: 43px; height: 37px; }
+	#myId .next a:hover, #myId .next a:focus { background-position: 10px -138px; }
+
+#myId .previous { margin-right: 3em; }
+	#myId .previous a { background: transparent url(s/czg.svg) no-repeat 10px -220px; width: 43px; height: 37px; }
+	#myId .previous a:hover, #myId .previous a:focus { background-position: 10px -302px; }
+
+#myId .viewall { margin-left: 1em; }
+	#myId .viewall a { background: transparent url(s/czg.svg) no-repeat -56px -55px; width: 39px; height: 39px; }
+	#myId .viewall a:hover, #myId .viewall a:focus { background-position: -56px -137px; }
+
+#myId footer { font-size: 1.3rem; }
+	#myId footer a { margin-left: 1em; }
+	#myId footer a:first-child { margin-left: 0; }
+
+#myId .zen-resources ul { list-style: none; margin: 2em 0 4em; text-align: center; }
+#myId .zen-resources ul:before { content: ""; height: 4px; width: 80px; background: #d5d9dc; display: block; text-align: center; margin: 0 auto 2em; }
+	#myId .zen-resources li { margin: 0 0 1em 3em; display: inline-block; }
+	#myId .zen-resources li:first-child { margin-left: 0; }
+		#myId .zen-resources a { display: inline-block; text-indent: 100%; white-space: nowrap; overflow: hidden; background: transparent url(s/czg.svg) no-repeat 0 0; width: 60px; height: 60px; }
+		
+		#myId .view-css a { background-position: -502px 12px; }
+		#myId .view-css a:hover, #myId .view-css a:focus { background-position: -502px -78px; }
+
+		#myId .css-resources a { background-position: -150px -194px; }
+		#myId .css-resources a:hover, #myId .css-resources a:focus { background-position: -150px -286px; }
+
+		#myId .zen-faq a { background-position: -265px -192px; }
+		#myId .zen-faq a:hover, #myId .zen-faq a:focus { background-position: -265px -284px; }
+
+		#myId .zen-submit a { background-position: -502px -194px; }
+		#myId .zen-submit a:hover, #myId .zen-submit a:focus { background-position: -502px -286px; }
+
+		#myId .zen-translations a { background-position: -380px -193px; }
+		#myId .zen-translations a:hover, #myId .zen-translations a:focus { background-position: -380px -285px; }
+
+
+@media screen and (min-width: 700px) {
+
+	#myId body { background-attachment: fixed; background-position: 90% 80%; }
+
+	#myId .intro:before { content: ""; display: block; width: 105px; height: 30px; position: fixed; top: 154px; left: 3%; background: transparent url(s/czg.svg) no-repeat -184px -99px; }
+
+	#myId [role="article"], #myId [role="banner"], #myId footer { padding: 0 30% 10em 10%; text-align: right; position: relative; }
+		#myId [role="article"] h3, #myId [role="banner"] h2 { position: absolute; top: -0.75em; left: 75%; width: 10em; text-align: left; font-size: 1.5rem; letter-spacing: 0; }
+		#myId [role="article"] h3:after { position: absolute; top: 0; }
+
+	#myId [role="banner"] { padding-top: 200px; padding-bottom: 3em; }
+		
+		#myId [role="banner"] h1 { font-size: 4.8rem; letter-spacing: 0; line-height: 0.8; }
+		#myId [role="banner"] h1:after { position: absolute; top: 15.7em; right: 30%; }
+		
+		#myId [role="banner"] h2 { display: block; top: 8.1em; width: 3em; left: 75.5%; font-size: 1.9rem; line-height: 1; }
+		#myId [role="banner"] h2:before { visibility: visible; content: "Est. 2003"; display: block; position: fixed; top: -0.1em; bottom: 0; left: -0.5em; right: 0; margin: auto; /*right: 25%;*/ font-weight: 900; font-size: 50rem; color: rgba(0, 0, 0, 0.15); width: 100%; height: 2em; line-height: 1; transform: rotate(-90deg); -ms-transform: rotate(-90deg); /* IE 9 */ -webkit-transform: rotate(-90deg); /* Safari and Chrome */ -webkit-mask-image: url(i/denim-mask2.png); -o-mask-image: url(i/denim-mask2.png); -moz-mask-image: url(i/denim-mask2.png); mask-image: url(i/denim-mask2.png); }
+
+		#myId .summary p:nth-child(2) { background: yellow; position: relative; visibility: hidden; top: 2em; font-size: 1.4rem; }
+
+			#myId .summary p:nth-child(2):before { content: ""; display: block; visibility: visible; position: absolute; right: 21em; top: -0.25em; background: transparent url(s/czg.svg) no-repeat -159px -1px; width: 6em; height: 30px; }
+
+			#myId .summary p:nth-child(2):after { content: ""; display: block; visibility: visible; position: absolute; right: 14em; top: -0.25em; background: transparent url(s/czg.svg) no-repeat -277px 0; width: 6em; height: 30px; }
+
+			#myId .summary p:nth-child(2) a { visibility: visible; background: transparent url(s/czg.svg) no-repeat -376px -93px; width: 6em; height: 25px; text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; position: absolute; top: 0; right: 7em; }
+			#myId .summary p:nth-child(2) a:hover, #myId .summary p:nth-child(2) a:focus { background-position: -396px -3px; text-indent: 0; background: none; }
+			
+			#myId .summary p:nth-child(2) a[href*="css"] { background-position: -472px -94px; right: 0; }
+			#myId .summary p:nth-child(2) a[href*="css"]:hover, #myId .summary p:nth-child(2) a[href*="css"]:focus { background-position: -512px -4px; }
+
+	#myId .preamble { padding-top: 10em; }
+		#myId .preamble h3 { top: 5.9em; }
+
+	#myId .design-selection li { width: 23%; margin-bottom: 3em; padding-right: 2%; }
+	#myId .design-selection li:nth-child(odd) { width: 23%; clear: none; padding-right: 2%; }
+
+	#myId .next { margin-right: 2em; margin-left: -0.4em; }
+	#myId .viewall { margin-left: 0; }
+
+	#myId footer { padding-bottom: 3em; margin-top: -5em; }
+}
+
+
+@media screen and (min-width: 1130px) {
+
+	#myId [role="article"], #myId [role="banner"] { padding-left: 25%; }
+
+	#myId .design-selection { position: absolute; left: 5%; top: 30em; }
+		#myId .design-selection ul { margin: 0; width: 100%; }
+			#myId .design-selection li { float: none; width: 100% !important; padding: 0 !important; margin-bottom: 2em;}
+		#myId .select:after { text-align: left; background-position: 0 bottom; padding: 0 0 2em; margin: 0 0 2em; }
+
+	#myId .design-archives { position: absolute; left: 5%; top: 95em; }
+
+}
+
+
+@media screen and (min-width: 1130px) and (min-height: 1037px)  {
+	#myId .design-selection, #myId .design-archives { position: fixed; }
+
+}
+
+
+
+/*-------------------------------------------    
+	Animations
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#myId .intro { 
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s; 
+	-webkit-animation-timing-function: ease-in-out; 
+	-webkit-animation-iteration-count: 1;
+}
+
+
+#myId [role="article"] {
+	-webkit-opacity: 0;
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s; 
+	-webkit-animation-timing-function: ease-in-out; 
+	-webkit-animation-delay: 0.5s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-iteration-count: 1;
+}
+
+
+#myId .design-selection, #myId .design-archives {
+	-webkit-opacity: 0;
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s; 
+	-webkit-animation-timing-function: ease-in-out; 
+	-webkit-animation-delay: 1s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-iteration-count: 1;
+}
+
+
+/*-------------------------------------------    
+	IE, i.e. Internet Explorer (heh)
+-------------------------------------------*/
+
+@media screen and (min-width:0\0) { /* IE9 and IE10 rule sets go here */  
+   
+   #myId .main h3, #myId .preamble h3, #myId .select { visibility: visible; }
+   #myId [role="banner"] h1 { visibility: visible; width: auto; display: block; }
+
+   #myId .main h3:after, #myId .preamble h3:after, #myId .select:after { display: none; }
+   #myId [role="banner"] h1:before { display: none; }
+
+} 
+
+
+/* IE8 and below */
+#myId .main h3, #myId .preamble h3, #myId .select { visibility: visible\9; font-size: 20px\9; }
+#myId .main h3:after, #myId .preamble h3:after, #myId .select:after { display: none\9; }
+
+#myId .page-wrapper { width: 800px\9; }
+#myId .preamble { padding-top: 50px\9; margin-top: 50px\9; }
+
+#myId h1 { font-size: 48px\9; text-transform: uppercase\9; margin: 0\9; padding-top: 30px\9;}
+#myId h2 { font-size: 20px\9; }
+
+#myId .next a, #myId .previous a, #myId .viewall a, #myId .zen-resources a { background-image: url(i/czg.png)\9; }
+
+
+
+/* IE7 & below */
+#myId .next a, 
+#myId .previous a,
+#myId .viewall a, 
+#myId .zen-resources a { 
+	*background: none; 
+	*width: auto; 
+	*height: auto; 
+	*display: block; 
+	*text-indent: 0; 
+	*white-space: normal; 
+	*overflow: visible; 
+}
+
+#myId .design-archives { 
+	*position: static; 	
+	*margin-top: 30px;
+}
+
+#myId .design-archives li {
+	*display: inline;
+	*margin-right: 20px;
+}
+
+#myId .next { 
+	*margin-right: 2em; 
+	*margin-left: -0.4em; 
+}
+
+#myId .viewall { 
+	*margin-left: 0; 
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="hottext" title="Identifying Sentence Errors" label="" xml:lang="en-US" adaptive="false" timeDependent="false" toolName="TAO" toolVersion="3.1.0-sprint17">
+  <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+    <correctResponse>
+      <value><![CDATA[E]]></value>
+    </correctResponse>
+  </responseDeclaration>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+    <defaultValue>
+      <value>0</value>
+    </defaultValue>
+  </outcomeDeclaration>
+  <itemBody>
+    <p>
+            Select the error in the following passage of text (or <em>No Error</em> if there is none).
+        </p>
+    <hottextInteraction responseIdentifier="RESPONSE" maxChoices="1" minChoices="0">
+      <p>
+                Sponsors of the Olympic Games 
+<hottext identifier="A" fixed="false">who bought</hottext>
+
+                advertising time on United States television 
+<hottext identifier="B" fixed="false">includes</hottext>
+
+                
+<hottext identifier="C" fixed="false">at least</hottext>
+ a dozen international firms 
+                
+<hottext identifier="D" fixed="false">whose</hottext>
+ names are familiar to American consumers.
+                
+<hottext identifier="E" fixed="false">No error.</hottext>
+
+            </p>
+    </hottextInteraction>
+  </itemBody>
+  <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+</assessmentItem>

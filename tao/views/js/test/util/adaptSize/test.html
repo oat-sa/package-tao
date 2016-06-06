@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Test - Size Adaptation</title>
+        <base href="../../../../" />
+        <link rel="stylesheet" type="text/css" href="js/lib/qunit/qunit.css">
+        <script type="text/javascript" src="js/lib/require.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit.js"></script>
+        <script  type="text/javascript">
+            
+            //don't start the test now
+            QUnit.config.autostart = false;
+            
+            //load the config
+            require(['/tao/ClientConfig/config'], function(){
+                
+                //load the test
+                require(['test/util/adaptSize/test'], function(){
+                    
+                    //Tests loaded, run tests
+                    QUnit.start();
+                });
+            });
+        </script>
+        <style>
+            #container {
+                width: 500px
+            }
+        </style>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+            <div id="container">
+                <div class="target" id="e-1"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in dictum est. Nulla eget facilisis purus. Morbi ut cursus sapien. Mauris ac sodales tellus. Vestibulum massa magna, lobortis a elementum in, commodo in lectus. Donec vestibulum lacus ut velit sollicitudin rutrum in vel lacus. Curabitur nunc mauris, pretium a sem mollis, consectetur suscipit eros. </p></div>
+                <div class="target" id="e-2"></div>
+                <div class="target" id="e-3"></div>
+            </div>
+        </div>
+    </body>
+</html>

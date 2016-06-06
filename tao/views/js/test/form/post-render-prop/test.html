@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Form Test - Post-render-props</title>
+        <base href="../../../../" />
+        <link rel="stylesheet" type="text/css" href="js/lib/qunit/qunit.css">
+        <link rel="stylesheet" type="text/css" href="css/tao-main-style.css">
+        <script type="text/javascript" src="js/lib/require.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit.js"></script>
+        <script type="text/javascript" src="js/lib/blanket/blanket.min.js" data-cover-only="form/post-render-props.js"></script>
+        <script  type="text/javascript">
+            
+            //don't start the test now
+            QUnit.config.autostart = false;
+            
+            //load the config
+            require(['/tao/ClientConfig/config'], function(){
+                
+                //load the test
+                require(['test/form/post-render-prop/test'], function(){
+                    
+                    //Tests loaded, run tests
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+            <div class="content-block">
+                <div class="xhtml_form">
+                    <form>
+                        <div id="property_xxx" class="form-group">
+                            <span class="icon-find"></span>
+                        </div>
+                        <a href="#" class="property-mode"></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

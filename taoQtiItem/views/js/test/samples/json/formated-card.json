@@ -1,0 +1,133 @@
+{
+    "identifier": "extendedText",
+    "serial": "item_555600ae567b2175433182",
+    "qtiClass": "assessmentItem",
+    "attributes": {
+        "identifier": "extendedText",
+        "title": "Writing a Postcard",
+        "label": "",
+        "xml:lang": "en-US",
+        "adaptive": false,
+        "timeDependent": false,
+        "toolName": "TAO",
+        "toolVersion": "3.0.1"
+    },
+    "body": {
+        "serial": "container_containeritembody_555600ae5678c065265738",
+        "body": "<div class=\"grid-row\">\n      <div class=\"col-6\">\n        <p>Read this postcard from your English pen-friend, Sam.<\/p>\n        <p>\n          {{img_555600ae589e4816387779}}\n        <\/p>\n      <\/div>\n      <div class=\"col-6\">\n        {{interaction_extendedtextinteraction_555600ae5805f503322627}}\n      <\/div>\n    <\/div>",
+        "elements": {
+            "interaction_extendedtextinteraction_555600ae5805f503322627": {
+                "serial": "interaction_extendedtextinteraction_555600ae5805f503322627",
+                "qtiClass": "extendedTextInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE",
+                    "base": 10,
+                    "patternMask": "\/^(?:(?:[^\\s\\:\\!\\?\\;\\\u2026\\\u20ac]+)[\\s\\:\\!\\?\\;\\\u2026\\\u20ac]*){0,50}$\/",
+                    "minStrings": 0,
+                    "format": "xhtml"
+                },
+                "debug": {
+                    "relatedItem": "item_555600ae567b2175433182"
+                },
+                "choices": {},
+                "prompt": {
+                    "serial": "container_containerstatic_555600ae587dd468760533",
+                    "body": "Write Sam a short letter.\u00a0 Answer the questions.\u00a0 <em>Write 50 words.<\/em>",
+                    "elements": {},
+                    "debug": {
+                        "relatedItem": "item_555600ae567b2175433182"
+                    }
+                }
+            },
+            "img_555600ae589e4816387779": {
+                "serial": "img_555600ae589e4816387779",
+                "qtiClass": "img",
+                "attributes": {
+                    "src": "images\/postcard.png",
+                    "alt": "postcard",
+                    "width": "100%"
+                },
+                "debug": {
+                    "relatedItem": "item_555600ae567b2175433182"
+                }
+            }
+        },
+        "debug": {
+            "relatedItem": "item_555600ae567b2175433182"
+        }
+    },
+    "debug": {
+        "relatedItem": "item_555600ae567b2175433182"
+    },
+    "namespaces": {
+        "xml": "http:\/\/www.w3.org\/XML\/1998\/namespace",
+        "xsi": "http:\/\/www.w3.org\/2001\/XMLSchema-instance",
+        "": "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1"
+    },
+    "stylesheets": {
+        "stylesheet_555600ae56fa9052117496": {
+            "serial": "stylesheet_555600ae56fa9052117496",
+            "qtiClass": "stylesheet",
+            "attributes": {
+                "href": "style\/custom\/tao-user-styles.css",
+                "type": "text\/css",
+                "media": "all",
+                "title": ""
+            },
+            "debug": {
+                "relatedItem": "item_555600ae567b2175433182"
+            }
+        }
+    },
+    "outcomes": {
+        "outcomedeclaration_555600ae5788d747947578": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_555600ae5788d747947578",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "debug": {
+                "relatedItem": "item_555600ae567b2175433182"
+            },
+            "defaultValue": null
+        }
+    },
+    "responses": {
+        "responsedeclaration_555600ae57568623654802": {
+            "identifier": "RESPONSE",
+            "serial": "responsedeclaration_555600ae57568623654802",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE",
+                "cardinality": "single",
+                "baseType": "string"
+            },
+            "debug": {
+                "relatedItem": "item_555600ae567b2175433182"
+            },
+            "correctResponses": [],
+            "mapping": [],
+            "areaMapping": [],
+            "howMatch": null,
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": {}
+        }
+    },
+    "feedbacks": {},
+    "responseProcessing": {
+        "serial": "response_custom_555600ae59220089386409",
+        "qtiClass": "responseProcessing",
+        "attributes": [],
+        "debug": {
+            "relatedItem": ""
+        },
+        "processingType": "custom",
+        "data": "<responseProcessing\/>",
+        "responseRules": []
+    }
+}

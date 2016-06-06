@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAO.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#BaseUserRole">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Base User
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#BaseUserRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Base User]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Base User Role
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#BaseUserRole
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[Base User Role]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+    <structure id="results" name="Results" level="5" group="main">
+        <description>View and format the collected results.</description>
+        <icon id="icon-result" src=""/>
+        <sections>
+            <section id="manage_results" name="Manage Results" url="/taoOutcomeUi/Results/index">
+                <trees>
+                    <tree name="Results library"
+                          className="Result"
+                          dataUrl="/taoOutcomeUi/Results/getOntologyData"
+                          selectClass="results-index"
+                          selectInstance="results-view"
+                          delete="results-delete"
+                            />
+                </trees>
+                <actions>
+                    <action id="results-index" name="Results" url="/taoOutcomeUi/Results/index" group="content"
+                            context="class">
+                        <icon id="icon-result-small"/>
+                    </action>
+                    <action id="results-export" name="Export Table" url="/taoOutcomeUi/ResultTable/index" group="content"
+                            context="class">
+                        <icon id="icon-table"/>
+                    </action>
+                    <action id="results-expire" name="Complete expired tests" binding="endExpiredTests" url="/taoQtiTest/TestCommand/endExpiredTests" group="content"
+                            context="class">
+                        <icon id="icon-end-attempt"/>
+                    </action>
+                    <action id="results-view" name="View result" url="/taoOutcomeUi/Results/viewResult" group="content"
+                            context="instance">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="results-delete" name="Delete" binding="removeNode" url="/taoOutcomeUi/Results/delete"
+                            context="instance" group="tree">
+                        <icon id="icon-bin"/>
+                    </action>
+                </actions>
+            </section>
+        </sections>
+    </structure>
+</structures>

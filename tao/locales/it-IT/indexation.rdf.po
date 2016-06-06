@@ -1,0 +1,127 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.1.0-sprint20\n"
+"PO-Revision-Date: 2016-02-19T17:54:53\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: it-IT\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: it-IT\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#Index
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Index"
+msgstr "Indice"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#Index
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Index class"
+msgstr "Indice di classe"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexIdentifier
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Identifier"
+msgstr "Identificatore"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexIdentifier
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Humanreadable identifier of the index"
+msgstr "Identificatore di indice leggibile"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexTokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Tokenizer of index"
+msgstr "Tokenizer di indice"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexTokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Tokenizer to be used to extract search strings"
+msgstr "Tokenizer da essere usato per estrarre stringhe di ricerca"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexFuzzyMatching
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Fuzzy matching"
+msgstr "Corrispondenza parziale"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexFuzzyMatching
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Should the string matching be exact or fuzzy"
+msgstr "La stringa dovrebbe combaciare esattamente oppure parzialmente"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexDefaultSearch
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Use by default"
+msgstr "Utilizza come predefinito"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#IndexDefaultSearch
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Should this property be used implicitly in the defautl search"
+msgstr "Questa proprietà dovrebbe essere usata in modo implicito nella ricerca predefinita"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#Tokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Tokenizer"
+msgstr "Tokenizer"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#Tokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Tokenizer class"
+msgstr "Tokenizer di classe"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#TokenizerClass
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Tokenizer implementation"
+msgstr "Implementazione di tokenizer"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#TokenizerClass
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Classname of the tokenizer implementation"
+msgstr "Il nome della classe di implementazione di tokenizer"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#PropertyIndex
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Property Indexation"
+msgstr "Proprietà di indicizzazione"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#PropertyIndex
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "How a property should be indexed"
+msgstr "Come una proprietà dovrebbe essere indicizzata"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#RawValueTokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Raw Value Tokenizer"
+msgstr "Valore di riga di tokenizer"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#RawValueTokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Tokenizer using the raw property value"
+msgstr "Tokenizer usando il valore grezzo della proprietà"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LabelTokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Label Tokenizer"
+msgstr "Tokenizer di etichetta"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LabelTokenizer
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Tokenizer using the resource labels"
+msgstr "La casella usa le etichette esperte"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LabelIndex
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Label Index"
+msgstr "Indice di casella"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#TypeIndex
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Type Index"
+msgstr "Indice tipo"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#LoginIndex
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Login Index"
+msgstr "Indice di login"
+

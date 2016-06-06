@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+    <structure id="tests" name="Tests" level="1" group="main">
+        <description>Combine a selection of items into tests.</description>
+        <icon id="icon-test" src=""/>
+        <sections>
+            <section id="manage_tests" name="Manage tests" url="/taoTests/Tests/index">
+                <trees>
+                    <tree name="Tests library"
+                          className="Test"
+                          dataUrl="/taoTests/Tests/getOntologyData"
+                          selectClass="test-class-properties"
+                          selectInstance="test-properties"
+                          moveInstance="test-move"
+                          delete="test-delete"
+                          rootNode="http://www.tao.lu/Ontologies/TAOTest.rdf#Test"
+                        />
+                </trees>
+                <actions allowClassActions="true">
+                	
+                	<action id="test-class-properties" name="Properties" url="/tao/PropertiesAuthoring/index" group="content" context="class">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="test-properties"  name="Properties"  url="/taoTests/Tests/editTest" group="content" context="instance">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="test-authoring" name="Authoring" url="/taoTests/Tests/authoring" group="content" context="instance" binding="launchEditor">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="test-filter" name="Filter" context="*" group="search" binding="filter">
+                        <icon id="icon-filter"/>
+                    </action> 
+                    <action id="test-search" name="Search" url="/taoTests/Tests/search" context="*" group="search" binding="launchFinder">
+                        <icon id="icon-find"/>
+                    </action> 
+                    <action id="test-class-new" name="New class" js="subClass" url="/taoTests/Tests/addSubClass" context="resource" group="tree">
+                        <icon id="icon-folder-open"/>
+                    </action>
+                    <action id="test-delete" name="Delete" url="/taoTests/Tests/delete" context="resource" group="tree" binding="removeNode">
+                        <icon id="icon-bin"/>
+                    </action>
+                    <action id="test-move" name="Move" url="/taoTests/Tests/moveInstance" context="instance" group="none" binding="moveNode">
+                        <icon id="icon-move-item"/>
+                    </action>
+                    <action id="test-import" name="Import" url="/taoTests/TestImport/index" context="resource" group="tree" binding="loadClass">
+                        <icon id="icon-import"/>
+                    </action>
+                    <action id="test-export" name="Export" url="/taoTests/TestExport/index" context="resource" group="tree">
+                        <icon id="icon-export"/>
+                    </action>
+                    <action id="test-duplicate" name="Duplicate" js="duplicateNode" url="/taoTests/Tests/cloneInstance" context="instance" group="tree">
+                        <icon id="icon-copy"/>
+                    </action>
+                    <action id="test-new" name="New test" url="/taoTests/Tests/addInstance" context="resource" group="tree" binding="instanciate">
+                        <icon id="icon-test"/>
+                    </action>
+                </actions>
+            </section>
+        </sections>
+    </structure>
+</structures>

@@ -1,0 +1,124 @@
+{
+    "success": true,
+    "testData": {
+        "title": "Test 3",
+        "identifier": "Test-3",
+        "className": "assessmentTest",
+        "toolName": "tao",
+        "exclusivelyLinear": true,
+        "hasTimeLimits": false,
+        "config": {
+            "timerWarning": {
+                "assessmentItemRef": null,
+                "assessmentSection": null,
+                "testPart": null
+            },
+            "progress-indicator": "percentage",
+            "progress-indicator-scope": "testSection",
+            "progress-indicator-forced": false,
+            "test-taker-review": false,
+            "test-taker-review-region": "left",
+            "test-taker-review-force-title": false,
+            "test-taker-review-item-title": "Item %d",
+            "test-taker-review-scope": "test",
+            "test-taker-review-prevents-unseen": true,
+            "test-taker-review-can-collapse": false,
+            "exitButton": false,
+            "next-section": false,
+            "reset-timer-after-resume": false
+        }
+    },
+    "testContext": {
+        "state": 1,
+        "navigationMode": 0,
+        "submissionMode": 0,
+        "remainingAttempts": -1,
+        "isAdaptive": false,
+        "isTimeout": false,
+        "itemIdentifier": "item-1",
+        "itemUri": "http:\/\/tao.dev\/TAO.rdf#i145198308883913|http:\/\/tao.dev\/TAO.rdf#i14527618787145157+|http:\/\/tao.dev\/TAO.rdf#i14527618786135158-",
+        "itemSessionState": 1,
+        "needMapUpdate": false,
+        "isLast": false,
+        "itemPosition": 0,
+        "timeConstraints": [],
+        "testPartId": "testPart-1",
+        "sectionId": "assessmentSection-1",
+        "sectionTitle": "Section 1",
+        "numberItems": 2,
+        "numberCompleted": 0,
+        "numberPresented": 1,
+        "considerProgress": true,
+        "isDeepestSectionVisible": true,
+        "canMoveBackward": false,
+        "allowComment": false,
+        "allowSkipping": false,
+        "exitButton": false,
+        "logoutButton": true,
+        "categories": []
+    },
+    "testMap": {
+        "parts": {
+            "testPart-1": {
+                "title": "testPart-1",
+                "position": 0,
+                "isLinear": true,
+                "sections": {
+                    "assessmentSection-1": {
+                        "title": "Section 1",
+                        "position": 0,
+                        "items": {
+                            "item-1": {
+                                "uri": "http:\/\/tao.dev\/TAO.rdf#i145198308883913",
+                                "title": "Chocolate Factory",
+                                "position": 0,
+                                "positionInPart": 0,
+                                "positionInSection": 0,
+                                "occurrence": 0,
+                                "remainingAttempts": -1,
+                                "answered": true,
+                                "viewed": true
+                            },
+                            "item-2": {
+                                "uri": "http:\/\/tao.dev\/TAO.rdf#i1451983089533915",
+                                "title": "Associate Things",
+                                "position": 1,
+                                "positionInPart": 1,
+                                "positionInSection": 1,
+                                "occurrence": 0,
+                                "remainingAttempts": -1,
+                                "answered": false,
+                                "viewed": false
+                            }
+                        },
+                        "stats": {
+                            "answered": 1,
+                            "viewed": 1
+                        }
+                    }
+                },
+                "stats": {
+                    "answered": 1,
+                    "viewed": 1
+                }
+            }
+        },
+        "jumps": [{
+            "identifier": "item-1",
+            "section": "assessmentSection-1",
+            "part": "testPart-1",
+            "position": 0,
+            "uri": "http:\/\/tao.dev\/TAO.rdf#i145198308883913"
+        }, {
+            "identifier": "item-2",
+            "section": "assessmentSection-1",
+            "part": "testPart-1",
+            "position": 1,
+            "uri": "http:\/\/tao.dev\/TAO.rdf#i1451983089533915"
+        }],
+        "stats": {
+            "answered": 1,
+            "viewed": 1
+        }
+    }
+}

@@ -1,0 +1,220 @@
+@import "inc/bootstrap";
+
+.qti-droppable-block-hover {
+    min-height: 30px;
+    width: 100%;
+    border: 2px dashed #3e7da7;
+    background-color: #e6eef4;
+    margin: 0;
+    opacity: 0.5;
+}
+
+.grid-edit-resizable-zone {
+    position: absolute;
+    cursor: col-resize;
+    text-align: center;
+    outline: 0 dotted blue;
+}
+
+.grid-edit-resizable-handle {
+    position: relative;
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+}
+
+.grid-edit-resizable-zone-active:hover .grid-edit-resizable-handle {
+    border-width: 0 1px;
+    border-color: #ccc;
+    border-style: solid;
+}
+
+.grid-edit-resizable-active {
+    width: 0;
+    border: 0 dashed #3e7da7;
+    border-left-width: 1px;
+}
+
+.grid-edit-resizable-outline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border: 1px solid #3e7da7;
+    background-color: #e4ecef;
+    opacity: 0.5;
+    z-index: 9;
+}
+
+.grid-edit-insert-box {
+    position: absolute;
+    height: 100%;
+    text-align: center;
+    opacity: 0.5;
+    z-index: 9;
+}
+
+.grid-edit-insert-box:hover {
+    opacity: 0.3;
+}
+
+.grid-edit-insert-square {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: #3e7da7;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.grid-edit-insert-triangle {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 12px solid #3e7da7;
+}
+
+.grid-edit-insert-line {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 100%;
+    border-left: 1px dashed #3e7da7;
+}
+
+.grid-draggable-helper {
+    z-index: 99;
+    max-height: 200px;
+    max-width: 50%;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    padding: 6px;
+}
+
+.grid-draggable-helper:after {
+    content: '...';
+    position: absolute;
+    bottom: 0;
+    right: 6px;
+}
+
+.grid-draggable {
+    cursor: pointer;
+}
+
+.grid-draggable:hover {
+    opacity: 0.8;
+}
+
+.grid-draggable:active,
+.grid-draggable-active {
+    cursor: all-scroll;
+}
+
+//need to offset default col display rules because new tmp columns have been added
+.dropping{
+    margin-left: -1.42857%;
+    margin-right: 1.42857%;
+}
+.new-col:first-child{
+    margin-left: 1.42857%;
+}
+
+//inline drop target containers:
+.drop-target{
+    &[data-html-editable] {
+        border:2px dashed whiten($success, .5) !important;
+        &:hover{
+            background:rgba($success, .1) !important;
+        }
+    }
+    #qti-inline-element-placeholder {
+        position:relative;
+        display:inline-block;
+        width:8px;
+        height:14px;
+        margin: 0px 2px;
+        background-color:transparent;
+        .cursor-h{
+            width:100%;
+            height:100%;
+            display:inline-block;
+            position:absolute;
+            top:2px;
+            left:0;
+            border-top:2px solid $info;
+            border-bottom:2px solid $info;
+        }
+        .cursor-v{
+            width:0px;
+            height:100%;
+            display:inline-block;
+            position:absolute;
+            top:2px;
+            left:3px;
+            border-left:2px solid $info;
+        }
+    }
+}
+
+.widget-box{
+    .html-editable-shield{
+        background:rgba($uiClickableDefaultBg, .5);
+        position : absolute;
+        top : 0;
+        left : 0;
+        width : 100%;
+        height : 100%;
+        z-index : 999;
+    }
+}
+
+.add-block-element{
+    position:absolute;
+    bottom:-2px;
+    width:100%;
+    opacity:.1;
+    &:hover{
+        opacity:.7; 
+    }
+    .line{
+        position:absolute; 
+        border-top:1px dashed $info;
+        top:8px;
+        width:100%;
+    }
+    .circle {
+        display:block;
+        width: 16px;
+        height: 16px;
+        background: $info; 
+        -moz-border-radius: 30px; 
+        -webkit-border-radius: 30px; 
+        border-radius: 30px;
+        position:absolute;
+        margin-left:50%;
+        margin-right:50%;
+        cursor:pointer;
+        span{
+            font-weight: bold;
+            font-size:16px;
+            color:#E6EEF4;
+            position:absolute;
+            top:-3px;
+            left:4px;
+        }
+    }
+}
+
+.edit-inserting{
+    .add-block-element{
+        display:none;
+    }
+}
+
+.colrow{
+    position : relative;
+    margin-bottom : 18px;
+}

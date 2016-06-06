@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p0 imsqti_v2p0.xsd" identifier="periods-of-history" title="Periods of History" timeDependent="false" adaptive="false" lang="en-US" toolName="TAO" toolVersion="2.4.7">
+  <responseDeclaration identifier="RESPONSE" cardinality="ordered" baseType="identifier">
+    <correctResponse>
+      <value>Prehistory</value>
+      <value>Antiquity</value>
+      <value>MiddleAges</value>
+      <value>ModernEra</value>
+      <value>ContemporaryEra</value>
+    </correctResponse>
+  </responseDeclaration>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer"/>
+  <stylesheet href="style.css" title="Periods of History" media="screen" type="text/css"/>
+  <itemBody>
+    <div>
+      <div><p>The history of mankind is an unfailing source of inspiration for
+every human being. But before knowing in-depth the history of the
+world, you should know its major periods.</p><orderInteraction id="interaction" responseIdentifier="RESPONSE" shuffle="true"><prompt>Use your mouse to drag and drop periods of history in the correct
+order, from the top to the bottom of the screen. When your answer
+is correctly set, click the <i>Validate</i> button.</prompt><simpleChoice identifier="Prehistory" id="Prehistory">Prehistory</simpleChoice><simpleChoice identifier="Antiquity" id="Antiquity">Antiquity</simpleChoice><simpleChoice identifier="MiddleAges" id="MiddleAges">Middle Ages</simpleChoice><simpleChoice identifier="ModernEra" id="ModernEra">Modern Era</simpleChoice><simpleChoice identifier="ContemporaryEra" id="ContemporaryEra">Contemporary Era</simpleChoice></orderInteraction>
+ &#xA0;</div>
+    </div>
+  </itemBody>
+  <responseProcessing template="http://www.imsglobal.org/question/qti_v2p0/rptemplates/match_correct"/>
+</assessmentItem>

@@ -1,0 +1,60 @@
+@import "inc/bootstrap";
+
+
+.qti-graphicGapMatchInteraction {
+
+    ul.source {
+        width: 100%;
+        margin: 10px auto;
+        padding: 3px !important;
+        clear: both;
+        min-height: 60px;
+        & > li {
+            background: white();
+            border: solid 1px #ddd !important;
+            line-height: 60px;
+            min-height : 60px;
+            min-width: 60px;
+            text-align: center;
+            max-width: 100%;
+            @include font-size(20);
+            margin: 0 3px 3px 0 !important;
+            padding: 0;
+            cursor: pointer;
+            &:hover{
+                @extend %selectableHover;
+            }
+            &.active {
+                border: solid 1px $uiClickableHoverBg !important;
+                @include transition(background, 0.4s);
+                &:hover{
+                    background: white() !important;
+                    cursor: default !important;
+                }
+
+                &.selectable:hover{
+                    @extend %selectableHover;
+                    cursor: pointer !important;
+                }
+            }
+
+            &.disabled {
+                border: none;
+                cursor: default !important;
+                color: #333 !important;
+                background-color: transparent !important;
+            }
+
+            img {
+                display: block;
+            }
+
+        }
+    }
+
+    .gap-filler{
+        display: block;
+        position: absolute;
+        z-index: 20000;
+    }
+}

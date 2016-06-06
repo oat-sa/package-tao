@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+                identifier="graphicAssociate" title="Low-cost Flying" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="pair">
+        <correctResponse>
+            <value>C B</value>
+            <value>C D</value>
+        </correctResponse>
+        <mapping lowerBound="0" defaultValue="0">
+            <mapEntry mapKey="A B" mappedValue="-1"/>
+            <mapEntry mapKey="A C" mappedValue="-1"/>
+            <mapEntry mapKey="A D" mappedValue="-1"/>
+            <mapEntry mapKey="B C" mappedValue="1"/>
+            <mapEntry mapKey="B D" mappedValue="-1"/>
+            <mapEntry mapKey="C D" mappedValue="1"/>
+        </mapping>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+    <itemBody>
+        <p>Frizz, a new low cost airline, already operates a service connecting Manchester and
+            Edinburgh but has recently opened two new routes: a service between London and Edinburgh
+            and one between London and Manchester.</p>
+        <graphicAssociateInteraction responseIdentifier="RESPONSE" maxAssociations="3">
+            <prompt>Mark the airline's new routes on the airport map:</prompt>
+            <object type="image/png" width="206" height="280" data="images/ukair.png">UK Map</object>
+            <associableHotspot shape="circle" coords="77,115,8" identifier="A" matchMax="3"/>
+            <associableHotspot shape="circle" coords="118,184,8" identifier="B" matchMax="3"/>
+            <associableHotspot shape="circle" coords="150,235,8" identifier="C" matchMax="3"/>
+            <associableHotspot shape="circle" coords="96,114,8" identifier="D" matchMax="3"/>
+        </graphicAssociateInteraction>
+    </itemBody>
+    <responseProcessing
+            template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response"/>
+</assessmentItem>

@@ -1,0 +1,196 @@
+{
+    "identifier": "hotspot",
+    "serial": "item_547dd7675fc72790128029",
+    "qtiClass": "assessmentItem",
+    "attributes": {
+        "identifier": "hotspot",
+        "title": "UK Airports (Take 1)",
+        "label": "",
+        "adaptive": false,
+        "timeDependent": false,
+        "toolName": "TAO",
+        "toolVersion": "3.0"
+    },
+    "body": {
+        "serial": "container_containeritembody_547dd7675fc5b795885077",
+        "body": "<p>The picture illustrates four of the most popular destinations for air travellers arriving\n\t\t\tin the United Kingdom: London, Manchester, Edinburgh and Glasgow.</p>\n    {{interaction_hotspotinteraction_547dd76760ec1571962262}}",
+        "elements": {
+            "interaction_hotspotinteraction_547dd76760ec1571962262": {
+                "serial": "interaction_hotspotinteraction_547dd76760ec1571962262",
+                "qtiClass": "hotspotInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE",
+                    "maxChoices": 1,
+                    "minChoices": 0
+                },
+                "choices": {
+                    "choice_hotspotchoice_547dd76761348200388715": {
+                        "identifier": "A",
+                        "serial": "choice_hotspotchoice_547dd76761348200388715",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "A",
+                            "fixed": false,
+                            "shape": "circle",
+                            "coords": "77,115,8"
+                        }
+                    },
+                    "choice_hotspotchoice_547dd7676141d836502877": {
+                        "identifier": "B",
+                        "serial": "choice_hotspotchoice_547dd7676141d836502877",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "B",
+                            "fixed": false,
+                            "shape": "circle",
+                            "coords": "118,184,8"
+                        }
+                    },
+                    "choice_hotspotchoice_547dd7676145b568812300": {
+                        "identifier": "C",
+                        "serial": "choice_hotspotchoice_547dd7676145b568812300",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "C",
+                            "fixed": false,
+                            "shape": "circle",
+                            "coords": "150,235,8"
+                        }
+                    },
+                    "choice_hotspotchoice_547dd76761494167929323": {
+                        "identifier": "D",
+                        "serial": "choice_hotspotchoice_547dd76761494167929323",
+                        "qtiClass": "hotspotChoice",
+                        "attributes": {
+                            "identifier": "D",
+                            "fixed": false,
+                            "shape": "circle",
+                            "coords": "96,114,8"
+                        }
+                    }
+                },
+                "prompt": {
+                    "serial": "container_containerstatic_547dd7676119f548179467",
+                    "body": "Which one is Glasgow?",
+                    "elements": [],
+                    "debug": {
+                        "relatedItem": "item_547dd7675fc72790128029"
+                    }
+                },
+                "object": {
+                    "serial": "object_547dd767614dd836286343",
+                    "qtiClass": "object",
+                    "attributes": {
+                        "data": "images/ukair.png",
+                        "type": "image/png",
+                        "width": 206,
+                        "height": 280
+                    },
+                    "_alt": "UK Map"
+                }
+            }
+        },
+        "debug": {
+            "relatedItem": "item_547dd7675fc72790128029"
+        }
+    },
+    "namespaces": {
+        "": "http://www.imsglobal.org/xsd/imsqti_v2p1",
+        "xsi": "http://www.w3.org/2001/XMLSchema-instance"
+    },
+    "schemaLocations": {
+        "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1": "http:\/\/www.imsglobal.org\/xsd\/qti\/qtiv2p1\/imsqti_v2p1.xsd"
+    },
+    "stylesheets": [],
+    "outcomes": {
+        "outcomedeclaration_547dd76760303339965052": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_547dd76760303339965052",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "defaultValue": null
+        }
+    },
+    "responses": {
+        "responsedeclaration_547dd7675fed8737745796": {
+            "identifier": "RESPONSE",
+            "serial": "responsedeclaration_547dd7675fed8737745796",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE",
+                "cardinality": "single",
+                "baseType": "identifier"
+            },
+            "correctResponses": [
+                "A"
+            ],
+            "mapping": [],
+            "areaMapping": [],
+            "howMatch": "http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct",
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": []
+        }
+    },
+    "feedbacks": [],
+    "responseProcessing": {
+        "serial": "response_templatesdriven_547dd76761689992638661",
+        "qtiClass": "responseProcessing",
+        "attributes": [],
+        "processingType": "templateDriven",
+        "responseRules": [{
+            "qtiClass": "responseCondition",
+            "responseIf": {
+                "qtiClass": "responseIf",
+                "expression": {
+                    "qtiClass": "match",
+                    "expressions": [{
+                        "qtiClass": "variable",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }, {
+                        "qtiClass": "correct",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }]
+                },
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "baseValue",
+                        "attributes": {
+                            "baseType": "float"
+                        },
+                        "value": "1"
+                    }
+                }]
+            },
+            "responseElse": {
+                "qtiClass": "responseElse",
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "baseValue",
+                        "attributes": {
+                            "baseType": "float"
+                        },
+                        "value": "0"
+                    }
+                }]
+            }
+        }]
+    }
+}

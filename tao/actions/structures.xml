@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../doc/structures.dtd">
+<structures>
+    <structure id="hiden_user" name="Users" level="11" group="hidden">
+        <sections>
+            <section id="hidden_list_users" name="Users" url="/tao/none/none">
+                <trees>
+                    <tree name="Users"
+                          dataUrl="/tao/none/none"
+                          rootNode="http://www.tao.lu/Ontologies/TAO.rdf#User"
+                     />
+                </trees>
+            </section>
+        </sections>
+    </structure>
+
+    <structure id="users" name="Users" level="11" group="settings">
+        <description/>
+        <icon id="icon-users" src=""/>
+        <sections>
+            <section id="list_users" name="Manage users" url="/tao/Users/index"/>
+            <section id="add_user" name="Add a user" url="/tao/Users/add"/>
+            <section id="edit_user" name="Edit a user" url="/tao/Users/edit" disabled="true"/>
+            <section id="manage_roles" name="Manage roles" url="/tao/Roles/index">
+                <trees>
+                    <tree name="Roles library"
+                          className="Role"
+                          dataUrl="/tao/Roles/getOntologyData"
+                          selectClass="role-class-properties"
+                          selectInstance="role-properties"
+                          moveInstance="role-move"
+                          delete="role-delete"
+                          rootNode="http://www.tao.lu/Ontologies/generis.rdf#ClassRole"
+                     />
+                </trees>
+                <actions>
+                	<action id="role-class-properties" name="Properties" url="/tao/Roles/editRoleClass" group="content" context="class">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="role-properties" name="Properties"  url="/tao/Roles/editRole" group="content" context="instance">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="role-assign" name="Assign Users"  url="/tao/Roles/assignUsers" group="content" context="instance">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="role-filter" name="Filter" context="*" group="search" binding="filter">
+                        <icon id="icon-filter"/>
+                    </action>
+                    <action id="role-search" name="Search" url="/tao/Roles/search" context="*" group="search" binding="launchFinder">
+                        <icon id="icon-find"/>
+                    </action>
+                    <action id="role-export" name="Export" url="/tao/Export/index" context="resource" group="tree">
+                        <icon id="icon-export"/>
+                    </action>
+                    <action id="role-delete" name="Delete" url="/tao/Roles/delete" context="resource" group="tree" binding="removeNode">
+                        <icon id="icon-bin"/>
+                    </action>
+                    <action id="role-new" name="New role" url="/tao/Roles/addInstance" context="resource" group="tree" binding="instanciate">
+                        <icon id="icon-tools" src=""/>
+                    </action>
+                    <action id="role-move" name="Move role" url="/tao/Roles/moveInstance" context="instance" group="none" binding="moveNode">
+                        <icon id="icon-move" src=""/>
+                    </action>
+                </actions>
+            </section>
+        </sections>
+    </structure>
+
+    <structure id="settings" name="Settings" level="8" group="settings">
+        <description/>
+        <icon id="icon-settings" src=""/>
+        <sections>
+            <section id="settings_ext_mng" name="Extensions manager" url="/tao/ExtensionsManager/index"/>
+        </sections>
+    </structure>
+
+    <structure id="user_settings" name="User Settings" level="110" group="settings">
+        <description/>
+        <icon id="icon-user" src=""/>
+        <sections>
+            <section id="settings_my_settings" name="My settings" url="/tao/UserSettings/properties"/>
+            <section id="settings_my_password" name="Change password" url="/tao/UserSettings/password"/>
+        </sections>
+    </structure>
+</structures>

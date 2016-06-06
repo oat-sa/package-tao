@@ -1,0 +1,216 @@
+{
+  "state": 1,
+  "navigationMode": 1,
+  "submissionMode": 0,
+  "remainingAttempts": -1,
+  "isAdaptive": false,
+  "isTimeout": false,
+  "itemIdentifier": "item-1",
+  "itemSessionState": 1,
+  "isLast": false,
+  "itemPosition": 0,
+  "timeConstraints": [
+    {
+      "label": "QTI Example Test",
+      "source": "Test-1",
+      "seconds": 7810,
+      "allowLateSubmission": false,
+      "qtiClassName": "assessmentTest"
+    }
+  ],
+  "testTitle": "QTI Example Test",
+  "testPartId": "Introduction",
+  "sectionTitle": "Section 1",
+  "numberItems": 9,
+  "numberCompleted": 0,
+  "numberPresented": 1,
+  "considerProgress": true,
+  "moveForwardUrl": "http:\/\/tao.dev\/taoQtiTest\/TestRunner\/moveForward?QtiTestDefinition=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i1434615925556637&QtiTestCompilation=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468266248480-%7Chttp%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468264481%2B&standalone=true&serviceCallId=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468729921504",
+  "moveBackwardUrl": "http:\/\/tao.dev\/taoQtiTest\/TestRunner\/moveBackward?QtiTestDefinition=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i1434615925556637&QtiTestCompilation=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468266248480-%7Chttp%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468264481%2B&standalone=true&serviceCallId=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468729921504",
+  "skipUrl": "http:\/\/tao.dev\/taoQtiTest\/TestRunner\/skip?QtiTestDefinition=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i1434615925556637&QtiTestCompilation=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468266248480-%7Chttp%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468264481%2B&standalone=true&serviceCallId=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468729921504",
+  "commentUrl": "http:\/\/tao.dev\/taoQtiTest\/TestRunner\/comment?QtiTestDefinition=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i1434615925556637&QtiTestCompilation=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468266248480-%7Chttp%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468264481%2B&standalone=true&serviceCallId=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468729921504",
+  "timeoutUrl": "http:\/\/tao.dev\/taoQtiTest\/TestRunner\/timeout?QtiTestDefinition=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i1434615925556637&QtiTestCompilation=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468266248480-%7Chttp%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468264481%2B&standalone=true&serviceCallId=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468729921504",
+  "endTestSessionUrl": "http:\/\/tao.dev\/taoQtiTest\/TestRunner\/endTestSession?QtiTestDefinition=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i1434615925556637&QtiTestCompilation=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468266248480-%7Chttp%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468264481%2B&standalone=true&serviceCallId=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468729921504",
+  "canMoveBackward": false,
+  "jumps": [
+    {
+      "identifier": "item-1",
+      "position": 0
+    },
+    {
+      "identifier": "item-2",
+      "position": 1
+    },
+    {
+      "identifier": "item-3",
+      "position": 2
+    },
+    {
+      "identifier": "item-4",
+      "position": 3
+    },
+    {
+      "identifier": "item-5",
+      "position": 4
+    },
+    {
+      "identifier": "item-6",
+      "position": 5
+    },
+    {
+      "identifier": "item-7",
+      "position": 6
+    },
+    {
+      "identifier": "item-8",
+      "position": 7
+    },
+    {
+      "identifier": "item-9",
+      "position": 8
+    }
+  ],
+  "navigatorMap": [
+    {
+      "id": "Introduction",
+      "sections": [
+        {
+          "id": "assessmentSection-1",
+          "active": true,
+          "label": "Section 1",
+          "answered": 0,
+          "items": [
+            {
+              "id": "item-1",
+              "label": "Example_0_Introduction",
+              "remainingAttempts": -1,
+              "answered": false,
+              "viewed": true,
+              "flagged": false,
+              "position": 0,
+              "active": true
+            }
+          ]
+        }
+      ],
+      "active": true,
+      "label": "Part 1"
+    },
+    {
+      "id": "QTIExamples",
+      "sections": [
+        {
+          "id": "assessmentSection-2",
+          "active": false,
+          "label": "Section 1",
+          "answered": 0,
+          "items": [
+            {
+              "id": "item-2",
+              "label": "example_1_TAO",
+              "remainingAttempts": 1,
+              "answered": false,
+              "viewed": false,
+              "flagged": false,
+              "position": 1
+            },
+            {
+              "id": "item-3",
+              "label": "example_2_Math",
+              "remainingAttempts": 1,
+              "answered": false,
+              "viewed": false,
+              "flagged": false,
+              "position": 2
+            },
+            {
+              "id": "item-4",
+              "label": "Example_3_Baudelaire",
+              "remainingAttempts": 1,
+              "answered": false,
+              "viewed": false,
+              "flagged": false,
+              "position": 3
+            },
+            {
+              "id": "item-5",
+              "label": "Example_4_Appearance",
+              "remainingAttempts": 1,
+              "answered": false,
+              "viewed": false,
+              "flagged": false,
+              "position": 4
+            },
+            {
+              "id": "item-6",
+              "label": "Example_5_picasso",
+              "remainingAttempts": 1,
+              "answered": false,
+              "viewed": false,
+              "flagged": false,
+              "position": 5
+            },
+            {
+              "id": "item-7",
+              "label": "Example_6_Geography",
+              "remainingAttempts": 1,
+              "answered": false,
+              "viewed": false,
+              "flagged": false,
+              "position": 6
+            },
+            {
+              "id": "item-8",
+              "label": "Example_7_Geo 2",
+              "remainingAttempts": 1,
+              "answered": false,
+              "viewed": false,
+              "flagged": false,
+              "position": 7
+            },
+            {
+              "id": "item-9",
+              "label": "Example_8_Geo 3",
+              "remainingAttempts": 1,
+              "answered": false,
+              "viewed": false,
+              "flagged": false,
+              "position": 8
+            }
+          ]
+        }
+      ],
+      "active": false,
+      "label": "Part 2"
+    }
+  ],
+  "numberFlagged": 0,
+  "numberItemsPart": 1,
+  "numberItemsSection": 1,
+  "numberCompletedPart": 0,
+  "numberCompletedSection": 0,
+  "numberPresentedPart": 1,
+  "numberPresentedSection": 1,
+  "numberFlaggedPart": 0,
+  "numberFlaggedSection": 0,
+  "itemPositionPart": 0,
+  "itemPositionSection": 0,
+  "jumpUrl": "http:\/\/tao.dev\/taoQtiTest\/TestRunner\/jumpTo?QtiTestDefinition=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i1434615925556637&QtiTestCompilation=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468266248480-%7Chttp%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468264481%2B&standalone=true&serviceCallId=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468729921504",
+  "markForReviewUrl": "http:\/\/tao.dev\/taoQtiTest\/TestRunner\/markForReview?QtiTestDefinition=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i1434615925556637&QtiTestCompilation=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468266248480-%7Chttp%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468264481%2B&standalone=true&serviceCallId=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468729921504",
+  "itemServiceApiCall": "new ServiceApi(\u0022http:\\\/\\\/tao.dev\\\/taoQtiTest\\\/ItemRunner\\\/index\u0022,{\u0022itemUri\u0022:\u0022http:\\\/\\\/tao.dev\\\/TAO.rdf#i1434615927811740\u0022,\u0022itemPath\u0022:\u0022http:\\\/\\\/tao.dev\\\/TAO.rdf#i14369468271277482+\u0022,\u0022itemDataPath\u0022:\u0022http:\\\/\\\/tao.dev\\\/TAO.rdf#i14369468276374483-\u0022,\u0022QtiTestParentServiceCallId\u0022:\u0022http:\\\/\\\/tao.dev\\\/TAO.rdf#i14369468729921504\u0022,\u0022QtiTestDefinition\u0022:\u0022http:\\\/\\\/tao.dev\\\/TAO.rdf#i1434615925556637\u0022,\u0022QtiTestCompilation\u0022:\u0022http:\\\/\\\/tao.dev\\\/TAO.rdf#i14369468266248480-|http:\\\/\\\/tao.dev\\\/TAO.rdf#i14369468264481+\u0022,\u0022standalone\u0022:true},\u0022http:\\\/\\\/tao.dev\\\/TAO.rdf#i14369468729921504.item-1.0\u0022,new StateStorage(null, \u0022http:\\\/\\\/tao.dev\\\/tao\\\/ServiceModule\\\/submitState?serviceCallId=http%3A%2F%2Ftao.dev%2FTAO.rdf%23i14369468729921504.item-1.0\u0022),new UserInfoService(\u0022http:\\\/\\\/tao.dev\\\/tao\\\/ServiceModule\\\/getUserPropertyValues\u0022,{}))",
+  "rubrics": [],
+  "allowComment": true,
+  "allowSkipping": false,
+  "exitButton": true,
+  "timerWarning": {
+    "assessmentItemRef": 15,
+    "assessmentSection": 15,
+    "testPart": 15
+  },
+  "progressIndicator": "position",
+  "progressIndicatorScope": "test",
+  "reviewScreen": true,
+  "reviewRegion": "left",
+  "reviewScope": "test",
+  "reviewPreventsUnseen": true
+}

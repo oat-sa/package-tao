@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="Example01-modalFeedback" title="Modal Feedback" label="" xml:lang="en-US" adaptive="false" timeDependent="false" toolName="TAO" toolVersion="3.1.0-sprint17">
+  <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+    <correctResponse>
+      <value><![CDATA[true]]></value>
+    </correctResponse>
+  </responseDeclaration>
+  <outcomeDeclaration identifier="FEEDBACK" cardinality="single" baseType="identifier"/>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float" normalMaximum="10">
+    <defaultValue>
+      <value>0</value>
+    </defaultValue>
+  </outcomeDeclaration>
+  <outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+    <defaultValue>
+      <value>10.0</value>
+    </defaultValue>
+  </outcomeDeclaration>
+  <itemBody>
+    <choiceInteraction responseIdentifier="RESPONSE" shuffle="false" maxChoices="1" minChoices="0">
+      <prompt>Sigmund Freud and Carl Jung both belong to the psychoanalytic school of
+                psychology.</prompt>
+      <simpleChoice identifier="true" fixed="true">True </simpleChoice>
+      <simpleChoice identifier="false" fixed="true">False </simpleChoice>
+    </choiceInteraction>
+  </itemBody>
+  <responseProcessing>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE"/>
+          <correct identifier="RESPONSE"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <variable identifier="MAXSCORE"/>
+        </setOutcomeValue>
+        <setOutcomeValue identifier="FEEDBACK">
+          <baseValue baseType="identifier">correct</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+      <responseElse>
+        <setOutcomeValue identifier="FEEDBACK">
+          <baseValue baseType="identifier">incorrect</baseValue>
+        </setOutcomeValue>
+      </responseElse>
+    </responseCondition>
+  </responseProcessing>
+  <modalFeedback identifier="correct" outcomeIdentifier="FEEDBACK" showHide="show">correct</modalFeedback>
+  <modalFeedback identifier="incorrect" outcomeIdentifier="FEEDBACK" showHide="show">incorrect</modalFeedback>
+</assessmentItem>

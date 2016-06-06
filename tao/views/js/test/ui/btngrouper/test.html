@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ui Test - Button Grouper UI Component</title>
+        <base href="../../../../" />
+        <link rel="stylesheet" type="text/css" href="js/lib/qunit/qunit.css">
+        <script type="text/javascript" src="js/lib/require.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit.js"></script>
+        <script  type="text/javascript">
+            
+            //don't start the test now
+            QUnit.config.autostart = false;
+            
+            //load the config
+            require(['/tao/ClientConfig/config'], function(){
+                
+                //load the test
+                require(['test/ui/btngrouper/test'], function(){
+                    
+                    //Tests loaded, run tests
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+            
+            <ul data-button-group='toggle'>
+                <li class='active'>Y</li>
+                <li>N</li>
+            </ul>
+                
+            <ul data-button-group='switch'>
+                <li class='active'>B</li>
+                <li>I</li>
+                <li>U</li>
+            </div>
+            
+        </div>
+    </body>
+</html>

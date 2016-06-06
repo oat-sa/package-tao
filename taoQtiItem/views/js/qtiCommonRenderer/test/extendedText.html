@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+        <title>Extended Text Interaction Common Renderer Test</title>
+        <link rel="stylesheet" type="text/css" href="/tao/views/js/lib/qunit/qunit.css">
+        <script type="text/javascript" src="/tao/views/js/lib/require.js"></script>
+        <script type="text/javascript" src="/tao/views/js/lib/qunit/qunit.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="/tao/views/css/tao-main-style.css" />
+        <link rel="stylesheet" type="text/css" href="/taoQtiItem/views/css/qti-runner.css" />
+        <link rel="stylesheet" type="text/css" href="/taoQtiItem/views/css/themes/default.css" />
+
+        <script  type="text/javascript">
+            QUnit.config.autostart = false;
+            require(['/tao/ClientConfig/config'], function(){
+                'use strict';
+                require(['taoQtiItem/qtiCommonRenderer/test/runner'], function(runner){
+                    QUnit.start();
+
+                    runner.run({
+                        relBaseUrl : 'taoQtiItem/test/samples/qtiv2p1/extended_text_plain/',
+                        assertions : {
+                            interactionCount : 1,
+                            responses : [
+                                { "base" : {"string" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero et repudiandae eum at cupiditate, est laborum! Animi modi, molestias totam nisi, hic deserunt eaque earum magnam expedita? Sequi animi, deleniti." } }
+                            ]
+                        }
+                    });
+                    runner.run({
+                        relBaseUrl : 'taoQtiItem/test/samples/qtiv2p1/extended_text_pre/',
+                        assertions : {
+                            interactionCount : 1,
+                            responses : [
+                                { "base" : {"string" : "<p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipisicing elit. Nobis, explicabo.</p>" } }
+                            ]
+                        }
+                    });
+
+                    runner.run({
+                        relBaseUrl : 'taoQtiItem/test/samples/qtiv2p1/extended_text_xhtml/',
+                        assertions : {
+                            interactionCount : 1,
+                            responses : [
+                                { "base" : {"string" : "<p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipisicing elit. Nobis, explicabo.</p>" } }
+                            ]
+                        }
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+    </body>
+</html>

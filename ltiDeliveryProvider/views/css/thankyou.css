@@ -1,0 +1,81 @@
+/**  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ 
+ * Copyright (c) 2013 (original work) Open Assessment Technologies SA (under the project TAO-PRODUCT);
+ * 
+ */
+body{
+	background-color: #eee;
+	font-family: Verdana, Arial, sans-serif;
+	color: #3A3A3A;
+}
+
+h1{
+	font-size: 48px;
+	line-height: 64px;
+	margin-bottom: 35px;
+	color: #555555; 
+    margin-left: 175px;
+}
+
+#main{
+	background-color: white;
+	width: 625px;
+	padding: 40px;
+	background-repeat: no-repeat;
+	margin: 100px auto;
+	background-image: url(../img/check.png);
+    background-repeat:no-repeat;
+    background-position: 40px 40px; 
+}
+
+.message{
+	font-size:22px;
+	font-weight:normal;
+	margin-bottom: 20px;
+	color: #999999;
+}
+
+span {
+    margin-top: 20px;
+}
+
+.buttonArea{
+    right: 0px;
+}
+
+.button{
+    padding:20px;
+	text-decoration: none;
+	background:#808080;
+	font-size:22px;
+	text-align: center;
+	color:#FFFFFF !important;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.button:hover{
+    background:#BA122B;;
+}
+
+.continer2 {
+    height: 70px;
+    background-image: url("../../../tao/views/img/logo_tao.png");
+    background-repeat:no-repeat;
+    background-position: top right;
+}

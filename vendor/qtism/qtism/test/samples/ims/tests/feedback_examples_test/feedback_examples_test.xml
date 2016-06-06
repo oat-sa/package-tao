@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    toolVersion="0.1" toolName="Spectatus" title="Feedback Examples Test"
+    identifier="SPECTATUS-GENERATED-TEST"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+    <outcomeDeclaration baseType="float" cardinality="single" identifier="TEST_total">
+        <defaultValue>
+            <value>0.0</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <outcomeDeclaration baseType="float" cardinality="single" identifier="SECTION_1_total">
+        <defaultValue>
+            <value>0.0</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <outcomeDeclaration baseType="float" cardinality="single" identifier="SECTION_2_total">
+        <defaultValue>
+            <value>0.0</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <outcomeDeclaration baseType="float" cardinality="single" identifier="SECTION_3_total">
+        <defaultValue>
+            <value>0.0</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <outcomeDeclaration baseType="float" cardinality="single" identifier="SECTION_4_total">
+        <defaultValue>
+            <value>0.0</value>
+        </defaultValue>
+    </outcomeDeclaration>
+
+    <!--￼Define feedback variables; each will contain the identifier of the feedbackInline element inside the testFeedback for the 
+        corresponding section, so that the "All correct" message only appears as appropriate.-->
+
+    <outcomeDeclaration baseType="identifier" cardinality="multiple" identifier="s1FB"/>
+
+    <!--￼The outcome variable TEST_FEEDBACK has multiple cardinality because it contains several feedback identifiers – two standard
+        messages and one for each section-->
+
+    <outcomeDeclaration baseType="identifier" cardinality="multiple" identifier="s2FB"/>
+    <outcomeDeclaration baseType="identifier" cardinality="multiple" identifier="s3FB"/>
+    <outcomeDeclaration baseType="identifier" cardinality="multiple" identifier="s4FB"/>
+
+    <outcomeDeclaration baseType="identifier" cardinality="multiple" identifier="TEST_FEEDBACK"/>
+    <testPart submissionMode="simultaneous" navigationMode="nonlinear" identifier="TP">
+        <assessmentSection identifier="S1" visible="true" title="Section 1">
+            <rubricBlock view="candidate">
+                <div>Basic feedback on MCQs</div>
+            </rubricBlock>
+            <assessmentItemRef identifier="id-fa3ee5852723"
+                href="id-fa3ee5852723/Example01-modalFeedback.xml"/>
+            <assessmentItemRef identifier="id-38d47747fb30"
+                href="id-38d47747fb30/Example02-feedbackInline.xml"/>
+        </assessmentSection>
+        <assessmentSection identifier="id-f08aa8260ccb" visible="true" title="Section 2">
+            <rubricBlock view="candidate">
+                <div>Solutions for maths questions - basic</div>
+            </rubricBlock>
+            <assessmentItemRef identifier="id-5e216df10030"
+                href="id-5e216df10030/Example03-feedbackBlock-solution.xml"/>
+            <assessmentItemRef identifier="id-aaa0bbf5da1d"
+                href="id-aaa0bbf5da1d/Example03-feedbackBlock-solution-random.xml"/>
+        </assessmentSection>
+        <assessmentSection identifier="id-c0ac060cd5d4" visible="true" title="Section 3">
+            <selection withReplacement="true" select="3"/>
+            <rubricBlock view="candidate">
+                <div>A question in which the solution content changes depending on randomly
+                    generated variables</div>
+            </rubricBlock>
+            <assessmentItemRef identifier="id-d599169403d2"
+                href="id-d599169403d2/Example04-feedbackBlock-templateBlock.xml"/>
+        </assessmentSection>
+        <assessmentSection identifier="id-4c75a5515d14" visible="true" title="Section 4">
+            <selection withReplacement="true" select="3"/>
+            <rubricBlock view="candidate">
+                <div>A question in which the second part looks different depending on which input
+                    method you choose in the first part</div>
+            </rubricBlock>
+            <assessmentItemRef identifier="id-9c33d141576e"
+                href="id-9c33d141576e/Example05-feedbackBlock-adaptive.xml"/>
+        </assessmentSection>
+    </testPart>
+    <outcomeProcessing>
+        <setOutcomeValue identifier="SECTION_1_total">
+            <sum>
+                <testVariables sectionIdentifier="S1" baseType="float" variableIdentifier="SCORE"/>
+            </sum>
+        </setOutcomeValue>
+        <outcomeCondition>
+            <outcomeIf>
+                <not>
+                    <lt>
+                        <variable identifier="SECTION_1_total"/>
+                        <baseValue baseType="float">20.0</baseValue>
+                    </lt>
+                </not>
+                <setOutcomeValue identifier="s1FB">
+                    <multiple>
+
+                        <!--￼If the score for a section is equal to the expected maximum for the section, then the feedback variable
+                            for the section contains the identifiers of both the "All OK" and "Not All OK" messages. The first of 
+                            these will appear because its showhide attribute is set to show; the second, visible by default, 
+                            disappears because its showHide attribute is set to hide.-->
+
+                        <baseValue baseType="identifier">S1-FB-AllOK</baseValue>
+                        <baseValue baseType="identifier">S1-FB-SomeNotOK</baseValue>
+                    </multiple>
+                </setOutcomeValue>
+            </outcomeIf>
+        </outcomeCondition>
+        <setOutcomeValue identifier="SECTION_2_total">
+            <sum>
+                <testVariables sectionIdentifier="id-f08aa8260ccb" baseType="float"
+                    variableIdentifier="SCORE"/>
+            </sum>
+        </setOutcomeValue>
+        <outcomeCondition>
+            <outcomeIf>
+                <not>
+                    <lt>
+                        <variable identifier="SECTION_2_total"/>
+                        <baseValue baseType="float">20.0</baseValue>
+                    </lt>
+                </not>
+                <setOutcomeValue identifier="s2FB">
+                    <multiple>
+                        <baseValue baseType="identifier">S2-FB-AllOK</baseValue>
+                        <baseValue baseType="identifier">S2-FB-SomeNotOK</baseValue>
+                    </multiple>
+                </setOutcomeValue>
+            </outcomeIf>
+        </outcomeCondition>
+        <setOutcomeValue identifier="SECTION_3_total">
+            <sum>
+                <testVariables sectionIdentifier="id-c0ac060cd5d4" baseType="float"
+                    variableIdentifier="SCORE"/>
+            </sum>
+        </setOutcomeValue>
+        <outcomeCondition>
+            <outcomeIf>
+                <not>
+                    <lt>
+                        <variable identifier="SECTION_3_total"/>
+                        <baseValue baseType="float">30.0</baseValue>
+                    </lt>
+                </not>
+                <setOutcomeValue identifier="s3FB">
+                    <multiple>
+                        <baseValue baseType="identifier">S3-FB-AllOK</baseValue>
+                        <baseValue baseType="identifier">S3-FB-SomeNotOK</baseValue>
+                    </multiple>
+                </setOutcomeValue>
+            </outcomeIf>
+        </outcomeCondition>
+        <setOutcomeValue identifier="SECTION_4_total">
+            <sum>
+                <testVariables sectionIdentifier="id-4c75a5515d14" baseType="float"
+                    variableIdentifier="SCORE"/>
+            </sum>
+        </setOutcomeValue>
+        <outcomeCondition>
+            <outcomeIf>
+                <not>
+                    <lt>
+                        <variable identifier="SECTION_4_total"/>
+                        <baseValue baseType="float">30.0</baseValue>
+                    </lt>
+                </not>
+                <setOutcomeValue identifier="s4FB">
+                    <multiple>
+                        <baseValue baseType="identifier">S4-FB-AllOK</baseValue>
+                        <baseValue baseType="identifier">S4-FB-SomeNotOK</baseValue>
+                    </multiple>
+                </setOutcomeValue>
+            </outcomeIf>
+        </outcomeCondition>
+        <setOutcomeValue identifier="TEST_total">
+            <sum>
+                <testVariables baseType="float" variableIdentifier="SCORE"/>
+            </sum>
+        </setOutcomeValue>
+
+        <!--￼The variable TEST_FEEDBACK contains all the testFeedback identifiers to be used-->
+
+        <setOutcomeValue identifier="TEST_FEEDBACK">
+            <multiple>
+                <baseValue baseType="identifier">TEST_FB1</baseValue>
+                <baseValue baseType="identifier">S1_END_FB</baseValue>
+                <baseValue baseType="identifier">S2_END_FB</baseValue>
+                <baseValue baseType="identifier">S3_END_FB</baseValue>
+                <baseValue baseType="identifier">S4_END_FB</baseValue>
+                <baseValue baseType="identifier">TEST_FB2</baseValue>
+            </multiple>
+        </setOutcomeValue>
+    </outcomeProcessing>
+    <testFeedback identifier="TEST_FB1" showHide="show" outcomeIdentifier="TEST_FEEDBACK"
+        access="atEnd">
+        <div>You have reached the end of the test.</div>
+    </testFeedback>
+    <testFeedback identifier="S1_END_FB" showHide="show" outcomeIdentifier="TEST_FEEDBACK"
+        access="atEnd">
+        <div>Section 1 score: <printedVariable format="%.1f" identifier="SECTION_1_total"/> (from a
+            maximum of 20.0).
+            
+            <!--￼If all the questions in a section are correct, the "All OK" message for that section appears, and the "Some not OK"
+                message disappears because the showHide attribute is set to hide.-->            
+            
+            <feedbackInline outcomeIdentifier="s1FB" identifier="S1-FB-AllOK"
+                showHide="show"> All the questions in section 1 were answered
+                correctly.</feedbackInline>
+            <feedbackInline outcomeIdentifier="s1FB" identifier="S1-FB-SomeNotOK" showHide="hide">
+                Some of the questions in section 1 were not answered correctly.</feedbackInline>
+        </div>
+    </testFeedback>
+    <testFeedback identifier="S2_END_FB" showHide="show" outcomeIdentifier="TEST_FEEDBACK"
+        access="atEnd">
+        <div>Section 2 score: <printedVariable format="%.1f" identifier="SECTION_2_total"/> (from a
+            maximum of 20.0) <feedbackInline outcomeIdentifier="s2FB" identifier="S2-FB-AllOK"
+                showHide="show"> All the questions in section 2 were answered
+                correctly.</feedbackInline>
+            <feedbackInline outcomeIdentifier="s2FB" identifier="S2-FB-SomeNotOK" showHide="hide">
+                Some of the questions in section 2 were not answered correctly.</feedbackInline>
+        </div>
+    </testFeedback>
+    <testFeedback identifier="S3_END_FB" showHide="show" outcomeIdentifier="TEST_FEEDBACK"
+        access="atEnd">
+        <div>Section 3 score: <printedVariable format="%.1f" identifier="SECTION_3_total"/> (from a
+            maximum of 30.0) <feedbackInline outcomeIdentifier="s3FB" identifier="S3-FB-AllOK"
+                showHide="show"> All the questions in section 3 were answered
+                correctly.</feedbackInline>
+            <feedbackInline outcomeIdentifier="s3FB" identifier="S3-FB-SomeNotOK" showHide="hide">
+                Some of the questions in section 3 were not answered correctly.</feedbackInline>
+        </div>
+    </testFeedback>
+    <testFeedback identifier="S4_END_FB" showHide="show" outcomeIdentifier="TEST_FEEDBACK"
+        access="atEnd">
+        <div>Section 4 score: <printedVariable format="%.1f" identifier="SECTION_4_total"/> (from a
+            maximum of 30.0) <feedbackInline outcomeIdentifier="s4FB" identifier="S4-FB-AllOK"
+                showHide="show"> All the questions in section 4 were answered
+                correctly.</feedbackInline>
+            <feedbackInline outcomeIdentifier="s4FB" identifier="S4-FB-SomeNotOK" showHide="hide">
+                Some of the questions in section 4 were not answered correctly.</feedbackInline>
+        </div>
+    </testFeedback>
+    <testFeedback identifier="TEST_FB" showHide="show" outcomeIdentifier="TEST_FEEDBACK"
+        access="atEnd">
+        <div>Total score: <printedVariable format="%.1f" identifier="TEST_total"/> (from a maximum
+            of 100.0)</div>
+    </testFeedback>
+</assessmentTest>

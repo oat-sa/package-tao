@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ui Test - Databinder </title>
+         <base href="../../../../" />
+        <link rel="stylesheet" type="text/css" href="js/lib/qunit/qunit.css">
+        <script type="text/javascript" src="js/lib/require.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit.js"></script>
+        <script  type="text/javascript">
+            
+            //don't start the test now
+            QUnit.config.autostart = false;
+            
+            //load the config
+            require(['/tao/ClientConfig/config'], function(){
+                
+                //load the test
+                require(['test/core/databinder/test'], function(){
+                    
+                    //Tests loaded, run tests
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+            
+            <div id="container-1">
+                <h1 data-bind="title"></h1>
+                <h2 data-bind="testParts.0.assessmentSections.0.sectionParts.1.href"></h2>
+            </div>
+            
+            <div id="container-2">
+                <ul data-bind-each="testParts.0.assessmentSections.0.sectionParts">
+                    <li data-bind="href"></li>
+                </ul>
+            </div>
+            
+            <div id="container-3">
+                <ul data-bind-each="testParts.0.assessmentSections.0.sectionParts">
+                    <li><span data-bind="href"></span></li>
+                </ul>
+            </div>
+            
+            <div id="container-4">
+                <ul data-bind-each="testParts.0.assessmentSections.0.sectionParts">
+                    <li><span data-bind="identifier" ></span><span data-bind="href"></span></li>
+                </ul>
+            </div>
+            
+            <div id="container-5">
+                <ul data-bind-each="testParts.0.assessmentSections.0.sectionParts" data-bind-filter="isItemRef">
+                    <li><span data-bind="identifier" ></span><span data-bind="href"></span></li>
+                </ul>
+            </div>
+            
+            <div id="container-6">
+                <input type="hidden" data-bind-rm="title" data-bind-encoder="boolean" value="true" />
+                <input type="hidden" data-bind-rm="testParts.0.assessmentSections.0.sectionParts.0" data-bind-encoder="boolean" value="true" />
+            </div>
+            
+        </div>
+    </body>
+</html>

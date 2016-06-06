@@ -1,0 +1,47 @@
+{
+  "name": "clearfw/clearfw",
+  "description": "ClearFw",
+  "authors": [
+    {
+      "name": "Open Assessment Technologies S.A.",
+      "homepage": "http://www.taotesting.com"
+    },
+    {
+      "name": "Jérôme Bogaerts",
+      "role": "Developer"
+    },
+    {
+      "name": "Joel Bout",
+      "role": "Developer"
+    },
+    {
+      "name": "Bertrand Chevrier",
+      "role": "Developer"
+    },
+    {
+      "name": "Lionel Lecaque",
+      "role": "Developer"
+    },
+    {
+      "name": "Alain Vagner",
+      "role": "Developer"
+    },
+    {
+      "name": "Luc Dehand",
+      "role": "Developer"
+    }
+  ],
+  "license": [
+    "GPL-2.0"
+  ],
+  "autoload": {
+    "classmap": [
+      "core/",
+      "core/helpers/",
+      "core/util"
+    ],
+    "files": [
+      "clearbricks/init.php"
+    ]
+  }
+}

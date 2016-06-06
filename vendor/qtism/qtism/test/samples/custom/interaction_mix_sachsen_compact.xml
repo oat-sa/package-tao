@@ -1,0 +1,1389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file was created using: Onyx Editor, Version 3.4.3 (Full, licensed version), (c)2012 BPS Bildungsportal Sachsen GmbH-->
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.taotesting.com/xsd/qticompact_v1p0.xsd"
+	identifier="InteractionMixSachsen_1901710679" title="Interaction Mix (Sachsen)">
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>0.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>18.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<testPart identifier="testpartID" navigationMode="nonlinear" submissionMode="individual">
+		<assessmentSection identifier="Sektion_181865064" fixed="false" title="Sektion" visible="false">
+			<assessmentItemRef identifier="Choicetruefalse_176040516" href="Choicetruefalse_176040516.xml" fixed="false" adaptive="false" timeDependent="false">
+				<responseDeclaration identifier="RESPONSE_27628688" cardinality="single" baseType="identifier">
+					<correctResponse>
+						<value>choice_1164834606</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>0.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>1.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+					<defaultValue>
+						<value>empty</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_10516488" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_10171297" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<responseProcessing>
+					<responseCondition>
+						<responseIf>
+							<isNull>
+								<variable identifier="RESPONSE_27628688" />
+							</isNull>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">empty</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+						<responseElseIf>
+							<match>
+								<variable identifier="RESPONSE_27628688" />
+								<correct identifier="RESPONSE_27628688" />
+							</match>
+							<setOutcomeValue identifier="SCORE">
+								<sum>
+									<variable identifier="SCORE" />
+									<variable identifier="MAXSCORE" />
+								</sum>
+							</setOutcomeValue>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">correct</baseValue>
+							</setOutcomeValue>
+						</responseElseIf>
+						<responseElse>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">incorrect</baseValue>
+							</setOutcomeValue>
+						</responseElse>
+					</responseCondition>
+					<setOutcomeValue identifier="FEEDBACK_10516488">
+						<and>
+							<match>
+								<baseValue baseType="identifier">correct</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_10171297">
+						<and>
+							<match>
+								<baseValue baseType="identifier">incorrect</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+				</responseProcessing>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Choicesingle_853928446" href="Choicesingle_853928446.xml" fixed="false" adaptive="false" timeDependent="false">
+				<responseDeclaration identifier="RESPONSE_30705996" cardinality="single" baseType="identifier">
+					<correctResponse>
+						<value>choice_685440446</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>0.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>1.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+					<defaultValue>
+						<value>empty</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_12552501" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_17794055" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_31451854" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_21527026" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_25663374" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<responseProcessing>
+					<responseCondition>
+						<responseIf>
+							<isNull>
+								<variable identifier="RESPONSE_30705996" />
+							</isNull>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">empty</baseValue>
+								</setOutcomeValue>
+						</responseIf>
+						<responseElseIf>
+							<match>
+								<variable identifier="RESPONSE_30705996" />
+								<correct identifier="RESPONSE_30705996" />
+							</match>
+							<setOutcomeValue identifier="SCORE">
+								<sum>
+									<variable identifier="SCORE" />
+									<variable identifier="MAXSCORE" />
+								</sum>
+							</setOutcomeValue>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">correct</baseValue>
+							</setOutcomeValue>
+						</responseElseIf>
+						<responseElse>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">incorrect</baseValue>
+							</setOutcomeValue>
+						</responseElse>
+					</responseCondition>
+					<setOutcomeValue identifier="FEEDBACK_12552501">
+						<and>
+							<match>
+								<baseValue baseType="identifier">correct</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_17794055">
+						<and>
+							<match>
+								<baseValue baseType="identifier">incorrect</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_31451854">
+						<and>
+							<match>
+								<baseValue baseType="identifier">choice_1542121788</baseValue>
+								<variable identifier="RESPONSE_30705996" />
+							</match>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_21527026">
+						<and>
+							<match>
+								<baseValue baseType="identifier">choice_313388598</baseValue>
+								<variable identifier="RESPONSE_30705996" />
+							</match>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_25663374">
+						<and>
+							<match>
+								<baseValue baseType="identifier">choice_2057964872</baseValue>
+								<variable identifier="RESPONSE_30705996" />
+							</match>
+						</and>
+					</setOutcomeValue>
+				</responseProcessing>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Choicemultiple_2014410822" href="Choicemultiple_2014410822.xml" fixed="false" adaptive="false" timeDependent="false">
+				<responseDeclaration identifier="RESPONSE_13390220" cardinality="multiple" baseType="identifier">
+					<correctResponse>
+						<value>choice_693643701</value>
+						<value>choice_853818748</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>0.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>1.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+					<defaultValue>
+						<value>empty</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_32452563" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_12539715" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<responseProcessing>
+					<responseCondition>
+						<responseIf>
+							<isNull>
+								<variable identifier="RESPONSE_13390220" />
+							</isNull>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">empty</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+						<responseElseIf>
+							<match>
+								<variable identifier="RESPONSE_13390220" />
+								<correct identifier="RESPONSE_13390220" />
+							</match>
+							<setOutcomeValue identifier="SCORE">
+								<sum>
+									<variable identifier="SCORE" />
+									<variable identifier="MAXSCORE" />
+								</sum>
+							</setOutcomeValue>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">correct</baseValue>
+							</setOutcomeValue>
+						</responseElseIf>
+						<responseElse>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">incorrect</baseValue>
+							</setOutcomeValue>
+						</responseElse>
+					</responseCondition>
+					<setOutcomeValue identifier="FEEDBACK_32452563">
+						<and>
+							<match>
+								<baseValue baseType="identifier">correct</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_12539715">
+						<and>
+							<match>
+								<baseValue baseType="identifier">incorrect</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+				</responseProcessing>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Choicemultiple_871212949" href="Choicemultiple_871212949.xml" fixed="false" adaptive="false" timeDependent="false">
+				<responseDeclaration identifier="RESPONSE_27966883" cardinality="multiple" baseType="identifier">
+					<correctResponse>
+						<value>choice_934383202</value>
+						<value>choice_2022864592</value>
+						<value>choice_1534527094</value>
+					</correctResponse>
+					<mapping defaultValue="0.0">
+						<mapEntry mapKey="choice_934383202" mappedValue="1.0" />
+						<mapEntry mapKey="choice_2022864592" mappedValue="1.0" />
+						<mapEntry mapKey="choice_1534527094" mappedValue="1.0" />
+						<mapEntry mapKey="choice_921260236" mappedValue="-1.0" />
+						<mapEntry mapKey="choice_1757121272" mappedValue="-2.0" />
+					</mapping>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>0.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>3.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+					<defaultValue>
+						<value>empty</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_5714028" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_8958131" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_1634627" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_20327592" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_5765523" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_15433735" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_21035203" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<responseProcessing>
+					<responseCondition>
+						<responseIf>
+							<not>
+								<isNull>
+									<variable identifier="RESPONSE_27966883" />
+								</isNull>
+							</not>
+							<setOutcomeValue identifier="SCORE">
+								<sum>
+									<variable identifier="SCORE" />
+									<mapResponse identifier="RESPONSE_27966883" />
+								</sum>
+							</setOutcomeValue>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">incorrect</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+					</responseCondition>
+					<responseCondition>
+						<responseIf>
+							<and>
+								<not>
+									<match>
+										<variable identifier="FEEDBACKBASIC" />
+										<baseValue baseType="identifier">empty</baseValue>
+									</match>
+								</not>
+								<equal toleranceMode="exact">
+									<variable identifier="SCORE" />
+									<variable identifier="MAXSCORE" />
+								</equal>
+							</and>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">correct</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+					</responseCondition>
+					<setOutcomeValue identifier="FEEDBACK_5714028">
+						<and>
+							<match>
+								<baseValue baseType="identifier">correct</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_8958131">
+						<and>
+							<match>
+								<baseValue baseType="identifier">incorrect</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_1634627">
+						<and>
+							<not>
+								<member>
+									<baseValue baseType="identifier">choice_2022864592</baseValue>
+									<variable identifier="RESPONSE_27966883" />
+								</member>
+							</not>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_20327592">
+						<and>
+							<not>
+								<member>
+									<baseValue baseType="identifier">choice_934383202</baseValue>
+									<variable identifier="RESPONSE_27966883" />
+								</member>
+							</not>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_5765523">
+						<and>
+							<not>
+								<member>
+									<baseValue baseType="identifier">choice_1534527094</baseValue>
+									<variable identifier="RESPONSE_27966883" />
+								</member>
+							</not>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_15433735">
+						<and>
+							<member>
+								<baseValue baseType="identifier">choice_921260236</baseValue>
+								<variable identifier="RESPONSE_27966883" />
+							</member>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_21035203">
+						<and>
+							<member>
+								<baseValue baseType="identifier">choice_1757121272</baseValue>
+								<variable identifier="RESPONSE_27966883" />
+							</member>
+						</and>
+					</setOutcomeValue>
+				</responseProcessing>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Hotspot_278940407" href="Hotspot_278940407.xml" fixed="false" adaptive="false" timeDependent="false" >
+				<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+					<correctResponse>
+						<value>Choice6</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>0.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>1.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+					<defaultValue>
+						<value>empty</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_25412685" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_29642729" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<responseProcessing>
+					<responseCondition>
+						<responseIf>
+							<isNull>
+								<variable identifier="RESPONSE" />
+							</isNull>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">empty</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+						<responseElseIf>
+							<match>
+								<variable identifier="RESPONSE" />
+								<correct identifier="RESPONSE" />
+							</match>
+							<setOutcomeValue identifier="SCORE">
+								<sum>
+									<variable identifier="SCORE" />
+									<variable identifier="MAXSCORE" />
+								</sum>
+							</setOutcomeValue>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">correct</baseValue>
+							</setOutcomeValue>
+						</responseElseIf>
+						<responseElse>
+						<setOutcomeValue identifier="FEEDBACKBASIC">
+							<baseValue baseType="identifier">incorrect</baseValue>
+						</setOutcomeValue>
+					</responseElse>
+				</responseCondition>
+				<setOutcomeValue identifier="FEEDBACK_25412685">
+					<and>
+						<match>
+							<baseValue baseType="identifier">correct</baseValue>
+							<variable identifier="FEEDBACKBASIC" />
+						</match>
+					</and>
+				</setOutcomeValue>
+				<setOutcomeValue identifier="FEEDBACK_29642729">
+					<and>
+						<match>
+							<baseValue baseType="identifier">incorrect</baseValue>
+							<variable identifier="FEEDBACKBASIC" />
+						</match>
+					</and>
+				</setOutcomeValue>
+			</responseProcessing>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Order_913967682" href="Order_913967682.xml" fixed="false" adaptive="false" timeDependent="false">
+				<responseDeclaration identifier="RESPONSE" cardinality="ordered" baseType="identifier">
+					<correctResponse>
+						<value>Choice0</value>
+						<value>Choice1</value>
+						<value>Choice2</value>
+						<value>Choice3</value>
+						<value>Choice4</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>0.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>1.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+					<defaultValue>
+						<value>empty</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_14455851" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_23266699" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<responseProcessing>
+					<responseCondition>
+						<responseIf>
+							<isNull>
+								<variable identifier="RESPONSE" />
+							</isNull>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">empty</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+						<responseElseIf>
+							<match>
+								<variable identifier="RESPONSE" />
+								<correct identifier="RESPONSE" />
+							</match>
+							<setOutcomeValue identifier="SCORE">
+								<sum>
+									<variable identifier="SCORE" />
+									<variable identifier="MAXSCORE" />
+								</sum>
+							</setOutcomeValue>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">correct</baseValue>
+							</setOutcomeValue>
+						</responseElseIf>
+					<responseElse>
+						<setOutcomeValue identifier="FEEDBACKBASIC">
+							<baseValue baseType="identifier">incorrect</baseValue>
+						</setOutcomeValue>
+					</responseElse>
+				</responseCondition>
+					<setOutcomeValue identifier="FEEDBACK_14455851">
+						<and>
+							<match>
+								<baseValue baseType="identifier">correct</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_23266699">
+						<and>
+							<match>
+								<baseValue baseType="identifier">incorrect</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+				</responseProcessing>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Matchsingle_143114773" href="Matchsingle_143114773.xml" fixed="false" adaptive="false" timeDependent="false">
+				<responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="directedPair">
+					<correctResponse>
+						<value>Match29886762 Match30518135</value>
+						<value>Match5256823 Match2607634</value>
+						<value>Match4430647 Match8604807</value>
+						<value>Match1403839 Match5570831</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>0.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>1.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+					<defaultValue>
+						<value>empty</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_26962107" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_18190857" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<responseProcessing>
+					<responseCondition>
+						<responseIf>
+							<isNull>
+								<variable identifier="RESPONSE" />
+							</isNull>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">empty</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+						<responseElseIf>
+							<match>
+								<variable identifier="RESPONSE" />
+								<correct identifier="RESPONSE" />
+							</match>
+							<setOutcomeValue identifier="SCORE">
+								<sum>
+									<variable identifier="SCORE" />
+									<variable identifier="MAXSCORE" />
+								</sum>
+							</setOutcomeValue>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">correct</baseValue>
+							</setOutcomeValue>
+						</responseElseIf>
+						<responseElse>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">incorrect</baseValue>
+							</setOutcomeValue>
+						</responseElse>
+					</responseCondition>
+					<setOutcomeValue identifier="FEEDBACK_26962107">
+						<and>
+							<match>
+								<baseValue baseType="identifier">correct</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_18190857">
+						<and>
+							<match>
+								<baseValue baseType="identifier">incorrect</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+				</responseProcessing>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Matchmultiple_1038910213" href="Matchmultiple_1038910213.xml" fixed="false" adaptive="false" timeDependent="false">
+				<responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="directedPair">
+					<correctResponse>
+						<value>Match15952430 Match12582080</value>
+						<value>Match21853614 Match7003951</value>
+						<value>Match6887188 Match7003951</value>
+						<value>Match16519624 Match17531354</value>
+						<value>Match23738841 Match6457581</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>0.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>1.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+					<defaultValue>
+						<value>empty</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_31052549" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_13697523" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<responseProcessing>
+					<responseCondition>
+						<responseIf>
+							<isNull>
+								<variable identifier="RESPONSE" />
+							</isNull>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">empty</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+						<responseElseIf>
+							<match>
+								<variable identifier="RESPONSE" />
+								<correct identifier="RESPONSE" />
+							</match>
+							<setOutcomeValue identifier="SCORE">
+								<sum>
+									<variable identifier="SCORE" />
+									<variable identifier="MAXSCORE" />
+								</sum>
+							</setOutcomeValue>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">correct</baseValue>
+							</setOutcomeValue>
+						</responseElseIf>
+						<responseElse>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">incorrect</baseValue>
+							</setOutcomeValue>
+						</responseElse>
+					</responseCondition>
+					<setOutcomeValue identifier="FEEDBACK_31052549">
+						<and>
+							<match>
+								<baseValue baseType="identifier">correct</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_13697523">
+						<and>
+							<match>
+								<baseValue baseType="identifier">incorrect</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+				</responseProcessing>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="TextEntry_883368511" href="TextEntry_883368511.xml" fixed="false" adaptive="false" timeDependent="false">
+				<responseDeclaration identifier="RESPONSE_1" cardinality="single" baseType="string">
+					<correctResponse>
+						<value>Fichtelberg</value>
+					</correctResponse>
+					<mapping defaultValue="0.0">
+						<mapEntry mapKey="Fichtelberg" mappedValue="1.0" caseSensitive="false" />
+					</mapping>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>0.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>1.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+					<defaultValue>
+						<value>empty</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_13836328" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_4493676" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<responseProcessing>
+					<responseCondition>
+						<responseIf>
+							<not>
+								<isNull>
+									<variable identifier="RESPONSE_1" />
+								</isNull>
+							</not>
+							<setOutcomeValue identifier="SCORE">
+								<sum>
+									<variable identifier="SCORE" />
+									<mapResponse identifier="RESPONSE_1" />
+								</sum>
+							</setOutcomeValue>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">incorrect</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+					</responseCondition>
+					<responseCondition>
+						<responseIf>
+							<and>
+								<not>
+									<match>
+										<variable identifier="FEEDBACKBASIC" />
+										<baseValue baseType="identifier">empty</baseValue>
+									</match>
+								</not>
+								<equal toleranceMode="exact">
+									<variable identifier="SCORE" />
+									<variable identifier="MAXSCORE" />
+								</equal>
+							</and>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">correct</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+					</responseCondition>
+					<setOutcomeValue identifier="FEEDBACK_13836328">
+						<and>
+							<match>
+								<baseValue baseType="identifier">correct</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_4493676">
+						<and>
+							<match>
+								<baseValue baseType="identifier">incorrect</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+				</responseProcessing>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="TextEntrynumeric_2040297025" href="TextEntrynumeric_2040297025.xml" fixed="false" adaptive="false" timeDependent="false">
+				<responseDeclaration identifier="RESPONSE_1" cardinality="single" baseType="float">
+					<correctResponse>
+						<value>4.0</value>
+					</correctResponse>
+				</responseDeclaration>
+				<responseDeclaration identifier="RESPONSE_2" cardinality="single" baseType="float">
+					<correctResponse>
+						<value>2.0</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>0.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>2.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+					<defaultValue>
+						<value>empty</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_1666978" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_9473961" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<responseProcessing>
+					<responseCondition>
+						<responseIf>
+							<equal toleranceMode="exact">
+								<variable identifier="RESPONSE_1" />
+								<correct identifier="RESPONSE_1" />
+							</equal>
+							<setOutcomeValue identifier="SCORE">
+								<sum>
+									<variable identifier="SCORE" />
+									<baseValue baseType="float">1.0</baseValue>
+								</sum>
+							</setOutcomeValue>
+						</responseIf>
+					</responseCondition>
+					<responseCondition>
+						<responseIf>
+							<not>
+								<isNull>
+									<variable identifier="RESPONSE_1" />
+								</isNull>
+							</not>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">incorrect</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+					</responseCondition>
+					<responseCondition>
+						<responseIf>
+							<equal toleranceMode="exact">
+								<variable identifier="RESPONSE_2" />
+								<correct identifier="RESPONSE_2" />
+							</equal>
+							<setOutcomeValue identifier="SCORE">
+								<sum>
+									<variable identifier="SCORE" />
+									<baseValue baseType="float">1.0</baseValue>
+								</sum>
+							</setOutcomeValue>
+						</responseIf>
+					</responseCondition>
+					<responseCondition>
+						<responseIf>
+							<not>
+								<isNull>
+									<variable identifier="RESPONSE_2" />
+								</isNull>
+							</not>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">incorrect</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+					</responseCondition>
+					<responseCondition>
+						<responseIf>
+							<and>
+								<not>
+									<match>
+										<variable identifier="FEEDBACKBASIC" />
+										<baseValue baseType="identifier">empty</baseValue>
+									</match>
+								</not>
+								<equal toleranceMode="exact">
+									<variable identifier="SCORE" />
+									<variable identifier="MAXSCORE" />
+								</equal>
+							</and>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">correct</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+					</responseCondition>
+					<setOutcomeValue identifier="FEEDBACK_1666978">
+						<and>
+							<match>
+								<baseValue baseType="identifier">correct</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_9473961">
+						<and>
+							<match>
+								<baseValue baseType="identifier">incorrect</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+				</responseProcessing>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="TextEntrynumeric_770468849" href="TextEntrynumeric_770468849.xml" fixed="false" adaptive="false" timeDependent="false">
+				<responseDeclaration identifier="RESPONSE_1" cardinality="single" baseType="float">
+					<correctResponse>
+						<value>4.136</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>0.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>1.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+					<defaultValue>
+						<value>empty</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_18920566" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_23396239" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<responseProcessing>
+					<responseCondition>
+						<responseIf>
+							<equal toleranceMode="relative" tolerance="5.0" includeLowerBound="true" includeUpperBound="true">
+								<variable identifier="RESPONSE_1" />
+								<correct identifier="RESPONSE_1" />
+							</equal>
+							<setOutcomeValue identifier="SCORE">
+								<sum>
+									<variable identifier="SCORE" />
+									<baseValue baseType="float">1.0</baseValue>
+								</sum>
+							</setOutcomeValue>
+						</responseIf>
+					</responseCondition>
+					<responseCondition>
+						<responseIf>
+							<not>
+								<isNull>
+									<variable identifier="RESPONSE_1" />
+								</isNull>
+							</not>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">incorrect</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+					</responseCondition>
+					<responseCondition>
+						<responseIf>
+							<and>
+								<not>
+									<match>
+										<variable identifier="FEEDBACKBASIC" />
+										<baseValue baseType="identifier">empty</baseValue>
+									</match>
+								</not>
+								<equal toleranceMode="exact">
+									<variable identifier="SCORE" />
+									<variable identifier="MAXSCORE" />
+								</equal>
+							</and>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">correct</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+					</responseCondition>
+					<setOutcomeValue identifier="FEEDBACK_18920566">
+						<and>
+							<match>
+								<baseValue baseType="identifier">correct</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_23396239">
+						<and>
+							<match>
+								<baseValue baseType="identifier">incorrect</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+				</responseProcessing>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="TextEntrysubset_806481421" href="TextEntrysubset_806481421.xml" fixed="false" adaptive="false" timeDependent="false">
+				<responseDeclaration identifier="RESPONSE_1" cardinality="single" baseType="string">
+					<mapping defaultValue="0.0">
+						<mapEntry mapKey="Dresden" mappedValue="1.0" caseSensitive="false" />
+						<mapEntry mapKey="Chemnitz" mappedValue="1.0" caseSensitive="false" />
+						<mapEntry mapKey="Leipzig" mappedValue="1.0" caseSensitive="false" />
+					</mapping>
+				</responseDeclaration>
+				<responseDeclaration identifier="RESPONSE_2" cardinality="single" baseType="string">
+					<mapping defaultValue="0.0">
+						<mapEntry mapKey="Dresden" mappedValue="1.0" caseSensitive="false" />
+						<mapEntry mapKey="Chemnitz" mappedValue="1.0" caseSensitive="false" />
+						<mapEntry mapKey="Leipzig" mappedValue="1.0" caseSensitive="false" />
+					</mapping>
+				</responseDeclaration>
+				<responseDeclaration identifier="RESPONSE_3" cardinality="single" baseType="string">
+					<mapping defaultValue="0.0">
+						<mapEntry mapKey="Dresden" mappedValue="1.0" caseSensitive="false" />
+						<mapEntry mapKey="Chemnitz" mappedValue="1.0" caseSensitive="false" />
+						<mapEntry mapKey="Leipzig" mappedValue="1.0" caseSensitive="false" />
+					</mapping>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>0.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>3.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+					<defaultValue>
+						<value>empty</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_10699829" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_235860" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<responseProcessing>
+					<responseCondition>
+						<responseIf>
+							<and>
+								<not>
+									<isNull>
+										<variable identifier="RESPONSE_3" />
+									</isNull>
+								</not>
+							</and>
+							<setOutcomeValue identifier="SCORE">
+								<sum>
+									<variable identifier="SCORE" />
+									<mapResponse identifier="RESPONSE_3" />
+								</sum>
+							</setOutcomeValue>
+						</responseIf>
+					</responseCondition>
+					<responseCondition>
+						<responseIf>
+							<not>
+								<isNull>
+									<variable identifier="RESPONSE_3" />
+								</isNull>
+							</not>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">incorrect</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+					</responseCondition>
+					<responseCondition>
+						<responseIf>
+							<and>
+								<not>
+									<isNull>
+										<variable identifier="RESPONSE_2" />
+									</isNull>
+								</not>
+								<not>
+									<stringMatch caseSensitive="false">
+										<variable identifier="RESPONSE_2" />
+										<variable identifier="RESPONSE_3" />
+									</stringMatch>
+								</not>
+							</and>
+							<setOutcomeValue identifier="SCORE">
+								<sum>
+									<variable identifier="SCORE" />
+									<mapResponse identifier="RESPONSE_2" />
+								</sum>
+							</setOutcomeValue>
+						</responseIf>
+					</responseCondition>
+					<responseCondition>
+						<responseIf>
+							<not>
+								<isNull>
+									<variable identifier="RESPONSE_2" />
+								</isNull>
+							</not>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">incorrect</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+					</responseCondition>
+					<responseCondition>
+						<responseIf>
+							<and>
+								<not>
+									<isNull>
+										<variable identifier="RESPONSE_1" />
+									</isNull>
+								</not>
+								<not>
+									<stringMatch caseSensitive="false">
+										<variable identifier="RESPONSE_1" />
+										<variable identifier="RESPONSE_3" />
+									</stringMatch>
+								</not>
+								<not>
+									<stringMatch caseSensitive="false">
+										<variable identifier="RESPONSE_1" />
+										<variable identifier="RESPONSE_2" />
+									</stringMatch>
+								</not>
+							</and>
+							<setOutcomeValue identifier="SCORE">
+								<sum>
+									<variable identifier="SCORE" />
+									<mapResponse identifier="RESPONSE_1" />
+								</sum>
+							</setOutcomeValue>
+						</responseIf>
+					</responseCondition>
+					<responseCondition>
+						<responseIf>
+							<not>
+								<isNull>
+									<variable identifier="RESPONSE_1" />
+								</isNull>
+							</not>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">incorrect</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+					</responseCondition>
+					<responseCondition>
+						<responseIf>
+							<and>
+								<not>
+									<match>
+										<variable identifier="FEEDBACKBASIC" />
+										<baseValue baseType="identifier">empty</baseValue>
+									</match>
+								</not>
+								<equal toleranceMode="exact">
+									<variable identifier="SCORE" />
+									<variable identifier="MAXSCORE" />
+								</equal>
+							</and>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">correct</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+					</responseCondition>
+					<setOutcomeValue identifier="FEEDBACK_10699829">
+						<and>
+							<match>
+								<baseValue baseType="identifier">correct</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_235860">
+						<and>
+							<match>
+								<baseValue baseType="identifier">incorrect</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+				</responseProcessing>
+			</assessmentItemRef>
+			<assessmentItemRef identifier="Hottext_801974120" href="Hottext_801974120.xml" fixed="false" adaptive="false" timeDependent="false">
+				<responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="identifier">
+					<correctResponse>
+						<value>Choice1</value>
+						<value>Choice3</value>
+						<value>Choice8</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>0.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>1.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+					<defaultValue>
+						<value>empty</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_31186754" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<outcomeDeclaration identifier="FEEDBACK_17440045" cardinality="single" baseType="boolean" view="testConstructor">
+					<defaultValue>
+						<value>false</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<responseProcessing>
+					<responseCondition>
+						<responseIf>
+							<isNull>
+								<variable identifier="RESPONSE" />
+							</isNull>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">empty</baseValue>
+							</setOutcomeValue>
+						</responseIf>
+						<responseElseIf>
+							<match>
+								<variable identifier="RESPONSE" />
+								<correct identifier="RESPONSE" />
+							</match>
+							<setOutcomeValue identifier="SCORE">
+								<sum>
+									<variable identifier="SCORE" />
+									<variable identifier="MAXSCORE" />
+								</sum>
+							</setOutcomeValue>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">correct</baseValue>
+							</setOutcomeValue>
+						</responseElseIf>
+						<responseElse>
+							<setOutcomeValue identifier="FEEDBACKBASIC">
+								<baseValue baseType="identifier">incorrect</baseValue>
+							</setOutcomeValue>
+						</responseElse>
+					</responseCondition>
+					<setOutcomeValue identifier="FEEDBACK_31186754">
+						<and>
+							<match>
+								<baseValue baseType="identifier">correct</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+					<setOutcomeValue identifier="FEEDBACK_17440045">
+						<and>
+							<match>
+								<baseValue baseType="identifier">incorrect</baseValue>
+								<variable identifier="FEEDBACKBASIC" />
+							</match>
+						</and>
+					</setOutcomeValue>
+				</responseProcessing>
+			</assessmentItemRef>
+		</assessmentSection>
+	</testPart>
+	<outcomeProcessing>
+		<setOutcomeValue identifier="SCORE">
+			<sum>
+				<testVariables variableIdentifier="SCORE"/>
+			</sum>
+		</setOutcomeValue>
+	</outcomeProcessing>
+</assessmentTest>

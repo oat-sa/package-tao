@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../doc/structures.dtd">
+<structures>
+    <structure id="items" name="Items" level="0" group="main">
+        <sections>
+            <section id="manage_items" name="Manage items" url="">
+				<actions>
+					<action id="item-revision" name="History" url="/taoRevision/History/index" context="instance" group="content">
+					    <icon id="icon-repository"/>
+					</action>
+				</actions>
+			</section>
+		</sections>
+	</structure>
+    <structure id="tests" name="Tests" level="1" group="main">
+        <sections>
+            <section id="manage_tests" name="Manage tests" url="/taoTests/Tests/index">
+                <actions>
+					<action id="test-revision" name="History" url="/taoRevision/History/index" context="instance" group="content">
+					    <icon id="icon-repository"/>
+					</action>
+				</actions>
+            </section>
+        </sections>
+    </structure>
+    <structure id='taoMediaManager' name="Media" level="7" group="main">
+        <sections>
+            <section id="media_manager" name="Manage Media" url="/taoMediaManager/MediaManager/index">
+                <actions>
+					<action id="test-revision" name="History" url="/taoRevision/History/index" context="instance" group="content">
+					    <icon id="icon-repository"/>
+					</action>
+				</actions>
+            </section>
+        </sections>
+    </structure>
+</structures>

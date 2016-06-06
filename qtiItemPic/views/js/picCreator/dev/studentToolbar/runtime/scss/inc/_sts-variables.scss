@@ -1,0 +1,32 @@
+//fonts
+$stsMonospaceFont: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+$stsRegularFont: 'Franklin Gothic', 'Franklin Gothic Medium', 'Source Sans Pro', sans-serif;
+$stsHeadingFont: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+
+// colors
+$stsSuccess: rgb(14, 145, 75);
+$stsInfo: rgb(14, 93, 145);
+$stsError: rgb(186, 18, 43);
+$stsWarning: rgb(216, 174, 91);
+
+$stsGrey: rgb(173, 161, 148);
+
+$stsCanvas: mix(#fff, $stsGrey, 80%);
+
+$stsTransparentTool: rgba(231, 230, 227, .75);
+
+$stsBorderColor: #666;
+$stsTextColor: #333;
+$stsTextHighlight: white;
+
+$stsTitleBar: $stsInfo;
+
+%clearfix {
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}

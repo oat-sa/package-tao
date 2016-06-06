@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xml:base="http://www.tao.lu/Ontologies/TAODelivery.rdf#" 
+	xmlns:delivery="http://www.tao.lu/Ontologies/TAODelivery.rdf#" 
+	xmlns:wf="http://www.tao.lu/middleware/wfEngine.rdf#" 
+	xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#" 
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#"
+	xmlns:tao="http://www.tao.lu/Ontologies/TAO.rdf#"
+>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#Delivery">
+    <rdfs:label xml:lang="en-US"><![CDATA[Delivery]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Delivery]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#TAOObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#PeriodStart">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Start Date]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The start date of the delivery]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#Delivery"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#Calendar"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <tao:TAOGUIOrder><![CDATA[20]]></tao:TAOGUIOrder>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#PeriodEnd">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[End Date]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The end date of the delivery]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#Delivery"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#Calendar"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <tao:TAOGUIOrder><![CDATA[30]]></tao:TAOGUIOrder>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#Maxexec">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Max. number of executions (default: unlimited)]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Maximum Times of Execution per subject]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#Delivery"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <tao:TAOGUIOrder><![CDATA[10]]></tao:TAOGUIOrder>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#AccessSettings">
+      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+      <rdfs:label xml:lang="en-US"><![CDATA[Access]]></rdfs:label>
+      <rdfs:comment xml:lang="en-US"><![CDATA[Access]]></rdfs:comment>
+      <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#Delivery"/>
+      <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#AccessModel"/>
+      <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#CheckBox"/>
+      <tao:TAOGUIOrder><![CDATA[50]]></tao:TAOGUIOrder>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#DisplayOrder">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Display Order]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[A weight determining in which order to display the available deliveries to Test Takers. The deliveries will be displayed in ascending order, depending on the integer value of this property.]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#Delivery"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <tao:TAOGUIOrder><![CDATA[45]]></tao:TAOGUIOrder>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#ExcludedSubjects">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Excluded Subjects]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Excluded Subjects]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#Delivery"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject"/>
+    <generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryResultServer">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Result Server]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Result Server]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#Delivery"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAOResultServer.rdf#ResultServer"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ComboBox"/>
+    <tao:TAOGUIOrder><![CDATA[40]]></tao:TAOGUIOrder>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecution">
+    <rdfs:label xml:lang="en-US"><![CDATA[Delivery execution]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Execution of a delivery]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#SystemObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionDelivery">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Execution's delivery]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Delivery of this execution]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecution"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDelivery"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionSubject">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[DeliveryExecution Subject]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[test-taker of the delivery execution]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecution"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStart">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[DeliveryExecution start]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Timestamp of the delivery execution start]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionEnd">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[DeliveryExecution end]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Timestamp of the delivery finish]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecution"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#StatusOfDeliveryExecution">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[DeliveryExecutions Status]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The current status of the DeliveryExecution]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecution"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatus"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatus">
+    <rdfs:label xml:lang="en-US"><![CDATA[DeliveryExecution status]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Status of a delivery execution]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#SystemObject"/>
+  </rdf:Description>    
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusActive">
+    <rdfs:label xml:lang="en-US"><![CDATA[Active]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Activ status of a delivery execution]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatus"/>
+  </rdf:Description>    
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusFinished">
+    <rdfs:label xml:lang="en-US"><![CDATA[Finished]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Finished status of a delivery execution]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatus"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatusAbandoned">
+    <rdfs:label xml:lang="en-US"><![CDATA[Finished]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Abandoned status of a delivery execution]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryExecutionStatus"/>
+  </rdf:Description>     
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDelivery">
+    <rdfs:label xml:lang="en-US"><![CDATA[Assembled Delivery ]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[An assembled Delivery]]></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#Delivery"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDeliveryCompilationTime">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Compilation Time]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The time of the compilation of the delivery]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDelivery"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDeliveryCompilationDirectory">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Compilation Directory]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The directory of the compilation of the delivery]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDelivery"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    <generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDeliveryOrigin">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Delivery origin]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The original test/template of the delivery]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDelivery"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#TAOObject"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDeliveryRuntime">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Runtime]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Service call to run the compiled delivery]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDelivery"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassCallOfservicesResources"/>
+    <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOGroup.rdf#Deliveries">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Deliveries]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Deliveries of the group]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAOGroup.rdf#Group"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#AssembledDelivery"/>
+    <generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True" />
+    <tao:TAOGUIOrder><![CDATA[20]]></tao:TAOGUIOrder>
+  </rdf:Description>
+    
+  <!-- Management Role -->
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#DeliveryManagerRole">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#ManagementRole"/>
+  	<generis:includesRole rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#BackOfficeRole"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Delivery Manager]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The Delivery Manager Role]]></rdfs:comment>
+  </rdf:Description>
+
+  <!-- test -->
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#AccessModel">
+  	<rdfs:label xml:lang="en-US"><![CDATA[Guest Access]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[Guest Access]]></rdfs:comment>
+  	<rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#SystemObject"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#GuestAccess">
+  	<rdfs:label xml:lang="en-US"><![CDATA[Guest Access]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[Guest Access]]></rdfs:comment>
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAODelivery.rdf#AccessModel"/>
+   </rdf:Description>
+  
+</rdf:RDF>

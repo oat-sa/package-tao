@@ -1,0 +1,134 @@
+@import "inc/bootstrap";
+
+.widget-box.widget-inlineChoiceInteraction{
+    display:none;
+    background: rgba($uiClickableDefaultBg, .9);
+    .tlb-wrapper{
+        top : -26px;
+    }
+}
+
+.inlineChoiceInteraction-placeholder {
+    @include simple-border();
+    display:inline-block;
+    width: 150px;
+    line-height: 24px;
+    position: relative;
+    padding: 0;
+    margin-right: 1px;
+    cursor: pointer;
+    label{
+        padding:0 10px;
+        margin:0;
+    }
+    .icon-down {
+        position: absolute;
+        @include font-size(11);
+        right: 6px;
+        top: 6px;
+    }
+    &.hover{
+        @extend %editHover;
+    }
+}
+
+
+.qti-inlineChoiceInteraction {
+    
+    [data-edit]{
+        display:none;
+    }
+    
+    padding: 20px 10px 5px 30px;
+    
+    table {
+        border-collapse: separate;
+    }
+    
+    tr {
+        height: 27px;
+        white-space: nowrap;
+    }
+    
+    .icon-bin, .icon-pin, .icon-shuffle {
+        text-align:center;
+        padding: 0 5px;
+        cursor: pointer;
+        vertical-align: middle;
+    }
+    
+    .icon-bin:hover, .icon-pin:hover, .icon-shuffle:hover {
+        color: $uiClickableHoverBg;
+    }
+    
+    .icon-down {
+        text-align:center;
+        position: absolute;
+        right: -18px;
+        font-size: 11px;
+        width:20px;
+        height:20px;
+        padding-top: 3px;
+        cursor:default;
+    }
+    
+    td.option, .main-option {
+        padding: 0 18px 0 10px;
+        border-left: 1px $uiGeneralContentBorder solid;
+        border-right: 1px $uiGeneralContentBorder solid;
+        background:white;
+        &:last{
+            border-bottom: 1px $uiGeneralContentBorder solid;
+        }
+    }
+    
+    .main-option {
+        border-top: 1px $uiGeneralContentBorder solid;
+        border-bottom: 1px $uiGeneralContentBorder solid;
+        min-width: 150px;
+        &>div {
+            padding: 0;
+            position: relative;
+        }
+    }
+    
+    td.icon-title{
+        font-size:12px;
+        color:$info;
+        padding: 0 5px;
+    }
+    
+    td[contenteditable]{
+        &:hover{
+            @extend %editHover;
+        }
+        &:focus{
+            @extend %editActive;
+        }
+        cursor:text !important;
+    }
+    
+    .widget-inlineChoice .mini-tlb{
+        text-align: center;
+        input{
+            width:30px;
+        }
+        .icon-radio{
+            left:6px;
+        }
+    }
+    
+    .add-option{
+        .icon-add{
+            width:auto;
+            left:3px;
+            top:1px;
+        }
+    }
+    
+}
+
+.widget-response .qti-inlineChoiceInteraction{
+    padding:0;
+    margin-bottom:10px;
+}

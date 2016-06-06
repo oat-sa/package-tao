@@ -1,0 +1,26 @@
+@import "inc/sts-bootstrap";
+
+.sts-scope {
+    .sts-container.sts-studentToolbar-container {
+        margin: -36px -16px 15px -16px;
+        display: block;
+        position: relative;
+        z-index: 100002;
+        top: 0px;
+        -ms-transform: translate(0px,0px);
+        -webkit-transform: translate(0px,0px);
+        transform: translate(0px, 0px);
+        .sts-content {
+            min-height: 36px;
+            .sts-toolcontainer {
+                display: block;
+            }
+        }
+    }
+}
+
+.runtime.qti-item {
+    .sts-container.sts-studentToolbar-container {
+        margin-top: -15px;
+    }
+}

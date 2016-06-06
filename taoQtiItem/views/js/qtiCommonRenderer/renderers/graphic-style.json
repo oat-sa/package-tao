@@ -1,0 +1,156 @@
+{    
+    "basic" : {
+        "stroke" : "#8D949E",
+        "stroke-width" : 2,
+        "stroke-dasharray": "",
+        "stroke-linejoin" : "round",
+        "fill" : "#cccccc",
+        "fill-opacity" : 0.5,
+        "cursor" : "pointer"
+    },
+    "hover"  : {
+        "stroke" : "#3E7DA7",
+        "fill" :  "#0E5D91", 
+        "fill-opacity" : 0.3
+    },
+    "selectable"  : {
+        "stroke-dasharray": "-",
+        "stroke" : "#3E7DA7",
+        "fill" : "#cccccc",
+        "fill-opacity" : 0.5
+    },
+    "active" : {
+        "stroke" : "#3E7DA7",
+        "stroke-dasharray": "",
+        "fill" :  "#0E5D91",
+        "fill-opacity" : 0.5
+    },
+    "error" : {
+        "stroke" : "#C74155",
+        "stroke-dasharray": "",
+        "fill-opacity" : 0.5,
+        "fill" :  "#661728"  
+    },
+    "success" : {
+        "stroke" : "#C74155",
+        "stroke-dasharray": "",
+        "fill" :  "#0E914B",
+        "fill-opacity" : 0.5
+    },
+    "layer" : {
+        "fill" :  "#ffffff", 
+        "opacity" : 0, 
+        "cursor": "pointer"
+    },
+    "creator" : {
+        "fill-opacity" : 0.5,
+        "stroke" : "#3E7DA7",
+        "stroke-dasharray": "",
+        "fill" :  "#0E5D91", 
+        "cursor" : "pointer"
+    },
+    "imageset-rect-stroke" : {
+            "fill" : "#ffffff",
+            "stroke" : "#666666",
+            "stroke-width" : 1,
+            "stroke-linejoin" : "round",
+            "cursor" : "pointer"
+    },
+    "imageset-rect-no-stroke" : {
+            "fill" : "#ffffff",
+            "stroke" : "#ffffff",
+            "stroke-width" : 2,
+            "stroke-linejoin" : "round",
+            "cursor" : "pointer"
+    },
+    "imageset-img" : {
+        "cursor" : "pointer"
+    },
+    "order-text" : {
+        "fill" : "#ffffff",
+        "stroke": "#000000",
+        "stroke-width" : 0.7,
+        "font-family" : "sans-serif",
+        "font-weight": "bold", 
+        "font-size" : 22,
+        "cursor" : "pointer"
+    },
+    "score-text-default" : {
+        "stroke": "#444444",
+        "stroke-width" : 0.5,
+        "font-family" : "sans-serif",
+        "font-weight": "normal", 
+        "font-size" : 20,
+        "cursor" : "pointer"
+    },
+    "score-text" : {
+        "stroke": "#000000",
+        "stroke-width" : 0.5,
+        "font-family" : "sans-serif",
+        "font-weight": "normal", 
+        "font-size" : 20,
+        "cursor" : "pointer"
+    },
+    "small-text" : {
+        "stroke": "#000000",
+        "stroke-width" : 0.5,
+        "font-family" : "sans-serif",
+        "font-weight": "normal", 
+        "font-size" : 16,
+        "cursor" : "pointer"
+    },
+    "layer-pos-text" : {
+        "stroke": "#333",
+        "stroke-width" : 0.5,
+        "font-family" : "sans-serif",
+        "font-weight": "normal", 
+        "font-size" : 14
+    },
+    "target" : {
+        "path" : "m 18,8.4143672 -1.882582,0 C 15.801891,4.9747852 13.071059,2.2344961 9.63508,1.9026738 L 9.63508,0 8.2305176,0 l 0,1.9026387 C 4.7947148,2.2343027 2.0637246,4.9746621 1.7481973,8.4143672 l -1.7481973,0 0,1.4045625 1.754877,0 c 0.3460429,3.4066753 3.0632871,6.1119843 6.4756406,6.4413813 l 0,1.739689 1.4045624,0 0,-1.739725 c 3.412547,-0.329537 6.129633,-3.034793 6.475641,-6.4413453 l 1.889279,0 z m -8.36492,6.5188648 0,-4.064673 -1.4045624,0 0,4.063882 C 5.5511016,14.612555 3.4232695,12.494619 3.0864551,9.8189297 l 4.0449512,0 0,-1.4045625 -4.0546368,0 C 3.3788672,5.6984941 5.5228887,3.5393379 8.2305176,3.2161113 l 0,3.9153125 1.4045624,0 0,-3.9160859 c 2.711162,0.3203965 4.858576,2.4808887 5.160955,5.1990293 l -3.927441,0 0,1.4045625 3.917773,0 C 14.449289,12.496957 12.318363,14.616158 9.63508,14.933232 z",
+        "fill" : "#0E914B",
+        "width" : 1,
+        "stroke-width" : 0,
+        "cursor" : "pointer"
+    },
+    "target-hover" : {
+        "fill" : "#3E7DA7", 
+        "fill-opacity" : 1
+    },
+    "target-success" : {
+        "fill" : "#0E914B", 
+        "fill-opacity" : 1
+   },
+   "assoc" : {
+        "stroke-width" : 2, 
+        "stroke-linecap" : "round", 
+        "cursor" : "pointer"
+   },
+   "assoc-layer" : {
+        "stroke-width" : 12, 
+        "cursor" : "pointer", 
+        "stroke-opacity" : 0
+   },
+   "assoc-bullet" : {
+        "fill": "#000000"
+   },
+    "close" : {
+        "path" : "m 8.9997236,18.000001 c -4.9703918,0 -8.99972284217367,-4.02901 -8.99972284217367,-9 C 7.5782633e-7,4.029011 4.0293108,9.8531742e-7 8.9997236,9.8531742e-7 13.970691,9.8531742e-7 18.000001,4.029011 18.000001,9.000001 c 0,4.97099 -4.02931,9 -9.0002774,9 z m 0.0045,-16.37151 c -4.06191,0 -7.35492,3.29635 -7.35492,7.36251 0,4.06562 3.292989,7.36255 7.35492,7.36255 4.0630384,0 7.3554334,-3.29693 7.3554334,-7.36255 0,-4.06614 -3.292969,-7.36251 -7.3554334,-7.36251 v 0 z m 3.1314894,9.31167 -1.953823,-1.94014 1.953843,-1.94018 c 0.08964,-0.089 0.134622,-0.19099 0.135073,-0.30584 4.31e-4,-0.11488 -0.04383,-0.21712 -0.132838,-0.30681 l -0.54267,-0.54685 c -0.08898,-0.0897 -0.190903,-0.13473 -0.305719,-0.13514 -0.114837,-4.4e-4 -0.217064,0.0439 -0.306703,0.1329 l -1.9623724,1.94865 -1.962395,-1.94865 c -0.08964,-0.089 -0.191845,-0.13336 -0.306702,-0.1329 -0.114837,4.3e-4 -0.216736,0.0455 -0.305719,0.13514 l -0.54265,0.54685 c -0.08902,0.0897 -0.133269,0.19193 -0.132838,0.30681 4.3e-4,0.11485 0.04543,0.21681 0.135073,0.30584 l 1.953823,1.94018 -1.953782,1.94014 c -0.0896,0.089 -0.134684,0.19094 -0.135114,0.3058 -4.31e-4,0.11486 0.04386,0.21716 0.132838,0.30681 l 0.542671,0.54687 c 0.08896,0.0897 0.190923,0.13467 0.305718,0.13516 0.114857,3.9e-4 0.217105,-0.0439 0.306724,-0.13288 l 1.962332,-1.94863 1.9623324,1.94863 c 0.08962,0.089 0.191886,0.13323 0.306744,0.13288 0.114836,-4.5e-4 0.216736,-0.0455 0.305698,-0.13516 l 0.542691,-0.54687 c 0.089,-0.0897 0.133227,-0.19193 0.132838,-0.30681 -3.9e-4,-0.1149 -0.0455,-0.21683 -0.135073,-0.3058 z",
+        "fill" : "#0E5D91",
+        "width" : 1,
+        "opacity" : 0,
+        "stroke-width" : 0,
+        "cursor" : "pointer"
+   },
+   "close-bg" : {
+        "fill" : "#ffffff",
+        "stroke" : "none",
+        "cursor" : "pointer",
+        "opacity" : 0  
+    },
+    "touch-circle" : {
+        "fill" : "none", 
+        "stroke" : "#3E7DA7",
+        "stroke-width" : 2
+    }
+}

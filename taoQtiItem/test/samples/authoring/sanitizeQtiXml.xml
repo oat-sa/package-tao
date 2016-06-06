@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem 
+    xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:m="http://www.w3.org/1998/Math/MathML" 
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" 
+    identifier="i14295683603462526" 
+    title="Item title" 
+    adaptive="false" 
+    timeDependent="false" 
+    label="" 
+    xml:lang="en-US" 
+    toolName="TAO" 
+    toolVersion="3.0.0">
+  <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="identifier">
+    <correctResponse>
+      <value><![CDATA[B-sIsyD]]></value>
+    </correctResponse>
+  </responseDeclaration>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <stylesheet href="style/custom/tao-user-styles.css" type="text/css" media="all" title=""/>
+  <itemBody>
+    <div class="grid-row">
+      <div class="col-7">
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="col-6">
+        <p class="txt-ctr">Lorem Ipsum <em>dolor sit ame </em></p>
+        <p class="txt-ctr"><em style="line-height: 1.4;">consectetur </em>adipiscing</p>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="col-7">
+        <p>Suspendisse varius purus in mauris elementum, id sagittis metus bibendum. Fusce a rutrum orci, a facilisis quam. Proin ac erat ultrices, tempor neque sed, pulvinar dui. Maecenas semper maximus pretium. Nulla condimentum nisl justo, vitae imperdiet neque ullamcorper nec.</p>
+      </div>
+      <div class="col-5">
+        <choiceInteraction responseIdentifier="RESPONSE" shuffle="false" maxChoices="0" minChoices="0" orientation="vertical">
+          <prompt>Aenean consequat <strong>tleo purus</strong>, quis finibus dui ornare vitae.</prompt>
+          <simpleChoice identifier="A-LdesL" fixed="false" showHide="show"> Cras mauris justo, mollis eget</simpleChoice>
+          <simpleChoice identifier="B-sIsyD" fixed="false" showHide="show"> nisi eget, eleifend iaculis</simpleChoice>
+          <simpleChoice identifier="C-YldDB" fixed="false" showHide="show"> isi. Maecenas in ornare ante</simpleChoice>
+          <simpleChoice identifier="D-vN5S0" fixed="false" showHide="show">Quisque dignissim ultrices nisi,</simpleChoice>
+        </choiceInteraction>
+      </div>
+    </div>
+  </itemBody>
+  <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+</assessmentItem>

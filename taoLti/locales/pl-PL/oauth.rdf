@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAO.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#OauthCredentals">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Oauth Credentials
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#OauthCredentals
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[Oauth Credentials]]></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#OauthKey">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source OauthCredentials Key
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#OauthKey
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[OauthCredentials Key]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source identifier of OauthCredentials
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#OauthKey
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[identifier of OauthCredentials]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#OauthSecret">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source OauthCredentials Secret
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#OauthSecret
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="pl-PL"><![CDATA[OauthCredentials Secret]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage pl-PL
+    @source Secret used for signatures
+    @subject http://www.tao.lu/Ontologies/TAO.rdf#OauthSecret
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="pl-PL"><![CDATA[Secret used for signatures]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

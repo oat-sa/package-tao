@@ -1,0 +1,90 @@
+@import "inc/bootstrap";
+
+#modalFeedbacks{
+    color: $textColor !important;
+    background: white !important;
+    .mini-tlb {
+        @extend %mini-tlb;
+        top:-2px;
+        right:-2px;
+    }
+    .modal-body{
+        position:relative;
+        .cke_editable{
+            margin-right:30px;
+        }
+    }
+    .widget-ok{
+        margin: 30px 0px 0px;
+        display:none;
+    }
+    .widget-inline{
+        display:inline-block;
+        &.hover{
+            @extend %editHover;
+        }
+        &.edit-active{
+            @extend %editActive;
+        }
+    }
+}
+
+.feedbackRules{
+    .feedbackRule-container{
+        select {
+            width: 190px
+        }
+        position:relative;
+        margin: 5px 0;
+        padding:8px;
+        @include simple-border();
+        background-color:white(.8);
+        max-width:500px;
+        .feedbackRule-condition{
+            width:86px !important;
+            min-width:86px !important;
+        }
+        .feedbackRule-desc {
+            margin-bottom:5px;
+            width: 35px;
+            display:inline-block;
+        }
+        .feedbackRule-then-else{
+            position:relative;
+            margin-top: 5px;
+            .feedbackRule-button-delete{
+                top:5px;
+                right:2px;
+            }
+        }
+        .feedbackRule-button-delete{
+            position:absolute;
+            top:12px;
+            right:10px;
+            cursor:pointer;
+            @include font-size(13);
+            &:hover{
+                color: $uiClickableHoverBg;
+            }
+        }
+        .feedbackRule-compared-value{
+            min-width:35px;
+            width:35px;
+        }
+    }
+    .feedbackRule-add,
+    .feedbackRule-add-else {
+        display: block;
+        margin-top:5px;
+    }
+
+    .choices-selector {
+        margin: 4px 0;
+        @include font-size(13);
+        input {
+            font-size: inherit;
+            width: 100% !important;
+            max-width: unset;
+        }
+    }
+}

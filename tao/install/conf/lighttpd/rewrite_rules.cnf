@@ -1,0 +1,34 @@
+$HTTP["referer"] !~ "(^|\.)tao\.local" {
+  url.rewrite = ( 
+    # TAO EXTENSION
+     "^/tao/([^(views/)|(test/)|(doc/)|(install/)|(update/)|(locales/)]{1})([^\?]+)([?]?(.*))" => "/tao/index.php$3"
+    
+    # TAO DELIVERY
+    , "^/taoDelivery/([^(views/)|(test/)|(models/ext/)|(compiled/)|(locales/)]{1})([^\?]+)([?]?(.*))" => "/taoDelivery/index.php$3"
+
+    # TAO GROUPS
+    , "^/taoGroups/([^(views/)|(test/)|(locales/)]{1})([^\?]+)([?]?(.*))" => "/taoGroups/index.php$3"
+
+    # TAO ITEMS
+    , "^/taoItems/([^(views/)|(test/)|(models\/ext\/)|(locales/)]{1})([^\?]+)([?]?(.*))" => "/taoItems/index.php$3"
+    
+    # TAO RESULTS
+    , "^/taoResults/([^(views/)|(test)|(models\/ext\/)|(models\/classes\/)]{1})([^\?]+)([?]?(.*))" => "/taoResults/index.php$3"
+
+    # TAO SUBJECTS
+    , "^/taoTestTaker/([^(views/)|(test/)|(locales/)]{1})([^\?]+)([?]?(.*))" => "/taoSubjects/index.php$3"
+
+    # TAO TESTS
+    , "^/taoTests/([^(views/)|(test/)|(locales/)]{1})([^\?]+)([?]?(.*))" => "/taoTests/index.php$3"
+
+    # TAO WFENGINE
+    , "^/wfEngine/([^(views/)|(test/)|(scripts/)]{1})([^\?]+)([?]?(.*))" => "/wfEngine/index.php$3"
+
+    # TAO GENERIS
+    , "^/generis/([^(views/)|(test/)|(doc/)|(install/)|(locales/)|(core\/view\/)|(includes\/dhtmlxMenu\/)|(includes\/)]{1})([^\?]+)([?]?(.*))" => "/generis/index.php$3"    
+
+    # FILEMANAGER
+    , "^/filemanager/([^(views/)|(test/)|(doc/)|(install/)|(locales/)]{1})([^\?]+)([?]?(.*))" => "/filemanager/index.php$3"
+
+  )
+}

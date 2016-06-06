@@ -1,0 +1,468 @@
+{
+    "identifier": "RC123413",
+    "serial": "item_5641f690083bd746318424",
+    "qtiClass": "assessmentItem",
+    "attributes": {
+        "identifier": "RC123413",
+        "title": "RC123413",
+        "label": "",
+        "xml:lang": "en-US",
+        "adaptive": false,
+        "timeDependent": false,
+        "toolName": "TAO",
+        "toolVersion": "3.1.0-sprint12",
+        "class": ""
+    },
+    "body": {
+        "serial": "container_containeritembody_5641f6900839a280057995",
+        "body": "\n        <div class=\"classD\">\n            <div class=\"classC\">\n                <h2 class=\"classA\">Question<\/h2>\n                <div class=\"stem\">\n                    <div class=\"classB\">\n                        <h3 class=\"classA part-label\">\n                            <strong> Sugar plum gummies lemon<\/strong>\n                        <\/h3>\n                    <\/div>\n                    <div class=\"classB\">\n                        <p id=\"p001\">Pie donut sweet jelly. Powder dessert cotton candy pie candy canes gummies gingerbread marshmallow pie.<\/p>\n                    <\/div>\n                    {{interaction_choiceinteraction_5641f69009a40825558139}}\n                    <div class=\"classB\">\n                        <p id=\"p006\"> Fruitcake tiramisu sesame snaps apple pie apple pie tootsie roll tart tart <span class=\"s1\">toffee ?<\/span>\n                        <\/p>\n                    <\/div>\n                    {{interaction_choiceinteraction_5641f6900c582655102180}}\n                <\/div>\n            <\/div>\n        <\/div>\n    ",
+        "elements": {
+            "interaction_choiceinteraction_5641f69009a40825558139": {
+                "serial": "interaction_choiceinteraction_5641f69009a40825558139",
+                "qtiClass": "choiceInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE",
+                    "shuffle": false,
+                    "maxChoices": 1,
+                    "minChoices": 1,
+                    "orientation": "vertical",
+                    "class": "at-enable"
+                },
+                "debug": {
+                    "relatedItem": "item_5641f690083bd746318424"
+                },
+                "choices": {
+                    "choice_simplechoice_5641f6900a08e629980725": {
+                        "identifier": "A",
+                        "serial": "choice_simplechoice_5641f6900a08e629980725",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "A",
+                            "fixed": false
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_5641f6900a1d4325209031",
+                            "body": "\n                            <p id=\"p002\">Wafer tart oat cake tart ice cream marzipan.<\/p>\n                        ",
+                            "elements": {},
+                            "debug": {
+                                "relatedItem": "item_5641f690083bd746318424"
+                            }
+                        },
+                        "debug": {
+                            "relatedItem": "item_5641f690083bd746318424"
+                        }
+                    },
+                    "choice_simplechoice_5641f6900ab20193935586": {
+                        "identifier": "B",
+                        "serial": "choice_simplechoice_5641f6900ab20193935586",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "B",
+                            "fixed": false
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_5641f6900ab66812115674",
+                            "body": "\n                            <p id=\"p003\">(correct : +1) Topping tootsie roll halvah jelly liquorice. <\/p>\n                        ",
+                            "elements": {},
+                            "debug": {
+                                "relatedItem": "item_5641f690083bd746318424"
+                            }
+                        },
+                        "debug": {
+                            "relatedItem": "item_5641f690083bd746318424"
+                        }
+                    },
+                    "choice_simplechoice_5641f6900b3ea391149047": {
+                        "identifier": "C",
+                        "serial": "choice_simplechoice_5641f6900b3ea391149047",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "C",
+                            "fixed": false
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_5641f6900b42e363082844",
+                            "body": "\n                            <p id=\"p004\">Tart oat cake jelly chocolate bar cheesecake candy bonbon.<\/p>\n                        ",
+                            "elements": {},
+                            "debug": {
+                                "relatedItem": "item_5641f690083bd746318424"
+                            }
+                        },
+                        "debug": {
+                            "relatedItem": "item_5641f690083bd746318424"
+                        }
+                    },
+                    "choice_simplechoice_5641f6900bc91624342632": {
+                        "identifier": "D",
+                        "serial": "choice_simplechoice_5641f6900bc91624342632",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "D",
+                            "fixed": false
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_5641f6900bce5427355728",
+                            "body": "\n                            <p id=\"p005\">Ice cream wafer candy pie chocolate bar toffee. <\/p>\n                        ",
+                            "elements": {},
+                            "debug": {
+                                "relatedItem": "item_5641f690083bd746318424"
+                            }
+                        },
+                        "debug": {
+                            "relatedItem": "item_5641f690083bd746318424"
+                        }
+                    }
+                },
+                "prompt": {
+                    "serial": "container_containerstatic_5641f69009f24014960240",
+                    "body": "",
+                    "elements": {},
+                    "debug": {
+                        "relatedItem": "item_5641f690083bd746318424"
+                    }
+                }
+            },
+            "interaction_choiceinteraction_5641f6900c582655102180": {
+                "serial": "interaction_choiceinteraction_5641f6900c582655102180",
+                "qtiClass": "choiceInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE2",
+                    "shuffle": false,
+                    "maxChoices": 1,
+                    "minChoices": 1,
+                    "orientation": "vertical",
+                    "class": "at-enable"
+                },
+                "debug": {
+                    "relatedItem": "item_5641f690083bd746318424"
+                },
+                "choices": {
+                    "choice_simplechoice_5641f6900c6af630554690": {
+                        "identifier": "A2",
+                        "serial": "choice_simplechoice_5641f6900c6af630554690",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "A2",
+                            "fixed": false
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_5641f6900c6ef869969312",
+                            "body": "\n                            <p id=\"p007\">\u201cCroissant oat cake candy canes chocolate bar.\u201d <span class=\"s1\">Gummi bears<\/span>\n                            <\/p>\n                        ",
+                            "elements": {},
+                            "debug": {
+                                "relatedItem": "item_5641f690083bd746318424"
+                            }
+                        },
+                        "debug": {
+                            "relatedItem": "item_5641f690083bd746318424"
+                        }
+                    },
+                    "choice_simplechoice_5641f6900ceab832836875": {
+                        "identifier": "B2",
+                        "serial": "choice_simplechoice_5641f6900ceab832836875",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "B2",
+                            "fixed": false
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_5641f6900ceee387307258",
+                            "body": "\n                            <p id=\"p008\">\u201cPudding gingerbread gummies. It <span class=\"s1\">apple pie jelly-o <\/span> sesame <span class=\"s1\">(apple pie)<\/span>\n                            <\/p>\n                        ",
+                            "elements": {},
+                            "debug": {
+                                "relatedItem": "item_5641f690083bd746318424"
+                            }
+                        },
+                        "debug": {
+                            "relatedItem": "item_5641f690083bd746318424"
+                        }
+                    },
+                    "choice_simplechoice_5641f6900d667324081403": {
+                        "identifier": "C2",
+                        "serial": "choice_simplechoice_5641f6900d667324081403",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "C2",
+                            "fixed": false
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_5641f6900d6aa886743474",
+                            "body": "\n                            <p id=\"p009\">\u201cJelly beans dessert chocolate cake carrot cake pudding chupa chups cotton candy halvah lollipop. .\u201d <span class=\"s1\">( chupa chups)<\/span>\n                            <\/p>\n                        ",
+                            "elements": {},
+                            "debug": {
+                                "relatedItem": "item_5641f690083bd746318424"
+                            }
+                        },
+                        "debug": {
+                            "relatedItem": "item_5641f690083bd746318424"
+                        }
+                    },
+                    "choice_simplechoice_5641f6900de42691700779": {
+                        "identifier": "D2",
+                        "serial": "choice_simplechoice_5641f6900de42691700779",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "D2",
+                            "fixed": false
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_5641f6900de86202155678",
+                            "body": "\n                            <p id=\"p010\">(correct : +1) \u201cDonut muffin gummies gingerbread bonbon. .\u201d <span class=\"s1\">(sugar plum)<\/span>\n                            <\/p>\n                        ",
+                            "elements": {},
+                            "debug": {
+                                "relatedItem": "item_5641f690083bd746318424"
+                            }
+                        },
+                        "debug": {
+                            "relatedItem": "item_5641f690083bd746318424"
+                        }
+                    }
+                },
+                "prompt": {
+                    "serial": "container_containerstatic_5641f6900c678855219397",
+                    "body": "",
+                    "elements": {},
+                    "debug": {
+                        "relatedItem": "item_5641f690083bd746318424"
+                    }
+                }
+            }
+        },
+        "debug": {
+            "relatedItem": "item_5641f690083bd746318424"
+        }
+    },
+    "debug": {
+        "relatedItem": "item_5641f690083bd746318424"
+    },
+    "namespaces": {
+        "": "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1",
+        "xi": "http:\/\/www.w3.org\/2001\/XInclude",
+        "xsi": "http:\/\/www.w3.org\/2001\/XMLSchema-instance"
+    },
+    "schemaLocations": {
+        "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1": "http:\/\/www.imsglobal.org\/xsd\/qti\/qtiv2p1\/imsqti_v2p1.xsd"
+    },
+    "stylesheets": {},
+    "outcomes": {
+        "outcomedeclaration_5641f69009282133684581": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_5641f69009282133684581",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "float",
+                "normalMaximum": 2,
+                "normalMinimum": 0
+            },
+            "debug": {
+                "relatedItem": "item_5641f690083bd746318424"
+            },
+            "defaultValue": "0"
+        }
+    },
+    "responses": {
+        "responsedeclaration_5641f69008d97604648546": {
+            "identifier": "RESPONSE",
+            "serial": "responsedeclaration_5641f69008d97604648546",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE",
+                "cardinality": "single",
+                "baseType": "identifier"
+            },
+            "debug": {
+                "relatedItem": "item_5641f690083bd746318424"
+            },
+            "correctResponses": [
+                "B"
+            ],
+            "mapping": {
+                "A": "-1.0",
+                "B": "1.0",
+                "C": "-1.0",
+                "D": "-1.0"
+            },
+            "areaMapping": [
+            ],
+            "howMatch": null,
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": {}
+        },
+        "responsedeclaration_5641f690090e0029667799": {
+            "identifier": "RESPONSE2",
+            "serial": "responsedeclaration_5641f690090e0029667799",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE2",
+                "cardinality": "single",
+                "baseType": "identifier"
+            },
+            "debug": {
+                "relatedItem": "item_5641f690083bd746318424"
+            },
+            "correctResponses": [
+                "D2"
+            ],
+            "mapping": {
+                "A2": "-1.0",
+                "B2": "-1.0",
+                "C2": "-1.0",
+                "D2": "1.0"
+            },
+            "areaMapping": [
+            ],
+            "howMatch": null,
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": {}
+        }
+    },
+    "feedbacks": {},
+    "responseProcessing": {
+        "serial": "response_custom_5641f6900f1aa829038713",
+        "qtiClass": "responseProcessing",
+        "attributes": [
+        ],
+        "debug": {
+            "relatedItem": ""
+        },
+        "processingType": "custom",
+        "data": "<responseProcessing>\n        <responseCondition>\n            <responseIf>\n                <not>\n                    <equal toleranceMode=\"exact\">\n                        <mapResponse identifier=\"RESPONSE\"\/>\n                        <baseValue baseType=\"float\">1<\/baseValue>\n                    <\/equal>\n                <\/not>\n                <setOutcomeValue identifier=\"SCORE\">\n                    <baseValue baseType=\"float\">0.0<\/baseValue>\n                <\/setOutcomeValue>\n            <\/responseIf>\n            <responseElse>\n                <setOutcomeValue identifier=\"SCORE\">\n                    <sum>\n                        <variable identifier=\"SCORE\"\/>\n                        <baseValue baseType=\"float\">1.0<\/baseValue>\n                    <\/sum>\n                <\/setOutcomeValue>\n                <responseCondition>\n                    <responseIf>\n                        <equal toleranceMode=\"exact\">\n                            <mapResponse identifier=\"RESPONSE2\"\/>\n                            <baseValue baseType=\"float\">1<\/baseValue>\n                        <\/equal>\n                        <setOutcomeValue identifier=\"SCORE\">\n                            <sum>\n                                <variable identifier=\"SCORE\"\/>\n                                <baseValue baseType=\"float\">1.0<\/baseValue>\n                            <\/sum>\n                        <\/setOutcomeValue>\n                    <\/responseIf>\n                <\/responseCondition>\n            <\/responseElse>\n        <\/responseCondition>\n    <\/responseProcessing>",
+        "responseRules": [
+            {
+                "qtiClass": "responseCondition",
+                "responseIf": {
+                    "qtiClass": "responseIf",
+                    "expression": {
+                        "qtiClass": "not",
+                        "expressions": [
+                            {
+                                "qtiClass": "equal",
+                                "attributes": {
+                                    "toleranceMode": "exact"
+                                },
+                                "expressions": [
+                                    {
+                                        "qtiClass": "mapResponse",
+                                        "attributes": {
+                                            "identifier": "RESPONSE"
+                                        }
+                                    },
+                                    {
+                                        "qtiClass": "baseValue",
+                                        "attributes": {
+                                            "baseType": "float"
+                                        },
+                                        "value": "1"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "SCORE"
+                            },
+                            "expression": {
+                                "qtiClass": "baseValue",
+                                "attributes": {
+                                    "baseType": "float"
+                                },
+                                "value": "0.0"
+                            }
+                        }
+                    ]
+                },
+                "responseElse": {
+                    "qtiClass": "responseElse",
+                    "responseRules": [
+                        {
+                            "qtiClass": "setOutcomeValue",
+                            "attributes": {
+                                "identifier": "SCORE"
+                            },
+                            "expression": {
+                                "qtiClass": "sum",
+                                "expressions": [
+                                    {
+                                        "qtiClass": "variable",
+                                        "attributes": {
+                                            "identifier": "SCORE"
+                                        }
+                                    },
+                                    {
+                                        "qtiClass": "baseValue",
+                                        "attributes": {
+                                            "baseType": "float"
+                                        },
+                                        "value": "1.0"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "qtiClass": "responseCondition",
+                            "responseIf": {
+                                "qtiClass": "responseIf",
+                                "expression": {
+                                    "qtiClass": "equal",
+                                    "attributes": {
+                                        "toleranceMode": "exact"
+                                    },
+                                    "expressions": [
+                                        {
+                                            "qtiClass": "mapResponse",
+                                            "attributes": {
+                                                "identifier": "RESPONSE2"
+                                            }
+                                        },
+                                        {
+                                            "qtiClass": "baseValue",
+                                            "attributes": {
+                                                "baseType": "float"
+                                            },
+                                            "value": "1"
+                                        }
+                                    ]
+                                },
+                                "responseRules": [
+                                    {
+                                        "qtiClass": "setOutcomeValue",
+                                        "attributes": {
+                                            "identifier": "SCORE"
+                                        },
+                                        "expression": {
+                                            "qtiClass": "sum",
+                                            "expressions": [
+                                                {
+                                                    "qtiClass": "variable",
+                                                    "attributes": {
+                                                        "identifier": "SCORE"
+                                                    }
+                                                },
+                                                {
+                                                    "qtiClass": "baseValue",
+                                                    "attributes": {
+                                                        "baseType": "float"
+                                                    },
+                                                    "value": "1.0"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

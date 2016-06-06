@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i14075078448727393" title="Example_7_Geo 2" label="" xml:lang="en-US" adaptive="false" timeDependent="false" toolName="TAO" toolVersion="3.1.0-sprint17">
+  <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="identifier"/>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <itemBody>
+    <div class="grid-row">
+      <div class="col-12">
+        <graphicOrderInteraction responseIdentifier="RESPONSE" maxChoices="6" minChoices="1" class="responsive">
+          <prompt>A USA RoadTrip using a graphic order interaction. <br/>
+Jérôme visited first Alaska, as the place was a bit too cold he visited Florida. Bored with DisneyLand , he went to the Nevada. Having wasted all his money, he decided to go to Washington, South Dakota, Wyoming and finished his trip in Texas where he now runs his own ranch. </prompt>
+          <object data="Map_of_USA_highlighting_states_with_no_income_tax.svg.png" type="image/png" width="959" height="593"/>
+          <hotspotChoice identifier="hotspot_2" fixed="false" shape="poly" coords="86,161,67,226,149,349,180,312,198,183"/>
+          <hotspotChoice identifier="hotspot_3" fixed="false" shape="poly" coords="49,8,54,66,162,99,181,29,101,-1"/>
+          <hotspotChoice identifier="hotspot_4" fixed="false" shape="poly" coords="245,121,227,219,349,237,358,142,241,122"/>
+          <hotspotChoice identifier="hotspot_5" fixed="false" shape="poly" coords="358,122,358,192,478,208,471,122"/>
+          <hotspotChoice identifier="hotspot_6" fixed="false" shape="poly" coords="63,447,42,513,3,578,82,575,221,591,175,526,164,444,104,425"/>
+          <hotspotChoice identifier="hotspot_7" fixed="false" shape="poly" coords="279,421,343,422,352,326,422,332,420,373,527,401,527,492,456,583,328,498"/>
+          <hotspotChoice identifier="hotspot_1" fixed="false" shape="poly" coords="633,455,637,470,713,482,762,575,802,578,805,505,754,434,634,444"/>
+        </graphicOrderInteraction>
+      </div>
+    </div>
+  </itemBody>
+  <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+</assessmentItem>

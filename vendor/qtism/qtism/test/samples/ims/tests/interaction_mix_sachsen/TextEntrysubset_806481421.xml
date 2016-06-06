@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file was created using: Onyx Editor, Version 3.4.1 (Full, licensed version), (c)2011 BPS Bildungsportal Sachsen GmbH-->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 imsqti_v2p1.xsd" identifier="TextEntrysubset_806481421" title="textEntry (subset)" adaptive="false" timeDependent="false">
+	<responseDeclaration identifier="RESPONSE_1" cardinality="single" baseType="string">
+		<mapping defaultValue="0.0">
+			<mapEntry mapKey="Dresden" mappedValue="1.0" caseSensitive="false" />
+			<mapEntry mapKey="Chemnitz" mappedValue="1.0" caseSensitive="false" />
+			<mapEntry mapKey="Leipzig" mappedValue="1.0" caseSensitive="false" />
+		</mapping>
+	</responseDeclaration>
+	<responseDeclaration identifier="RESPONSE_2" cardinality="single" baseType="string">
+		<mapping defaultValue="0.0">
+			<mapEntry mapKey="Dresden" mappedValue="1.0" caseSensitive="false" />
+			<mapEntry mapKey="Chemnitz" mappedValue="1.0" caseSensitive="false" />
+			<mapEntry mapKey="Leipzig" mappedValue="1.0" caseSensitive="false" />
+		</mapping>
+	</responseDeclaration>
+	<responseDeclaration identifier="RESPONSE_3" cardinality="single" baseType="string">
+		<mapping defaultValue="0.0">
+			<mapEntry mapKey="Dresden" mappedValue="1.0" caseSensitive="false" />
+			<mapEntry mapKey="Chemnitz" mappedValue="1.0" caseSensitive="false" />
+			<mapEntry mapKey="Leipzig" mappedValue="1.0" caseSensitive="false" />
+		</mapping>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>0.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>3.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+		<defaultValue>
+			<value>empty</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_10699829" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_235860" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<itemBody>
+	<p>Das Bundesland Sachsen enthält die drei kreisfreien Städte:</p>
+	<div>
+		<textEntryInteraction responseIdentifier="RESPONSE_1" />
+		<br />
+		<textEntryInteraction responseIdentifier="RESPONSE_2" />
+		<br />
+		<textEntryInteraction responseIdentifier="RESPONSE_3" />
+	</div>
+	</itemBody>
+	<responseProcessing>
+		<responseCondition>
+			<responseIf>
+				<and>
+					<not>
+						<isNull>
+							<variable identifier="RESPONSE_3" />
+						</isNull>
+					</not>
+				</and>
+				<setOutcomeValue identifier="SCORE">
+					<sum>
+						<variable identifier="SCORE" />
+						<mapResponse identifier="RESPONSE_3" />
+					</sum>
+				</setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+		<responseCondition>
+			<responseIf>
+				<not>
+					<isNull>
+						<variable identifier="RESPONSE_3" />
+					</isNull>
+				</not>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">incorrect</baseValue>
+				</setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+		<responseCondition>
+			<responseIf>
+				<and>
+					<not>
+						<isNull>
+							<variable identifier="RESPONSE_2" />
+						</isNull>
+					</not>
+					<not>
+						<stringMatch caseSensitive="false">
+							<variable identifier="RESPONSE_2" />
+							<variable identifier="RESPONSE_3" />
+						</stringMatch>
+					</not>
+				</and>
+				<setOutcomeValue identifier="SCORE">
+					<sum>
+						<variable identifier="SCORE" />
+						<mapResponse identifier="RESPONSE_2" />
+					</sum>
+				</setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+		<responseCondition>
+			<responseIf>
+				<not>
+					<isNull>
+						<variable identifier="RESPONSE_2" />
+					</isNull>
+				</not>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">incorrect</baseValue>
+				</setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+		<responseCondition>
+			<responseIf>
+				<and>
+					<not>
+						<isNull>
+							<variable identifier="RESPONSE_1" />
+						</isNull>
+					</not>
+					<not>
+						<stringMatch caseSensitive="false">
+							<variable identifier="RESPONSE_1" />
+							<variable identifier="RESPONSE_3" />
+						</stringMatch>
+					</not>
+					<not>
+						<stringMatch caseSensitive="false">
+							<variable identifier="RESPONSE_1" />
+							<variable identifier="RESPONSE_2" />
+						</stringMatch>
+					</not>
+				</and>
+				<setOutcomeValue identifier="SCORE">
+					<sum>
+						<variable identifier="SCORE" />
+						<mapResponse identifier="RESPONSE_1" />
+					</sum>
+				</setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+		<responseCondition>
+			<responseIf>
+				<not>
+					<isNull>
+						<variable identifier="RESPONSE_1" />
+					</isNull>
+				</not>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">incorrect</baseValue>
+				</setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+		<responseCondition>
+			<responseIf>
+				<and>
+					<not>
+						<match>
+							<variable identifier="FEEDBACKBASIC" />
+							<baseValue baseType="identifier">empty</baseValue>
+						</match>
+					</not>
+					<equal toleranceMode="exact">
+						<variable identifier="SCORE" />
+						<variable identifier="MAXSCORE" />
+					</equal>
+				</and>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">correct</baseValue>
+				</setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+		<setOutcomeValue identifier="FEEDBACK_10699829">
+			<and>
+				<match>
+					<baseValue baseType="identifier">correct</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+		<setOutcomeValue identifier="FEEDBACK_235860">
+			<and>
+				<match>
+					<baseValue baseType="identifier">incorrect</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+	</responseProcessing>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_10699829" showHide="show" title="Richtig!">Sachsen enthält die drei kreisfreie Städte Chemnitz, Dresden und Leipzig, welche jeweils einem Direktionsbezirk zugehörig sind.
+
+Zwickau ist die viertgrößte Stadt in Sachsen. Zwickau, ist seit Ende 2003 keine Großstadt mehr, da die Einwohnerzahl zurückgegangen ist. Im Rahmen der Sächsischen Kreisreform wurde der Stadt im Jahr 2008 die Kreisfreiheit entzogen.</modalFeedback>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_235860" showHide="show" title="Leider Falsch!">Sachsen enthält die drei kreisfreie Städte Chemnitz, Dresden und Leipzig, welche jeweils einem Direktionsbezirk zugehörig sind.
+
+Zwickau ist die viertgrößte Stadt in Sachsen. Zwickau, ist seit Ende 2003 keine Großstadt mehr, da die Einwohnerzahl zurückgegangen ist. Im Rahmen der Sächsischen Kreisreform wurde der Stadt im Jahr 2008 die Kreisfreiheit entzogen.</modalFeedback>
+</assessmentItem>

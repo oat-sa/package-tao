@@ -1,0 +1,133 @@
+{
+    "identifier": "textEntry",
+    "serial": "item_54748138548cd268375778",
+    "qtiClass": "assessmentItem",
+    "attributes": {
+        "identifier": "textEntry",
+        "title": "Richard III (Take 3)",
+        "label": "",
+        "adaptive": false,
+        "timeDependent": false,
+        "toolName": "TAO",
+        "toolVersion": "3.0"
+    },
+    "body": {
+        "serial": "container_containeritembody_54748138548b7862153553",
+        "body": "<p>Identify the missing word in this famous quote from Shakespeare's Richard III.</p>\n    <blockquote>\n      <p>Now is the winter of our discontent<br/> Made glorious summer by this sun of\n\t\t\t\t\t{{interaction_textentryinteraction_547481385553c671856068}};<br/>\n\t\t\t\tAnd all the clouds that lour'd upon our house<br/> In the deep bosom of the ocean\n\t\t\t\tburied.</p>\n    </blockquote>",
+        "elements": {
+            "interaction_textentryinteraction_547481385553c671856068": {
+                "serial": "interaction_textentryinteraction_547481385553c671856068",
+                "qtiClass": "textEntryInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE",
+                    "base": 10,
+                    "expectedLength": 15
+                },
+                "choices": []
+            }
+        },
+        "debug": {
+            "relatedItem": "item_54748138548cd268375778"
+        }
+    },
+    "namespaces": {
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "": "http://www.imsglobal.org/xsd/imsqti_v2p1"
+    },
+    "stylesheets": [],
+    "outcomes": {
+        "outcomedeclaration_5474813854cfa847285210": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_5474813854cfa847285210",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "defaultValue": null
+        }
+    },
+    "responses": {
+        "responsedeclaration_5474813854b8b603267818": {
+            "identifier": "RESPONSE",
+            "serial": "responsedeclaration_5474813854b8b603267818",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE",
+                "cardinality": "single",
+                "baseType": "string"
+            },
+            "correctResponses": [
+                "York"
+            ],
+            "mapping": {
+                "York": "1",
+                "york": "0.5"
+            },
+            "areaMapping": [],
+            "howMatch": "http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response",
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": []
+        }
+    },
+    "feedbacks": [],
+    "responseProcessing": {
+        "serial": "response_templatesdriven_5474813856025271209814",
+        "qtiClass": "responseProcessing",
+        "attributes": [],
+        "processingType": "templateDriven",
+        "responseRules": [{
+            "qtiClass": "responseCondition",
+            "responseIf": {
+                "qtiClass": "responseIf",
+                "expression": {
+                    "qtiClass": "match",
+                    "expressions": [{
+                        "qtiClass": "variable",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }, {
+                        "qtiClass": "correct",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }]
+                },
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "baseValue",
+                        "attributes": {
+                            "baseType": "float"
+                        },
+                        "value": "1"
+                    }
+                }]
+            },
+            "responseElse": {
+                "qtiClass": "responseElse",
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "baseValue",
+                        "attributes": {
+                            "baseType": "float"
+                        },
+                        "value": "0"
+                    }
+                }]
+            }
+        }]
+    }
+}

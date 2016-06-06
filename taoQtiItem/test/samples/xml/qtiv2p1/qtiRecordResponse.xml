@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:html5="html5" xmlns:pci="http://www.imsglobal.org/xsd/portableCustomInteraction" xmlns:m="http://www.w3.org/1998/Math/MathML" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i1449149344661833" title="Operational 2016 1" adaptive="false" timeDependent="false" label="" xml:lang="en-US" toolName="TAO" toolVersion="3.1.0-sprint12">
+  <responseDeclaration identifier="RESPONSE" cardinality="record">
+    <correctResponse>
+      <value fieldIdentifier="actualResponse" baseType="integer"><![CDATA[0]]></value>
+      <value fieldIdentifier="scaffolded" baseType="boolean"><![CDATA[false]]></value>
+    </correctResponse>
+  </responseDeclaration>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <stylesheet href="style/custom/tao-user-styles.css" type="text/css" media="all" title=""/>
+  <stylesheet href="adaptiveChoiceInteraction/runtime/css/adaptiveChoiceInteraction.css" type="text/css" media="all" title=""/>
+  <itemBody>
+    <div class="grid-row">
+      <div class="col-12">
+        <customInteraction responseIdentifier="RESPONSE">
+          <pci:portableCustomInteraction customInteractionTypeIdentifier="adaptiveChoiceInteraction" hook="adaptiveChoiceInteraction/runtime/adaptiveChoiceInteraction.js">
+            <pci:responseSchema href="http://imsglobal.org/schema/json/v1.0/response.json"/>
+            <pci:resources location="http://imsglobal.org/pci/1.0.15/sharedLibraries.xml">
+              <pci:libraries>
+                <pci:lib id="IMSGlobal/jquery_2_1_1"/>
+                <pci:lib id="adaptiveChoiceInteraction/runtime/js/renderer"/>
+              </pci:libraries>
+            </pci:resources>
+            <pci:properties>
+              <pci:entry key="sendScaffoldingInformation">true</pci:entry>
+              <pci:entry key="attempts">0</pci:entry>
+            </pci:properties>
+            <pci:markup>
+              <html5:div xmlns="http://www.w3.org/1999/xhtml" class="adaptiveChoiceInteraction">
+                <html5:div id="feedback-box"/>
+                <html5:div class="js-prompt widget-blockInteraction prompt">Low</html5:div>
+                <html5:div class="js-choice-container">
+                  <html5:ol class="plain block-listing qti-choice-container horizontal-layout solid">
+                    <html5:li class="qti-choice">
+                      <html5:div class="js-label-box">
+                        <html5:input class="answer-input js-answer-input correct" type="radio" name="RESPONSE" value="0"/>
+                        <html5:div class="label-box">
+                          <html5:div class="label-content clear widget-blockInteraction js-choice-label" data-choice-index="0">
+                            Correct
+                        </html5:div>
+                        </html5:div>
+                      </html5:div>
+                    </html5:li>
+                    <html5:li class="qti-choice">
+                      <html5:div class="js-label-box">
+                        <html5:input class="answer-input js-answer-input" type="radio" name="RESPONSE" value="1"/>
+                        <html5:div class="label-box">
+                          <html5:div class="label-content clear widget-blockInteraction js-choice-label" data-choice-index="1">
+                            Incorrect
+                        </html5:div>
+                        </html5:div>
+                      </html5:div>
+                    </html5:li>
+                    <html5:li class="qti-choice">
+                      <html5:div class="js-label-box">
+                        <html5:input class="answer-input js-answer-input" type="radio" name="RESPONSE" value="2"/>
+                        <html5:div class="label-box">
+                          <html5:div class="label-content clear widget-blockInteraction js-choice-label" data-choice-index="2">
+                            Incorrect
+                        </html5:div>
+                        </html5:div>
+                      </html5:div>
+                    </html5:li>
+                  </html5:ol>
+                </html5:div>
+              </html5:div>
+            </pci:markup>
+          </pci:portableCustomInteraction>
+        </customInteraction>
+      </div>
+    </div>
+  </itemBody>
+  <responseProcessing>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <fieldValue fieldIdentifier="actualResponse">
+            <variable identifier="RESPONSE"/>
+          </fieldValue>
+          <fieldValue fieldIdentifier="actualResponse">
+            <correct identifier="RESPONSE"/>
+          </fieldValue>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <baseValue baseType="float">1.0</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+      <responseElse>
+        <setOutcomeValue identifier="SCORE">
+          <baseValue baseType="float">0.0</baseValue>
+        </setOutcomeValue>
+      </responseElse>
+    </responseCondition>
+  </responseProcessing>
+</assessmentItem>

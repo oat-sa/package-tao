@@ -1,0 +1,62 @@
+{
+    "repositories": [{
+        "type": "vcs",
+        "url": "git@github.com:oat-sa/oatbox-extension-installer.git"
+    }],
+
+    "name": "oat-sa/extension-tao-item",
+    "authors": [{
+        "name": "Open Assessment Technologies S.A.",
+        "homepage": "http://www.taotesting.com"
+    }, {
+        "name": "Jérôme Bogaerts",
+        "role": "Developer"
+    }, {
+        "name": "Joel Bout",
+        "role": "Developer"
+    }, {
+        "name": "Bertrand Chevrier",
+        "role": "Developer"
+    }, {
+        "name": "Lionel Lecaque",
+        "role": "Developer"
+    }, {
+        "name": "Patrick Plichart",
+        "role": "Developer"
+    }, {
+        "name": "Dieter Raber",
+        "role": "Developer"
+    }, {
+        "name": "Somsack Sipasseuth",
+        "role": "Developer"
+    }],
+    "description": "extension to manage items",
+    "support": {
+        "forum": "http://forum.taotesting.com",
+        "issues": "http://forge.taotesting.com"
+    },
+    "homepage": "http://www.taotesting.com",
+    "license": [
+        "GPL-2.0"
+    ],
+    "keywords": [
+        "tao",
+        "oat",
+        "computer-based-assessment"
+    ],
+    "type": "tao-extension",
+    "extra": {
+        "tao-extension-name": "taoItems"
+    },
+    "require": {
+        "oat-sa/oatbox-extension-installer": "dev-master"
+    },
+	"autoload" : {
+		"psr-4" : {
+			"oat\\taoItems\\model\\" : "models/classes/",
+			"oat\\taoItems\\helpers\\" : "helpers",
+			"oat\\taoItems\\test\\" : "test",
+			"oat\\taoItems\\scripts\\" : "scripts"
+        }
+	}
+}

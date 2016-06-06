@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+    <structure id='taoMediaManager' name="Media" level="7" group="main">
+        <description>Media Manager extension</description>
+        <icon id="icon-media" src=""/>
+        <sections>
+            <section id="media_manager" name="Manage Media" url="/taoMediaManager/MediaManager/index">
+                <trees>
+                    <tree name="Media Manager"
+                          className="Media"
+                          dataUrl="/taoMediaManager/MediaManager/getOntologyData"
+                          rootNode="http://www.tao.lu/Ontologies/TAOMedia.rdf#Media"
+                          selectClass="media-class-properties"
+                          selectInstance="media-properties"
+                          delete="media-delete"
+                            />
+                </trees>
+                <actions>
+                    <action id="media-class-properties" name="Properties" url="/tao/PropertiesAuthoring/index" group="content" context="class">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="media-properties" name="Properties"  url="/taoMediaManager/MediaManager/editInstance" group="content" context="instance">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="media-class-new" name="New class" url="/taoMediaManager/MediaManager/addSubClass" context="resource" group="tree" binding="subClass">
+                        <icon id="icon-folder-open"/>
+                    </action>
+                    <action id="media-delete" name="Delete" binding="removeNode" url="/taoMediaManager/MediaManager/delete"
+                            context="resource" group="tree">
+                        <icon id="icon-bin"/>
+                    </action>
+                    <action id="media-import" name="Import" url="/taoMediaManager/MediaImport/index" group="tree"
+                            context="resource">
+                        <icon id="icon-import"/>
+                    </action>
+                    <action id="media-export" name="Export" url="/taoMediaManager/MediaExport/index" group="tree"
+                            context="resource">
+                        <icon id="icon-export"/>
+                    </action>
+                </actions>
+            </section>
+        </sections>
+    </structure>
+</structures>

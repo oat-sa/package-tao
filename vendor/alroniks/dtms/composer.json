@@ -1,0 +1,35 @@
+{
+    "name": "alroniks/dtms",
+    "type": "library",
+    "description": "Classes for manipulate dates and intervals with microseconds precision",
+    "keywords": ["date", "time", "datetime", "ms", "microseconds", "milliseconds", "interval", "ISO8601", "fractions"],
+    "license": "MIT",
+    "homepage": "http://alroniks.github.io/dtms",
+    "authors": [
+        {
+            "name": "Ivan Klimchuk",
+            "email": "ivan@klimchuk.com",
+            "homepage" : "http://klimchuk.com",
+            "role" : "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/alroniks/dtms/issues"
+    },
+    "require": {
+        "php" : ">=5.3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "alroniks\\dtms\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "alroniks\\dtms\\Test\\": "test"
+        }
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ui Test - Test Runner - Action Bar Button</title>
+        <base href="../../../../../../../../tao/views/" />
+        <link rel="stylesheet" type="text/css" href="js/lib/qunit/qunit.css">
+        <script type="text/javascript" src="js/lib/require.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit-parameterize.js"></script>
+        <script type="text/javascript" src="js/lib/blanket/blanket.min.js" data-cover-flag="branchTracking" data-cover-only="actionBar/button.js"></script>
+
+        <script  type="text/javascript">
+
+             //don't start the test now
+            QUnit.config.autostart = false;
+
+            //load the config
+            require(['/tao/ClientConfig/config'], function(){
+
+                //load the test
+                require(['taoQtiTest/test/actionBar/button/test'], function(){
+
+                    //Tests loaded, run tests
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+            <div id="button-1"></div>
+            <div id="button-2"></div>
+            <div id="button-3"></div>
+            <div id="button-4"></div>
+            <div id="button-5"></div>
+            <div id="button-6"></div>
+            <div id="button-7"></div>
+        </div>
+    </body>
+</html>

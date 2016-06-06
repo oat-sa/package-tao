@@ -1,0 +1,72 @@
+/*
+    * This program is free software; you can redistribute it and/or
+    * modify it under the terms of the GNU General Public License
+    * as published by the Free Software Foundation; under version 2
+    * of the License (non-upgradable).
+    *
+    * This program is distributed in the hope that it will be useful,
+    * but WITHOUT ANY WARRANTY; without even the implied warranty of
+    * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    * GNU General Public License for more details.
+    *
+    * You should have received a copy of the GNU General Public License
+    * along with this program; if not, write to the Free Software
+    * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+    *
+    * Copyright (c) 2015 (original work) Open Assessment Technologies SA ;
+    *
+*/
+@import "inc/bootstrap";
+
+.bulk-action-popup{
+    padding-bottom : 20px;
+    h2.title {
+        margin-top : 0;
+        margin-bottom : 20px
+    }
+    .applicables, .no-applicables{
+        max-height: 100px;
+        overflow-y: auto;
+        background: #DDD;
+        padding-top: 5px;
+        margin-bottom : 20px;
+        .resource-label{
+            padding : 6px 18px 0;
+        }
+        li:last-child .resource-label{
+            padding-bottom : 6px;
+        }
+    }
+    .categories{
+        margin-bottom : 10px;
+    }
+    .comment{
+        textarea{
+            height : 80px;
+            width: 100%;
+            max-width : none;
+        }
+    }
+    .cascading-combo-box{
+        .select2-container{
+            margin-right : 10px;
+        }
+    }
+    .actions{
+        margin-top : 20px;
+        .btn{
+            float:right;
+            margin-left:20px;
+            &.cancel{
+                position:relative;
+                top:3px;
+            }
+        }
+    }
+    .single .resource-label{
+        font-weight : bold;
+    }
+    .multiple .resource-count{
+        font-weight : bold;
+    }
+}

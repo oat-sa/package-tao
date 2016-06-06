@@ -1,0 +1,346 @@
+@import "inc/bootstrap";
+
+$previewToolbarWidth: 1024px;
+
+body {
+    &.preview-mode {
+        height: 100vh !important;
+        max-height: 100vh;
+        overflow: hidden;
+    }
+
+    &.no-preview-feedback {
+        .preview-overlay {
+            .preview-container {
+                background: white;
+                overflow: auto;
+
+                .preview-item-container, #preview-container {
+                    min-height: calc(100vh - 82px) !important;
+                }
+            }
+        }
+    }
+}
+
+.preview-overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 19995;
+    position: absolute;
+    left: 0;
+
+    background: rgba(0, 0, 0, 0.7);
+    &.preview-desktop {
+        overflow: visible;
+        .mobile-only,
+        .standard-only {
+            display: none !important;
+        }
+    }
+    &.preview-mobile {
+        overflow: visible;
+        .desktop-only,
+        .standard-only {
+            display: none !important;
+        }
+    }
+    &.preview-standard {
+        overflow: visible;
+        .desktop-only,
+        .mobile-only {
+            display: none !important;
+        }
+    }
+    .preview-scale-container {
+        position: relative;
+        float:left
+    }
+    .preview-container {
+        background: white;
+        overflow:auto;
+
+        .preview-item-container, #preview-container {
+            min-height: calc(100vh - 130px) !important;
+        }
+    }
+    .preview-container-outer {
+        display: table;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .preview-utility-bar {
+        background: mix(#fff, $grey, 85%);
+        border-bottom: 1px solid $websiteBorder;
+        margin-bottom: 20px;
+        z-index: 9996;
+        overflow:hidden;
+        padding: 10px;
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        .preview-heading {
+            min-width: 140px;
+        }
+        .device-type-and-orientation {
+            min-width: 340px;
+        }
+    }
+
+    .preview-utility-bar-inner {
+        max-width: $previewToolbarWidth;
+        width: 100%;
+        margin: auto;
+        h1 {
+            @include font-size(18);
+            text-shadow: 1px 1px 0px #eee;
+        }
+        .icon-info {
+            top: 7px;
+            @include font-size(15);
+        }
+        li {
+            margin-left: 10px;
+        }
+        .btn-info {
+            margin-top: 1px
+        }
+        .mobile-device-selector {
+            width: 200px;
+        }
+        .preview-type-selector {
+            width: 140px;
+        }
+        .preview-theme-selector {
+            width: 140px;
+        }
+        .orientation-selector,
+        .desktop-device-selector{
+            width: 130px;
+        }
+        [class*=" col-"], [class^="col-"] {
+            margin-bottom: 0 !important;
+        }
+    }
+
+
+    #preview-console {
+        // reset from legacy code
+        margin: 0;
+        padding: 0;
+        border: none;
+        z-index: auto;
+        // end reset
+
+        background: whiten($info, .1);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        .preview-console-closer {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            color: white(.9);
+            &:hover {
+                color: white;
+            }
+            display: none;
+            text-shadow: none;
+        }
+        .preview-console-header {
+            max-width: $previewToolbarWidth;
+            width: 100%;
+            margin: auto;
+            padding: 0;
+            [class*=" col-"], [class^="col-"] {
+                margin-bottom: 0 !important;
+            }
+        }
+
+
+        // action bar at bottom
+        .extra-button-action-bar {
+            overflow:visible;
+            li {
+                margin: 0 5px;
+                &.btn-info {
+                    border-color: white(.3);
+                    &.btn-group {
+                        border:none !important;
+                        overflow:visible;
+                        padding:0;
+                        a {
+                            float:left;
+                            margin: 0 2px;
+                            padding: 0 15px;
+                            border: 1px solid white(.3);
+                            border-radius: 0px;
+                            display: inline-block;
+                            height: inherit;
+                            &:first-of-type {
+                                border-top-left-radius: 3px;
+                                border-bottom-left-radius: 3px;
+                                margin-left: 0;
+                            }
+                            &:last-of-type {
+                                border-top-right-radius: 3px;
+                                border-bottom-right-radius: 3px;
+                                margin-right: 0;
+                            }
+                            &:hover, &.active {
+                                border-color: white(.8);
+                            }
+                            .no-label {
+                                padding-right: 0;
+                            }
+                        }
+                    }
+                    &:hover, &.active {
+                        border-color: white(.8);
+                    }
+                }
+            }
+            &.horizontal-action-bar {
+                &.bottom-action-bar {
+                    overflow: visible;
+                    .action {
+                        line-height: 1.6;
+                    }
+                }
+            }
+        }
+        .preview-console-body {
+            display:none;
+            ul {
+                padding: 5px;
+                margin: 0;
+
+                height: 300px;
+                overflow: auto;
+                background: rgb(43, 43, 43);
+                font-family: $monospaceFont;
+                color: $textHighlight;
+                .log-time {
+                    color: #999;
+                }
+                .log-type {
+                    color: #eee;
+                }
+                .log-message {
+                    color: #69f;
+                }
+                pre {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+
+
+
+    .preview-message-box {
+        .feedback-info {
+            margin: 10px auto 0px;
+            width: 800px;
+        }
+        a {
+            float:right;
+            padding-right: 10px;
+        }
+    }
+    .desktop-preview-container {
+        width: 1024px;
+        background: white url(data:image/gif;base64,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) no-repeat center 150px;
+    }
+    .desktop-preview-frame {
+        &.desktop-preview-landscape {
+            padding: 30px 30px;
+            .desktop-device-toolbar {
+                padding-right: 30px;
+            }
+        }
+        &.desktop-preview-portrait {
+            padding: 30px 30px;
+            .desktop-device-toolbar {
+                padding-right: 30px;
+            }
+        }
+        position: relative;
+        border: 3px #aaa solid;
+        border-radius: 5px;
+        background: rgb(90, 90, 90);
+        background: linear-gradient(135deg, rgb(90, 90, 90) 0%, rgb(86, 86, 86) 7%, rgb(68, 68, 68) 15%, rgb(20, 20, 20) 30%);
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .7);
+    }
+    .desktop-preview-item-container {
+        min-height: 500px;
+        -webkit-box-shadow: 0px 0px 8px mix(#fff, $darkBrown, 50%);
+        -moz-box-shadow: 0px 0px 8px mix(#fff, $darkBrown, 50%);
+        box-shadow: 0px 0px 8px mix(#fff, $darkBrown, 50%);
+    }
+    .preview-canvas {
+        display: table-cell;
+        text-align: center;
+        * {
+            text-align: left;
+        }
+    }
+    .preview-outer-frame {
+        position: relative;
+        display: inline-block;
+    }
+    .mobile-preview-container {
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        position: relative
+    }
+
+    .mobile-preview-item-container {
+        height: 100%;
+    }
+
+    .mobile-preview-frame {
+        &.mobile-preview-landscape {
+            padding: 40px 40px;
+            .mobile-device-toolbar {
+                padding-right: 40px;
+            }
+        }
+        &.mobile-preview-portrait {
+            padding: 40px 40px;
+            .mobile-device-toolbar {
+                padding-right: 40px;
+            }
+        }
+        position: relative;
+        border: 3px #aaa ridge;
+        border-radius: 25px;
+        background: rgb(90, 90, 90);
+        background: linear-gradient(135deg, rgb(90, 90, 90) 0%, rgb(86, 86, 86) 7%, rgb(68, 68, 68) 15%, rgb(20, 20, 20) 30%);
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .7);
+    }
+    .mobile-preview-container {
+        background: white;
+        border-radius: 3px;
+        border: 2px solid;
+        border-color: #444 #999 #999 #444;
+    }
+
+    .standard-preview-frame {
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, .7);
+    }
+}
+
+
+
+
+
+
+

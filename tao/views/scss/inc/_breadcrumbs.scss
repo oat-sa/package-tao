@@ -1,0 +1,53 @@
+@import "inc/bootstrap";
+
+.breadcrumbs {
+  background-color: $canvas;
+  font-style: italic;
+  font-weight: normal;
+  font-family: $headingFont;
+  @include font-size(11);
+  padding: 8px !important;
+  margin: 0;
+  list-style: none;
+
+  li.breadcrumb {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    float: none;
+
+    &:not(:first-child):before {
+      @include tao-icon-setup;
+      @include icon-right();
+      padding: 0 4px 0 9px;
+    }
+
+    ul {
+      background-color: $canvas;
+      display: none;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      padding: 0 1rem 1rem 0;
+      @include simple-border();
+      border-top: none;
+
+      li {
+        white-space: nowrap;
+        padding: 2px 0;
+        text-align: left;
+        float: none;
+
+        &:before {
+          @include tao-icon-setup;
+          @include icon-right();
+          padding: 0 4px 0 8px;
+        }
+      }
+    }
+
+    &:hover ul {
+      display: block;
+    }
+  }
+}

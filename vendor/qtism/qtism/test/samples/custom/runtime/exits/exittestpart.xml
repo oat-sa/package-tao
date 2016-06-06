@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.taotesting.com/xsd/qticompact_v1p0.xsd"
+    identifier="exittestpart" title="Exit TestPart">
+    <!-- In this example, If Q01 is correctly responded, the candidate is redirected to the
+    very next available testPart, P02. -->
+    <testPart identifier="P01" navigationMode="linear" submissionMode="individual">
+        <assessmentSection identifier="S01" title="Section1" visible="true">
+            <assessmentItemRef identifier="Q01" href="./Q01.xml" timeDependent="false">
+                <branchRule target="EXIT_TESTPART">
+                    <gt>
+                        <max>
+                            <testVariables sectionIdentifier="S01" variableIdentifier="SCORE"/>
+                        </max>
+                        <baseValue baseType="float">0</baseValue>
+                    </gt>
+                </branchRule>
+                <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+                    <correctResponse>
+                        <value>ChoiceA</value>
+                    </correctResponse>
+                </responseDeclaration>
+                <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+                    <defaultValue>
+                        <value>0</value>
+                    </defaultValue>
+                </outcomeDeclaration>
+                <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+            </assessmentItemRef>
+            
+            <assessmentItemRef identifier="Q02" href="./Q02.xml" timeDependent="false">
+                <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+                    <correctResponse>
+                        <value>ChoiceB</value>
+                    </correctResponse>
+                </responseDeclaration>
+                <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+                    <defaultValue>
+                        <value>0</value>
+                    </defaultValue>
+                </outcomeDeclaration>
+                <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+            </assessmentItemRef>
+        </assessmentSection>
+    </testPart>
+    
+    <testPart identifier="P02" navigationMode="linear" submissionMode="individual">
+        <assessmentSection identifier="S02" title="Section2" visible="true">
+            <assessmentItemRef identifier="Q03" href="./Q03.xml" timeDependent="false">
+                <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+                    <correctResponse>
+                        <value>ChoiceC</value>
+                    </correctResponse>
+                </responseDeclaration>
+                <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+                    <defaultValue>
+                        <value>0</value>
+                    </defaultValue>
+                </outcomeDeclaration>
+                <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+            </assessmentItemRef>
+        </assessmentSection>
+    </testPart>
+</assessmentTest>

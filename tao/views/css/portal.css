@@ -1,0 +1,183 @@
+@charset "UTF-8";
+                                  /*
+                                 /  \
+                                |    |
+                              --:'''':--
+THIS CODE IS GENERATED          :*_* :
+                                _:"":\___
+AUTOMAGICALLY    * *      ____.' :::     '._
+                * *=====<<=)           \    :
+DO NOT EDIT!     * *      '-'-'\_      /'._.'
+                                  \====:_ ""
+                                 .'     \
+                                :       :
+                               /   :    \
+                              :   .      '.
+                              :  : :      :
+                              :__:-:__.;--'
+                             <*_/   <*/
+/*
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut f├╝r Internationale P├ñdagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ *
+ */
+#control {
+  width: 960px;
+  height: 17px;
+  margin: 0px auto 0px auto;
+  background: #f3f3f3;
+  font-size: 16px; }
+  #control li {
+    display: inline;
+    font-size: 14px; }
+    #control li .language {
+      color: #000000;
+      text-decoration: none;
+      padding: 0;
+      /*overrides padding set to other link of control*/ }
+      #control li .language:link, #control li .language:visited {
+        color: #000000;
+        text-decoration: none; }
+      #control li .language:hover, #control li .language:active {
+        color: #000000;
+        text-decoration: underline; }
+    #control li .action {
+      color: #000000;
+      text-decoration: none; }
+      #control li .action:link, #control li .action:visited {
+        color: #0e5d91;
+        text-decoration: underline; }
+      #control li .action:hover, #control li .action:active {
+        color: #ba122b;
+        text-decoration: underline; }
+    #control li #username {
+      color: #000000;
+      font-weight: bold;
+      font-style: normal; }
+    #control li #connecteduser {
+      font-style: normal; }
+
+.hintMsg {
+  float: left;
+  width: 80%;
+  color: #888;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 5px; }
+
+.tileLabel {
+  float: right;
+  margin-top: 0px;
+  padding-left: 12px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-right: 0px;
+  width: 200px;
+  background-color: #ddd; }
+
+.tileLabelSelected {
+  background-color: #ba122b;
+  color: #fff; }
+
+.portalInfo {
+  float: left;
+  left: 0px; }
+
+.tile {
+  float: right;
+  width: 430px;
+  margin-top: 15px;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 0px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /*box-shadow: 3px 3px 5px #aaa;*/
+  background-color: #eee;
+  font-weight: bolder;
+  color: #666666; }
+
+.tileSelected {
+  background-color: #dddddd;
+  cursor: pointer; }
+
+.Title {
+  display: block; }
+
+.TitleSelected {
+  color: #ba122b; }
+
+div#portal-box ul {
+  margin: 0;
+  padding: 0;
+  margin-left: 20px; }
+  div#portal-box ul li {
+    padding: 2px 60px; }
+div#login-form, div#login-title {
+  margin-top: 35px;
+  width: 100%;
+  text-align: left;
+  padding-left: 80px; }
+
+.ui-widget input {
+  height: 22px;
+  vertical-align: top;
+  width: 120px; }
+
+.loginHeader {
+  float: right;
+  width: 430px;
+  height: 50px;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 0px;
+  background-color: #eee;
+  font-weight: bolder;
+  color: #666666; }
+
+.hintMsg {
+  float: left;
+  width: 80%;
+  font-style: normal;
+  color: #888;
+  font-weight: normal;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 5px; }
+
+.loginBox {
+  float: right;
+  width: 430px;
+  height: auto;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 0px;
+  font-weight: bolder;
+  color: #666; }
+
+.hintLink {
+  float: right;
+  padding-right: 15px;
+  color: #0e5d91; }
+
+/*# sourceMappingURL=portal.css.map */

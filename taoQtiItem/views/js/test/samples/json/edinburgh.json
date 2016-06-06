@@ -1,0 +1,149 @@
+{
+    "identifier": "selectPoint",
+    "serial": "item_547dd7f954387167462245",
+    "qtiClass": "assessmentItem",
+    "attributes": {
+        "identifier": "selectPoint",
+        "title": "Where is Edinburgh?",
+        "label": "",
+        "adaptive": false,
+        "timeDependent": false,
+        "toolName": "TAO",
+        "toolVersion": "3.0"
+    },
+    "body": {
+        "serial": "container_containeritembody_547dd7f954374226937307",
+        "body": "{{interaction_selectpointinteraction_547dd7f9559e9023877499}}",
+        "elements": {
+            "interaction_selectpointinteraction_547dd7f9559e9023877499": {
+                "serial": "interaction_selectpointinteraction_547dd7f9559e9023877499",
+                "qtiClass": "selectPointInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE",
+                    "maxChoices": 1,
+                    "minChoices": 0
+                },
+                "choices": [],
+                "prompt": {
+                    "serial": "container_containerstatic_547dd7f955b31619148792",
+                    "body": "Mark Edinburgh on this map of the United Kingdom.",
+                    "elements": [],
+                    "debug": {
+                        "relatedItem": "item_547dd7f954387167462245"
+                    }
+                },
+                "object": {
+                    "serial": "object_547dd7f955c7e163656237",
+                    "qtiClass": "object",
+                    "attributes": {
+                        "data": "images/uk.png",
+                        "type": "image/png",
+                        "width": 196,
+                        "height": 280
+                    },
+                    "_alt": "UK Map"
+                }
+            }
+        },
+        "debug": {
+            "relatedItem": "item_547dd7f954387167462245"
+        }
+    },
+    "namespaces": {
+        "": "http://www.imsglobal.org/xsd/imsqti_v2p1",
+        "xsi": "http://www.w3.org/2001/XMLSchema-instance"
+    },
+    "schemaLocations": {
+        "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1": "http:\/\/www.imsglobal.org\/xsd\/qti\/qtiv2p1\/imsqti_v2p1.xsd"
+    },
+    "stylesheets": [],
+    "outcomes": {
+        "outcomedeclaration_547dd7f954767033663297": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_547dd7f954767033663297",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "defaultValue": null
+        }
+    },
+    "responses": {
+        "responsedeclaration_547dd7f954608553411332": {
+            "identifier": "RESPONSE",
+            "serial": "responsedeclaration_547dd7f954608553411332",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE",
+                "cardinality": "single",
+                "baseType": "point"
+            },
+            "correctResponses": [
+                "102 113"
+            ],
+            "mapping": [],
+            "areaMapping": [{
+                "shape": "circle",
+                "coords": "102,113,16",
+                "mappedValue": "1"
+            }],
+            "howMatch": "http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response_point",
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": []
+        }
+    },
+    "feedbacks": [],
+    "responseProcessing": {
+        "serial": "response_templatesdriven_547dd7f955e2b502421773",
+        "qtiClass": "responseProcessing",
+        "attributes": [],
+        "processingType": "templateDriven",
+        "responseRules": [{
+            "qtiClass": "responseCondition",
+            "responseIf": {
+                "qtiClass": "responseIf",
+                "expression": {
+                    "qtiClass": "isNull",
+                    "expressions": [{
+                        "qtiClass": "variable",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }]
+                },
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "baseValue",
+                        "attributes": {
+                            "baseType": "float"
+                        },
+                        "value": "0.0"
+                    }
+                }]
+            },
+            "responseElse": {
+                "qtiClass": "responseElse",
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "mapResponsePoint",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }
+                }]
+            }
+        }]
+    }
+}

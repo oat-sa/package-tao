@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Installation Process</title>
+	<link rel="stylesheet" type="text/css" href="../views/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../views/css/custom-theme/jquery-ui-1.8.22.custom.css"/>
+	<link rel="stylesheet" type="text/css" href="css/installation_main.css" />
+	<link rel="stylesheet" type="text/css" href="css/step_registration.css" />
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/step_ie8.css"/>
+	<![endif]-->
+	<script type="text/javascript" src="../views/js/lib/require.js" data-main="js/step_registration"></script>
+</head>
+
+<body>
+	<div id="installation_form" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+			<h2>TAO Installation Wizard</h2>
+			<h1>Registration</h1>
+			<ul id="install_seq">
+				<li><h3>Installation Steps</h3></li>
+                                <li id="step_requirements">1. <a href="#">Requirements Check</a></li>
+				<li id="step_server_setup">2. <a href="#">Server Setup</a></li>
+				<li id="step_database_setup">3. <a href="#">Database Setup</a></li>
+				<li id="step_admin_setup">4. <a href="#">Administrator Setup</a></li>
+                                <li id="step_licenses">5. <a href="#">Licensing Agreement</a></li>
+				<li id="step_registration" class="currentStep">6. Registration</li>
+                                <li id="step_finalization">7. Finalize Installation</li>
+			</ul>
+			<p id="comments">
+                            Please register your TAO installation now, which will give you easy access to technical support.<br/>
+                            We respect your privacy. Therefore we will never sell or share your personal information.<br/> 
+			</p>
+                        <div id="forms_content">
+                          <form autocomplete="off">
+                                <div id="forge-account">
+                                    <span>Checking access to remote TAO Forge registration service...</span>
+                                    <br/>
+                                </div>
+                                <input type="radio" name="radio" id="radio-askreg" value="radio-askreg" />
+                                <label for="radio-askreg">&nbsp;Yes, I want to register my TAO installation and fill in the form.</label><br/>
+                                <ul id="registration_fields"></ul>
+                                <input type="radio" name="radio" id="radio-alreadyreg" value="radio-alreadyreg"/>
+                                <label for="checkbox-forge-credentials">&nbsp;Yes, I want to register my installation using my existing TAO forge account.</label><br />
+                                <!--<input type="checkbox" name="checkbox-forge-credentials" id="checkbox-forge-credentials" class="tao-input" value="checkbox"/>-->
+                                <ul id="support_fields"></ul>
+                                <input type="radio" name="radio" id="radio-noreg" value="radio-noreg"/>
+                                <label for="radio-noreg">&nbsp;No, I do not want to register my installation.</label>
+                                <br/>
+                                
+                                <!--<input id="flag_notreg" type="hidden" class="tao-input" value=""/>
+                                <!--<input id="support_password_var" type="hidden" class="tao-input" value=""/>-->
+                                <input id="redoForm" class="enabled" type="button" value="Re-check" />
+                                <input id="submitForm" class="disabled" type="submit" value="Next" role="button" disabled="disabled"/>
+                                <p id="formComment"><span class="formExample">*</span> Required</p>
+                                </div>
+                            </form>
+                        </div>
+</body>
+</html>

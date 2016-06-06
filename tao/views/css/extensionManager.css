@@ -1,0 +1,87 @@
+/*
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ *
+ */
+#available-extensions-container form{
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+table td.version{
+    min-width: 80px;
+    text-align: center;
+}
+table td.author{
+    min-width: 200px;
+}
+table td.install{
+    min-width: 50px;
+    vertical-align: middle !important;
+    text-align: center;
+}
+
+.dependencies .ext-id{
+    float: left;
+    margin-right: 10px;
+}
+
+.installed { color: green; }
+.actions {
+    text-align: right;
+    padding: 3px;
+}
+
+#installProgress .progress {
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
+    background-color: #999;
+    border: 1px solid #666;
+    border-radius: 5px;
+}
+
+#installProgress .bar {
+    height: 20px;
+    background-color: #6bb;
+    width: 0%;
+    border-radius: 5px;
+}
+
+#installProgress .console {
+    background-color: black;
+    font-family: monospace;
+    color: white;
+    font-size: 10px;
+    height: 100px;
+    overflow-y: scroll;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#installProgress .console p { margin: 0; margin-bottom: 0.5em }
+
+#extensions-manager-container{
+    margin-bottom: 20px;
+}
+
+
+#noExtensions{
+    margin: 5px;
+    padding: 5px;
+}

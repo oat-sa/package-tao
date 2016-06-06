@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+                xmlns:pci="http://www.imsglobal.org/xsd/portableCustomInteraction" 
+                xmlns:xhtml="http://www.w3.org/1999/xhtml" 
+                identifier="pci001" title="PCI 001" adaptive="false" timeDependent="false">
+    
+    <responseDeclaration identifier="graph1" cardinality="single" baseType="identifier"/>
+
+    <itemBody>
+        
+        <p>This is a sample PCI.</p>
+        
+        <customInteraction responseIdentifier="graph1">
+            <pci:portableCustomInteraction customInteractionTypeIdentifier="IW30MX6U48JF9120GJS" hook="graphingInteractionX.js">
+
+                <pci:templateVariableMapping templateIdentifier="X" configurationProperty="areaX" />
+                <pci:templateVariableMapping templateIdentifier="Y" configurationProperty="areaY" />
+
+                <pci:responseSchema href="http://imsglobal.org/schema/json/v1.0/response.json"/>
+                
+                <pci:resources location="http://imsglobal.org/pci/1.0.15/sharedLibraries.xml">
+                    <pci:libraries>
+                        <pci:lib id="/IMSGlobal/raphael_2_0" />
+                        <pci:lib id="/Pacific Metrics/Product One/three_2" />
+                        <pci:lib id="/Pacific Metrics/pickadate" />
+                    </pci:libraries>
+                </pci:resources>
+
+                <pci:properties>
+                    <pci:entry key="x">10</pci:entry>
+                    <pci:entry key="y">30</pci:entry>
+                    <pci:entry key="title">Your Awesome ${title}</pci:entry>
+                    <pci:properties key="border">
+                        <pci:entry key="width">path.to.value</pci:entry>
+                        <pci:entry key="color">method(‘value’)</pci:entry>
+                    </pci:properties>
+                </pci:properties>
+
+                <pci:markup>
+                    <xhtml:div id="graph1" class="graph"></xhtml:div>
+                </pci:markup>
+
+            </pci:portableCustomInteraction>
+        </customInteraction>
+        
+    </itemBody>
+    
+</assessmentItem>

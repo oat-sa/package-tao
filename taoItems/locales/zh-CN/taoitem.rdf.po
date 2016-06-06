@@ -1,0 +1,207 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.1.0-sprint15\n"
+"PO-Revision-Date: 2015-12-23T13:13:57\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: zh-CN\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: zh-CN\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#Item
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Item"
+msgstr "题目"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#Item
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Item"
+msgstr "题目"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContent
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Item Content"
+msgstr "题目内容"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContent
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Item Content"
+msgstr "题目内容"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContentSourceName
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Original Filename"
+msgstr "原始文件名"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemContentSourceName
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Original Filename"
+msgstr "原始文件名"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModels
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Item Models"
+msgstr "题目模型"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModels
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Item Models"
+msgstr "题目模型"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModel
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Item Model"
+msgstr "题目模型"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModel
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Item Model"
+msgstr "题目模型"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemRuntime
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Runtime"
+msgstr "执行时间"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemRuntime
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Runtime"
+msgstr "执行时间"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ModelService
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "itemmodel service"
+msgstr "题目模型服务"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ModelService
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "service of the item model"
+msgstr "题目模型服务"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#DataFileName
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Data File Name"
+msgstr "数据文件名"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#DataFileName
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "the filename used to store the item content for this model"
+msgstr "这个模型使用储存题目内容的文件名"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ModelStatus
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Model Status"
+msgstr "模型状态"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#StatusStable
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Stable"
+msgstr "稳定"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#StatusStable
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "This item  model can be used in production"
+msgstr "这个题目模型可以用在生产上"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#StatusDeprecated
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Deprecated"
+msgstr "已废弃"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#StatusDeprecated
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "This item model is not supported anymore, we advise to migrate your items"
+msgstr "不再支援这个题目模型了，我们建议您迁移题目"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#StatusDevelopment
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Development"
+msgstr "开发"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#StatusDevelopment
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "this item model has not been tested in a production environment, we advise to be carefull with it"
+msgstr "这个题目的模型没有在生产环境中通过测试，我们建议要当心它"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#StatusExperimental
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Experimental"
+msgstr "实验性"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#StatusExperimental
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "this item model is still in conception, but you can try it, give your feedback and it will be improved."
+msgstr "这个项目的模型仍在试用，请您尝试和提出你的反馈，我们会改善。"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModelStatus
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Status"
+msgstr "状态"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemModelStatus
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The status of an item model"
+msgstr "题目模型的状态"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemsManagerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Items Manager"
+msgstr "题目管理器"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemsManagerRole
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The Items Manager Role"
+msgstr "题目主管角色"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemAuthor
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Item Author"
+msgstr "题目作者"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ItemAuthor
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The Item Author Role"
+msgstr "题目作者角色"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ModelTarget
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Deliverable"
+msgstr "可交付"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#ModelTarget
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Items of model are deliverable"
+msgstr "可交付题目模型"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#DeliveryTarget
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Delivery Target"
+msgstr "递送目标"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#DeliveryTarget
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Delivery Target"
+msgstr "递送目标"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#OnlineTarget
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Online Delivery Target"
+msgstr "在线遞送目标"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#OnlineTarget
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Online Delivery Target"
+msgstr "在线遞送目标"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#PaperbasedTarget
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Paper-based Delivery Target"
+msgstr "纸笔遞送目标"
+
+# http://www.tao.lu/Ontologies/TAOItem.rdf#PaperbasedTarget
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Paper-based Delivery Target"
+msgstr "纸笔遞送目标"
+

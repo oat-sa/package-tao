@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/Ontologies/TAODelivery.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamItemPath">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Item Path
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamItemPath
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Item Path]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Item Path]
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamItemPath
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[Item Path]]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamItemDataPath">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Item Private Data Path
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamItemDataPath
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Item Private Data Path]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Item Private Data Path]
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamItemDataPath
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[Item Private Data Path]]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamResultserver">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Resultserver
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamResultserver
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Resultserver]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Resultserver
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamResultserver
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[Resultserver]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamItemUri">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Item Uri
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamItemUri
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Item Uri]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Item Uri
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#FormalParamItemUri
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[Item Uri]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAODelivery.rdf#ServiceItemRunner">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Item Runner
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#ServiceItemRunner
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Item Runner]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Embed a run an item into a Delivery. This service initialize the TAO Apis and contexts
+    @subject http://www.tao.lu/Ontologies/TAODelivery.rdf#ServiceItemRunner
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[Embed a run an item into a Delivery. This service initialize the TAO Apis and contexts]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

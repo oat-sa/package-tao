@@ -1,0 +1,254 @@
+/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+
+.noUi-target,
+.noUi-target * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -ms-touch-action: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.noUi-base {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.noUi-origin {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.noUi-handle {
+    position: relative;
+    z-index: 1;
+}
+.noUi-stacking .noUi-handle {
+    /* This class is applied to the lower origin when
+       its values is > 50%. */
+    z-index: 10;
+}
+.noUi-stacking + .noUi-origin {
+    /* Fix stacking order in IE7, which incorrectly
+       creates a new context for the origins. */
+    *z-index: -1;
+}
+.noUi-state-tap .noUi-origin {
+}
+.noUi-state-drag * {
+    cursor: inherit !important;
+}
+
+/* Slider size and handle placement;
+ */
+.noUi-horizontal {
+    height: 11px;
+}
+.noUi-horizontal .noUi-handle {
+    width: 10px;
+    height: 17px;
+    left: -5px;
+    top: -4px;
+}
+
+.noUi-horizontal .noUi-handle:after {
+    border-top: 3px solid $uiClickableActiveBg;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    content: "";
+    left: 0;
+    position: absolute;
+    bottom: -3px;
+    width: 0;
+}
+
+.qti-slider-values{
+    margin-top: 6px !important;
+}
+
+.noUi-horizontal .noUi-handle {
+    &:hover:after {
+        border-top: 3px solid $uiClickableHoverBg;
+    }
+    &.noUi-active {
+        &:after {
+            border-top-color: $uiClickableHoverBg;
+        }
+    }
+}
+
+.noUi-horizontal.noUi-extended {
+    padding: 0 15px;
+}
+.noUi-horizontal.noUi-extended .noUi-origin  {
+    right: -15px;
+}
+.noUi-vertical {
+    width: 11px;
+    height: 200px;
+    display: inline-block;
+}
+.noUi-vertical .noUi-handle {
+    width: 17px;
+    height: 10px;
+    left: -4px;
+    top: -5px;
+}
+.noUi-vertical.noUi-extended {
+    padding: 15px 0;
+}
+.noUi-vertical.noUi-extended .noUi-origin  {
+    bottom: -15px;
+}
+
+/* Styling;
+ */
+.noUi-background {
+    background: $uiGeneralContentBg;
+}
+.noUi-connect {
+    background: $uiClickableDefaultBg;
+}
+.noUi-origin {
+}
+.noUi-target {
+    @include simple-border()
+}
+
+/* Handles and cursors;
+ */
+.noUi-dragable {
+    cursor: w-resize;
+}
+.noUi-vertical .noUi-dragable {
+    cursor: n-resize;
+}
+.noUi-handle {
+    background: $uiClickableActiveBg;
+    color: $uiClickableActiveBg;
+    cursor: default;
+}
+
+.noUi-active, .noUi-handle:hover{
+    background:$uiClickableHoverBg;
+    color: $uiClickableHoverBg;
+}
+
+.noUi-handle:after {
+    left: 17px;
+}
+.noUi-vertical .noUi-handle:before,
+.noUi-vertical .noUi-handle:after {
+    width: 14px;
+    height: 1px;
+    left: 6px;
+    top: 14px;
+}
+.noUi-vertical .noUi-handle:after {
+    top: 17px;
+}
+
+/* Disabled state;
+ */
+[disabled].noUi-connect,
+[disabled] .noUi-connect {
+    background: #B8B8B8;
+}
+[disabled] .noUi-handle {
+    cursor: not-allowed;
+}
+
+.noUi-horizontal {
+
+    .step-marker {
+        position:relative;
+        //margin-bottom: 10px;
+        span {
+            font-size: 10px;
+            position: relative;
+            display:block;
+            float:left;
+            text-align:center;
+            min-height: 10px;
+            &:before {
+                width: 1px;
+                height: 5px;
+                position: absolute;
+                content: '';
+                background: whiten($textColor, .15);
+                left: 50%;
+            }
+        }
+        &:before {
+        }
+        &.after {
+            top: 5px;
+            span {
+                &:before {
+                    top: -4px;
+                }
+            }
+        }
+        &.before {
+            top: -28px;
+            span {
+                &:before {
+                    top: 13px;
+                }
+            }
+        }
+    }
+}
+
+.item-editor-sidebar .noUi-target {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.noUi-vertical-wrapper {
+    position: relative;
+    display: inline-block;
+    .step-marker {
+        position:absolute;
+        height: 100%;
+        top: 0;
+        span {
+            font-size: 10px;
+            position: relative;
+            display: block;
+            &:before {
+                width: 5px;
+                height: 1px;
+                position: absolute;
+                content: '';
+                background: whiten($textColor, .15);
+                top: 50%;
+            }
+        }
+        &:before {
+        }
+
+        &.after {
+            left: 20px;
+            span {
+                &:before {
+                    left: -9px;
+                }
+            }
+        }
+        &.before {
+            span {
+                &:before {
+                    left: -40%;
+                }
+            }
+        }
+    }
+}
+

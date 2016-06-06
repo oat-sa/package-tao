@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="templates_driven_mixed" title="Mixed Processing" timeDependent="false" adaptive="false" xml:lang="en-US">
+  <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+    <correctResponse>
+      <value>choice_1</value>
+    </correctResponse>
+  </responseDeclaration>
+  <responseDeclaration identifier="response_1" cardinality="single" baseType="identifier">
+    <correctResponse>
+
+      <value>choice_3</value>
+    </correctResponse>
+    <mapping defaultValue="0">
+      <mapEntry mapKey="choice_3" mappedValue="1"/>
+    </mapping>
+  </responseDeclaration>
+  <outcomeDeclaration identifier="SCORE" baseType="integer" cardinality="single"/>
+  <itemBody>
+
+    <div>
+      <div>This is the stimulus, simple back import<br/>
+<choiceInteraction shuffle="false" maxChoices="1" responseIdentifier="RESPONSE"><prompt>question</prompt><simpleChoice identifier="choice_1">wrong</simpleChoice><simpleChoice identifier="choice_2">right</simpleChoice></choiceInteraction>
+
+<choiceInteraction shuffle="false" maxChoices="1" responseIdentifier="response_1"><prompt>another question<br/></prompt><simpleChoice identifier="choice_3">right aswell<br/></simpleChoice><simpleChoice identifier="choice_4">even wronger<br/></simpleChoice></choiceInteraction>
+ &#xA0;</div>
+    </div>
+
+  </itemBody>
+  <responseProcessing>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE"/>
+          <correct identifier="RESPONSE"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+
+      <responseIf>
+        <not>
+          <isNull>
+            <variable identifier="response_1"/>
+          </isNull>
+        </not>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+
+            <mapResponse identifier="response_1"/>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+  </responseProcessing>
+</assessmentItem>

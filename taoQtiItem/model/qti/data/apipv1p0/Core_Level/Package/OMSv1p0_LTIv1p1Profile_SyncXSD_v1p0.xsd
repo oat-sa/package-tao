@@ -1,0 +1,528 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<xs:schema xmlns="http://www.imsglobal.org/services/ltiv1p1/xsd/imsoms_v1p0"
+    targetNamespace="http://www.imsglobal.org/services/ltiv1p1/xsd/imsoms_v1p0"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    version="IMS LTI 1.1 OMS 1.0"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+    <xs:annotation>
+        <xs:documentation>
+            XSD Data File Information
+            -------------------------
+            Author:         Colin Smythe
+            Date:           31st January, 2011
+            Version:        1.0
+            Status:         Final Release
+            Description:    This is the LTIv1.1 Outcomes Profile for the LISv2.0 specification. This 
+                            profile supports only the Result Manager interface with the delete*, read* 
+                            and replace* operations. The data model is also profiled to remove the 
+                            redundant data objects e.g. ResultValueRecord, etc. This is the XSD for the POX-based service binding.
+
+            History:        Version 1.0: This is the first formal release of the LTIv1.1 Outcomes Profile.
+
+            PROFILE:        This is the "LTIv1p1 Outcomes" Profile. THIS IS A PROFILE OF THE BASE SPECIFICATION.
+                            The changes to the base specification are:
+                            * The "Context" class/complexType and set of XML attributes have been deleted;
+                            * The "ExtensionField" class/complexType and set of XML attributes have been deleted;
+                            * The "GUIDSet" class/complexType and set of XML attributes have been deleted;
+                            * The "IMSExtension" class/complexType and set of XML attributes have been deleted;
+                            * The "LineItem" class/complexType and set of XML attributes have been deleted;
+                            * The "LineItemRecord" class/complexType and set of XML attributes have been deleted;
+                            * The "LineItemRecordSet" class/complexType and set of XML attributes have been deleted;
+                            * The "LineItemType" class/complexType and set of XML attributes have been deleted;
+                            * The "Metadata" class/complexType and set of XML attributes have been deleted;
+                            * The "OrderedValue" class/complexType and set of XML attributes have been deleted;
+                            * The "PropertySet" class/complexType and set of XML attributes have been deleted;
+                            * The "QueryObject" class/complexType and set of XML attributes have been deleted;
+                            * The "ReplaceStatusCode" class/complexType and set of XML attributes have been deleted;
+                            * The "ReplaceStatusCodes" class/complexType and set of XML attributes have been deleted;
+                            * The "ResultRecordSet" class/complexType and set of XML attributes have been deleted;
+                            * The "ResultStatus" class/complexType and set of XML attributes have been deleted;
+                            * The "ResultValue" class/complexType and set of XML attributes have been deleted;
+                            * The "ResultValueRecord" class/complexType and set of XML attributes have been deleted;
+                            * The "ResultValueRecordSet" class/complexType and set of XML attributes have been deleted;
+                            * The "ResultValueSelection" class/complexType and set of XML attributes have been deleted;
+                            * The "SequenceIdentifier" class/complexType and set of XML attributes have been deleted;
+                            * The "ValueList" class/complexType and set of XML attributes have been deleted;
+                            * The "ValueRange" class/complexType and set of XML attributes have been deleted;
+                            * The "Result" class/complexType has been modified by:-
+                              - The "personSourcedId" attribute has been prohibited;
+                              - The "lineItemSourcedId" attribute has been prohibited;
+                              - The "date" attribute has been prohibited;
+                              - The "dataSource" attribute has been prohibited;
+                         
+            HAND CHANGES:   The manual changes made to create this XSD are:
+                            * The namespace has been changed to 'http://www.imsglobal.org/services/ltiv1p1/xsd/imsoms_v1p0';
+                            * The 'xs:schema version' attribute value has been changed to 'IMS LTI 1.1 OMS 1.0';
+                            * The location of the 'imsx_description' element within the 'imsx_StatusInfo.Type' complexType has been moved;
+                            * The value of the 'minOccurs' attribute for the 'result' element in the 'resultRecord.Type' complexType has been changed to '0';
+                            * The child element in for the 'deleteResultRequest' has been changed from 'sourcedId' to 'resultRecord';
+                            * The child element in for the 'readResultRequest' has been changed from 'sourcedId' to 'resultRecord';
+                            * The child element in for the 'readResultResponse' has been changed from 'resultRecord' to 'result';
+                            * The 'sourcedId' child element in the 'replaceResultRequest' element has been removed.
+
+            License:        IPR, License and Distribution Notices
+
+                            This machine readable file is derived from IMS Global Learning Consortium (GLC) specification IMS [spec name] Version [x.x]
+                            found at http://www.imsglobal.org/[xxx] and the original IMS GLC schema binding or code base
+                            http://www.imsglobal.org/[binding document].
+
+                            Recipients of this document are requested to submit, with their comments, notification of any
+                            relevant patent claims or other intellectual property rights of which they may be aware that might be
+                            infringed by the schema binding contained in this document.
+
+                            IMS GLC takes no position regarding the validity or scope of any intellectual property or other
+                            rights that might be claimed to pertain to the implementation or use of the technology described in this
+                            document or the extent to which any license under such rights might or might not be available; neither
+                            does it represent that it has made any effort to identify any such rights. Information on IMS GLCs
+                            procedures with respect to rights in IMS GLC specifications can be found at the IMS GLC Intellectual Property
+                            Rights web page: http://www.imsglobal.org/ipr/imsipr_policyFinal.pdf.
+
+                            Copyright (c) IMS Global Learning Consortium 1999-2011. All Rights Reserved.
+
+                            License Notice for Users
+
+                            Users of products or services that include this document are hereby granted a worldwide, royalty-free, 
+                            non-exclusive license to use this document. 
+
+                            Distribution Notice for Developers
+
+                            Developers of products or services that are not original incorporators of this document and 
+                            have not changed this document, that is, are distributing a software product that incorporates this 
+                            document as is from a third-party source other than IMS, are hereby granted permission to copy,
+                            display and distribute the contents of this document in any medium for any purpose without fee or 
+                            royalty provided that you include this IPR, License and Distribution notice in its entirety on ALL
+                            copies, or portions thereof.
+
+                            Developers of products or services that are original incorporators of this document and wish 
+                            to provide distribution of this document as is or with modifications and developers of products and 
+                            services that are not original incorporators of this document and have changed this document, are
+                            required to register with the IMS GLC community on the IMS GLC website as described in the following two
+                            paragraphs:-
+
+                            *  If you wish to distribute this document as is, with no modifications, you are hereby granted 
+                               permission to copy, display and distribute the contents of this document in any medium for any 
+                               purpose without fee or royalty provided that you include this IPR, License and Distribution notice in
+                               its entirety on ALL copies, or portions thereof, that you make and you complete a valid license 
+                               registration with IMS and receive an email from IMS granting the license. To register, follow the 
+                               instructions on the IMS website: http://www.imsglobal.org/specificationdownload.cfm. Once 
+                               registered you are granted permission to transfer unlimited distribution rights of this document for the 
+                               purposes of third-party or other distribution of your product or service that incorporates this 
+                               document as long as this IPR, License and Distribution notice remains in place in its entirety; 
+
+                            *  If you wish to create and distribute a derived work from this document, you are hereby 
+                               granted permission to copy, display and distribute the contents of the derived work in any medium for 
+                               any purpose without fee or royalty provided that you include this IPR, License and Distribution 
+                               notice in its entirety on ALL copies, or portions thereof, that you make and you complete a valid 
+                               profile registration with IMS GLC and receive an email from IMS GLC granting the license. To register, follow
+                               the instructions on the IMS GLC website: http://www.imsglobal.org/profile/. Once registered you are 
+                               granted permission to transfer unlimited distribution rights of the derived work for the purposes of 
+                               third-party or other distribution of your product or service that incorporates the derived work as long 
+                               as this IPR, License and Distribution notice remains in place in its entirety. 
+
+                            The limited permissions granted above are perpetual and will not be revoked by IMS GLC or its 
+                            successors or assigns.
+
+                            THIS SPECIFICATION IS BEING OFFERED WITHOUT ANY WARRANTY WHATSOEVER, AND IN PARTICULAR, ANY WARRANTY OF NONINFRINGEMENT IS
+                            EXPRESSLY DISCLAIMED. ANY USE OF THIS SPECIFICATION SHALL BE MADE ENTIRELY AT THE IMPLEMENTERS OWN RISK, AND NEITHER THE CONSORTIUM
+                            NOR ANY OF ITS MEMBERS OR SUBMITTERS, SHALL HAVE ANY LIABILITY WHATSOEVER TO ANY IMPLEMENTER OR THIRD PARTY FOR ANY DAMAGES OF
+                            ANY NATURE WHATSOEVER, DIRECTLY OR INDIRECTLY, ARISING FROM THE USE OF THIS SPECIFICATION.
+
+            UML Source Service File Information
+            -----------------------------------
+            Choreography:     Sync
+            Status Object:    StatusInfo
+
+            Source UML File Information
+            ---------------------------
+            The source file information must be supplied as an XMI file (without diagram layout information).
+            The supported UML authoring tools are:
+            (a) Poseidon - v6 (and later)
+
+            Source XSLT File Information
+            ----------------------------
+            XSL Generator:    UMLtoPOXTransformv0p9p5.xsl
+            XSLT Processor:   Xalan
+            Release:          1.0 Beta 4
+            Date:             31st March, 2011
+
+            IMS GLC Auto-generation Binding Tool-kit (I-BAT)
+            ------------------------------------------------
+            This file was auto-generated using the IMS GLC Binding Auto-generation Tool-kit (I-BAT).  While every
+            attempt has been made to ensure that this tool auto-generates the files correctly, users should be aware
+            that this is an experimental tool.  Permission is given to make use of this tool.  IMS GLC makes no
+            claim on the materials created by third party users of this tool.  Details on how to use this tool
+            are contained in the IMS GLC "I-BAT" Documentation available at the IMS GLC web-site.
+
+            Tool Copyright:  2005-2011 (c) IMS Global Learning Consortium Inc.  All Rights Reserved.
+        </xs:documentation>
+    </xs:annotation>
+
+    <!-- Generate Global Attributes *********************************************************************** -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate Global List Types *********************************************************************** -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate Namespaced extension Group  ************************************************************* -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate Special DataTypes  ********************************************************************** -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the enumerated simpleType declarations ************************************************** -->
+
+    <xs:simpleType name="imsx_CodeMajor.Type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="success"/>
+            <xs:enumeration value="processing"/>
+            <xs:enumeration value="failure"/>
+            <xs:enumeration value="unsupported"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="imsx_Severity.Type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="status"/>
+            <xs:enumeration value="warning"/>
+            <xs:enumeration value="error"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="imsx_CodeMinorValue.Type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="fullsuccess"/>
+            <xs:enumeration value="createsuccess"/>
+            <xs:enumeration value="nosourcedids"/>
+            <xs:enumeration value="idallocfail"/>
+            <xs:enumeration value="overflowfail"/>
+            <xs:enumeration value="idallocinusefail"/>
+            <xs:enumeration value="invaliddata"/>
+            <xs:enumeration value="incompletedata"/>
+            <xs:enumeration value="partialdatastorage"/>
+            <xs:enumeration value="unknownobject"/>
+            <xs:enumeration value="unknownquery"/>
+            <xs:enumeration value="deletefailure"/>
+            <xs:enumeration value="targetreadfailure"/>
+            <xs:enumeration value="savepointerror"/>
+            <xs:enumeration value="savepointsyncerror"/>
+            <xs:enumeration value="toomuchdata"/>
+            <xs:enumeration value="unsupportedlineitemtype"/>
+            <xs:enumeration value="unknowncontext"/>
+            <xs:enumeration value="unauthorizedresultreplace"/>
+            <xs:enumeration value="unknownperson"/>
+            <xs:enumeration value="gradingnotpermitted"/>
+            <xs:enumeration value="invalidresult"/>
+            <xs:enumeration value="resultalreadyposted"/>
+            <xs:enumeration value="unknownextension"/>
+            <xs:enumeration value="unknownvocabulary"/>
+            <xs:enumeration value="unknownmdvocabulary"/>
+            <xs:enumeration value="targetisbusy"/>
+            <xs:enumeration value="linkfailure"/>
+            <xs:enumeration value="unauthorizedrequest"/>
+            <xs:enumeration value="unsupportedLIS"/>
+            <xs:enumeration value="unsupportedLISoperation"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="imsx_GWSVersionValue.Type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="V1.0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="imsx_codeMajor" type="imsx_CodeMajor.Type"/>
+
+    <xs:element name="imsx_severity" type="imsx_Severity.Type"/>
+
+    <xs:element name="imsx_codeMinorFieldValue" type="imsx_CodeMinorValue.Type"/>
+
+    <xs:element name="imsx_version" type="imsx_GWSVersionValue.Type"/>
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the simpleType elements based on IMS data-types (Parameter) ***************************** -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the simpleType elements based on IMS data-types (Derived) ******************************* -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the simpleType elements based on IMS data-types (Union) ********************************* -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the simpleType elements based on IMS data-types (Complex) ******************************* -->
+
+    <xs:element name="imsx_codeMinorFieldName" type="xs:string" default="TargetEndSystem" />
+
+    <xs:element name="imsx_description" type="xs:string" />
+
+    <xs:element name="imsx_messageIdentifier" type="xs:string" />
+
+    <xs:element name="imsx_messageRefIdentifier" type="xs:string" />
+
+    <xs:element name="imsx_operationRefIdentifier" type="xs:string" />
+
+    <xs:element name="imsx_sendingAgentIdentifier" type="xs:normalizedString" />
+
+    <xs:element name="language" type="xs:normalizedString" />
+
+    <xs:element name="refAgentInstanceID" type="xs:normalizedString" />
+
+    <xs:element name="textString" type="xs:string" />
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the derived data-type elements based upon simpleType ************************************ -->
+
+    <xs:simpleType name="GUID.Type">
+        <xs:restriction base="xs:normalizedString"/>
+    </xs:simpleType>
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the derived data-type elements based upon derived simpleType **************************** -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the data-type ComplexTypes ************************************************************** -->
+
+    <xs:complexType name="imsx_CodeMinor.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The CodeMinor complexType is the container for the set of code minor status codes reported in the associated IMS SOAP message header.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="imsx_codeMinorField" minOccurs = "1" maxOccurs = "unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="imsx_CodeMinorField.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The CodeMinorField complexType is the container a single code minor status code.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="imsx_codeMinorFieldName" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element ref="imsx_codeMinorFieldValue" minOccurs = "1" maxOccurs = "1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="imsx_RequestHeaderInfo.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The RequestHeaderInfo complexType is the container for the information to be placed in the SOAP/POX header for the request message transmitted for the associated operation call.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="imsx_version" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element ref="imsx_messageIdentifier" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element ref="imsx_sendingAgentIdentifier" minOccurs = "0" maxOccurs = "1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="imsx_ResponseHeaderInfo.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The ResponseHeaderInfo complexType is the container for the information to be placed in the SOAP/POX header for the response message transmitted for the associated operation call.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="imsx_version" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element ref="imsx_messageIdentifier" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element ref="imsx_sendingAgentIdentifier" minOccurs = "0" maxOccurs = "1"/>
+            <xs:element ref="imsx_statusInfo" minOccurs = "1" maxOccurs = "1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="imsx_StatusInfo.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The StatusInfo complexType is the container for the status code and associated information returned within the SOAP message as defined by the IMS GWSv1.0 specification.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="imsx_codeMajor" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element ref="imsx_severity" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element ref="imsx_description" minOccurs = "0" maxOccurs = "1"/>
+            <xs:element ref="imsx_messageRefIdentifier" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element ref="imsx_operationRefIdentifier" minOccurs = "0" maxOccurs = "unbounded"/>
+            <xs:element ref="imsx_codeMinor" minOccurs = "0" maxOccurs = "1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Result.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The Result complexType is the container for a Result. Each Result identifies the Person to whom the result is assigned and the set of attributes for the result value.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="resultScore" minOccurs = "0" maxOccurs = "1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ResultRecord.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The ResultRecord complexType is the container for the association of a Result object with its globally unique identifier i.e. its sourcedId
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="sourcedGUID" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element ref="result" minOccurs = "0" maxOccurs = "1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="SourcedGUID.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The SourcedGUID complexType is the container for the extended sourcedId. The refAgentInstamceID permits multiple endpoint differentiation.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="refAgentInstanceID" minOccurs = "0" maxOccurs = "1"/>
+            <xs:element ref="sourcedId" minOccurs = "1" maxOccurs = "1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Text.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The text complexType is the container for a language specific string. The language is denoted using the ISO 639 code set. See the corresponding VDEX file that contains the permitted value-space enumeration.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="language" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element ref="textString" minOccurs = "1" maxOccurs = "1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- ================================================================================================== -->
+
+    <!-- Declaration of the elements (Complex) ************************************************************ -->
+
+    <xs:element name="imsx_codeMinor" type="imsx_CodeMinor.Type"/>
+
+    <xs:element name="imsx_codeMinorField" type="imsx_CodeMinorField.Type"/>
+
+    <xs:element name="imsx_statusInfo" type="imsx_StatusInfo.Type"/>
+
+    <xs:element name="result" type="Result.Type"/>
+
+    <xs:element name="resultScore" type="Text.Type"/>
+
+    <xs:element name="sourcedGUID" type="SourcedGUID.Type"/>
+
+    <!-- ================================================================================================== -->
+
+    <!-- Declaration of the elements (Derived) ************************************************************* -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Declaration of the message parameter elements **************************************************** -->
+
+    <xs:element name="sourcedId" type="GUID.Type"/>
+
+    <xs:element name="resultRecord" type="ResultRecord.Type"/>
+
+    <!-- ================================================================================================== -->
+
+    <!-- Declaration of the message body elements ********************************************************* -->
+
+    <xs:element name="deleteResultRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="resultRecord"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="deleteResultResponse">
+        <xs:complexType/>
+    </xs:element>
+
+    <xs:element name="readResultRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="resultRecord" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="readResultResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="result" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="replaceResultRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="resultRecord"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="replaceResultResponse">
+        <xs:complexType/>
+    </xs:element>
+
+    <!-- ================================================================================================== -->
+
+    <!-- Declaration of the POX service messaging structures ********************************************** -->
+
+    <xs:complexType name="imsx_POXBody.Type" mixed="false">
+        <xs:choice>
+            <xs:element ref="deleteResultRequest" minOccurs="1" maxOccurs="1" />
+            <xs:element ref="deleteResultResponse" minOccurs="1" maxOccurs="1" />
+            <xs:element ref="readResultRequest" minOccurs="1" maxOccurs="1" />
+            <xs:element ref="readResultResponse" minOccurs="1" maxOccurs="1" />
+            <xs:element ref="replaceResultRequest" minOccurs="1" maxOccurs="1" />
+            <xs:element ref="replaceResultResponse" minOccurs="1" maxOccurs="1" />
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="imsx_POXEnvelope.Type" mixed="false">
+        <xs:sequence>
+            <xs:element ref="imsx_POXHeader" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element ref="imsx_POXBody" minOccurs = "1" maxOccurs = "1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="imsx_POXHeader.Type" mixed="false">
+        <xs:choice>
+            <xs:element ref="imsx_POXRequestHeaderInfo" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element ref="imsx_POXResponseHeaderInfo" minOccurs = "1" maxOccurs = "1"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:element name="imsx_POXBody" type="imsx_POXBody.Type"/>
+
+    <xs:element name="imsx_POXHeader" type="imsx_POXHeader.Type"/>
+
+    <xs:element name="imsx_POXRequestHeaderInfo" type="imsx_RequestHeaderInfo.Type"/>
+
+    <xs:element name="imsx_POXResponseHeaderInfo" type="imsx_ResponseHeaderInfo.Type"/>
+
+    <!-- ================================================================================================== -->
+
+    <!-- Declaration of the root element(s) *************************************************************** -->
+
+    <xs:element name="imsx_POXEnvelopeRequest" type="imsx_POXEnvelope.Type"/>
+    <xs:element name="imsx_POXEnvelopeResponse" type="imsx_POXEnvelope.Type"/>
+
+    <!-- ================================================================================================== -->
+
+</xs:schema>

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+	xml:base="http://www.imsglobal.org/imspurl/lis/v1/vocab/person#" 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#" 
+	xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#"
+	xmlns:taolti="http://www.tao.lu/Ontologies/TAOLTI.rdf#" 
+>
+  <!-- Institute roles -->  
+  <rdf:Description rdf:about="http://www.imsglobal.org/imspurl/lis/v1/vocab/person#Learner">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIRole"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[LTI Learner]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[The LTI Institution Learner Role]]></rdfs:comment>
+  	<taolti:RoleURN><![CDATA[urn:lti:instrole:ims/lis/Learner]]></taolti:RoleURN>
+  	<generis:includesRole rdf:resource="http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#Learner"/>
+  	<generis:isSystem rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.imsglobal.org/imspurl/lis/v1/vocab/person#Instructor">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIRole"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[LTI Instructor]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[The LTI Institution Instructor Role]]></rdfs:comment>
+  	<taolti:RoleURN><![CDATA[urn:lti:instrole:ims/lis/Instructor]]></taolti:RoleURN>
+  	<generis:includesRole rdf:resource="http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#Instructor"/>
+  	<generis:isSystem rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.imsglobal.org/imspurl/lis/v1/vocab/person#Student">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIRole"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[LTI Institution Student]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[The LTI Student Role]]></rdfs:comment>
+  	<taolti:RoleURN><![CDATA[urn:lti:instrole:ims/lis/Student]]></taolti:RoleURN>
+  	<generis:includesRole rdf:resource="http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#Learner"/>
+  	<generis:isSystem rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True"/>
+  </rdf:Description>
+    
+  <!-- System roles -->  
+  <rdf:Description rdf:about="http://www.imsglobal.org/imspurl/lis/v1/vocab/person#Administrator">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIRole"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[LTI Administrator]]></rdfs:label>
+  	<rdfs:comment xml:lang="en-US"><![CDATA[The LTI Administrator Role]]></rdfs:comment>
+  	<taolti:RoleURN><![CDATA[urn:lti:sysrole:ims/lis/Administrator]]></taolti:RoleURN>
+  	<generis:includesRole rdf:resource="http://www.imsglobal.org/imspurl/lis/v1/vocab/membership#Administrator"/>
+  	<generis:isSystem rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True"/>
+  </rdf:Description>
+
+ </rdf:RDF>

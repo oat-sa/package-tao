@@ -1,0 +1,373 @@
+@import "inc/bootstrap";
+
+.qti-navigator {
+    padding: 0;
+
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    span {
+        display: inline-block;
+    }
+
+    .collapsed .collapsible-panel, .masked, &.masked {
+        display: none !important;
+    }
+
+    .collapsed {
+        .icon-up {
+            display: none!important;
+        }
+
+        .icon-down {
+            display: inline-block!important;
+        }
+    }
+
+    &.collapsed {
+        flex: 0 0 40px;
+
+        ul {
+            padding: 0!important;
+        }
+
+        .qti-navigator-text,
+        .qti-navigator-info > .qti-navigator-label,
+        .qti-navigator-part > .qti-navigator-label,
+        .qti-navigator-section > .qti-navigator-label,
+        .qti-navigator-message {
+            display: none !important;
+        }
+
+        .qti-navigator-label {
+            padding: 0 2px!important;
+        }
+
+        .qti-navigator-icon, .icon {
+            width: auto;
+        }
+
+        .qti-navigator-counter {
+            float: none;
+            text-align: center;
+        }
+
+        .qti-navigator-collapsible {
+            text-align: center;
+
+            .qti-navigator-collapse {
+                display: none;
+            }
+            .qti-navigator-expand {
+                display: block;
+            }
+        }
+
+        .qti-navigator-info {
+            &.collapsed .collapsible-panel {
+                display: block !important;
+            }
+
+            .qti-navigator-label span {
+                display: block;
+                text-align: center;
+                width: auto;
+                line-height: 30px;
+            }
+        }
+
+        .qti-navigator-filter {
+            span {
+                display: none;
+            }
+            &.active {
+                span {
+                    display: block;
+                    padding: 3px 0;
+                    border: 0 none;
+                    width: 39px;
+                }
+            }
+        }
+
+        .qti-navigator-item,
+        .qti-navigator-linear,
+        .qti-navigator-linear-part {
+            padding-left: 2px;
+            text-align: center;
+
+            .qti-navigator-icon, .icon {
+                line-height: 34px;
+            }
+        }
+
+        .qti-navigator-item {
+            .qti-navigator-icon {
+                padding-right: 100px;
+                padding-left: 9px;
+            }
+        }
+
+        .qti-navigator-linear,
+        .qti-navigator-linear-part {
+            padding: 0 0 8px 0;
+
+            .icon {
+                display: block;
+            }
+        }
+
+        .qti-navigator-actions button {
+            padding: 0 9px 0 5px;
+        }
+    }
+
+    &.scope-test-section {
+        .qti-navigator-part > .qti-navigator-label {
+            display: none !important;
+        }
+    }
+
+    .qti-navigator-label {
+        display: inline-block;
+        min-width: 100%;
+        line-height: 30px;
+        padding: 0 6px;
+
+        .icon-up, .icon-down {
+            float: right;
+            line-height: 30px;
+        }
+
+        .icon-down {
+            display: none;
+        }
+    }
+
+    .qti-navigator-icon, .icon {
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        width: 22px;
+    }
+
+    .unseen {
+        .qti-navigator-icon {
+            cursor: default;
+        }
+    }
+
+    .icon-answered:before {
+        @include icon-radio-checked();
+    }
+    .icon-viewed:before {
+        @include icon-preview();
+    }
+    .icon-flagged:before {
+        @include icon-anchor();
+    }
+    .icon-unanswered:before,
+    .icon-unseen:before {
+        @include icon-radio();
+    }
+
+    .collapsible, .qti-navigator-item {
+        & > .qti-navigator-label {
+            cursor: pointer;
+        }
+    }
+
+    .qti-navigator-counter {
+        text-align: right;
+        float: right;
+        @include font-size(12);
+    }
+
+    .qti-navigator-actions {
+        text-align: center;
+    }
+
+    .qti-navigator-collapsible {
+        background-color: $uiClickableActiveBg;
+        color: $textColor;
+        border-top: 1px solid white();
+        cursor: pointer;
+        padding: 0 8px;
+        text-align: right;
+        display: none;
+
+        .icon {
+            @include font-size(20);
+            line-height: 30px;
+            width: auto;
+            color: $textHighlight;
+        }
+
+        .qti-navigator-expand {
+            display: none;
+        }
+    }
+
+    &.collapsible .qti-navigator-collapsible {
+        display: block;
+    }
+
+    .qti-navigator-info {
+        & > .qti-navigator-label {
+            background-color: $uiHeaderBg;
+            color: $textColor;
+            border-top: 1px solid white();
+            padding: 2px 8px;
+        }
+
+        li {
+            border-bottom: 1px solid white(.9);
+        }
+
+        ul {
+            padding: 4px;
+
+            .qti-navigator-label {
+                span {
+                    display: table-cell;
+                    vertical-align: middle;
+                    float: none;
+
+                    &.qti-navigator-text {
+                        padding: 0 6px;
+                        min-width: 10rem;
+                    }
+                    &.qti-navigator-icon {
+                        min-width: 2rem;
+                    }
+                    &.qti-navigator-counter {
+                        min-width: 5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .qti-navigator-filters {
+        margin-top: 16px;
+        text-align: center;
+
+        li {
+            display: block;
+            float: left;
+        }
+    }
+
+    .qti-navigator-filter {
+        span {
+            @include simple-border();
+            border-left: none;
+            background-color: $uiGeneralContentBg;
+            display: block;
+            line-height: 1.8;
+            cursor: pointer;
+            padding: 3px 20px;
+
+            &:hover {
+                background-color: $uiClickableHoverBg;
+                color: $textHighlight;
+            }
+        }
+        &.active {
+            span {
+                background-color: $uiClickableActiveBg;
+                color: $textHighlight;
+            }
+        }
+    }
+
+    .qti-navigator-linear,
+    .qti-navigator-linear-part {
+        padding: 8px;
+        background: white();
+
+        .icon {
+            display: none;
+        }
+
+        .qti-navigator-label {
+            @include font-size(14);
+        }
+
+        .qti-navigator-title {
+            @include font-size(14);
+            margin: 8px 0;
+        }
+
+        .qti-navigator-message {
+            @include font-size(14);
+        }
+    }
+
+    .qti-navigator-part {
+        & > .qti-navigator-label {
+            background-color: mix(#fff, $websiteBorder, 70%);
+            padding: 2px 8px;
+
+            &:hover {
+                background-color: mix(#fff, $websiteBorder, 50%);
+            }
+        }
+
+        &.active {
+            & > .qti-navigator-label {
+                background-color: mix(#fff, $websiteBorder, 45%);
+            }
+        }
+    }
+    .qti-navigator-part:not(:first-child) {
+        margin-top: 1px;
+    }
+
+    .qti-navigator-section {
+        & > .qti-navigator-label {
+            padding: 2px 10px 2px 8px;
+            border-bottom: 1px solid white(.9);
+
+            &:hover {
+                background-color: mix(#fff, $grey, 75%);
+            }
+        }
+
+        &.active {
+            & > .qti-navigator-label {
+                background-color: mix(#fff, $grey, 60%);
+
+            }
+        }
+    }
+
+    .qti-navigator-item {
+        background: white();
+        margin: 1px 0;
+        padding-left: 10px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &.active {
+            background: lighten($lightBlueGrey, 5);
+        }
+
+        &:hover {
+            background: lighten($lightBlueGrey, 3);
+        }
+
+        &.disabled {
+            background-color: mix(#fff, $grey, 65%) !important;
+
+            & > .qti-navigator-label {
+                cursor: not-allowed;
+            }
+        }
+    }
+}

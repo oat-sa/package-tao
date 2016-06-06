@@ -1,0 +1,785 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2008-2010 (original work) Deutsche Institut für Internationale Pädagogische Forschung (under the project TAO-TRANSFER);
+ *               2009-2012 (update and modification) Public Research Centre Henri Tudor (under the project TAO-SUSTAIN & TAO-DEV);
+ * 
+ */
+/*
+/ TO REMOVE
+*/
+
+#itemGroupTable thead th {
+  height: 20px;
+}
+
+.invisible {
+  display: none;
+}
+
+#container {
+  width            : 960px;
+  min-height       : 500px;
+  margin           : 20px auto;
+  padding          : 20px;
+  position         : relative;
+  border           : 1px solid #000;
+  background-color : #FFFFFF;
+  /*	font-family: Arial;*/
+  color            : #000000;
+  padding-bottom   : 120px;
+}
+
+/*
+/ HTML
+*/
+
+#container input[type="text"] {
+  width : 80px;
+}
+
+/*
+/ TITLE
+*/
+
+#container h2 /*old_way*/
+, #container p.question /*new way*/ {
+  padding     : 7px 5px;
+  background  : #DFF2FF;
+  border      : 1px solid #000000;
+  font-size   : 16px;
+  font-weight : bold;
+}
+
+/*
+/ TABLE
+*/
+
+/* General */
+
+#container table {
+  margin-top      : 23px;
+  width           : 100%;
+  border-collapse : collapse;
+  font-size       : 16px;
+}
+
+/* thead */
+
+#container table thead tr th {
+  font-style     : italic;
+  padding        : 3px;
+  text-align     : center;
+  vertical-align : middle;
+}
+
+/* tbody */
+
+#container table tbody tr td {
+  padding : 10px 3px;
+}
+
+#container .div_input {
+  position : relative;
+}
+
+#container table tbody tr td + td input {
+  position : relative;
+  z-index  : 100;
+}
+
+#container table tbody tr td + td {
+  vertical-align : middle;
+  text-align     : center;
+}
+
+/*#container table tbody tr td + td input[type="text"] {
+	margin-top: -15px;
+}*/
+
+#container table tbody tr.odd, #container table tfoot tr.odd {
+  background : #DDD;
+}
+
+#container table tbody tr.even, #container table tfoot tr.even {
+  background : #FFF;
+}
+
+#container table tbody tr td {
+  vertical-align : middle;
+  min-width : 90px;
+}
+
+#container table tbody tr td.small {
+  width : 30%;
+}
+
+#container table tbody tr td.medium {
+  width : 45%;
+}
+
+#container table tbody tr td.large {
+  width : 60%;
+}
+
+#container table tbody tr td.xlarge {
+  width          : 80%;
+}
+
+#container .tr_slider td.xlarge {
+  width : 70% !important;
+}
+
+#container .tr_slider_extended td.xlarge {
+  width : 80% !important;
+}
+
+#container .td_reset_slider {
+  width : 10% !important;
+}
+
+#container .td_slider {
+  height : 100px !important;
+}
+
+#container .td_after_fte {
+  min-width : 1% !important;
+}
+
+/*
+/ OTHERS
+*/
+
+#container .instruction,
+#container .question_description,
+#container .question {
+  margin-top : 20px;
+}
+
+#container .noMarginTop {
+  margin-top : 0;
+}
+
+/*
+/ FOOTER
+*/
+
+#footer {
+  position    : absolute;
+  height      : 50px;
+  bottom      : 0;
+  margin-left : -20px;
+  width       : 100%;
+}
+
+/*
+/ NAVIGATION
+*/
+
+#navigation {
+  text-align : center;
+  position   : relative;
+  right      : 0px;
+  bottom     : 0px;
+}
+
+#navigation li {
+  float        : right;
+  min-width    : 110px;
+  list-style   : none;
+  padding      : 5px 10px;
+  margin-right : 20px;
+}
+
+#reset {
+  list-style : none;
+  padding    : 5px 10px;
+}
+
+#fake-bton-forward, #bton-forward, #bton-back, #reset {
+  /*	border:											1px solid black;*/
+  background     : #DDD;
+  font-size      : 14px;
+  padding-top    : 5px;
+  padding-bottom : 5px;
+  cursor         : pointer;
+}
+
+#bton-forward {
+  margin-left : 15px;
+}
+
+#navigation a {
+  line-height     : 26px;
+  color           : black;
+  text-decoration : none;
+}
+
+/*
+/ INFORMATIONAL TEMPLATE
+*/
+#container div.information {
+  font-size   : 20px;
+  font-weight : normal;
+  line-height : 22px;
+  margin      : 15px 0px 10px;
+}
+
+#container div.information ul, ol {
+  font-weight : normal;
+  /*list-style-type: circle;*/
+  margin-left : 10px;
+}
+
+/*
+/ TEXTFIELD TEMPLATE
+*/
+#container textarea {
+  width      : 99.5%;
+  margin-top : 20px;
+  height     : 200px;
+}
+
+/*
+/ INFO
+*/
+
+#info {
+  position : absolute;
+  right    : 40px;
+  bottom   : 70px;
+}
+
+#info * {
+  float       : right;
+  margin-left : 15px;
+}
+
+#consistency {
+  width  : 33px;
+  height : 37px;
+}
+
+#completion {
+  width  : 33px;
+  height : 37px;
+}
+
+#container .consistency_good {
+  background : url(../image/consistency_good.png) no-repeat;
+}
+
+#container .consistency_bad {
+  background : url(../image/consistency_bad.png) no-repeat;
+}
+
+#container .completion_good {
+  background : url(../image/completion_good.png) no-repeat;
+}
+
+#container .completion_bad {
+  background : url(../image/completion_bad.png) no-repeat;
+}
+
+#info_dialog {
+  position    : fixed;
+  top         : 50%;
+  left        : 50%;
+  width       : 460px;
+  height      : 260px;
+  background  : #FFF;
+  border      : 1px solid #000;
+  z-index     : 1000;
+  display     : none;
+  overflow    : auto;
+  margin-left : -230px;
+  margin-top  : -130px;
+}
+
+#menuDialog {
+  position    : fixed;
+  top         : 50%;
+  left        : 50%;
+  width       : 600px;
+  height      : 400px;
+  background  : #FFF;
+  border      : 1px solid #000;
+  z-index     : 1000;
+  display     : none;
+  overflow    : auto;
+  margin-left : -300px;
+  margin-top  : -200px;
+}
+
+#menuDialog a {
+  text-decoration : none;
+  color           : inherit;
+}
+
+#menuDialog .idQuestion {
+  font-weight : bold;
+  display     : inline-block;
+  width       : 120px;
+}
+
+#menuDialog ul {
+  padding-left : 0;
+}
+
+#menuDialog ul li {
+  list-style-type : none;
+  padding         : 4px 4px 4px 25px;
+}
+
+#menuDialog ul li.odd {
+  background-color : #DDD;
+}
+
+#menuDialog ul li.even {
+  background-color : #FFF;
+}
+
+#menuDialog .grayed {
+  color               : gray;
+  background-image    : url(../image/help.png);
+  background-repeat   : no-repeat;
+  background-position : 4px 4px;
+}
+
+#menuDialog .valid {
+  color               : green;
+  background-image    : url(../image/accept.png);
+  background-repeat   : no-repeat;
+  background-position : 4px 4px;
+}
+
+#menuDialog .invalid {
+  color               : red;
+  background-image    : url(../image/delete.png);
+  background-repeat   : no-repeat;
+  background-position : 4px 4px;
+}
+
+#menuDialog .passed {
+  color               : #0450ff;
+  background-image    : url(../image/bullet_error.png);
+  background-repeat   : no-repeat;
+  background-position : 4px 4px;
+}
+
+#info_dialog_close, #menuDialogClose {
+  color    : #000;
+  position : absolute;
+  top      : 10px;
+  right    : 10px;
+  cursor   : pointer;
+}
+
+#info_dialog p {
+  padding : 40px 20px 20px 20px;
+}
+
+#menuDialog .headerMenuDialog {
+  height : 40px;
+}
+
+#menuDialog .contentMenuDialog {
+  padding  : 0 20px 20px 20px;
+  height   : 340px;
+  overflow : auto;
+}
+
+/*
+/ Highlight error
+*/
+#container .inError {
+  border : solid 2px red;
+}
+
+#container div.inError {
+  height      : 17px;
+  left        : 50%;
+  margin-left : -11px;
+  position    : absolute;
+  top         : -1px;
+  width       : 18px;
+  z-index     : 10;
+}
+
+#container input[type="text"].inError {
+  width            : 84px;
+  background-color : white;
+  height           : 16px;
+}
+
+#container input[type="radio"].inError {
+  border : none;
+}
+
+/*
+/ SLIDERS
+*/
+#container .cursorSlider {
+	background-color: red;
+    bottom: 0;
+    height: 10px;
+    left: 4px;
+    position: absolute;
+    width: 1px;
+}
+
+#container .slider_ui {
+  position    : absolute;
+  width       : 190px;
+  height      : 20px;
+  margin-left : -2px;
+  top         : 15px;
+}
+
+#container .tr_slider {
+  height : 85px;
+}
+
+#container .title {
+  position   : absolute;
+  top        : -30px;
+  width      : 100%;
+  text-align : center;
+}
+
+#container .levelMax {
+  right : 0px;
+}
+
+#container .levelMin {
+  left : 0px;
+}
+
+#container .levelMax, #container .levelMin {
+  position : absolute;
+  top      : 30px;
+}
+
+#container .td_mixed div {
+  display : inline;
+}
+
+#container .td_mixed .div_input {
+  margin-left : 40px;
+}
+
+/*
+/ header
+*/
+#container #header {
+  /*	font-family: Arial;*/
+  font-size : 14px;
+  height    : 100px;
+  position  : relative;
+  width     : 100%;
+  clear     : both;
+}
+
+#container #header #logoPisa {
+  float  : left;
+  height : 57px;
+  width  : 113px;
+}
+
+#container #header #progressBox,
+#container #header #userInfo,
+#container #header #infoBox,
+#container #header #sectionInfo,
+#container #header #itemGroupInfo,
+#container #header #manual {
+  background-color : #CCCCCC;
+  border           : 1px solid black;
+  float            : right;
+  height           : 30px;
+  margin-left      : 5px;
+}
+
+#container #header #infoHeader {
+  position : absolute;
+  top      : 37px;
+  right    : 0;
+}
+
+#container #header #progressBox {
+  width : 33%;
+}
+
+#container #header #userInfo div,
+#container #header #progressBox #progressLine,
+#container #header #infoBox #infoLine,
+#container #header #manual #manualLine {
+  margin-top  : 8px;
+  margin-left : 10px;
+  position    : relative;
+}
+
+#container #header #infoBox #infoLine,
+#container #header #manual #manualLine {
+  margin-right : 10px;
+  cursor       : pointer;
+}
+
+#container #header #progressBox #progressLine {
+  margin-left : 5px;
+}
+
+#container #header #userInfo #currentLanguage,
+#container #header #userInfo #userId,
+#container #header #sectionInfo #currentSection,
+#container #header #itemGroupInfo #currentItemGroup {
+  font-weight : bold;
+  margin-left : 0px;
+}
+
+#container #header #userInfo ul li,
+#container #header #sectionInfo ul li,
+#container #header #itemGroupInfo ul li {
+  float        : left;
+  margin       : 7px 10px 0px 10px;
+  list-style   : none;
+  padding-left : 0;
+}
+
+#container #header #userInfo ul,
+#container #header #sectionInfo ul,
+#container #header #itemGroupInfo ul {
+  padding-left : 0;
+}
+
+/*
+#container #header #userInfo span {
+  font-weight: bold;
+  margin-left: 5px;
+  float: right;
+}
+
+#container #header #userInfo #currentLanguage {
+  float: left;
+  margin-left: 5px;
+}
+
+#container #header #userInfo #userId {
+  float: right;
+  margin-right: 5px;
+}
+*/
+#container #header #progressBar {
+  border     : 1px solid red;
+  height     : 16px;
+  right      : 5px;
+  position   : absolute;
+  top        : -2px;
+  width      : 64%;
+  text-align : left;
+}
+
+#container #header #progressFill {
+  background : none repeat scroll 0px 0px red;
+  height     : 16px;
+  width      : 0px;
+}
+
+#container #header #progressFillLabel {
+  margin-top : -15px;
+  text-align : center;
+}
+
+/*
+/ section / information
+*/
+#container #titre_section, #container #desc_section, #container #information {
+  font-size   : 16pt;
+  font-weight : normal;
+  margin      : 130px 0px 20px;
+}
+
+#container #desc_section {
+  font-size   : 16pt;
+  margin      : 10px 0px 20px;
+  line-height : 25px;
+}
+
+#container #section, #container #information {
+  /*	font-family: Arial;*/
+  margin     : 0px auto;
+  min-height : 500px;
+  top        : 15px;
+  width      : 960px;
+}
+
+#container #wrapperNavigation {
+  z-index  : 1;
+  width    : 300px;
+  height   : 50px;
+  float    : right;
+  position : absolute;
+  right    : 0px;
+  bottom   : 0px;
+}
+
+#container tfoot td {
+  text-align  : center;
+  line-height : 35px;
+}
+
+#container tfoot td.rowSep {
+  height : 5px;
+}
+
+.variable, .variableSlider {
+  font-style : normal !important;
+  color      : gray !important;
+  text-align : center !important;
+  font-size  : 8px !important;
+  display    : block !important;
+}
+
+.variableSlider {
+  position : absolute;
+  top      : 0;
+  left     : -150px;
+}
+
+.variableText {
+  font-style  : normal !important;
+  color       : gray !important;
+  text-align  : center !important;
+  font-size   : 16px !important;
+  font-family : inherit;
+}
+
+.variableTextField {
+  font-style  : normal !important;
+  color       : gray !important;
+  text-align  : left !important;
+  font-size   : 16px !important;
+  font-family : inherit;
+}
+
+.fake_button {
+  border-top    : gray 2px solid !important;
+  border-left   : gray 2px solid !important;
+  border-bottom : black 2px solid !important;
+  border-right  : black 2px solid !important;
+}
+
+.fake_button:active {
+  border-top    : black 2px solid !important;
+  border-left   : black 2px solid !important;
+  border-bottom : gray 2px solid !important;
+  border-right  : gray 2px solid !important;
+}
+
+#container #header #infoBox,
+#container #header #manual {
+  border : none;
+}
+
+#container .completion_bad,
+#container .completion_good,
+#container .consistency_bad,
+#container .consistency_good {
+  cursor : pointer;
+}
+
+#info_dialog, #menudialog {
+  display : none;
+}
+
+/**
+* Rules for export PDF
+*/
+
+.rules .header {
+  margin-bottom    : 20px;
+  background-color : #ddd;
+  padding          : 10px;
+  font-size        : 16px;
+  font-weight      : bold;
+}
+
+.rules .property {
+  padding : 10px;
+}
+
+.rules .property .name {
+  width   : 100px;
+  display : inline-block;
+}
+
+/****************
+  TREND ITEMS
+*****************/
+#container table tbody tr td.tdItemId {
+  min-width      : 5px;
+  width          : 50px;
+  vertical-align : middle;
+}
+
+#container .trendUL {
+	margin-top: 0 !important;
+}
+
+/****************
+ HORIZONTAL ITEMS
+*****************/
+.horizontal_table td, .horizontal_table th {
+  padding    : 0;
+  border     : solid 1px black;
+  text-align : center;
+}
+
+.horizontal_table th {
+  font-size        : 13px;
+  font-weight      : bold;
+  background-color : #DFF2FF;
+  text-decoration  : underline;
+}
+
+/*************************
+    INPUT SIZE
+
+    DON'T TOUCH SELECTOR !!!
+*************************/
+#container input[type="text"].inputSize_small {
+  width : 25px
+}
+
+
+#container input[type="text"].inputSize_medium {
+  width : 60px
+}
+
+
+#container input[type="text"].inputSize_large {
+  width : 100px
+}
+
+/***************
++ jQuery overwrite
++****************/
+.ui-slider-handle {
+  margin-left: -0.3em !important;
+  width: 0.5em !important;
+}
+
+
+
+

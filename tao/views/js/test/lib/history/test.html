@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lib Test - History</title>
+        <base href="../../../../" />
+        <link rel="stylesheet" type="text/css" href="js/lib/qunit/qunit.css">
+        <script type="text/javascript" src="js/lib/require.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit-parameterize.js"></script>
+        <script type="text/javascript" src="js/lib/blanket/blanket.min.js" data-cover-only="lib/history/history.js"></script>
+        <script type="text/javascript">
+
+            //don't start the test now
+            QUnit.config.autostart = false;
+
+            //load the config
+            require(['/tao/ClientConfig/config'], function(){
+
+                //load the test
+                require(['test/lib/history/test'], function(){
+
+                    //Tests loaded, run tests
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+    </body>
+</html>

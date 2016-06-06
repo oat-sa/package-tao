@@ -1,0 +1,8 @@
+Options +FollowSymLinks
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteRule ^(.*)$ working.php [L]
+
+</IfModule>

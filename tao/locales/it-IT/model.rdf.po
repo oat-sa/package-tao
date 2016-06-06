@@ -1,0 +1,92 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.1.0-sprint20\n"
+"PO-Revision-Date: 2016-02-19T17:54:53\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: it-IT\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: it-IT\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#AbstractModel
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Abstract Model"
+msgstr "Modello di abstract"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#AbstractModel
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "An abstract model to differentiate implementations of resources of the same type"
+msgstr "Un modello di abstract per differenziare le implementazioni di risorse dello stello tipo"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelImplementation
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Model implementation"
+msgstr "Implementazione di modello"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelStatus
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Model Status"
+msgstr "Stato di modello"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusStable
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Stable"
+msgstr "Stabile"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusStable
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "This model can be used in production"
+msgstr "Il modello può essere usato in produzione"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusDeprecated
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Deprecated"
+msgstr "Deprecato"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusDeprecated
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "This model is not supported anymore, we advise to migrate"
+msgstr "Questo modello non è più supportato, vi consigliamo di modificare"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusDevelopment
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Development"
+msgstr "Sviluppo"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusDevelopment
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "this model has not been tested in a production environment, we advise to be carefull with it"
+msgstr "questo modello non è stato testato in ambiente di produzione, vi consigliamo di fare attenzione"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusExperimental
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Experimental"
+msgstr "Sperimentale"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelStatusExperimental
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "this model is still in conception, but you can try it, give your feedback and it will be improved."
+msgstr "questo modello è ancora in versione incompiuta, ma puoi provarlo, fornire il tuo feedback in modo da migliorarlo"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelAbstractModelStatus
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Status"
+msgstr "Stato"
+
+# http://www.tao.lu/Ontologies/TAO.rdf#ModelAbstractModelStatus
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "The status of a model"
+msgstr "Lo stato di un modello"
+
+# http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ModelSelector
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "Model"
+msgstr "Modello"
+
+# http://www.tao.lu/datatypes/WidgetDefinitions.rdf#ModelSelector
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Select the associated model"
+msgstr "Seleziona il modello associato"
+

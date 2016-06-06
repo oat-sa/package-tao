@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Installation Process</title>
+	<link rel="stylesheet" type="text/css" href="../views/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../views/css/custom-theme/jquery-ui-1.8.22.custom.css"/>
+	<link rel="stylesheet" type="text/css" href="css/installation_main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/step_admin_setup.css"/>
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/step_ie8.css"/>
+	<![endif]-->
+
+	<script type="text/javascript" src="../views/js/lib/require.js" data-main="js/step_admin_setup"></script>
+</head>
+
+<body>
+    <div id="installation_form" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+        <h2>TAO Installation Wizard</h2>
+        <h1>Administrator Setup</h1>
+        <ul id="install_seq">
+            <li><h3>Installation Steps</h3></li>
+            <li id="step_requirements">1. <a href="#">Requirements Check</a></li>
+            <li id="step_server_setup">2. <a href="#">Server Setup</a></li>
+            <li id="step_database_setup">3. <a href="#">Database Setup</a></li>
+            <li id="step_admin_setup" class="currentStep">4. Administrator Setup</li>
+            <li id="step_licenses">5. Licensing Agreement</li>
+            <li id="step_finalization">6. Finalize Installation</li>
+        </ul>
+        <p id="comments">
+            Now, we will create the Administrator account for your TAO installation.
+        </p>
+        <div id="forms_content">
+          <form autocomplete="off">
+                <ul>
+                    <li>
+                        <label for="superuser_firstname">First Name</label><br />
+                        <input type="text" id="superuser_firstname" name="superuser_firstname" class="tao-input" title="e.g. John" autocomplete="off"/>
+                        <div title="learn more on this topic" class="icons ui-state-default ui-corner-all"><a id="tpl_superuser_firstname" class="ui-icon ui-icon-help"></a></div>
+                    </li>
+                    <li>
+                        <label for="superuser_lastname">Last Name</label><br />
+                        <input type="text" id="superuser_lastname" name="superuser_lastname" class="tao-input" title="e.g. Smith" autocomplete="off"/>
+                        <div title="learn more on this topic" class="icons ui-state-default ui-corner-all"><a id="tpl_superuser_lastname" class="ui-icon ui-icon-help"></a></div>
+                    </li>
+                    <li>
+                        <label for="superuser_email">Email</label><br />
+                        <input type="text" id="superuser_email" name="superuser_email" class="tao-input" title="e.g. john.doe@mailer.com" autocomplete="off"/>
+                        <div title="learn more on this topic" class="icons ui-state-default ui-corner-all"><a id="tpl_superuser_email" class="ui-icon ui-icon-help"></a></div>
+                    </li>
+                    <li>
+                        <label for="superuser_login">Username</label><br />
+                        <input type="text" id="superuser_login" name="superuser_login" class="tao-input" title="e.g. administrator" autocomplete="off"/>
+                        <div title="learn more on this topic" class="icons ui-state-default ui-corner-all"><a id="tpl_superuser_login" class="ui-icon ui-icon-help"></a></div><span class="formMandatory">*</span>
+                    </li>
+                    <li>
+                        <label for="superuser_password1">Password (at least 4 characters)</label><br />
+                        <input type="password" id="superuser_password1" name="superuser_password1" class="tao-input" title="password" autocomplete="off"/>
+                        <div title="learn more on this topic" class="icons ui-state-default ui-corner-all"><a id="tpl_superuser_password" class="ui-icon ui-icon-help"></a></div><span class="formMandatory">*</span>
+                    </li>
+                    <li>
+                        <label for="superuser_password2">Confirm password</label><br />
+                        <input type="password" id="superuser_password2" name="superuser_password2" class="tao-input" title="password" autocomplete="off"/>
+                        <div title="learn more on this topic" class="icons ui-state-default ui-corner-all"><a id="tpl_superuser_password2" class="ui-icon ui-icon-help"></a></div><span class="formMandatory">*</span>
+                    </li>
+                </ul>  
+                <input id="submitForm" class="disabled" type="submit" value="Next" role="button" disabled="disabled"/>
+                <p id="formComment"><span class="formExample">*</span> Required</p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

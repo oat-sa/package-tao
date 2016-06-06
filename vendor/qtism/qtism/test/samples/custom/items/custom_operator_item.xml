@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="custom_operator_item" title="Custom Operator Item" adaptive="false" timeDependent="false">
+	<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="string"/>
+	<outcomeDeclaration identifier="SCORE" cardinality="ordered" baseType="string"/>
+	<itemBody>
+        <div>This is a fake item aiming at testing custom operators in response processing.</div>
+	</itemBody>
+	<responseProcessing>
+        <setOutcomeValue identifier="SCORE">
+            <customOperator xmlns:qtism="http://www.qtism.org/xsd/custom_operators/explode" class="org.qtism.test.Explode" qtism:delimiter="-">
+	            <baseValue baseType="string">this-is-a-test</baseValue>
+	        </customOperator>
+        </setOutcomeValue>
+	</responseProcessing>
+</assessmentItem>

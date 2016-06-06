@@ -1,0 +1,8 @@
+// override original .delivery-scope from delivery.css
+body {
+    &.delivery-scope {
+        min-height: 100vh;
+        max-height: 100vh;
+        margin-bottom: 0;
+    }
+}

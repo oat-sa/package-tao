@@ -1,0 +1,77 @@
+@mixin contextual-popup-shadow(){
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+}
+
+.contextual-popup {
+    position: absolute;
+    left: 15px;
+    top: 0px;
+    width : 500px;
+    color: $textColor;
+    background: mix(#fff, $grey, 85%);
+    padding: 15px;
+    z-index: 300;
+    @include contextual-popup-shadow();
+    h2 {
+        @include font-size(15);
+        margin-bottom: 0;
+    }
+    .heading {
+        font-weight: bold;
+    }
+    .arrow {
+        position: absolute;
+        z-index: 301;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        border: 1px $uiClickableDefaultBg solid;
+        border-left: none;
+        border-top: none;
+        width: 12px;
+        height: 12px;
+        background: $uiClickableDefaultBg;
+        @include contextual-popup-shadow();
+    }
+    .arrow-cover {
+        background: $uiClickableDefaultBg;
+        position: absolute;
+        z-index: 302;
+        left: 6px;
+        width: 30px;
+        height: 15px;
+    }
+    &.bottom{
+        .arrow{
+            top:-6px;
+        }
+        .arrow-cover{
+            top:0px;
+        }
+    }
+    &.top{
+        .arrow{
+            bottom:-6px;
+        }
+        .arrow-cover{
+            bottom:0px;
+        }
+    }
+    .tooltipstered {
+        text-align: right;
+    }
+    .footer{
+        margin-top:10px;
+        .btn{
+            float:right;
+            margin-left:20px;
+            &.cancel{
+                position:relative;
+                top:3px;
+            }
+        }
+    }
+}

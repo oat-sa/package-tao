@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Thie example adapted from the PET Handbook, copyright University of Cambridge ESOL Examinations -->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 imsqti_v2p1.xsd"
+    identifier="choice" title="Unattended Luggage" adaptive="false" timeDependent="false">
+    
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+        <correctResponse>
+            <value>ChoiceA</value>
+        </correctResponse>
+    </responseDeclaration>
+    
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer">
+        <defaultValue>
+            <value>0</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    
+    <itemBody>
+        <p>Look at the text in the picture.</p>
+        <p>
+            <img src="images/sign.png" alt="NEVER LEAVE LUGGAGE UNATTENDED"/>
+        </p>
+        <choiceInteraction responseIdentifier="RESPONSE" shuffle="false" maxChoices="1">
+            <prompt>What does it say?</prompt>
+            <simpleChoice identifier="ChoiceA">You must stay with your luggage at all times.</simpleChoice>
+            <simpleChoice identifier="ChoiceB">Do not let someone else look after your luggage.</simpleChoice>
+            <simpleChoice identifier="ChoiceC">Remember your luggage when you leave.</simpleChoice>
+        </choiceInteraction>
+    </itemBody>
+    
+    <responseProcessing>
+        <responseCondition>
+            <responseIf>
+                <match>
+                    <variable identifier="RESPONSE"/>
+                    <correct identifier="RESPONSE"/>
+                </match>
+                <setOutcomeValue identifier="SCORE">
+                    <baseValue baseType="integer">1</baseValue>
+                </setOutcomeValue>
+            </responseIf>
+            <responseElse>
+                <setOutcomeValue identifier="SCORE">
+                    <baseValue baseType="integer">0</baseValue>
+                </setOutcomeValue>
+            </responseElse>
+        </responseCondition>
+    </responseProcessing>
+</assessmentItem>

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+	<title>TAO Api: an example of manual data source configuration</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="../lib/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../taoApi.min.js"></script>
+	<script type="text/javascript">
+
+
+	/*
+	 * The data are written direclty in the client source.
+	 * It can be set manually (excatly as below but it's very boring)
+	 * The best solution is to write them with your server/client script and generate the JSON object
+	 * The keys are the uris defined in the constant.js
+	 * The uri value is a unique uri used to identified the resource in the platform 
+	 */
+	var taoEnv = new Object();
+	taoEnv['token'] = "7114e56cb3b9423314a425500afb41fc56183000";			//the token must comes from the server: taoEnv['token'] = "<?php echo $token; ?>";
+	taoEnv['localNamspace'] = "http://tao.localdomain/middleware/mytao.rdf";
+
+	taoEnv[URI.PROCESS]['uri'] = "http://tao.localdomain/middleware/mytao.rdf#i1123467865";
+	taoEnv[URI.PROCESS][URI.LABEL] = "Bachelor MATH 2010 SES012";
+
+	taoEnv[URI.DELIVERY]['uri'] = "http://tao.localdomain/middleware/mytao.rdf#i1123467865";
+	taoEnv[URI.DELIVERY][URI.LABEL] = "Bachelor MATH 2010";
+
+	taoEnv[URI.TEST]['uri'] = "http://tao.localdomain/middleware/mytao.rdf#i1123876239763";
+	taoEnv[URI.TEST][URI.LABEL] = "ALGEBER 2010";
+
+	taoEnv[URI.ITEM]['uri'] = "http://tao.localdomain/middleware/mytao.rdf#i1123468712345";
+	taoEnv[URI.ITEM][URI.LABEL] = "Matrix level 2";
+
+	taoEnv[URI.SUBJECT]['uri'] = "http://tao.localdomain/middleware/mytao.rdf#i1284379754048297800";
+	taoEnv[URI.SUBJECT][URI.LABEL] 				= "User_jdoe";
+	taoEnv[URI.SUBJECT][URI.SUBJETC_LOGIN] 		= "jdoe17";
+	taoEnv[URI.SUBJECT][URI.SUBJETC_FIRSTNAME] 	= "John";
+	taoEnv[URI.SUBJECT][URI.SUBJETC_LASTNAME] 	= "Doe";
+			
+	//now the taoApi is initialized with the data set mannualy above 
+	initManualDataSource(taoEnv);
+
+	/*
+	 * There is not other initialization:
+	 * because we want to push the data to our TAO plateform, 
+	 * we let the default push settings.
+	 * If you want to change the settings, you can call the initPush method
+	 */
+	
+	
+	//you can begin to use the taoApi
+	
+	//...
+	
+	setUserVar('test1', 1);
+	setUserVar('test2', 2);
+
+	//...
+	
+	setEndorsement(true);
+
+	//...
+	
+	//
+	push();
+	
+	</script>
+</head>
+<body>
+	<div>
+		<h2>AN ITEM</h2>
+	</div>
+</body>
+</html>

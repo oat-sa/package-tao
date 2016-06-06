@@ -1,0 +1,117 @@
+@import "inc/bootstrap";
+
+$entryArrowWidthBefore: 20;
+$entryArrowWidthAfter: 20;
+$entryArrowHeight: 150;
+
+.listbox {
+  max-width: 1024px;
+  margin: auto;
+
+  h1 {
+    font-family: $headingFont;
+    @include font-size(22);
+    font-weight: normal;
+  }
+  h2 {
+    font-family: $headingFont;
+    @include font-size(18);
+    margin: 30px 0 10px;
+  }
+
+  .list {
+    width: 100%;
+  }
+
+  .box {
+    @include simple-border();
+    background: $uiClickableDefaultBg;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+  }
+
+  .list-box {
+    h1, h3 {
+      @include font-size(20);
+      margin-bottom: 7px;
+      color: $info;
+      text-shadow: 1px 1px 1px #fff;
+    }
+    .text-link {
+      position: absolute;
+      right: -1px;
+      bottom: -1px;
+      padding: 20px;
+      text-align: right;
+      min-width: 100px;
+      border-bottom: 3px solid;
+      color: $uiClickableHoverBg;
+      outline: 0;
+      &:hover {
+        color: $info;
+      }
+      [class*=" icon-"], [class^="icon-"] {
+          margin-right: 10px;
+      }
+    }
+    a {
+      height: $entryArrowHeight * 1px;
+    }
+    .box {
+      padding-left: 40px;
+
+      &:before, &:after {
+        content: '';
+        height: ($entryArrowHeight / 4) * 1px;
+        border: solid transparent;
+        border-top-width: (($entryArrowHeight / 4) / 2) * 1px;
+        border-bottom-width: (($entryArrowHeight / 4) / 2) * 1px;
+        position: absolute;
+        left: -1px;
+        bottom: 54px;
+        z-index: 2;
+      }
+
+      &:before {
+        border-left-color: $uiGeneralContentBorder;
+        width: $entryArrowWidthBefore * 1px;
+        border-right-width: ($entryArrowWidthBefore / 2) * 1px;
+        border-left-width: ($entryArrowWidthBefore / 2) * 1px;
+        left: 0px;
+      }
+
+      &:after {
+        border-left-color: white;
+        width: $entryArrowWidthAfter * 1px;
+        border-right-width: ($entryArrowWidthAfter / 2) * 1px;
+        border-left-width: ($entryArrowWidthAfter / 2) * 1px;
+      }
+    }
+  }
+
+  &.loading {
+    .loading {
+      display: inline-block;
+    }
+    .list, .empty-list, .available-list {
+      display: none;
+    }
+  }
+  &.loaded {
+    .list, .available-list {
+      display: inline-block;
+    }
+    .loading, .empty-list {
+      display: none;
+    }
+  }
+  &.empty {
+    .empty-list {
+      display: inline-block;
+    }
+    .loading, .list, .available-list {
+      display: none;
+    }
+  }
+}
