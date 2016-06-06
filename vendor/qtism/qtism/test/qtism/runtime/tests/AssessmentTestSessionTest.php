@@ -16,6 +16,7 @@ use qtism\runtime\common\VariableIdentifier;
 use qtism\common\enums\Cardinality;
 use qtism\common\enums\BaseType;
 use qtism\runtime\common\ResponseVariable;
+use qtism\runtime\tests\AssessmentTestSession;
 use qtism\runtime\tests\AssessmentTestSessionState;
 use qtism\runtime\tests\AssessmentTestSessionException;
 use qtism\common\datatypes\Point;
@@ -1459,5 +1460,29 @@ class AssessmentTestSessionTest extends QtiSmTestCase {
         
         // Q02.
         $this->assertEquals('Q02', $assessmentTestSession->getCurrentAssessmentItemRef()->getIdentifier());
+    }
+    
+    public function testGetRouteCountAllWithResponseDeclaration() {
+	    $doc = new XmlCompactDocument();
+	    $doc->load(self::samplesDir() . 'custom/runtime/route_count/all_with_responsedeclaration.xml');
+	    $manager = new SessionManager();
+	    $session = $manager->createAssessmentTestSession($doc->getDocumentComponent());
+        $session->beginTestSession();
+        
+        $this->assertEquals(3, $session->getRouteCount());
+        $this->assertEquals(3, $session->getRouteCount(AssessmentTestSession::ROUTECOUNT_ALL));
+        $this->assertEquals(3, $session->getRouteCount(AssessmentTestSession::ROUTECOUNT_EXCLUDENORESPONSE));
+    }
+    
+    public function testGetRouteCountMissingResponseDeclaration() {
+	    $doc = new XmlCompactDocument();
+	    $doc->load(self::samplesDir() . 'custom/runtime/route_count/missing_responsedeclaration.xml');
+	    $manager = new SessionManager();
+	    $session = $manager->createAssessmentTestSession($doc->getDocumentComponent());
+        $session->beginTestSession();
+        
+        $this->assertEquals(3, $session->getRouteCount());
+        $this->assertEquals(3, $session->getRouteCount(AssessmentTestSession::ROUTECOUNT_ALL));
+        $this->assertEquals(2, $session->getRouteCount(AssessmentTestSession::ROUTECOUNT_EXCLUDENORESPONSE));
     }
 }

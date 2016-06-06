@@ -327,6 +327,72 @@ abstract class DispatcherTest extends \PHPUnit_Framework_TestCase {
 
         $cases[] = ['GET', '/user.json', $callback, 'handler1', ['entity' => 'user']];
 
+        // 16 ----
+
+        $callback = function(RouteCollector $r) {
+            $r->addRoute('GET', '', 'handler0');
+        };
+
+        $cases[] = ['GET', '', $callback, 'handler0', []];
+
+        // 17 ----
+
+        $callback = function(RouteCollector $r) {
+            $r->addRoute('HEAD', '/a/{foo}', 'handler0');
+            $r->addRoute('GET', '/b/{foo}', 'handler1');
+        };
+
+        $cases[] = ['HEAD', '/b/bar', $callback, 'handler1', ['foo' => 'bar']];
+
+        // 18 ----
+
+        $callback = function(RouteCollector $r) {
+            $r->addRoute('HEAD', '/a', 'handler0');
+            $r->addRoute('GET', '/b', 'handler1');
+        };
+
+        $cases[] = ['HEAD', '/b', $callback, 'handler1', []];
+
+        // 19 ----
+
+        $callback = function(RouteCollector $r) {
+            $r->addRoute('GET', '/foo', 'handler0');
+            $r->addRoute('HEAD', '/{bar}', 'handler1');
+        };
+
+        $cases[] = ['HEAD', '/foo', $callback, 'handler1', ['bar' => 'foo']];
+
+        // 20 ----
+
+        $callback = function(RouteCollector $r) {
+            $r->addRoute('*', '/user', 'handler0');
+            $r->addRoute('*', '/{user}', 'handler1');
+            $r->addRoute('GET', '/user', 'handler2');
+        };
+
+        $cases[] = ['GET', '/user', $callback, 'handler2', []];
+
+        // 21 ----
+
+        $callback = function(RouteCollector $r) {
+            $r->addRoute('*', '/user', 'handler0');
+            $r->addRoute('GET', '/user', 'handler1');
+        };
+
+        $cases[] = ['POST', '/user', $callback, 'handler0', []];
+
+        // 22 ----
+
+        $cases[] = ['HEAD', '/user', $callback, 'handler1', []];
+
+        // 23 ----
+
+        $callback = function(RouteCollector $r) {
+            $r->addRoute('GET', '/{bar}', 'handler0');
+            $r->addRoute('*', '/foo', 'handler1');
+        };
+
+        $cases[] = ['GET', '/foo', $callback, 'handler0', ['bar' => 'foo']];
 
         // x -------------------------------------------------------------------------------------->
 
@@ -430,6 +496,7 @@ abstract class DispatcherTest extends \PHPUnit_Framework_TestCase {
             $r->addRoute('GET', '/resource/123/456', 'handler0');
             $r->addRoute('POST', '/resource/123/456', 'handler1');
             $r->addRoute('PUT', '/resource/123/456', 'handler2');
+            $r->addRoute('*', '/', 'handler3');
         };
 
         $method = 'DELETE';

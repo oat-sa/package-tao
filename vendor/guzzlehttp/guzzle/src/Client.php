@@ -325,13 +325,10 @@ class Client implements ClientInterface
             unset($options['body']);
         }
 
-        if (!empty($options['auth'])) {
+        if (!empty($options['auth']) && is_array($options['auth'])) {
             $value = $options['auth'];
-            $type = is_array($value)
-                ? (isset($value[2]) ? strtolower($value[2]) : 'basic')
-                : $value;
-            $config['auth'] = $value;
-            switch (strtolower($type)) {
+            $type = isset($value[2]) ? strtolower($value[2]) : 'basic';
+            switch ($type) {
                 case 'basic':
                     $modify['set_headers']['Authorization'] = 'Basic '
                         . base64_encode("$value[0]:$value[1]");
@@ -361,6 +358,14 @@ class Client implements ClientInterface
             $modify['body'] = Psr7\stream_for($jsonStr);
             $options['_conditional']['Content-Type'] = 'application/json';
             unset($options['json']);
+        }
+
+        // Ensure that sink is not an invalid value.
+        if (isset($options['sink'])) {
+            // TODO: Add more sink validation?
+            if (is_bool($options['sink'])) {
+                throw new \InvalidArgumentException('sink must not be a boolean');
+            }
         }
 
         $request = Psr7\modify_request($request, $modify);

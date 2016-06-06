@@ -257,12 +257,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/doctrine/collections.git",
-            "reference": "9f89fd349fd2b537be8a0a0c41f87f2f640dfc8a"
+            "reference": "46a476a6ac1f614442c7e4b1a6dca44f0b34f892"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/doctrine/collections/zipball/9f89fd349fd2b537be8a0a0c41f87f2f640dfc8a",
-            "reference": "9f89fd349fd2b537be8a0a0c41f87f2f640dfc8a",
+            "url": "https://api.github.com/repos/doctrine/collections/zipball/46a476a6ac1f614442c7e4b1a6dca44f0b34f892",
+            "reference": "46a476a6ac1f614442c7e4b1a6dca44f0b34f892",
             "shasum": ""
         },
         "require": {
@@ -271,7 +271,7 @@
         "require-dev": {
             "phpunit/phpunit": "~4.0"
         },
-        "time": "2016-03-31 10:10:15",
+        "time": "2016-05-27 12:51:06",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -325,12 +325,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/doctrine/inflector.git",
-            "reference": "90b2128806bfde671b6952ab8bea493942c1fdae"
+            "reference": "803a2ed9fea02f9ca47cd45395089fe78769a392"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/doctrine/inflector/zipball/90b2128806bfde671b6952ab8bea493942c1fdae",
-            "reference": "90b2128806bfde671b6952ab8bea493942c1fdae",
+            "url": "https://api.github.com/repos/doctrine/inflector/zipball/803a2ed9fea02f9ca47cd45395089fe78769a392",
+            "reference": "803a2ed9fea02f9ca47cd45395089fe78769a392",
             "shasum": ""
         },
         "require": {
@@ -339,7 +339,7 @@
         "require-dev": {
             "phpunit/phpunit": "4.*"
         },
-        "time": "2015-11-06 14:35:42",
+        "time": "2016-05-12 17:23:41",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -514,131 +514,18 @@
         ]
     },
     {
-        "name": "guzzlehttp/psr7",
-        "version": "1.2.3",
-        "version_normalized": "1.2.3.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/guzzle/psr7.git",
-            "reference": "2e89629ff057ebb49492ba08e6995d3a6a80021b"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/psr7/zipball/2e89629ff057ebb49492ba08e6995d3a6a80021b",
-            "reference": "2e89629ff057ebb49492ba08e6995d3a6a80021b",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.4.0",
-            "psr/http-message": "~1.0"
-        },
-        "provide": {
-            "psr/http-message-implementation": "1.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "~4.0"
-        },
-        "time": "2016-02-18 21:54:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "GuzzleHttp\\Psr7\\": "src/"
-            },
-            "files": [
-                "src/functions_include.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Michael Dowling",
-                "email": "mtdowling@gmail.com",
-                "homepage": "https://github.com/mtdowling"
-            }
-        ],
-        "description": "PSR-7 message implementation",
-        "keywords": [
-            "http",
-            "message",
-            "stream",
-            "uri"
-        ]
-    },
-    {
-        "name": "guzzlehttp/promises",
-        "version": "1.1.0",
-        "version_normalized": "1.1.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/guzzle/promises.git",
-            "reference": "bb9024c526b22f3fe6ae55a561fd70653d470aa8"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/promises/zipball/bb9024c526b22f3fe6ae55a561fd70653d470aa8",
-            "reference": "bb9024c526b22f3fe6ae55a561fd70653d470aa8",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.5.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "~4.0"
-        },
-        "time": "2016-03-08 01:15:46",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "GuzzleHttp\\Promise\\": "src/"
-            },
-            "files": [
-                "src/functions_include.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Michael Dowling",
-                "email": "mtdowling@gmail.com",
-                "homepage": "https://github.com/mtdowling"
-            }
-        ],
-        "description": "Guzzle promises library",
-        "keywords": [
-            "promise"
-        ]
-    },
-    {
         "name": "guzzlehttp/guzzle",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/guzzle/guzzle.git",
-            "reference": "85cb758d7367f3aaaa8ffc9269e777919c5f68bb"
+            "reference": "6a37496c2b7855f5c88cac89c5f56a07e326d63c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/85cb758d7367f3aaaa8ffc9269e777919c5f68bb",
-            "reference": "85cb758d7367f3aaaa8ffc9269e777919c5f68bb",
+            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/6a37496c2b7855f5c88cac89c5f56a07e326d63c",
+            "reference": "6a37496c2b7855f5c88cac89c5f56a07e326d63c",
             "shasum": ""
         },
         "require": {
@@ -651,7 +538,7 @@
             "phpunit/phpunit": "~4.0",
             "psr/log": "~1.0"
         },
-        "time": "2016-04-06 17:59:33",
+        "time": "2016-06-04 22:16:20",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -697,12 +584,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/thephpleague/flysystem.git",
-            "reference": "a8294fb7d939433abfaeb0fc1a34a278acfa5b39"
+            "reference": "d94b118d3d2abf1ab182c3f4173b1720528f5dcd"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/94294e4b9feec0b9a126d729812eb411ec7b577d",
-            "reference": "a8294fb7d939433abfaeb0fc1a34a278acfa5b39",
+            "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/d94b118d3d2abf1ab182c3f4173b1720528f5dcd",
+            "reference": "d94b118d3d2abf1ab182c3f4173b1720528f5dcd",
             "shasum": ""
         },
         "require": {
@@ -731,7 +618,7 @@
             "league/flysystem-webdav": "Allows you to use WebDAV storage",
             "league/flysystem-ziparchive": "Allows you to use ZipArchive adapter"
         },
-        "time": "2016-04-04 14:52:20",
+        "time": "2016-06-05 15:56:21",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1367,120 +1254,6 @@
         ]
     },
     {
-        "name": "alroniks/dtms",
-        "version": "v0.5.2",
-        "version_normalized": "0.5.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Alroniks/dtms.git",
-            "reference": "fc48c95868feface8b769dd956509b54c5dd8ab5"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/Alroniks/dtms/zipball/fc48c95868feface8b769dd956509b54c5dd8ab5",
-            "reference": "fc48c95868feface8b769dd956509b54c5dd8ab5",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "4.*"
-        },
-        "time": "2015-08-26 15:24:59",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "alroniks\\dtms\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Ivan Klimchuk",
-                "email": "ivan@klimchuk.com",
-                "homepage": "http://klimchuk.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "Classes for manipulate dates and intervals with microseconds precision",
-        "homepage": "http://alroniks.github.io/dtms",
-        "keywords": [
-            "date",
-            "datetime",
-            "fractions",
-            "interval",
-            "iso8601",
-            "microseconds",
-            "milliseconds",
-            "ms",
-            "time"
-        ]
-    },
-    {
-        "name": "qtism/qtism",
-        "version": "0.9.25",
-        "version_normalized": "0.9.25.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/oat-sa/qti-sdk.git",
-            "reference": "0b0b9704cab5194d670a3681992cce373a4d9fa5"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/oat-sa/qti-sdk/zipball/0b0b9704cab5194d670a3681992cce373a4d9fa5",
-            "reference": "0b0b9704cab5194d670a3681992cce373a4d9fa5",
-            "shasum": ""
-        },
-        "require": {
-            "alroniks/dtms": "0.5.2",
-            "php": ">=5.3.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": ">=3.7.20"
-        },
-        "time": "2016-04-08 14:07:08",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "qtism\\": "."
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "GPL-2.0"
-        ],
-        "authors": [
-            {
-                "name": "Open Assessment Technologies S.A.",
-                "homepage": "http://www.taotesting.com"
-            },
-            {
-                "name": "Jérôme Bogaerts",
-                "email": "jerome@taotesting.com",
-                "homepage": "http://www.taotesting.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "OAT QTI Software Module Library",
-        "homepage": "http://www.taotesting.com",
-        "keywords": [
-            "CBA",
-            "Computer-Aided Assessment",
-            "Computer-Assisted Assessment",
-            "Computer-Based Assessment",
-            "IMS",
-            "OAT",
-            "QTI",
-            "TAO"
-        ]
-    },
-    {
         "name": "oat-sa/lib-beeme",
         "version": "0.0.0",
         "version_normalized": "0.0.0.0",
@@ -1528,69 +1301,6 @@
             "math calculator",
             "math parser",
             "shunting-yard algorithm"
-        ]
-    },
-    {
-        "name": "oat-sa/lib-tao-qti",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/oat-sa/lib-tao-qti.git",
-            "reference": "5992e63c0a48c59d3df25060b2e56bf4b3fd3d6c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/oat-sa/lib-tao-qti/zipball/5992e63c0a48c59d3df25060b2e56bf4b3fd3d6c",
-            "reference": "5992e63c0a48c59d3df25060b2e56bf4b3fd3d6c",
-            "shasum": ""
-        },
-        "require": {
-            "oat-sa/lib-beeme": "0.0.0",
-            "php": ">=5.3.10",
-            "qtism/qtism": "~0.9"
-        },
-        "require-dev": {
-            "phpunit/phpunit": ">=3.7.20"
-        },
-        "time": "2016-04-05 15:35:24",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "classmap": [
-                "helpers/"
-            ],
-            "psr-4": {
-                "qti\\customOperators\\": "model/operators/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "GPL-2.0"
-        ],
-        "authors": [
-            {
-                "name": "Open Assessment Technologies S.A.",
-                "homepage": "http://www.taotesting.com"
-            },
-            {
-                "name": "Jérôme Bogaerts",
-                "email": "jerome@taotesting.com",
-                "homepage": "http://www.taotesting.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "QTI Software Module Library for TAO",
-        "homepage": "http://www.taotesting.com",
-        "keywords": [
-            "CBA",
-            "Computer-Aided Assessment",
-            "Computer-Assisted Assessment",
-            "Computer-Based Assessment",
-            "IMS",
-            "OAT",
-            "QTI",
-            "TAO"
         ]
     },
     {
@@ -2971,51 +2681,6 @@
         ]
     },
     {
-        "name": "nikic/fast-route",
-        "version": "v0.6.0",
-        "version_normalized": "0.6.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/nikic/FastRoute.git",
-            "reference": "31fa86924556b80735f98b294a7ffdfb26789f22"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/nikic/FastRoute/zipball/31fa86924556b80735f98b294a7ffdfb26789f22",
-            "reference": "31fa86924556b80735f98b294a7ffdfb26789f22",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.4.0"
-        },
-        "time": "2015-06-18 19:15:47",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "FastRoute\\": "src/"
-            },
-            "files": [
-                "src/functions.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Nikita Popov",
-                "email": "nikic@php.net"
-            }
-        ],
-        "description": "Fast request router for PHP",
-        "keywords": [
-            "router",
-            "routing"
-        ]
-    },
-    {
         "name": "container-interop/container-interop",
         "version": "1.1.0",
         "version_normalized": "1.1.0.0",
@@ -3043,137 +2708,6 @@
             "MIT"
         ],
         "description": "Promoting the interoperability of container objects (DIC, SL, etc.)"
-    },
-    {
-        "name": "slim/slim",
-        "version": "3.x-dev",
-        "version_normalized": "3.9999999.9999999.9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/slimphp/Slim.git",
-            "reference": "e08856b997891e9303c72120d766434b13874b71"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/slimphp/Slim/zipball/b2e82a75467c12d94f038d433363e4aa7e8bf603",
-            "reference": "e08856b997891e9303c72120d766434b13874b71",
-            "shasum": ""
-        },
-        "require": {
-            "container-interop/container-interop": "^1.1",
-            "nikic/fast-route": "^0.6",
-            "php": ">=5.5.0",
-            "pimple/pimple": "^3.0",
-            "psr/http-message": "^1.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "^4.0",
-            "squizlabs/php_codesniffer": "^2.5"
-        },
-        "time": "2016-03-23 16:54:43",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Slim\\": "Slim"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Rob Allen",
-                "email": "rob@akrabat.com",
-                "homepage": "http://akrabat.com"
-            },
-            {
-                "name": "Josh Lockhart",
-                "email": "hello@joshlockhart.com",
-                "homepage": "https://joshlockhart.com"
-            },
-            {
-                "name": "Gabriel Manricks",
-                "email": "gmanricks@me.com",
-                "homepage": "http://gabrielmanricks.com"
-            },
-            {
-                "name": "Andrew Smith",
-                "email": "a.smith@silentworks.co.uk",
-                "homepage": "http://silentworks.co.uk"
-            }
-        ],
-        "description": "Slim is a PHP micro framework that helps you quickly write simple yet powerful web applications and APIs",
-        "homepage": "http://slimframework.com",
-        "keywords": [
-            "api",
-            "framework",
-            "micro",
-            "router"
-        ]
-    },
-    {
-        "name": "phpmailer/phpmailer",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/PHPMailer/PHPMailer.git",
-            "reference": "0f7182213a65bcdfc34a7caf976cc45c62a10b23"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/b04ab34d77e59082a22f893b7b720613b172d5fe",
-            "reference": "0f7182213a65bcdfc34a7caf976cc45c62a10b23",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.0.0"
-        },
-        "require-dev": {
-            "phpdocumentor/phpdocumentor": "*",
-            "phpunit/phpunit": "4.7.*"
-        },
-        "suggest": {
-            "league/oauth2-google": "Needed for Google XOAUTH2 authentication"
-        },
-        "time": "2016-04-11 13:28:11",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "classmap": [
-                "class.phpmailer.php",
-                "class.phpmaileroauth.php",
-                "class.phpmaileroauthgoogle.php",
-                "class.smtp.php",
-                "class.pop3.php",
-                "extras/EasyPeasyICS.php",
-                "extras/ntlm_sasl_client.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "LGPL-2.1"
-        ],
-        "authors": [
-            {
-                "name": "Jim Jagielski",
-                "email": "jimjag@gmail.com"
-            },
-            {
-                "name": "Marcus Bointon",
-                "email": "phpmailer@synchromedia.co.uk"
-            },
-            {
-                "name": "Andy Prevost",
-                "email": "codeworxtech@users.sourceforge.net"
-            },
-            {
-                "name": "Brent R. Matzelle"
-            }
-        ],
-        "description": "PHPMailer is a full-featured email creation and transfer class for PHP"
     },
     {
         "name": "phpdocumentor/reflection-docblock",
@@ -3351,5 +2885,477 @@
             "TAO",
             "computer-based-assessment"
         ]
+    },
+    {
+        "name": "guzzlehttp/promises",
+        "version": "1.2.0",
+        "version_normalized": "1.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/guzzle/promises.git",
+            "reference": "c10d860e2a9595f8883527fa0021c7da9e65f579"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/guzzle/promises/zipball/c10d860e2a9595f8883527fa0021c7da9e65f579",
+            "reference": "c10d860e2a9595f8883527fa0021c7da9e65f579",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0"
+        },
+        "time": "2016-05-18 16:56:05",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GuzzleHttp\\Promise\\": "src/"
+            },
+            "files": [
+                "src/functions_include.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            }
+        ],
+        "description": "Guzzle promises library",
+        "keywords": [
+            "promise"
+        ]
+    },
+    {
+        "name": "guzzlehttp/psr7",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/guzzle/psr7.git",
+            "reference": "7e9749008f75ab798168371cf3f6a2a36850576a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/guzzle/psr7/zipball/7e9749008f75ab798168371cf3f6a2a36850576a",
+            "reference": "7e9749008f75ab798168371cf3f6a2a36850576a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0",
+            "psr/http-message": "~1.0"
+        },
+        "provide": {
+            "psr/http-message-implementation": "1.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0"
+        },
+        "time": "2016-06-05 19:42:18",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.4-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GuzzleHttp\\Psr7\\": "src/"
+            },
+            "files": [
+                "src/functions_include.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            }
+        ],
+        "description": "PSR-7 message implementation",
+        "keywords": [
+            "http",
+            "message",
+            "stream",
+            "uri"
+        ]
+    },
+    {
+        "name": "nikic/fast-route",
+        "version": "v1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nikic/FastRoute.git",
+            "reference": "79843dce62ac52e9b628e73d5f1264cad10c65a6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/nikic/FastRoute/zipball/79843dce62ac52e9b628e73d5f1264cad10c65a6",
+            "reference": "79843dce62ac52e9b628e73d5f1264cad10c65a6",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "time": "2016-04-18 11:33:20",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "FastRoute\\": "src/"
+            },
+            "files": [
+                "src/functions.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Nikita Popov",
+                "email": "nikic@php.net"
+            }
+        ],
+        "description": "Fast request router for PHP",
+        "keywords": [
+            "router",
+            "routing"
+        ]
+    },
+    {
+        "name": "oat-sa/lib-tao-dtms",
+        "version": "v0.5.4",
+        "version_normalized": "0.5.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/oat-sa/lib-tao-dtms.git",
+            "reference": "3b123a58922325cfe98052d1ee66e5da71e9710c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/oat-sa/lib-tao-dtms/zipball/3b123a58922325cfe98052d1ee66e5da71e9710c",
+            "reference": "3b123a58922325cfe98052d1ee66e5da71e9710c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.*"
+        },
+        "time": "2015-10-19 14:21:30",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "oat\\dtms\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPLv2"
+        ],
+        "authors": [
+            {
+                "name": "Open Assessment Technologies S.A.",
+                "homepage": "http://www.taotesting.com"
+            },
+            {
+                "name": "Ivan Klimchuk",
+                "email": "ivan@klimchuk.com",
+                "homepage": "http://klimchuk.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Classes for manipulate dates and intervals with microseconds precision",
+        "keywords": [
+            "date",
+            "datetime",
+            "fractions",
+            "interval",
+            "iso8601",
+            "microseconds",
+            "milliseconds",
+            "ms",
+            "time"
+        ]
+    },
+    {
+        "name": "qtism/qtism",
+        "version": "0.9.31",
+        "version_normalized": "0.9.31.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/oat-sa/qti-sdk.git",
+            "reference": "bbed471d2d72da2f99e07aa9bf190e6437567fb4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/oat-sa/qti-sdk/zipball/bbed471d2d72da2f99e07aa9bf190e6437567fb4",
+            "reference": "bbed471d2d72da2f99e07aa9bf190e6437567fb4",
+            "shasum": ""
+        },
+        "require": {
+            "oat-sa/lib-tao-dtms": "~0.5",
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": ">=3.7.20"
+        },
+        "time": "2016-05-30 09:18:40",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "qtism\\": "."
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Open Assessment Technologies S.A.",
+                "homepage": "http://www.taotesting.com"
+            },
+            {
+                "name": "Jérôme Bogaerts",
+                "email": "jerome@taotesting.com",
+                "homepage": "http://www.taotesting.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "OAT QTI Software Module Library",
+        "homepage": "http://www.taotesting.com",
+        "keywords": [
+            "CBA",
+            "Computer-Aided Assessment",
+            "Computer-Assisted Assessment",
+            "Computer-Based Assessment",
+            "IMS",
+            "OAT",
+            "QTI",
+            "TAO"
+        ]
+    },
+    {
+        "name": "oat-sa/lib-tao-qti",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/oat-sa/lib-tao-qti.git",
+            "reference": "249fe469f5798f68a0b62f84b1ca335b2c9d42de"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/oat-sa/lib-tao-qti/zipball/249fe469f5798f68a0b62f84b1ca335b2c9d42de",
+            "reference": "249fe469f5798f68a0b62f84b1ca335b2c9d42de",
+            "shasum": ""
+        },
+        "require": {
+            "oat-sa/lib-beeme": "0.0.0",
+            "php": ">=5.3.10",
+            "qtism/qtism": "~0.9.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": ">=3.7.20"
+        },
+        "time": "2016-05-09 09:41:34",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "helpers/"
+            ],
+            "psr-4": {
+                "qti\\customOperators\\": "model/operators/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Open Assessment Technologies S.A.",
+                "homepage": "http://www.taotesting.com"
+            },
+            {
+                "name": "Jérôme Bogaerts",
+                "email": "jerome@taotesting.com",
+                "homepage": "http://www.taotesting.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "QTI Software Module Library for TAO",
+        "homepage": "http://www.taotesting.com",
+        "keywords": [
+            "CBA",
+            "Computer-Aided Assessment",
+            "Computer-Assisted Assessment",
+            "Computer-Based Assessment",
+            "IMS",
+            "OAT",
+            "QTI",
+            "TAO"
+        ]
+    },
+    {
+        "name": "slim/slim",
+        "version": "3.x-dev",
+        "version_normalized": "3.9999999.9999999.9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/slimphp/Slim.git",
+            "reference": "30cfe3c07dac28ec1129c0577e64b90ba11a54c4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/slimphp/Slim/zipball/30cfe3c07dac28ec1129c0577e64b90ba11a54c4",
+            "reference": "30cfe3c07dac28ec1129c0577e64b90ba11a54c4",
+            "shasum": ""
+        },
+        "require": {
+            "container-interop/container-interop": "^1.1",
+            "nikic/fast-route": "^1.0",
+            "php": ">=5.5.0",
+            "pimple/pimple": "^3.0",
+            "psr/http-message": "^1.0"
+        },
+        "provide": {
+            "psr/http-message-implementation": "1.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.0",
+            "squizlabs/php_codesniffer": "^2.5"
+        },
+        "time": "2016-05-26 08:20:33",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Slim\\": "Slim"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Rob Allen",
+                "email": "rob@akrabat.com",
+                "homepage": "http://akrabat.com"
+            },
+            {
+                "name": "Josh Lockhart",
+                "email": "hello@joshlockhart.com",
+                "homepage": "https://joshlockhart.com"
+            },
+            {
+                "name": "Gabriel Manricks",
+                "email": "gmanricks@me.com",
+                "homepage": "http://gabrielmanricks.com"
+            },
+            {
+                "name": "Andrew Smith",
+                "email": "a.smith@silentworks.co.uk",
+                "homepage": "http://silentworks.co.uk"
+            }
+        ],
+        "description": "Slim is a PHP micro framework that helps you quickly write simple yet powerful web applications and APIs",
+        "homepage": "http://slimframework.com",
+        "keywords": [
+            "api",
+            "framework",
+            "micro",
+            "router"
+        ]
+    },
+    {
+        "name": "phpmailer/phpmailer",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PHPMailer/PHPMailer.git",
+            "reference": "1d85f9ef3ecfc42bbc4f3c70d5e37ca9a65f629a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/1d85f9ef3ecfc42bbc4f3c70d5e37ca9a65f629a",
+            "reference": "1d85f9ef3ecfc42bbc4f3c70d5e37ca9a65f629a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.0.0"
+        },
+        "require-dev": {
+            "phpdocumentor/phpdocumentor": "*",
+            "phpunit/phpunit": "4.7.*"
+        },
+        "suggest": {
+            "league/oauth2-google": "Needed for Google XOAUTH2 authentication"
+        },
+        "time": "2016-06-06 09:09:37",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "class.phpmailer.php",
+                "class.phpmaileroauth.php",
+                "class.phpmaileroauthgoogle.php",
+                "class.smtp.php",
+                "class.pop3.php",
+                "extras/EasyPeasyICS.php",
+                "extras/ntlm_sasl_client.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-2.1"
+        ],
+        "authors": [
+            {
+                "name": "Jim Jagielski",
+                "email": "jimjag@gmail.com"
+            },
+            {
+                "name": "Marcus Bointon",
+                "email": "phpmailer@synchromedia.co.uk"
+            },
+            {
+                "name": "Andy Prevost",
+                "email": "codeworxtech@users.sourceforge.net"
+            },
+            {
+                "name": "Brent R. Matzelle"
+            }
+        ],
+        "description": "PHPMailer is a full-featured email creation and transfer class for PHP"
     }
 ]

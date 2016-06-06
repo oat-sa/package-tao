@@ -27,13 +27,28 @@ class RequestTest extends \PHPUnit_Framework_TestCase
      */
     public function testValidateRequestUri()
     {
-        new Request('GET', true);
+        new Request('GET', '///');
     }
 
     public function testCanConstructWithBody()
     {
         $r = new Request('GET', '/', [], 'baz');
+        $this->assertInstanceOf('Psr\Http\Message\StreamInterface', $r->getBody());
         $this->assertEquals('baz', (string) $r->getBody());
+    }
+
+    public function testNullBody()
+    {
+        $r = new Request('GET', '/', [], null);
+        $this->assertInstanceOf('Psr\Http\Message\StreamInterface', $r->getBody());
+        $this->assertSame('', (string) $r->getBody());
+    }
+
+    public function testFalseyBody()
+    {
+        $r = new Request('GET', '/', [], '0');
+        $this->assertInstanceOf('Psr\Http\Message\StreamInterface', $r->getBody());
+        $this->assertSame('0', (string) $r->getBody());
     }
 
     public function testCapitalizesMethod()
@@ -99,6 +114,12 @@ class RequestTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('/baz?bar=bam', $r1->getRequestTarget());
     }
 
+    public function testBuildsRequestTargetWithFalseyQuery()
+    {
+        $r1 = new Request('GET', 'http://foo.com/baz?0');
+        $this->assertEquals('/baz?0', $r1->getRequestTarget());
+    }
+
     public function testHostIsAddedFirst()
     {
         $r = new Request('GET', 'http://foo.com/baz?bar=bam', ['Foo' => 'Bar']);
@@ -135,10 +156,11 @@ class RequestTest extends \PHPUnit_Framework_TestCase
 
     public function testAggregatesHeaders()
     {
-        $r = new Request('GET', 'http://foo.com', [
+        $r = new Request('GET', '', [
             'ZOO' => 'zoobar',
             'zoo' => ['foobar', 'zoobar']
         ]);
+        $this->assertEquals(['ZOO' => ['zoobar', 'foobar', 'zoobar']], $r->getHeaders());
         $this->assertEquals('zoobar, foobar, zoobar', $r->getHeaderLine('zoo'));
     }
 

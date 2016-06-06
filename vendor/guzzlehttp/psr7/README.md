@@ -1,9 +1,8 @@
 # PSR-7 Message Implementation
 
-This repository contains a partial [PSR-7](http://www.php-fig.org/psr/psr-7/)
+This repository contains a full [PSR-7](http://www.php-fig.org/psr/psr-7/)
 message implementation, several stream decorators, and some helpful
-functionality like query string parsing.  Currently missing
-ServerRequestInterface and UploadedFileInterface; a pull request for these features is welcome.
+functionality like query string parsing.
 
 
 [![Build Status](https://travis-ci.org/guzzle/psr7.svg?branch=master)](https://travis-ci.org/guzzle/psr7)
@@ -30,7 +29,7 @@ $composed = new Psr7\AppendStream([$a, $b]);
 
 $composed->addStream(Psr7\stream_for(' Above all listen to me'));
 
-echo $composed(); // abc, 123. Above all listen to me.
+echo $composed; // abc, 123. Above all listen to me.
 ```
 
 
@@ -95,7 +94,7 @@ $stream = Psr7\stream_for();
 // Start dropping data when the stream has more than 10 bytes
 $dropping = new Psr7\DroppingStream($stream, 10);
 
-$stream->write('01234567890123456789');
+$dropping->write('01234567890123456789');
 echo $stream; // 0123456789
 ```
 
@@ -572,12 +571,3 @@ Note: this function will convert "=" to "%3D" and "&" to "%26".
 `public static function fromParts(array $parts) -> UriInterface`
 
 Create a `GuzzleHttp\Psr7\Uri` object from a hash of `parse_url` parts.
-
-
-# Not Implemented
-
-A few aspects of PSR-7 are not implemented in this project. A pull request for
-any of these features is welcome:
-
-- `Psr\Http\Message\ServerRequestInterface`
-- `Psr\Http\Message\UploadedFileInterface`

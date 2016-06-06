@@ -84,6 +84,25 @@ class StdTest extends \PhpUnit_Framework_TestCase {
                     ['/test/', ['name', '[^/]+'], '/', ['id', '[0-9]+']],
                 ]
             ],
+            [
+                '',
+                [
+                    [''],
+                ]
+            ],
+            [
+                '[test]',
+                [
+                    [''],
+                    ['test'],
+                ]
+            ],
+            [
+                '/{foo-bar}',
+                [
+                    ['/', ['foo-bar', '[^/]+']]
+                ]
+            ],
         ];
     }
 
@@ -108,6 +127,14 @@ class StdTest extends \PhpUnit_Framework_TestCase {
             [
                 '/test[[opt]]',
                 "Empty optional part"
+            ],
+            [
+                '[[test]]',
+                "Empty optional part"
+            ],
+            [
+                '/test[/opt]/required',
+                "Optional segments can only occur at the end of a route"
             ],
         ];
     }

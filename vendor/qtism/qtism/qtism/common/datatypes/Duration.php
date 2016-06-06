@@ -24,8 +24,8 @@
  */
 namespace qtism\common\datatypes;
 
-use alroniks\dtms\DateInterval;
-use alroniks\dtms\DateTime;
+use oat\dtms\DateInterval;
+use oat\dtms\DateTime;
 use DateTimeZone;
 use Exception;
 use InvalidArgumentException;

@@ -55,7 +55,7 @@ class App
      *
      * @var string
      */
-    const VERSION = '3.0.0';
+    const VERSION = '3.5.0-dev';
 
     /**
      * Container
@@ -379,19 +379,21 @@ class App
             }
             $settings       = $this->container->get('settings');
             $chunkSize      = $settings['responseChunkSize'];
+
             $contentLength  = $response->getHeaderLine('Content-Length');
             if (!$contentLength) {
                 $contentLength = $body->getSize();
             }
+
+
             if (isset($contentLength)) {
-                $totalChunks    = ceil($contentLength / $chunkSize);
-                $lastChunkSize  = $contentLength % $chunkSize;
-                $currentChunk   = 0;
-                while (!$body->eof() && $currentChunk < $totalChunks) {
-                    if (++$currentChunk == $totalChunks && $lastChunkSize > 0) {
-                        $chunkSize = $lastChunkSize;
-                    }
-                    echo $body->read($chunkSize);
+                $amountToRead = $contentLength;
+                while ($amountToRead > 0 && !$body->eof()) {
+                    $data = $body->read(min($chunkSize, $amountToRead));
+                    echo $data;
+                    
+                    $amountToRead -= strlen($data);
+                                        
                     if (connection_status() != CONNECTION_NORMAL) {
                         break;
                     }
@@ -543,9 +545,17 @@ class App
             return $response->withoutHeader('Content-Type')->withoutHeader('Content-Length');
         }
 
-        $size = $response->getBody()->getSize();
-        if ($size !== null && !$response->hasHeader('Content-Length')) {
-            $response = $response->withHeader('Content-Length', (string) $size);
+        // Add Content-Length header if `addContentLengthHeader` setting is set
+        if (isset($this->container->get('settings')['addContentLengthHeader']) &&
+            $this->container->get('settings')['addContentLengthHeader'] == true) {
+            if (ob_get_length() > 0) {
+                throw new \RuntimeException("Unexpected data in output buffer. " .
+                    "Maybe you have characters before an opening <?php tag?");
+            }
+            $size = $response->getBody()->getSize();
+            if ($size !== null && !$response->hasHeader('Content-Length')) {
+                $response = $response->withHeader('Content-Length', (string) $size);
+            }
         }
 
         return $response;
@@ -614,9 +624,8 @@ class App
      * @param  Throwable $e
      * @param  ServerRequestInterface $request
      * @param  ResponseInterface $response
-     *
      * @return ResponseInterface
-     * @throws Exception if a handler is needed and not found
+     * @throws Throwable
      */
     protected function handlePhpError(Throwable $e, ServerRequestInterface $request, ResponseInterface $response)
     {

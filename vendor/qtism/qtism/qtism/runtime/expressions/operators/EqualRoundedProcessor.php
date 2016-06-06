@@ -32,7 +32,7 @@ use qtism\data\expressions\operators\RoundTo;
 use qtism\runtime\common\Utils as RuntimeUtils;
 use qtism\data\expressions\operators\EqualRounded;
 use qtism\data\expressions\Expression;
-use qtism\runtime\expressions\Utils;
+use qtism\runtime\expressions\Utils as ProcessingUtils;
 use \InvalidArgumentException;
 
 /**
@@ -103,7 +103,7 @@ class EqualRoundedProcessor extends OperatorProcessor {
 		if (gettype($figures) === 'string') {
 			// Variable reference to deal with.
 			$state = $this->getState();
-			$varName = Utils::sanitizeVariableRef($figures);
+			$varName = ProcessingUtils::sanitizeVariableRef($figures);
 			$varValue = $state[$varName];
 			
 			if (is_null($varValue) === true) {

@@ -28,7 +28,7 @@ use qtism\common\datatypes\Boolean;
 use qtism\common\datatypes\Integer;
 use qtism\data\expressions\operators\AnyN;
 use qtism\data\expressions\Expression;
-use qtism\runtime\expressions\Utils;
+use qtism\runtime\expressions\Utils as ProcessingUtils;
 use \InvalidArgumentException;
 
 /**
@@ -82,7 +82,7 @@ class AnyNProcessor extends OperatorProcessor {
 		if (is_string($min) === true) {
 			// variable reference for 'min' to handle.
 			$state = $this->getState();
-			$varName = Utils::sanitizeVariableRef($min);
+			$varName = ProcessingUtils::sanitizeVariableRef($min);
 			$varValue = $state[$varName];
 			
 			if (is_null($varValue)) {
@@ -101,7 +101,7 @@ class AnyNProcessor extends OperatorProcessor {
 		if (is_string($max) === true) {
 			// variable reference for 'max' to handle.
 			$state = $this->getState();
-			$varName = Utils::sanitizeVariableRef($max);
+			$varName = ProcessingUtils::sanitizeVariableRef($max);
 			$varValue = $state[$varName];
 				
 			if (is_null($varValue)) {

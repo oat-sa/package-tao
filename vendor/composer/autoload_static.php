@@ -7,8 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInit9cc0d790ca108dc538f773d298a0f95c
 {
     public static $files = array (
-        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '050275d2af1eda067ec150361de824a2' => __DIR__ . '/..' . '/clearfw/clearfw/clearbricks/init.php',
@@ -63,11 +63,8 @@ class ComposerStaticInit9cc0d790ca108dc538f773d298a0f95c
             'oat\\generis\\scripts\\' => 20,
             'oat\\generis\\model\\' => 18,
             'oat\\funcAcl\\scripts\\' => 20,
+            'oat\\dtms\\' => 9,
             'oat\\beeme\\' => 10,
-        ),
-        'a' => 
-        array (
-            'alroniks\\dtms\\' => 14,
         ),
         'Z' => 
         array (
@@ -270,13 +267,13 @@ class ComposerStaticInit9cc0d790ca108dc538f773d298a0f95c
         array (
             0 => __DIR__ . '/../..' . '/funcAcl/scripts',
         ),
+        'oat\\dtms\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/oat-sa/lib-tao-dtms/src',
+        ),
         'oat\\beeme\\' => 
         array (
             0 => __DIR__ . '/..' . '/oat-sa/lib-beeme/src',
-        ),
-        'alroniks\\dtms\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/alroniks/dtms/src',
         ),
         'Zend\\ServiceManager\\' => 
         array (

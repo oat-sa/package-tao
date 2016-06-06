@@ -135,21 +135,22 @@ class ValueMarshaller extends Marshaller {
 		else {
 			// baseType attribute not set -> not part of a record.
 			$nodeValue = trim($element->nodeValue);
-			if ($nodeValue !== '') {
-				// Try to use the marshaller as parametric to know how to unserialize the value.
-				if ($this->getBaseType() != -1) {
-					$object = new Value(Utils::stringToDatatype($nodeValue, $this->getBaseType()), $this->getBaseType());
-				}
-				else {
-					// value used as plain string (at your own risks).
-					$object = new Value($nodeValue);
-				}
-				
-			}
-			else {
-				$msg = "The element '" . $element->localName . "' has no value.";
-				throw new UnmarshallingException($msg, $element);
-			}
+            
+            // Try to use the marshaller as parametric to know how to unserialize the value.
+            if ($this->getBaseType() != -1) {
+                
+                // Empty value only accepted if base type is string (consider empty string).
+                if ($this->getBaseType() !== BaseType::STRING && $nodeValue === '') {
+                    $msg = "The element '" . $element->localName . "' has no value.";
+                    throw new UnmarshallingException($msg, $element);
+                }
+                
+                $object = new Value(Utils::stringToDatatype($nodeValue, $this->getBaseType()), $this->getBaseType());
+            }
+            else {
+                // value used as plain string (at your own risks).
+                $object = new Value($nodeValue);
+            }
 		}
 		
 		if (($value = static::getDOMElementAttributeAs($element, 'fieldIdentifier', 'string')) !== null) {

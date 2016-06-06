@@ -57,6 +57,8 @@ class Container extends PimpleContainer implements ContainerInterface
         'outputBuffering' => 'append',
         'determineRouteBeforeAppMiddleware' => false,
         'displayErrorDetails' => false,
+        'addContentLengthHeader' => true,
+        'routerCacheFile' => false,
     ];
 
     /**
@@ -95,7 +97,7 @@ class Container extends PimpleContainer implements ContainerInterface
         $this['settings'] = function () use ($userSettings, $defaultSettings) {
             return new Collection(array_merge($defaultSettings, $userSettings));
         };
-        
+
         $defaultProvider = new DefaultServicesProvider();
         $defaultProvider->register($this);
     }
@@ -144,7 +146,9 @@ class Container extends PimpleContainer implements ContainerInterface
      */
     private function exceptionThrownByContainer(\InvalidArgumentException $exception)
     {
-        return preg_match('/^Identifier ".*" is not defined\.$/', $exception->getMessage());
+        $trace = $exception->getTrace()[0];
+
+        return $trace['class'] === PimpleContainer::class && $trace['function'] === 'offsetGet';
     }
 
     /**

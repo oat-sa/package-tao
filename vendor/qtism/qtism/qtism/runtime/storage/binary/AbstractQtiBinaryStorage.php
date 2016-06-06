@@ -143,8 +143,9 @@ abstract class AbstractQtiBinaryStorage extends AbstractStorage {
             $access->writeTinyInt($route->count());
             $itemSessionStore = $assessmentTestSession->getAssessmentItemSessionStore();
             $pendingResponseStore = $assessmentTestSession->getPendingResponseStore();
-            
-            foreach ($route as $routeItem) {
+
+            $routeItems = $route->getAllRouteItems();
+            foreach ($routeItems as $routeItem) {
                 $item = $routeItem->getAssessmentItemRef();
                 $occurence = $routeItem->getOccurence();
                 

@@ -68,6 +68,9 @@ use \Exception;
  */
 class AssessmentTestSession extends State {
 	
+    const ROUTECOUNT_ALL = 0;
+    const ROUTECOUNT_EXCLUDENORESPONSE = 1;
+    
     /**
      * A unique ID for this AssessmentTestSession.
      * 
@@ -1863,19 +1866,39 @@ class AssessmentTestSession extends State {
 	 * @param IdentifierCollection $excludeCategories The optional item categories to be excluded from the subset.
 	 * @return AssessmentItemRefCollection A collection of AssessmentItemRef objects that match all the given criteria.
 	 */
-	public function getItemSubset($sectionIdentifier = '', IdentifierCollection $includeCategories = null, IdentifierCollection $excludeCategories = null) {
-	    return $this->getRoute()->getAssessmentItemRefsSubset($sectionIdentifier, $includeCategories, $excludeCategories);
-	}
+    public function getItemSubset($sectionIdentifier = '', IdentifierCollection $includeCategories = null, IdentifierCollection $excludeCategories = null) {
+        return $this->getRoute()->getAssessmentItemRefsSubset($sectionIdentifier, $includeCategories, $excludeCategories);
+    }
 	
-	/**
-	 * Get the number of items in the current Route. In other words, the total number
-	 * of item occurences the candidate can take during the test.
-	 * 
-	 * @return integer
-	 */
-	public function getRouteCount() {
-	    return $this->getRoute()->count();
-	}
+    /**
+     * Get the number of items in the current Route. In other words, the total number
+     * of item occurences the candidate can take during the test.
+     * 
+     * The $mode parameter can take two values:
+     * 
+     * * AssessmentTestSession::ROUTECOUNT_ALL: consider all item occurences of the test
+     * * AssessmentTestSession::ROUTECOUNT_EXCLUDENORESPONSE: consider only item occurences containing at least one response declaration.
+     *
+     * @param integer $mode AssessmentTestSession::ROUTECOUNT_ALL | AssessmentTestSession::ROUTECOUNT_EXCLUDENORESPONSE
+     * @return integer
+     */
+    public function getRouteCount($mode = self::ROUTECOUNT_ALL)
+    {
+        if ($mode === self::ROUTECOUNT_ALL) {
+            
+            return $this->getRoute()->count();
+        } else {
+            $i = 0;
+            
+            foreach ($this->getRoute()->getAssessmentItemRefs() as $assessmentItemRef) {
+                if (count($assessmentItemRef->getResponseDeclarations()) > 0) {
+                    $i++;
+                }
+            }
+            
+            return $i;
+        }
+    }
 	
 	/**
 	 * Get the map of last occurence updates.

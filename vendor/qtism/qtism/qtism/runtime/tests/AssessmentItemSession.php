@@ -43,7 +43,7 @@ use qtism\common\enums\BaseType;
 use qtism\common\enums\Cardinality;
 use qtism\runtime\common\ResponseVariable;
 use qtism\runtime\common\State;
-use alroniks\dtms\DateTime;
+use oat\dtms\DateTime;
 use \DateTimeZone;
 use \InvalidArgumentException;
 

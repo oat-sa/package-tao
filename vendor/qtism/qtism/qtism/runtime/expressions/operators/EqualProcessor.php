@@ -29,7 +29,7 @@ use qtism\common\datatypes\Boolean;
 use qtism\data\expressions\operators\ToleranceMode;
 use qtism\data\expressions\operators\Equal;
 use qtism\data\expressions\Expression;
-use qtism\runtime\expressions\Utils;
+use qtism\runtime\expressions\Utils as ProcessingUtils;
 use \InvalidArgumentException;
 
 /**
@@ -116,7 +116,7 @@ class EqualProcessor extends OperatorProcessor {
 				
 				// variableRef to handle.
 				$state = $this->getState();
-				$tolerance0Name = Utils::sanitizeVariableRef($strTolerance[0]);
+				$tolerance0Name = ProcessingUtils::sanitizeVariableRef($strTolerance[0]);
 				$varValue = $state[$tolerance0Name];
 				
 				if (is_null($varValue)) {
@@ -132,7 +132,7 @@ class EqualProcessor extends OperatorProcessor {
 				
 				if (isset($strTolerance[1]) && gettype($strTolerance[1]) === 'string') {
 					// A second variableRef to handle.
-					$tolerance1Name = Utils::sanitizeVariableRef($strTolerance[1]);
+					$tolerance1Name = ProcessingUtils::sanitizeVariableRef($strTolerance[1]);
 					
 					if (($varValue = $state[$tolerance1Name]) !== null && $varValue instanceof Float) {
 						$tolerance[] = $varValue->getValue();
