@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.taotesting.com/xsd/qticompact_v1p0.xsd"
+	identifier="last_item_testpart_timeout" title="Last Item Test Part Timeout">
+	<testPart identifier="TP01" navigationMode="nonlinear" submissionMode="individual">
+        <timeLimits maxTime="1"/>
+		<assessmentSection identifier="S01" fixed="false" title="Section 01" visible="true">
+			<assessmentItemRef identifier="Q01" href="Q01.xml" fixed="false" adaptive="false" timeDependent="false">
+				<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+					<correctResponse>
+						<value>ChoiceB</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>0.0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+			</assessmentItemRef>
+		</assessmentSection>
+	</testPart>
+</assessmentTest>

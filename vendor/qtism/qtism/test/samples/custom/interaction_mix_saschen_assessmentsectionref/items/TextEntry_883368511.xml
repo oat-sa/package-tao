@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file was created using: Onyx Editor, Version 3.4.1 (Full, licensed version), (c)2011 BPS Bildungsportal Sachsen GmbH-->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 imsqti_v2p1.xsd" identifier="TextEntry_883368511" title="textEntry" adaptive="false" timeDependent="false">
+	<responseDeclaration identifier="RESPONSE_1" cardinality="single" baseType="string">
+		<correctResponse>
+			<value>Fichtelberg</value>
+		</correctResponse>
+		<mapping defaultValue="0.0">
+			<mapEntry mapKey="Fichtelberg" mappedValue="1.0" caseSensitive="false" />
+		</mapping>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>0.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>1.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+		<defaultValue>
+			<value>empty</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_13836328" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_4493676" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<itemBody>
+		<div>Mit 1215 Metern ist der <textEntryInteraction responseIdentifier="RESPONSE_1" />  die höchste Erhebung im Bundesland Sachsen.</div>
+	</itemBody>
+	<responseProcessing>
+		<responseCondition>
+			<responseIf>
+				<not>
+					<isNull>
+						<variable identifier="RESPONSE_1" />
+					</isNull>
+				</not>
+				<setOutcomeValue identifier="SCORE">
+					<sum>
+						<variable identifier="SCORE" />
+						<mapResponse identifier="RESPONSE_1" />
+					</sum>
+				</setOutcomeValue>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">incorrect</baseValue>
+				</setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+		<responseCondition>
+			<responseIf>
+				<and>
+					<not>
+						<match>
+							<variable identifier="FEEDBACKBASIC" />
+							<baseValue baseType="identifier">empty</baseValue>
+						</match>
+					</not>
+					<equal toleranceMode="exact">
+						<variable identifier="SCORE" />
+						<variable identifier="MAXSCORE" />
+					</equal>
+				</and>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">correct</baseValue>
+				</setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+		<setOutcomeValue identifier="FEEDBACK_13836328">
+			<and>
+				<match>
+					<baseValue baseType="identifier">correct</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+		<setOutcomeValue identifier="FEEDBACK_4493676">
+			<and>
+				<match>
+					<baseValue baseType="identifier">incorrect</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+	</responseProcessing>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_13836328" showHide="show" title="Richtig!">Der Fichtelberg bei Oberwiesenthal im Erzgebirgskreis ist mit 1.215 Metern der höchste Berg in Sachsen. </modalFeedback>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_4493676" showHide="show" title="Leider Falsch!">Der Fichtelberg bei Oberwiesenthal im Erzgebirgskreis ist mit 1.215 Metern der höchste Berg in Sachsen.</modalFeedback>
+</assessmentItem>

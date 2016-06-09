@@ -1,0 +1,37 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO v3.1-dev\n"
+"PO-Revision-Date: 2015-06-08T14:44:20\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: en-US\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: en-US\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# http://www.tao.lu/Ontologies/QtiItemPci.rdf#PciCreatorHook
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "QTI-PCI-Creator Hooks"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/QtiItemPci.rdf#PciCreatorIdentifier
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "typeIdentifier"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/QtiItemPci.rdf#PciCreatorIdentifier
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Unique Identifier of the PCI"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/QtiItemPci.rdf#PciCreatorDirectory
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "directory"
+msgstr ""
+
+# http://www.tao.lu/Ontologies/QtiItemPci.rdf#PciCreatorDirectory
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "the location containing the unzipped source of the PCI creator"
+msgstr ""
+

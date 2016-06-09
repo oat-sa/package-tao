@@ -1,0 +1,47 @@
+@import "inc/bootstrap";
+
+.runtime:not(.widget-box) {
+    .qti-hottextInteraction {
+        .qti-hottext {
+            padding: 1px;
+            border-width: 1px !important;
+        }
+    }
+}
+
+.qti-hottextInteraction {
+
+    .qti-hottext {
+        background: $uiClickableDefaultBg;
+        margin-right: 5px;
+        @include border-radius();
+        position: relative;
+        border-width: 0px !important;
+        
+        &:hover {
+            @extend %selectableHover;
+        }
+
+        &.error{
+            color : $error;
+        }
+
+        .hottext-checkmark {
+            padding-right: 0;
+            min-width: auto;
+            width: auto;
+        }
+
+        [class^="icon-"], [class*=" icon-"] {
+            &.small {
+                @include font-size(12);
+                text-shadow: none;
+                line-height:10px;
+                top: 1px;
+            }
+            &.error{
+                color : $error;
+            }
+        }
+    }
+}

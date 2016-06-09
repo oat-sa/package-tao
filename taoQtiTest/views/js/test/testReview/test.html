@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ui Test - Test Taker Review Screen</title>
+        <base href="../../../../../../../../tao/views/" />
+        <link rel="stylesheet" type="text/css" href="js/lib/qunit/qunit.css">
+        <script type="text/javascript" src="js/lib/require.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit-parameterize.js"></script>
+        <script type="text/javascript" src="js/lib/blanket/blanket.min.js"  data-cover-flag="branchTracking"  data-cover-only="testReview.js"></script>
+
+        <script  type="text/javascript">
+
+             //don't start the test now
+            QUnit.config.autostart = false;
+
+            //load the config
+            require(['/tao/ClientConfig/config'], function(){
+
+                //load the test
+                require(['taoQtiTest/test/testReview/test'], function(){
+
+                    //Tests loaded, run tests
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+            <div id="qti-navigator-1"></div>
+            <div id="qti-navigator-2"></div>
+            <div id="qti-navigator-3"></div>
+            <div id="qti-navigator-4"></div>
+            <div id="qti-navigator-5"></div>
+            <div id="qti-navigator-6"></div>
+        </div>
+    </body>
+</html>

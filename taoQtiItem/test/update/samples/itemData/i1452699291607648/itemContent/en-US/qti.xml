@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i14077449258577395" title="Example_8_Geo 3" label="" xml:lang="en-US" adaptive="false" timeDependent="false" toolName="TAO" toolVersion="3.1.0-sprint17">
+  <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="pair"/>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <itemBody>
+    <div class="grid-row">
+      <div class="col-12">
+        <graphicAssociateInteraction responseIdentifier="RESPONSE" maxAssociations="0" minAssociations="0" class="responsive">
+          <prompt>From Luxembourg to Budapest : itinerary ...<br/>
+Joel wants to taste some delicious Pörkölt, he booked a flight from Luxembourg to Budapest with a connection in Zurich. Draw Joel's itinerary on the map </prompt>
+          <object data="700px-Europe_polar_stereographic_Caucasus_Urals_boundary.svg.png" type="image/png" width="700" height="545"/>
+          <associableHotspot identifier="associablehotspot_1" fixed="false" matchMax="0" matchMin="0" shape="circle" coords="311,360,5"/>
+          <associableHotspot identifier="associablehotspot_2" fixed="false" matchMax="0" matchMin="0" shape="circle" coords="330,389,7"/>
+          <associableHotspot identifier="associablehotspot_3" fixed="false" matchMax="0" matchMin="0" shape="circle" coords="422,399,9"/>
+        </graphicAssociateInteraction>
+      </div>
+    </div>
+  </itemBody>
+  <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+</assessmentItem>

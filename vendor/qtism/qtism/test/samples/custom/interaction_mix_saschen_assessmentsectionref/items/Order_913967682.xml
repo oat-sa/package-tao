@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file was created using: Onyx Editor, Version 3.4.1 (Full, licensed version), (c)2011 BPS Bildungsportal Sachsen GmbH-->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 imsqti_v2p1.xsd" identifier="Order_913967682" title="order" adaptive="false" timeDependent="false">
+	<responseDeclaration identifier="RESPONSE" cardinality="ordered" baseType="identifier">
+		<correctResponse>
+			<value>Choice0</value>
+			<value>Choice1</value>
+			<value>Choice2</value>
+			<value>Choice3</value>
+			<value>Choice4</value>
+		</correctResponse>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>0.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>1.0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACKBASIC" cardinality="single" baseType="identifier">
+		<defaultValue>
+			<value>empty</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_14455851" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="FEEDBACK_23266699" cardinality="single" baseType="boolean" view="testConstructor">
+		<defaultValue>
+			<value>false</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<itemBody>
+		<div>
+			Sortiere die genannten Parteien nach Ihrer Sitzverteilung im Landtag Sachsen.<br />
+			Beginne mit der stärksten Partei.
+		</div>
+		<orderInteraction responseIdentifier="RESPONSE" shuffle="true">
+			<simpleChoice identifier="Choice0">CDU</simpleChoice>
+			<simpleChoice identifier="Choice1">Die Linke</simpleChoice>
+			<simpleChoice identifier="Choice2">SDP</simpleChoice>
+			<simpleChoice identifier="Choice3">Grüne</simpleChoice>
+			<simpleChoice identifier="Choice4">NPD</simpleChoice>
+		</orderInteraction>
+	</itemBody>
+	<responseProcessing>
+		<responseCondition>
+			<responseIf>
+				<isNull>
+					<variable identifier="RESPONSE" />
+				</isNull>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">empty</baseValue>
+				</setOutcomeValue>
+			</responseIf>
+			<responseElseIf>
+				<match>
+					<variable identifier="RESPONSE" />
+					<correct identifier="RESPONSE" />
+				</match>
+				<setOutcomeValue identifier="SCORE">
+					<sum>
+						<variable identifier="SCORE" />
+						<variable identifier="MAXSCORE" />
+					</sum>
+				</setOutcomeValue>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">correct</baseValue>
+				</setOutcomeValue>
+			</responseElseIf>
+			<responseElse>
+				<setOutcomeValue identifier="FEEDBACKBASIC">
+					<baseValue baseType="identifier">incorrect</baseValue>
+				</setOutcomeValue>
+			</responseElse>
+		</responseCondition>
+		<setOutcomeValue identifier="FEEDBACK_14455851">
+			<and>
+				<match>
+					<baseValue baseType="identifier">correct</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+		<setOutcomeValue identifier="FEEDBACK_23266699">
+			<and>
+				<match>
+					<baseValue baseType="identifier">incorrect</baseValue>
+					<variable identifier="FEEDBACKBASIC" />
+				</match>
+			</and>
+		</setOutcomeValue>
+	</responseProcessing>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_14455851" showHide="show" title="Richtig!">Die CDU ist in Sachsen seit der Wiedervereinigung die mit Abstand stärkste Partei und hat aktuell 58 Sitze im Landtag. Zweitstärkste Partei ist Die Linke (29), gefolgt von der SPD (14), der FDP (14), den Grünen (9) und der NPD (8).</modalFeedback>
+	<modalFeedback identifier="true" outcomeIdentifier="FEEDBACK_23266699" showHide="show" title="Leider Falsch!">Die CDU ist in Sachsen seit der Wiedervereinigung die mit Abstand stärkste Partei und hat aktuell 58 Sitze im Landtag. Zweitstärkste Partei ist Die Linke (29), gefolgt von der SPD (14), der FDP (14), den Grünen (9) und der NPD (8).</modalFeedback>
+</assessmentItem>

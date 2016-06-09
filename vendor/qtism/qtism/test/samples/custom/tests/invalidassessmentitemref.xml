@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+    identifier="invalidassessmentitemref" title="Invalid AssessmentItemRef">
+    <testPart identifier="T01" navigationMode="nonlinear" submissionMode="individual">
+        <assessmentSection identifier="S01" title="Section 01" visible="true">
+            <assessmentItemRef identifier="Q01" href="../../invalid/invalidresponseidentifier.xml"/>
+        </assessmentSection>
+    </testPart>
+</assessmentTest>

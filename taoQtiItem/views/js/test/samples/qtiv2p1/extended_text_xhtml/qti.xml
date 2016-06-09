@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Thie example adapted from the PET Handbook, copyright University of Cambridge ESOL Examinations -->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+    identifier="extendedTextHTML" title="Writing a Postcard" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="string"/>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+    <itemBody>
+        <p>xhtml version</p>
+        <p>Read this postcard from your English pen-friend, Sam.</p>
+        <div>
+            <object type="image/png" data="images/postcard.png">
+                <blockquote class="postcard">
+                    <p>Here is a postcard of my town. Please send me<br/> a postcard from your town.
+                        What size is your<br/> town? What is the nicest part of your town?<br/>
+                        Where do you go in the evenings?<br/> Sam.</p>
+                </blockquote>
+            </object>
+        </div>
+        <extendedTextInteraction responseIdentifier="RESPONSE" patternMask="^[\s\S]{0,100}$" format="xhtml">
+            <prompt>Write Sam a postcard. Answer the questions. Write 25-35 words.</prompt>
+        </extendedTextInteraction>
+    </itemBody>
+</assessmentItem>

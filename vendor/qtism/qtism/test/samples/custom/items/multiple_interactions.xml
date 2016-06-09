@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i137992197497699" title="Item 8" label="" xml:lang="en-US" adaptive="false" timeDependent="false">
+	<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+		<correctResponse>
+			<value>Choice_3</value>
+		</correctResponse>
+		<mapping defaultValue="0">
+			<mapEntry mapKey="Choice_3" mappedValue="6"/>
+			<mapEntry mapKey="Choice_4" mappedValue="3"/>
+		</mapping>
+	</responseDeclaration>
+	<responseDeclaration identifier="RESPONSE_1" cardinality="single" baseType="identifier">
+		<correctResponse>
+			<value>Choice_1</value>
+		</correctResponse>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+	<itemBody>
+		<div>
+			Reproduce
+			<br/>
+			<br/>
+			<choiceInteraction responseIdentifier="RESPONSE" shuffle="false" maxChoices="1" minChoices="0">
+			<prompt>
+			A question
+			<br/>
+			</prompt>
+			<simpleChoice identifier="Choice_3" fixed="false">correct</simpleChoice>
+			<simpleChoice identifier="Choice_4" fixed="false">so-so</simpleChoice>
+			<simpleChoice identifier="Choice_5" fixed="false">wrong</simpleChoice>
+			</choiceInteraction>
+			<br/>
+			<br/>
+			more
+			<br/>
+			<br/>
+			<inlineChoiceInteraction responseIdentifier="RESPONSE_1" shuffle="false" required="false">
+			<inlineChoice identifier="Choice_1" fixed="false">nice lady</inlineChoice>
+			<inlineChoice identifier="Choice_2" fixed="false">bad lady</inlineChoice>
+			</inlineChoiceInteraction>
+			<br/>
+		</div>
+	</itemBody>
+	<responseProcessing>
+		<responseCondition>
+			<responseIf>
+				<not>
+					<isNull>
+						<variable identifier="RESPONSE"/>
+					</isNull>
+				</not>
+				<setOutcomeValue identifier="SCORE">
+					<sum>
+						<variable identifier="SCORE"/>
+						<mapResponse identifier="RESPONSE"/>
+					</sum>
+				</setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+		<responseCondition>
+			<responseIf>
+				<match>
+					<variable identifier="RESPONSE_1"/>
+					<correct identifier="RESPONSE_1"/>
+				</match>
+				<setOutcomeValue identifier="SCORE">
+				<sum>
+					<variable identifier="SCORE"/>
+					<baseValue baseType="integer">1</baseValue>
+				</sum>
+				</setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+	</responseProcessing>
+</assessmentItem>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../doc/structures.dtd">
+<structures>
+	<structure id="settings" name="Settings" level="8" group="settings">
+		<sections>
+			<section id="taoBo_list" name="Lists" url="/taoBackOffice/Lists/index" />
+			<section id="taoBo_tree" name="Trees" url="/taoBackOffice/Trees/viewTree">
+                <trees>
+                    <tree name="Trees"
+                          className="Trees"
+                          selectClass="tree-class-select"
+                          dataUrl="/taoBackOffice/Trees/getTreeData"
+                          selectInstance="tree-view"
+                          rootNode="http://www.tao.lu/Ontologies/TAO.rdf#Tree"
+                        />
+                </trees>
+                <actions allowClassActions="true">
+                    <action id="tree-class-select" name="Properties" url="/taoBackOffice/Trees/dummy" group="content" context="class">
+                        <icon id="icon-edit"/>
+                    </action>
+
+                    <action id="tree-view"  name="View Tree"  url="/taoBackOffice/Trees/viewTree" group="content" context="instance">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="tree-edit"  name="Edit Tree"  url="/tao/PropertiesAuthoring/index" group="content" context="instance">
+                        <icon id="icon-edit"/>
+                    </action>
+                    <action id="tree-delete" name="Delete" url="/taoBackOffice/Trees/deleteResource" context="instance" group="tree" binding="removeNode">
+                        <icon id="icon-bin"/>
+                    </action>
+                    <action id="tree-import" name="Import" url="/tao/Import/index" context="resource" group="tree" binding="loadClass">
+                        <icon id="icon-import"/>
+                    </action>
+                    <action id="tree-export" name="Export" url="/tao/Export/index" context="instance" group="tree">
+                        <icon id="icon-export"/>
+                    </action>
+                </actions>
+			</section>
+		</sections>
+	</structure>
+</structures>

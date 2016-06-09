@@ -1,0 +1,73 @@
+@import "inc/bootstrap";
+
+.qti-choiceInteraction {
+
+    .qti-choice .real-label{
+        top:1px;
+    }
+
+    .choice-area {
+        &[class^="list-style-"], &[class*=" list-style-"] {
+
+            .label-content {
+                padding-left: 30px;
+            }
+
+            p, div, li {
+                &::before {
+                    position: absolute;
+                    left: 30px;
+                    top: 6px
+                }
+                &.add-option:before {
+                    content: '';
+                    display:inline;
+                }
+            }
+        }
+    }
+
+    .block-listing > li {
+        margin-top: 0;
+        margin-bottom: 0;
+        border-top: none;
+        border-bottom: none;
+        @include border-radius(0);
+        &:first-child {
+            margin-top: 3px;
+            border-top: 1px solid #eee;
+            @include border-radius-top(2);
+        }
+        &:last-child {
+            margin-bottom: 3px;
+            border-bottom: 1px solid #eee;
+            @include border-radius-bottom(2);
+        }
+    }
+    .block-listing.horizontal > li {
+        margin: 3px;
+        border: 1px solid #eee;
+        @include border-radius(2);
+    }
+
+
+    //IE specific
+
+    .checked {
+        span.icon-checkbox:before{
+            @include tao-icon-setup;
+            @include icon-checkbox-checked;
+        }
+        span.icon-radio:before{
+            @include tao-icon-setup;
+            @include icon-radio-checked;
+        }
+    }
+    .real-label{
+        input{
+            position: absolute;
+            left: -10000px;
+        }
+    }
+    //END IE specific
+}

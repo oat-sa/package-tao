@@ -1,0 +1,127 @@
+@import "inc/bootstrap";
+@import "./test-dimensions";
+
+.test-runner-scope {
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    height: calc(100vh - #{(map-get($heights, header) + map-get($heights, footer)) * 1px});
+
+    .test-runner-sections {
+
+        /* flex column value */
+        -webkit-flex: 1 1 0%;
+        -ms-flex: 1 1 0%;
+        flex: 1 1 0%;
+
+        overflow: hidden;
+
+        /* is also a flex container */
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .test-sidebar {
+        background: $canvas;
+
+        /* side bars are supposed to have no width until they've got content */
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+
+        overflow-y: auto;
+
+        max-width: 350px;
+        & > .qti-panel {
+            max-width: 350px;
+            padding: 10px;
+        }
+        @media only screen and (max-device-width : 800px) {
+            max-width: 200px;
+            & > .qti-panel {
+                max-width: 200px;
+            }
+        }
+        @media only screen and (min-device-width : 800px) and (max-device-width : 1280px) {
+            max-width: 250px;
+            & > .qti-panel {
+                max-width: 250px;
+            }
+        }
+        @media only screen and (min-device-width : 1280px) and (max-device-width : 1440px) {
+            max-width: 300px;
+            & > .qti-panel {
+                max-width: 300px;
+            }
+        }
+    }
+    .test-sidebar-left {
+        border-right: 1px $uiGeneralContentBorder solid;
+    }
+
+    .test-sidebar-right {
+        border-left: 1px $uiGeneralContentBorder solid;
+    }
+
+    .content-wrapper {
+        position: relative;
+
+        -webkit-flex: 1 1 0%;
+        -ms-flex: 1 1 0%;
+        flex: 1 1 0%;
+
+        overflow: auto;
+
+        .overlay {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            opacity : .9;
+        }
+    }
+
+    #qti-content {
+        max-width: map-get($widths, item-max-width) * 1px;
+        width: 100%;
+        margin: auto;
+    }
+
+    #qti-item {
+        width: 100%;
+        min-width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+
+    .size-wrapper {
+        max-width: map-get($widths, size-wrapper) * 1px;
+        margin: auto;
+        width: 100%;
+    }
+
+    #qti-rubrics {
+        margin: auto;
+        max-width: map-get($widths, item-max-width) * 1px;
+        width: 100%;
+        padding: 15px;
+        .qti-rubricBlock {
+            margin: 20px 0;
+        }
+        .hidden {
+            display: none;
+        }
+    }
+}
+

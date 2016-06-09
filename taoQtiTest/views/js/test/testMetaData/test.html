@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Test meta data manager</title>
+        <base href="../../../../../../../../tao/views/" />
+        <link rel="stylesheet" type="text/css" href="js/lib/qunit/qunit.css">
+        <script type="text/javascript" src="js/lib/require.js"></script>
+        <script type="text/javascript" src="js/lib/qunit/qunit.js"></script>
+        <script type="text/javascript" src="js/lib/blanket/blanket.min.js" data-cover-flag="branchTracking"  data-cover-only="testMetaData.js"></script>
+        <script  type="text/javascript">
+            QUnit.config.autostart = false;
+            require(['/tao/ClientConfig/config'], function () {
+                require(['taoQtiTest/test/testMetaData/test'], function(){
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    </body>
+</html>

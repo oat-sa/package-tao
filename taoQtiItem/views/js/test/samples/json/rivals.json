@@ -1,0 +1,256 @@
+{
+    "identifier": "associate",
+    "serial": "item_54787e6dacd93524247481",
+    "qtiClass": "assessmentItem",
+    "attributes": {
+        "identifier": "associate",
+        "title": "Shakespearian Rivals",
+        "label": "",
+        "adaptive": false,
+        "timeDependent": false,
+        "toolName": "TAO",
+        "toolVersion": "3.0"
+    },
+    "body": {
+        "serial": "container_containeritembody_54787e6dacd7b198753836",
+        "body": "{{interaction_associateinteraction_54787e6dad70d437146538}}",
+        "elements": {
+            "interaction_associateinteraction_54787e6dad70d437146538": {
+                "serial": "interaction_associateinteraction_54787e6dad70d437146538",
+                "qtiClass": "associateInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE",
+                    "shuffle": false,
+                    "maxAssociations": 3,
+                    "minAssociations": 0
+                },
+                "choices": {
+                    "choice_simpleassociablechoice_54787e6dad92f863480296": {
+                        "identifier": "A",
+                        "serial": "choice_simpleassociablechoice_54787e6dad92f863480296",
+                        "qtiClass": "simpleAssociableChoice",
+                        "attributes": {
+                            "identifier": "A",
+                            "fixed": false,
+                            "matchMax": 1,
+                            "matchMin": 0
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_54787e6dad9e8693592338",
+                            "body": "Antonio",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_54787e6dacd93524247481"
+                            }
+                        }
+                    },
+                    "choice_simpleassociablechoice_54787e6dada72153507621": {
+                        "identifier": "C",
+                        "serial": "choice_simpleassociablechoice_54787e6dada72153507621",
+                        "qtiClass": "simpleAssociableChoice",
+                        "attributes": {
+                            "identifier": "C",
+                            "fixed": false,
+                            "matchMax": 1,
+                            "matchMin": 0
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_54787e6dadaa2616211247",
+                            "body": "Capulet",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_54787e6dacd93524247481"
+                            }
+                        }
+                    },
+                    "choice_simpleassociablechoice_54787e6dadb13033133436": {
+                        "identifier": "D",
+                        "serial": "choice_simpleassociablechoice_54787e6dadb13033133436",
+                        "qtiClass": "simpleAssociableChoice",
+                        "attributes": {
+                            "identifier": "D",
+                            "fixed": false,
+                            "matchMax": 1,
+                            "matchMin": 0
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_54787e6dadb40695876709",
+                            "body": "Demetrius",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_54787e6dacd93524247481"
+                            }
+                        }
+                    },
+                    "choice_simpleassociablechoice_54787e6dadbae997640332": {
+                        "identifier": "L",
+                        "serial": "choice_simpleassociablechoice_54787e6dadbae997640332",
+                        "qtiClass": "simpleAssociableChoice",
+                        "attributes": {
+                            "identifier": "L",
+                            "fixed": false,
+                            "matchMax": 1,
+                            "matchMin": 0
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_54787e6dadbda418176012",
+                            "body": "Lysander",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_54787e6dacd93524247481"
+                            }
+                        }
+                    },
+                    "choice_simpleassociablechoice_54787e6dadc47042575691": {
+                        "identifier": "M",
+                        "serial": "choice_simpleassociablechoice_54787e6dadc47042575691",
+                        "qtiClass": "simpleAssociableChoice",
+                        "attributes": {
+                            "identifier": "M",
+                            "fixed": false,
+                            "matchMax": 1,
+                            "matchMin": 0
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_54787e6dadc72722745137",
+                            "body": "Montague",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_54787e6dacd93524247481"
+                            }
+                        }
+                    },
+                    "choice_simpleassociablechoice_54787e6dadcdd949770698": {
+                        "identifier": "P",
+                        "serial": "choice_simpleassociablechoice_54787e6dadcdd949770698",
+                        "qtiClass": "simpleAssociableChoice",
+                        "attributes": {
+                            "identifier": "P",
+                            "fixed": false,
+                            "matchMax": 2,
+                            "matchMin": 0
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_54787e6dadd08544977300",
+                            "body": "Prospero",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_54787e6dacd93524247481"
+                            }
+                        }
+                    }
+                },
+                "prompt": {
+                    "serial": "container_containerstatic_54787e6dad853189369793",
+                    "body": "Hidden in this list of characters from famous Shakespeare plays are three pairs\n\t\t\t\tof rivals. Can you match each character to his adversary?",
+                    "elements": [],
+                    "debug": {
+                        "relatedItem": "item_54787e6dacd93524247481"
+                    }
+                }
+            }
+        },
+        "debug": {
+            "relatedItem": "item_54787e6dacd93524247481"
+        }
+    },
+    "namespaces": {
+        "": "http://www.imsglobal.org/xsd/imsqti_v2p1",
+        "xsi": "http://www.w3.org/2001/XMLSchema-instance"
+    },
+    "schemaLocations": {
+        "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1": "http:\/\/www.imsglobal.org\/xsd\/qti\/qtiv2p1\/imsqti_v2p1.xsd"
+    },
+    "stylesheets": [],
+    "outcomes": {
+        "outcomedeclaration_54787e6dad4d2957887549": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_54787e6dad4d2957887549",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "defaultValue": null
+        }
+    },
+    "responses": {
+        "responsedeclaration_54787e6dacfde493993694": {
+            "identifier": "RESPONSE",
+            "serial": "responsedeclaration_54787e6dacfde493993694",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE",
+                "cardinality": "multiple",
+                "baseType": "pair"
+            },
+            "correctResponses": [
+                "A P",
+                "C M",
+                "D L"
+            ],
+            "mapping": {
+                "A P": "2",
+                "C M": "1",
+                "D L": "1"
+            },
+            "areaMapping": [],
+            "howMatch": "http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response",
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": []
+        }
+    },
+    "feedbacks": [],
+    "responseProcessing": {
+        "serial": "response_templatesdriven_54787e6dade83075046789",
+        "qtiClass": "responseProcessing",
+        "attributes": [],
+        "processingType": "templateDriven",
+        "responseRules": [{
+            "qtiClass": "responseCondition",
+            "responseIf": {
+                "qtiClass": "responseIf",
+                "expression": {
+                    "qtiClass": "isNull",
+                    "expressions": [{
+                        "qtiClass": "variable",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }]
+                },
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "baseValue",
+                        "attributes": {
+                            "baseType": "float"
+                        },
+                        "value": "0.0"
+                    }
+                }]
+            },
+            "responseElse": {
+                "qtiClass": "responseElse",
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "mapResponse",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }
+                }]
+            }
+        }]
+    }
+}

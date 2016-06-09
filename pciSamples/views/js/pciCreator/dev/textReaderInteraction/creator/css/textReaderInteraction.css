@@ -1,0 +1,54 @@
+.edit-question .textReaderInteraction .tr-passage-column {
+    border: 1px dashed #3E7DA7;
+}
+
+.textReaderInteraction .tr-wrap .add-option{
+    text-align: center;
+    margin: 10px;
+}
+.textReaderInteraction .tr-wrap .add-option:first-child{
+    margin-top: 10px;
+}
+.textReaderInteraction .tr-wrap .add-option:last-child{
+    margin-bottom: 10px;
+}
+
+.textReaderInteraction .tr-page .icon-bin {
+    cursor: pointer;
+    float: right;
+    margin: 10px;
+    color: #266d9c;
+}
+.textReaderInteraction .tr-page .icon-bin:hover {
+    color: #a4bbc5;
+}
+
+.textReaderInteraction .tr-column-select {
+    margin : 10px;
+    color: #0e5d91;
+}
+.textReaderInteraction .tr-wrap .tr-column-select select {
+    color: #0e5d91;
+    width: 35px;
+    min-width: 35px;
+    padding: 0;
+}
+
+.textReaderInteraction .tr-tab-buttons__item .tr-close-tab{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 1px;
+    right: -1px;
+    left: auto;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    color: #266d9c;
+    font-size: 1.2rem;
+}
+.textReaderInteraction .tr-tab-buttons__item .tr-close-tab:hover{
+    color: #a4bbc5;
+    font-weight: bold;
+}

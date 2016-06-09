@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xml:base="http://www.tao.lu/Ontologies/TAO.rdf#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:tao="http://www.tao.lu/Ontologies/TAO.rdf#"
+    xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#"
+    xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#"
+>
+    <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#RequiredActionTimeRule">
+        <rdfs:label xml:lang="en-US"><![CDATA[Required Action Time Rule]]></rdfs:label>
+        <rdfs:comment xml:lang="en-US"><![CDATA[Required Action Time Rule]]></rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#TAOObject"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#RequiredActionName">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:label xml:lang="en-US"><![CDATA[Required Action Name]]></rdfs:label>
+        <rdfs:comment xml:lang="en-US"><![CDATA[Name Of Required Action]]></rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#RequiredActionTimeRule"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+        <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#RequiredActionExecutionTime">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:label xml:lang="en-US"><![CDATA[Executed At Date]]></rdfs:label>
+        <rdfs:comment xml:lang="en-US"><![CDATA[Time of execution of required action]]></rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#RequiredActionTimeRule"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#Calendar"/>
+        <generis:is_language_dependent rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#False"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#RequiredActionSubject">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:label xml:lang="en-US"><![CDATA[Executed by]]></rdfs:label>
+        <rdfs:comment xml:lang="en-US"><![CDATA[Required action executed by user]]></rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#RequiredActionTimeRule"/>
+        <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/TAOSubject.rdf#Subject"/>
+    </rdf:Description>
+
+</rdf:RDF>

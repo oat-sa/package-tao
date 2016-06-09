@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+	<structure id="settings" name="Settings" level="11" group="invisible">
+		<description />
+		<sections>
+			<section id="settings_oauth_mng" name="LTI Consumers" url="/taoLti/ConsumerAdmin/index">
+				<trees>
+					<tree name="LTI Consumers"
+						className="LTI Consumers"
+						dataUrl="/taoLti/ConsumerAdmin/getOntologyData"
+                        rootNode="http://www.tao.lu/Ontologies/TAOLTI.rdf#LTIConsumer"
+                        selectClass="lticonsumer-index"
+                        selectInstance="lticonsumer-edit"
+                        delete="lticonsumer-delete"
+					/>
+				</trees>
+				<actions>
+					<action id="lticonsumer-index" name="Index" url="/taoLti/ConsumerAdmin/index" context="class" group="none" />
+					<action id="lticonsumer-edit" name="Properties" url="/taoLti/ConsumerAdmin/editInstance" context="instance" group="none">
+                        <icon id="icon-edit"/>
+                    </action>
+					<action id="lticonsumer-delete" name="Delete" binding="removeNode" url="/taoLti/ConsumerAdmin/delete" context="instance" group="tree">
+                        <icon id="icon-bin"/>
+                    </action>
+					<action id="lticonsumer-import" name="Import" url="/tao/Import/index"  context="class" group="tree">
+                        <icon id="icon-import"/>
+                    </action>
+					<action id="lticonsumer-export" name="Export" url="/tao/Export/index"  context="resource" group="tree">
+                        <icon id="icon-export"/>
+                    </action>
+					<action id="lticonsumer-new" name="Add Consumer" url="/taoLti/ConsumerAdmin/addInstanceForm" context="class" group="tree">
+                        <icon id="icon-add"/>
+                    </action>
+				</actions>
+			</section>
+		</sections>
+	</structure>
+</structures>

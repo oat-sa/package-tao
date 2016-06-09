@@ -1,0 +1,130 @@
+[class^="feedback-"], [class*=" feedback-"] {
+    border: 1px transparent solid;
+    position: relative;
+    padding: 20px 20px 20px 45px;
+    margin: 5px 0 10px 0;
+    border-radius: 3px;
+    color: $textColor !important;
+    &.small {
+        padding: 8px 20px 8px 45px;
+        [class^="icon-"], [class*=" icon-"] {
+            top: 9px;
+            left: 10px;
+        }
+    }
+    [class^="icon-"], [class*=" icon-"] {
+        @include font-size(20);
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        &.icon-close, &.icon-remove {
+            @include font-size(15);
+            color: #999;
+            left: auto;
+
+            top: 5px;
+            cursor: pointer;
+            &:hover {
+                color: #222;
+            }
+        }
+        &.icon-remove {
+            right: 24px;
+        }
+        &.icon-close {
+            right: 7px;
+        }
+    }
+    &.popup {
+        display : block;
+        position : fixed;
+        top : 50px;
+        left : 50%;
+        margin-left : -200px;
+        width : 400px;
+        z-index : 999999;
+    }
+}
+
+.feedback-error {
+    border-color: $errorBorderColor;
+    background-color: $errorBgColor;
+    .icon-error {
+        color: $error !important;
+    }
+}
+
+.feedback-info {
+    border-color: $infoBorderColor;
+    background-color: $infoBgColor;
+    .icon-info, .icon-lock {
+        color: $info !important;
+    }
+    .button-container {
+        margin-top:20px;
+    }
+}
+
+.feedback-success {
+    border-color: $successBorderColor;
+    background-color: $successBgColor;
+    .icon-success {
+        color: $success !important;
+    }
+}
+
+.feedback-warning {
+    border-color: $warningBorderColor;
+    background-color: $warningBgColor;
+    .icon-warning {
+        color: $warning !important;
+    }
+}
+
+.brd-error {
+    border: 1px solid $errorBorderColor !important;
+}
+
+.brd-info {
+    border: 1px solid $infoBorderColor !important;
+}
+
+.brd-success {
+    border: 1px solid $successBorderColor !important;
+}
+
+.brd-warning {
+    border: 1px solid $warningBorderColor !important;
+}
+
+.txt-error {
+    color: $error !important;
+}
+
+.txt-info {
+    color: $info !important;
+}
+
+.txt-success {
+    color: $success !important;
+}
+
+.txt-warning {
+    color: $warning !important;
+}
+
+.bg-error {
+    background-color: $errorBgColor;
+}
+
+.bg-info {
+    background-color: $infoBgColor;
+}
+
+.bg-success {
+    background-color: $successBgColor;
+}
+
+.bg-warning {
+    background-color: $warningBgColor;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xml:base="http://www.tao.lu/Ontologies/TAO.rdf#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#"
+	xmlns:tao="http://www.tao.lu/Ontologies/TAO.rdf#"
+>
+	<rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#BaseUserRole">
+    	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#AbstractRole"/>
+    	<rdfs:label xml:lang="en-US"><![CDATA[Base User]]></rdfs:label>
+		<rdfs:comment xml:lang="en-US"><![CDATA[Base User Role]]></rdfs:comment>
+		<generis:includesRole rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#AnonymousRole"/>
+	</rdf:Description>
+</rdf:RDF>

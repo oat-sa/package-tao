@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xml:base="http://www.tao.lu/Ontologies/taoFuncACL.rdf#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:tao="http://www.tao.lu/Ontologies/TAO.rdf#"
+	xmlns:wf="http://www.tao.lu/middleware/wfEngine.rdf#"
+	xmlns:widget="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#"
+	xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#"
+>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#ControlComponent">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#generis_Ressource"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Control component]]></rdfs:label>
+	<rdfs:comment xml:lang="en-US"><![CDATA[Either an extension, module or action]]></rdfs:comment>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#Extension">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#ControlComponent"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[An extension]]></rdfs:label>
+	<rdfs:comment xml:lang="en-US"><![CDATA[A tao extension]]></rdfs:comment>
+  </rdf:Description>  
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#Module">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#ControlComponent"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[A module]]></rdfs:label>
+	<rdfs:comment xml:lang="en-US"><![CDATA[A MVC Controller Module]]></rdfs:comment>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#Action">
+    <rdfs:subClassOf rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#ControlComponent"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[An action]]></rdfs:label>
+	<rdfs:comment xml:lang="en-US"><![CDATA[A MVC Controller Action]]></rdfs:comment>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#Identifier">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Identifier]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Identifier]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#ControlComponent"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <widget:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#GrantAccess">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#ClassRole"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#ControlComponent"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Grant access to a control component]]></rdfs:label>
+	<rdfs:comment xml:lang="en-US"><![CDATA[Grant access to a control component]]></rdfs:comment>
+	<generis:Multiple rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#True"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#actionMemberOf">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#member"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Member of]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Member of a module]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#Action"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#Module"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#moduleExtension">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Extension]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Extension of the module]]></rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#Module"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/Ontologies/taoFuncACL.rdf#Extension"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/taoFuncACL.rdf#FuncAclManagerRole">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#ManagementRole"/>
+  	<generis:includesRole rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#BackOfficeRole"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[Function ACL Manager]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[The functionality based access controll layer Manager Role]]></rdfs:comment>
+  </rdf:Description>
+  
+</rdf:RDF>

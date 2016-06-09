@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+	identifier="choiceMultiple" title="Composition of Water" adaptive="false" timeDependent="false">
+    <!-- identifier of responseDeclaration is invalid for QTI-SDK because it has a leading "space" char. -->
+	<responseDeclaration identifier=" RESPONSE" cardinality="multiple" baseType="identifier">
+		<correctResponse>
+			<value>H</value>
+			<value>O</value>
+		</correctResponse>
+		<mapping lowerBound="0" upperBound="2" defaultValue="-2">
+			<mapEntry mapKey="H" mappedValue="1"/>
+			<mapEntry mapKey="O" mappedValue="1"/>
+			<mapEntry mapKey="Cl" mappedValue="-1"/>
+		</mapping>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+	<itemBody>
+		<choiceInteraction responseIdentifier="RESPONSE" shuffle="true" maxChoices="0">
+			<prompt>Which of the following elements are used to form water?</prompt>
+			<simpleChoice identifier="H" fixed="false">Hydrogen</simpleChoice>
+			<simpleChoice identifier="He" fixed="false">Helium</simpleChoice>
+			<simpleChoice identifier="C" fixed="false">Carbon</simpleChoice>
+			<simpleChoice identifier="O" fixed="false">Oxygen</simpleChoice>
+			<simpleChoice identifier="N" fixed="false">Nitrogen</simpleChoice>
+			<simpleChoice identifier="Cl" fixed="false">Chlorine</simpleChoice>
+		</choiceInteraction>
+	</itemBody>
+	<responseProcessing
+		template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response"/>
+</assessmentItem>

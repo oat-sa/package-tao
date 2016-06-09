@@ -1,0 +1,26 @@
+.permission-container {
+    [class*=" btn-"],
+    button{
+        &.btn-link{
+            background: transparent !important;
+            color: $uiClickableHoverBg !important;
+            -webkit-text-shadow: none;
+            -moz-text-shadow: none;
+            -ms-text-shadow: none;
+            -o-text-shadow: none;
+            text-shadow: none;
+            &:hover{
+                text-decoration: underline;
+            }
+            &.disabled{
+                background: transparent !important;
+                color : $mediumBlueGrey !important;
+                cursor: not-allowed;
+            }
+        }
+    }
+    div.add{
+        float: left;
+        margin-left: 15px;
+    }
+}

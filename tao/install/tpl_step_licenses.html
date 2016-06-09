@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Licensing Agreement</title>
+	<link rel="stylesheet" type="text/css" href="../views/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../views/css/custom-theme/jquery-ui-1.8.22.custom.css"/>
+	<link rel="stylesheet" type="text/css" href="css/installation_main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/step_licenses.css"/>
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/step_ie8.css"/>
+	<![endif]-->
+	<script type="text/javascript" src="../views/js/lib/require.js" data-main="js/step_licenses"></script>
+</head>
+
+<body>    
+    <div id="installation_form" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+        <h2>TAO Installation Wizard</h2>
+        <h1>Licensing Agreement</h1>
+        <ul id="install_seq">
+            <li><h3>Installation Steps</h3></li>
+            <li id="step_requirements">1. <a href="#">Requirements Check</a></li>
+            <li id="step_server_setup">2. <a href="#">Server Setup</a></li>
+            <li id="step_database_setup">3. <a href="#">Database Setup</a></li>
+            <li id="step_admin_setup">4. <a href="#">Administrator Setup</a></li>
+            <li id="step_licenses" class="currentStep">5. Licensing Agreement</li>
+            <li id="step_finalization">6. Finalize Installation</li>
+        </ul>
+        <p id="comments">You are now ready to install TAO. Please read and accept the licensing terms in order to proceed.</p>
+        <div id="forms_content">
+          <form autocomplete="off">
+                <ul id="license_fields">
+                    <li>
+                        <label for="sample_data">The <b>GNU GPLv2</b> license:</label><br/>                                
+                        <textarea id="readLicense1Header" readonly="readonly"></textarea>
+                        <input id="readLicense1" class="enabled" type="button" value="Read and Accept the GPLv2 License" role="button"/><br/>
+                        <div class="approved" id="approval-status-1"></div>                        
+                    </li>
+                    <li>
+                        <label for="sample_data">The <b>TAO Trademark Community</b> license:</label><br/>
+                        <textarea id="readLicense2Header" readonly="readonly"></textarea>
+                        <input id="readLicense2" class="enabled" type="button" value="Read and Accept the TAO License" role="button"/></br>
+                        <div class="approved" id="approval-status-2"></div>
+                    </li>
+                </ul>
+                
+                <div class="ui-dialog" id="dialog-license1-confirm" title="GNU GPLv2 license"></div>
+                <div class="ui-dialog" id="dialog-license2-confirm" title="TAO Trademark Policy license"></div>
+                
+                <input id="gplRead" type="hidden" class="tao-input" value=""/>
+                <input id="trademarkRead" type="hidden" class="tao-input" value=""/>
+                <input id="abortForm" class="enabled" type="button" value="Cancel" />
+                <input id="submitForm" class="disabled" type="submit" value="Next" disabled="disabled"/>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

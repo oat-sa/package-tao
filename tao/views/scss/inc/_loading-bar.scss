@@ -1,0 +1,55 @@
+@import 'inc/bootstrap';
+
+$loadingBarBorder: whiten($darkBar, .4);
+
+@mixin loading-gradient($color-1, $color-2) {
+    @include vendor-prefix(background, linear-gradient(to right,  $color-2 0%, $color-1 20%, $color-1 80%, $color-2 100%), value);
+}
+
+@include keyframes(loadingbar) {
+    0% { left: -10% }
+    50% { left: 90% }
+    100% { left: -10% }
+}
+
+.loading-bar {
+    height: 6px;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    display:none;
+    overflow-x: hidden;
+    overflow-y: visible;
+    z-index: 10000;
+
+    &.fixed {
+        position: fixed;
+        width: 100%;
+
+        &:before {
+            top: 0 !important;
+        }
+    }
+    &.loading {
+        display: block;
+        &:before {
+            position: absolute;
+            top: 86px;
+            content: '';
+            height: 6px;
+            width: 20%;
+            display: block;
+            transform: translateZ(0);
+            @include loading-gradient($activeInteraction, transparent);
+            @include animation(loadingbar 5s linear infinite);
+        }
+    }
+}
+
+.no-version-warning {
+    .loading-bar {
+        &:before {
+            top: 58px;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+	<title>TAO Api: an example of a synchronized remote data source configuration</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="../lib/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../taoApi.min.js"></script>
+	<script type="text/javascript">
+	/*
+	 * We want to wait until the API is configured 
+	 * because (for example) we need first the subject name 
+	 */
+	initDataSource({type: 'sync'}, null);
+
+	//And we want the user wait too befor he goes to the next item
+	initPush(null, {'async' : true});
+	 
+	$(document).ready(function(){
+		//we can use the subject name
+		$("#header").text("Hello " + getSubjectName());
+
+		$("#next").click(function(){
+			setAnsweredValues($('#answer').val());
+			if($('#answer').val() == ''){
+				setEndorsment(false);
+				setScore(0);
+			}
+			else{
+				setEndorsment(true);
+				setScore(1);
+			}
+			return push();	//if the push fails, the click is ignored
+		});
+	});	
+	</script>
+</head>
+<body>
+	<div id="header"></div>
+	<div>
+		<h2>AN ITEM</h2>
+		Please enter something : <input id="answer" type="text" value="" />
+	</div>
+	<input type="button" id="next" value="go next" />
+</body>
+</html>

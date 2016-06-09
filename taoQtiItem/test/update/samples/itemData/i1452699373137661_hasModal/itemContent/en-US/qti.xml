@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i1452154573951559" title="Item 12" label="" xml:lang="en-US" adaptive="false" timeDependent="false" toolName="TAO" toolVersion="3.1.0-sprint17">
+  <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="identifier">
+    <correctResponse>
+      <value><![CDATA[choice_1]]></value>
+    </correctResponse>
+  </responseDeclaration>
+  <responseDeclaration identifier="RESPONSE_1" cardinality="ordered" baseType="identifier">
+    <correctResponse>
+      <value><![CDATA[choice_6]]></value>
+      <value><![CDATA[choice_7]]></value>
+    </correctResponse>
+  </responseDeclaration>
+  <responseDeclaration identifier="RESPONSE_2" cardinality="single" baseType="string">
+    <correctResponse>
+      <value><![CDATA[ok]]></value>
+    </correctResponse>
+  </responseDeclaration>
+  <responseDeclaration identifier="RESPONSE_3" cardinality="single" baseType="identifier">
+    <correctResponse>
+      <value><![CDATA[choice_9]]></value>
+    </correctResponse>
+  </responseDeclaration>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <outcomeDeclaration identifier="FEEDBACK_1" cardinality="single" baseType="identifier"/>
+  <outcomeDeclaration identifier="FEEDBACK_2" cardinality="single" baseType="identifier"/>
+  <outcomeDeclaration identifier="FEEDBACK_3" cardinality="single" baseType="identifier"/>
+  <outcomeDeclaration identifier="FEEDBACK_4" cardinality="single" baseType="identifier"/>
+  <outcomeDeclaration identifier="FEEDBACK_5" cardinality="single" baseType="identifier"/>
+  <outcomeDeclaration identifier="FEEDBACK_6" cardinality="single" baseType="identifier"/>
+  <outcomeDeclaration identifier="FEEDBACK_7" cardinality="single" baseType="identifier"/>
+  <outcomeDeclaration identifier="FEEDBACK_8" cardinality="single" baseType="identifier"/>
+  <outcomeDeclaration identifier="FEEDBACK_9" cardinality="single" baseType="identifier"/>
+  <outcomeDeclaration identifier="FEEDBACK_10" cardinality="single" baseType="identifier"/>
+  <outcomeDeclaration identifier="FEEDBACK_11" cardinality="single" baseType="identifier"/>
+  <outcomeDeclaration identifier="FEEDBACK_12" cardinality="single" baseType="identifier"/>
+  <stylesheet href="style/custom/tao-user-styles.css" type="text/css" media="all" title=""/>
+  <itemBody>
+    <div class="grid-row">
+      <div class="col-6">
+        <choiceInteraction responseIdentifier="RESPONSE" shuffle="false" maxChoices="0" minChoices="0" orientation="vertical">
+          <simpleChoice identifier="choice_1" fixed="false" showHide="show">choice #1</simpleChoice>
+          <simpleChoice identifier="choice_2" fixed="false" showHide="show">choice #2</simpleChoice>
+          <simpleChoice identifier="choice_3" fixed="false" showHide="show">choice #3</simpleChoice>
+          <simpleChoice identifier="choice_4" fixed="false" showHide="show">choice #4</simpleChoice>
+          <simpleChoice identifier="choice_5" fixed="false" showHide="show">choice #5</simpleChoice>
+        </choiceInteraction>
+      </div>
+      <div class="col-6">
+        <orderInteraction responseIdentifier="RESPONSE_1" shuffle="false" orientation="vertical">
+          <simpleChoice identifier="choice_6" fixed="false" showHide="show">choice #1</simpleChoice>
+          <simpleChoice identifier="choice_7" fixed="false" showHide="show">choice #2</simpleChoice>
+          <simpleChoice identifier="choice_8" fixed="false" showHide="show">choice #3</simpleChoice>
+        </orderInteraction>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="col-12">Plusieurs variations de Lorem Ipsum peuvent être trouvées ici ou là, mais la majeure partie d'entre elles a été altérée par l'addition d'humour ou de mots aléatoires qui ne ressemblent pas une seconde à du texte <textEntryInteraction responseIdentifier="RESPONSE_2" base="10" placeholderText=""/>
+. Si vous voulez utiliser un passage du Lorem Ipsum, vous devez être sûr qu'il n'y a rien d'embarrassant caché dans le texte. Tous les générateurs de Lorem Ipsum sur Internet tendent à reproduire le même extrait sans fin, ce qui fait de lipsum.com le seul vrai générateur de Lorem Ipsum. Iil utilise un dictionnaire de plus de 200 mots latins, en combinaison de  <inlineChoiceInteraction responseIdentifier="RESPONSE_3" shuffle="false" required="false"><inlineChoice identifier="choice_9" fixed="false" showHide="show">choice #1</inlineChoice><inlineChoice identifier="choice_10" fixed="false" showHide="show">choice #2</inlineChoice><inlineChoice identifier="choice_11" fixed="false" showHide="show">choice #3</inlineChoice></inlineChoiceInteraction>
+plusieurs structures de phrases, pour générer un Lorem Ipsum irréprochable. Le Lorem Ipsum ainsi obtenu ne contient aucune répétition, ni ne contient des mots farfelus, ou des touches d'humour.</div>
+    </div>
+  </itemBody>
+  <responseProcessing>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE"/>
+          <correct identifier="RESPONSE"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE"/>
+          <correct identifier="RESPONSE"/>
+        </match>
+        <setOutcomeValue identifier="FEEDBACK_1">
+          <baseValue baseType="identifier">feedbackModal_1</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <not>
+          <match>
+            <variable identifier="RESPONSE"/>
+            <correct identifier="RESPONSE"/>
+          </match>
+        </not>
+        <setOutcomeValue identifier="FEEDBACK_2">
+          <baseValue baseType="identifier">feedbackModal_2</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE"/>
+          <correct identifier="RESPONSE"/>
+        </match>
+        <setOutcomeValue identifier="FEEDBACK_3">
+          <baseValue baseType="identifier">feedbackModal_3</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_1"/>
+          <correct identifier="RESPONSE_1"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_1"/>
+          <correct identifier="RESPONSE_1"/>
+        </match>
+        <setOutcomeValue identifier="FEEDBACK_4">
+          <baseValue baseType="identifier">feedbackModal_4</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_1"/>
+          <correct identifier="RESPONSE_1"/>
+        </match>
+        <setOutcomeValue identifier="FEEDBACK_5">
+          <baseValue baseType="identifier">feedbackModal_5</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <not>
+          <match>
+            <variable identifier="RESPONSE_1"/>
+            <correct identifier="RESPONSE_1"/>
+          </match>
+        </not>
+        <setOutcomeValue identifier="FEEDBACK_10">
+          <baseValue baseType="identifier">feedbackModal_10</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <not>
+          <match>
+            <variable identifier="RESPONSE_1"/>
+            <correct identifier="RESPONSE_1"/>
+          </match>
+        </not>
+        <setOutcomeValue identifier="FEEDBACK_11">
+          <baseValue baseType="identifier">feedbackModal_11</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_2"/>
+          <correct identifier="RESPONSE_2"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_2"/>
+          <correct identifier="RESPONSE_2"/>
+        </match>
+        <setOutcomeValue identifier="FEEDBACK_6">
+          <baseValue baseType="identifier">feedbackModal_6</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_2"/>
+          <correct identifier="RESPONSE_2"/>
+        </match>
+        <setOutcomeValue identifier="FEEDBACK_7">
+          <baseValue baseType="identifier">feedbackModal_7</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_2"/>
+          <correct identifier="RESPONSE_2"/>
+        </match>
+        <setOutcomeValue identifier="FEEDBACK_8">
+          <baseValue baseType="identifier">feedbackModal_8</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_3"/>
+          <correct identifier="RESPONSE_3"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE_3"/>
+          <correct identifier="RESPONSE_3"/>
+        </match>
+        <setOutcomeValue identifier="FEEDBACK_9">
+          <baseValue baseType="identifier">feedbackModal_9</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <not>
+          <match>
+            <variable identifier="RESPONSE_3"/>
+            <correct identifier="RESPONSE_3"/>
+          </match>
+        </not>
+        <setOutcomeValue identifier="FEEDBACK_12">
+          <baseValue baseType="identifier">feedbackModal_12</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+  </responseProcessing>
+  <modalFeedback identifier="feedbackModal_1" outcomeIdentifier="FEEDBACK_1" showHide="show" title="modal feedback title">
+    <div class="x-tao-wrapper x-tao-modalFeedback-positive x-tao-relatedOutcome-RESPONSE">right</div>
+  </modalFeedback>
+  <modalFeedback identifier="feedbackModal_2" outcomeIdentifier="FEEDBACK_2" showHide="show" title="modal feedback title">
+    <div class="x-tao-wrapper x-tao-modalFeedback-negative x-tao-relatedOutcome-RESPONSE">wrong 
+
+<img src="images.jpg" alt="images" width="51%"/>
+
+</div>
+  </modalFeedback>
+  <modalFeedback identifier="feedbackModal_3" outcomeIdentifier="FEEDBACK_3" showHide="show" title="">
+    <div class="x-tao-wrapper x-tao-relatedOutcome-RESPONSE">thiss is right</div>
+  </modalFeedback>
+  <modalFeedback identifier="feedbackModal_4" outcomeIdentifier="FEEDBACK_4" showHide="show" title="">
+    <div class="x-tao-wrapper x-tao-modalFeedback-positive x-tao-relatedOutcome-RESPONSE_1">Correct</div>
+  </modalFeedback>
+  <modalFeedback identifier="feedbackModal_5" outcomeIdentifier="FEEDBACK_5" showHide="show" title="">
+    <div class="x-tao-wrapper x-tao-modalFeedback-positive x-tao-relatedOutcome-RESPONSE_1">correct</div>
+  </modalFeedback>
+  <modalFeedback identifier="feedbackModal_6" outcomeIdentifier="FEEDBACK_6" showHide="show" title="">
+    <div class="x-tao-wrapper x-tao-modalFeedback-positive x-tao-relatedOutcome-RESPONSE_2">correct</div>
+  </modalFeedback>
+  <modalFeedback identifier="feedbackModal_7" outcomeIdentifier="FEEDBACK_7" showHide="show" title="">
+    <div class="x-tao-wrapper x-tao-relatedOutcome-RESPONSE_2">correct</div>
+  </modalFeedback>
+  <modalFeedback identifier="feedbackModal_8" outcomeIdentifier="FEEDBACK_8" showHide="show" title="modal feedback title">
+    <div class="x-tao-wrapper x-tao-relatedOutcome-RESPONSE_2">Some feedback text.</div>
+  </modalFeedback>
+  <modalFeedback identifier="feedbackModal_9" outcomeIdentifier="FEEDBACK_9" showHide="show" title="">
+    <div class="x-tao-wrapper x-tao-relatedOutcome-RESPONSE_3">correct</div>
+  </modalFeedback>
+  <modalFeedback identifier="feedbackModal_10" outcomeIdentifier="FEEDBACK_10" showHide="show" title="">
+    <div class="x-tao-wrapper x-tao-modalFeedback-negative x-tao-relatedOutcome-RESPONSE_1">wrong</div>
+  </modalFeedback>
+  <modalFeedback identifier="feedbackModal_11" outcomeIdentifier="FEEDBACK_11" showHide="show" title="">
+    <div class="x-tao-wrapper x-tao-modalFeedback-negative x-tao-relatedOutcome-RESPONSE_1">wrong</div>
+  </modalFeedback>
+  <modalFeedback identifier="feedbackModal_12" outcomeIdentifier="FEEDBACK_12" showHide="show" title="">
+    <div class="x-tao-wrapper x-tao-relatedOutcome-RESPONSE_3">wrong</div>
+  </modalFeedback>
+</assessmentItem>

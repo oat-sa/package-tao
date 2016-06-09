@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem adaptive="false" identifier="Divisors" timeDependent="false"
+                title="The number divisors" toolName="Exo+" toolVersion="0.0.9-SNAPSHOT" xml:lang="en"
+                xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:m="http://www.w3.org/1998/Math/MathML"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+    <responseDeclaration baseType="identifier" cardinality="single" identifier="RESPONSE0"/>
+    <outcomeDeclaration baseType="identifier" cardinality="single" identifier="FEEDBACK"/>
+    <outcomeDeclaration baseType="float" cardinality="single" identifier="SCORE"/>
+    <templateDeclaration baseType="integer" cardinality="single" identifier="i" mathVariable="true"
+                         paramVariable="true"/>
+    <templateDeclaration baseType="integer" cardinality="ordered" identifier="numbers"
+                         mathVariable="true" paramVariable="true"/>
+    <templateDeclaration baseType="string" cardinality="ordered" identifier="divisors"
+                         mathVariable="true" paramVariable="true"/>
+    <templateDeclaration baseType="integer" cardinality="single" identifier="CALC0"
+                         mathVariable="true" paramVariable="true"/>
+    <templateProcessing>
+        <setTemplateValue identifier="i">
+            <randomInteger max="7" min="1"/>
+        </setTemplateValue>
+        <setTemplateValue identifier="numbers">
+            <ordered>
+                <baseValue baseType="integer">3</baseValue>
+                <baseValue baseType="integer">4</baseValue>
+                <baseValue baseType="integer">6</baseValue>
+                <baseValue baseType="integer">15</baseValue>
+                <baseValue baseType="integer">24</baseValue>
+                <baseValue baseType="integer">25</baseValue>
+                <baseValue baseType="integer">30</baseValue>
+            </ordered>
+        </setTemplateValue>
+        <setTemplateValue identifier="divisors">
+            <ordered>
+                <baseValue baseType="string">-</baseValue>
+                <baseValue baseType="string">2</baseValue>
+                <baseValue baseType="string">2,3</baseValue>
+                <baseValue baseType="string">3,5</baseValue>
+                <baseValue baseType="string">2,3,4,6,8,12</baseValue>
+                <baseValue baseType="string">5</baseValue>
+                <baseValue baseType="string">2,3,5,6,10,15</baseValue>
+            </ordered>
+        </setTemplateValue>
+        <setTemplateValue identifier="CALC0">
+            <index n="i">
+                <variable identifier="numbers"/>
+            </index>
+        </setTemplateValue>
+        <templateCondition>
+            <templateIf>
+                <equal toleranceMode="exact">
+                    <variable identifier="i"/>
+                    <baseValue baseType="integer">1</baseValue>
+                </equal>
+                <setCorrectResponse identifier="RESPONSE0">
+                    <baseValue baseType="identifier">SOLUTION0_0_0</baseValue>
+                </setCorrectResponse>
+            </templateIf>
+            <templateElseIf>
+                <equal toleranceMode="exact">
+                    <variable identifier="i"/>
+                    <baseValue baseType="integer">2</baseValue>
+                </equal>
+                <setCorrectResponse identifier="RESPONSE0">
+                    <baseValue baseType="identifier">SOLUTION0_0_1</baseValue>
+                </setCorrectResponse>
+            </templateElseIf>
+            <templateElseIf>
+                <equal toleranceMode="exact">
+                    <variable identifier="i"/>
+                    <baseValue baseType="integer">3</baseValue>
+                </equal>
+                <setCorrectResponse identifier="RESPONSE0">
+                    <baseValue baseType="identifier">SOLUTION0_0_2</baseValue>
+                </setCorrectResponse>
+            </templateElseIf>
+            <templateElseIf>
+                <equal toleranceMode="exact">
+                    <variable identifier="i"/>
+                    <baseValue baseType="integer">4</baseValue>
+                </equal>
+                <setCorrectResponse identifier="RESPONSE0">
+                    <baseValue baseType="identifier">SOLUTION0_0_3</baseValue>
+                </setCorrectResponse>
+            </templateElseIf>
+            <templateElseIf>
+                <equal toleranceMode="exact">
+                    <variable identifier="i"/>
+                    <baseValue baseType="integer">5</baseValue>
+                </equal>
+                <setCorrectResponse identifier="RESPONSE0">
+                    <baseValue baseType="identifier">SOLUTION0_0_4</baseValue>
+                </setCorrectResponse>
+            </templateElseIf>
+            <templateElseIf>
+                <equal toleranceMode="exact">
+                    <variable identifier="i"/>
+                    <baseValue baseType="integer">6</baseValue>
+                </equal>
+                <setCorrectResponse identifier="RESPONSE0">
+                    <baseValue baseType="identifier">SOLUTION0_0_5</baseValue>
+                </setCorrectResponse>
+            </templateElseIf>
+            <templateElseIf>
+                <equal toleranceMode="exact">
+                    <variable identifier="i"/>
+                    <baseValue baseType="integer">7</baseValue>
+                </equal>
+                <setCorrectResponse identifier="RESPONSE0">
+                    <baseValue baseType="identifier">SOLUTION0_0_6</baseValue>
+                </setCorrectResponse>
+            </templateElseIf>
+        </templateCondition>
+    </templateProcessing>
+    <itemBody>
+        <div> What are the divisors of <m:math>
+            <m:mrow>
+                <m:mi>CALC0</m:mi>
+            </m:mrow>
+        </m:math> without 1 and <m:math>
+            <m:mrow>
+                <m:mi>CALC0</m:mi>
+            </m:mrow>
+        </m:math>?
+        </div>
+    </itemBody>
+    <responseProcessing>
+        <responseCondition>
+            <responseIf>
+                <match>
+                    <variable identifier="RESPONSE0"/>
+                    <correct identifier="RESPONSE0"/>
+                </match>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <baseValue baseType="identifier">FEEDBACK0</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="SCORE">
+                    <baseValue baseType="float">2.0</baseValue>
+                </setOutcomeValue>
+            </responseIf>
+            <responseElse>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <baseValue baseType="identifier">DEFAULT_FEEDBACK</baseValue>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="SCORE">
+                    <baseValue baseType="float">0.0</baseValue>
+                </setOutcomeValue>
+            </responseElse>
+        </responseCondition>
+    </responseProcessing>
+    <modalFeedback identifier="FEEDBACK0" outcomeIdentifier="FEEDBACK" showHide="show">Bravo! You
+        are right</modalFeedback>
+    <modalFeedback identifier="DEFAULT_FEEDBACK" outcomeIdentifier="FEEDBACK" showHide="show">It is
+        false</modalFeedback>
+</assessmentItem>

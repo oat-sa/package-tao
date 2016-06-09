@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem 
+    xmlns="http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p1" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:m="http://www.w3.org/1998/Math/MathML" 
+    xsi:schemaLocation=" http://www.imsglobal.org/xsd/apip/apipv1p0/qtiitem/imsqti_v2p1  http://www.imsglobal.org/profile/apip/apipv1p0/apipv1p0_qtiitemv2p1_v1p0.xsd  "
+    adaptive="false" identifier="APIP001" timeDependent="false" title="APIP001">
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+        <correctResponse>
+            <value>ChoiceA</value>
+        </correctResponse>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+        <defaultValue>
+            <value>0</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <itemBody>
+        <p>Look at the text in the picture.</p>
+        <p>
+            <img src="images/sign.png" alt="NEVER LEAVE LUGGAGE UNATTENDED"/>
+        </p>
+        <p>
+            <m:math>
+                <m:mrow>
+                    <m:mi>E</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>m</m:mi>
+                    <m:msup>
+                        <m:mi>c</m:mi>
+                        <m:mn>2</m:mn>
+                    </m:msup>
+                </m:mrow>
+            </m:math>
+        </p>    
+        <choiceInteraction responseIdentifier="RESPONSE" shuffle="true" maxChoices="1">
+            <prompt>What does it say?</prompt>
+            <simpleChoice identifier="ChoiceA">You must stay with your luggage at all times.</simpleChoice>
+            <simpleChoice identifier="ChoiceB" fixed="true">Do not let someone else look after your luggage.</simpleChoice>
+            <simpleChoice identifier="ChoiceC">Remember your luggage when you leave.</simpleChoice>
+            <simpleChoice identifier="ChoiceD">You must hold your luggage at all time</simpleChoice>
+            <simpleChoice identifier="ChoiceE" fixed="true">Do not sit on your luggage</simpleChoice>
+            <simpleChoice identifier="ChoiceF">Remember where you put your luggage.</simpleChoice>
+        </choiceInteraction>
+    </itemBody>
+    <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+    <apipAccessibility xmlns="http://www.imsglobal.org/xsd/apip/apipv1p0/imsapip_qtiv1p0"/>
+</assessmentItem>

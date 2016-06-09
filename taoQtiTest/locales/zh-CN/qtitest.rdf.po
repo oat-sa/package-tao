@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TAO 3.1.0-sprint15\n"
+"PO-Revision-Date: 2015-12-23T13:29:09\n"
+"Last-Translator: TAO Translation Team <translation@tao.lu>\n"
+"MIME-Version: 1.0\n"
+"Language: zh-CN\n"
+"sourceLanguage: en-US\n"
+"targetLanguage: zh-CN\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# http://www.tao.lu/Ontologies/TAOTest.rdf#QtiTestModel
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "QTI 2.1 Test Driver"
+msgstr "QTI 2.1考试驱动器"
+
+# http://www.tao.lu/Ontologies/TAOTest.rdf#QtiTestModel
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "Driver and configuration/authoring tool implementing the test interface for driving compliant QTI 2.1 tests"
+msgstr "驱动器和组态／创作器，可以实施考试界面，驱动符合QTI 2.1的考试"
+
+# http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamQtiTestDefinition
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "QTI Test Definition"
+msgstr "QTI考试定义"
+
+# http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamQtiTestDefinition
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "QTI Test Definition Uri"
+msgstr "QTI考试定义URI"
+
+# http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamQtiTestCompilation
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "QTI Test Compilation"
+msgstr "QTI考试编译"
+
+# http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamQtiTestCompilation
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "QTI Test Compilation Uri"
+msgstr "QTI考试编译URI"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#ServiceQtiTestRunner
+msgctxt "http://www.w3.org/2000/01/rdf-schema#label"
+msgid "QTI test runner"
+msgstr "QTI考试运行器"
+
+# http://www.tao.lu/Ontologies/TAODelivery.rdf#ServiceQtiTestRunner
+msgctxt "http://www.w3.org/2000/01/rdf-schema#comment"
+msgid "runs a QTI 2.1 test"
+msgstr "运行QTI 2.1考试"
+

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+	<title>TAO Api: use the default configuration</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="../lib/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../taoApi.min.js"></script>
+	<script type="text/javascript">
+
+	/*
+	 * We use the default settings because we are in a TAO context 
+	 * and the way the data source is set matches our needs.
+	 *   
+	 * You can begin directly to use the taoApi, 
+	 */
+	
+	//...
+	
+	setUserVar('test1', 1);
+	setUserVar('test2', 2);
+
+	//...
+	
+	setEndorsement(true);
+
+	//...
+	
+	//
+	push();
+	
+	</script>
+</head>
+<body>
+	<div>
+		<h2>AN ITEM</h2>
+	</div>
+</body>
+</html>

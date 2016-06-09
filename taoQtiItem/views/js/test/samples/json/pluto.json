@@ -1,0 +1,425 @@
+{
+    "type": "qti",
+    "data": {
+        "identifier": "i143015279126631876",
+        "serial": "item_55a61df4b73e7377599938",
+        "qtiClass": "assessmentItem",
+        "attributes": {
+            "identifier": "i143015279126631876",
+            "title": "Pluto",
+            "label": "",
+            "xml:lang": "en-US",
+            "adaptive": false,
+            "timeDependent": false,
+            "toolName": "TAO",
+            "toolVersion": "3.1.0-rc01"
+        },
+        "body": {
+            "serial": "container_containeritembody_55a61df4b73c4975672160",
+            "body": "\n    <div class=\"grid-row\">\n      <div class=\"col-6\">\n        <div class=\"colrow\">\n          <p><strong>Pluto<\/strong> (minor-planet designation: 134340 Pluto) is a dwarf planet in the Kuiper belt, a ring of trans-Neptunian objects. It was the first such object to be discovered. It is the largest and second-most massive known dwarf planet in the Solar System and the ninth-largest and tenth-most-massive known object directly orbiting the Sun. It is the largest known trans-Neptunian object by volume but is less massive than Eris, a dwarf planet in the scattered disc. Like other Kuiper belt objects, Pluto is primarily made of ice and rock[14] and is relatively small\u2014about one-sixth the mass of the Moon and one-third its volume. It has a moderately eccentric and inclined orbit during which it ranges from 30 to 49\u00a0astronomical units (4.4\u20137.3 billion\u00a0km) from the Sun. This means that Pluto periodically comes closer to the Sun than Neptune, but a stable orbital resonance with Neptune prevents them from colliding. In 2014, Pluto was 32.6 AU from the Sun. Light from the Sun takes about 5.5 hours to reach Pluto at its average distance (39.4\u00a0AU).[15]<\/p>\n          <p>Pluto was discovered in 1930 by Clyde Tombaugh, and was originally considered the ninth planet from the Sun. After 1992, its status as a planet fell into question following the discovery of several similarly sized objects in the Kuiper belt. In 2005, Eris, which is 27% more massive than Pluto, was discovered, which led the International Astronomical Union (IAU) to define the term \"planet\" formally for the first time the following year.[16] This definition excluded Pluto and reclassified it as a member of the new \"dwarf planet\" category (and specifically as a plutoid).[17] Some astronomers believe Pluto should still be considered a planet.[18][19][20]<\/p>\n          <p>Pluto has five known moons: Charon (the largest, with a diameter just over half that of Pluto), Styx, Nix, Kerberos, and Hydra.[21] Pluto and Charon are sometimes considered a binary system because the barycenter of their orbits does not lie within either body.[22] The IAU has not formalized a definition for binary dwarf planets, and Charon is officially classified as a moon of Pluto.[23]<\/p>\n          <p>On 14 July 2015, the New Horizons spacecraft became the first spacecraft to flyby Pluto.[24][25] On its brief flyby, New Horizons made detailed measurements and observations of Pluto, and its moons.[26]<\/p>\n        <\/div>\n      <\/div>\n      <div class=\"col-6\">\n        <div class=\"colrow\">\n          {{interaction_choiceinteraction_55a61df4b8c7b443971321}}\n        <\/div>\n        <div class=\"colrow\">\n          {{interaction_choiceinteraction_55a61df4bb741463851762}}\n        <\/div>\n      <\/div>\n    <\/div>\n  ",
+            "elements": {
+                "interaction_choiceinteraction_55a61df4b8c7b443971321": {
+                    "serial": "interaction_choiceinteraction_55a61df4b8c7b443971321",
+                    "qtiClass": "choiceInteraction",
+                    "attributes": {
+                        "responseIdentifier": "RESPONSE",
+                        "shuffle": false,
+                        "maxChoices": 1,
+                        "minChoices": 0,
+                        "orientation": "vertical"
+                    },
+                    "debug": {
+                        "relatedItem": "item_55a61df4b73e7377599938"
+                    },
+                    "choices": {
+                        "choice_simplechoice_55a61df4b99ff374060196": {
+                            "identifier": "choice_1",
+                            "serial": "choice_simplechoice_55a61df4b99ff374060196",
+                            "qtiClass": "simpleChoice",
+                            "attributes": {
+                                "identifier": "choice_1",
+                                "fixed": false,
+                                "showHide": "show"
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_55a61df4b9bc3449052826",
+                                "body": "A dwarf planet",
+                                "elements": {},
+                                "debug": {
+                                    "relatedItem": "item_55a61df4b73e7377599938"
+                                }
+                            },
+                            "debug": {
+                                "relatedItem": "item_55a61df4b73e7377599938"
+                            }
+                        },
+                        "choice_simplechoice_55a61df4ba271594680909": {
+                            "identifier": "choice_2",
+                            "serial": "choice_simplechoice_55a61df4ba271594680909",
+                            "qtiClass": "simpleChoice",
+                            "attributes": {
+                                "identifier": "choice_2",
+                                "fixed": false,
+                                "showHide": "show"
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_55a61df4ba2e1670644886",
+                                "body": "A star",
+                                "elements": {},
+                                "debug": {
+                                    "relatedItem": "item_55a61df4b73e7377599938"
+                                }
+                            },
+                            "debug": {
+                                "relatedItem": "item_55a61df4b73e7377599938"
+                            }
+                        },
+                        "choice_simplechoice_55a61df4ba95d717107524": {
+                            "identifier": "choice_3",
+                            "serial": "choice_simplechoice_55a61df4ba95d717107524",
+                            "qtiClass": "simpleChoice",
+                            "attributes": {
+                                "identifier": "choice_3",
+                                "fixed": false,
+                                "showHide": "show"
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_55a61df4ba9c9259737491",
+                                "body": "An asteriod",
+                                "elements": {},
+                                "debug": {
+                                    "relatedItem": "item_55a61df4b73e7377599938"
+                                }
+                            },
+                            "debug": {
+                                "relatedItem": "item_55a61df4b73e7377599938"
+                            }
+                        },
+                        "choice_simplechoice_55a61df4bb014804651519": {
+                            "identifier": "choice_4",
+                            "serial": "choice_simplechoice_55a61df4bb014804651519",
+                            "qtiClass": "simpleChoice",
+                            "attributes": {
+                                "identifier": "choice_4",
+                                "fixed": false,
+                                "showHide": "show"
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_55a61df4bb07f278203545",
+                                "body": "A Neptun Moon",
+                                "elements": {},
+                                "debug": {
+                                    "relatedItem": "item_55a61df4b73e7377599938"
+                                }
+                            },
+                            "debug": {
+                                "relatedItem": "item_55a61df4b73e7377599938"
+                            }
+                        }
+                    },
+                    "prompt": {
+                        "serial": "container_containerstatic_55a61df4b9176422119353",
+                        "body": "\n              <strong>Pluto is a<\/strong>\n            ",
+                        "elements": {},
+                        "debug": {
+                            "relatedItem": "item_55a61df4b73e7377599938"
+                        }
+                    }
+                },
+                "interaction_choiceinteraction_55a61df4bb741463851762": {
+                    "serial": "interaction_choiceinteraction_55a61df4bb741463851762",
+                    "qtiClass": "choiceInteraction",
+                    "attributes": {
+                        "responseIdentifier": "RESPONSE_1",
+                        "shuffle": false,
+                        "maxChoices": 1,
+                        "minChoices": 0,
+                        "orientation": "vertical"
+                    },
+                    "debug": {
+                        "relatedItem": "item_55a61df4b73e7377599938"
+                    },
+                    "choices": {
+                        "choice_simplechoice_55a61df4bbe54395236773": {
+                            "identifier": "choice_5",
+                            "serial": "choice_simplechoice_55a61df4bbe54395236773",
+                            "qtiClass": "simpleChoice",
+                            "attributes": {
+                                "identifier": "choice_5",
+                                "fixed": false,
+                                "showHide": "show"
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_55a61df4bbec8394327553",
+                                "body": "Kerberos",
+                                "elements": {},
+                                "debug": {
+                                    "relatedItem": "item_55a61df4b73e7377599938"
+                                }
+                            },
+                            "debug": {
+                                "relatedItem": "item_55a61df4b73e7377599938"
+                            }
+                        },
+                        "choice_simplechoice_55a61df4bc4b0581277275": {
+                            "identifier": "choice_6",
+                            "serial": "choice_simplechoice_55a61df4bc4b0581277275",
+                            "qtiClass": "simpleChoice",
+                            "attributes": {
+                                "identifier": "choice_6",
+                                "fixed": false,
+                                "showHide": "show"
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_55a61df4bc521306794065",
+                                "body": "Ganymede",
+                                "elements": {},
+                                "debug": {
+                                    "relatedItem": "item_55a61df4b73e7377599938"
+                                }
+                            },
+                            "debug": {
+                                "relatedItem": "item_55a61df4b73e7377599938"
+                            }
+                        },
+                        "choice_simplechoice_55a61df4bcb00215431629": {
+                            "identifier": "choice_7",
+                            "serial": "choice_simplechoice_55a61df4bcb00215431629",
+                            "qtiClass": "simpleChoice",
+                            "attributes": {
+                                "identifier": "choice_7",
+                                "fixed": false,
+                                "showHide": "show"
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_55a61df4bcb6f258723331",
+                                "body": "Europa",
+                                "elements": {},
+                                "debug": {
+                                    "relatedItem": "item_55a61df4b73e7377599938"
+                                }
+                            },
+                            "debug": {
+                                "relatedItem": "item_55a61df4b73e7377599938"
+                            }
+                        },
+                        "choice_simplechoice_55a61df4bd14a955563675": {
+                            "identifier": "choice_8",
+                            "serial": "choice_simplechoice_55a61df4bd14a955563675",
+                            "qtiClass": "simpleChoice",
+                            "attributes": {
+                                "identifier": "choice_8",
+                                "fixed": false,
+                                "showHide": "show"
+                            },
+                            "body": {
+                                "serial": "container_containerstatic_55a61df4bd1c0142808761",
+                                "body": "Calypso",
+                                "elements": {},
+                                "debug": {
+                                    "relatedItem": "item_55a61df4b73e7377599938"
+                                }
+                            },
+                            "debug": {
+                                "relatedItem": "item_55a61df4b73e7377599938"
+                            }
+                        }
+                    },
+                    "prompt": {
+                        "serial": "container_containerstatic_55a61df4bb88f799674734",
+                        "body": "\n              <strong>Which one is a Pluto Moon ?<\/strong>\n            ",
+                        "elements": {},
+                        "debug": {
+                            "relatedItem": "item_55a61df4b73e7377599938"
+                        }
+                    }
+                }
+            },
+            "debug": {
+                "relatedItem": "item_55a61df4b73e7377599938"
+            }
+        },
+        "debug": {
+            "relatedItem": "item_55a61df4b73e7377599938"
+        },
+        "namespaces": {
+            "xml": "http:\/\/www.w3.org\/XML\/1998\/namespace",
+            "m": "http:\/\/www.w3.org\/1998\/Math\/MathML",
+            "xsi": "http:\/\/www.w3.org\/2001\/XMLSchema-instance",
+            "": "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1"
+        },
+        "stylesheets": {
+            "stylesheet_55a61df4b7b8f022829903": {
+                "serial": "stylesheet_55a61df4b7b8f022829903",
+                "qtiClass": "stylesheet",
+                "attributes": {
+                    "href": "style\/custom\/tao-user-styles.css",
+                    "type": "text\/css",
+                    "media": "all",
+                    "title": ""
+                },
+                "debug": {
+                    "relatedItem": "item_55a61df4b73e7377599938"
+                }
+            }
+        },
+        "outcomes": {
+            "outcomedeclaration_55a61df4b8518275183836": {
+                "identifier": "SCORE",
+                "serial": "outcomedeclaration_55a61df4b8518275183836",
+                "qtiClass": "outcomeDeclaration",
+                "attributes": {
+                    "identifier": "SCORE",
+                    "cardinality": "single",
+                    "baseType": "float"
+                },
+                "debug": {
+                    "relatedItem": "item_55a61df4b73e7377599938"
+                },
+                "defaultValue": null
+            }
+        },
+        "responses": {
+            "responsedeclaration_55a61df4b8126364249414": {
+                "identifier": "RESPONSE",
+                "serial": "responsedeclaration_55a61df4b8126364249414",
+                "qtiClass": "responseDeclaration",
+                "attributes": {
+                    "identifier": "RESPONSE",
+                    "cardinality": "single",
+                    "baseType": "identifier"
+                },
+                "debug": {
+                    "relatedItem": "item_55a61df4b73e7377599938"
+                },
+                "correctResponses": [
+                    "choice_1"
+                ],
+                "mapping": [],
+                "areaMapping": [],
+                "howMatch": null,
+                "mappingAttributes": {
+                    "defaultValue": 0
+                },
+                "feedbackRules": {}
+            },
+            "responsedeclaration_55a61df4b83ba637315106": {
+                "identifier": "RESPONSE_1",
+                "serial": "responsedeclaration_55a61df4b83ba637315106",
+                "qtiClass": "responseDeclaration",
+                "attributes": {
+                    "identifier": "RESPONSE_1",
+                    "cardinality": "single",
+                    "baseType": "identifier"
+                },
+                "debug": {
+                    "relatedItem": "item_55a61df4b73e7377599938"
+                },
+                "correctResponses": [
+                    "choice_6"
+                ],
+                "mapping": [],
+                "areaMapping": [],
+                "howMatch": null,
+                "mappingAttributes": {
+                    "defaultValue": 0
+                },
+                "feedbackRules": {}
+            }
+        },
+        "feedbacks": {},
+        "responseProcessing": {
+            "serial": "response_custom_55a61df4be352734831695",
+            "qtiClass": "responseProcessing",
+            "attributes": [],
+            "debug": {
+                "relatedItem": ""
+            },
+            "processingType": "custom",
+            "data": "<responseProcessing>\n    <responseCondition>\n      <responseIf>\n        <match>\n          <variable identifier=\"RESPONSE\"\/>\n          <correct identifier=\"RESPONSE\"\/>\n        <\/match>\n        <setOutcomeValue identifier=\"SCORE\">\n          <baseValue baseType=\"float\">1<\/baseValue>\n        <\/setOutcomeValue>\n        <responseCondition>\n          <responseIf>\n            <match>\n              <variable identifier=\"RESPONSE_1\"\/>\n              <correct identifier=\"RESPONSE_1\"\/>\n            <\/match>\n            <setOutcomeValue identifier=\"SCORE\">\n              <baseValue baseType=\"float\">2<\/baseValue>\n            <\/setOutcomeValue>\n          <\/responseIf>\n        <\/responseCondition>\n      <\/responseIf>\n    <\/responseCondition>\n  <\/responseProcessing>",
+            "responseRules": [
+                {
+                    "qtiClass": "responseCondition",
+                    "responseIf": {
+                        "qtiClass": "responseIf",
+                        "expression": {
+                            "qtiClass": "match",
+                            "expressions": [
+                                {
+                                    "qtiClass": "variable",
+                                    "attributes": {
+                                        "identifier": "RESPONSE"
+                                    }
+                                },
+                                {
+                                    "qtiClass": "correct",
+                                    "attributes": {
+                                        "identifier": "RESPONSE"
+                                    }
+                                }
+                            ]
+                        },
+                        "responseRules": [
+                            {
+                                "qtiClass": "setOutcomeValue",
+                                "attributes": {
+                                    "identifier": "SCORE"
+                                },
+                                "expression": {
+                                    "qtiClass": "baseValue",
+                                    "attributes": {
+                                        "baseType": "float"
+                                    },
+                                    "value": "1"
+                                }
+                            },
+                            {
+                                "qtiClass": "responseCondition",
+                                "responseIf": {
+                                    "qtiClass": "responseIf",
+                                    "expression": {
+                                        "qtiClass": "match",
+                                        "expressions": [
+                                            {
+                                                "qtiClass": "variable",
+                                                "attributes": {
+                                                    "identifier": "RESPONSE_1"
+                                                }
+                                            },
+                                            {
+                                                "qtiClass": "correct",
+                                                "attributes": {
+                                                    "identifier": "RESPONSE_1"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "responseRules": [
+                                        {
+                                            "qtiClass": "setOutcomeValue",
+                                            "attributes": {
+                                                "identifier": "SCORE"
+                                            },
+                                            "expression": {
+                                                "qtiClass": "baseValue",
+                                                "attributes": {
+                                                    "baseType": "float"
+                                                },
+                                                "value": "2"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "assets": {
+        "css": {
+            "style\/custom\/tao-user-styles.css": "style\/custom\/tao-user-styles.css"
+        }
+    }
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:ns0="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#" xml:base="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#">
+
+  <rdf:Property rdf:about="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#identifier">
+    <rdfs:label xml:lang="en-US">Widget identifier</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#WidgetClass"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <ns0:widget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#TextBox"/>
+  </rdf:Property>
+
+  <rdfs:Class rdf:about="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#WidgetRenderer">
+    <rdfs:label xml:lang="en-US">Widget Renderer</rdfs:label>
+    <rdfs:comment xml:lang="en-US">Renderer of a widget</rdfs:comment>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#renderedWidget">
+    <rdfs:label xml:lang="en-US">Widget</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#WidgetRenderer"/>
+    <rdfs:range rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#WidgetClass"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#renderMode">
+    <rdfs:label xml:lang="en-US">Render Mode</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#WidgetRenderer"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#implementation">
+    <rdfs:label xml:lang="en-US">Implementation</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#WidgetRenderer"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <ns0:WidgetClass rdf:about="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#Label">
+    <rdfs:label xml:lang="en-US">Text Label</rdfs:label>
+    <rdfs:comment xml:lang="en-US">Content is read only</rdfs:comment>
+    <ns0:rangeConstraint rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#rangeConstraint-Literal"/>
+  </ns0:WidgetClass>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#AsyncFile">
+    <ns0:identifier><![CDATA[AsyncFile]]></ns0:identifier>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#AsyncFileXhtmlRenderer">
+    <rdf:type rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#WidgetRenderer"/>
+    <ns0:renderedWidget rdf:resource="http://www.tao.lu/datatypes/WidgetDefinitions.rdf#AsyncFile"/>
+  	<ns0:renderMode><![CDATA[xhtml]]></ns0:renderMode>
+  	<ns0:implementation><![CDATA[tao_helpers_form_elements_xhtml_AsyncFile]]></ns0:implementation>
+  </rdf:Description>
+
+</rdf:RDF>

@@ -1,0 +1,70 @@
+// buttons and alerts
+$success: rgb(14, 145, 75);
+$info: rgb(14, 93, 145);
+$error: rgb(186, 18, 43);
+$warning: rgb(216, 174, 91);
+$activeInteraction: rgb(195, 90, 19);
+
+// corporate identity
+$logoRed: rgb(186, 18, 43);
+$grey: rgb(173, 161, 148);
+$darkBlueGrey: rgb(164, 187, 197);
+$mediumBlueGrey: rgb(193, 212, 220);
+$lightBlueGrey: rgb(228, 236, 239);
+$brownRedGrey: rgb(154, 137, 123);
+$darkBrown: rgb(111, 99, 89);
+$websiteBorder: rgb(141, 148, 158);
+
+// ui elements, these should only variations of the above
+// naming convention: jQueryUi theme roller -> camelCase
+
+$textColor: #222;
+$textHighlight: white;
+
+$uiGeneralContentBg: white();
+$uiGeneralContentBorder: #ddd;
+
+$uiHeaderBg: #D4D5D7;
+
+$uiClickableDefaultBg: #f3f1ef;
+$uiClickableHoverBg: whiten($info, .2);
+//$uiClickableActiveBg: $uiHeaderBg;
+$uiClickableActiveBg: whiten($websiteBorder, .2);
+//$uiClickableActiveBg: #aaa;
+
+$uiOverlay: $lightBlueGrey;
+
+// sidebars etc.
+$canvas: mix(#fff, $grey, 85%);
+
+// colors taken from feedback.scss
+$errorBgColor: whiten($error, .8);
+$errorBorderColor: whiten($error, .1);
+
+$infoBgColor: whiten($info, .8);
+$infoBorderColor: whiten($info, .1);
+
+$successBgColor: whiten($success, .8);
+$successBorderColor: whiten($success, .1);
+
+$warningBgColor: whiten($warning, .8);
+$warningBorderColor: whiten($warning, .1);
+
+
+$darkBar : rgb(51, 51, 51);
+$darkBarTxt : rgb(230, 230, 230);
+$darkBarIcon : rgb(220, 220, 220);
+
+
+$colorWheel-01: #C3BA13;
+$colorWheel-02: #84A610;
+$colorWheel-03: #2B8E0E;
+$colorWheel-04: #0F9787;
+$colorWheel-05: #0E5D91;
+$colorWheel-06: #0D2689;
+$colorWheel-07: #400D83;
+$colorWheel-08: #960E7D;
+$colorWheel-09: #BA122B;
+$colorWheel-10: #C34713;
+$colorWheel-11: #C36F13;
+$colorWheel-12: #C39413;

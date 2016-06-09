@@ -1,0 +1,49 @@
+@import "inc/bootstrap";
+@import "inc/buttons";
+
+.permission-container {
+    .bottom-bar {
+        padding-top: 10px;
+    }
+
+    .grid-container {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .msg-edit-area {
+        background: $canvas;
+        padding: 20px 20px 10px 20px;
+        @include simple-border($uiGeneralContentBorder);
+
+        .icon-add {
+            @include font-size(20, true);
+            vertical-align: middle;
+        }
+    }
+
+    colgroup {
+        display: table-column-group;
+    }
+
+    .cell-name {
+    }
+    .cell-type {
+        width: 100px;
+    }
+    .cell-privilege {
+        width: 100px;
+    }
+    .cell-actions {
+        width: 150px;
+    }
+
+    .ui-tabs-panel {
+        padding: 0;
+        border: 0 none!important;
+
+        .grid-container {
+            margin-top: 20px;
+        }
+    }
+}

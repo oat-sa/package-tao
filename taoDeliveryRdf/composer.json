@@ -1,0 +1,31 @@
+{
+
+    "name": "oat-sa/extension-tao-delivery-rdf",
+    "description" : "Manages deliveries using the ontology",
+    "type" : "tao-extension",
+    "authors" : [
+        {
+        "name": "Open Assessment Technologies SA"
+        }
+    ],
+    "keywords" : [
+        "tao",
+        "computer-based-assessment"
+    ],
+    "homepage" : "http://www.taotesting.com",
+    "license" : [
+        "GPL-2.0"
+    ],
+    "extra" : {
+        "tao-extension-name" : "taoDeliveryRdf"
+    },
+    "minimum-stability" : "dev",
+    "require": {
+        "oat-sa/oatbox-extension-installer": "dev-master"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "oat\\taoDeliveryRdf\\" : ""
+        }
+    } 
+}

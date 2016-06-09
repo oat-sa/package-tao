@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://www.w3.org/1998/Math/MathML" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="i1453285926580393" title="Item_2 3" adaptive="false" timeDependent="false" label="" xml:lang="en-US" toolName="TAO" toolVersion="3.1.0-sprint17">
+  <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="identifier"/>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <outcomeDeclaration identifier="FEEDBACK_1" cardinality="single" baseType="identifier"/>
+  <stylesheet href="style/custom/tao-user-styles.css" type="text/css" media="all" title=""/>
+  <itemBody>
+    <div class="grid-row">
+      <div class="col-12">
+        <choiceInteraction responseIdentifier="RESPONSE" shuffle="false" maxChoices="0" minChoices="0" orientation="vertical">
+          <prompt/>
+          <simpleChoice identifier="choice_1" fixed="false" showHide="show">choice #1</simpleChoice>
+          <simpleChoice identifier="choice_2" fixed="false" showHide="show">choice #2</simpleChoice>
+          <simpleChoice identifier="choice_3" fixed="false" showHide="show">choice #3</simpleChoice>
+          <simpleChoice identifier="choice_4" fixed="false" showHide="show">choice #4</simpleChoice>
+          <simpleChoice identifier="choice_5" fixed="false" showHide="show">choice #5</simpleChoice>
+        </choiceInteraction>
+      </div>
+    </div>
+  </itemBody>
+  <responseProcessing>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE"/>
+          <correct identifier="RESPONSE"/>
+        </match>
+        <setOutcomeValue identifier="SCORE">
+          <sum>
+            <variable identifier="SCORE"/>
+            <baseValue baseType="integer">1</baseValue>
+          </sum>
+        </setOutcomeValue>
+      </responseIf>
+    </responseCondition>
+    <responseCondition>
+      <responseIf>
+        <match>
+          <variable identifier="RESPONSE"/>
+          <multiple>
+            <baseValue baseType="identifier">choice_1</baseValue>
+            <baseValue baseType="identifier">choice_3</baseValue>
+            <baseValue baseType="identifier">choice_2</baseValue>
+          </multiple>
+        </match>
+        <setOutcomeValue identifier="FEEDBACK_1">
+          <baseValue baseType="identifier">feedbackModal_1</baseValue>
+        </setOutcomeValue>
+      </responseIf>
+      <responseElse>
+        <setOutcomeValue identifier="FEEDBACK_1">
+          <baseValue baseType="identifier">feedbackModal_2</baseValue>
+        </setOutcomeValue>
+      </responseElse>
+    </responseCondition>
+  </responseProcessing>
+  <modalFeedback identifier="feedbackModal_1" outcomeIdentifier="FEEDBACK_1" showHide="show" title="">
+    <div class="x-tao-wrapper x-tao-modalFeedback-positive x-tao-relatedOutcome-RESPONSE">ok</div>
+  </modalFeedback>
+  <modalFeedback title="uncool" showHide="show" outcomeIdentifier="FEEDBACK_1" identifier="feedbackModal_2">
+    <div class="x-tao-wrapper x-tao-modalFeedback-negative x-tao-relatedOutcome-RESPONSE">to ba</div>
+  </modalFeedback>
+</assessmentItem>

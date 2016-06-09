@@ -1,0 +1,1455 @@
+﻿@import 'inc/bootstrap';
+
+// icon positioning
+@mixin jquery-ui-icons() {
+    @include iterate-sprite((carat-1-n carat-1-ne carat-1-e carat-1-se carat-1-s carat-1-sw carat-1-w carat-1-nw carat-2-n-s carat-2-e-w), 0, 0, 'x', '.ui-icon-');
+    @include iterate-sprite((triangle-1-n triangle-1-ne triangle-1-e triangle-1-se triangle-1-s triangle-1-sw triangle-1-w triangle-1-nw triangle-2-n-s triangle-2-e-w), 0, 0, 'x', '.ui-icon-');
+    @include iterate-sprite((circle-triangle-e circle-triangle-s circle-triangle-w circle-triangle-n), -48, -192, 'x', '.ui-icon-');
+    @include iterate-sprite((arrow-1-n arrow-1-ne arrow-1-e arrow-1-se arrow-1-s arrow-1-sw arrow-1-w arrow-1-nw arrow-2-n-s arrow-2-ne-sw arrow-2-e-w arrow-2-se-nw arrowstop-1-n arrowstop-1-e arrowstop-1-s arrowstop-1-w), 0, -32, 'x', '.ui-icon-');
+    @include iterate-sprite((arrowthick-1-n arrowthick-1-ne arrowthick-1-e arrowthick-1-se arrowthick-1-s arrowthick-1-sw arrowthick-1-w arrowthick-1-nw arrowthick-2-n-s arrowthick-2-ne-sw arrowthick-2-e-w arrowthick-2-se-nw arrowthickstop-1-n arrowthickstop-1-e arrowthickstop-1-s arrowthickstop-1-w), 0, -48, 'x', '.ui-icon-');
+    @include iterate-sprite((arrowreturnthick-1-w arrowreturnthick-1-n arrowreturnthick-1-e arrowreturnthick-1-s arrowreturn-1-w arrowreturn-1-n arrowreturn-1-e arrowreturn-1-s arrowrefresh-1-w arrowrefresh-1-n arrowrefresh-1-e arrowrefresh-1-s), 0, -64, 'x', '.ui-icon-');
+    @include iterate-sprite((arrow-4 arrow-4-diag extlink newwin refresh shuffle transfer-e-w transferthick-e-w), 0, -84, 'x', '.ui-icon-');
+    @include iterate-sprite((folder-collapsed folder-open document document-b note mail-closed mail-open suitcase comment person print trash locked unlocked bookmark tag), 0, -96, 'x', '.ui-icon-');
+    @include iterate-sprite((home flag calendar cart pencil clock disk calculator zoomin zoomout search wrench gear heart star link), 0, -112, 'x', '.ui-icon-');
+    @include iterate-sprite((cancel plus plusthick minus minusthick close closethick key lightbulb scissors clipboard copy contact image video script), 0, -128, 'x', '.ui-icon-');
+    @include iterate-sprite((alert info notice help check bullet radio-off radio-on pin-w pin-s), 0, -144, 'x', '.ui-icon-');
+    @include iterate-sprite((play pause seek-next seek-prev seek-end seek-start seek-first stop eject volume-off volume-on), 0, -160, 'x', '.ui-icon-');
+    @include iterate-sprite((power signal-diag signal battery-0 battery-1 battery-2 battery-3), 0, -176, 'x', '.ui-icon-');
+    @include iterate-sprite((circle-plus circle-minus circle-close), 0, -192, 'x', '.ui-icon-');
+    @include iterate-sprite((circle-arrow-e circle-arrow-s circle-arrow-w circle-arrow-n circle-zoomin circle-zoomout circle-check), -112, -192, 'x', '.ui-icon-');
+    @include iterate-sprite((circlesmall-plus circlesmall-minus circlesmall-close squaresmall-plus squaresmall-minus squaresmall-close), 0, -208, 'x', '.ui-icon-');
+    @include iterate-sprite((grip-dotted-vertical grip-dotted-horizontal grip-solid-vertical grip-solid-horizontal gripsmall-diagonal-se grip-diagonal-se), 0, -224, 'x', '.ui-icon-');
+}
+
+@include jquery-ui-icons();
+
+/*
+ * jQuery UI CSS Framework
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ */
+//Layout helpers
+.ui-helper-hidden {
+    display: none;
+}
+
+.ui-helper-hidden-accessible {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.ui-helper-reset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    line-height: 1.3;
+    text-decoration: none;
+    font-size: 100%;
+    list-style: none;
+}
+
+
+.ui-helper-clearfix {
+    display: block;
+    &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+/* required comment for clearfix to work in Opera \*/
+* html .ui-helper-clearfix {
+    height: 1%;
+}
+
+
+/* end clearfix */
+.ui-helper-zfix {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+}
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled {
+    cursor: default !important;
+}
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon {
+    display: block;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Component containers
+----------------------------------*/
+.ui-widget {
+    font-size: 1.1em;
+    .ui-widget, input, select, textarea, button {
+        font-size: 1em;
+    }
+}
+
+.ui-widget-content {
+    border: 1px solid #dddddd;
+    background: #ffffff;
+    color: #444444;
+    a {
+        color: #444444;
+    }
+}
+
+.ui-widget-header {
+    border: 1px solid #dddddd;
+    background: #dddddd;
+    color: #444444;
+    a {
+        color: #444444;
+    }
+}
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    color: #444444;
+    a {
+        color: #444444;
+    }
+}
+
+
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {
+    border: 1px solid #ff0084;
+    background: #ffffff;
+    color: #222222;
+    a {
+        color: #222222;
+    }
+}
+
+.ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text {
+    color: #222222;
+}
+
+
+.ui-priority-secondary, .ui-widget-content .ui-priority-secondary, .ui-widget-header .ui-priority-secondary {
+    opacity: .7;
+}
+
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled {
+    opacity: .35;
+    background-image: none;
+}
+
+// light icons
+.light-icon,
+.ui-accordion-header.ui-state-hover .ui-icon,
+.ui-dialog-titlebar .ui-state-hover .ui-icon {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAADwCAYAAADvl7rLAAAXGElEQVR42u2dX6gdx33HZWPCJdzAyS04i2rERRRjgTmIRQl+KOYQhDF6Ojh6aExJDkq4lGJaYRuSQjCIEPoSU1rQgwLiEooDIS2C/HnwQzlJlNYEchENaQI21LWp20dBE+hLwnY3nZVHc2d3f7/5/WZm9+z3A8NKe89v/8zM7zt/dv6cOQMAAAAAAAAAAJw5U1VVUf0/BWIDgHk6fwURALky4ewzXuuIGZ2/4IqA+8xIx5lV/yoPAgEQZZ6Q+7v3tZ0g5n37HDFlGkje3/db1CJmVv1TFIBCmnkCBUBUAmoIgPTdtdJA45k10hFMpPoX0xFS3l9LBKU1l1zxrv3M0nQEmRIxlwNKSo4INZDkJbBWDSBlHkANAETNiGOu/sZ4Bo0+gNS1QPQBAG0nwleAPAIW3ATCVwAAdqs/CM4LAAAAAAAAAAAAAAAAAAAAAAAAAADCwSCUUYwExCCgOWc86Ww04Vh4jfUACsF6ANI59YVSGqReD0C8GpAd7xCS6Tq/OAMoCYD4GaTPLpiRWGikgYIAJJtN6cY7JgNN2/nVRECaiRPfW3NRlCLlu2vcX6Hp5hMArAUwkXZ3FWNVn1SZWKP2IW0GSQVUUTyzrmWAGgAI7sjCegBi8VRpfqAPAOSsjeArAL4CAAAAAAAAAAAAAAAAAAAAAAAAAAAAACTMdfz+GEaTZo9/TN6YdxxoZP4cDrRLk4+yvYPCRJpKKwPljDSta6V+D43ZhL6j5FlC3z10PYfc6e/apsoD4vvmTnztSEgtQBr314gzDSfQSjvuYiqS59DIt5o1II13CI0/URzkSnyt6chaApbq3TXjQNMJxvLuKZ8l1AH7nluyMlXos4viMIfyxaoKp64C52j6xKiBSERc891z1ULHkg5ZfC9XpGk9g2Y/Rq7754xHSQmUq+ocoy8rZx9A1vviKwDiAO+f7/PfGD5DAgAAAAAAAAAAAAAAAAAAAAAAAGDiODvDFDOOh2rG8+FV8kDqwSzaI0DHsLtUzoSfZAYYYwLkmg+vtDGqWh7g3N9zjUL7XgnSoQjNA9J5LF1xmVz9lBQ5eeJrTqmVOkCG+K5ilKYc8em4TpGiwNGoAbn2qQVAsrdklMyvkImSikAO8RMlmr4TqK4GRBSASjIlWGNLckkNSGM6sOZU8ODrxMj8Ghkg1n0jKXBQ4mm8v2ZNINW7awiARj7QynuC+4uaYKMQgFgZIEUpOMZ7a0xLTiUAMbZE19oqPlMNiN0EkDRBsjcBYrXFJYmfshMshgMkboao1b4k7e+QfqAYhVGuTkDJfcX9SblXtJEmvnJPeJZ7x8oUKdvAZzKTswag9cxYDwDkcByMBQEAAAAAAAAAAAAAAAAAAAAAxADfv/NEeqE0maaQjGVWvj8yUoDzjSHuUg+BhvPrTAQKGk0Ww/lDRG2MW4xLnFj6zJK409okNOX9ofrCBSFChzN2bQwZev/cDivd4VVLeDTEjzubM4eASJ4dnBmcjVaEXi/g/kXfuZgln+ZiGL5jqhIs9XyCofcNKQC0hBMCIGwCpJpS2tF0CJ6Sq5XRU06M0rq/9rbsoQImEQCtZ5auDTFLEdDsjFHoP6i4VVDpXPhcAiB9D41Mn6sarlGC96wlAOfXFoW+9rrWbDJmJ6LqgpYaDqTdno/Z99AlPjkFJLeAg4AE1JxKGtD+H8VUVs21CVP3AeRYDBWlNgATFX0AAAAAAAAAAAAAAAAAAAAAJkT9JWyBz2FgrplfbQCH1lZZEtuA+QQ75fxY4x+IHZlqx/0bxRFz7/FnWKQUVA1bz/tABEC8GoDPljoxxbOjauv8C85koK57Ee6/cO/NtO+t/aSeVYhtpkBwJpNOaAmZjebcc2GXutzZZIECUPU1A0Jn5IXacp3XnrQFAQDB1f5cGcd1GG6VW1sAJKWw9hx+qvMPNcHQBACTqAEoCQi3BO0VoJg1gL7nlayF4NQI4Pxg3H0AqUvdgSbAQ02QoRqJtA9AYT96VPmBbnMgxI77N0mpPWTPfP5FLAeSLqlFsCvg8CB7DUBzHMBIhHAxoectIAAAzND5AQAAAAAAAAAAAAAAAAAwduovD6VnKEI5oed/rA57TngMKTvuRFs7GW7bnMvwHF/NOZLN3O5Wz6C6MoPzs+7tuUaZ0vnNcWndf2n/TRAHJeM5zju255nvwbaX3tNc42pfEL5Dty+Zv12vw8qENWdUXsfv1yEO6HmuI4V5/NS9BTcDTrgJdN7BTCy174tDaaahZmpT2rfO35b+lTm3F5IHOO+hNaFNa1/KwALIm+el6dh7DfOblRUWXUEoINtAAThiJt6eJ1AT8VagANgRfdYO7t977HtrALG32O6JO1IcWg7fHA9MaN+JJQD14aQN3PdQqglWlHST2MQQgCER77ux6+ycGoAtIAVXQHoyYKh673tC7BpA1Qof52+ejN/ZB0AQkFNrAQRk4v2Od99nCEDj+IcmM/5xoAA83gamA6iX/kqrSXHmwgQJgMf5P80VgKAqlCUABeU6AxHQJR6cBHzcE1LUAM66jm45/1nqfH9HBEpKJrCXLXOXMWMKwOM9gSIAbRPgeRO4TYAT61p7rV17nvgOpe+4ywLgcf6m3+CKKwIxBaCQXMO5ThvOWv/mJOChFVL1AVRWtd9uAq2t82QB6Pg3RQBKX9OBIQDnPO99rj0/YH/Q0wl4kKINrykAvv/HvIZPAOrDi0QBqBz7jREBm1VsARAlYNvR1BE4CfikFSpqFVSpBlBaIrB2zlGbAKfsEwrAkz2h7/6F5fiH5t9NuGjVAopAASgpTmBd4wXfMaD03lOoAewJBaAKrAEckZw/pQAQI+7pjiCpwu0RBUBaAyjdDkArlMROQIl95emAXTPi381ES6c0P99juyRkn2WiGoCWAGRtAgS8e1cH4IrywBQBKEMTTzIOwPDVEYwDGO1nwJ7McyRY3KVkfAevFB04WyeeKQRYaa91DakAdIjA6gwgJ1xpwqYjlDOKi+ABLSN69lkui2aJAJwfAAAAAAAAAAAAAAAAABgddQ/+15qQ6+YLjS2xA+9d+bb4ypwYJWM67qWOb8CXCLbrgc/o6wH7owH7I+L7ng+ZDjwWe+s6fy3JP+0Etwz5zZ6QtS+81oPP2FznL62MvyDYbT0z+G6YEWJr5mScI2dQxC3iKLgqovNTRnJd6hsHPiQCzju7IXhnJcFgmqU7GnAK9j2FyYbo9O7AuAXlu7pjc+QR5QXxue9aNneFzv/QQKRmmDbV+d2x5JSpvEWsUWCcufDm53/uHK8HZKDSKZlLzvN3nYvlwNY9f2qO98zxLfvvxHRYOtdchthb59j2piTcM8clJ/2czN+WglHzoK/GxZgId0RI/iPG+6+td1+QRjP2LEpREl9eQwCCpwNbmfUZM3vtch2eMNMiz3FWKbLiYW2LwdgFoOafzPFN57gNcEB3XoDE/ukA+3Yq8B7z/htBHuwbEr+IlX6mzT/E1xj5d2sVfBtbDLoMbhFWpLkVWwD6+gKYNYDr5viVNvIYGah0JtKUjIw7hhrAd8zxB+b4BmNVpCclNQDXnlsDsO1DagB9zk8Yi7/yxTV1bL1C+r3eY/o6MQ+emgbPmsvgODx3KulYBKCtAbxoOpQeHGM5f1cG4PRReNqcp1ZoIth/xxy/7Rz/kWBfdMwGXBLv77Mvhfac+/vavHY4H1kAhibULULykKTmk6wX3pp2u7aUiDUrSUEASqECBzv/UOJJBIBp3wjfD8wKPltz/F4dnhqogp4lFGDnR2y/CZ29p9UEGLDn2t51OgMXROe32/zbpAKg8QnQiYyF5vWZDlwG2F8ayMCXuALASQeF1ZgetNeFcZfF3rrORikPhJbEC67zG7umz+p3dmef6Rxszl0mCoDd5l8ke3klAThS6gENXVE12PkJIkAZByBdlvu8oARtKYSOk8t+I3V+6WfADhFYMO991XP+KuETpEoNSBJxyzMA7BC5BgIJnpc36AcAAAAAAAAAAAAAAAAAk7oH9g895/YyPcuauzy0Oxqu3Swkw7PPbjXfsWTgJXdDh5gZYEqZoH7UL9fh31wRqP//l3X4B4J9++342Dl/HPBN+QZ3g4jqw33k2l2J/siEhqeYeed6QPxdNBO3KjOc+xnz7+bcRYJ9ydlLoUcs2esxEO2l11hz/IY9iMlKwK2VCe6HiIDUeScqAN8yj/x7ETBj279uzv2GmXjHjvNLxoQfMkYSftQTPsIYDn5sZeSl53lWIZlXMJuUPAhM8puBmayk53FGM5b2fBzKM9qDlrp8mxKBW0/Jc1+6GMNMBKBxlp9YIvBqHf7XDOX8U4L9sSsCPlEILP2pAvBoE6xzj5pAdcC19e+VOy8/tPRiCkAZsrOSU4so3XxMEQDz7+sdTrggXMOejHfkjo6lCoCZBu9uL1dxEvDYVfTYAqC1oo1UcISZsJm6+r75+X+Z4xfr8AfE5zjuuDXV+Rfaw7kr4uas9U/+xrndljM01ZpQ5gscAQidC+GuaEV+BqcGUDm+dEgVAKcG8EAAOLWU6sNNWS+6MypJAmA7v902kTpRbAGIacusgv+dY7bPFKNjofN3lYBDfQDt1OFTOzM3zs3oRFyFjEtv4yqjABw4Pz9w/024t1v7WlvNME4NQDKb9QmrBvBE9eEOzTcoEXjfzXTU1WTmLgCmCfByHT4wP/9nc/zXJiGITvD3Hbe+K3B+qgMujfj4wmFgBzJHwOxSdN8KbAEIbMMfOuGc8+9KID7HifoA2pL/oao/txPwvtUJuEUnIPmZ28U4/r0Of1KHj1ki8J8Bzn9MFQGP86+qgBWdrdLioU5ERpodW6sx3eCIgGcW5wFzSbjeBWwIDvxgK/quf0tqH4n6ANbG9qIVWmFgiYDoM+BMBeDL5pG/YJ1rReAtZg3orjl3N2A+/0r4HsdW5nudmWYrpxNwQRUBSukY0qPfToMeuL70M6CvBuEL0foAnE+4dqALgHan2pwEwDz3l+rwcedcIwKfYrTh7zrn7w6NA9BYy6CrORTYd3Hf6hVfMJth18wYgCIkL1kOc6ovY8Buz/4K4Px7b8B2+uMAQFRheGxCz9pUvW+acMC03ZgmwMIVN/sYow/J1xSQrvIEAAAAAAAAAAAAsNO0nxCYNs2srW96Ol+ac1cQqwBMw/nvWM57h2jzEuETyEuIXQDG7fzPexz3eULJXxG2VaqoNYH6dyfm9ycB7/Cu5sAYc80Vcgcr3VxOEDvTKv3tmU13BmxuMwTgNvE5ggcwaA+CsCa3rAi/FW/QIL2Ggn1lHLl0nTtH/IMMpb8nMZ/nJLjCjLpKYTThQuEaK8bmkF07024Ezsud0NPaP2dGtj0X8AxqaQcBmG7b353bfCckwQWZ6Ii7JViX81M3SXSdm+P8Go7jXKPd5HET4HzPOeeeC3yGEwjAfJx/RSi8VwkFYCVpv1u3u0fcmXXlTGZZcfsRlAWANY7esd9zzu0RxsF72+0BU7pLy/bEugaG4Y5cAEgOnEoAFN9nESB+q5BORNQA0Am4S6X/omN+88pjf5MhADdT1AAUa0ArxjVm3weA2Wg7UPpzO/HMvuZULqfoBAxck3AV6vw9DrxJfY3cXwHs68C7piEAJwwHPum4xjWC7bUAZ1ylEoAcNY9dL1gQC/NK8Gc9K8NW5tyziCEIAAAAAAAAAAAAAAAAAAAAAAAgK+2YiNS2IG+it7u6roTXqLr+D5Kk460mSJ1fOJgKaT5RAagkQhAiAL77mbkIW+Z4/JWxWXjOsZ/B+tsR0f6o55mSTKd1hjSvJA4sHU7tvNMKHjYtAQgSAoEAVB1CQFmMY+W578rZo17yDGwB4N5fUQCkMxFV1gDw7NGHGsFEBaDiLM6hIACnFvIYmIzkK3G2SluEb0MEIOT+GgIQ24lDbKmbWwKWnz7S7DdZh7+qwxt1eNOEN8wmtc3fHkENYGY1gDEKAGoAqo7/aB0+V4dfESbf/dL89lH0AcyoD0Ahk6EPYJzOX7jbxRP5cR0+wXFefAXYsSacRARS2oLOOF3W4f0qnPfq8DRiErAdObUt8Jb871Vy3iPXBAAAoxGAH1Z6bBGjAEzH+a9W+ryAmAVgGgLwiwgC8HPELADjd/4LVTwuIIYBGLcAvBJRAF5GDAMwbgH4RkQBuDV086A17QEAagLw/YgC8F3fDZuRd39hCcBrdThH2V7LEY6WGxxbAEAmAbC2Ads6ArCi7rFn7JbGxt4fYKkQGUPDcI8kE5mmbg/QBBA1AeoTx+YPf2sLgPXv44AXWFiTYZaRBYAyTr/cVXuwkwLwapJOQKv0v2ede83aKvseY6fdlkZQDs25LacW4XMMooM0m2Hum6P97/2hLbKN/b513PMEjn0lsN/zHAe3+AY7JwBpPgNae7rf6HiQG9QSyDQB7M0pDy2BuR5ZAM56QmEdhxywsI6F5xoV4f7u8ax1Pc797esM3h/srAjEHwjkqwE4f7/HLcE9fQrH3HntAQLwVE8YrIJP2R7srADEGAr8Gd+Ntr5Pf1ZpvqU6ruW0a6sWsI4sAOgEBLsqAj+KPhnIVN1b7plq/z1uT37XQhDU6aFdjo/qL5ixAGhOBy6G2u93HKM7Gp/xAAAiEcCCIACgJhB5STAAwKhFIO6ioACASQjB0LLgnwxaFhwAAAAAM6xWXKnDNz1tiebclbHbI/2mnX5zt8+deV4idCq8NFZ7OP+002/u9mMoOahcGZs9nH/a6Td3+zFkoNtdO8l4XuA2xb6HIftr9n3Nv6/12Xe8U9U76il+nBaS0Yv2xKCQ9LNHUIaknzT9O2xT3f/EkxeC7h9q3xMXt8coABUjASqK/VCEdNlb5661YtD1G+I7FbmcX7CrTuFEWcFNv740jJ3+1OcKfT7O/Sn5p8Nh/6wNXPuOZ7k42u3SKM7FdeBQe7sW4Cn9QwSAJQIc4aI4r4LzD75DhPgPFoAx5B/f71Pat87uc34IAC0CN9bfNgoCUMV0QI37SgRoTOmXW4BGUAO46PztojRPzLUJsHGEIEkNIKQKrlkD0Eo/SRNAswoemn80ayAp7W0R8Dn/WAXgJiMBblLsexiyH+oEvJmiD4DTCafdB6CRfj0dcTdTpH+PAES9P6FQimrvNgMo9mMQgMsMB748Nvtd/Aowp/Sbu/1YROAa4eGvjdV+7kw9/eZuP5ZM9Gz18Hr+Lc25Z8duDxGYdvrN3R4AAAAAAAAAAAAAAAAAAAAAAGKgMBsO9gJ7AMYgAKytsUdoDwEAQEEAqowCcOrIdUDf/1MJQPtv9xwAUxEAm1AHlthLBKgaOhfbPlSAACDms6GNQZq/PSIRANQAUAMA43N8d2uw39bhnTr8iwnvmHMN/K3B0AeAPgAwWue3Nwd9qw6frcO+53f75m9vmd/SNwdFLz4EAIzS+dvtwX9dh88z7JqVtX5TYXtwACZd8jcO/G4dLgTYX6jDf5hrYJtwACYmAD80Jf8FwTUumJrAFjEKwHSc/6ppQX5B4VpfNNd6ATELwDQE4Bd1+Jni9U7q8HPELADjd/4L7j4ZCtds1y68gBgGYNwC8Ipx1gPFax6Ya76MGAZg3ALwjTp8EOG6/12HW4hhAMYtAN/XbP87/QDf7fvBQ0NZM718Q9kedyRBMSAITEIACvs4dwHQ2uUHAgAm0QRADeC08+cUQzBbAXg1SydgSA2gdZKhY0wBCNmZmOr8KLlBBgHI8xlwqjUA8/veEOr8gbsEe3ecRdYGjDyUfiDQ3GsAXc8PAQAZBOCq1sai1lDgzwxm3LnWALScHwBFX/hRHf5HYTLQr0mTgeb8FQDOD0YoAJrTgQuSE0yxBjCChOqt8qMJAAR5K92CIGOoAUw0kSAAIHZNgLIk2MeClwQDAIxaBHyLgr5tLQr6tmhRUADAJIRgaFnwTw4tC/5/NCrDCMFj8JsAAAAASUVORK5CYII=)
+}
+
+
+.ui-widget {
+    #item-editor-scope, input, select, textarea, button {
+        font-family: 'Source Sans Pro', sans-serif;
+        @include font-size(14);
+    }
+}
+
+// dark icons
+.dark-icon,
+.ui-icon, .ui-widget-content .ui-icon, .ui-widget-header .ui-icon,
+.ui-state-default .ui-icon,
+.ui-state-active .ui-icon, .ui-state-hover .ui-icon,
+.ui-dialog-titlebar .ui-icon {
+    background-image: url(data:image/png;base64,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);
+}
+
+.ui-datepicker-next,
+.ui-datepicker-prev,
+.ui-icon-triangle-1-n,
+.ui-icon-triangle-1-o,
+.ui-icon-triangle-1-s,
+.ui-icon-triangle-1-w,
+.ui-dialog-titlebar-close {
+    font-family: 'tao' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: none !important;
+    text-indent: 0 !important;
+}
+
+.ui-icon-triangle-1-n:before {
+    @include tao-icon-setup;
+    @include icon-up;
+}
+
+.ui-datepicker-next:before,
+.ui-icon-triangle-1-e:before {
+    @include tao-icon-setup;
+    @include icon-right;
+}
+
+.ui-icon-triangle-1-s:before {
+    @include tao-icon-setup;
+    @include icon-down;
+}
+
+.ui-datepicker-prev:before,
+.ui-icon-triangle-1-w:before {
+    @include tao-icon-setup;
+    @include icon-left;
+}
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+    -moz-border-radius-topleft: 0;
+    -webkit-border-top-left-radius: 0;
+    -khtml-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+    -moz-border-radius-topright: 0;
+    -webkit-border-top-right-radius: 0;
+    -khtml-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+    -moz-border-radius-bottomleft: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -khtml-border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    -moz-border-radius-bottomright: 0;
+    -webkit-border-bottom-right-radius: 0;
+    -khtml-border-bottom-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Overlays */
+.ui-widget-overlay {
+    background: #eeeeee;
+    opacity: .80;
+}
+
+.ui-widget-shadow {
+    margin: -4px 0 0 -4px;
+    padding: 4px;
+    background: #aaaaaa;
+    opacity: .60;
+    -moz-border-radius: 0px;
+    -khtml-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+/*
+ * jQuery UI Resizable 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Resizable#theming
+ */
+.ui-resizable {
+    position: relative;
+}
+
+.ui-resizable-handle {
+    position: absolute;
+    font-size: 0.1px;
+    z-index: 99999;
+    display: block;
+}
+
+.ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle {
+    display: none;
+}
+
+.ui-resizable-n {
+    cursor: n-resize;
+    height: 7px;
+    width: 100%;
+    top: -5px;
+    left: 0;
+}
+
+.ui-resizable-s {
+    cursor: s-resize;
+    height: 7px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+}
+
+.ui-resizable-e {
+    cursor: e-resize;
+    width: 7px;
+    right: -5px;
+    top: 0;
+    height: 100%;
+}
+
+.ui-resizable-w {
+    cursor: w-resize;
+    width: 7px;
+    left: -5px;
+    top: 0;
+    height: 100%;
+}
+
+.ui-resizable-se {
+    cursor: se-resize;
+    width: 12px;
+    height: 12px;
+    right: 1px;
+    bottom: 1px;
+}
+
+.ui-resizable-sw {
+    cursor: sw-resize;
+    width: 9px;
+    height: 9px;
+    left: -5px;
+    bottom: -5px;
+}
+
+.ui-resizable-nw {
+    cursor: nw-resize;
+    width: 9px;
+    height: 9px;
+    left: -5px;
+    top: -5px;
+}
+
+.ui-resizable-ne {
+    cursor: ne-resize;
+    width: 9px;
+    height: 9px;
+    right: -5px;
+    top: -5px;
+}
+
+/*
+ * jQuery UI Selectable 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Selectable#theming
+ */
+.ui-selectable-helper {
+    position: absolute;
+    z-index: 100;
+    border: 1px dotted black;
+}
+
+/*
+ * jQuery UI Accordion 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Accordion#theming
+ */
+/* IE/Win - Fix animation bug - #4615 */
+.ui-accordion {
+    width: 100%;
+    .ui-accordion-header {
+        cursor: pointer;
+        position: relative;
+        margin-top: 1px;
+        zoom: 1;
+    }
+    .ui-accordion-li-fix {
+        display: inline;
+    }
+    .ui-accordion-header{
+        a {
+            display: block;
+            font-size: 1em;
+            padding: .5em .5em .5em .7em;
+        }
+        .ui-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            margin-top: -8px;
+        }
+    }
+    .ui-accordion-content {
+        padding: 1em 2.2em;
+        border-top: 0;
+        margin-top: -2px;
+        position: relative;
+        top: 1px;
+        margin-bottom: 2px;
+        overflow: auto;
+        display: none;
+        zoom: 1;
+    }
+    .ui-accordion-content-active {
+        display: block;
+    }
+}
+
+
+
+/*
+ * jQuery UI Autocomplete 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Autocomplete#theming
+ */
+.ui-autocomplete {
+    position: absolute;
+    cursor: default;
+}
+
+/* workarounds */
+* html .ui-autocomplete {
+    width: 1px;
+}
+
+/* without this, the menu expands to 100% in IE6 */
+
+/*
+ * jQuery UI Menu 1.8.16
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Menu#theming
+ */
+.ui-menu {
+    list-style: none;
+    padding: 2px;
+    margin: 0;
+    display: block;
+    float: left;
+    .ui-menu {
+        margin-top: -3px;
+    }
+    .ui-menu-item {
+        margin: 0;
+        padding: 0;
+        zoom: 1;
+        float: left;
+        clear: left;
+        width: 100%;
+        a {
+            text-decoration: none;
+            display: block;
+            padding: .2em .4em;
+            line-height: 1.5;
+            zoom: 1;
+        }
+        &.ui-state-hover, &.ui-state-active {
+            font-weight: normal;
+            margin: -1px;
+        }
+    }
+}
+
+
+
+/*
+ * jQuery UI Dialog 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Dialog#theming
+ */
+.ui-dialog {
+    position: absolute;
+    padding: .2em;
+    width: 300px;
+    overflow: hidden;
+    .ui-dialog-titlebar {
+        padding: 0 1em;
+        position: relative;
+    }
+    .ui-dialog-title {
+        float: left;
+        margin: .1em 16px .1em 0;
+    }
+    .ui-dialog-titlebar-close {
+        @include font-size(17);
+        line-height: 2;
+        position: absolute;
+        right: 1px;
+        top: 13px;
+        padding: 10px 0;
+        margin: -10px 0 0 0;
+        height: 18px;
+        color: inherit;
+        text-decoration: none !important;
+        span.ui-icon-closethick {
+            display: none;
+            margin: 1px;
+            background: none;
+        }
+        &:before {
+            @extend .icon-close:before;
+        }
+        &:focus, &:hover {
+            padding: 0;
+        }
+    }
+    .ui-dialog-content {
+        position: relative;
+        border: 0;
+        padding: .5em 1em;
+        background: none;
+        overflow: auto;
+        zoom: 1;
+    }
+    .ui-dialog-buttonpane {
+        text-align: left;
+        border-width: 1px 0 0 0;
+        background-image: none;
+        margin: .5em 0 0 0;
+        padding: .3em 1em .5em .4em;
+        .ui-dialog-buttonset {
+            float: right;
+        }
+        button {
+            margin: .5em .4em .5em 0;
+            cursor: pointer;
+        }
+    }
+    .ui-resizable-se {
+        width: 14px;
+        height: 14px;
+        right: 2px;
+        bottom: 2px;
+    }
+}
+
+
+.ui-draggable .ui-dialog-titlebar {
+    cursor: move;
+}
+
+/*
+ * jQuery UI Slider 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Slider#theming
+ */
+.ui-slider {
+    position: relative;
+    text-align: left;
+    .ui-slider-handle {
+        position: absolute;
+        z-index: 2;
+        width: 1.2em;
+        height: 1.2em;
+        cursor: default;
+        border: 1px #888 solid
+    }
+    .ui-slider-range {
+        position: absolute;
+        z-index: 1;
+        font-size: .7em;
+        display: block;
+        border: 0;
+        background-position: 0 0;
+    }
+}
+
+
+.ui-slider-horizontal {
+    height: .8em;
+    margin-top: 5px;
+    .ui-slider-handle {
+        top: -.3em;
+        margin-left: -.6em;
+    }
+    .ui-slider-range {
+        top: 0;
+        height: 100%;
+    }
+    .ui-slider-range-min {
+        left: 0;
+    }
+    .ui-slider-range-max {
+        right: 0;
+    }
+}
+
+.ui-slider-vertical {
+    width: .8em;
+    height: 100px;
+    .ui-slider-handle {
+        left: -.3em;
+        margin-left: 0;
+        margin-bottom: -.6em;
+    }
+    .ui-slider-range {
+        left: 0;
+        width: 100%;
+    }
+    .ui-slider-range-min {
+        bottom: 0;
+    }
+    .ui-slider-range-max {
+        top: 0;
+    }
+}
+
+// @todo is this in use at all?
+.range-slider-arrowed {
+    margin: 0 5px;
+    .ui-slider-handle.has-icon {
+        .icon-range-slider-left{
+            position: relative;
+            left: -5px;
+            color: blue
+        }
+        .icon-range-slider-right {
+            position: relative;
+            right: -5px;
+            color: red
+        }
+        background: transparent !important;
+        .icon-range-slider-left, .icon-range-slider-right {
+            @include font-size(20);
+            color: $uiClickableActiveBg;
+        }
+        & .ui-active-state {
+            background: transparent !important;
+            .icon-range-slider-left, .icon-range-slider-right {
+                color: $uiClickableHoverBg !important;
+            }
+        }
+    }
+}
+
+/*
+ * jQuery UI Tabs 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Tabs#theming
+ */
+.ui-tabs {
+    position: relative;
+    padding: .2em;
+    zoom: 1;
+    .ui-tabs-nav {
+        margin: 0;
+        padding: .2em .2em 0;
+        li {
+            list-style: none;
+            float: left;
+            position: relative;
+            top: 1px;
+            margin: 0 .2em 1px 0;
+            border-bottom: 0 !important;
+            padding: 0;
+            white-space: nowrap;
+            a {
+                cursor: pointer;
+                float: left;
+                padding: .5em 1em;
+                text-decoration: none;
+                min-height: 34px
+            }
+            &.ui-tabs-selected,
+            &.ui-state-disabled,
+            &.ui-state-processing {
+                a {
+                    cursor: default;
+                    color: $textHighlight !important;
+                    text-shadow: 1px 1px 0 black(.2)
+                }
+            }
+            &.ui-tabs-selected{
+                margin-bottom: 0;
+                padding-bottom: 1px;
+            }
+            &.small {
+                a {
+                    padding: .25em 1em;
+                    text-decoration: none;
+                    min-height: 28px
+                }
+            }
+        }
+    }
+    .ui-tabs-panel {
+        display: block;
+        border-width: 0;
+        padding: 1em 1.4em;
+        background: none;
+    }
+    .ui-tabs-hide {
+        display: none !important;
+    }
+    &.ui-tabs-collapsible {
+        .ui-tabs-nav {
+            li {
+                &.ui-tabs-selected {
+                    a {
+                        cursor:pointer;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+/*
+ * jQuery UI Datepicker 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Datepicker#theming
+ */
+.ui-datepicker {
+    width: 17em;
+    padding: .2em .2em 0;
+    display: none;
+    .ui-datepicker-header {
+        position: relative;
+        padding: .2em 0;
+    }
+    .ui-datepicker-prev, .ui-datepicker-next {
+        position: absolute;
+        top: -2px;
+        width: 34px;
+        height: 36px;
+        cursor: pointer;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 10px;
+        text-align: center;
+        color: $textHighlight;
+        span {
+            display: none
+        }
+    }
+    .ui-datepicker-prev {
+        left: 0px;
+    }
+    .ui-datepicker-next {
+        right: 0px;
+    }
+    .ui-datepicker-prev-hover,
+    .ui-datepicker-next-hover {
+        background: $uiClickableHoverBg;
+        color: $textHighlight
+    }
+}
+
+
+.ui-datepicker .ui-datepicker-title {
+    margin: 0 2.3em;
+    line-height: 1.8em;
+    text-align: center;
+}
+
+.ui-datepicker .ui-datepicker-title select {
+    font-size: 1em;
+    margin: 1px 0;
+}
+
+.ui-datepicker select.ui-datepicker-month-year {
+    width: 100%;
+}
+
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+    width: 49%;
+}
+
+.ui-datepicker table {
+    width: 100%;
+    font-size: .9em;
+    border-collapse: collapse;
+    margin: 0 0 .4em;
+}
+
+.ui-datepicker th {
+    padding: .7em .3em;
+    text-align: center;
+    border: 0;
+}
+
+.ui-datepicker td {
+    border: 0;
+    padding: 1px;
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+    display: block;
+    padding: .2em;
+    text-align: right;
+    text-decoration: none;
+}
+
+.ui-datepicker .ui-datepicker-buttonpane {
+    background-image: none;
+    margin: .7em 0 0 0;
+    padding: 0 .2em;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.ui-datepicker .ui-datepicker-buttonpane button {
+    float: right;
+    margin: .5em .2em .4em;
+    cursor: pointer;
+    padding: .2em .6em .3em .6em;
+    width: auto;
+    overflow: visible;
+}
+
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+    float: left;
+}
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi {
+    width: auto;
+}
+
+.ui-datepicker-multi .ui-datepicker-group {
+    float: left;
+}
+
+.ui-datepicker-multi .ui-datepicker-group table {
+    width: 95%;
+    margin: 0 auto .4em;
+}
+
+.ui-datepicker-multi-2 .ui-datepicker-group {
+    width: 50%;
+}
+
+.ui-datepicker-multi-3 .ui-datepicker-group {
+    width: 33.3%;
+}
+
+.ui-datepicker-multi-4 .ui-datepicker-group {
+    width: 25%;
+}
+
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header {
+    border-left-width: 0;
+}
+
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+    border-left-width: 0;
+}
+
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+    clear: left;
+}
+
+.ui-datepicker-row-break {
+    clear: both;
+    width: 100%;
+    font-size: 0em;
+}
+
+/*
+ * jQuery UI Progressbar 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Progressbar#theming
+ */
+.ui-progressbar {
+    height: 2em;
+    text-align: left;
+}
+
+.ui-progressbar .ui-progressbar-value {
+    height: 100%;
+}
+
+/* General */
+html, body {
+    background-color: #ffffff;
+}
+
+.ui-widget {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid #dddddd;
+    background: inherit;
+    text-decoration: none;
+}
+
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+    text-decoration: none;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    color: $darkBlueGrey;
+    border-width: 1px;
+}
+
+.ui-state-hover a, .ui-state-hover a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    border: 1px solid #dddddd;
+    color: #ff0084;
+}
+
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+    color: #ff0084;
+    text-decoration: none;
+}
+
+.ui-widget :active {
+    outline: none;
+}
+
+/* Accordion */
+.ui-accordion-header {
+    border: 1px solid;
+    .ui-accordion-header {
+        margin-top: 2px;
+    }
+}
+
+.ui-accordion-content {
+    border: 1px solid;
+    border-top: none;
+    margin-bottom: 3px !important;
+}
+
+.ui-accordion .ui-accordion-header a {
+    font-size: 1.0em;
+    padding: .6em .3em .5em 2.9em;
+}
+
+.ui-accordion > .ui-state-active a, .ui-accordion > div > h3.ui-state-active a {
+    padding-bottom: .8em;
+    cursor: default
+}
+
+.ui-accordion > .ui-state-active, .ui-accordion > div > h3.ui-state-active {
+    border-bottom: none !important;
+    cursor: default
+}
+
+.ui-accordion-header > .ui-icon {
+    margin: 4px;
+}
+
+/* Tabs */
+.ui-tabs {
+    padding: 0;
+    border: none;
+    position: relative;
+    top: -3px;
+}
+
+.ui-tabs-nav {
+    padding: 0px 0px 0px 0px !important;
+    border: none;
+    border-bottom: 1px solid;
+    background-color: #ffffff;
+}
+
+.ui-tabs-nav .ui-state-default {
+    border: none;
+    padding: 0px !important;
+    margin-right: 2px !important;
+    background: none !important;
+}
+
+.ui-tabs-nav .ui-state-default a {
+    border: 1px solid;
+    position: relative;
+    top: 2px;
+    margin-bottom: 4px;
+    height: 16px;
+}
+
+/*.ui-tabs-nav .ui-tabs-selected a{border:1px solid;height:1.8em;border-bottom:none !important;}*/
+.ui-tabs-nav .ui-state-active a {
+    border: 1px solid;
+    border-bottom: none !important;
+    margin-bottom: 0;
+    height: 22px;
+}
+
+.ui-tabs .ui-widget-content {
+    border: 1px solid !important;
+    border-top: none !important;
+}
+
+.ui-tabs .ui-widget-content .ui-tabs {
+    border: none !important;
+}
+
+.ui-tabs-nav .ui-state-hover {
+    border: none;
+}
+
+/* Dialog */
+.ui-dialog {
+    border-width: 1px;
+    padding: 0;
+}
+
+.ui-dialog-titlebar {
+    border: none;
+    border-bottom-width: 2px;
+    padding: 5px 1em 5px 1em !important;
+}
+
+.ui-dialog-buttonpane {
+    border-top-width: 2px !important;
+    margin-top: 0 !important;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+    width: 24px;
+    height: 24px;
+    margin: -13px 0px 0px 0px;
+    padding: 0;
+}
+
+.ui-dialog-titlebar-close > .ui-icon {
+    margin: 4px !important;
+}
+
+/* Datepicker*/
+.ui-datepicker {
+    border: 1px solid;
+    padding: 0 !important;
+}
+
+.ui-datepicker .ui-datepicker-header {
+    border: none;
+    padding: .3em 1em;
+    color: $textHighlight
+}
+
+.ui-datepicker .ui-datepicker-header .ui-state-default {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+    width: 36px;
+    height: 33px;
+    margin: 0;
+    top: 0
+}
+
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+    display: none !important
+}
+
+.ui-datepicker table {
+    margin: 0px;
+    border: 1px solid;
+}
+
+.ui-datepicker-calendar .ui-state-default, .ui-datepicker-calendar .ui-state-highlight, .ui-datepicker-calendar .ui-state-active {
+    border-width: 1px;
+}
+
+.ui-datepicker .ui-icon {
+    margin: 4px !important;
+}
+
+/* Additional states */
+.ui-state-highlight {
+    border: 1px solid;
+}
+
+.ui-state-error {
+    border: 1px solid;
+}
+
+/* Slider */
+.ui-slider {
+    border: none;
+}
+
+.ui-slider .ui-slider-handle {
+    width: 10px;
+    height: 17px;
+    border: none;
+    margin: -.4em;
+    cursor: pointer;
+    padding: 0
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    margin-top: -4px;
+    top: 0;
+}
+
+.ui-slider-vertical .ui-slider-handle {
+    margin-left: 5px;
+    left: 0;
+}
+
+/* Progressbar */
+.ui-progressbar {
+    border: none;
+    height: 0.8em;
+}
+
+.ui-progressbar .ui-progressbar-value {
+    border: none;
+}
+
+/* Autocomplete */
+.ui-autocomplete {
+    border: solid 1px #bbbbbb;
+    padding: 0;
+}
+
+.ui-autocomplete .ui-menu-item a {
+    padding: 5px;
+    border: none;
+    margin: 0 !important;
+    cursor: pointer
+}
+
+/* Icon states */
+.ui-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* General */
+.ui-widget-overlay {
+    background: $uiOverlay;
+}
+
+.ui-widget-content {
+    color: $textColor;
+}
+
+/* Accordion */
+.ui-accordion-content {
+    border-color: $uiGeneralContentBorder;
+    background: $uiGeneralContentBg
+}
+
+.ui-accordion-header.ui-state-active, .ui-accordion-header.ui-state-active.ui-state-hover {
+    background-color: $uiClickableActiveBg !important;
+    color: $textColor;
+    border-color: $uiClickableActiveBg !important;
+    line-height: 1.0
+}
+
+.ui-accordion-header.ui-state-active * {
+    color: $textHighlight !important;
+    text-shadow: 1px 1px 0 black(.2)
+}
+
+.ui-accordion-header.ui-state-default {
+    border-color: $uiClickableDefaultBg;
+    background: $uiClickableDefaultBg;
+}
+
+.ui-accordion-header.ui-state-default * {
+    color: $textColor;
+}
+
+.ui-accordion-header.ui-state-hover {
+    background: $uiClickableHoverBg;
+    border-color: $uiClickableHoverBg;
+}
+
+.ui-accordion-header.ui-state-hover * {
+    color: $textHighlight;
+    text-shadow: 1px 1px 0 black(.2)
+}
+
+.ui-accordion-header.ui-state-default .ui-icon,
+.ui-accordion-header.ui-state-hover *.ui-icon {
+    left: 8px
+}
+
+/* Tabs states */
+.ui-tabs-nav > .ui-state-default a {
+    border-color: $uiClickableDefaultBg;
+    background: $uiClickableDefaultBg;
+    color: $textColor;
+}
+
+.ui-tabs-nav > .ui-state-active a {
+    border-color: $uiClickableActiveBg !important;
+    background: $uiClickableActiveBg !important;
+    color: $textColor !important;
+}
+
+.ui-tabs-nav > .ui-state-hover a {
+    background: $uiClickableHoverBg;
+    border-color: $uiClickableHoverBg;
+    color: $textHighlight;
+}
+
+.ui-tabs-nav > .ui-state-focus a {
+    background: $uiClickableHoverBg;
+    border-color: $uiClickableHoverBg;
+    color: $textHighlight;
+}
+
+.ui-tabs .ui-widget-content {
+    border-color: $uiGeneralContentBorder !important;
+    background-color: $uiGeneralContentBg;
+}
+
+.ui-tabs-nav {
+    border-color: $uiGeneralContentBorder;
+}
+
+/* Dialog states */
+.ui-dialog {
+    border-color: $uiHeaderBg;
+    background-color: $uiGeneralContentBg !important;
+}
+
+.ui-dialog-titlebar {
+    border-color: $uiClickableActiveBg;
+    background: $uiClickableActiveBg;
+    color: $textHighlight !important;
+    text-shadow: 1px 1px 0 black(.2)
+}
+
+.ui-dialog-titlebar:hover {
+    border-color: $uiClickableHoverBg;
+    background: $uiClickableHoverBg
+}
+
+.ui-dialog-buttonpane {
+    border-color: $uiHeaderBg !important;
+    background-color: $uiGeneralContentBg;
+}
+
+.ui-dialog-content {
+    background-color: $uiGeneralContentBg !important;
+}
+
+//.ui-dialog-titlebar .ui-state-hover .ui-icon{background-image:url(img/jquery-ui/ui-icons_ffffff_0.png) !important;}
+
+/* Slider */
+.ui-slider {
+    background: #FFFFFF;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.ui-slider .ui-slider-range {
+    background: $uiClickableDefaultBg;
+    height: 9px;
+}
+
+.ui-slider .ui-state-default {
+    background-color: $uiClickableActiveBg;
+}
+
+.ui-slider .ui-state-active {
+    background-color: $uiClickableHoverBg !important;
+}
+
+.ui-slider .ui-state-focus {
+    background-color: $uiClickableActiveBg;
+}
+
+.ui-slider .ui-state-hover {
+    background-color: $uiClickableHoverBg;
+}
+
+/* Progressbar */
+.ui-progressbar {
+    background: #FFFFFF;
+    border: 1px solid #ccc;
+    .ui-progressbar-value {
+        background-color: $uiClickableHoverBg;
+    }
+    &.success .ui-progressbar-value{
+        background-color: $success;
+    }
+    &.warning .ui-progressbar-value{
+        background-color: $warning;
+    }
+    &.error .ui-progressbar-value{
+        background-color: $error;
+    }
+}
+
+/* Autocomplete */
+
+.ui-autocomplete {
+    border-color: $uiGeneralContentBorder;
+}
+
+.ui-autocomplete a {
+    background-color: $uiGeneralContentBg;
+    color: $textColor;
+}
+
+.ui-autocomplete .ui-state-hover {
+    background: $uiClickableHoverBg;
+    color: $textHighlight;
+}
+
+/* Datepicker */
+.ui-datepicker {
+    border-color: $uiHeaderBg;
+}
+
+.ui-datepicker .ui-datepicker-header {
+    background-color: $uiClickableActiveBg !important;
+    color: $textHighlight;
+    border-color: $uiClickableActiveBg !important;
+    text-shadow: 1px 1px 0 black(.2);
+}
+
+.ui-datepicker table {
+    border-color: $uiGeneralContentBg;
+}
+
+.ui-datepicker-calendar {
+    background: $uiGeneralContentBg;
+}
+
+.ui-datepicker-calendar .ui-state-default {
+    background-color: $uiClickableDefaultBg;
+    border-color: $uiClickableDefaultBg;
+    color: $textColor;
+}
+
+.ui-datepicker-calendar .ui-state-hover {
+    border: 1px transparent solid;
+    background-color: $uiClickableHoverBg !important;
+    border-color: $uiClickableHoverBg !important;
+    color: $textHighlight !important;
+}
+
+.ui-datepicker-calendar .ui-state-highlight {
+    background-color: $uiClickableActiveBg;
+    border-color: $uiClickableActiveBg;
+    color: $textHighlight;
+    text-shadow: 1px 1px 0 black(.2)
+}
+
+.ui-datepicker-calendar .ui-state-active {
+    background-color: $uiClickableActiveBg;
+    border-color: $uiClickableActiveBg;
+    color: $textColor;
+}
+
+.ui-datepicker-header .ui-icon {
+    display: none !important
+}
+
+.ui-datepicker .ui-datepicker-header .ui-state-hover {
+    background-color: $uiClickableHoverBg !important;
+    border-color: $uiClickableHoverBg !important;
+}
+
+/* Button states */
+.ui-button {
+    @extend .btn-info;
+    @include border-radius(3);
+    border: none;
+    height: 3.5rem;
+    &.ui-state-default {
+        background-color: whiten($info, .1);
+    }
+}
+/* Highlight */
+.ui-state-highlight {
+    @extend .feedback-warning;
+}
+
+/* Error */
+.ui-state-error {
+    @extend .feedback-error;
+}
+
+
+
+
+

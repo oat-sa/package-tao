@@ -1,0 +1,175 @@
+{
+    "identifier": "elections-in-the-united-states-2004",
+    "serial": "item_547dd870b8246359831084",
+    "qtiClass": "assessmentItem",
+    "attributes": {
+        "identifier": "elections-in-the-united-states-2004",
+        "title": "Elections in the United States, 2004",
+        "label": "",
+        "adaptive": false,
+        "timeDependent": false,
+        "toolName": "TAO",
+        "toolVersion": "3.0"
+    },
+    "body": {
+        "serial": "container_containeritembody_547dd870b8234231383872",
+        "body": "<p id=\"stimulus\">\n\t\t\tThe 4th of November 2004, Georges W. Bush (Republican) wins the US elections against John Kerry\n\t\t\t(Democrat). After a first mandate leading the United States of America, Bush remains president for 4\n\t\t\tmore years. During these elections, 114.3 million votes were counted.\n\t\t</p>\n    {{interaction_sliderinteraction_547dd870b9e7a456519135}}\n    <p id=\"mapContainer\">\n      {{img_547dd870ba543784273322}}\n    </p>",
+        "elements": {
+            "interaction_sliderinteraction_547dd870b9e7a456519135": {
+                "serial": "interaction_sliderinteraction_547dd870b9e7a456519135",
+                "qtiClass": "sliderInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE",
+                    "lowerBound": 0,
+                    "upperBound": 100,
+                    "step": 1,
+                    "stepLabel": false,
+                    "id": "interaction"
+                },
+                "choices": [],
+                "prompt": {
+                    "serial": "container_containerstatic_547dd870ba310409928521",
+                    "body": "In your opinion, what was the percentage (%) of Republican voters during the 2004 US elections? If needed,\n\t\t\t\thelp yourself with the map below.",
+                    "elements": [],
+                    "debug": {
+                        "relatedItem": "item_547dd870b8246359831084"
+                    }
+                }
+            },
+            "img_547dd870ba543784273322": {
+                "serial": "img_547dd870ba543784273322",
+                "qtiClass": "img",
+                "attributes": {
+                    "src": "img/map.jpg",
+                    "alt": "Presidential popular votes by county.",
+                    "id": "map"
+                }
+            }
+        },
+        "debug": {
+            "relatedItem": "item_547dd870b8246359831084"
+        }
+    },
+    "namespaces": {
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "": "http://www.imsglobal.org/xsd/imsqti_v2p1"
+    },
+    "stylesheets": {
+        "stylesheet_547dd870b8b37980869211": {
+            "serial": "stylesheet_547dd870b8b37980869211",
+            "qtiClass": "stylesheet",
+            "attributes": {
+                "href": "style.css",
+                "type": "text/css",
+                "media": "screen",
+                "title": "Elections in the United States, 2004"
+            }
+        }
+    },
+    "outcomes": {
+        "outcomedeclaration_547dd870b99b7459925385": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_547dd870b99b7459925385",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "float"
+            },
+            "defaultValue": null
+        }
+    },
+    "responses": {
+        "responsedeclaration_547dd870b91b2970776577": {
+            "identifier": "RESPONSE",
+            "serial": "responsedeclaration_547dd870b91b2970776577",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE",
+                "cardinality": "single",
+                "baseType": "integer"
+            },
+            "correctResponses": [
+                "51"
+            ],
+            "mapping": {
+                "42": "0.1",
+                "43": "0.2",
+                "44": "0.3",
+                "45": "0.4",
+                "46": "0.5",
+                "47": "0.6",
+                "48": "0.7",
+                "49": "0.8",
+                "50": "0.9",
+                "51": "1.0",
+                "52": "0.9",
+                "53": "0.8",
+                "54": "0.7",
+                "55": "0.6",
+                "56": "0.5",
+                "57": "0.4",
+                "58": "0.3",
+                "59": "0.2",
+                "60": "0.1"
+            },
+            "areaMapping": [],
+            "howMatch": "http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response",
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": []
+        }
+    },
+    "feedbacks": [],
+    "responseProcessing": {
+        "serial": "response_templatesdriven_547dd870ba8e0645967860",
+        "qtiClass": "responseProcessing",
+        "attributes": [],
+        "processingType": "templateDriven",
+        "responseRules": [{
+            "qtiClass": "responseCondition",
+            "responseIf": {
+                "qtiClass": "responseIf",
+                "expression": {
+                    "qtiClass": "isNull",
+                    "expressions": [{
+                        "qtiClass": "variable",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }]
+                },
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "baseValue",
+                        "attributes": {
+                            "baseType": "float"
+                        },
+                        "value": "0.0"
+                    }
+                }]
+            },
+            "responseElse": {
+                "qtiClass": "responseElse",
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "mapResponse",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }
+                }]
+            }
+        }]
+    }
+}

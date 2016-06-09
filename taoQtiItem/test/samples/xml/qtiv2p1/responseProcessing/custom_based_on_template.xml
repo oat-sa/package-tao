@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" xmlns:m="http://www.w3.org/1998/Math/MathML"
+                identifier="i1438602034285160" title="Item 12" adaptive="false" timeDependent="false" label="" xml:lang="en-US" toolName="TAO" toolVersion="3.1.0-sprint04" >
+    <responseDeclaration identifier="RESPONSE" cardinality="multiple" baseType="identifier" >
+        <correctResponse>
+            <value><![CDATA[choice_1]]></value>
+        </correctResponse>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float" />
+    <stylesheet href="style/custom/tao-user-styles.css" type="text/css" media="all" title=""  />
+    <itemBody>
+        <div class="grid-row">
+            <div class="col-12">
+                <choiceInteraction responseIdentifier="RESPONSE" shuffle="true" maxChoices="0" minChoices="0" orientation="vertical" >
+                    <prompt  />
+                    <simpleChoice identifier="choice_1" fixed="false" showHide="show" >choice #1</simpleChoice>
+                    <simpleChoice identifier="choice_2" fixed="false" showHide="show" >choice #2</simpleChoice>
+                    <simpleChoice identifier="choice_3" fixed="false" showHide="show" >choice #3</simpleChoice>
+                    <simpleChoice identifier="choice_4" fixed="false" showHide="show" >choice #4</simpleChoice>
+                    <simpleChoice identifier="choice_5" fixed="false" showHide="show" >choice #5</simpleChoice>
+                </choiceInteraction>
+            </div>
+        </div>
+    </itemBody>
+    <responseProcessing>
+        <!--this is the content of the standard rp "correct", but it is not recognized during import as such so will be imported as a custom rp-->
+        <responseCondition>
+            <responseIf>
+                <match>
+                    <variable identifier="RESPONSE"/>
+                    <correct identifier="RESPONSE"/>
+                </match>
+                <setOutcomeValue identifier="SCORE">
+                    <baseValue baseType="float">1</baseValue>
+                </setOutcomeValue>
+            </responseIf>
+            <responseElse>
+                <setOutcomeValue identifier="SCORE">
+                    <baseValue baseType="float">0</baseValue>
+                </setOutcomeValue>
+            </responseElse>
+        </responseCondition>
+    </responseProcessing>
+</assessmentItem>

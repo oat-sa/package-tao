@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>Installation Process</title>
+	<link rel="stylesheet" type="text/css" href="../views/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../views/css/custom-theme/jquery-ui-1.8.22.custom.css"/>
+	<link rel="stylesheet" type="text/css" href="css/installation_main.css" />
+	<link rel="stylesheet" type="text/css" href="css/step_finalization.css" />
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="css/step_ie8.css"/>
+	<![endif]-->
+
+	<script type="text/javascript" src="../views/js/lib/require.js" data-main="js/step_finalization"></script>
+</head>
+
+<body>
+	<div id="installation_form" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+			<h2>TAO Installation Wizard</h2>
+			<h1>Finalize Installation</h1>
+			<ul id="install_seq">
+				<li><h3>Installation Steps</h3></li>
+				<li id="step_requirements"><a href="#">1. Requirements Check</a></li>
+				<li id="step_server_setup"><a href="#">2. Server Setup</a></li>
+				<li id="step_database_setup"><a href="#">3. Database Setup</a></li>
+				<li id="step_admin_setup">4. <a href="#">Administrator Setup</a></li>
+				<li id="step_licenses">5. <a href="#">Licensing Agreement</a></li>
+                <li id="step_finalization" class="currentStep">6. Finalize Installation</li>
+			</ul>
+			<p id="comments">
+			    You're almost there! Simply click the button below to finish your installation.
+                            Depending on your system, this may take a few minutes to complete.
+			</p>
+			<div id="forms_check_content">
+        <form autocomplete="off">
+					<div id="deployment"><span>Deployment in progress...</span></div>
+                    <input id="submitForm" class="enabled" type="submit" value="Install"/>
+                </form>
+			</div>
+	</div>
+
+</body>
+
+</html>

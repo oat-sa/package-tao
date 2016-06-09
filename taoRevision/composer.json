@@ -1,0 +1,31 @@
+{
+
+    "name": "oat-sa/extension-tao-revision",
+    "description" : "",
+    "type" : "tao-extension",
+    "authors" : [
+        {
+        "name": "Open Assessment Technologies SA"
+        }
+    ],
+    "keywords" : [
+        "tao",
+        "computer-based-assessment"
+    ],
+    "homepage" : "http://www.taotesting.com",
+    "license" : [
+        "GPL-2.0"
+    ],
+    "extra" : {
+        "tao-extension-name" : "taoRevision"
+    },
+    "minimum-stability" : "dev",
+    "require": {
+        "oat-sa/oatbox-extension-installer": "dev-master"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "oat\\taoRevision\\" : ""
+        }
+    } 
+}

@@ -1,0 +1,80 @@
+{
+    "type": "qti",
+    "data": {
+        "identifier": "upload",
+        "serial": "item_554c80ff722c9555843363",
+        "qtiClass": "assessmentItem",
+        "attributes": {
+            "identifier": "upload",
+            "title": "Chocolate Factory",
+            "label": "",
+            "xml:lang": "en-US",
+            "adaptive": false,
+            "timeDependent": false,
+            "toolName": "TAO",
+            "toolVersion": "3.0.0"
+        },
+        "body": {
+            "serial": "container_containeritembody_554c80ff7229d308984799",
+            "body": "<p>A chocolate factory produces several types of chocolate, some of which have nut centres.\n           The chocolates are mixed together and are randomly packed into cartons of ten.<\/p>\n    {{interaction_uploadinteraction_554c80ff73293917811830}}",
+            "elements": {
+                "interaction_uploadinteraction_554c80ff73293917811830": {
+                    "serial": "interaction_uploadinteraction_554c80ff73293917811830",
+                    "qtiClass": "uploadInteraction",
+                    "attributes": {
+                        "responseIdentifier": "RESPONSE"
+                    },
+                    "choices": [],
+                    "prompt": {
+                        "serial": "container_containerstatic_554c80ff735d8090019250",
+                        "body": "Build a spreadsheet to simulate 50 cartons of chocolates when each carton\n                contains 10 chocolates, and when one-seventh of the chocolates have nut centres.\n                Your spreadsheet should include 50 rows representing the 50 cartons, each row\n                containing 10 columns to represent the chocolates.",
+                        "elements": [],
+                        "debug": {
+                            "relatedItem": "item_554c80ff722c9555843363"
+                        }
+                    }
+                }
+            },
+            "debug": {
+                "relatedItem": "item_554c80ff722c9555843363"
+            }
+        },
+        "namespaces": {
+            "xml": "http:\/\/www.w3.org\/XML\/1998\/namespace",
+            "xsi": "http:\/\/www.w3.org\/2001\/XMLSchema-instance",
+            "": "http:\/\/www.imsglobal.org\/xsd\/imsqti_v2p1"
+        },
+        "stylesheets": [],
+        "outcomes": [],
+        "responses": {
+            "responsedeclaration_554c80ff72cb9252503458": {
+                "identifier": "RESPONSE",
+                "serial": "responsedeclaration_554c80ff72cb9252503458",
+                "qtiClass": "responseDeclaration",
+                "attributes": {
+                    "identifier": "RESPONSE",
+                    "cardinality": "single",
+                    "baseType": "file"
+                },
+                "correctResponses": [],
+                "mapping": [],
+                "areaMapping": [],
+                "howMatch": null,
+                "mappingAttributes": {
+                    "defaultValue": 0
+                },
+                "feedbackRules": []
+            }
+        },
+        "feedbacks": [],
+        "responseProcessing": {
+            "serial": "response_custom_554c80ff73bc3725102491",
+            "qtiClass": "responseProcessing",
+            "attributes": [],
+            "processingType": "custom",
+            "data": "<responseProcessing\/>",
+            "responseRules": []
+        }
+    },
+    "assets": []
+}

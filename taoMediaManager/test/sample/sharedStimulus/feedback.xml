@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+                identifier="adaptive" title="Monty Hall (Take 1)" adaptive="true" timeDependent="false">
+    <responseDeclaration identifier="DOOR" cardinality="single" baseType="identifier"/>
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+        <correctResponse>
+            <value>switchStrategy</value>
+        </correctResponse>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="STORY" cardinality="single" baseType="identifier">
+        <defaultValue>
+            <value>openingGambit</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <outcomeDeclaration identifier="FEEDBACK" cardinality="single" baseType="identifier"/>
+    <outcomeDeclaration identifier="CLOSED" cardinality="multiple" baseType="identifier">
+        <defaultValue>
+            <value>DoorA</value>
+            <value>DoorB</value>
+            <value>DoorC</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <outcomeDeclaration identifier="GOATS" cardinality="multiple" baseType="identifier"/>
+    <outcomeDeclaration identifier="PRIZE" cardinality="single" baseType="identifier"/>
+    <outcomeDeclaration identifier="FIRSTDOOR" cardinality="single" baseType="identifier"/>
+    <outcomeDeclaration identifier="REVEALED" cardinality="single" baseType="identifier"/>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+    <itemBody>
+        <p>Monty Hall has hidden a prize behind one of these doors.</p>
+        <feedbackBlock outcomeIdentifier="STORY" showHide="show" identifier="openingGambit">
+            <p>Monty invites you to choose one of the doors but won't let you open it just yet.</p>
+        </feedbackBlock>
+        <feedbackBlock outcomeIdentifier="STORY" showHide="show" identifier="tempter">
+            <p>Monty opens one of the other doors to reveal - a goat!</p>
+            <p>He then asks you if you would like to change your mind or to stick with the door you
+                originally chose. It's time to make your mind up, which door are you going to
+                open?</p>
+        </feedbackBlock>
+        <feedbackBlock outcomeIdentifier="STORY" showHide="show" identifier="goat">
+            <p>Bad luck! When you opened your chosen door it also revealed a goat.</p>
+        </feedbackBlock>
+        <feedbackBlock outcomeIdentifier="STORY" showHide="show" identifier="prize">
+            <p>Congratulations! When you opened your chosen door it revealed a fantastic prize that
+                you are now free to take home.</p>
+        </feedbackBlock>
+        <feedbackBlock outcomeIdentifier="FEEDBACK" showHide="show" identifier="poser">
+            <p>Well, whether or not you won the prize did you make your decision by guesswork or
+                logical reasoning? The question is, if we allowed you to play this game repeatedly
+                what strategy <em>should</em> you adopt?</p>
+        </feedbackBlock>
+    </itemBody>
+    <responseProcessing>
+        <setOutcomeValue identifier="completionStatus">
+            <baseValue baseType="identifier">incomplete</baseValue>
+        </setOutcomeValue>
+        <responseCondition>
+            <responseIf>
+                <!-- Transition from openingGambit to tempter -->
+                <and>
+                    <match>
+                        <baseValue baseType="identifier">openingGambit</baseValue>
+                        <variable identifier="STORY"/>
+                    </match>
+                    <not>
+                        <isNull>
+                            <variable identifier="DOOR"/>
+                        </isNull>
+                    </not>
+                </and>
+                <!-- Remember the first door chosen -->
+                <setOutcomeValue identifier="FIRSTDOOR">
+                    <variable identifier="DOOR"/>
+                </setOutcomeValue>
+                <!-- Randomly open one of the other two doors -->
+                <responseCondition>
+                    <responseIf>
+                        <match>
+                            <variable identifier="DOOR"/>
+                            <baseValue baseType="identifier">DoorA</baseValue>
+                        </match>
+                        <setOutcomeValue identifier="REVEALED">
+                            <random>
+                                <multiple>
+                                    <baseValue baseType="identifier">DoorB</baseValue>
+                                    <baseValue baseType="identifier">DoorC</baseValue>
+                                </multiple>
+                            </random>
+                        </setOutcomeValue>
+                    </responseIf>
+                    <responseElseIf>
+                        <match>
+                            <variable identifier="DOOR"/>
+                            <baseValue baseType="identifier">DoorB</baseValue>
+                        </match>
+                        <setOutcomeValue identifier="REVEALED">
+                            <random>
+                                <multiple>
+                                    <baseValue baseType="identifier">DoorA</baseValue>
+                                    <baseValue baseType="identifier">DoorC</baseValue>
+                                </multiple>
+                            </random>
+                        </setOutcomeValue>
+                    </responseElseIf>
+                    <responseElse>
+                        <setOutcomeValue identifier="REVEALED">
+                            <random>
+                                <multiple>
+                                    <baseValue baseType="identifier">DoorA</baseValue>
+                                    <baseValue baseType="identifier">DoorB</baseValue>
+                                </multiple>
+                            </random>
+                        </setOutcomeValue>
+                    </responseElse>
+                </responseCondition>
+                <setOutcomeValue identifier="CLOSED">
+                    <delete>
+                        <variable identifier="REVEALED"/>
+                        <variable identifier="CLOSED"/>
+                    </delete>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="GOATS">
+                    <multiple>
+                        <variable identifier="REVEALED"/>
+                    </multiple>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="STORY">
+                    <baseValue baseType="identifier">tempter</baseValue>
+                </setOutcomeValue>
+            </responseIf>
+            <responseElseIf>
+                <!-- Transition from tempter to prize or goat -->
+                <and>
+                    <match>
+                        <baseValue baseType="identifier">tempter</baseValue>
+                        <variable identifier="STORY"/>
+                    </match>
+                    <not>
+                        <isNull>
+                            <variable identifier="DOOR"/>
+                        </isNull>
+                    </not>
+                </and>
+                <!-- We score based on whether you switched (and cheat!) -->
+                <responseCondition>
+                    <responseIf>
+                        <or>
+                            <match>
+                                <variable identifier="DOOR"/>
+                                <variable identifier="FIRSTDOOR"/>
+                            </match>
+                            <match>
+                                <variable identifier="DOOR"/>
+                                <variable identifier="REVEALED"/>
+                            </match>
+                        </or>
+                        <setOutcomeValue identifier="SCORE">
+                            <baseValue baseType="float">0</baseValue>
+                        </setOutcomeValue>
+                        <setOutcomeValue identifier="GOATS">
+                            <multiple>
+                                <variable identifier="GOATS"/>
+                                <variable identifier="DOOR"/>
+                            </multiple>
+                        </setOutcomeValue>
+                        <setOutcomeValue identifier="STORY">
+                            <baseValue baseType="identifier">goat</baseValue>
+                        </setOutcomeValue>
+                    </responseIf>
+                    <responseElse>
+                        <setOutcomeValue identifier="SCORE">
+                            <baseValue baseType="float">1</baseValue>
+                        </setOutcomeValue>
+                        <setOutcomeValue identifier="PRIZE">
+                            <variable identifier="DOOR"/>
+                        </setOutcomeValue>
+                        <setOutcomeValue identifier="STORY">
+                            <baseValue baseType="identifier">prize</baseValue>
+                        </setOutcomeValue>
+                    </responseElse>
+                </responseCondition>
+                <setOutcomeValue identifier="CLOSED">
+                    <delete>
+                        <variable identifier="DOOR"/>
+                        <variable identifier="CLOSED"/>
+                    </delete>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <baseValue baseType="identifier">poser</baseValue>
+                </setOutcomeValue>
+            </responseElseIf>
+            <responseElseIf>
+                <and>
+                    <match>
+                        <variable identifier="FEEDBACK"/>
+                        <baseValue baseType="identifier">poser</baseValue>
+                    </match>
+                    <not>
+                        <isNull>
+                            <variable identifier="RESPONSE"/>
+                        </isNull>
+                    </not>
+                </and>
+                <responseCondition>
+                    <responseIf>
+                        <match>
+                            <variable identifier="RESPONSE"/>
+                            <correct identifier="RESPONSE"/>
+                        </match>
+                        <setOutcomeValue identifier="SCORE">
+                            <sum>
+                                <variable identifier="SCORE"/>
+                                <baseValue baseType="float">2</baseValue>
+                            </sum>
+                        </setOutcomeValue>
+                    </responseIf>
+                </responseCondition>
+                <setOutcomeValue identifier="FEEDBACK">
+                    <variable identifier="RESPONSE"/>
+                </setOutcomeValue>
+                <setOutcomeValue identifier="completionStatus">
+                    <baseValue baseType="identifier">completed</baseValue>
+                </setOutcomeValue>
+            </responseElseIf>
+        </responseCondition>
+    </responseProcessing>
+    <modalFeedback outcomeIdentifier="FEEDBACK" showHide="show" identifier="stickStrategy">No.
+        Initially, the probability of the prize being behind each door is 1/3. Opening a losing door
+        can't possibly make this go down for the remaining closed one! In fact you should
+        <em>never</em> stick to your original decision.</modalFeedback>
+    <modalFeedback outcomeIdentifier="FEEDBACK" showHide="show" identifier="switchStrategy"> Yes,
+        you should <em>always</em> switch doors when offered the chance. Congratulations, perhaps
+        you should think about a career as a TV game show contestant? </modalFeedback>
+    <modalFeedback outcomeIdentifier="FEEDBACK" showHide="show" identifier="noStrategy">
+        <p>No, you should infact <em>always</em> switch doors. This problem has fooled many
+            mathematicians since it was first posed in an American magazine article and continues to
+            present a seemingly paradoxical answer!</p>
+        <p>The probability of your first choice door hiding the prize is 1/3 and this can't change.
+            But, 2/3 of the time you'll be wrong with your first choice and, by revealing a goat,
+            Monty is effectively telling you which door the prize is behind the remaining 2/3 of the
+            time! So by switching doors, your chances of getting the prize go up to 2/3!</p>
+    </modalFeedback>
+</assessmentItem>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../../tao/doc/structures.dtd">
+<structures>
+	<structure id="users" name="Users" level="11" group="legacy">
+		<description />
+        <icon id="" src="" />
+		<sections>
+			<section id="manage_acl" name="Manage Access Rights" url="/funcAcl/Admin/index" />
+		</sections>
+	</structure>
+</structures>

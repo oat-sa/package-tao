@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>QtiItemRunner Demo Test</title>
+        <base href="../../../../../../../tao/views/" />
+
+        <!--<link rel="stylesheet" type="text/css" href="css/tao-main-style.css">-->
+        <script type="text/javascript" src="js/lib/require.js"></script>
+
+        <script  type="text/javascript">
+            //load the config
+            require(['/tao/ClientConfig/config'], function(){
+                require(['taoQtiItem/runner/qtiItemRunner'], function(qtiItemRunner){
+                    var runner;
+
+                    var itemContainer   = document.getElementById('item-container');
+                    var output          = document.querySelector('#output');
+
+                    var selectItem      = document.querySelector('.item-selection');
+                    var loadBtn         = document.querySelector('.load');
+                    var clearBtn        = document.querySelector('.destroy');
+                    var getStateBtn     = document.querySelector('.getstate');
+                    var getResponsesBtn = document.querySelector('.getresponses');
+                    var setStateBtn     = document.querySelector('.setstate');
+                    var manStateBtn     = document.querySelector('.manstate');
+                    var manStateContent = document.querySelector('.manual-state-content');
+                    var clearOutputLink = document.querySelector('.clear-output a');
+
+
+                    var out = function out(content, title){
+
+                        if(typeof content === 'object'){
+                            content = '<pre>' + JSON.stringify(content, null, '  ') + '</pre>';
+                        }
+                        output.innerHTML = output.innerHTML +
+                                '<p>[' + new Date().toLocaleTimeString() +'] <strong>' + title + '</strong> ' + content + '</p>';
+                        output.scrollTop = output.scrollHeight;
+                    };
+
+                    loadBtn.addEventListener('click', function(){
+                        var itemPath = selectItem.value;
+                        if(itemPath){
+                            out('Loading sample ' + itemPath, '');
+                            require(['json!taoQtiItem/test/samples/json/' + itemPath], function(item){
+
+
+                                runner =
+                                    qtiItemRunner(item)
+                                        .on('error', function(err){
+                                            out(err, 'Error');
+                                        })
+                                        .on('init', function(){
+                                            out('init', 'Event');
+                                        })
+                                        .on('render', function(){
+                                            out('ready', 'Event');
+                                        })
+                                        .on('statechange', function(state){
+                                            out(state, 'Event');
+                                            window.localStorage.setItem(itemPath, JSON.stringify(state));
+                                        })
+                                        .on('clear', function(){
+                                            out('clear', 'Event');
+                                        })
+                                        .init()
+                                        .render(itemContainer);
+                            });
+                        }
+                    });
+
+                    getStateBtn.addEventListener('click', function(){
+                        if(runner){
+                            var state = runner.getState();
+                            out(state, 'getState');
+                        }
+                    });
+
+                    getResponsesBtn.addEventListener('click', function(){
+                        if(runner){
+                            var responses = runner.getResponses();
+                            out(responses, 'getResponses');
+                        }
+                    });
+
+                    setStateBtn.addEventListener('click', function(){
+                        if(runner){
+                            var itemPath = selectItem.value;
+                            if(itemPath && window.localStorage.getItem(itemPath)){
+                                var state = JSON.parse(window.localStorage.getItem(itemPath));
+                                runner.setState(state);
+                                out(state, 'setState');
+                            }
+                        }
+                    });
+
+                    clearBtn.addEventListener('click', function(){
+                        runner.clear();
+                    });
+
+                    manStateBtn.addEventListener('click', function(){
+                        var state;
+                        if(manStateContent.value){
+                            try{
+                                state = JSON.parse(manStateContent.value);
+                            } catch(e){
+                                console.error(e);
+                            }
+                            if(state){
+                                runner.setState(state);
+                                out(state, 'setState');
+                            }
+                        }
+                    });
+
+                    clearOutputLink.addEventListener('click', function(e){
+                        e.preventDefault();
+                         output.innerHTML = '';
+                    });
+                });
+            });
+        </script>
+        <style>
+            body > header {text-align: center; background-color: #266D9C; color: #fff; height: 50px; padding-top:10px;}
+            nav { margin: 5px }
+            nav > button { margin: 0 3px }
+            section, nav { width: 48%; float: left; margin: 5px 1%; }
+            section { background-color: #266D9C; color: #fff;  }
+            section h2 {margin: 5px}
+            section > div { margin: 5px; background-color: #fff; color: #222; min-height: 400px; }
+            #output { padding: 5px; background-color: #555; color: #fff; overflow-y: auto; max-height: 400px;}
+            section header {position: relative}
+            .clear-output { position: absolute; right: 10px; top: 5px;}
+            .clear-output a{ color: #fff}
+        </style>
+    </head>
+    <body>
+    <header>
+        <h1>ItemRunner demo</h1>
+    </header>
+    <nav>
+        <select class="item-selection" autocomplete="off">
+            <option value="" disabled selected> - Select an item - </option>
+
+            <option value="airports.json" disabled>Airports (Hotspot)</option>
+            <option value="airports-tags.json" disabled>Airports Tags (Graphic Gap Match)</option>
+            <option value="characters.json">Characters and players (Match)</option>
+            <option value="chocolate.json">Chocolate Factory (Upload)</option>
+            <option value="edinburgh.json" disabled>Locate Edinburh (Select Point)</option>
+            <option value="elections.json">Elections (Slider)</option>
+            <option value="flying-home.json" disabled>Flying home (Graphic Order)</option>
+            <option value="formated-card.json">Formated Postcard (XHTML Extended Text)</option>
+            <option value="history.json">History (Order)</option>
+            <option value="lowcost-flying.json" disabled>Low cost flying (Graphic Associate)</option>
+            <option value="postcard.json">Postcard (Extended Text)</option>
+            <option value="postcards.json">Postcards (Multiple Extended Text)</option>
+            <option value="richardIII-1.json">Richard III 1 (Inline choice)</option>
+            <option value="richardIII-2.json">Richard III 2 (Text entry)</option>
+            <option value="rivals.json">Rivals (Associate)</option>
+            <option value="sentence-error.json">Sentence Error (Hottext)</option>
+            <option value="space-shuttle.json">Space shuttle (Choice)</option>
+            <option value="space-shuttle-m.json">Space shuttle (Multiple Choices)</option>
+            <option value="tao-item.json">New TAO Item (Gap Match)</option>
+        </select>
+        <button class="btn-info small load"  autocomplete="off">Load</button>
+        <button class="btn-error small destroy"  autocomplete="off">Clear</button>
+    </nav>
+    <nav>
+        <button class="btn-info small getstate"  autocomplete="off">Show state</button>
+        <button class="btn-info small getresponses"  autocomplete="off">Show resonses</button>
+        <button class="btn-info small setstate"  autocomplete="off">Restore previous state</button>
+        <input type="text" class="manual-state-content" placeholder="Set state manually"></input><button class="btn-info small manstate"  autocomplete="off">ok</button>
+    </nav>
+    <div class="clearfix"></div>
+    <section>
+       <header>
+            <h2>Item rendering</h2>
+       </header>
+       <div id="item-container"></div>
+    </section>
+    <section>
+       <header>
+            <h2>Output data</h2>
+            <span class="clear-output"><a href="#">Clear</a></span>
+       </header>
+       <div id="output"></div>
+    </section>
+    </body>
+</html>

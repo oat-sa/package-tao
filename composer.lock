@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "67fb75bbb3476c96981b6cb3419fa8df",
-    "content-hash": "c1cb9a6054b03d0b9dec03efce922c8f",
+    "hash": "dd3b3c5f625483f1bb4567ca66a2019d",
+    "content-hash": "b9e542028a06a63121b4946c8b8b1aba",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -912,6 +912,48 @@
                 "routing"
             ],
             "time": "2016-04-18 11:33:20"
+        },
+        {
+            "name": "oat-sa/extension-pcisample",
+            "version": "v0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oat-sa/extension-pcisample.git",
+                "reference": "a2b4a9f9905cf399504282f5dbea0a88e023d80c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oat-sa/extension-pcisample/zipball/a2b4a9f9905cf399504282f5dbea0a88e023d80c",
+                "reference": "a2b4a9f9905cf399504282f5dbea0a88e023d80c",
+                "shasum": ""
+            },
+            "require": {
+                "oat-sa/oatbox-extension-installer": "dev-master"
+            },
+            "type": "tao-extension",
+            "extra": {
+                "tao-extension-name": "pciSamples"
+            },
+            "autoload": {
+                "psr-4": {
+                    "oat\\pciSamples\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Open Assessment Technologies"
+                }
+            ],
+            "homepage": "http://www.taotesting.com",
+            "keywords": [
+                "TAO",
+                "computer-based-assessment"
+            ],
+            "time": "2016-03-22 15:51:16"
         },
         {
             "name": "oat-sa/extension-tao-backoffice",

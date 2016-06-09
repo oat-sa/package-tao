@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" 
+          xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_v1p2" 
+          xmlns:imsqti="http://www.imsglobal.org/xsd/imsqti_v2p0" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          identifier="MANIFEST-QTI-1" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 http://www.imsglobal.org/xsd/imscp_v1p2.xsd http://www.imsglobal.org/xsd/imsmd_v1p2 http://www.imsglobal.org/xsd/imsmd_v1p2p2.xsd http://www.imsglobal.org/xsd/imsqti_v2p0 http://www.imsglobal.org/xsd/imsqti_v2p0.xsd">
+<organizations/>
+<resources>
+  <resource identifier="choice" type="imsqti_item_xmlv2p0" href="choice.xml">
+    <metadata>
+      <schema>IMS QTI Item</schema>
+      <schemaversion>2.0</schemaversion>
+      <imsmd:lom>
+        <imsmd:general>
+          <imsmd:identifier>qti_v2_item_01</imsmd:identifier>
+          <imsmd:title>
+            <imsmd:langstring xml:lang="en">Metadata Example Item #1</imsmd:langstring>
+          </imsmd:title>
+          <imsmd:description>
+            <imsmd:langstring xml:lang="en">This is a dummy item</imsmd:langstring>
+          </imsmd:description>
+        </imsmd:general>
+      </imsmd:lom>
+      <imsqti:qtiMetadata>
+        <imsqti:timeDependent>false</imsqti:timeDependent>
+        <imsqti:interactionType>choiceInteraction</imsqti:interactionType>
+        <imsqti:feedbackType>nonadaptive</imsqti:feedbackType>
+        <imsqti:solutionAvailable>true</imsqti:solutionAvailable>
+        <imsqti:toolName>XMLSPY</imsqti:toolName>
+        <imsqti:toolVersion>5.4</imsqti:toolVersion>
+        <imsqti:toolVendor>ALTOVA</imsqti:toolVendor>
+      </imsqti:qtiMetadata>
+    </metadata>
+
+    <file href="choice.xml"/>
+  </resource>
+
+  <resource identifier="hybrid" type="imsqti_item_xmlv2p1" href="hybrid.xml">
+    <metadata>
+      <schema>IMS QTI Item</schema>
+      <schemaversion>2.0</schemaversion>
+      <imsmd:lom>
+        <imsmd:general>
+          <imsmd:identifier>qti_v2_item_02</imsmd:identifier>
+        </imsmd:general>
+      </imsmd:lom>
+      <imsqti:qtiMetadata>
+        <imsqti:interactionType>choiceInteraction</imsqti:interactionType>
+        <imsqti:interactionType>orderInteraction</imsqti:interactionType>
+      </imsqti:qtiMetadata>
+    </metadata>
+
+    <file href="hybrid.xml"/>
+  </resource>
+</resources>
+</manifest>

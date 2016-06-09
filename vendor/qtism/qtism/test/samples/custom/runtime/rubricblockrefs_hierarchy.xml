@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.taotesting.com/xsd/qticompact_v1p0.xsd"
+	identifier="rubricblockrefs_explosion" title="Explode rubricBlocks into rubricBlockRefs">
+	<testPart identifier="P01" navigationMode="linear" submissionMode="individual">
+		<!-- First Section (Math and Bio) -->
+		<assessmentSection identifier="S01" title="Main Section" visible="true">
+		
+			<!-- Mathematics Section -->
+			<assessmentSection identifier="S01A" title="Mathematics" visible="true">
+				<assessmentItemRef identifier="Q01" href="./Q01.xml" timeDependent="false" category="mathematics">
+					<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+						<correctResponse>
+							<value>ChoiceA</value>
+						</correctResponse>
+					</responseDeclaration>
+					<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+						<defaultValue>
+							<value>0</value>
+						</defaultValue>
+					</outcomeDeclaration>
+					<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+				</assessmentItemRef>
+				<assessmentItemRef identifier="Q02" href="./Q02.xml" timeDependent="false" category="mathematics">
+					<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+						<correctResponse>
+							<value>ChoiceB</value>
+						</correctResponse>
+					</responseDeclaration>
+					<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+						<defaultValue>
+							<value>0</value>
+						</defaultValue>
+					</outcomeDeclaration>
+					<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+				</assessmentItemRef>
+				<rubricBlockRef identifier="RB01_MATH" href="./RB01_MATH.xml"/>
+				<rubricBlockRef identifier="RB02_MATH" href="./RB02_MATH.xml"/>
+			</assessmentSection>
+			
+			<!-- Biology Section -->
+			<assessmentSection identifier="S01B" title="Biology" visible="true">
+				<assessmentItemRef identifier="Q03" href="./Q03.xml" timeDependent="false" category="biology">
+					<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+						<correctResponse>
+							<value>ChoiceC</value>
+						</correctResponse>
+					</responseDeclaration>
+					<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+						<defaultValue>
+							<value>0</value>
+						</defaultValue>
+					</outcomeDeclaration>
+					<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+				</assessmentItemRef>
+				<rubricBlockRef identifier="RB03_BIOLOGY" href="./RB03_BIOLOGY.xml"/>
+			</assessmentSection>
+			<rubricBlockRef identifier="RB00_MAIN" href="RB00_MAIN.xml"/>
+		</assessmentSection>
+		
+		<!-- Second Section (French) -->
+		<assessmentSection identifier="S01C" title="French" visible="true">
+			<assessmentItemRef identifier="Q04" href="./Q04.xml" timeDependent="false" category="french">
+				<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+					<correctResponse>
+						<value>ChoiceD</value>
+					</correctResponse>
+				</responseDeclaration>
+				<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+					<defaultValue>
+						<value>0</value>
+					</defaultValue>
+				</outcomeDeclaration>
+				<responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+			</assessmentItemRef>
+		</assessmentSection>
+	</testPart>
+</assessmentTest>

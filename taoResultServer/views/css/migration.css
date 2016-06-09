@@ -1,0 +1,80 @@
+/*  
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; under version 2
+ * of the License (non-upgradable).
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * 
+ * Copyright (c) 2013 Open Assessment Technologies S.A.
+ * 
+ */
+
+#sourceStorage {
+    display: block;
+    float: left
+}
+
+#targetStorage {
+    display: block;
+    float: left
+}
+
+#migrationProgress {
+    align: center;
+    visibility: hidden;
+}
+#feedback {
+    visibility: hidden;
+}
+
+#resultStorageMigration{
+    padding: 20px;
+    align: center;
+}
+#operations{
+    padding-top: 20px;
+}
+#operations .opButton{
+    width: 80%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#selSource h3{
+    text-align: center
+}
+
+#selSource li.success{
+    color: #006400;
+    font-weight: bold;
+}
+
+#selSource .StorageResult {
+    font-weight: normal
+}
+
+.StorageResult li{
+    background: url("/tao/views/img/tick.png") no-repeat 0 1px;
+    list-style: none;
+    padding-left: 22px;
+}
+
+#migrationProgress .migrationProgress{
+    background: url("/tao/views/img/ajax-loader.gif") no-repeat top center;
+    display: none;
+    width: 100%;
+    margin-top: 120px;
+    padding-top: 35px;
+}
+.migrationProgress span{
+    text-align: center;
+    display: block;
+}

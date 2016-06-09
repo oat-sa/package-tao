@@ -1,0 +1,23 @@
+@import "inc/bootstrap";
+.qti-orderInteraction {
+    .add-option{
+        position:relative;
+        padding: 5px 5px 5px 6px;
+        .icon-add{
+            font-size: 1.8rem;
+            left: 6px;
+            position: absolute;
+            top: 5px;
+        }
+    }
+    [data-edit]{
+        &.mini-tlb[data-edit]{
+            right:0px;
+        }
+    }
+}
+[data-qti-class="orderInteraction"].edit-question {
+    .arrow-bar {
+        visibility: hidden
+    }
+}

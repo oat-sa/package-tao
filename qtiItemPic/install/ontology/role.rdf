@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+	xml:base="http://www.tao.lu/Ontologies/TAO.rdf#" 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+    xmlns:generis="http://www.tao.lu/Ontologies/generis.rdf#"
+>
+    
+  <!-- Management Role -->
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/generis.rdf#qtiItemPicManager">
+  	<rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#ManagementRole"/>
+  	<generis:includesRole rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#BackOfficeRole"/>
+  	<rdfs:label xml:lang="en-US"><![CDATA[QTI PIC Manager]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[QTI PIC Manager Role]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOItem.rdf#QTIManagerRole">
+  	<generis:includesRole rdf:resource="http://www.tao.lu/Ontologies/generis.rdf#qtiItemPicManager"/>
+  </rdf:Description>
+  
+ </rdf:RDF>

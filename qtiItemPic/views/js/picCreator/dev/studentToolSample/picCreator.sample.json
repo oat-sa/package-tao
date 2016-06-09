@@ -1,0 +1,23 @@
+{
+    "typeIdentifier": "studentToolSample",
+    "label": "Tool Sample",
+    "description": "a sample student tool",
+    "version": "0.1",
+    "author": "Sam Sipasseuth",
+    "email": "sam@taotesting.com",
+    "libraries": [
+        "IMSGlobal/jquery_2_1_1"
+    ],
+    "css": [
+        "./runtime/css/studentToolSample.css"
+    ],
+    "media": [
+        "./runtime/media/tool-icon.svg"
+    ],
+    "entryPoint": "./runtime/studentToolSample.js",
+    "tags": [
+        "student-tool"
+    ],
+    "icon": "./creator/img/tool-icon.svg",
+    "short": "Sample"
+}

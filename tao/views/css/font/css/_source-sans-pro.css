@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url(font/source-sans-pro/source-sans-pro-regular.eot);
+  src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(font/source-sans-pro/source-sans-pro-regular.eot) format("embedded-opentype"), url(font/source-sans-pro/source-sans-pro-regular.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: url(font/source-sans-pro/source-sans-pro-semibold.eot);
+  src: local("Source Sans Pro Semibold"), local("SourceSansPro-Semibold"), url(font/source-sans-pro/source-sans-pro-semibold.eot) format("embedded-opentype"), url(font/source-sans-pro/source-sans-pro-semibold.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: url(font/source-sans-pro/source-sans-pro-italic.eot);
+  src: local("Source Sans Pro Italic"), local("SourceSansPro-It"), url(font/source-sans-pro/source-sans-pro-italic.eot) format("embedded-opentype"), url(font/source-sans-pro/source-sans-pro-italic.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 600;
+  src: url(font/source-sans-pro/source-sans-pro-semibold-italic.eot);
+  src: local("Source Sans Pro Semibold Italic"), local("SourceSansPro-SemiboldIt"), url(font/source-sans-pro/source-sans-pro-semibold-italic.eot) format("embedded-opentype"), url(font/source-sans-pro/source-sans-pro-semibold-italic.woff) format("woff"); }

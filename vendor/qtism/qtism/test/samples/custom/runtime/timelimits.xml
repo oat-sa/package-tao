@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" identifier="testId" title="testTitle" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd">
+  <testPart identifier="testPartId" navigationMode="linear" submissionMode="individual">
+    <timeLimits minTime="60" maxTime="120" allowLateSubmission="true"/>
+    <assessmentSection identifier="assessmentSectionId" required="true" fixed="false" title="assessmentSectionTitle" visible="true" keepTogether="true">
+      <assessmentItemRef identifier="i1379407122620834" required="false" fixed="false" href="http://tao.local/mytao.rdf#i137942795952140"/>
+      <assessmentItemRef identifier="astronomy" required="false" fixed="false" href="http://tao.local/mytao.rdf#i137942509348233"/>
+    </assessmentSection>
+  </testPart>
+</assessmentTest>

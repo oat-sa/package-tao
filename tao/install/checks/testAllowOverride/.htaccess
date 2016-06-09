@@ -1,0 +1,10 @@
+#AuthConfig
+AuthName "Secret"
+#FileInfo
+ErrorDocument 404 index.php
+#Indexes
+DefaultIcon /icon/unknown.xbm 
+#Limit
+Allow From All
+#Options
+Options FollowSymLinks

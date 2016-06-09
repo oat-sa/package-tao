@@ -1,0 +1,104 @@
+@import "inc/bootstrap";
+
+.qti-uploadInteraction {
+    input[type="file"] {
+        height: 50px;
+    }
+
+    @extend %clearfix;
+
+    padding: 6px 6px 0 6px;
+    .grid-row {
+        margin-bottom: 0 !important;
+    }
+    .progressbar {
+        margin-bottom: 6px;
+    }
+    .btn-info {
+        padding-top: 0 !important;
+    }
+    .file-name {
+        padding: 2px 3px !important;
+    }
+
+    .file-upload {
+      margin-right: 20px;
+    }
+
+
+    //TODO : place this in the proper location - geo
+
+    .file-upload-preview {
+        background-color: $canvas;
+        @include simple-border();
+        max-width: 100%;
+        min-width: 300px;
+        min-height: 250px;
+        margin: 0 20px 20px 0;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        display: none;
+
+        &.visible-file-upload-preview {
+            display: block;
+        }
+
+        &.clickable {
+            cursor: pointer;
+        }
+
+        &.runtime-visible-file-upload-preview {
+            min-width: unset;
+            min-height: unset;
+            height: auto;
+            background: transparent;
+        }
+
+        p.nopreview {
+            position: absolute;
+            top: 32%;
+            left: 0;
+            font-weight: normal;
+            font-family: $regularFont;
+            @include font-size(20);
+            text-shadow: 1px 1px 0 black(.3);
+            color: #ddd;
+            display: block;
+            text-align: center;
+            width: 100%;
+
+            &:before {
+                @include font-size(60);
+                @include tao-icon-setup;
+                @include icon-media;
+                display: block !important;
+            }
+        }
+    }
+
+    .file-upload-preview-popup {
+        padding: 40px 0 0;
+        max-width: 100%;
+
+        &.modal {
+            position: absolute;
+            max-width: unset;
+            height: auto;
+            top: 0 !important;
+
+            .modal-body {
+                overflow: auto;
+                width: 100%;
+                height: 100%;
+                border-top: 1px solid #ddd;
+            }
+            img {
+                display: block;
+                margin: auto;
+                max-width: unset;
+            }
+        }
+
+    }
+}

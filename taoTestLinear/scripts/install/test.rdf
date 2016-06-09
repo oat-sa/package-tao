@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<rdf:RDF
+	xml:base="http://www.tao.lu/Ontologies/TAOTest.rdf#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:test="http://www.tao.lu/Ontologies/TAOTest.rdf#"
+	xmlns:wf="http://www.tao.lu/middleware/wfEngine.rdf#" 
+>
+ 
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOTest.rdf#LinearTestModel">
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAOTest.rdf#TestModel"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Linear Test Driver]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Driver and configuration/authoring tool implementing the test interface for driving simple linear tests]]></rdfs:comment>
+    <test:TestModelImplementation><![CDATA[oat\taoTestLinear\model\TestModel]]></test:TestModelImplementation>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamLinearTestRunner">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassFormalParameters"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[Linear Test Compilation]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[Linear Test Compilation]]></rdfs:comment>
+    <wf:PropertyFormalParametersName><![CDATA[LinearTestCompilation]]></wf:PropertyFormalParametersName>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAOTest.rdf#ServiceLinearTestRunner">
+    <rdf:type rdf:resource="http://www.tao.lu/middleware/wfEngine.rdf#ClassDeliveryServices"/>
+    <rdfs:label xml:lang="en-US"><![CDATA[linear test runner]]></rdfs:label>
+    <rdfs:comment xml:lang="en-US"><![CDATA[runs a linear test]]></rdfs:comment>
+    <wf:PropertySupportServicesUrl><![CDATA[/taoTestLinear/TestRunner/index?LinearTestCompilation=^LinearTestCompilation]]></wf:PropertySupportServicesUrl>
+    <wf:PropertyServiceDefinitionsFormalParameterIn rdf:resource="http://www.tao.lu/Ontologies/TAOTest.rdf#FormalParamLinearTestRunner"/>
+  </rdf:Description>
+  
+</rdf:RDF>

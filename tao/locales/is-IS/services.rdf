@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+-->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:base="http://www.tao.lu/middleware/wfEngine.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassServiceDefinitions">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Services Definition
+    @subject http://www.tao.lu/middleware/wfEngine.rdf#ClassServiceDefinitions
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Services Definition]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Services Definition
+    @subject http://www.tao.lu/middleware/wfEngine.rdf#ClassServiceDefinitions
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[Services Definition]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassSupportServices">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Support Services
+    @subject http://www.tao.lu/middleware/wfEngine.rdf#ClassSupportServices
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Support Services]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Support Services
+    @subject http://www.tao.lu/middleware/wfEngine.rdf#ClassSupportServices
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[Support Services]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassWebServices">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Web Service
+    @subject http://www.tao.lu/middleware/wfEngine.rdf#ClassWebServices
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Web Service]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Web Service
+    @subject http://www.tao.lu/middleware/wfEngine.rdf#ClassWebServices
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[Web Service]]></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.tao.lu/middleware/wfEngine.rdf#ClassDeliveryServices">
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Delivery Services
+    @subject http://www.tao.lu/middleware/wfEngine.rdf#ClassDeliveryServices
+    @predicate http://www.w3.org/2000/01/rdf-schema#label
+    -->
+    <rdfs:label xml:lang="is-IS"><![CDATA[Delivery Services]]></rdfs:label>
+    <!--
+    @sourceLanguage en-US
+    @targetLanguage is-IS
+    @source Delivery Services
+    @subject http://www.tao.lu/middleware/wfEngine.rdf#ClassDeliveryServices
+    @predicate http://www.w3.org/2000/01/rdf-schema#comment
+    -->
+    <rdfs:comment xml:lang="is-IS"><![CDATA[Delivery Services]]></rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

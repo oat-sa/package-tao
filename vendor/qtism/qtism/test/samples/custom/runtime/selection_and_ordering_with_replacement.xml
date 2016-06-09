@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.taotesting.com/xsd/qticompact_v1p0.xsd"
+	identifier="selection_and_ordering" title="Selection and Ordering">
+	<testPart identifier="testPart" navigationMode="linear" submissionMode="individual">
+		<assessmentSection identifier="S01" fixed="false" title="Section S01" visible="true">
+			<selection select="1"/>
+			<assessmentSection identifier="S01A" title="Section S01A" visible="true">
+				<assessmentItemRef identifier="Q1" href="./Q1.xml" timeDependent="false"/>
+				<assessmentItemRef identifier="Q2" href="./Q2.xml" required="true" timeDependent="false"/>
+				<assessmentItemRef identifier="Q3" href="./Q3.xml" timeDependent="false"/>
+			</assessmentSection>
+			<assessmentSection identifier="S01B" title="Section S01B" visible="true">
+				<assessmentItemRef identifier="Q4" href="./Q1.xml" timeDependent="false"/>
+				<assessmentItemRef identifier="Q5" href="./Q5.xml" timeDependent="false"/>
+				<assessmentItemRef identifier="Q6" href="./Q6.xml" timeDependent="false"/>
+			</assessmentSection>
+		</assessmentSection>
+		<assessmentSection identifier="S02" title="Section S02" visible="true">
+			<selection select="2"/>
+			<assessmentItemRef identifier="Q7" href="./Q7.xml" timeDependent="false"/>
+			<assessmentItemRef identifier="Q8" href="./Q8.xml" required="true" timeDependent="false"/>
+			<assessmentItemRef identifier="Q9" href="./Q9.xml" timeDependent="false"/>
+		</assessmentSection>
+		<assessmentSection identifier="S03" title="Section S03" visible="true">
+			<selection select="3" withReplacement="true"/>
+			<assessmentItemRef identifier="Q10" href="./Q10.xml" timeDependent="false"/>
+			<assessmentItemRef identifier="Q11" href="./Q11.xml" timeDependent="false"/>
+			<assessmentItemRef identifier="Q12" href="./Q12.xml" timeDependent="false"/>
+		</assessmentSection>
+		<assessmentSection identifier="S04" title="Section S04" visible="true">
+			<selection select="4" withReplacement="true"/>
+			<assessmentItemRef identifier="Q13" href="./Q13.xml" required="true" timeDependent="false"/>
+			<assessmentItemRef identifier="Q14" href="./Q14.xml" timeDependent="false"/>
+			<assessmentItemRef identifier="Q15" href="./Q15.xml" timeDependent="false"/>
+			<assessmentItemRef identifier="Q16" href="./Q16.xml" required="true" timeDependent="false"/>
+			<assessmentItemRef identifier="Q17" href="./Q17.xml" timeDependent="false"/>
+			<assessmentItemRef identifier="Q18" href="./Q18.xml" timeDependent="false"/>
+		</assessmentSection>
+		<assessmentSection identifier="S05" title="Section S05" visible="true">
+			<selection select="3" withReplacement="true"/>
+			<assessmentSection identifier="S05A" title="Section S05A" visible="true">
+				<selection select="4" withReplacement="true"/>
+				<assessmentSection identifier="S05AA" fixed="false" title="Section S05AA" visible="true">
+					<assessmentItemRef identifier="Q19" href="./Q19.xml" timeDependent="false"/>
+					<assessmentItemRef identifier="Q20" href="./Q20.xml" timeDependent="false"/>
+					<assessmentItemRef identifier="Q21" href="./21.xml" timeDependent="false"/>
+				</assessmentSection>
+				<assessmentSection identifier="S05AB" title="Section S05AB" visible="true">
+					<assessmentItemRef identifier="Q22" href="./Q22.xml" timeDependent="false"/>
+					<assessmentItemRef identifier="Q23" href="./Q23.xml" timeDependent="false"/>
+					<assessmentItemRef identifier="Q24" href="./Q24.xml" timeDependent="false"/>
+				</assessmentSection>
+			</assessmentSection>
+		</assessmentSection>
+	</testPart>
+</assessmentTest>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This example has been adapted from the PET Handbook, copyright University of Cambridge ESOL Examinations -->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+	identifier="orkney1" title="Orkney 1" adaptive="false" timeDependent="false">
+	<responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+		<correctResponse>
+			<value>T</value>
+		</correctResponse>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float">
+		<defaultValue>
+			<value>0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<stylesheet href="shared/orkney.css" type="text/css"/>
+	<itemBody>
+		<div class="rightpane">
+			<object data="shared/orkney.html" type="text/html"/>
+		</div>
+		<div class="leftpane">
+			<p>Read the text about the Orkney Islands and then decide if the following sentence is
+				correct or incorrect.</p>
+			<choiceInteraction responseIdentifier="RESPONSE" shuffle="false" maxChoices="1">
+				<prompt>Some of the islands are home to animals rather than people.</prompt>
+				<simpleChoice identifier="T">Correct</simpleChoice>
+				<simpleChoice identifier="F">Incorrect</simpleChoice>
+			</choiceInteraction>
+		</div>
+	</itemBody>
+	<responseProcessing
+		template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct"/>
+</assessmentItem>

@@ -1,0 +1,472 @@
+// this combines the most common features from normalize, h5bp main and tao base
+
+//these vars enables you to include this base in a scoped env.
+$mainContainer : html !default;
+
+// Those styles can't be scoped because it's the base to use REM
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-size: 62.5%;
+    line-height: 1.4;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    &.fullscreen {
+        width: 100%;
+    }
+}
+
+body {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+// cannot be scoped
+::-webkit-scrollbar-corner { background-color: ThreeDHighlight;}
+
+#{$mainContainer} {
+
+    *, *:before, *:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    &, body{
+        color: $textColor;
+        font-family: $regularFont;
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        height: 100%;
+        z-index: 0;
+        line-height: 1.4;
+        background: white;
+        border-width: 1px;
+        @if($mainContainer != html){
+            @include font-size(14);
+        }
+    }
+
+    address, article, aside, audio, blockquote, dd, div, dl, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header,
+    hr, noscript, ol, output, p, pre, section, summary, ul, main {
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        white-space: normal;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        margin: 0.83em 0;
+    }
+
+    h3 {
+        font-size: 1.17em;
+        margin: 1em 0;
+    }
+
+    h4 {
+        font-size: 1em;
+        margin: 1.33em 0;
+    }
+
+    h5 {
+        font-size: 0.83em;
+        margin: 1.67em 0;
+    }
+
+    h6 {
+        font-size: 0.67em;
+        margin: 2.33em 0;
+    }
+
+    blockquote {
+        margin: 1em 40px;
+    }
+
+    blockquote, dd, dl, fieldset, figure, h1, h2, h3, h4, h5, h6,
+    hr, ol, p, pre, ul {
+        display: block;
+        margin-bottom: 10px;
+        white-space: normal;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    iframe {
+        border: none;
+    }
+
+    audio,
+    canvas,
+    video,
+    svg {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    // the above rule breaks SVG on MathJax and thus requires a reset
+    .MathJax svg {
+        display: inline;
+        vertical-align: baseline;
+    }
+
+    a {
+        cursor: pointer;
+        background: transparent;
+        text-decoration: none;
+        outline: 0;
+        color: $uiClickableHoverBg;
+        &:focus {
+            outline: thin dotted;
+        }
+        &:hover {
+            text-decoration: underline;
+            color: $info;
+            &:before, &:after {
+                text-decoration: none !important;
+            }
+        }
+        &.block {
+            color: $textColor;
+            text-decoration: none;
+            display: block;
+        }
+        &[rel="external"] span.icon-external {
+            &:before {
+                @include font-size(11);
+                padding: 0 0 0 4px;
+                position: relative;
+                top: 1px;
+            }
+        }
+    }
+
+    abbr[title] {
+        border-bottom: 1px dotted;
+    }
+
+    b, .b, strong, .strong {
+        font-weight: bold;
+    }
+
+    i, .i, em, .em, dfn {
+        font-style: italic;
+    }
+
+    code, pre, kdb, samp {
+        font-family: $monospaceFont;
+        @include font-size(14);
+    }
+
+    pre {
+        white-space: pre;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    code {
+        background: whiten($lightBlueGrey, .5);
+        padding: 2px 6px;
+        display: inline-block;
+        margin: 0 3px;
+        @include border-radius();
+    }
+
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 1em 0;
+        padding: 0;
+    }
+
+    q {
+        quotes: "\201C" "\201D" "\2018" "\2019";
+        &:before,
+        &:after {
+            content: '';
+            content: none;
+        }
+    }
+
+    small {
+        @include font-size(11);
+    }
+
+    sub,
+    sup {
+        font-size: .75rem;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+    }
+
+    sup {
+        top: -0.5rem;
+    }
+
+    sub {
+        bottom: -0.25rem;
+    }
+
+    img {
+        border: 0;
+        max-width: 100%;
+        height: auto;
+    }
+
+    svg:not(:root) {
+        overflow: hidden;
+    }
+
+
+    fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    legend {
+        border: 0;
+        padding: 0;
+    }
+
+    textarea {
+        overflow: auto;
+        vertical-align: top;
+        resize: vertical;
+    }
+
+    label, button {
+        cursor: pointer;
+    }
+
+    button {
+        vertical-align: middle;
+        outline: 0;
+        overflow: visible;
+        border: none;
+    }
+
+    button, input {
+        &::-moz-focus-inner {
+            border: 0;
+            padding: 0;
+        }
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+        font-family: $regularFont;
+        font-weight: normal;
+        line-height: normal;
+        text-transform: none;
+        vertical-align: baseline;
+    }
+
+    button,
+    html input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+        -webkit-appearance: button;
+        cursor: pointer;
+    }
+
+    input {
+        @include simple-border();
+        @include border-radius(1);
+
+        &[type="search"] {
+            -webkit-appearance: textfield;
+            -moz-box-sizing: content-box;
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+            &::-webkit-search-cancel-button,
+            &::-webkit-search-decoration {
+                -webkit-appearance: none;
+            }
+        }
+
+        &[type="checkbox"],
+        &[type="radio"] {
+            box-sizing: border-box;
+            padding: 0;
+        }
+    }
+
+    select {
+        max-width: 100%;
+    }
+
+    audio:not([controls]),
+    [hidden], template,
+    .hidden, .deleted,
+    .js, .js-hide {
+        display: none !important;
+    }
+
+    .visuallyhidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        &.focusable {
+            &:active,
+            &:focus {
+                clip: auto;
+                height: auto;
+                margin: 0;
+                overflow: visible;
+                position: static;
+                width: auto;
+            }
+        }
+    }
+
+    .invisible {
+        visibility: hidden;
+    }
+
+    .viewport-hidden {
+        position: absolute;
+        left: -10000px;
+        top: -10000px;
+    }
+
+    .clearfix {
+        &:before, &:after {
+            content: " ";
+            display: table;
+        }
+        &:after {
+            clear: both;
+        }
+    }
+
+    .clear {
+        display: block;
+        clear: both;
+    }
+
+
+    .lft {
+        display: inline;
+        float: left;
+    }
+
+    .rgt {
+        display: inline;
+        float: right;
+    }
+
+    .txt-ctr {
+        text-align: center;
+    }
+
+    .txt-lft {
+        text-align: left;
+    }
+
+    .txt-rgt {
+        text-align: right;
+    }
+
+    .txt-jty {
+        text-align: justify;
+    }
+
+    // added to make _u_ in ck QTI compatible
+    .txt-underline {
+        text-decoration: underline;
+        font-size : inherit;
+    }
+
+    ::-moz-selection {
+        background: #b3d4fc;
+        text-shadow: none;
+    }
+
+    ::selection {
+        background: #b3d4fc;
+        text-shadow: none;
+    }
+
+    .placeholder {
+        color: #777 !important;
+    }
+
+    ::-webkit-input-placeholder {
+        color: #777 !important;
+    }
+
+    :-moz-placeholder {
+        color: #777 !important;
+    }
+
+    ::-moz-placeholder {
+        color: #777 !important;
+    }
+
+    .truncate {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .disabled, *:disabled {
+        cursor: default;
+        opacity: .7;
+    }
+
+    .overlay, .ui-widget-overlay {
+        background: white(.9);
+    }
+
+    .ui-widget {
+        font-family: $regularFont;
+        font-size: 1.4rem !important;
+    }
+
+    .ui-widget .ui-widget {
+        font-size: 1.4rem !important;
+    }
+
+    .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+        font-family: $regularFont;
+        font-size: 1.4rem !important;
+    }
+
+
+
+    // everything on list styles and counters
+    @import 'base/list-style';
+
+    // everything tables
+    @import 'base/table';
+
+}

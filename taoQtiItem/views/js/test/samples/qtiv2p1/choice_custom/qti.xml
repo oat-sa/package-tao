@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="RC123413" title="RC123413" label="" xml:lang="en-US" adaptive="false" timeDependent="false" toolName="TAO" toolVersion="3.1.0-sprint12">
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="identifier">
+        <correctResponse>
+            <value>B</value>
+        </correctResponse>
+        <mapping defaultValue="0">
+            <mapEntry mapKey="A" mappedValue="-1.0"/>
+            <mapEntry mapKey="B" mappedValue="1.0"/>
+            <mapEntry mapKey="C" mappedValue="-1.0"/>
+            <mapEntry mapKey="D" mappedValue="-1.0"/>
+        </mapping>
+    </responseDeclaration>
+    <responseDeclaration identifier="RESPONSE2" cardinality="single" baseType="identifier">
+        <correctResponse>
+            <value>D2</value>
+        </correctResponse>
+        <mapping defaultValue="0">
+            <mapEntry mapKey="A2" mappedValue="-1.0"/>
+            <mapEntry mapKey="B2" mappedValue="-1.0"/>
+            <mapEntry mapKey="C2" mappedValue="-1.0"/>
+            <mapEntry mapKey="D2" mappedValue="1.0"/>
+        </mapping>
+    </responseDeclaration>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float" normalMaximum="2" normalMinimum="0">
+        <defaultValue>
+            <value>0</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <itemBody>
+        <div class="classD">
+            <div class="classC">
+                <h2 class="classA">Question</h2>
+                <div class="stem">
+                    <div class="classB">
+                        <h3 class="classA part-label">
+                            <strong> Sugar plum gummies lemon</strong>
+                        </h3>
+                    </div>
+                    <div class="classB">
+                        <p id="p001">Pie donut sweet jelly. Powder dessert cotton candy pie candy canes gummies gingerbread marshmallow pie.</p>
+                    </div>
+                    <choiceInteraction responseIdentifier="RESPONSE" shuffle="false" maxChoices="1" minChoices="1" orientation="vertical" class="at-enable">
+                        <simpleChoice identifier="A" fixed="false">
+                            <p id="p002">Wafer tart oat cake tart ice cream marzipan.</p>
+                        </simpleChoice>
+                        <simpleChoice identifier="B" fixed="false">
+                            <p id="p003">(correct : +1) Topping tootsie roll halvah jelly liquorice. </p>
+                        </simpleChoice>
+                        <simpleChoice identifier="C" fixed="false">
+                            <p id="p004">Tart oat cake jelly chocolate bar cheesecake candy bonbon.</p>
+                        </simpleChoice>
+                        <simpleChoice identifier="D" fixed="false">
+                            <p id="p005">Ice cream wafer candy pie chocolate bar toffee. </p>
+                        </simpleChoice>
+                    </choiceInteraction>
+                    <div class="classB">
+                        <p id="p006"> Fruitcake tiramisu sesame snaps apple pie apple pie tootsie roll tart tart <span class="s1">toffee ?</span>
+                        </p>
+                    </div>
+                    <choiceInteraction responseIdentifier="RESPONSE2" shuffle="false" maxChoices="1" minChoices="1" orientation="vertical" class="at-enable">
+                        <simpleChoice identifier="A2" fixed="false">
+                            <p id="p007">“Croissant oat cake candy canes chocolate bar.” <span class="s1">Gummi bears</span>
+                            </p>
+                        </simpleChoice>
+                        <simpleChoice identifier="B2" fixed="false">
+                            <p id="p008">“Pudding gingerbread gummies. It <span class="s1">apple pie jelly-o </span> sesame <span class="s1">(apple pie)</span>
+                            </p>
+                        </simpleChoice>
+                        <simpleChoice identifier="C2" fixed="false">
+                            <p id="p009">“Jelly beans dessert chocolate cake carrot cake pudding chupa chups cotton candy halvah lollipop. .” <span class="s1">( chupa chups)</span>
+                            </p>
+                        </simpleChoice>
+                        <simpleChoice identifier="D2" fixed="false">
+                            <p id="p010">(correct : +1) “Donut muffin gummies gingerbread bonbon. .” <span class="s1">(sugar plum)</span>
+                            </p>
+                        </simpleChoice>
+                    </choiceInteraction>
+                </div>
+            </div>
+        </div>
+    </itemBody>
+    <responseProcessing>
+        <responseCondition>
+            <responseIf>
+                <not>
+                    <equal toleranceMode="exact">
+                        <mapResponse identifier="RESPONSE"/>
+                        <baseValue baseType="float">1</baseValue>
+                    </equal>
+                </not>
+                <setOutcomeValue identifier="SCORE">
+                    <baseValue baseType="float">0.0</baseValue>
+                </setOutcomeValue>
+            </responseIf>
+            <responseElse>
+                <setOutcomeValue identifier="SCORE">
+                    <sum>
+                        <variable identifier="SCORE"/>
+                        <baseValue baseType="float">1.0</baseValue>
+                    </sum>
+                </setOutcomeValue>
+                <responseCondition>
+                    <responseIf>
+                        <equal toleranceMode="exact">
+                            <mapResponse identifier="RESPONSE2"/>
+                            <baseValue baseType="float">1</baseValue>
+                        </equal>
+                        <setOutcomeValue identifier="SCORE">
+                            <sum>
+                                <variable identifier="SCORE"/>
+                                <baseValue baseType="float">1.0</baseValue>
+                            </sum>
+                        </setOutcomeValue>
+                    </responseIf>
+                </responseCondition>
+            </responseElse>
+        </responseCondition>
+    </responseProcessing>
+</assessmentItem>

@@ -1,0 +1,220 @@
+
+                                     /*
+                                    /  \
+                                   |    |
+                                 --:'''':--
+   THIS CODE IS GENERATED          :*_* :
+                                   _:"":\___
+   AUTOMAGICALLY    * *      ____.' :::     '._
+                   * *=====<<=)           \    :
+   DO NOT EDIT!     * *      '-'-'\_      /'._.'
+                                     \====:_ ""
+                                    .'     \\
+                                   :       :
+                                  /   :    \
+                                 :   .      '.
+                                 :  : :      :
+                                 :__:-:__.;--'
+                                <*_/   <*/
+                                 
+@mixin tao-icon-setup {
+	font-family: 'tao';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin icon-tree { content: "\e6b4"; }
+@mixin icon-home { content: "\e6b3"; }
+@mixin icon-shared-file { content: "\e6b2"; }
+@mixin icon-end-attempt { content: "\e603"; }
+@mixin icon-icon { content: "\f1c5"; }
+@mixin icon-radio-bg { content: "\e600"; }
+@mixin icon-checkbox-bg { content: "\e601"; }
+@mixin icon-tag { content: "\e602"; }
+@mixin icon-style { content: "\e604"; }
+@mixin icon-ownership-transfer { content: "\e605"; }
+@mixin icon-property-advanced { content: "\e606"; }
+@mixin icon-property-add { content: "\e607"; }
+@mixin icon-repository-add { content: "\e608"; }
+@mixin icon-repository-remove { content: "\e609"; }
+@mixin icon-repository { content: "\e60a"; }
+@mixin icon-result-server { content: "\e60b"; }
+@mixin icon-folder { content: "\e60c"; }
+@mixin icon-folder-open { content: "\e60d"; }
+@mixin icon-left { content: "\e60e"; }
+@mixin icon-right { content: "\e60f"; }
+@mixin icon-up { content: "\e610"; }
+@mixin icon-down { content: "\e611"; }
+@mixin icon-undo { content: "\e612"; }
+@mixin icon-redo { content: "\e613"; }
+@mixin icon-screen { content: "\e614"; }
+@mixin icon-laptop { content: "\e615"; }
+@mixin icon-tablet { content: "\e616"; }
+@mixin icon-phone { content: "\e617"; }
+@mixin icon-move { content: "\e618"; }
+@mixin icon-bin { content: "\e619"; }
+@mixin icon-shuffle { content: "\e61a"; }
+@mixin icon-print { content: "\e61b"; }
+@mixin icon-tools { content: "\e61c"; }
+@mixin icon-settings { content: "\e61d"; }
+@mixin icon-video { content: "\e61e"; }
+@mixin icon-find { content: "\e61f"; }
+@mixin icon-image { content: "\e620"; }
+@mixin icon-edit { content: "\e621"; }
+@mixin icon-document { content: "\e622"; }
+@mixin icon-resize-grid { content: "\e623"; }
+@mixin icon-resize { content: "\e624"; }
+@mixin icon-help { content: "\e625"; }
+@mixin icon-mobile-menu { content: "\e626"; }
+@mixin icon-fix { content: "\e627"; }
+@mixin icon-unlock { content: "\e628"; }
+@mixin icon-lock { content: "\e629"; }
+@mixin icon-ul { content: "\e62a"; }
+@mixin icon-ol { content: "\e62b"; }
+@mixin icon-email { content: "\e62c"; }
+@mixin icon-download { content: "\e62d"; }
+@mixin icon-logout { content: "\e62e"; }
+@mixin icon-login { content: "\e62f"; }
+@mixin icon-spinner { content: "\e630"; }
+@mixin icon-preview { content: "\e631"; }
+@mixin icon-external { content: "\e632"; }
+@mixin icon-time { content: "\e633"; }
+@mixin icon-save { content: "\e634"; }
+@mixin icon-warning { content: "\e635"; }
+@mixin icon-add { content: "\e636"; }
+@mixin icon-close { content: "\e637"; }
+@mixin icon-success { content: "\e638"; }
+@mixin icon-remove { content: "\e639"; }
+@mixin icon-info { content: "\e63a"; }
+@mixin icon-error { content: "\e63b"; }
+@mixin icon-users { content: "\e63c"; }
+@mixin icon-user { content: "\e63d"; }
+@mixin icon-test-taker { content: "\e63e"; }
+@mixin icon-test-takers { content: "\e63f"; }
+@mixin icon-item { content: "\e640"; }
+@mixin icon-test { content: "\e641"; }
+@mixin icon-delivery { content: "\e642"; }
+@mixin icon-eye-slash { content: "\e643"; }
+@mixin icon-result { content: "\e644"; }
+@mixin icon-delivery-small { content: "\e645"; }
+@mixin icon-upload { content: "\e646"; }
+@mixin icon-result-small { content: "\e647"; }
+@mixin icon-mobile-preview { content: "\e648"; }
+@mixin icon-extension { content: "\e649"; }
+@mixin icon-desktop-preview { content: "\e64a"; }
+@mixin icon-tablet-preview { content: "\e64b"; }
+@mixin icon-insert-horizontal-line { content: "\e64c"; }
+@mixin icon-table { content: "\e64d"; }
+@mixin icon-anchor { content: "\e64e"; }
+@mixin icon-unlink { content: "\e64f"; }
+@mixin icon-link { content: "\e650"; }
+@mixin icon-right-left { content: "\e651"; }
+@mixin icon-left-right { content: "\e652"; }
+@mixin icon-special-character { content: "\e653"; }
+@mixin icon-source { content: "\e654"; }
+@mixin icon-new-page { content: "\e655"; }
+@mixin icon-templates { content: "\e656"; }
+@mixin icon-cut { content: "\e657"; }
+@mixin icon-replace { content: "\e658"; }
+@mixin icon-copy { content: "\e659"; }
+@mixin icon-paste { content: "\e65a"; }
+@mixin icon-select-all { content: "\e65b"; }
+@mixin icon-paste-text { content: "\e65c"; }
+@mixin icon-paste-word { content: "\e65d"; }
+@mixin icon-bold { content: "\e65e"; }
+@mixin icon-italic { content: "\e65f"; }
+@mixin icon-underline { content: "\e660"; }
+@mixin icon-subscript { content: "\e661"; }
+@mixin icon-superscript { content: "\e662"; }
+@mixin icon-strike-through { content: "\e663"; }
+@mixin icon-decrease-indent { content: "\e664"; }
+@mixin icon-increase-indent { content: "\e665"; }
+@mixin icon-block-quote { content: "\e666"; }
+@mixin icon-div-container { content: "\e667"; }
+@mixin icon-align-left { content: "\e668"; }
+@mixin icon-center { content: "\e669"; }
+@mixin icon-align-right { content: "\e66a"; }
+@mixin icon-justify { content: "\e66b"; }
+@mixin icon-choice { content: "\e66c"; }
+@mixin icon-inline-choice { content: "\e66d"; }
+@mixin icon-match { content: "\e66e"; }
+@mixin icon-associate { content: "\e66f"; }
+@mixin icon-media { content: "\e670"; }
+@mixin icon-graphic-order { content: "\e671"; }
+@mixin icon-hotspot { content: "\e672"; }
+@mixin icon-graphic-gap { content: "\e673"; }
+@mixin icon-graphic-associate { content: "\e674"; }
+@mixin icon-select-point { content: "\e675"; }
+@mixin icon-pin { content: "\e676"; }
+@mixin icon-import { content: "\e677"; }
+@mixin icon-export { content: "\e678"; }
+@mixin icon-move-item { content: "\e679"; }
+@mixin icon-meta-data { content: "\e67a"; }
+@mixin icon-slider { content: "\e67b"; }
+@mixin icon-summary-report { content: "\e67c"; }
+@mixin icon-text-entry { content: "\e67d"; }
+@mixin icon-extended-text { content: "\e67e"; }
+@mixin icon-eraser { content: "\e67f"; }
+@mixin icon-row { content: "\e680"; }
+@mixin icon-column { content: "\e681"; }
+@mixin icon-text-color { content: "\e682"; }
+@mixin icon-background-color { content: "\e683"; }
+@mixin icon-spell-check { content: "\e684"; }
+@mixin icon-polygon { content: "\e685"; }
+@mixin icon-rectangle { content: "\e686"; }
+@mixin icon-gap-match { content: "\e687"; }
+@mixin icon-order { content: "\e688"; }
+@mixin icon-hottext { content: "\e689"; }
+@mixin icon-free-form { content: "\e68a"; }
+@mixin icon-step-backward { content: "\e68b"; }
+@mixin icon-fast-backward { content: "\e68c"; }
+@mixin icon-backward { content: "\e68d"; }
+@mixin icon-play { content: "\e68e"; }
+@mixin icon-pause { content: "\e68f"; }
+@mixin icon-stop { content: "\e690"; }
+@mixin icon-forward { content: "\e691"; }
+@mixin icon-fast-forward { content: "\e692"; }
+@mixin icon-step-forward { content: "\e693"; }
+@mixin icon-ellipsis { content: "\e694"; }
+@mixin icon-circle { content: "\e695"; }
+@mixin icon-target { content: "\e696"; }
+@mixin icon-guide-arrow { content: "\e697"; }
+@mixin icon-range-slider-right { content: "\e698"; }
+@mixin icon-range-slider-left { content: "\e699"; }
+@mixin icon-radio-checked { content: "\e69a"; }
+@mixin icon-checkbox { content: "\e69b"; }
+@mixin icon-checkbox-crossed { content: "\e69c"; }
+@mixin icon-checkbox-checked { content: "\e69d"; }
+@mixin icon-result-nok { content: "\e69e"; }
+@mixin icon-result-ok { content: "\e69f"; }
+@mixin icon-not-evaluated { content: "\e6a0"; }
+@mixin icon-filter { content: "\e6a1"; }
+@mixin icon-translate { content: "\e6a2"; }
+@mixin icon-eject { content: "\e6a3"; }
+@mixin icon-continue { content: "\e6a4"; }
+@mixin icon-radio { content: "\e6a5"; }
+@mixin icon-sphere { content: "\e6a6"; }
+@mixin icon-reset { content: "\e6a7"; }
+@mixin icon-smaller { content: "\e6a8"; }
+@mixin icon-larger { content: "\e6a9"; }
+@mixin icon-clock { content: "\e6aa"; }
+@mixin icon-font { content: "\e6ab"; }
+@mixin icon-maths { content: "\e6ac"; }
+@mixin icon-grip { content: "\e6ad"; }
+@mixin icon-rubric { content: "\e6ae"; }
+@mixin icon-audio { content: "\e6af"; }
+@mixin icon-grip-h { content: "\e6b0"; }
+@mixin icon-magicwand { content: "\e6b1"; }
+@mixin icon-loop { content: "\ea2e"; }
+@mixin icon-calendar { content: "\e953"; }
+@mixin icon-reload { content: "\e984"; }
+@mixin icon-speed { content: "\e9a6"; }
+@mixin icon-volume { content: "\ea27"; }

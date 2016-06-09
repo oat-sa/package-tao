@@ -1,0 +1,296 @@
+@import "inc/bootstrap";
+
+// action bars
+.test-runner-scope {
+
+    .action-bar {
+        li {
+            margin: 2px 0 0 10px;
+            &.btn-info {
+                border-color: white(.3);
+                &.btn-group {
+                    border:none !important;
+                    overflow:hidden;
+                    padding:0;
+                    a {
+                        float:left;
+                        margin: 0 2px;
+                        padding: 0 15px;
+                        border: 1px solid white(.3);
+                        border-radius: 0px;
+                        display: inline-block;
+                        height: inherit;
+                        &:first-of-type {
+                            border-top-left-radius: 3px;
+                            border-bottom-left-radius: 3px;
+                            margin-left: 0;
+                        }
+                        &:last-of-type {
+                            border-top-right-radius: 3px;
+                            border-bottom-right-radius: 3px;
+                            margin-right: 0;
+                        }
+                        &:hover, &.active {
+                            border-color: white(.8);
+                        }
+                        .no-label {
+                            padding-right: 0;
+                        }
+                    }
+                }
+                &:hover, &.active {
+                    border-color: white(.8);
+                }
+            }
+        }
+
+        &.horizontal-action-bar {
+            opacity: 1;
+            height: #{(map-get($heights, horizontal-action-bar)) * 1px };
+
+            &.top-action-bar > .control-box {
+
+                height: #{(map-get($heights, horizontal-action-bar)) * 1px };
+
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+
+                -webkit-flex-direction: row;
+                -ms-flex-direction: row;
+                flex-direction: row;
+
+                -webkit-flex-wrap: nowrap;
+                -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+
+                -webkit-justify-content: space-between;
+                -ms-flex-pack: space-between;
+                justify-content: space-between;
+
+                .title-box {
+                    @include font-size(14);
+                    padding: 4px 0 0;
+
+                    -ms-flex : 0 1 auto;
+                    -webkit-flex: 0 1 auto;
+                    flex: 0 1 auto;
+                }
+                .progress-box, .item-number-box {
+                    padding-top: 4px;
+                    white-space: nowrap;
+
+                    -ms-flex : 0 1 auto;
+                    -webkit-flex: 0 1 auto;
+                    flex: 0 1 auto;
+
+                    .qti-controls {
+                        display: inline-block;
+                        margin-left: 20px;
+                        white-space: nowrap;
+                    }
+
+                }
+                .timer-box {
+                    padding-top: 0;
+                    white-space: nowrap;
+
+                    /*flex item of control-box */
+                    -webkit-flex: 1 0 auto;
+                    -ms-flex : 1 0 auto;
+                    flex: 1 0 auto;
+
+                    /* is also a flex container for .qti-timer */
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+
+                    -webkit-flex-direction: row;
+                    -ms-flex-direction: row;
+                    flex-direction: row;
+
+                    -webkit-flex-wrap: nowrap;
+                    -ms-flex-wrap: nowrap;
+                    flex-wrap: nowrap;
+
+                    -webkit-justify-content: flex-end;
+                    -ms-flex-pack: end;
+                    justify-content: flex-end;
+
+
+                    .qti-timer {
+
+                        display: inline-block;
+                        text-align: center;
+                        vertical-align: top;
+                        line-height: 1.2;
+                        position: relative;
+                        padding: 0 20px;
+                        margin-top: -1px;
+
+                        .qti-timer_label {
+                            max-width: 130px;
+                            display:block;
+                            @include font-size(12);
+                        }
+                        &.qti-timer__warning {
+                            .qti-timer_time {
+                                color: $warning;
+                            }
+                        }
+                        &::before {
+                            content: ' ';
+                            background: white(.3);
+                            width: 1px;
+                            height: 20px;
+                            position: absolute;
+                            left: 0;
+                            top: 5px
+                        }
+                        &:first-child {
+                            &::before {
+                                content: none;
+                            }
+                        }
+
+                    }
+                }
+                .progressbar {
+                    margin-top: 5px;
+                    min-width: 150px;
+                    max-width: 200px;
+                    height: 0.6em;
+                }
+
+            }
+
+            & > .control-box {
+                color: white(.9);
+                text-shadow: 1px 1px 0 black;
+                .lft, .rgt {
+                    padding-left: 20px;
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                    &:last-child {
+                        //text-align: right;
+                        ul {
+                            display: inline-block;
+                        }
+                    }
+                }
+                [class^="btn-"], [class*=" btn-"] {
+                    white-space: nowrap;
+                }
+            }
+            .tools-box {
+                .action {
+                    position: relative;
+                    overflow: visible;
+                }
+
+                .menu {
+                    color: $textColor;
+                    background: $canvas;
+                    overflow: auto;
+                    list-style: none;
+                    min-width: 150px;
+
+                    margin: 0;
+                    padding: 0;
+
+                    position: absolute;
+                    bottom: 30px;
+                    left: 0;
+
+                    .action {
+                        display: inline-block;
+                        text-align: left;
+                        width: 100%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        color: $textColor;
+                        margin: 0;
+                        @include border-radius(0);
+                        height: 32px;
+                        padding: 6px 15px;
+                        line-height: 1;
+
+                        &.selected {
+                            background-color: whiten($info, .2);
+                            color: $textHighlight;
+                            .label, .icon {
+                                color: $textHighlight;
+                            }
+                        }
+                        &:hover {
+                            background-color: $info;
+                            color: $textHighlight;
+                            .label, .icon {
+                                color: $textHighlight;
+                            }
+                        }
+
+                        .label, .icon {
+                            @include font-size(14);
+                            text-shadow: none;
+                            color: $textColor;
+                        }
+                    }
+                }
+            }
+
+            &.bottom-action-bar {
+                overflow: visible;
+                .action {
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+
+    [data-control="exit"]{
+        margin-left: 20px;
+    }
+
+    [data-control="comment-toggle"] {
+        display:none;
+    }
+
+
+    &.non-lti-context {
+        .title-box {
+            display:none;
+        }
+    }
+
+    [data-control="qti-comment"]{
+        background-color: $canvas;
+        position: absolute;
+        bottom: 33px;
+        left: 8px;
+        z-index: 9999;
+        text-align: right;
+        padding: 5px;
+        @include simple-border();
+        @include box-shadow(0, 0, 15px, 1px, rgba(0,0,0,0.20));
+        textarea {
+            display: block;
+            height: 100px;
+            resize: none;
+            width: 350px;
+            padding: 3px;
+            margin: 0  0 10px 0;
+            border: none;
+            @include font-size(13);
+            @include simple-border();
+        }
+    }
+
+    // comment
+    .tools-box {
+        position: relative;
+        overflow:visible
+    }
+}
+

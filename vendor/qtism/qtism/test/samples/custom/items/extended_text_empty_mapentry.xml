@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd" identifier="extendedText" title="Writing a Postcard" adaptive="false" timeDependent="false">
+  <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="string">
+    <mapping lowerBound="-1.0" defaultValue="0.0">
+      <mapEntry mapKey="" mappedValue="-1.0"/>
+      <mapEntry mapKey="albert" mappedValue="1.0" caseSensitive="true"/>
+      <mapEntry mapKey="Albert" mappedValue="2.0" caseSensitive="true"/>
+    </mapping>
+  </responseDeclaration>
+  <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+  <itemBody>
+    <extendedTextInteraction responseIdentifier="RESPONSE">
+      <prompt>What is the first name of Mr Einstein?</prompt>
+    </extendedTextInteraction>
+  </itemBody>
+  <responseProcessing template="http://www.imsglobal.org/question/qti_v2p1/rptemplates/map_response"/>
+</assessmentItem>

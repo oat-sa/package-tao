@@ -1,0 +1,27 @@
+{
+    "typeIdentifier": "textReaderInteraction",
+    "label": "Text reader",
+    "description": "The Paging widget combines a scrolling widget with additional paging controls.",
+    "version": "0.1",
+    "author": "Aleh Hutnikau",
+    "email": "contact@taotesting.com",
+    "libraries": [
+        "IMSGlobal/jquery_2_1_1",
+        "./runtime/js/renderer",
+        "./runtime/js/tabs"
+    ],
+    "css": [
+        "./runtime/css/textReaderInteraction.css" 
+    ],
+    "entryPoint": "./runtime/textReaderInteraction.js",
+    "tags": [
+        "reader",
+        "paging"
+    ],
+    "icon": "./creator/media/icon.svg",
+    "short": "Text reader",
+    "response": {
+        "baseType": "boolean",
+        "cardinality": "single" 
+    }
+}

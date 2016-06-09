@@ -1,0 +1,21 @@
+@import "inc/bootstrap";
+
+.widget-box.widget-endAttemptInteraction{
+    display:none;
+    background: rgba($uiClickableDefaultBg, .9);
+    padding: 20px 30px 60px;
+    .widget-ok{
+        position:absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+    .tlb-wrapper{
+        top : -26px;
+    }
+}
+
+.endAttemptInteraction-placeholder {
+    padding : 0 15px;
+    min-width:80px;
+    border:none;
+}

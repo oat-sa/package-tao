@@ -1,0 +1,63 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0;
+    padding: 0;
+    &.matrix {
+
+        width: 100%;
+        border: 6px solid whiten($uiClickableDefaultBg, .5);
+        margin-bottom: 10px;
+        td, th {
+            font-weight: normal;
+            padding: 3px 5px;
+            border: 1px solid #ddd;
+        }
+        th {
+            text-align: left;
+            vertical-align: middle;
+            background: whiten($uiClickableDefaultBg, .5);
+        }
+        td {
+            background: transparent;
+            text-align: left;
+            padding: 2px;
+            &.numeric {
+                text-align: right;
+            }
+            label {
+                display: block;
+                margin: 0;
+            }
+        }
+        tr {
+            &:nth-child(even){background: white;}
+            &:nth-child(odd){background: lighten($lightBlueGrey,5)}
+        }
+        [data-edit], [data-edit] * {
+            border: none;
+            padding: 6px;
+            cursor: pointer;
+        }
+        tbody [data-edit] {
+            width: 30px;
+        }
+    }
+}
+
+/* fake table stuff */
+.tbl {
+    display: table;
+    float: none !important;
+}
+
+.tbl-row {
+    display: table-row;
+    float: none !important;
+}
+
+.tbl-cell {
+    display: table-cell;
+    vertical-align: top;
+    float: none !important;
+}

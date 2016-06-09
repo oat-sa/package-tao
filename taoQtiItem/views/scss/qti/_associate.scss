@@ -1,0 +1,113 @@
+@import "inc/bootstrap";
+
+.qti-associateInteraction {
+
+    .empty {
+        cursor: pointer;
+        min-height: 0;
+        &:hover{
+            @extend %selectableHover;
+        }
+    }
+    .choice-area {
+        .deactivated {
+            opacity: 0.2;
+            cursor: default !important;
+        }
+        margin-bottom: 30px;
+        & > .qti-choice {
+            min-width: 100px;
+            min-height: 30px;
+            max-width: 180px;
+            .qti-block {
+                img {
+                    display: flex;
+                }
+            }
+        }
+    }
+    .result-area {
+        width: 40%;
+        min-width: 260px;
+        margin: auto;
+        & > li {
+            display: block;
+            margin-bottom: 30px;
+            position: relative;
+            @extend .clearfix;
+            &:before {
+                @extend .clearfix:before;
+                border-top: 1px solid whiten($info, .5);
+                display: block;
+                width: 80%;
+                left: 10%;
+                height: 1px;
+                position: absolute;
+                z-index: 1;
+                top: 50%
+            }
+            &:after {
+                @extend .clearfix:after;
+            }
+            & > .target {
+                background: white;
+                padding: 5px;
+                margin: 5px;
+                float: right;
+                position: relative;
+                z-index: 2;
+                min-width: 100px;
+                min-height: 30px;
+                max-width: 180px;
+                outline: 5px whiten($uiClickableDefaultBg, .2) solid;
+                @include simple-border(#eee);
+                overflow: hidden;
+                .qti-block {
+                    img {
+                        display: flex;
+                    }
+                }
+                &.active {
+                    border-color: whiten($info, .2);
+                    &:hover{
+                        @extend %activeHover;
+                    }
+                }
+                &:first-child {
+                    float: left
+                }
+            }
+            &.removing > div{
+                background-color:#eee;
+            }
+            &.incomplete-pair {
+                display:none;
+                & > div {
+                    border:1px dashed #ccc;
+                }
+            }
+        }
+
+        .remove-choice {
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            margin: 0 2px 2px 0;
+            color: $info;
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+        .filled {
+            cursor: pointer;
+            &:hover{
+                background: mix(#fff, $info, 95%);
+            }
+        }
+    }
+}
+
+.result-area > li > div.filled ~ div.filled:before {
+    border-top: 1px solid whiten($success, .5) !important;
+}

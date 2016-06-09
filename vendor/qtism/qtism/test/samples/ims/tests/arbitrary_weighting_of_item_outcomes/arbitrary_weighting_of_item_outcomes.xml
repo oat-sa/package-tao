@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+    identifier="RTEST-04" title="Arbitrary Weighting of Item Outcomes">
+    <outcomeDeclaration baseType="float" cardinality="single" identifier="SCORE">
+        <defaultValue>
+            <value>0</value>
+        </defaultValue>
+    </outcomeDeclaration>
+    <testPart navigationMode="nonlinear" submissionMode="simultaneous" identifier="RTEST-04-A">
+        <assessmentSection identifier="sectionA" title="Section A" visible="true">
+            <rubricBlock view="candidate">
+                <p>Instructions for Section A</p>
+            </rubricBlock>
+            <assessmentItemRef identifier="item034" href="item034.xml">
+                <weight identifier="WEIGHT" value="2"/>
+            </assessmentItemRef>
+            <assessmentItemRef identifier="item160" href="item160.xml">
+                <weight identifier="WEIGHT" value="0"/>
+            </assessmentItemRef>
+            <!-- undefined weights default to 1 -->
+            <assessmentItemRef identifier="item063" href="item063.xml"/>
+        </assessmentSection>
+        <assessmentSection identifier="sectionB" title="Section B" visible="true">
+            <rubricBlock view="candidate">
+                <p>Instructions for Section B</p>
+            </rubricBlock>
+            <assessmentItemRef identifier="item434" href="item434.xml">
+                <weight identifier="WEIGHT" value="0.5"/>
+            </assessmentItemRef>
+            <assessmentItemRef identifier="item065" href="item065.xml">
+                <weight identifier="WEIGHT" value="0.5"/>
+            </assessmentItemRef>
+            <assessmentItemRef identifier="item365" href="item365.xml">
+                <weight identifier="WEIGHT" value="0.5"/>
+            </assessmentItemRef>
+            <assessmentItemRef identifier="item656" href="item656.xml">
+                <weight identifier="WEIGHT" value="0.5"/>
+            </assessmentItemRef>
+        </assessmentSection>
+    </testPart>
+    <outcomeProcessing>
+        <setOutcomeValue identifier="SCORE">
+            <sum>
+                <testVariables variableIdentifier="SCORE" weightIdentifier="WEIGHT"/>
+            </sum>
+        </setOutcomeValue>
+    </outcomeProcessing>
+</assessmentTest>

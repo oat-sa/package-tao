@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xml:base="http://www.tao.lu/Ontologies/TAO.rdf#">
+  <rdf:Description rdf:about="http://www.tao.lu/Ontologies/TAO.rdf#Langel-GR">
+    <rdf:type rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#Languages"/>
+    <rdfs:label xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en-US"><![CDATA[Greek]]></rdfs:label>
+    <rdf:value><![CDATA[el-GR]]></rdf:value>
+    <tao:languageUsages xmlns:tao="http://www.tao.lu/Ontologies/TAO.rdf#" rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#LanguageUsageGUI"/>
+    <tao:languageUsages xmlns:tao="http://www.tao.lu/Ontologies/TAO.rdf#" rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#LanguageUsageData"/>
+    <tao:LanguageOrientation xmlns:tao="http://www.tao.lu/Ontologies/TAO.rdf#" rdf:resource="http://www.tao.lu/Ontologies/TAO.rdf#OrientationLeftToRight"/>
+  </rdf:Description>
+</rdf:RDF>

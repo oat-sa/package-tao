@@ -1,0 +1,62 @@
+.sts-handle-adjust-x {
+    top: 50%;
+    margin-top: -15px;
+    right: -20px;
+}
+
+.sts-handle-adjust-xy {
+    right: -20px;
+    bottom: -20px;
+}
+
+.sts-handle-adjust-y {
+    left: 50%;
+    margin-left: -15px;
+    bottom: -20px;
+}
+
+.sts-handle-rotate-t {
+    left: 50%;
+    margin-left: -15px;
+    top: -30px;
+}
+
+.sts-handle-rotate-r {
+    top: 50%;
+    margin-top: -15px;
+    right: -30px;
+}
+
+.sts-handle-rotate-b {
+    left: 50%;
+    margin-left: -15px;
+    bottom: -30px;
+}
+
+.sts-handle-rotate-l {
+    top: 50%;
+    margin-top: -15px;
+    left: -30px;
+}
+
+.sts-handle-rotate-bl {
+    left: -20px;
+    bottom: -20px;
+}
+
+.sts-handle-rotate-br {
+    right: -20px;
+    bottom: -20px;
+}
+
+.sts-handle-rotate-tl {
+    left: -20px;
+    top: -20px;
+}
+
+.sts-handle-rotate-tr {
+    top: -20px;
+    right: -20px;
+}
+
+@include control-handles($handles, rgba($stsInfo, 0.3));

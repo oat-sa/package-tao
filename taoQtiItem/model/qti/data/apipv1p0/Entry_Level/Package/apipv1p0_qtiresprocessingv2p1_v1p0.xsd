@@ -1,0 +1,2811 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<xs:schema xmlns="http://www.imsglobal.org/xsd/apip/apipv1p0/qtiresproc/imsqti_v2p1"
+    targetNamespace="http://www.imsglobal.org/xsd/apip/apipv1p0/qtiresproc/imsqti_v2p1"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:apip="http://www.imsglobal.org/xsd/apip/apipv1p0/imsapip_qtiv1p0"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    version="IMS APIP 1.0 QTI 2.1 RESPROC"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+    <xs:import namespace = "http://www.w3.org/XML/1998/namespace" schemaLocation = "http://www.imsglobal.org/xsd/w3/2001/xml.xsd"/>
+    <xs:import namespace="http://www.w3.org/2001/XInclude" schemaLocation="http://www.imsglobal.org/xsd/w3/2001/XInclude.xsd"/>
+    <xs:import namespace="http://www.w3.org/1998/Math/MathML" schemaLocation="http://www.w3.org/Math/XMLSchema/mathml2/mathml2.xsd"/>
+    <xs:import namespace="http://www.imsglobal.org/xsd/apip/apipv1p0/imsapip_qtiv1p0" schemaLocation="http://www.imsglobal.org/profile/apip/apipv1p0/apipv1p0_qtiextv2p1_v1p0.xsd"/>
+    <xs:annotation>
+        <xs:documentation>
+            XSD Data File Information
+            -------------------------
+            Author:         Colin Smythe
+            Date:           31st July, 2012
+            Version:        Final 1.0
+            Status:         Final Release
+            Description:    This is the Platform Specific Model of the APIPv1.0 profile of the IMS QTI v2.1 Information Model.
+                            This is the Entry and Core Level Profile for APIPv1.0 QTIv2.1 Response Processing Templates.
+
+            History:        This is the first version of the APIPv1.0 QTIv2.1 Response Processing Template Profile.
+
+            PROFILE:        This is the "APIP-ResponseProcessing". THIS IS A PROFILE OF THE BASE SPECIFICATION.
+                            The changes to the base specification are:
+                            * The "A" class/complexType and set of XML attributes have been deleted;
+                            * The "AnyN" class/complexType and set of XML attributes have been deleted;
+                            * The "AreaMapEntry" class/complexType and set of XML attributes have been deleted;
+                            * The "AreaMapEntry" class/complexType and set of XML attributes have been deleted;
+                            * The "AreaMapping" class/complexType and set of XML attributes have been deleted;
+                            * The "AreaMapping" class/complexType and set of XML attributes have been deleted;
+                            * The "AssessmentItem" class/complexType and set of XML attributes have been deleted;
+                            * The "AssessmentItemRef" class/complexType and set of XML attributes have been deleted;
+                            * The "AssessmentSection" class/complexType and set of XML attributes have been deleted;
+                            * The "AssessmentSectionRef" class/complexType and set of XML attributes have been deleted;
+                            * The "AssessmentTest" class/complexType and set of XML attributes have been deleted;
+                            * The "AssociableHotspot" class/complexType and set of XML attributes have been deleted;
+                            * The "AssociateInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "BlockQuote" class/complexType and set of XML attributes have been deleted;
+                            * The "BR" class/complexType and set of XML attributes have been deleted;
+                            * The "BranchRule" class/complexType and set of XML attributes have been deleted;
+                            * The "Caption" class/complexType and set of XML attributes have been deleted;
+                            * The "ChoiceInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "Col" class/complexType and set of XML attributes have been deleted;
+                            * The "ColGroup" class/complexType and set of XML attributes have been deleted;
+                            * The "CorrectResponse" class/complexType and set of XML attributes have been deleted;
+                            * The "CustomInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "DD" class/complexType and set of XML attributes have been deleted;
+                            * The "DefaultValue" class/complexType and set of XML attributes have been deleted;
+                            * The "Div" class/complexType and set of XML attributes have been deleted;
+                            * The "DL" class/complexType and set of XML attributes have been deleted;
+                            * The "DrawingInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "DT" class/complexType and set of XML attributes have been deleted;
+                            * The "EndAttemptInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "ExtendedTextInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "FeedbackBlock" class/complexType and set of XML attributes have been deleted;
+                            * The "FeedbackInline" class/complexType and set of XML attributes have been deleted;
+                            * The "Gap" class/complexType and set of XML attributes have been deleted;
+                            * The "GapChoice" class/complexType and set of XML attributes have been deleted;
+                            * The "GapImg" class/complexType and set of XML attributes have been deleted;
+                            * The "GapMatchInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "GapText" class/complexType and set of XML attributes have been deleted;
+                            * The "GraphicAssociateInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "GraphicGapMatchInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "GraphicOrderInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "HotspotChoice" class/complexType and set of XML attributes have been deleted;
+                            * The "HotspotInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "HotText" class/complexType and set of XML attributes have been deleted;
+                            * The "HotTextInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "HR" class/complexType and set of XML attributes have been deleted;
+                            * The "HTMLText" class/complexType and set of XML attributes have been deleted;
+                            * The "Img" class/complexType and set of XML attributes have been deleted;
+                            * The "InfoControl" class/complexType and set of XML attributes have been deleted;
+                            * The "InlineChoice" class/complexType and set of XML attributes have been deleted;
+                            * The "InlineChoiceInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "InterpolationTable" class/complexType and set of XML attributes have been deleted;
+                            * The "InterpolationTableEntry" class/complexType and set of XML attributes have been deleted;
+                            * The "ItemBody" class/complexType and set of XML attributes have been deleted;
+                            * The "ItemSessionControl" class/complexType and set of XML attributes have been deleted;
+                            * The "LI" class/complexType and set of XML attributes have been deleted;
+                            * The "MapEntry" class/complexType and set of XML attributes have been deleted;
+                            * The "Mapping" class/complexType and set of XML attributes have been deleted;
+                            * The "MatchInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "MatchTable" class/complexType and set of XML attributes have been deleted;
+                            * The "MatchTableEntry" class/complexType and set of XML attributes have been deleted;
+                            * The "MediaInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "ModalFeedback" class/complexType and set of XML attributes have been deleted;
+                            * The "Object" class/complexType and set of XML attributes have been deleted;
+                            * The "ObjectFlowGroup" class/complexType and set of XML attributes have been deleted;
+                            * The "Ordering" class/complexType and set of XML attributes have been deleted;
+                            * The "OrderInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "OUL" class/complexType and set of XML attributes have been deleted;
+                            * The "OutcomeCondition" class/complexType and set of XML attributes have been deleted;
+                            * The "OutcomeDeclaration" class/complexType and set of XML attributes have been deleted;
+                            * The "OutcomeElse" class/complexType and set of XML attributes have been deleted;
+                            * The "OutcomeIf" class/complexType and set of XML attributes have been deleted;
+                            * The "OutcomeProcessing" class/complexType and set of XML attributes have been deleted;
+                            * The "OutcomeProcessingFragment" class/complexType and set of XML attributes have been deleted;
+                            * The "OutcomeProcessingFragment" class/complexType and set of XML attributes have been deleted;
+                            * The "OutcomeRule" class/complexType and set of XML attributes have been deleted;
+                            * The "Param" class/complexType and set of XML attributes have been deleted;
+                            * The "PositionObjectInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "PositionObjectStage" class/complexType and set of XML attributes have been deleted;
+                            * The "PrintedVariable" class/complexType and set of XML attributes have been deleted;
+                            * The "Prompt" class/complexType and set of XML attributes have been deleted;
+                            * The "Q" class/complexType and set of XML attributes have been deleted;
+                            * The "ResponseDeclaration" class/complexType and set of XML attributes have been deleted;
+                            * The "RubricBlock" class/complexType and set of XML attributes have been deleted;
+                            * The "RubricBlockTemplateBlock" class/complexType and set of XML attributes have been deleted;
+                            * The "RubricBlockTemplateInline" class/complexType and set of XML attributes have been deleted;
+                            * The "SectionPart" class/complexType and set of XML attributes have been deleted;
+                            * The "Selection" class/complexType and set of XML attributes have been deleted;
+                            * The "SelectPointInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "SimpleAssociableChoice" class/complexType and set of XML attributes have been deleted;
+                            * The "SimpleChoice" class/complexType and set of XML attributes have been deleted;
+                            * The "SimpleMatchSet" class/complexType and set of XML attributes have been deleted;
+                            * The "SliderInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "StyleSheet" class/complexType and set of XML attributes have been deleted;
+                            * The "Table" class/complexType and set of XML attributes have been deleted;
+                            * The "TablePart" class/complexType and set of XML attributes have been deleted;
+                            * The "TDH" class/complexType and set of XML attributes have been deleted;
+                            * The "TemplateBlock" class/complexType and set of XML attributes have been deleted;
+                            * The "TemplateBlockFeedbackBlock" class/complexType and set of XML attributes have been deleted;
+                            * The "TemplateCondition" class/complexType and set of XML attributes have been deleted;
+                            * The "TemplateConstraint" class/complexType and set of XML attributes have been deleted;
+                            * The "TemplateDeclaration" class/complexType and set of XML attributes have been deleted;
+                            * The "TemplateDefault" class/complexType and set of XML attributes have been deleted;
+                            * The "TemplateElse" class/complexType and set of XML attributes have been deleted;
+                            * The "TemplateIf" class/complexType and set of XML attributes have been deleted;
+                            * The "TemplateInline" class/complexType and set of XML attributes have been deleted;
+                            * The "TemplateProcessing" class/complexType and set of XML attributes have been deleted;
+                            * The "TemplateRuleGroup" class/complexType and set of XML attributes have been deleted;
+                            * The "TestFeedback" class/complexType and set of XML attributes have been deleted;
+                            * The "TestPart" class/complexType and set of XML attributes have been deleted;
+                            * The "TextEntryInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "TimeLimits" class/complexType and set of XML attributes have been deleted;
+                            * The "TR" class/complexType and set of XML attributes have been deleted;
+                            * The "UploadInteraction" class/complexType and set of XML attributes have been deleted;
+                            * The "Value" class/complexType and set of XML attributes have been deleted;
+                            * The "VariableMapping" class/complexType and set of XML attributes have been deleted;
+                            * The "Weight" class/complexType and set of XML attributes have been deleted;
+
+            License:        IPR, License and Distribution Notices
+
+                            This machine readable file is derived from IMS Global specification IMS Question and Test Interoperability (QTI) Version 2.1
+                            found at http://www.imsglobal.org/qti and the original IMS Global schema binding or code base
+                            http://www.imsglobal.org/qti.
+
+                            Recipients of this document are requested to submit, with their comments, notification of any
+                            relevant patent claims or other intellectual property rights of which they may be aware that might be
+                            infringed by the schema binding contained in this document.
+
+                            IMS GLC takes no position regarding the validity or scope of any intellectual property or other
+                            rights that might be claimed to pertain to the implementation or use of the technology described in this
+                            document or the extent to which any license under such rights might or might not be available; neither
+                            does it represent that it has made any effort to identify any such rights. Information on IMS Global
+                            procedures with respect to rights in IMS Global specifications can be found at the IMS Global Intellectual Property
+                            Rights web page: http://www.imsglobal.org/ipr/imsipr_policyFinal.pdf.
+
+                            Copyright (c) IMS Global Learning Consortium 1999-2012. All Rights Reserved.
+
+                            License Notice for Users
+
+                            Users of products or services that include this document are hereby granted a worldwide, royalty-free, 
+                            non-exclusive license to use this document. 
+
+                            Distribution Notice for Developers
+
+                            Developers of products or services that are not original incorporators of this document and 
+                            have not changed this document, that is, are distributing a software product that incorporates this 
+                            document as is from a third-party source other than IMS, are hereby granted permission to copy,
+                            display and distribute the contents of this document in any medium for any purpose without fee or 
+                            royalty provided that you include this IPR, License and Distribution notice in its entirety on ALL
+                            copies, or portions thereof.
+
+                            Developers of products or services that are original incorporators of this document and wish 
+                            to provide distribution of this document as is or with modifications and developers of products and 
+                            services that are not original incorporators of this document and have changed this document, are
+                            required to register with the IMS GLC community on the IMS GLC website as described in the following two
+                            paragraphs:-
+
+                            *  If you wish to distribute this document as is, with no modifications, you are hereby granted 
+                               permission to copy, display and distribute the contents of this document in any medium for any 
+                               purpose without fee or royalty provided that you include this IPR, License and Distribution notice in
+                               its entirety on ALL copies, or portions thereof, that you make and you complete a valid license 
+                               registration with IMS and receive an email from IMS granting the license. To register, follow the 
+                               instructions on the IMS website: http://www.imsglobal.org/specificationdownload.cfm. Once 
+                               registered you are granted permission to transfer unlimited distribution rights of this document for the 
+                               purposes of third-party or other distribution of your product or service that incorporates this 
+                               document as long as this IPR, License and Distribution notice remains in place in its entirety; 
+
+                            *  If you wish to create and distribute a derived work from this document, you are hereby 
+                               granted permission to copy, display and distribute the contents of the derived work in any medium for 
+                               any purpose without fee or royalty provided that you include this IPR, License and Distribution 
+                               notice in its entirety on ALL copies, or portions thereof, that you make and you complete a valid 
+                               profile registration with IMS GLC and receive an email from IMS GLC granting the license. To register, follow
+                               the instructions on the IMS GLC website: http://www.imsglobal.org/profile/. Once registered you are 
+                               granted permission to transfer unlimited distribution rights of the derived work for the purposes of 
+                               third-party or other distribution of your product or service that incorporates the derived work as long 
+                               as this IPR, License and Distribution notice remains in place in its entirety. 
+
+                            The limited permissions granted above are perpetual and will not be revoked by IMS GLC or its 
+                            successors or assigns.
+
+                            THIS SPECIFICATION IS BEING OFFERED WITHOUT ANY WARRANTY WHATSOEVER, AND IN PARTICULAR, ANY WARRANTY OF NONINFRINGEMENT IS
+                            EXPRESSLY DISCLAIMED. ANY USE OF THIS SPECIFICATION SHALL BE MADE ENTIRELY AT THE IMPLEMENTERS OWN RISK, AND NEITHER THE CONSORTIUM
+                            NOR ANY OF ITS MEMBERS OR SUBMITTERS, SHALL HAVE ANY LIABILITY WHATSOEVER TO ANY IMPLEMENTER OR THIRD PARTY FOR ANY DAMAGES OF
+                            ANY NATURE WHATSOEVER, DIRECTLY OR INDIRECTLY, ARISING FROM THE USE OF THIS SPECIFICATION.
+
+            Source UML File Information
+            ---------------------------
+            The source file information must be supplied as an XMI file (without diagram layout information).
+            The supported UML authoring tools are:
+            (a) Poseidon - v6 (and later)
+
+            Source XSLT File Information
+            ----------------------------
+            XSL Generator:    UMLtoXSDTransformv1p0.xsl
+            XSLT Processor:   Xalan
+            Release:          1.0
+            Date:             31st March, 2012
+            Autogen Engineer: Colin Smythe (IMS GLC, UK)
+            Autogen Date:     2012-05-31
+
+            IMS GLC Auto-generation Binding Tool-kit (I-BAT)
+            ------------------------------------------------
+            This file was auto-generated using the IMS GLC Binding Auto-generation Tool-kit (I-BAT).  While every
+            attempt has been made to ensure that this tool auto-generates the files correctly, users should be aware
+            that this is an experimental tool.  Permission is given to make use of this tool.  IMS GLC makes no
+            claim on the materials created by third party users of this tool.  Details on how to use this tool
+            are contained in the IMS GLC "I-BAT" Documentation available at the IMS GLC web-site.
+
+            Tool Copyright:  2005-2012 (c) IMS Global Learning Consortium Inc.  All Rights Reserved.
+        </xs:documentation>
+    </xs:annotation>
+
+    <!-- Generate Global Attributes *********************************************************************** -->
+
+    <xs:attributeGroup name="identifier.SetValue.Attr">
+        <xs:attribute name="identifier" use="required" type="Identifier.Type"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="template.ResponseProcessing.Attr">
+        <xs:attribute name="template" use="optional" type="xs:anyURI"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="templateLocation.ResponseProcessing.Attr">
+        <xs:attribute name="templateLocation" use="optional" type="xs:anyURI"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="identifier.LookupOutcomeValue.Attr">
+        <xs:attribute name="identifier" use="required" type="Identifier.Type"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="caseSensitive.Substring.Attr">
+        <xs:attribute name="caseSensitive" use="required" type="xs:boolean"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="class.CustomOperator.Attr">
+        <xs:attribute name="class" use="optional" type="Identifier.Type"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="definition.CustomOperator.Attr">
+        <xs:attribute name="definition" use="optional" type="xs:anyURI"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="extension.CustomOperator.Attr">
+        <xs:anyAttribute namespace = "##other" processContents = "lax"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="sectionIdentifier.Number.Attr">
+        <xs:attribute name="sectionIdentifier" use="optional" type="Identifier.Type"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="includeCategory.Number.Attr">
+        <xs:attribute name="includeCategory" use="optional">
+            <xs:simpleType>
+                <xs:list itemType="IdentifierList.Type"/>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="excludeCategory.Number.Attr">
+        <xs:attribute name="excludeCategory" use="optional">
+            <xs:simpleType>
+                <xs:list itemType="IdentifierList.Type"/>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="roundingMode.EqualRounded.Attr">
+        <xs:attribute name="roundingMode" use="optional" default="significantFigures">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="decimalPlaces"/>
+                    <xs:enumeration value="significantFigures"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="figures.EqualRounded.Attr">
+        <xs:attribute name="figures" use="required">
+            <xs:simpleType>
+                <xs:union>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer"/>
+                    </xs:simpleType>
+                    <xs:simpleType>
+                        <xs:restriction base="VariableString.Type"/>
+                    </xs:simpleType>
+                </xs:union>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="n.Index.Attr">
+        <xs:attribute name="n" use="required">
+            <xs:simpleType>
+                <xs:union>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:NCName"/>
+                    </xs:simpleType>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:int"/>
+                    </xs:simpleType>
+                </xs:union>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="toleranceMode.Equal.Attr">
+        <xs:attribute name="toleranceMode" use="optional" default="exact">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="absolute"/>
+                    <xs:enumeration value="exact"/>
+                    <xs:enumeration value="relative"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="tolerance.Equal.Attr">
+        <xs:attribute name="tolerance" use="optional">
+            <xs:simpleType>
+                <xs:list itemType="ToleranceList.Type"/>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="includeLowerBound.Equal.Attr">
+        <xs:attribute name="includeLowerBound" use="optional" default="true" type="xs:boolean"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="includeUpperBound.Equal.Attr">
+        <xs:attribute name="includeUpperBound" use="optional" default="true" type="xs:boolean"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="name.MathConstant.Attr">
+        <xs:attribute name="name" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="pi"/>
+                    <xs:enumeration value="e"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="identifier.Correct.Attr">
+        <xs:attribute name="identifier" use="required" type="Identifier.Type"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="identifier.Default.Attr">
+        <xs:attribute name="identifier" use="required" type="Identifier.Type"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="fieldIdentifier.FieldValue.Attr">
+        <xs:attribute name="fieldIdentifier" use="required" type="Identifier.Type"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="min.RandomInteger.Attr">
+        <xs:attribute name="min" use="optional" default="0">
+            <xs:simpleType>
+                <xs:union>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer"/>
+                    </xs:simpleType>
+                    <xs:simpleType>
+                        <xs:restriction base="VariableString.Type"/>
+                    </xs:simpleType>
+                </xs:union>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="max.RandomInteger.Attr">
+        <xs:attribute name="max" use="required">
+            <xs:simpleType>
+                <xs:union>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer"/>
+                    </xs:simpleType>
+                    <xs:simpleType>
+                        <xs:restriction base="VariableString.Type"/>
+                    </xs:simpleType>
+                </xs:union>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="step.RandomInteger.Attr">
+        <xs:attribute name="step" use="optional" default="1">
+            <xs:simpleType>
+                <xs:union>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer"/>
+                    </xs:simpleType>
+                    <xs:simpleType>
+                        <xs:restriction base="VariableString.Type"/>
+                    </xs:simpleType>
+                </xs:union>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="min.RandomFloat.Attr">
+        <xs:attribute name="min" use="optional" default="0">
+            <xs:simpleType>
+                <xs:union>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:double"/>
+                    </xs:simpleType>
+                    <xs:simpleType>
+                        <xs:restriction base="VariableString.Type"/>
+                    </xs:simpleType>
+                </xs:union>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="max.RandomFloat.Attr">
+        <xs:attribute name="max" use="required">
+            <xs:simpleType>
+                <xs:union>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:double"/>
+                    </xs:simpleType>
+                    <xs:simpleType>
+                        <xs:restriction base="VariableString.Type"/>
+                    </xs:simpleType>
+                </xs:union>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="identifier.Variable.Attr">
+        <xs:attribute name="identifier" use="required" type="Identifier.Type"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="weightIdentifier.Variable.Attr">
+        <xs:attribute name="weightIdentifier" use="optional" type="Identifier.Type"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="sectionIdentifier.OutcomeMinMax.Attr">
+        <xs:attribute name="sectionIdentifier" use="optional" type="Identifier.Type"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="includeCategory.OutcomeMinMax.Attr">
+        <xs:attribute name="includeCategory" use="optional">
+            <xs:simpleType>
+                <xs:list itemType="IdentifierList.Type"/>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="excludeCategory.OutcomeMinMax.Attr">
+        <xs:attribute name="excludeCategory" use="optional">
+            <xs:simpleType>
+                <xs:list itemType="IdentifierList.Type"/>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="outcomeIdentifier.OutcomeMinMax.Attr">
+        <xs:attribute name="outcomeIdentifier" use="required" type="Identifier.Type"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="weightIdentifier.OutcomeMinMax.Attr">
+        <xs:attribute name="weightIdentifier" use="optional" type="Identifier.Type"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="sectionIdentifier.TestVariables.Attr">
+        <xs:attribute name="sectionIdentifier" use="optional" type="Identifier.Type"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="includeCategory.TestVariables.Attr">
+        <xs:attribute name="includeCategory" use="optional">
+            <xs:simpleType>
+                <xs:list itemType="IdentifierList.Type"/>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="excludeCategory.TestVariables.Attr">
+        <xs:attribute name="excludeCategory" use="optional">
+            <xs:simpleType>
+                <xs:list itemType="IdentifierList.Type"/>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="variableIdentifier.TestVariables.Attr">
+        <xs:attribute name="variableIdentifier" use="required" type="Identifier.Type"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="weightIdentifier.TestVariables.Attr">
+        <xs:attribute name="weightIdentifier" use="optional" type="Identifier.Type"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="baseType.TestVariables.Attr">
+        <xs:attribute name="baseType" use="optional">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="boolean"/>
+                    <xs:enumeration value="directedPair"/>
+                    <xs:enumeration value="duration"/>
+                    <xs:enumeration value="file"/>
+                    <xs:enumeration value="float"/>
+                    <xs:enumeration value="identifier"/>
+                    <xs:enumeration value="integer"/>
+                    <xs:enumeration value="pair"/>
+                    <xs:enumeration value="point"/>
+                    <xs:enumeration value="string"/>
+                    <xs:enumeration value="uri"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="shape.Inside.Attr">
+        <xs:attribute name="shape" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="circle"/>
+                    <xs:enumeration value="default"/>
+                    <xs:enumeration value="ellipse"/>
+                    <xs:enumeration value="poly"/>
+                    <xs:enumeration value="rect"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="coords.Inside.Attr">
+        <xs:attribute name="coords" use="required" type="xs:normalizedString"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="baseType.BaseValue.Attr">
+        <xs:attribute name="baseType" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="boolean"/>
+                    <xs:enumeration value="directedPair"/>
+                    <xs:enumeration value="duration"/>
+                    <xs:enumeration value="file"/>
+                    <xs:enumeration value="float"/>
+                    <xs:enumeration value="identifier"/>
+                    <xs:enumeration value="integer"/>
+                    <xs:enumeration value="pair"/>
+                    <xs:enumeration value="point"/>
+                    <xs:enumeration value="string"/>
+                    <xs:enumeration value="uri"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="pattern.PatternMatch.Attr">
+        <xs:attribute name="pattern" use="required">
+            <xs:simpleType>
+                <xs:union>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string"/>
+                    </xs:simpleType>
+                    <xs:simpleType>
+                        <xs:restriction base="EncVariableString.Type"/>
+                    </xs:simpleType>
+                </xs:union>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="identifier.MapResponse.Attr">
+        <xs:attribute name="identifier" use="required" type="Identifier.Type"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="caseSensitive.StringMatch.Attr">
+        <xs:attribute name="caseSensitive" use="required" type="xs:boolean"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="substring.StringMatch.Attr">
+        <xs:attribute name="substring" use="optional" default="false" type="xs:boolean"/>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="roundingMode.RoundTo.Attr">
+        <xs:attribute name="roundingMode" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="decimalPlaces"/>
+                    <xs:enumeration value="significantFigures"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="figures.RoundTo.Attr">
+        <xs:attribute name="figures" use="required">
+            <xs:simpleType>
+                <xs:union>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer"/>
+                    </xs:simpleType>
+                    <xs:simpleType>
+                        <xs:restriction base="VariableString.Type"/>
+                    </xs:simpleType>
+                </xs:union>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="name.StatsOperator.Attr">
+        <xs:attribute name="name" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="mean"/>
+                    <xs:enumeration value="sampleVariance"/>
+                    <xs:enumeration value="sampleSD"/>
+                    <xs:enumeration value="popVariance"/>
+                    <xs:enumeration value="popSD"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="name.MathOperator.Attr">
+        <xs:attribute name="name" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="sin"/>
+                    <xs:enumeration value="cos"/>
+                    <xs:enumeration value="tan"/>
+                    <xs:enumeration value="sec"/>
+                    <xs:enumeration value="csc"/>
+                    <xs:enumeration value="cot"/>
+                    <xs:enumeration value="asin"/>
+                    <xs:enumeration value="acos"/>
+                    <xs:enumeration value="atan"/>
+                    <xs:enumeration value="atan2"/>
+                    <xs:enumeration value="asec"/>
+                    <xs:enumeration value="acsc"/>
+                    <xs:enumeration value="acot"/>
+                    <xs:enumeration value="sinh"/>
+                    <xs:enumeration value="cosh"/>
+                    <xs:enumeration value="tanh"/>
+                    <xs:enumeration value="sech"/>
+                    <xs:enumeration value="csch"/>
+                    <xs:enumeration value="coth"/>
+                    <xs:enumeration value="log"/>
+                    <xs:enumeration value="ln"/>
+                    <xs:enumeration value="exp"/>
+                    <xs:enumeration value="abs"/>
+                    <xs:enumeration value="signum"/>
+                    <xs:enumeration value="floor"/>
+                    <xs:enumeration value="ceil"/>
+                    <xs:enumeration value="toDegrees"/>
+                    <xs:enumeration value="toRadians"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate Global List Types *********************************************************************** -->
+
+    <xs:simpleType name="IdentifierList.Type">
+        <xs:restriction base="xs:NCName"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="IntegerList.Type">
+        <xs:restriction base="xs:int"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="StringList.Type">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="ToleranceList.Type">
+        <xs:union>
+            <xs:simpleType>
+                <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+            <xs:simpleType>
+                <xs:restriction base="xs:double"/>
+            </xs:simpleType>
+        </xs:union>
+    </xs:simpleType>
+
+    <xs:simpleType name="View.Type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="author"/>
+            <xs:enumeration value="candidate"/>
+            <xs:enumeration value="proctor"/>
+            <xs:enumeration value="scorer"/>
+            <xs:enumeration value="testConstructor"/>
+            <xs:enumeration value="tutor"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate Namespaced extension Group  ************************************************************* -->
+
+    <xs:group name="grpLax.any">
+        <xs:annotation>
+            <xs:documentation>
+                Any namespaced element from any namespace may be included within an "any" element.
+                The namespace for the imported element must be defined in the instance, and the schema must be imported.
+                The extension has a definition of "lax" i.e. they can reuse elements from the target namespace.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:any namespace = "##other" processContents = "lax" minOccurs = "0" maxOccurs = "unbounded"/>
+        </xs:sequence>
+    </xs:group>
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate Special DataTypes  ********************************************************************** -->
+
+    <xs:complexType name="EmptyPrimitiveType.Type">
+        <xs:complexContent>
+            <xs:restriction base="xs:anyType"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the enumerated simpleType declarations ************************************************** -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the simpleType elements based on IMS data-types (Parameter) ***************************** -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the simpleType elements based on IMS data-types (Derived) ******************************* -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the simpleType elements based on IMS data-types (Union) ********************************* -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the simpleType elements based on IMS data-types (Complex) ******************************* -->
+
+    <xs:element name="exitResponse" type="EmptyPrimitiveType.Type"/>
+
+    <xs:element name="null" type="EmptyPrimitiveType.Type"/>
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the derived data-type elements based upon simpleType ************************************ -->
+
+    <xs:simpleType name="Identifier.Type">
+        <xs:restriction base="xs:NCName"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="Length.Type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]+%?"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="EncVariableString.Type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\{[\i-[:]][\c-[:]]*\}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="String256.Type">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="256"/>
+            <xs:whiteSpace value="preserve"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="DateTime.Type">
+        <xs:restriction base="xs:dateTime">
+            <xs:pattern value="[0-9]{4}.*"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Date.Type">
+        <xs:restriction base="xs:date">
+            <xs:pattern value="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="MimeType.Type">
+        <xs:restriction base="xs:normalizedString">
+            <xs:pattern value="[\p{IsBasicLatin}-[()&lt;&gt;@,;:\\&quot;/\[\]?=]]+/[\p{IsBasicLatin}-[()&lt;&gt;@,;:\\&quot;/\[\]?=]]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="VariableString.Type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[\i-[:]][\c-[:]]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the derived data-type elements based upon derived simpleType **************************** -->
+
+    <!-- ================================================================================================== -->
+
+    <!-- Generate the data-type ComplexTypes ************************************************************** -->
+
+    <xs:complexType name="CustomOperator.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The custom operator provides a namespaced extension mechanism for defining operations not currently supported by this specification.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "0" maxOccurs = "unbounded">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+            <xs:group ref="grpLax.any"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="class.CustomOperator.Attr"/>
+        <xs:attributeGroup ref="definition.CustomOperator.Attr"/>
+        <xs:attributeGroup ref="extension.CustomOperator.Attr"/>
+    </xs:complexType>
+
+    <xs:complexType name="Equal.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The equal operator takes two sub-expressions which must both have single cardinality and have a numerical base-type. The result is a single boolean with a value of true if the two expressions are numerically equal and false if they are not. If either sub-expression is NULL then the operator results in NULL.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "2" maxOccurs = "2">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attributeGroup ref="toleranceMode.Equal.Attr"/>
+        <xs:attributeGroup ref="tolerance.Equal.Attr"/>
+        <xs:attributeGroup ref="includeLowerBound.Equal.Attr"/>
+        <xs:attributeGroup ref="includeUpperBound.Equal.Attr"/>
+    </xs:complexType>
+
+    <xs:complexType name="EqualRounded.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The equalRounded operator takes two sub-expressions which must both have single cardinality and have a numerical base-type. The result is a single boolean with a value of true if the two expressions are numerically equal after rounding and false if they are not. If either sub-expression is NULL then the operator results in NULL.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "2" maxOccurs = "2">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attributeGroup ref="roundingMode.EqualRounded.Attr"/>
+        <xs:attributeGroup ref="figures.EqualRounded.Attr"/>
+    </xs:complexType>
+
+    <xs:complexType name="FieldValue.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The field-value operator takes a sub-expression with a record container value. The result is the value of the field with the specified fieldIdentifier. If there is no field with that identifier then the result of the operator is NULL.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "1" maxOccurs = "1">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attributeGroup ref="fieldIdentifier.FieldValue.Attr"/>
+    </xs:complexType>
+
+    <xs:complexType name="Index.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The index operator takes a sub-expression with an ordered container value and any base-type. The result is the nth value of the container. The result has the same base-type as the sub-expression but single cardinality. The first value of a container has index 1, the second 2 and so on. n must be a positive integer. If n exceeds the number of values in the container (or the sub-expression is NULL) then the result of the index operator is NULL. If n is an identifier, it is the value of n at runtime that is used.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "1" maxOccurs = "1">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attributeGroup ref="n.Index.Attr"/>
+    </xs:complexType>
+
+    <xs:complexType name="Inside.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The inside operator takes a single sub-expression which must have a baseType of point. The result is a single boolean with a value of true if the given point is inside the area defined by shape and coords. If the sub-expression is a container the result is true if any of the points are inside the area. If either sub-expression is NULL then the operator results in NULL.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "1" maxOccurs = "1">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attributeGroup ref="shape.Inside.Attr"/>
+        <xs:attributeGroup ref="coords.Inside.Attr"/>
+    </xs:complexType>
+
+    <xs:complexType name="Logic0toMany.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                Provides the ability to use a multi variable operator e.g. an 'and' of the set of variables.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "0" maxOccurs = "unbounded">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Logic1toMany.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                Provides the ability to use a multi variable operator e.g. an 'and' of the set of variables.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "1" maxOccurs = "unbounded">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="LogicPair.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                Provides the ability to use a two variable operator e.g. greater than.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "2" maxOccurs = "2">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="LogicSingle.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                Provides the ability to use a single variable operator e.g. a 'not'.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "1" maxOccurs = "1">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="LookupOutcomeValue.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The LookupOutcomeValue complexType is the container for look-up mapping values to outcome variables. The lookupOutcomeValue rule sets the value of an outcome variable to the value obtained by looking up the value of the associated expression in the lookupTable associated with the outcome's declaration.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "1" maxOccurs = "1">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attributeGroup ref="identifier.LookupOutcomeValue.Attr"/>
+    </xs:complexType>
+
+    <xs:complexType name="MathOperator.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The mathOperator operator takes 1 or more sub-expressions which all have single cardinality and have numerical base-types. The trigonometric functions, sin, cos and tan, take one argument in radians, which evaluates to a single float. Other functions take one numerical argument. Further functions might take more than one numerical argument, e.g. atan2 (two argument arc tan). The result is a single float, except for the functions signum, floor and ceil, which return a single integer. If any of the sub-expressions is NULL, the result is NULL. If any of the sub-expressions falls outside the natural domain of the function called by mathOperator, e.g. log(0) or asin(2), then the result is NULL.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "1" maxOccurs = "unbounded">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attributeGroup ref="name.MathOperator.Attr"/>
+    </xs:complexType>
+
+    <xs:complexType name="NumericLogic1toMany.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                Provides the ability to use a multi variable numeric-based operator e.g. a 'sum' of the set of variables.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "1" maxOccurs = "unbounded">
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PatternMatch.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The patternMatch operator takes a sub-expression which must have single cardinality and a base-type of string. The result is a single boolean with a value of true if the sub-expression matches the regular expression given by pattern and false if it doesn't. If the sub-expression is NULL then the operator results in NULL.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "1" maxOccurs = "1">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attributeGroup ref="pattern.PatternMatch.Attr"/>
+    </xs:complexType>
+
+    <xs:complexType name="Repeat.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The repeat operator allows the filling of an ordered container. The result of a repeat operator is an ordered set of values calculated from the expressions. Values will be set in the associated container by a setTemplateValue expression. Each expression is calculated as many times as it is queried by numberRepeats.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "1" maxOccurs = "unbounded">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="numberRepeats" use="required">
+            <xs:simpleType>
+                <xs:union>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:NCName"/>
+                    </xs:simpleType>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:int"/>
+                    </xs:simpleType>
+                </xs:union>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="ResponseCondition.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The ResponseCondition complexType is the container for the sequence of outcome conditions to be applied. The condition is structured as an 'If..ElseIf..ElseIf..Else' sequence. Each clause as its own response rule construct.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="responseIf" type="ResponseIf.Type" minOccurs = "1" maxOccurs = "1"/>
+            <xs:element name="responseElseIf" type="ResponseIf.Type" minOccurs = "0" maxOccurs = "unbounded"/>
+            <xs:element name="responseElse" type="ResponseElse.Type" minOccurs = "0" maxOccurs = "1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ResponseElse.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The ResponseElse complexType is the container for the 'Else' clause. If the expression given in a responseIf or responseElseIf evaluates to true then the sub-rules contained within it are followed and any following responseElseIf or responseElse parts are ignored for this response condition. If the expression given in a responseIf or responseElseIf does not evaluate to true then consideration passes to the next responseElseIf or, if there are no more responseElseIf parts then the sub-rules of the responseElse are followed (if specified).
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "0" maxOccurs = "unbounded">
+                <xs:element ref="xi:include" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="responseCondition" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="responseProcessingFragment" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="setOutcomeValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="exitResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lookupOutcomeValue" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ResponseIf.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The ResponseIf complexType is the container for the 'If' clause. If the expression given in a responseIf or responseElseIf evaluates to true then the sub-rules contained within it are followed and any following responseElseIf or responseElse parts are ignored for this response condition. If the expression given in a responseIf or responseElseIf does not evaluate to true then consideration passes to the next responseElseIf or, if there are no more responseElseIf parts then the sub-rules of the responseElse are followed (if specified).
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "1" maxOccurs = "1">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+            <xs:choice minOccurs = "0" maxOccurs = "unbounded">
+                <xs:element ref="xi:include" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="responseCondition" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="responseProcessingFragment" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="setOutcomeValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="exitResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lookupOutcomeValue" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ResponseProcessing.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The ResponseProcessing complexType is the container for response processing instructions. Response processing involves the application of a set of responseRules, including the testing of responseConditions and the evaluation of expressions involving the item variables. For delivery engines that are only designed to support very simple use cases the implementation of a system for carrying out this evaluation, conditional testing and processing may pose a barrier to the adoption of the specification.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "0" maxOccurs = "unbounded">
+                <xs:element ref="xi:include" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="responseCondition" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="responseProcessingFragment" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="setOutcomeValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="exitResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lookupOutcomeValue" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attributeGroup ref="template.ResponseProcessing.Attr"/>
+        <xs:attributeGroup ref="templateLocation.ResponseProcessing.Attr"/>
+    </xs:complexType>
+
+    <xs:complexType name="ResponseProcessingFragment.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The ResponseProcessingFragment complexType is the container for a group of response rules. A responseProcessingFragment is a simple group of responseRules which are grouped together in order to allow them to be managed as a separate resource. It should not be used for any other purpose.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "0" maxOccurs = "unbounded">
+                <xs:element ref="xi:include" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="responseCondition" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="responseProcessingFragment" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="setOutcomeValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="exitResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lookupOutcomeValue" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="RoundTo.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The roundTo operator takes one sub-expression which must have single cardinality and a numerical base-type. The result is a single float with the value nearest to that of the expression's value such that when converted to a decimal string it represents the expression rounded by the specified rounding method to the specified precision. If the sub-expression is NULL, then the result is NULL. If the sub-expression is INF, then the result is INF. If the sub-expression is -INF, then the result is -INF. If the argument is NaN, then the result is NULL. When rounding to n significant figures, the deciding digit is the (n+1)th digit counting from the first non-zero digit from the left in the number. If the deciding digit is 5 or greater, the nth digit is increased by 1 and all digits to its right are discarded; if the deciding digit is less than 5, all digits to the right of the nth digit are discarded. When rounding to n decimal places, the deciding digit is the (n+1)th digit counting to the right from the decimal point. If the deciding digit is 5 or greater, the nth digit is increased by 1 and all digits to its right are discarded; if the deciding digit is less than 5, all digits to the right of the nth digit are discarded.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "1" maxOccurs = "1">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attributeGroup ref="roundingMode.RoundTo.Attr"/>
+        <xs:attributeGroup ref="figures.RoundTo.Attr"/>
+    </xs:complexType>
+
+    <xs:complexType name="SetValue.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The SetValue complexType is the container for the value set for the associated element (the element is identified using the 'identifier' attribute).
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "1" maxOccurs = "1">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attributeGroup ref="identifier.SetValue.Attr"/>
+    </xs:complexType>
+
+    <xs:complexType name="StatsOperator.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The statsOperator operator takes 1 sub-expression which is a container of multiple or ordered cardinality and has a numerical base-type. The result is a single float. If the sub-expression or any value contained therein is NULL, the result is NULL. If any value contained in the sub-expression is not a numerical value, then the result is NULL.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "1" maxOccurs = "1">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attributeGroup ref="name.StatsOperator.Attr"/>
+    </xs:complexType>
+
+    <xs:complexType name="StringMatch.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The stringMatch operator takes two sub-expressions which must have single and a base-type of string. The result is a single boolean with a value of true if the two strings match according to the comparison rules defined by the attributes below and false if they don't. If either sub-expression is NULL then the operator results in NULL.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "2" maxOccurs = "2">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attributeGroup ref="caseSensitive.StringMatch.Attr"/>
+        <xs:attributeGroup ref="substring.StringMatch.Attr"/>
+    </xs:complexType>
+
+    <xs:complexType name="Substring.Type" mixed="false">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The substring operator takes two sub-expressions which must both have an effective base-type of string and single cardinality. The result is a single boolean with a value of true if the first expression is a substring of the second expression and false if it isn't. If either sub-expression is NULL then the result of the operator is NULL.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:choice minOccurs = "2" maxOccurs = "2">
+                <xs:element ref="and" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="not" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lt" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lte" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="or" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="sum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationLT" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="durationGTE" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="subtract" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="divide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="multiple" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="ordered" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="customOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="random" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberIncorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberCorrect" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberPresented" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberResponded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="numberSelected" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="substring" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equalRounded" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="null" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="delete" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="match" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="index" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="power" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="equal" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="contains" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="containerSize" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="correct" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="default" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerDivide" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerModulus" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="isNull" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="member" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="product" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="round" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="truncate" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="fieldValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomInteger" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="randomFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="variable" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMinimum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="outcomeMaximum" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="testVariables" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="integerToFloat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="inside" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="baseValue" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="patternMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponsePoint" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mapResponse" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="stringMatch" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="repeat" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="roundTo" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="lcm" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="gcd" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="min" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="max" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathConstant" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="statsOperator" minOccurs = "1" maxOccurs = "1"/>
+                <xs:element ref="mathOperator" minOccurs = "1" maxOccurs = "1"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attributeGroup ref="caseSensitive.Substring.Attr"/>
+    </xs:complexType>
+
+    <xs:complexType name="BaseValue.Type">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The simplest expression returns a single value from the set defined by the given baseType.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attributeGroup ref="baseType.BaseValue.Attr"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="Correct.Type">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                This expression looks up the declaration of a response variable and returns the associated correctResponse or NULL if no correct value was declared. When used in outcomes processing item identifier prefixing (see variable) may be used to obtain the correct response from an individual item. This is intentionally empty.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="EmptyPrimitiveType.Type">
+                <xs:attributeGroup ref="identifier.Correct.Attr"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Default.Type">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                This expression looks up the declaration of an itemVariable and returns the associated defaultValue or NULL if no default value was declared. When used in outcomes processing item identifier prefixing (see variable) may be used to obtain the default value from an individual item. This is intentionally empty.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="EmptyPrimitiveType.Type">
+                <xs:attributeGroup ref="identifier.Default.Attr"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="MapResponse.Type">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                This expression looks up the value of a response variable and then transforms it using the associated mapping, which must have been declared. The result is a single float. If the response variable has single cardinality then the value returned is simply the mapped target value from the map. If the response variable has multiple or ordered cardinality then the value returned is the sum of the mapped target values. This expression cannot be applied to variables of record cardinality. This is intentionally empty.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="EmptyPrimitiveType.Type">
+                <xs:attributeGroup ref="identifier.MapResponse.Attr"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="MathConstant.Type">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                The result is a mathematical constant returned as a single float, e.g. pi and e.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="EmptyPrimitiveType.Type">
+                <xs:attributeGroup ref="name.MathConstant.Attr"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Number.Type">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                Provides an operator that returns the number of values that confrm to the associated constraints e.g. 'numberCorrect'.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="EmptyPrimitiveType.Type">
+                <xs:attributeGroup ref="sectionIdentifier.Number.Attr"/>
+                <xs:attributeGroup ref="includeCategory.Number.Attr"/>
+                <xs:attributeGroup ref="excludeCategory.Number.Attr"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="OutcomeMinMax.Type">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                This expression, which can only be used in outcomes processing, simultaneously looks up the normal Maximum/Minimum value of an outcome variable in a sub-set of the items referred to in a test. Only variables with single cardinality are considered. If any of the items within the given subset have no declared maximum the result is NULL, otherwise the result has cardinality multiple and base-type float. This is intentionally empty.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="EmptyPrimitiveType.Type">
+                <xs:attributeGroup ref="sectionIdentifier.OutcomeMinMax.Attr"/>
+                <xs:attributeGroup ref="includeCategory.OutcomeMinMax.Attr"/>
+                <xs:attributeGroup ref="excludeCategory.OutcomeMinMax.Attr"/>
+                <xs:attributeGroup ref="outcomeIdentifier.OutcomeMinMax.Attr"/>
+                <xs:attributeGroup ref="weightIdentifier.OutcomeMinMax.Attr"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="RandomFloat.Type">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                Selects a random float from the specified range [min,max]. This is intentionally empty.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="EmptyPrimitiveType.Type">
+                <xs:attributeGroup ref="min.RandomFloat.Attr"/>
+                <xs:attributeGroup ref="max.RandomFloat.Attr"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="RandomInteger.Type">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                Selects a random integer from the specified range [min,max] satisfying min + step * n for some integer n. For example, with min=2, max=11 and step=3 the values {2,5,8,11} are possible.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="EmptyPrimitiveType.Type">
+                <xs:attributeGroup ref="min.RandomInteger.Attr"/>
+                <xs:attributeGroup ref="max.RandomInteger.Attr"/>
+                <xs:attributeGroup ref="step.RandomInteger.Attr"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TestVariables.Type">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                This expression, which can only be used in outcomes processing, simultaneously looks up the value of an itemVariable in a sub-set of the items referred to in a test. Only variables with single cardinality are considered, all NULL values are ignored. The result has cardinality multiple and base-type as specified below. This is intentionally empty.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="EmptyPrimitiveType.Type">
+                <xs:attributeGroup ref="sectionIdentifier.TestVariables.Attr"/>
+                <xs:attributeGroup ref="includeCategory.TestVariables.Attr"/>
+                <xs:attributeGroup ref="excludeCategory.TestVariables.Attr"/>
+                <xs:attributeGroup ref="variableIdentifier.TestVariables.Attr"/>
+                <xs:attributeGroup ref="weightIdentifier.TestVariables.Attr"/>
+                <xs:attributeGroup ref="baseType.TestVariables.Attr"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Variable.Type">
+        <xs:annotation>
+            <xs:documentation source="umldocumentation">
+                This expression looks up the value of an itemVariable that has been declared in a corresponding variableDeclaration or is one of the built-in variables. The result has the base-type and cardinality declared for the variable subject to the type promotion of weighted outcomes. This is intentionally empty.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="EmptyPrimitiveType.Type">
+                <xs:attributeGroup ref="identifier.Variable.Attr"/>
+                <xs:attributeGroup ref="weightIdentifier.Variable.Attr"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!-- ================================================================================================== -->
+
+    <!-- Declaration of the elements (Complex) ************************************************************ -->
+
+    <xs:element name="and" type="Logic1toMany.Type"/>
+
+    <xs:element name="containerSize" type="LogicSingle.Type"/>
+
+    <xs:element name="contains" type="LogicPair.Type"/>
+
+    <xs:element name="customOperator" type="CustomOperator.Type"/>
+
+    <xs:element name="delete" type="LogicPair.Type"/>
+
+    <xs:element name="divide" type="LogicPair.Type"/>
+
+    <xs:element name="durationGTE" type="LogicPair.Type"/>
+
+    <xs:element name="durationLT" type="LogicPair.Type"/>
+
+    <xs:element name="equal" type="Equal.Type"/>
+
+    <xs:element name="equalRounded" type="EqualRounded.Type"/>
+
+    <xs:element name="fieldValue" type="FieldValue.Type"/>
+
+    <xs:element name="gcd" type="Logic1toMany.Type"/>
+
+    <xs:element name="gt" type="LogicPair.Type"/>
+
+    <xs:element name="gte" type="LogicPair.Type"/>
+
+    <xs:element name="index" type="Index.Type"/>
+
+    <xs:element name="inside" type="Inside.Type"/>
+
+    <xs:element name="integerDivide" type="LogicPair.Type"/>
+
+    <xs:element name="integerModulus" type="LogicPair.Type"/>
+
+    <xs:element name="integerToFloat" type="LogicSingle.Type"/>
+
+    <xs:element name="isNull" type="LogicSingle.Type"/>
+
+    <xs:element name="lcm" type="Logic1toMany.Type"/>
+
+    <xs:element name="lookupOutcomeValue" type="LookupOutcomeValue.Type"/>
+
+    <xs:element name="lt" type="LogicPair.Type"/>
+
+    <xs:element name="lte" type="LogicPair.Type"/>
+
+    <xs:element name="match" type="LogicPair.Type"/>
+
+    <xs:element name="mathOperator" type="MathOperator.Type"/>
+
+    <xs:element name="max" type="Logic1toMany.Type"/>
+
+    <xs:element name="member" type="LogicPair.Type"/>
+
+    <xs:element name="min" type="Logic1toMany.Type"/>
+
+    <xs:element name="multiple" type="Logic0toMany.Type"/>
+
+    <xs:element name="not" type="LogicSingle.Type"/>
+
+    <xs:element name="or" type="Logic1toMany.Type"/>
+
+    <xs:element name="ordered" type="Logic0toMany.Type"/>
+
+    <xs:element name="patternMatch" type="PatternMatch.Type"/>
+
+    <xs:element name="power" type="LogicPair.Type"/>
+
+    <xs:element name="product" type="Logic1toMany.Type"/>
+
+    <xs:element name="random" type="LogicSingle.Type"/>
+
+    <xs:element name="repeat" type="Repeat.Type"/>
+
+    <xs:element name="responseCondition" type="ResponseCondition.Type"/>
+
+    <xs:element name="responseProcessingFragment" type="ResponseProcessingFragment.Type"/>
+
+    <xs:element name="round" type="LogicSingle.Type"/>
+
+    <xs:element name="roundTo" type="RoundTo.Type"/>
+
+    <xs:element name="setOutcomeValue" type="SetValue.Type"/>
+
+    <xs:element name="statsOperator" type="StatsOperator.Type"/>
+
+    <xs:element name="stringMatch" type="StringMatch.Type"/>
+
+    <xs:element name="substring" type="Substring.Type"/>
+
+    <xs:element name="subtract" type="LogicPair.Type"/>
+
+    <xs:element name="sum" type="NumericLogic1toMany.Type"/>
+
+    <xs:element name="truncate" type="LogicSingle.Type"/>
+
+    <!-- ================================================================================================== -->
+
+    <!-- Declaration of the elements (Derived) ************************************************************* -->
+
+    <xs:element name="baseValue" type="BaseValue.Type"/>
+
+    <xs:element name="correct" type="Correct.Type"/>
+
+    <xs:element name="default" type="Default.Type"/>
+
+    <xs:element name="mapResponse" type="MapResponse.Type"/>
+
+    <xs:element name="mapResponsePoint" type="MapResponse.Type"/>
+
+    <xs:element name="mathConstant" type="MathConstant.Type"/>
+
+    <xs:element name="numberCorrect" type="Number.Type"/>
+
+    <xs:element name="numberIncorrect" type="Number.Type"/>
+
+    <xs:element name="numberPresented" type="Number.Type"/>
+
+    <xs:element name="numberResponded" type="Number.Type"/>
+
+    <xs:element name="numberSelected" type="Number.Type"/>
+
+    <xs:element name="outcomeMaximum" type="OutcomeMinMax.Type"/>
+
+    <xs:element name="outcomeMinimum" type="OutcomeMinMax.Type"/>
+
+    <xs:element name="randomFloat" type="RandomFloat.Type"/>
+
+    <xs:element name="randomInteger" type="RandomInteger.Type"/>
+
+    <xs:element name="testVariables" type="TestVariables.Type"/>
+
+    <xs:element name="variable" type="Variable.Type"/>
+
+    <!-- ================================================================================================== -->
+
+    <!-- Declaration of the root element(s) *************************************************************** -->
+
+    <xs:element name="responseProcessing" type="ResponseProcessing.Type"/>
+
+    <!-- ================================================================================================== -->
+
+</xs:schema>

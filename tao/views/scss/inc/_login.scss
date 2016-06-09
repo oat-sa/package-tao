@@ -1,0 +1,140 @@
+@import "inc/bootstrap";
+
+$entryArrowWidthBefore: 20;
+$entryArrowWidthAfter: 20;
+$entryArrowHeight: 150;
+
+
+.entry-point {
+
+    @include simple-border();
+    background: $uiClickableDefaultBg;
+    margin-bottom: 20px;
+    padding:20px;
+    position: relative;
+}
+
+
+// login screen
+
+#login-box {
+    width: 400px;
+    .form-error {
+        display:none;
+    }
+    #connect {
+        @extend %generic-btn-code !optional;
+        line-height: 1.8;
+        height: 25px;
+        background-color: whiten($info, .1);
+        text-shadow: 1px 1px 0 blacken($info, .2);
+    }
+    h1 {
+        margin-bottom: 20px;
+    }
+}
+
+#entry-point-box, .entry-point-box {
+    width: 500px;
+    h1, h3 {
+        @include font-size(20);
+        margin-bottom: 7px;
+        color:  $info;
+        text-shadow: 1px 1px 1px #fff;
+    }
+    .text-link {
+        position: absolute;
+        right: -1px;
+        bottom: -1px;
+        padding: 20px;
+        text-align: right;
+        min-width: 200px;
+        border-bottom: 3px solid;
+        color: $uiClickableHoverBg;
+        outline:0;
+        &:hover {
+            color: $info;
+        }
+    }
+    a {
+        height: $entryArrowHeight * 1px;
+    }
+    .entry-point {
+
+        padding-left: 40px;
+
+        &:before, &:after {
+            content: '';
+            height: ($entryArrowHeight / 4) * 1px;
+            border: solid transparent;
+            border-top-width: (($entryArrowHeight / 4) / 2) * 1px;
+            border-bottom-width: (($entryArrowHeight / 4) / 2) * 1px;
+            position: absolute;
+            left: -1px;
+            bottom: 54px;
+            z-index: 2;
+        }
+
+        .text-link {
+            ::before {
+                position: relative;
+                top: 1px;
+                left: -2px;
+            }
+        }
+
+        // color wheel defined in _colors.scss
+        &.entry-point-backoffice {
+            .text-link {
+                border-bottom-color: $colorWheel-03 !important;
+            }
+        }
+
+        &.entry-point-deliveryServer {
+            .text-link {
+                border-bottom-color: $colorWheel-04 !important;
+            }
+        }
+        // color choice courtesy of cyril@taotesting.com U+1F44D like
+        &.entry-point-started-deliveries {
+            .text-link {
+                border-bottom-color: $colorWheel-04 !important;
+            }
+        }
+
+        &.entry-point-all-deliveries {
+            .text-link {
+                border-bottom-color: $colorWheel-10 !important;
+            }
+        }
+
+        &.entry-point-backofficeCe {
+            .text-link {
+                border-bottom-color: $colorWheel-10 !important;
+            }
+        }
+        &:before {
+            border-left-color:$uiGeneralContentBorder;
+            width: $entryArrowWidthBefore * 1px;
+            border-right-width: ($entryArrowWidthBefore / 2) * 1px;
+            border-left-width: ($entryArrowWidthBefore / 2) * 1px;
+            left: 0px;
+        }
+
+        &:after {
+            border-left-color:white;
+            width: $entryArrowWidthAfter * 1px;
+            border-right-width: ($entryArrowWidthAfter / 2) * 1px;
+            border-left-width: ($entryArrowWidthAfter / 2) * 1px;
+        }
+    }
+
+
+}
+
+#entry-point-box, #login-box {
+    margin: 40px auto 0;
+    h1 {
+        @include largeHeading();
+    }
+}

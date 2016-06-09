@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE structures SYSTEM "../doc/structures.dtd">
+<structures>
+	<structure id="users" name="Users" url="/tao/Users/index" level="8" group="invisible">
+		<description />
+		<sections>
+			<section id="list_users" name="Manage users" url="/tao/Users/index" />
+			<section id="add_user" name="Add a user" url="/tao/Users/add" />
+			<section id="edit_user" name="Edit a user" url="/tao/Users/edit" />
+			<section id="manage_rolesrights" name="Manages Roles Rights" url="/tao/Roles/index" />
+		</sections>
+	</structure>
+</structures>

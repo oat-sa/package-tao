@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JQuery Validator Tests</title>
+        <link rel="stylesheet" type="text/css" href="/tao/views/js/lib/qunit/qunit.css">
+        <script type="text/javascript" src="/tao/views/js/lib/require.js"></script>
+        <script type="text/javascript" src="/tao/views/js/lib/qunit/qunit.js"></script>
+
+        <script  type="text/javascript">
+            QUnit.config.autostart = false;
+            require(['/tao/ClientConfig/config'], function() {
+                require(['test/ui/validator/test'], function() {
+                    QUnit.start();
+                });
+            });
+        </script>
+    </head>
+    <body class="tao-scope">
+        <div id="qunit"></div>
+        <div id="qunit-fixture">
+            <form id="form_1">
+                <input
+                        name="field_0"
+                        id="field_0"
+                        type="text"
+                        data-validate="$notEmpty; $pattern(pattern=[A-Z][a-z]{3,}, modifier=i)"/>
+                <input
+                        name="field_1"
+                        id="field_1"
+                        type="text"
+                        data-validate="$notEmpty; $pattern(pattern=[A-Z][a-z]{3,}, modifier=i, message='abcd, key=val, foo(bar)')"/>
+                <input
+                        name="field_2"
+                        id="field_2"
+                        type="text"
+                        data-validate='$notEmpty; $pattern(pattern=[A-Z][a-z]{3,}, modifier=i, message="abcd key=val foo(bar)")'/>
+            </form>
+        </div>
+    </body>
+</html>

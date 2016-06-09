@@ -1,0 +1,29 @@
+<!-- services root tag -->
+<!ELEMENT services (description?, service*)>
+
+	<!-- the service tag contains a service -->
+	<!ELEMENT service (name,description,location,return?)>
+		
+		<!-- the location to access the service -->
+		<!ELEMENT location (param)*>
+		
+			<!-- the url of the service -->
+			<!ATTLIST location url CDATA #REQUIRED>
+			
+		<!-- the output vars of the service -->
+		<!ELEMENT return (param)*>
+			
+			<!-- the list of the service parameter -->
+			<!ELEMENT param (name?,description?)>
+			
+				<!-- the key of the parameter -->
+				<!ATTLIST param key CDATA #REQUIRED>
+				
+				<!-- the value of the parameter if it's a constant -->
+				<!ATTLIST param value CDATA #IMPLIED>
+		
+		<!-- the name of the service -->
+		<!ELEMENT name (#PCDATA)>
+		
+		<!-- the description  -->
+		<!ELEMENT description (#PCDATA)>

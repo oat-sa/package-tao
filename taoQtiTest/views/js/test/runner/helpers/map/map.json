@@ -1,0 +1,292 @@
+{
+  "parts": {
+    "testPart-1": {
+      "id": "testPart-1",
+      "label": "testPart-1",
+      "position": 0,
+      "isLinear": false,
+      "sections": {
+        "assessmentSection-1": {
+          "id": "assessmentSection-1",
+          "label": "Section 1",
+          "position": 0,
+          "items": {
+            "item-1": {
+              "id": "item-1",
+              "uri": "http://tao.dev/tao.rdf#i145528120995165",
+              "label": "Item 1",
+              "position": 0,
+              "positionInPart": 0,
+              "positionInSection": 0,
+              "occurrence": 0,
+              "remainingAttempts": -1,
+              "answered": false,
+              "flagged": false,
+              "viewed": true
+            },
+            "item-2": {
+              "id": "item-2",
+              "uri": "http://tao.dev/tao.rdf#i14552812103217",
+              "label": "Item 2",
+              "position": 1,
+              "positionInPart": 1,
+              "positionInSection": 1,
+              "occurrence": 0,
+              "remainingAttempts": -1,
+              "answered": false,
+              "flagged": false,
+              "viewed": false
+            },
+            "item-3": {
+              "id": "item-3",
+              "uri": "http://tao.dev/tao.rdf#i14552812114599",
+              "label": "Item 3",
+              "position": 2,
+              "positionInPart": 2,
+              "positionInSection": 2,
+              "occurrence": 0,
+              "remainingAttempts": -1,
+              "answered": false,
+              "flagged": false,
+              "viewed": false
+            }
+          },
+          "stats": {
+            "answered": 0,
+            "flagged": 0,
+            "viewed": 1,
+            "total": 3
+          }
+        },
+        "assessmentSection-2": {
+          "id": "assessmentSection-2",
+          "label": "Section 2",
+          "position": 3,
+          "items": {
+            "item-4": {
+              "id": "item-4",
+              "uri": "http://tao.dev/tao.rdf#i1455281212583911",
+              "label": "Item 1",
+              "position": 3,
+              "positionInPart": 3,
+              "positionInSection": 0,
+              "occurrence": 0,
+              "remainingAttempts": -1,
+              "answered": false,
+              "flagged": false,
+              "viewed": false
+            },
+            "item-5": {
+              "id": "item-5",
+              "uri": "http://tao.dev/tao.rdf#i1455281213682213",
+              "label": "Item 2",
+              "position": 4,
+              "positionInPart": 4,
+              "positionInSection": 1,
+              "occurrence": 0,
+              "remainingAttempts": -1,
+              "answered": false,
+              "flagged": false,
+              "viewed": false
+            },
+            "item-6": {
+              "id": "item-6",
+              "uri": "http://tao.dev/tao.rdf#i1455281214706415",
+              "label": "Item 3",
+              "position": 5,
+              "positionInPart": 5,
+              "positionInSection": 2,
+              "occurrence": 0,
+              "remainingAttempts": -1,
+              "answered": false,
+              "flagged": false,
+              "viewed": false
+            }
+          },
+          "stats": {
+            "answered": 0,
+            "flagged": 0,
+            "viewed": 0,
+            "total": 3
+          }
+        }
+      },
+      "stats": {
+        "answered": 0,
+        "flagged": 0,
+        "viewed": 1,
+        "total": 6
+      }
+    },
+    "testPart-2": {
+      "id": "testPart-2",
+      "label": "testPart-2",
+      "position": 6,
+      "isLinear": false,
+      "sections": {
+        "assessmentSection-3": {
+          "id": "assessmentSection-3",
+          "label": "Section 1",
+          "position": 6,
+          "items": {
+            "item-7": {
+              "id": "item-7",
+              "uri": "http://tao.dev/tao.rdf#i1455281215282817",
+              "label": "Item 1",
+              "position": 6,
+              "positionInPart": 0,
+              "positionInSection": 0,
+              "occurrence": 0,
+              "remainingAttempts": -1,
+              "answered": false,
+              "flagged": false,
+              "viewed": false
+            },
+            "item-8": {
+              "id": "item-8",
+              "uri": "http://tao.dev/tao.rdf#i145528121615119",
+              "label": "Item 2",
+              "position": 7,
+              "positionInPart": 1,
+              "positionInSection": 1,
+              "occurrence": 0,
+              "remainingAttempts": -1,
+              "answered": false,
+              "flagged": false,
+              "viewed": false
+            }
+          },
+          "stats": {
+            "answered": 0,
+            "flagged": 0,
+            "viewed": 0,
+            "total": 2
+          }
+        },
+        "assessmentSection-4": {
+          "id": "assessmentSection-4",
+          "label": "Section 2",
+          "position": 8,
+          "items": {
+            "item-9": {
+              "id": "item-9",
+              "uri": "http://tao.dev/tao.rdf#i1455281217743021",
+              "label": "Item 1",
+              "position": 8,
+              "positionInPart": 2,
+              "positionInSection": 0,
+              "occurrence": 0,
+              "remainingAttempts": -1,
+              "answered": false,
+              "flagged": false,
+              "viewed": false
+            },
+            "item-10": {
+              "id": "item-10",
+              "uri": "http://tao.dev/tao.rdf#i1455281218981023",
+              "label": "Item 2",
+              "position": 9,
+              "positionInPart": 3,
+              "positionInSection": 1,
+              "occurrence": 0,
+              "remainingAttempts": -1,
+              "answered": false,
+              "flagged": false,
+              "viewed": false
+            }
+          },
+          "stats": {
+            "answered": 0,
+            "flagged": 0,
+            "viewed": 0,
+            "total": 2
+          }
+        }
+      },
+      "stats": {
+        "answered": 0,
+        "flagged": 0,
+        "viewed": 0,
+        "total": 4
+      }
+    }
+  },
+  "jumps": [
+    {
+      "identifier": "item-1",
+      "section": "assessmentSection-1",
+      "part": "testPart-1",
+      "position": 0,
+      "uri": "http://tao.dev/tao.rdf#i145528120995165"
+    },
+    {
+      "identifier": "item-2",
+      "section": "assessmentSection-1",
+      "part": "testPart-1",
+      "position": 1,
+      "uri": "http://tao.dev/tao.rdf#i14552812103217"
+    },
+    {
+      "identifier": "item-3",
+      "section": "assessmentSection-1",
+      "part": "testPart-1",
+      "position": 2,
+      "uri": "http://tao.dev/tao.rdf#i14552812114599"
+    },
+    {
+      "identifier": "item-4",
+      "section": "assessmentSection-2",
+      "part": "testPart-1",
+      "position": 3,
+      "uri": "http://tao.dev/tao.rdf#i1455281212583911"
+    },
+    {
+      "identifier": "item-5",
+      "section": "assessmentSection-2",
+      "part": "testPart-1",
+      "position": 4,
+      "uri": "http://tao.dev/tao.rdf#i1455281213682213"
+    },
+    {
+      "identifier": "item-6",
+      "section": "assessmentSection-2",
+      "part": "testPart-1",
+      "position": 5,
+      "uri": "http://tao.dev/tao.rdf#i1455281214706415"
+    },
+    {
+      "identifier": "item-7",
+      "section": "assessmentSection-3",
+      "part": "testPart-2",
+      "position": 6,
+      "uri": "http://tao.dev/tao.rdf#i1455281215282817"
+    },
+    {
+      "identifier": "item-8",
+      "section": "assessmentSection-3",
+      "part": "testPart-2",
+      "position": 7,
+      "uri": "http://tao.dev/tao.rdf#i145528121615119"
+    },
+    {
+      "identifier": "item-9",
+      "section": "assessmentSection-4",
+      "part": "testPart-2",
+      "position": 8,
+      "uri": "http://tao.dev/tao.rdf#i1455281217743021"
+    },
+    {
+      "identifier": "item-10",
+      "section": "assessmentSection-4",
+      "part": "testPart-2",
+      "position": 9,
+      "uri": "http://tao.dev/tao.rdf#i1455281218981023"
+    }
+  ],
+  "stats": {
+    "answered": 0,
+    "flagged": 0,
+    "viewed": 1,
+    "total": 10
+  }
+}

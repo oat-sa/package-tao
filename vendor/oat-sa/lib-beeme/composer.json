@@ -1,0 +1,33 @@
+{
+    "name": "oat-sa/lib-beeme",
+    "type": "library",
+    "description": "Simple mathematical expression/equation parser and calculator.",
+    "keywords": ["math parser", "shunting-yard algorithm", "math calculator"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adrean Boyadzhiev",
+            "email": "adrean.boyadzhiev@gmail.com"
+        },
+        {
+            "name": "Jérôme Bogaerts",
+            "email": "jerome@taotesting.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "oat\\beeme\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "oat\\beeme\tests\\": "tests\beeme"
+        }
+    }
+}

@@ -1,0 +1,1 @@
+There are two directories 'source-sans-pro'. The one with the _google postfix is a download from fonts.google.com whareas the other one is directly from Adobe

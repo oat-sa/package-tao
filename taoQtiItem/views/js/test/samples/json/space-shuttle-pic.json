@@ -1,0 +1,323 @@
+{
+    "identifier": "space-shuttle-30-years-of-adventure",
+    "serial": "item_546cb89e037d2926817182",
+    "qtiClass": "assessmentItem",
+    "attributes": {
+        "identifier": "space-shuttle-30-years-of-adventure",
+        "title": "The Space Shuttle, 30 years of adventure",
+        "label": "",
+        "adaptive": false,
+        "timeDependent": false,
+        "toolName": "TAO",
+        "toolVersion": "3.0"
+    },
+    "body": {
+        "serial": "container_containeritembody_546cb89e037ba814681360",
+        "body": "{{portableinfocontrol_556f08e21039e128137685}} {{portableinfocontrol_556f08e211b49955612514}} {{portableinfocontrol_556f08e211bf6383569033}} {{portableinfocontrol_556f08e211c79279799350}}<p id=\"stimulus\">\n\t\t\tDuring more than 30 years, the American Space Shuttle transported 355 astronauts in space over 135\n\t\t\torbital launchings from Cap Canaveral, Florida. This 2046-ton Behemoth traveled 870 million kilometers\n\t\t\taround the Earth from 12th of April 1981 to 21st of July 2011. The National Aeronautics and Space\n\t\t\tAdministration (NASA) built 5 Space Shuttles: Columbia, Challenger, Discovery, Atlantis and Endeavour.\n\t\t</p>\n    {{interaction_choiceinteraction_546cb89e04090230494786}}",
+        "elements": {
+            "portableinfocontrol_556f08e21039e128137685": {
+                "serial": "portableinfocontrol_556f08e21039e128137685",
+                "qtiClass": "infoControl",
+                "attributes": {
+                    "id": "mock-1",
+                    "title": "PIC Mock 1",
+                    "class": "sts-scope sts-tmp-element"
+                },
+                "debug": {
+                    "relatedItem": "item_556f08e1e8b38617090200"
+                },
+                "typeIdentifier": "picMock1",
+                "markup": "<div id=\"sts-picMock1\" class=\"sts-toolcontainer\" data-position=\"1\">\n            <span class=\"sts-button sts-launch-button\" data-typeIdentifier=\"picMock1\" title=\"PIC Mock 1\"><\/span>\n            <div class=\"sts-container sts-hidden-container sts-picMock1-container\">\n              <!-- Tool content here -->\n            <\/div>\n          <\/div>",
+                "libraries": [
+
+                ],
+                "properties": {
+                    "movable": "",
+                    "theme": "tao-light",
+                    "position": "7",
+                    "toolbarId": "sts-studentToolbar"
+                },
+                "entryPoint": "pic-mock-1.js"
+            },
+            "portableinfocontrol_556f08e211b49955612514": {
+                "serial": "portableinfocontrol_556f08e211b49955612514",
+                "qtiClass": "infoControl",
+                "attributes": {
+                    "id": "mock-2",
+                    "title": "PIC Mock 2",
+                    "class": "sts-scope sts-tmp-element"
+                },
+                "debug": {
+                    "relatedItem": "item_556f08e1e8b38617090200"
+                },
+                "typeIdentifier": "picMock2",
+                "markup": "<div id=\"sts-picMock2\" class=\"sts-toolcontainer\" data-position=\"2\">\n            <span class=\"sts-button sts-launch-button\" data-typeIdentifier=\"picMock2\" title=\"PIC Mock 2\"><\/span>\n            <div class=\"sts-container sts-hidden-container sts-picMock2-container\">\n              <!-- Tool content here -->\n            <\/div>\n          <\/div>",
+                "libraries": [
+
+                ],
+                "properties": {
+                    "is": {
+
+                    },
+                    "position": "-1",
+                    "toolbarId": "sts-studentToolbar"
+                },
+                "entryPoint": "pic-mock-2.js"
+            },
+            "portableinfocontrol_556f08e211bf6383569033": {
+                "serial": "portableinfocontrol_556f08e211bf6383569033",
+                "qtiClass": "infoControl",
+                "attributes": {
+                    "id": "mock-3",
+                    "title": "PIC Mock 3",
+                    "class": "sts-scope sts-tmp-element"
+                },
+                "debug": {
+                    "relatedItem": "item_556f08e1e8b38617090200"
+                },
+                "typeIdentifier": "picMock3",
+                "markup": "<div id=\"sts-picMock3\" class=\"sts-toolcontainer\" data-position=\"3\">\n            <span class=\"sts-button sts-launch-button\" data-typeIdentifier=\"picMock3\" title=\"PIC Mock 3\"><\/span>\n            <div class=\"sts-container sts-hidden-container sts-picMock3-container\">\n              <!-- Tool content here -->\n            <\/div>\n          <\/div>",
+                "libraries": [
+
+                ],
+                "properties": {
+                    "movable": "",
+                    "theme": "tao-light",
+                    "position": "3",
+                    "toolbarId": "sts-studentToolbar"
+                },
+                "entryPoint": "pic-mock-3.js"
+            },
+            "portableinfocontrol_556f08e211c79279799350": {
+                "serial": "portableinfocontrol_556f08e211c79279799350",
+                "qtiClass": "infoControl",
+                "attributes": {
+                    "title": "Student Toolbar",
+                    "class": "sts-scope"
+                },
+                "debug": {
+                    "relatedItem": "item_556f08e1e8b38617090200"
+                },
+                "typeIdentifier": "studentToolbar",
+                "markup": "<div class=\"sts-scope\">\n            <div id=\"sts-studentToolbar\" class=\"sts-container sts-studentToolbar-container sts-movable-container\">\n              <div class=\"sts-title-bar\">\n                <div class=\"sts-title\">Student Toolbar<\/div>\n              <\/div>\n              <div class=\"sts-content\">\n                <!-- Actual tools go here -->\n              <\/div>\n            <\/div>\n          <\/div>",
+                "libraries": [
+
+                ],
+                "properties": {
+                    "position": "100",
+                    "toolbarId": "sts-studentToolbar"
+                },
+                "entryPoint": "pic-mock-studentToolbar.js"
+            },
+            "interaction_choiceinteraction_546cb89e04090230494786": {
+                "serial": "interaction_choiceinteraction_546cb89e04090230494786",
+                "qtiClass": "choiceInteraction",
+                "attributes": {
+                    "responseIdentifier": "RESPONSE",
+                    "shuffle": false,
+                    "maxChoices": 1,
+                    "minChoices": 0,
+                    "id": "interaction"
+                },
+                "choices": {
+                    "choice_simplechoice_546cb89e0432c350250658": {
+                        "identifier": "Discovery",
+                        "serial": "choice_simplechoice_546cb89e0432c350250658",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "Discovery",
+                            "fixed": false
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_546cb89e043a1762658686",
+                            "body": "Discovery",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_546cb89e037d2926817182"
+                            }
+                        }
+                    },
+                    "choice_simplechoice_546cb89e04418434995288": {
+                        "identifier": "Challenger",
+                        "serial": "choice_simplechoice_546cb89e04418434995288",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "Challenger",
+                            "fixed": false
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_546cb89e04431616309193",
+                            "body": "Challenger",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_546cb89e037d2926817182"
+                            }
+                        }
+                    },
+                    "choice_simplechoice_546cb89e04495918665650": {
+                        "identifier": "Pathfinder",
+                        "serial": "choice_simplechoice_546cb89e04495918665650",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "Pathfinder",
+                            "fixed": false
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_546cb89e044ad359477207",
+                            "body": "Pathfinder",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_546cb89e037d2926817182"
+                            }
+                        }
+                    },
+                    "choice_simplechoice_546cb89e0450e812009296": {
+                        "identifier": "Atlantis",
+                        "serial": "choice_simplechoice_546cb89e0450e812009296",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "Atlantis",
+                            "fixed": false
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_546cb89e04526961278319",
+                            "body": "Atlantis",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_546cb89e037d2926817182"
+                            }
+                        }
+                    },
+                    "choice_simplechoice_546cb89e04585740349986": {
+                        "identifier": "Endeavour",
+                        "serial": "choice_simplechoice_546cb89e04585740349986",
+                        "qtiClass": "simpleChoice",
+                        "attributes": {
+                            "identifier": "Endeavour",
+                            "fixed": false
+                        },
+                        "body": {
+                            "serial": "container_containerstatic_546cb89e0459d917435110",
+                            "body": "Endeavour",
+                            "elements": [],
+                            "debug": {
+                                "relatedItem": "item_546cb89e037d2926817182"
+                            }
+                        }
+                    }
+                },
+                "prompt": {
+                    "serial": "container_containerstatic_546cb89e0420f262955533",
+                    "body": "Which was the last Space Shuttle going into space during the STS-135 mission in July 2011?",
+                    "elements": [],
+                    "debug": {
+                        "relatedItem": "item_546cb89e037d2926817182"
+                    }
+                }
+            }
+        },
+        "debug": {
+            "relatedItem": "item_546cb89e037d2926817182"
+        }
+    },
+    "namespaces": {
+        "xml": "http://www.w3.org/XML/1998/namespace",
+        "xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "": "http://www.imsglobal.org/xsd/imsqti_v2p1"
+    },
+    "stylesheets": {
+
+    },
+    "outcomes": {
+        "outcomedeclaration_546cb89e03e9a471001669": {
+            "identifier": "SCORE",
+            "serial": "outcomedeclaration_546cb89e03e9a471001669",
+            "qtiClass": "outcomeDeclaration",
+            "attributes": {
+                "identifier": "SCORE",
+                "cardinality": "single",
+                "baseType": "integer"
+            },
+            "defaultValue": "0"
+        }
+    },
+    "responses": {
+        "responsedeclaration_546cb89e03b1a704637243": {
+            "identifier": "RESPONSE",
+            "serial": "responsedeclaration_546cb89e03b1a704637243",
+            "qtiClass": "responseDeclaration",
+            "attributes": {
+                "identifier": "RESPONSE",
+                "cardinality": "single",
+                "baseType": "identifier"
+            },
+            "correctResponses": [
+                "Atlantis"
+            ],
+            "mapping": [],
+            "areaMapping": [],
+            "howMatch": "http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct",
+            "mappingAttributes": {
+                "defaultValue": 0
+            },
+            "feedbackRules": []
+        }
+    },
+    "feedbacks": [],
+    "responseProcessing": {
+        "serial": "response_templatesdriven_546cb89e0472b442135529",
+        "qtiClass": "responseProcessing",
+        "attributes": [],
+        "processingType": "templateDriven",
+        "template": "http://www.imsglobal.org/question/qti_v2p1/rptemplates/match_correct",
+        "responseRules": [{
+            "qtiClass": "responseCondition",
+            "responseIf": {
+                "qtiClass": "responseIf",
+                "expression": {
+                    "qtiClass": "match",
+                    "expressions": [{
+                        "qtiClass": "variable",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }, {
+                        "qtiClass": "correct",
+                        "attributes": {
+                            "identifier": "RESPONSE"
+                        }
+                    }]
+                },
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "baseValue",
+                        "attributes": {
+                            "baseType": "float"
+                        },
+                        "value": "1"
+                    }
+                }]
+            },
+            "responseElse": {
+                "qtiClass": "responseElse",
+                "responseRules": [{
+                    "qtiClass": "setOutcomeValue",
+                    "attributes": {
+                        "identifier": "SCORE"
+                    },
+                    "expression": {
+                        "qtiClass": "baseValue",
+                        "attributes": {
+                            "baseType": "float"
+                        },
+                        "value": "0"
+                    }
+                }]
+            }
+        }]
+    }
+}

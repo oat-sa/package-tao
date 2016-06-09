@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Thie example adapted from the PET Handbook, copyright University of Cambridge ESOL Examinations -->
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1  http://www.imsglobal.org/xsd/qti/qtiv2p1/imsqti_v2p1.xsd"
+                xmlns:m="http://www.w3.org/1998/Math/MathML"
+                identifier="extendedText_rubric" title="Writing a Postcard with rubric" adaptive="false" timeDependent="false">
+    <responseDeclaration identifier="RESPONSE" cardinality="single" baseType="string"/>
+    <outcomeDeclaration identifier="SCORE" cardinality="single" baseType="float"/>
+    <itemBody>
+        <p>Read this postcard from your English pen-friend, Sam.</p>
+        <div>
+            <object type="image/png" data="images/postcard.png">
+                <blockquote class="postcard">
+                    <p>Here is a postcard of my town. Please send me<br/> a postcard from your town.
+                        What size is your<br/> town? What is the nicest part of your town?<br/>
+                        Where do you go in the evenings?<br/> Sam.</p>
+                </blockquote>
+            </object>
+        </div>
+        <extendedTextInteraction responseIdentifier="RESPONSE" expectedLength="200">
+            <prompt>Write Sam a postcard. Answer the questions. Write 25-35 words.</prompt>
+        </extendedTextInteraction>
+        <rubricBlock view="scorer">
+            <h1>Scoring Guidelines<img src="images/bus.png" alt="tao logo" width="104" height="66"/></h1>
+            <div>
+                <p>
+                    <b>Max Score:</b> 3.0 points</p>
+                <p>
+                    <b>Scoring:</b>
+                </p>
+                <ul>
+                    <li>When not all 3 questions are answered in the response: -1 for each missing.</li>
+                    <li>Check for gramatical errors: -0.1 per error.</li>
+                    <li>Possibly add in .1 increments extra bonus points for extra good answers.</li>
+                </ul>
+                <p>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+                    deleniti atque corrupti quos <img src="images/bus.png" alt="tao logo" width="104" height="66"/>
+                    dolores et quas molestias excepturi sint occaecati cupiditate non provident,
+                    similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+                    <m:math display="block">
+                        <m:semantics>
+                            <m:mstyle>
+                                <m:mrow class="MJX-TeXAtom-ORD">
+                                    <m:mi>x</m:mi>
+                                    <m:mo>=</m:mo>
+                                    <m:mrow class="MJX-TeXAtom-ORD">
+                                        <m:mfrac>
+                                            <m:mrow>
+                                                <m:mo>−<!-- − --></m:mo>
+                                                <m:mi>b</m:mi>
+                                                <m:mo>±<!-- ± --></m:mo>
+                                                <m:msqrt>
+                                                    <m:msup>
+                                                        <m:mi>b</m:mi>
+                                                        <m:mn>2</m:mn>
+                                                    </m:msup>
+                                                    <m:mo>−<!-- − --></m:mo>
+                                                    <m:mn>4</m:mn>
+                                                    <m:mi>a</m:mi>
+                                                    <m:mi>c</m:mi>
+                                                </m:msqrt>
+                                            </m:mrow>
+                                            <m:mrow>
+                                                <m:mn>2</m:mn>
+                                                <m:mi>a</m:mi>
+                                            </m:mrow>
+                                        </m:mfrac>
+                                    </m:mrow>
+                                </m:mrow>
+                            </m:mstyle>
+                            <m:annotation encoding="latex">x = {-b \pm \sqrt{b^2-4ac} \over 2a}</m:annotation>
+                        </m:semantics>
+                    </m:math>
+                    Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
+                    eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
+                    assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut 
+                    <m:math>
+                        <m:mrow>
+                            <m:mi>E</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mi>m</m:mi>
+                            <m:msup>
+                                <m:mi>c</m:mi>
+                                <m:mn>2</m:mn>
+                            </m:msup>
+                        </m:mrow>
+                    </m:math> officiis debitis aut rerum
+                    necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. 
+                    Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias 
+                    consequatur aut perferendis doloribus asperiores repellat.
+                </p>
+            </div>
+        </rubricBlock>
+        <p>
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+            deleniti atque corrupti quos <img src="images/bus.png" alt="tao logo" width="104" height="66"/>
+            dolores et quas molestias excepturi sint occaecati cupiditate non provident,
+            similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+            <m:math display="block">
+                <m:semantics>
+                    <m:mstyle>
+                        <m:mrow class="MJX-TeXAtom-ORD">
+                            <m:mi>x</m:mi>
+                            <m:mo>=</m:mo>
+                            <m:mrow class="MJX-TeXAtom-ORD">
+                                <m:mfrac>
+                                    <m:mrow>
+                                        <m:mo>−<!-- − --></m:mo>
+                                        <m:mi>b</m:mi>
+                                        <m:mo>±<!-- ± --></m:mo>
+                                        <m:msqrt>
+                                            <m:msup>
+                                                <m:mi>b</m:mi>
+                                                <m:mn>2</m:mn>
+                                            </m:msup>
+                                            <m:mo>−<!-- − --></m:mo>
+                                            <m:mn>4</m:mn>
+                                            <m:mi>a</m:mi>
+                                            <m:mi>c</m:mi>
+                                        </m:msqrt>
+                                    </m:mrow>
+                                    <m:mrow>
+                                        <m:mn>2</m:mn>
+                                        <m:mi>a</m:mi>
+                                    </m:mrow>
+                                </m:mfrac>
+                            </m:mrow>
+                        </m:mrow>
+                    </m:mstyle>
+                    <m:annotation encoding="latex">x = {-b \pm \sqrt{b^2-4ac} \over 2a}</m:annotation>
+                </m:semantics>
+            </m:math>
+            Et harum quidem rerum facilis est et expedita distinctio. 
+            <m:math>
+                <m:mrow>
+                    <m:mi>E</m:mi>
+                    <m:mo>=</m:mo>
+                    <m:mi>m</m:mi>
+                    <m:msup>
+                        <m:mi>c</m:mi>
+                        <m:mn>2</m:mn>
+                    </m:msup>
+                </m:mrow>
+            </m:math> 
+            Nam libero tempore, cum soluta nobis est 
+            eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
+            assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut 
+            officiis debitis aut rerum
+            <object data="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4"/>
+            necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. 
+            Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias 
+            consequatur aut perferendis doloribus asperiores repellat.
+        </p>    
+    </itemBody>
+</assessmentItem>
