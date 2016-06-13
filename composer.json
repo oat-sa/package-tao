@@ -36,18 +36,24 @@
 		"oat",
 		"computer-based-assessment"
 	],
-	 "repositories": [
-        {
-            "type" : "vcs",
-            "url" : "https://github.com/oat-sa/ZendSearch"
-         },
-         
- 	  {
-            "type" : "vcs",
-            "url" : "https://github.com/oat-sa/extension-tao-clientdiag.git"
-        }
-    ],
-
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/oat-sa/ZendSearch"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/oat-sa/extension-tao-clientdiag.git"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/oat-sa/extension-tao-itemqti.git"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/oat-sa/extension-tao-testqti.git"
+		}
+	],
 	"homepage" : "http://www.taotesting.com",
 	"license" : "GPL-2.0",
 	"require" : {
@@ -79,7 +85,7 @@
 		"oat-sa/extension-tao-devtools" : "dev-develop",
 		"oat-sa/extension-tao-ontobrowser" : "dev-develop",
 		"oat-sa/extension-tao-revision" : "dev-develop",
-        	"oat-sa/extension-tao-mediamanager" : "dev-develop",
+		"oat-sa/extension-tao-mediamanager" : "dev-develop",
 		"oat-sa/extension-tao-clientdiag" : "dev-develop",
 		"oat-sa/extension-pcisample" : "dev-develop",
 		"oat-sa/extension-tao-backoffice": "dev-develop",
