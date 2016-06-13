@@ -3,7 +3,7 @@ services:
   db:
     image: mysql:latest
     ports:
-      - 33061:3306
+      - 33060:3306
     environment:
       MYSQL_ROOT_PASSWORD: r00t
       MYSQL_USER: tao
