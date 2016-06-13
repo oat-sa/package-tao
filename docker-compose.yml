@@ -1,0 +1,26 @@
+version: '2'
+services:
+  db:
+    image: mysql:latest
+    ports:
+      - 33061:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: r00t
+      MYSQL_USER: tao
+      MYSQL_PASSWORD: tao
+      MYSQL_DATABASE: tao
+  tao:
+    image: alroniks/tao:apache
+    links:
+      - db:mysql
+    ports:
+      - 8000:80
+    volumes:
+      - .:/var/www/html
+    environment:
+      TAO_DB_DRIVER: pdo_mysql
+      TAO_DB_NAME: tao
+      TAO_DB_USER: tao
+      TAO_DB_PASSWORD: tao
+      TAO_AUTOINSTALL: 1
+      TAO_MODULE_URL: http://192.168.99.100:8000
