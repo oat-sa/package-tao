@@ -102,31 +102,31 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "f9cf50745a45cae4a55f35e7691d124c4d887e45"
+                "reference": "e1dd28bbb27ab6fc1636575ec0b83465d2b8f0ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/f9cf50745a45cae4a55f35e7691d124c4d887e45",
-                "reference": "f9cf50745a45cae4a55f35e7691d124c4d887e45",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/e1dd28bbb27ab6fc1636575ec0b83465d2b8f0ed",
+                "reference": "e1dd28bbb27ab6fc1636575ec0b83465d2b8f0ed",
                 "shasum": ""
             },
             "require": {
                 "doctrine/lexer": "1.*",
-                "php": ">=5.3.2"
+                "php": "^5.6 || ^7.0"
             },
             "require-dev": {
                 "doctrine/cache": "1.*",
-                "phpunit/phpunit": "4.*"
+                "phpunit/phpunit": "^5.6.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3.x-dev"
+                    "dev-master": "1.4.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Doctrine\\Common\\Annotations\\": "lib/"
+                "psr-4": {
+                    "Doctrine\\Common\\Annotations\\": "lib/Doctrine/Common/Annotations"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -162,7 +162,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2016-08-31 09:31:57"
+            "time": "2016-10-24 11:59:51"
         },
         {
             "name": "doctrine/cache",
@@ -622,12 +622,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "f314080006142bc05a8a92ee0863751acaa7238f"
+                "reference": "0c15c11264d1feed731976b596dd74d1129a7cc6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/f314080006142bc05a8a92ee0863751acaa7238f",
-                "reference": "f314080006142bc05a8a92ee0863751acaa7238f",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/0c15c11264d1feed731976b596dd74d1129a7cc6",
+                "reference": "0c15c11264d1feed731976b596dd74d1129a7cc6",
                 "shasum": ""
             },
             "require": {
@@ -676,7 +676,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2016-09-19 09:50:28"
+            "time": "2016-10-24 08:47:23"
         },
         {
             "name": "guzzlehttp/promises",
@@ -800,16 +800,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "f2ccd52d8e8a271fb340f6636e01d24673e8087b"
+                "reference": "63c877e35ce8ad6d82d2a2249fbef5ff874e2d3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f2ccd52d8e8a271fb340f6636e01d24673e8087b",
-                "reference": "f2ccd52d8e8a271fb340f6636e01d24673e8087b",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/63c877e35ce8ad6d82d2a2249fbef5ff874e2d3a",
+                "reference": "63c877e35ce8ad6d82d2a2249fbef5ff874e2d3a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0"
+                "php": ">=5.5.9"
             },
             "conflict": {
                 "league/flysystem-sftp": "<1.0.6"
@@ -875,7 +875,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2016-08-26 20:18:09"
+            "time": "2016-10-19 21:24:27"
         },
         {
             "name": "nikic/fast-route",
@@ -1006,16 +1006,16 @@
         },
         {
             "name": "oat-sa/extension-tao-community",
-            "version": "v1.3.1",
+            "version": "v1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-community.git",
-                "reference": "77cdb438056779e2071decc8c64077c869b6ca09"
+                "reference": "6ba873c339c7febd93bc3c7c5d8bbd5594c352be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-community/zipball/77cdb438056779e2071decc8c64077c869b6ca09",
-                "reference": "77cdb438056779e2071decc8c64077c869b6ca09",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-community/zipball/6ba873c339c7febd93bc3c7c5d8bbd5594c352be",
+                "reference": "6ba873c339c7febd93bc3c7c5d8bbd5594c352be",
                 "shasum": ""
             },
             "require": {
@@ -1077,7 +1077,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2016-08-22 15:41:49"
+            "time": "2016-10-18 10:17:38"
         },
         {
             "name": "oat-sa/extension-tao-dac-simple",
@@ -2842,16 +2842,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v2.23.2",
+            "version": "v2.23.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "ccd83decf76f6e99cc772edf4161a13c6e4f2ac6"
+                "reference": "f84018eef0c1adc6c2c9c268581361d0a220c1b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/ccd83decf76f6e99cc772edf4161a13c6e4f2ac6",
-                "reference": "ccd83decf76f6e99cc772edf4161a13c6e4f2ac6",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/f84018eef0c1adc6c2c9c268581361d0a220c1b4",
+                "reference": "f84018eef0c1adc6c2c9c268581361d0a220c1b4",
                 "shasum": ""
             },
             "require": {
@@ -2924,7 +2924,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2016-08-25 11:39:59"
+            "time": "2016-10-18 12:09:41"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -2981,12 +2981,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "75c84b9a770b3e86b4f99b08e68d3c6fbc1c0faf"
+                "reference": "f622e8037296e801706cae49ba7b907ed3cba8a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/75c84b9a770b3e86b4f99b08e68d3c6fbc1c0faf",
-                "reference": "75c84b9a770b3e86b4f99b08e68d3c6fbc1c0faf",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/f622e8037296e801706cae49ba7b907ed3cba8a3",
+                "reference": "f622e8037296e801706cae49ba7b907ed3cba8a3",
                 "shasum": ""
             },
             "require": {
@@ -3033,7 +3033,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2016-09-19 06:03:38"
+            "time": "2016-10-20 17:47:18"
         },
         {
             "name": "pimple/pimple",
@@ -3194,12 +3194,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Slim.git",
-                "reference": "1dedd2592c4f7e088ee3a87a7936f5df71cb7593"
+                "reference": "2f29cc2e3042bfa8c6a9078486ea174acb6a69e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Slim/zipball/1dedd2592c4f7e088ee3a87a7936f5df71cb7593",
-                "reference": "1dedd2592c4f7e088ee3a87a7936f5df71cb7593",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/2f29cc2e3042bfa8c6a9078486ea174acb6a69e8",
+                "reference": "2f29cc2e3042bfa8c6a9078486ea174acb6a69e8",
                 "shasum": ""
             },
             "require": {
@@ -3256,7 +3256,7 @@
                 "micro",
                 "router"
             ],
-            "time": "2016-08-14 08:11:00"
+            "time": "2016-10-12 12:02:05"
         },
         {
             "name": "zendframework/zend-servicemanager",
