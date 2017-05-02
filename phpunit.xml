@@ -1,65 +1,41 @@
-<phpunit 
-	bootstrap="tests/bootstrap/bootstrap.php">
-	
-	<testsuites>
+<phpunit
+        bootstrap="vendor/autoload.php">
 
-		<testsuite name="funcAcl">
-			<directory>funcAcl/test</directory>
-		</testsuite>
-		<testsuite name="generis">
-			<directory>generis/test/</directory>
-		</testsuite>
-
-		<testsuite name="qtiItemPci">
-			<directory>qtiItemPci/test</directory>
-		</testsuite>
-		<testsuite name="tao">
-			<directory>tao/test</directory>
-		</testsuite>
-		<testsuite name="taoCampaign">
-			<directory>taoCampaign/test</directory>
-		</testsuite>
-		<testsuite name="taoDacSimple">
-			<directory>taoDacSimple/test</directory>
-		</testsuite>
-		<testsuite name="taoDelivery">
-			<directory>taoDelivery/test</directory>
-		</testsuite>
-		<testsuite name="taoItems">
-			<directory>taoItems/test</directory>
-		</testsuite>
-		<testsuite name="taoGroups">
-			<directory>taoGroups/test</directory>
-		</testsuite>
-		<testsuite name="taoLti">
-			<directory>"taoLti"/test</directory>
-		</testsuite>
-		<testsuite name="taoOpenWebItem">
-			<directory>taoOpenWebItem/test</directory>
-		</testsuite>
-		<testsuite name="taoOutcomeRds/">
-			<directory>taoOutcomeRds//test</directory>
-		</testsuite>
-		<testsuite name="taoOutcomeUi/">
-			<directory>taoOutcomeRds//test</directory>
-		</testsuite>
-		<testsuite name="taoQtiItem">
-			<directory>taoQtiItem/test</directory>
-		</testsuite>
-		<testsuite name="taoQtiTest">
-			<directory>taoQtiTest/test</directory>
-		</testsuite>
-		<testsuite name="taoResultsServer">
-			<directory>taoResultsServer/test</directory>
-		</testsuite>
-		<testsuite name="taoSimpleDelivery">
-			<directory>taoSimpleDelivery/test</directory>
-		</testsuite>
-		<testsuite name="taoTestTaker">
-			<directory>taoTestTaker/test</directory>
-		</testsuite>
-		<testsuite name="taoTests">
-			<directory>taoTests/test</directory>
-		</testsuite>
-	</testsuites>
+    <testsuites>
+        <testsuite name="generis">
+            <directory>generis/test/oatbox/extension</directory>
+            <directory>generis/test/oatbox/config</directory>
+            <directory>generis/test/oatbox/log</directory>
+            <directory>generis/test/model/data</directory>
+            <file>generis/test/model/persistence/smoothsql/SmoothModelIteratorTest.php</file>
+            <file>generis/test/model/persistence/smoothsql/SmoothRdfTest.php</file>
+            <file>generis/test/FileHelperTest.php</file>
+            <file>generis/test/ManifestTest.php</file>
+            <file>generis/test/ReportTest.php</file>
+            <file>generis/test/oatbox/EventManagerTest.php</file>
+        </testsuite>
+        <testsuite name="tao">
+            <directory>tao/test/http</directory>
+            <directory>tao/test/model/metadata/injector</directory>
+            <directory>tao/test/model/metadata/reader</directory>
+            <directory>tao/test/model/metadata/writer</directory>
+            <directory>tao/test/model/textConverter</directory>
+            <directory>tao/test/messaging</directory>
+            <file>tao/test/datatable/DatatableRequestTest.php</file>
+            <file>tao/test/helpers/ArrayHelperTest.php</file>
+            <file>tao/test/helpers/EnvironmentTest.php</file>
+            <file>tao/test/helpers/NumericTest.php</file>
+            <file>tao/test/lock/OntoLockDataTest.php</file>
+            <file>tao/test/lock/SimpleLockDataTest.php</file>
+            <file>tao/test/requiredAction/RequiredActionRedirectUrlPartTest.php</file>
+            <file>tao/test/service/FileStorageTest.php</file>
+            <file>tao/test/AdaptersTest.php</file>
+            <file>tao/test/DisplayHelperTest.php</file>
+            <file>tao/test/DurationHelperTest.php</file>
+            <file>tao/test/EventsServiceTest.php</file>
+            <file>tao/test/IconsTest.php</file>
+            <file>tao/test/NumericHelperTest.php</file>
+            <file>tao/test/UriHelperTest.php</file>
+        </testsuite>
+    </testsuites>
 </phpunit>
