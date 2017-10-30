@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a267127d3f50475aeacaf8ba017634c2",
+    "content-hash": "8f801208bd35b1b8d701ab3e386c5d05",
     "packages": [
         {
             "name": "ccampbell/chromephp",
@@ -792,19 +792,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "09e549f5534380c68761260a71f847644d8f65aa"
+                "reference": "e9cdab6ff93ff789b5b599326c727f51d10893a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/09e549f5534380c68761260a71f847644d8f65aa",
-                "reference": "09e549f5534380c68761260a71f847644d8f65aa",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/e9cdab6ff93ff789b5b599326c727f51d10893a6",
+                "reference": "e9cdab6ff93ff789b5b599326c727f51d10893a6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.0"
+                "phpunit/phpunit": "^4.8.36"
             },
             "type": "library",
             "extra": {
@@ -835,7 +835,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2017-05-20 23:14:18"
+            "time": "2017-10-06 12:25:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -843,12 +843,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "811b676fbab9c99e359885032e5ebc70e442f5b8"
+                "reference": "d2537c86fa8b004c29e9b9f5e10028f0a29df101"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/811b676fbab9c99e359885032e5ebc70e442f5b8",
-                "reference": "811b676fbab9c99e359885032e5ebc70e442f5b8",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/d2537c86fa8b004c29e9b9f5e10028f0a29df101",
+                "reference": "d2537c86fa8b004c29e9b9f5e10028f0a29df101",
                 "shasum": ""
             },
             "require": {
@@ -900,7 +900,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-07-17 09:11:21"
+            "time": "2017-10-07 03:19:56"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -975,12 +975,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "ea1c8084c5b61100500da01ac276977e03353d5f"
+                "reference": "682c8b34599c62b97963ea734a814eb3ed35c26a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/ea1c8084c5b61100500da01ac276977e03353d5f",
-                "reference": "ea1c8084c5b61100500da01ac276977e03353d5f",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/682c8b34599c62b97963ea734a814eb3ed35c26a",
+                "reference": "682c8b34599c62b97963ea734a814eb3ed35c26a",
                 "shasum": ""
             },
             "require": {
@@ -993,10 +993,12 @@
                 "ext-fileinfo": "*",
                 "mockery/mockery": "~0.9",
                 "phpspec/phpspec": "^2.2",
-                "phpunit/phpunit": "~4.8"
+                "phpunit/phpunit": "^4.8.35"
             },
             "suggest": {
                 "ext-fileinfo": "Required for MimeType",
+                "ext-ftp": "Allows you to use FTP server storage",
+                "ext-openssl": "Allows you to use FTPS server storage",
                 "league/flysystem-aws-s3-v2": "Allows you to use S3 storage with AWS SDK v2",
                 "league/flysystem-aws-s3-v3": "Allows you to use S3 storage with AWS SDK v3",
                 "league/flysystem-azure": "Allows you to use Windows Azure Blob storage",
@@ -1050,7 +1052,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2017-09-16 21:55:25"
+            "time": "2017-10-26 13:35:30"
         },
         {
             "name": "nikic/fast-route",
@@ -3297,69 +3299,6 @@
             "time": "2015-11-23 11:35:13"
         },
         {
-            "name": "oat-sa/phing-task-tao",
-            "version": "v0.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/oat-sa/phing-task-tao.git",
-                "reference": "624620bab38742a69f433066f29168c1d6b178dc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/phing-task-tao/zipball/624620bab38742a69f433066f29168c1d6b178dc",
-                "reference": "624620bab38742a69f433066f29168c1d6b178dc",
-                "shasum": ""
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Open Assessment Technologies S.A.",
-                    "homepage": "http://www.taotesting.com"
-                },
-                {
-                    "name": "Jérôme Bogaerts",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Joel Bout",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Bertrand Chevrier",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Lionel Lecaque",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Patrick Plichart",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Dieter Raber",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Somsack Sipasseuth",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Phing task to install TAO",
-            "homepage": "http://www.taotesting.com",
-            "keywords": [
-                "OAT",
-                "TAO",
-                "computer-based-assessment",
-                "phing"
-            ],
-            "time": "2016-06-14T09:43:55+00:00"
-        },
-        {
             "name": "oat-sa/tao-core",
             "version": "v12.16.0",
             "source": {
@@ -4024,12 +3963,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "61d18c443077162c518d106d700dc1537d8a89f6"
+                "reference": "a73d52dbc8fed3718a309216a33becfba0c36227"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/61d18c443077162c518d106d700dc1537d8a89f6",
-                "reference": "61d18c443077162c518d106d700dc1537d8a89f6",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/a73d52dbc8fed3718a309216a33becfba0c36227",
+                "reference": "a73d52dbc8fed3718a309216a33becfba0c36227",
                 "shasum": ""
             },
             "require": {
@@ -4081,7 +4020,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2017-09-18 06:35:45"
+            "time": "2017-10-27 20:06:24"
         },
         {
             "name": "pimple/pimple",
@@ -4391,12 +4330,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Slim.git",
-                "reference": "a641082cdc08769c6fe195180ed73a63ca828b73"
+                "reference": "403b7980e0bc19ca43015f6232259d81479b24b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Slim/zipball/a641082cdc08769c6fe195180ed73a63ca828b73",
-                "reference": "a641082cdc08769c6fe195180ed73a63ca828b73",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/403b7980e0bc19ca43015f6232259d81479b24b2",
+                "reference": "403b7980e0bc19ca43015f6232259d81479b24b2",
                 "shasum": ""
             },
             "require": {
@@ -4454,7 +4393,7 @@
                 "micro",
                 "router"
             ],
-            "time": "2017-08-16 17:16:12"
+            "time": "2017-09-21 08:03:31"
         },
         {
             "name": "symfony/yaml",
@@ -4462,12 +4401,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "a0e15688972f012156cf1ffa076fe1203bce6bc9"
+                "reference": "e99024f324a7fa927c3a7992ed6f359e3a5ccc3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/a0e15688972f012156cf1ffa076fe1203bce6bc9",
-                "reference": "a0e15688972f012156cf1ffa076fe1203bce6bc9",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/e99024f324a7fa927c3a7992ed6f359e3a5ccc3b",
+                "reference": "e99024f324a7fa927c3a7992ed6f359e3a5ccc3b",
                 "shasum": ""
             },
             "require": {
@@ -4512,7 +4451,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-09-17 10:10:45"
+            "time": "2017-10-09 14:52:13"
         },
         {
             "name": "zendframework/zend-servicemanager",
