@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f801208bd35b1b8d701ab3e386c5d05",
+    "content-hash": "965e7315df9dbd2bf2df85a90dfbcaf7",
     "packages": [
         {
             "name": "ccampbell/chromephp",
@@ -47,7 +47,7 @@
                 "log",
                 "logging"
             ],
-            "time": "2013-06-26 03:44:33"
+            "time": "2013-06-26T03:44:33+00:00"
         },
         {
             "name": "clearfw/clearfw",
@@ -278,7 +278,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2017-07-22 12:49:21"
+            "time": "2017-07-22T12:49:21+00:00"
         },
         {
             "name": "doctrine/collections",
@@ -418,7 +418,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2017-07-22 08:35:55"
+            "time": "2017-07-22T08:35:55+00:00"
         },
         {
             "name": "doctrine/dbal",
@@ -489,7 +489,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2017-07-22 20:45:23"
+            "time": "2017-07-22T20:45:23+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -556,7 +556,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2014-12-20 21:24:13"
+            "time": "2014-12-20T21:24:13+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -610,7 +610,7 @@
                 "lexer",
                 "parser"
             ],
-            "time": "2017-07-24 09:37:08"
+            "time": "2017-07-24T09:37:08+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -672,7 +672,7 @@
                 "rdfa",
                 "sparql"
             ],
-            "time": "2015-02-27 09:45:49"
+            "time": "2015-02-27T09:45:49+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -792,19 +792,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "e9cdab6ff93ff789b5b599326c727f51d10893a6"
+                "reference": "09e549f5534380c68761260a71f847644d8f65aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/e9cdab6ff93ff789b5b599326c727f51d10893a6",
-                "reference": "e9cdab6ff93ff789b5b599326c727f51d10893a6",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/09e549f5534380c68761260a71f847644d8f65aa",
+                "reference": "09e549f5534380c68761260a71f847644d8f65aa",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.36"
+                "phpunit/phpunit": "^4.0"
             },
             "type": "library",
             "extra": {
@@ -835,7 +835,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2017-10-06 12:25:00"
+            "time": "2017-05-20T23:14:18+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -843,12 +843,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "d2537c86fa8b004c29e9b9f5e10028f0a29df101"
+                "reference": "811b676fbab9c99e359885032e5ebc70e442f5b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/d2537c86fa8b004c29e9b9f5e10028f0a29df101",
-                "reference": "d2537c86fa8b004c29e9b9f5e10028f0a29df101",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/811b676fbab9c99e359885032e5ebc70e442f5b8",
+                "reference": "811b676fbab9c99e359885032e5ebc70e442f5b8",
                 "shasum": ""
             },
             "require": {
@@ -900,7 +900,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-10-07 03:19:56"
+            "time": "2017-07-17T09:11:21+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -975,12 +975,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "682c8b34599c62b97963ea734a814eb3ed35c26a"
+                "reference": "3245df3acae2dded99694b499d3bbf937679c8f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/682c8b34599c62b97963ea734a814eb3ed35c26a",
-                "reference": "682c8b34599c62b97963ea734a814eb3ed35c26a",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/3245df3acae2dded99694b499d3bbf937679c8f3",
+                "reference": "3245df3acae2dded99694b499d3bbf937679c8f3",
                 "shasum": ""
             },
             "require": {
@@ -993,12 +993,10 @@
                 "ext-fileinfo": "*",
                 "mockery/mockery": "~0.9",
                 "phpspec/phpspec": "^2.2",
-                "phpunit/phpunit": "^4.8.35"
+                "phpunit/phpunit": "~4.8"
             },
             "suggest": {
                 "ext-fileinfo": "Required for MimeType",
-                "ext-ftp": "Allows you to use FTP server storage",
-                "ext-openssl": "Allows you to use FTPS server storage",
                 "league/flysystem-aws-s3-v2": "Allows you to use S3 storage with AWS SDK v2",
                 "league/flysystem-aws-s3-v3": "Allows you to use S3 storage with AWS SDK v3",
                 "league/flysystem-azure": "Allows you to use Windows Azure Blob storage",
@@ -1052,7 +1050,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2017-10-26 13:35:30"
+            "time": "2017-09-04T09:35:39+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -2519,16 +2517,16 @@
         },
         {
             "name": "oat-sa/extension-tao-proctoring",
-            "version": "v7.3.3",
+            "version": "v7.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-proctoring.git",
-                "reference": "dd8716d04394afc1e9de3fe899c70cac68deb8b8"
+                "reference": "6719dd05d219b04e3ea9c9f2a27ce7a33b4412d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/dd8716d04394afc1e9de3fe899c70cac68deb8b8",
-                "reference": "dd8716d04394afc1e9de3fe899c70cac68deb8b8",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/6719dd05d219b04e3ea9c9f2a27ce7a33b4412d8",
+                "reference": "6719dd05d219b04e3ea9c9f2a27ce7a33b4412d8",
                 "shasum": ""
             },
             "require": {
@@ -2558,7 +2556,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2017-10-06T11:48:52+00:00"
+            "time": "2017-09-08T13:55:41+00:00"
         },
         {
             "name": "oat-sa/extension-tao-revision",
@@ -3296,7 +3294,7 @@
                 "computer-based-assessment",
                 "oatbox"
             ],
-            "time": "2015-11-23 11:35:13"
+            "time": "2015-11-23T11:35:13+00:00"
         },
         {
             "name": "oat-sa/tao-core",
@@ -3500,7 +3498,7 @@
                 "archive",
                 "tar"
             ],
-            "time": "2017-07-31 07:04:16"
+            "time": "2017-07-31T07:04:16+00:00"
         },
         {
             "name": "pear/console_getopt",
@@ -3670,7 +3668,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-08-25 06:16:11"
+            "time": "2017-08-25T06:16:11+00:00"
         },
         {
             "name": "pear/pear-core-minimal",
@@ -3769,7 +3767,7 @@
             "keywords": [
                 "exception"
             ],
-            "time": "2015-02-10 20:07:52"
+            "time": "2015-02-10T20:07:52+00:00"
         },
         {
             "name": "pear/versioncontrol_git",
@@ -3813,7 +3811,7 @@
                 }
             ],
             "description": "VersionControl_Git is a library that provides OO interface to handle Git repository.",
-            "time": "2017-08-23 19:37:51"
+            "time": "2017-08-23T19:37:51+00:00"
         },
         {
             "name": "phing/phing",
@@ -3963,12 +3961,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "a73d52dbc8fed3718a309216a33becfba0c36227"
+                "reference": "700ea0983df51fffbd51c38bc245c627f10b1ea0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/a73d52dbc8fed3718a309216a33becfba0c36227",
-                "reference": "a73d52dbc8fed3718a309216a33becfba0c36227",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/700ea0983df51fffbd51c38bc245c627f10b1ea0",
+                "reference": "700ea0983df51fffbd51c38bc245c627f10b1ea0",
                 "shasum": ""
             },
             "require": {
@@ -3977,9 +3975,8 @@
             },
             "require-dev": {
                 "doctrine/annotations": "1.2.*",
-                "friendsofphp/php-cs-fixer": "^2.2",
                 "phpdocumentor/phpdocumentor": "2.*",
-                "phpunit/phpunit": "^4.8 || ^5.7",
+                "phpunit/phpunit": "4.*",
                 "zendframework/zend-eventmanager": "3.0.*",
                 "zendframework/zend-i18n": "2.7.3",
                 "zendframework/zend-serializer": "2.7.*"
@@ -4020,7 +4017,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2017-10-27 20:06:24"
+            "time": "2017-09-08T14:19:20+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -4070,7 +4067,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2017-08-23 11:42:00"
+            "time": "2017-08-23T11:42:00+00:00"
         },
         {
             "name": "psr/container",
@@ -4119,7 +4116,7 @@
                 "container-interop",
                 "psr"
             ],
-            "time": "2017-06-28 15:35:32"
+            "time": "2017-06-28T15:35:32+00:00"
         },
         {
             "name": "psr/http-message",
@@ -4169,7 +4166,7 @@
                 "request",
                 "response"
             ],
-            "time": "2016-08-06 14:39:51"
+            "time": "2016-08-06T14:39:51+00:00"
         },
         {
             "name": "psr/log",
@@ -4216,7 +4213,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10 12:19:37"
+            "time": "2016-10-10T12:19:37+00:00"
         },
         {
             "name": "qtism/qtism",
@@ -4330,12 +4327,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Slim.git",
-                "reference": "403b7980e0bc19ca43015f6232259d81479b24b2"
+                "reference": "a641082cdc08769c6fe195180ed73a63ca828b73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Slim/zipball/403b7980e0bc19ca43015f6232259d81479b24b2",
-                "reference": "403b7980e0bc19ca43015f6232259d81479b24b2",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/a641082cdc08769c6fe195180ed73a63ca828b73",
+                "reference": "a641082cdc08769c6fe195180ed73a63ca828b73",
                 "shasum": ""
             },
             "require": {
@@ -4393,7 +4390,7 @@
                 "micro",
                 "router"
             ],
-            "time": "2017-09-21 08:03:31"
+            "time": "2017-08-16T17:16:12+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -4401,12 +4398,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "e99024f324a7fa927c3a7992ed6f359e3a5ccc3b"
+                "reference": "c076a2d6f809130a84f99616b425b9665b3ce0a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/e99024f324a7fa927c3a7992ed6f359e3a5ccc3b",
-                "reference": "e99024f324a7fa927c3a7992ed6f359e3a5ccc3b",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/c076a2d6f809130a84f99616b425b9665b3ce0a5",
+                "reference": "c076a2d6f809130a84f99616b425b9665b3ce0a5",
                 "shasum": ""
             },
             "require": {
@@ -4451,7 +4448,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-10-09 14:52:13"
+            "time": "2017-09-04T13:18:59+00:00"
         },
         {
             "name": "zendframework/zend-servicemanager",
