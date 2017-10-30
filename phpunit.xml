@@ -1,23 +1,29 @@
 <phpunit 
-	bootstrap="tests/bootstrap/bootstrap.php">
+	bootstrap="tests/bootstrap/bootstrap.php"
+	convertErrorsToExceptions="true"
+  	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true">
 	
 	<testsuites>
-
 		<testsuite name="funcAcl">
 			<directory>funcAcl/test</directory>
 		</testsuite>
 		<testsuite name="generis">
 			<directory>generis/test/</directory>
 		</testsuite>
-
 		<testsuite name="qtiItemPci">
 			<directory>qtiItemPci/test</directory>
 		</testsuite>
+		<!--
+		<testsuite name="qtiItemPic">
+			<directory>qtiItemPic/test</directory>
+		</testsuite>
+		-->
 		<testsuite name="tao">
 			<directory>tao/test</directory>
-		</testsuite>
-		<testsuite name="taoCampaign">
-			<directory>taoCampaign/test</directory>
+			<exclude>tao/test/ThemeRegistryTest.php</exclude>
+			<exclude>tao/test/RestTestCase.php</exclude>
+			<exclude>tao/test/FsAccessTest.php</exclude>
 		</testsuite>
 		<testsuite name="taoDacSimple">
 			<directory>taoDacSimple/test</directory>
@@ -25,47 +31,95 @@
 		<testsuite name="taoDelivery">
 			<directory>taoDelivery/test</directory>
 		</testsuite>
-		<testsuite name="taoItems">
-			<directory>taoItems/test</directory>
+		<testsuite name="taoDeliveryRdf">
+			<directory>taoDelivery/test</directory>
 		</testsuite>
 		<testsuite name="taoGroups">
 			<directory>taoGroups/test</directory>
+			<exclude>taoGroups/test/RestGroupsTest.php</exclude>
+		</testsuite>
+		<testsuite name="taoItems">
+			<directory>taoItems/test</directory>
+			<exclude>taoItems/test/RestItemsTest.php</exclude>
+			<exclude>taoItems/test/asset/LoaderTest.php</exclude>
 		</testsuite>
 		<testsuite name="taoLti">
 			<directory>"taoLti"/test</directory>
 		</testsuite>
+		<!--
+		<testsuite name="taoMediaManager">
+			<directory>taoMediaManager/test</directory>
+		</testsuite>
+		-->
+		<!--
 		<testsuite name="taoOpenWebItem">
 			<directory>taoOpenWebItem/test</directory>
+			<exclude>taoOpenWebItem/test/ImportExportTest.php</exclude>
+			<exclude>taoOpenWebItem/test/OwiExporterHandlerTest.php</exclude>
 		</testsuite>
+		-->
 		<testsuite name="taoOutcomeRds/">
-			<directory>taoOutcomeRds//test</directory>
+			<directory>taoOutcomeRds/test</directory>
 		</testsuite>
+		<testsuite name="taoOutcomeUi/">
+			<directory>taoOutcomeRds/test</directory>
+		</testsuite>
+		<!--
+		<testsuite name="taoProctoring">
+			<directory>taoProctoring/test</directory>
+		</testsuite> 
+		-->
 		<testsuite name="taoQtiItem">
 			<directory>taoQtiItem/test</directory>
 		</testsuite>
 		<testsuite name="taoQtiTest">
 			<directory>taoQtiTest/test</directory>
+			<exclude>taoQtiTest/test/RestTestImportTest.php</exclude>
 		</testsuite>
+		<!--
+		<testsuite name="taoRevision">
+			<directory>taoRevision/test</directory>
+		</testsuite>
+		-->
 		<testsuite name="taoResultsServer">
 			<directory>taoResultsServer/test</directory>
-		</testsuite>
-		<testsuite name="taoSimpleDelivery">
-			<directory>taoSimpleDelivery/test</directory>
+			<exclude>taoResultServer/test/RestResultServerTest.php</exclude>
 		</testsuite>
 		<testsuite name="taoTestTaker">
 			<directory>taoTestTaker/test</directory>
+			<exclude>taoTestTaker/test/RestTestTakerTest.php</exclude>
 		</testsuite>
 		<testsuite name="taoTests">
 			<directory>taoTests/test</directory>
-		</testsuite>
-		<testsuite name="taoWfTest">
-			<directory>taoWfTest/test</directory>
-		</testsuite>
-		<testsuite name="wfAuthoring">
-			<directory>wfAuthoring/test</directory>
-		</testsuite>
-		<testsuite name="wfEngine">
-			<directory>wfEngine/test</directory>
+			<exclude>taoTests/test/RestTestsTest.php</exclude>
 		</testsuite>
 	</testsuites>
+	
+	<filter>
+  	<whitelist>
+		<directory suffix=".php">.</directory>
+		<exclude>
+			<directory>./vendor</directory>
+			<directory>./data</directory>
+			<directory>./config</directory>
+			<directory>./generis/includes</directory>
+			<directory>./tao/lib</directory>
+			<directory>./**/install</directory>
+			<directory>./**/locales</directory>
+			<directory>./**/actions</directory>
+			<directory>./**/controller</directory>
+			<directory>./**/test</directory>
+			<directory>./tests/**</directory>
+			<directory>./**/sample</directory>
+			<directory>./**/includes</directory>
+			<directory>./**/scripts</directory>
+			<directory>./**/plugins</directory>
+		 	<directory>./**/views</directory>
+			<directory>./**/view</directory>
+			<directory suffix="index.php">.</directory>
+			<directory suffix="manifest.php">.</directory>
+			<directory suffix="conf.php">.</directory>
+		</exclude>
+	</whitelist>
+</filter>
 </phpunit>
