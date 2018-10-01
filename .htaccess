@@ -8,13 +8,13 @@ SetEnv HTTP_MOD_REWRITE on
 RewriteCond %{REQUEST_URI} 	!/views/  	[NC]
 RewriteCond %{REQUEST_URI} 	!/doc/rest.json  	[NC]
 RewriteCond %{REQUEST_URI} 	!/tao/install/	[NC]
-RewriteCond %{REQUEST_URI}  !/tao/getFile.php	[NC]
+RewriteCond %{REQUEST_URI}  !/getFileFlysystem.php	[NC]
 
 #call entry point for url resolving and framework bootstrap
 RewriteRule ^(.*)$ index.php [L]
 
 #required by token based access system
-RewriteCond %{REQUEST_URI} (.*)/tao/getFile.php/  [NC]
-RewriteRule ^(.*)$ tao/getFile.php [L]
+RewriteCond %{REQUEST_URI} (.*)/getFileFlysystem.php  [NC]
+RewriteRule ^(.*)$ tao/getFileFlysystem.php [L]
 
 </IfModule>
