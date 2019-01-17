@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 <phpunit bootstrap="tests/bootstrap/bootstrap.php">
-=======
-<phpunit bootstrap="vendor/autoload.php">
-
->>>>>>> df80183582b7145400ac9d1b3cd2476c21b4f676
     <testsuites>
         <testsuite name="generis">
             <directory>generis/test/unit</directory>
