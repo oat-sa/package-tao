@@ -1,90 +1,110 @@
 {
-	"name" : "oat-sa/tao",
-	"description" : "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online \u2013 in any language or subject matter.",
-	"authors" : [{
-			"name" : "Open Assessment Technologies S.A.",
-			"homepage" : "http://www.taotesting.com"
-		}, {
-			"name" : "Jérôme Bogaerts",
-			"role" : "Developer"
-		}, {
-			"name" : "Joel Bout",
-			"role" : "Developer"
-		}, {
-			"name" : "Bertrand Chevrier",
-			"role" : "Developer"
-		}, {
-			"name" : "Lionel Lecaque",
-			"role" : "Developer"
-		}, {
-			"name" : "Patrick Plichart",
-			"role" : "Developer"
-		}, {
-			"name" : "Dieter Raber",
-			"role" : "Developer"
-		}, {
-			"name" : "Somsack Sipasseuth",
-			"role" : "Developer"
-		}
-	],
-	"support" : {
-		"forum" : "http://forum.taotesting.com",
-		"issues" : "http://forge.taotesting.com"
-	},
-	"keywords" : [
-		"tao",
-		"oat",
-		"computer-based-assessment"
-	],
-	 "repositories": [
+    "name": "oat-sa/tao",
+    "description": "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online – in any language or subject matter.",
+    "authors": [
+        {
+            "name": "Open Assessment Technologies S.A.",
+            "homepage": "http://www.taotesting.com"
+        },
+        {
+            "name": "Jérôme Bogaerts",
+            "role": "Developer"
+        },
+        {
+            "name": "Joel Bout",
+            "role": "Developer"
+        },
+        {
+            "name": "Bertrand Chevrier",
+            "role": "Developer"
+        },
+        {
+            "name": "Lionel Lecaque",
+            "role": "Developer"
+        },
+        {
+            "name": "Patrick Plichart",
+            "role": "Developer"
+        },
+        {
+            "name": "Dieter Raber",
+            "role": "Developer"
+        },
+        {
+            "name": "Somsack Sipasseuth",
+            "role": "Developer"
+        }
     ],
-
-	"homepage" : "http://www.taotesting.com",
-	"license" : "GPL-2.0",
-	"require" : {
-		"oat-sa/generis" : "dev-develop",
-		"oat-sa/tao-core" : "dev-develop",
-		"oat-sa/extension-tao-community" : "dev-develop",
-		"oat-sa/extension-tao-funcacl" : "dev-develop",
-		"oat-sa/extension-tao-dac-simple" : "dev-develop",
-		"oat-sa/extension-tao-testtaker" : "dev-develop",
-		"oat-sa/extension-tao-group" : "dev-develop",
-		"oat-sa/extension-tao-item" : "dev-develop",
-		"oat-sa/extension-tao-itemhtml" : "dev-develop",
-		"oat-sa/extension-tao-itemqti" : "dev-develop",
-		"oat-sa/extension-tao-itemqti-pci" : "dev-develop",
-		"oat-sa/extension-tao-itemqti-pic" : "dev-develop",
-		"oat-sa/extension-tao-test" : "dev-develop",
-		"oat-sa/extension-tao-testlinear" : "dev-develop",
-		"oat-sa/extension-tao-testqti" : "dev-develop",
-		"oat-sa/extension-tao-testlti" : "dev-develop",
-		"oat-sa/extension-tao-outcome" : "dev-develop",
-		"oat-sa/extension-tao-outcomeui" : "dev-develop",
-		"oat-sa/extension-tao-outcomerds" : "dev-develop",
-		"oat-sa/extension-tao-outcomekeyvalue" : "dev-develop",
-		"oat-sa/extension-tao-outcomelti" : "dev-develop",
-		"oat-sa/extension-tao-delivery" : "dev-develop",
-		"oat-sa/extension-tao-lti" : "dev-develop",
-		"oat-sa/extension-tao-ltideliveryprovider" : "dev-develop",
-		"oat-sa/extension-tao-devtools" : "dev-develop",
-		"oat-sa/extension-tao-ontobrowser" : "dev-develop",
-		"oat-sa/extension-tao-revision" : "dev-develop",
-                "oat-sa/extension-tao-mediamanager" : "dev-develop",
-		"oat-sa/extension-tao-clientdiag" : "dev-develop",
-		"oat-sa/extension-pcisample" : "dev-develop",
-		"oat-sa/extension-tao-backoffice": "dev-develop",
-		"oat-sa/extension-tao-frontoffice": "dev-develop",
-		"oat-sa/extension-tao-testcenter": "dev-develop",
-		"oat-sa/extension-tao-proctoring": "dev-develop",
-		"oat-sa/extension-tao-workspace": "dev-develop",
-		"oat-sa/extension-tao-delivery-schedule": "dev-develop",
-		"oat-sa/extension-tao-testqti-previewer": "dev-develop"
-	},
+    "support": {
+        "forum": "http://forum.taotesting.com",
+        "issues": "http://forge.taotesting.com"
+    },
+    "keywords": [
+        "tao",
+        "oat",
+        "computer-based-assessment"
+    ],
+    "repositories": {
+        "martijn-generis": {
+            "type": "vcs",
+            "url": "git@github.com:martijn-tao/generis.git"
+        },
+        "martijn-tao": {
+            "type": "vcs",
+            "url": "git@github.com:martijn-tao/tao-core.git"
+        }
+    },
+    "homepage": "http://www.taotesting.com",
+    "license": "GPL-2.0",
+    "require": {
+        "oat-sa/generis": "dev-develop",
+        "oat-sa/tao-core": "dev-develop",
+        "oat-sa/extension-tao-community": "dev-develop",
+        "oat-sa/extension-tao-funcacl": "dev-develop",
+        "oat-sa/extension-tao-dac-simple": "dev-develop",
+        "oat-sa/extension-tao-testtaker": "dev-develop",
+        "oat-sa/extension-tao-item": "dev-develop",
+        "oat-sa/extension-tao-itemhtml": "dev-develop",
+        "oat-sa/extension-tao-itemqti": "dev-develop",
+        "oat-sa/extension-tao-itemqti-pci": "dev-develop",
+        "oat-sa/extension-tao-itemqti-pic": "dev-develop",
+        "oat-sa/extension-tao-test": "dev-develop",
+        "oat-sa/extension-tao-testlinear": "dev-develop",
+        "oat-sa/extension-tao-testqti": "dev-develop",
+        "oat-sa/extension-tao-testlti": "dev-develop",
+        "oat-sa/extension-tao-outcome": "dev-develop",
+        "oat-sa/extension-tao-outcomeui": "dev-develop",
+        "oat-sa/extension-tao-outcomerds": "dev-develop",
+        "oat-sa/extension-tao-outcomekeyvalue": "dev-develop",
+        "oat-sa/extension-tao-outcomelti": "dev-develop",
+        "oat-sa/extension-tao-delivery": "dev-develop",
+        "oat-sa/extension-tao-lti": "dev-develop",
+        "oat-sa/extension-tao-ltideliveryprovider": "dev-develop",
+        "oat-sa/extension-tao-devtools": "dev-develop",
+        "oat-sa/extension-tao-ontobrowser": "dev-develop",
+        "oat-sa/extension-tao-revision": "dev-develop",
+        "oat-sa/extension-tao-mediamanager": "dev-develop",
+        "oat-sa/extension-tao-clientdiag": "dev-develop",
+        "oat-sa/extension-pcisample": "dev-develop",
+        "oat-sa/extension-tao-backoffice": "dev-develop",
+        "oat-sa/extension-tao-frontoffice": "dev-develop",
+        "oat-sa/extension-tao-testcenter": "dev-develop",
+        "oat-sa/extension-tao-proctoring": "dev-develop",
+        "oat-sa/extension-tao-workspace": "dev-develop",
+        "oat-sa/extension-tao-delivery-schedule": "dev-develop",
+        "oat-sa/extension-tao-testqti-previewer": "dev-develop",
+        "oat-sa/extension-lti-proctoring": "dev-develop",
+        "symfony/console": "~3.4"
+    },
     "require-dev": {
         "phpunit/phpunit": "~4.4@dev",
         "sebastian/global-state": "~1.0@dev",
         "mikey179/vfsStream": "1.4.0",
-		"oat-sa/tao-build" : "dev-develop"
+        "oat-sa/tao-build": "dev-develop"
     },
-	"minimum-stability" : "dev"
+    "scripts": {
+        "post-install-cmd": "./composer/scripts/install-generis.sh",
+        "post-update-cmd": "./composer/scripts/install-generis.sh"
+    },
+    "minimum-stability": "dev"
 }
