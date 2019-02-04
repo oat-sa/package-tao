@@ -108,5 +108,10 @@
         "post-install-cmd": "./composer/scripts/install-generis.sh",
         "post-update-cmd": "./composer/scripts/install-generis.sh"
     },
+    "autoload": {
+        "psr-4": {
+            "oat\\": "./"
+        }
+    },
     "minimum-stability": "dev"
 }
