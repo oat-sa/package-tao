@@ -27,11 +27,10 @@ if(!tao_install_utils_System::isTAOInstalled()){
 
 } else {
 
-    $bootStrap = new oat\tao\model\mvc\Bootstrap('config/generis.conf.php');
     $configInitializer = new oat\generis\Model\Config\ConfigInitializer();
     $configInitializer->initialize();
-    $autoWiringInitializer = new oat\generis\Model\DependencyInjection\AutoWiringInitializer();
-    $autoWiringInitializer->initialize();
+
+    $bootStrap = new oat\tao\model\mvc\Bootstrap('config/generis.conf.php');
     $bootStrap->start();
     $bootStrap->dispatch();
 
