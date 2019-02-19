@@ -1,0 +1,50 @@
+version: '2'
+
+services:
+  tao_nginx:
+    container_name: tao_nginx
+    image: nginx:stable
+    networks:
+      - tao_network
+    ports:
+      - "80:80"
+    volumes_from:
+      - tao_phpfpm
+    volumes:
+      - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf:cached
+    working_dir: /etc/nginx/conf.d
+
+  tao_phpfpm:
+    container_name: tao_phpfpm
+    build:
+      context: ./docker/phpfpm
+    expose:
+      - 9000
+    networks:
+      - tao_network
+    volumes:
+      - .:/var/www/html:cached
+    working_dir: /var/www/html
+
+  tao_db:
+    container_name: tao_db
+    image: mariadb:latest
+    networks:
+      - tao_network
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: r00t
+      MYSQL_USER: tao
+      MYSQL_PASSWORD: tao
+      MYSQL_DATABASE: tao
+    volumes:
+      - tao_mariadb_data:/var/lib/mysql:cached
+
+volumes:
+  tao_mariadb_data:
+    driver: local
+
+networks:
+  tao_network:
+    driver: bridge
