@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f42a979814c7cfe36acf3547e6f6032d",
+    "content-hash": "d82a93238ae9c8452c510f2df151f37c",
     "packages": [
         {
             "name": "clearfw/clearfw",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/clearfw.git",
-                "reference": "e217c3cda6a276f07c984c031e83befc03e2158e"
+                "reference": "e50dae8eed52d5d43d0759a9c1928ba509f2fd09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/clearfw/zipball/e217c3cda6a276f07c984c031e83befc03e2158e",
-                "reference": "e217c3cda6a276f07c984c031e83befc03e2158e",
+                "url": "https://api.github.com/repos/oat-sa/clearfw/zipball/e50dae8eed52d5d43d0759a9c1928ba509f2fd09",
+                "reference": "e50dae8eed52d5d43d0759a9c1928ba509f2fd09",
                 "shasum": ""
             },
             "type": "library",
@@ -66,7 +66,7 @@
                 }
             ],
             "description": "ClearFw",
-            "time": "2018-07-10T12:31:31+00:00"
+            "time": "2019-02-15T10:59:35+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -791,12 +791,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "02411203ceb2de638f80346223e67ddc65be50ee"
+                "reference": "fa745406c2f48210693ba05f11280a1473037b2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/02411203ceb2de638f80346223e67ddc65be50ee",
-                "reference": "02411203ceb2de638f80346223e67ddc65be50ee",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/fa745406c2f48210693ba05f11280a1473037b2f",
+                "reference": "fa745406c2f48210693ba05f11280a1473037b2f",
                 "shasum": ""
             },
             "require": {
@@ -849,7 +849,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2019-01-11T14:42:53+00:00"
+            "time": "2019-02-26T17:21:14+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -908,12 +908,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "ae7949ee7b865f0eb8b191c438cda63cad59d437"
+                "reference": "31ea59d632d3ac145300fffb2873a195172c0814"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/ae7949ee7b865f0eb8b191c438cda63cad59d437",
-                "reference": "ae7949ee7b865f0eb8b191c438cda63cad59d437",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/31ea59d632d3ac145300fffb2873a195172c0814",
+                "reference": "31ea59d632d3ac145300fffb2873a195172c0814",
                 "shasum": ""
             },
             "require": {
@@ -925,6 +925,7 @@
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
+                "ext-zlib": "*",
                 "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
             },
             "suggest": {
@@ -970,7 +971,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2018-12-28T01:59:01+00:00"
+            "time": "2019-02-20T09:29:56+00:00"
         },
         {
             "name": "imsglobal/lti",
@@ -1085,12 +1086,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "f4202b9a9a0b47aa10cf84a33729d56d6be9f829"
+                "reference": "0a342db3a10cb31862e83d550f67c2d087825467"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f4202b9a9a0b47aa10cf84a33729d56d6be9f829",
-                "reference": "f4202b9a9a0b47aa10cf84a33729d56d6be9f829",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/0a342db3a10cb31862e83d550f67c2d087825467",
+                "reference": "0a342db3a10cb31862e83d550f67c2d087825467",
                 "shasum": ""
             },
             "require": {
@@ -1161,7 +1162,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2019-01-14T06:55:18+00:00"
+            "time": "2019-02-14T07:18:57+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1655,16 +1656,16 @@
         },
         {
             "name": "oat-sa/extension-tao-delivery-rdf",
-            "version": "v7.4.3",
+            "version": "v7.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-delivery-rdf.git",
-                "reference": "d2456b32991a93acc4f930e585b7416d6cfc49e2"
+                "reference": "4c73732be02448825a54923e95999e4995889df2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery-rdf/zipball/d2456b32991a93acc4f930e585b7416d6cfc49e2",
-                "reference": "d2456b32991a93acc4f930e585b7416d6cfc49e2",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery-rdf/zipball/4c73732be02448825a54923e95999e4995889df2",
+                "reference": "4c73732be02448825a54923e95999e4995889df2",
                 "shasum": ""
             },
             "require": {
@@ -1694,7 +1695,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-01-18T10:15:45+00:00"
+            "time": "2019-02-15T10:12:04+00:00"
         },
         {
             "name": "oat-sa/extension-tao-eventlog",
@@ -3178,16 +3179,16 @@
         },
         {
             "name": "oat-sa/generis",
-            "version": "v8.1.3",
+            "version": "v8.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/generis.git",
-                "reference": "f8e47e051ae61ac564f6cec025f73bf50e021dd7"
+                "reference": "4118799daa9a3eec0bf9e42d739058c66b755cb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/generis/zipball/f8e47e051ae61ac564f6cec025f73bf50e021dd7",
-                "reference": "f8e47e051ae61ac564f6cec025f73bf50e021dd7",
+                "url": "https://api.github.com/repos/oat-sa/generis/zipball/4118799daa9a3eec0bf9e42d739058c66b755cb3",
+                "reference": "4118799daa9a3eec0bf9e42d739058c66b755cb3",
                 "shasum": ""
             },
             "require": {
@@ -3271,7 +3272,7 @@
                 "computer-based-assessment",
                 "doctrine-dbal"
             ],
-            "time": "2019-01-04T13:40:20+00:00"
+            "time": "2019-03-11T16:25:17+00:00"
         },
         {
             "name": "oat-sa/jig",
@@ -4051,24 +4052,24 @@
         },
         {
             "name": "ralouphie/getallheaders",
-            "version": "3.0.2",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ralouphie/getallheaders.git",
-                "reference": "beb49b96960f0cbf17e7fbcaaddc8eb434e126eb"
+                "reference": "120b605dfeb996808c31b6477290a714d356e822"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/beb49b96960f0cbf17e7fbcaaddc8eb434e126eb",
-                "reference": "beb49b96960f0cbf17e7fbcaaddc8eb434e126eb",
+                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
+                "reference": "120b605dfeb996808c31b6477290a714d356e822",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5",
-                "satooshi/php-coveralls": ">=1.0"
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^5 || ^6.5"
             },
             "type": "library",
             "autoload": {
@@ -4087,7 +4088,7 @@
                 }
             ],
             "description": "A polyfill for getallheaders.",
-            "time": "2018-12-11T21:53:24+00:00"
+            "time": "2019-03-08T08:55:37+00:00"
         },
         {
             "name": "react/child-process",
@@ -4133,27 +4134,28 @@
         },
         {
             "name": "react/event-loop",
-            "version": "v1.0.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/event-loop.git",
-                "reference": "0266aff7aa7b0613b1f38a723e14a0ebc55cfca3"
+                "reference": "a0ecac955c67b57c40fe4a1b88a7cca1b58c982d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/event-loop/zipball/0266aff7aa7b0613b1f38a723e14a0ebc55cfca3",
-                "reference": "0266aff7aa7b0613b1f38a723e14a0ebc55cfca3",
+                "url": "https://api.github.com/repos/reactphp/event-loop/zipball/a0ecac955c67b57c40fe4a1b88a7cca1b58c982d",
+                "reference": "a0ecac955c67b57c40fe4a1b88a7cca1b58c982d",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.8.35 || ^5.7 || ^6.4"
+                "phpunit/phpunit": "^7.0 || ^6.4 || ^5.7 || ^4.8.35"
             },
             "suggest": {
                 "ext-event": "~1.0 for ExtEventLoop",
-                "ext-pcntl": "For signal handling support when using the StreamSelectLoop"
+                "ext-pcntl": "For signal handling support when using the StreamSelectLoop",
+                "ext-uv": "* for ExtUvLoop"
             },
             "type": "library",
             "autoload": {
@@ -4170,7 +4172,7 @@
                 "asynchronous",
                 "event-loop"
             ],
-            "time": "2018-07-11T14:37:46+00:00"
+            "time": "2019-02-07T16:19:49+00:00"
         },
         {
             "name": "react/stream",
@@ -4273,12 +4275,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Slim.git",
-                "reference": "f4947cc900b6e51cbfda58b9f1247bca2f76f9f0"
+                "reference": "04e7689509b4da94d0dc1c5d16db41cd17456f03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Slim/zipball/f4947cc900b6e51cbfda58b9f1247bca2f76f9f0",
-                "reference": "f4947cc900b6e51cbfda58b9f1247bca2f76f9f0",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/04e7689509b4da94d0dc1c5d16db41cd17456f03",
+                "reference": "04e7689509b4da94d0dc1c5d16db41cd17456f03",
                 "shasum": ""
             },
             "require": {
@@ -4336,7 +4338,7 @@
                 "micro",
                 "router"
             ],
-            "time": "2019-01-15T13:21:25+00:00"
+            "time": "2019-02-22T07:42:28+00:00"
         },
         {
             "name": "zendframework/zend-servicemanager",
