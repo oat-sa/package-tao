@@ -6,6 +6,7 @@ Describe your issue here.
 * Which PHP version are you using?
 * Which Database engine and version are you using?
 * Which Web server are you using?
+* Which extensions are installed, and what version are they?
 
 ### Steps to reproduce
 Tell us how to reproduce this issue.

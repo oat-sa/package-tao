@@ -16,7 +16,8 @@ If you are a new GitHub user, we recommend that you create your own [free github
 3. Fork the repository of the TAO extension you wish to contribute to.
 4. Create a branch that follows the [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html) branching model.
 5. Once development has been done, create a pull request that targets the development branch of the extension you are contributing to.
-6. Once your contribution is received the TAO development team will review the contribution and collaborate with you as needed.
+6. If your code depends on changes in another extension, create a draft pull request, until all required pull requests are created. 
+7. Once your contribution is received the TAO development team will review the contribution and collaborate with you as needed.
 
 ## Code of Conduct
 
