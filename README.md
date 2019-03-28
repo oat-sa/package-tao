@@ -11,6 +11,16 @@ Install via composer missing library and extensions
 composer install
 ```
 
+or
+
+```bash
+composer install  --prefer-dist --optimize-autoloader
+```
+
+https://getcomposer.org/doc/03-cli.md#install-i
+
+https://getcomposer.org/doc/articles/autoloader-optimization.md
+
 Add rw to www-data
 
 ```bash
