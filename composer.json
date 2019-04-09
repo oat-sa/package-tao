@@ -42,6 +42,8 @@
 	"homepage" : "http://www.taotesting.com",
 	"license" : "GPL-2.0",
 	"require" : {
+		"ext-curl": "*",
+		"ext-json": "*",
 		"oat-sa/generis" : "dev-develop",
 		"oat-sa/tao-core" : "dev-develop",
 		"oat-sa/extension-tao-community" : "dev-develop",
@@ -84,7 +86,14 @@
         "phpunit/phpunit": "~4.4@dev",
         "sebastian/global-state": "~1.0@dev",
         "mikey179/vfsStream": "1.4.0",
-		"oat-sa/tao-build" : "dev-develop"
+		"oat-sa/tao-build" : "dev-develop",
+		"graylog2/gelf-php": "^1.4@dev"
     },
-	"minimum-stability" : "dev"
+	"minimum-stability" : "dev",
+	"autoload": {
+		"files": [
+			"bin/SetupGelfLoggerAction.php",
+			"bin/SetupKibanaDashboardAction.php"
+		]
+	}
 }

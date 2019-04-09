@@ -1,9 +1,9 @@
 {
     "seed": {
-        "identifier": "package-invalsi"
+        "identifier": "package-tao"
     },
     "extensions": [
-        "taoInvalsi"
+        "taoCe"
     ],
     "super-user": {
         "login": "admin",
@@ -16,9 +16,9 @@
         "global": {
             "lang": "en-US",
             "mode": "debug",
-            "instance_name": "taoinvalsi",
-            "namespace": "https://invalsi.docker.localhost/ontologies/tao.rdf",
-            "url": "https://invalsi.docker.localhost/",
+            "instance_name": "tao",
+            "namespace": "https://tao.docker.localhost/ontologies/tao.rdf",
+            "url": "https://tao.docker.localhost/",
             "session_name": "tao_taotest32",
             "timezone": "Europe/Luxembourg",
             "import_data": true
@@ -27,24 +27,24 @@
             "persistences": {
                 "default": {
                     "driver": "pdo_mysql",
-                    "host": "invalsi-mariadb",
-                    "dbname": "invalsi",
+                    "host": "tao-mariadb",
+                    "dbname": "tao",
                     "user": "root",
                     "password": "r00t"
                 },
                 "redis": {
                     "driver": "phpredis",
-                    "host": "invalsi-redis",
+                    "host": "tao-redis",
                     "port": 6379
                 },
                 "authKeyValue": {
                     "driver": "phpredis",
-                    "host": "invalsi-redis",
+                    "host": "tao-redis",
                     "port": 6379
                 },
                 "keyValueResult": {
                     "driver": "phpredis",
-                    "host": "invalsi-redis",
+                    "host": "tao-redis",
                     "port": 6379
                 }
             },
@@ -61,6 +61,14 @@
     "postInstall": [
         {
             "class": "oat\\taoQtiTest\\scripts\\install\\SetNewTestRunner",
+            "options": []
+        },
+        {
+            "class": "SetupGelfLoggerAction",
+            "options": []
+        },
+        {
+            "class": "SetupKibanaDashboardAction",
             "options": []
         }
     ]
