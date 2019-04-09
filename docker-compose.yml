@@ -16,7 +16,7 @@ services:
             - "traefik.frontend.rule=Host:tao.docker.localhost"
             - "traefik.docker.network=oat-docker"
             - "traefik.port=80"
-
+            -
     tao-phpfpm:
         container_name: tao-phpfpm
         build:

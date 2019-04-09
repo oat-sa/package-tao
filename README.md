@@ -1,16 +1,38 @@
-tao-ce
-======
+# package-tao
 
+> TAO Community Edition package for local development purposes.
 
-git clone git@github.com:oat-sa/package-tao.git
+- NGINX
+- PHP-FPM
+- MariaDB
+- Redis
 
-git fetch origin develop:develop
+## Installation
 
-git checkout develop
+Install dependencies:
 
-composer install
+```bash
+$ composer install --prefer-source
+```
 
-sudo chown www-data -R package-tao
+This package is built on top of **OAT Docker Stack**. In order to install it, follow the installation steps in it's README file: 
 
+[https://github.com/oat-sa/docker-stack#installation](https://github.com/oat-sa/docker-stack#installation)
 
-sudo -u www-data php tao/scripts/taoInstall.php --db_driver pdo_mysql --db_host localhost --db_name taoUnitTest --db_user myuser --db_pass tao --module_namespace mynamespace --module_url myurl --user_login admin --user_pass admin -e generis,tao,taoSubjects
+Set up docker containers:
+
+```bash
+$ docker-compose up -d
+```
+
+Install TAO from seed file using PHP-FPM container:
+
+```bash
+$ docker exec -it tao-phpfpm php tao/scripts/taoSetup.php setup.json -vvv
+```
+
+Installed applications:
+
+| Application | Port | Comments |
+| :-----------|:-----|:---------|
+| TAO CE | `https://tao.docker.localhost` | TAO application. Login credentials: `admin \ Test123` |
