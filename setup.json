@@ -1,0 +1,67 @@
+{
+    "seed": {
+        "identifier": "package-invalsi"
+    },
+    "extensions": [
+        "taoInvalsi"
+    ],
+    "super-user": {
+        "login": "admin",
+        "lastname": "admin",
+        "firstname": "",
+        "email": "",
+        "password": "Test123"
+    },
+    "configuration": {
+        "global": {
+            "lang": "en-US",
+            "mode": "debug",
+            "instance_name": "taoinvalsi",
+            "namespace": "https://invalsi.docker.localhost/ontologies/tao.rdf",
+            "url": "https://invalsi.docker.localhost/",
+            "session_name": "tao_taotest32",
+            "timezone": "Europe/Luxembourg",
+            "import_data": true
+        },
+        "generis": {
+            "persistences": {
+                "default": {
+                    "driver": "pdo_mysql",
+                    "host": "invalsi-mariadb",
+                    "dbname": "invalsi",
+                    "user": "root",
+                    "password": "r00t"
+                },
+                "redis": {
+                    "driver": "phpredis",
+                    "host": "invalsi-redis",
+                    "port": 6379
+                },
+                "authKeyValue": {
+                    "driver": "phpredis",
+                    "host": "invalsi-redis",
+                    "port": 6379
+                },
+                "keyValueResult": {
+                    "driver": "phpredis",
+                    "host": "invalsi-redis",
+                    "port": 6379
+                }
+            },
+            "log": [
+                {
+                    "class": "UDPAppender",
+                    "host": "127.0.0.1",
+                    "port": 5775,
+                    "threshold": 1
+                }
+            ]
+        }
+    },
+    "postInstall": [
+        {
+            "class": "oat\\taoQtiTest\\scripts\\install\\SetNewTestRunner",
+            "options": []
+        }
+    ]
+}
