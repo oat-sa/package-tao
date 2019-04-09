@@ -4,6 +4,9 @@ use oat\oatbox\action\Action;
 
 class SetupKibanaDashboardAction implements Action
 {
+    const KIBANA_DOCKER_HOST = 'oat-docker-kibana:5601';
+    const KIBANA_VERSION = '6.6.2';
+
     public function __invoke($params)
     {
         $indexPatternId = $this->findLogstashIndexPatternId();
@@ -20,11 +23,14 @@ class SetupKibanaDashboardAction implements Action
         $curl = curl_init();
 
         curl_setopt_array($curl, [
-            CURLOPT_URL => 'oat-docker-kibana:5601/api/saved_objects/_find?type=index-pattern&search_fields=title&search=logstash*',
+            CURLOPT_URL => sprintf(
+                '%s/api/saved_objects/_find?type=index-pattern&search_fields=title&search=logstash*',
+                self::KIBANA_DOCKER_HOST
+            ),
             CURLOPT_RETURNTRANSFER => 1,
             CURLOPT_HTTPHEADER => [
                 'Content-Type: application/json',
-                'kbn-version: 6.6.2',
+                sprintf('kbn-version: %s', self::KIBANA_VERSION),
             ],
         ]);
 
@@ -57,12 +63,15 @@ class SetupKibanaDashboardAction implements Action
         $curl = curl_init();
 
         curl_setopt_array($curl, [
-            CURLOPT_URL => 'oat-docker-kibana:5601/api/saved_objects/index-pattern',
+            CURLOPT_URL => sprintf(
+                '%s/api/saved_objects/index-pattern',
+                self::KIBANA_DOCKER_HOST
+            ),
             CURLOPT_POST => 1,
             CURLOPT_RETURNTRANSFER => 1,
             CURLOPT_HTTPHEADER => [
                 'Content-Type: application/json',
-                'kbn-version: 6.6.2',
+                sprintf('kbn-version: %s', self::KIBANA_VERSION),
             ],
             CURLOPT_POSTFIELDS => json_encode([
                 'attributes' => [
@@ -90,12 +99,15 @@ class SetupKibanaDashboardAction implements Action
         $curl = curl_init();
 
         curl_setopt_array($curl, [
-            CURLOPT_URL => 'oat-docker-kibana:5601/api/kibana/settings',
+            CURLOPT_URL => sprintf(
+                '%s/api/kibana/settings',
+                self::KIBANA_DOCKER_HOST
+            ),
             CURLOPT_POST => 1,
             CURLOPT_RETURNTRANSFER => 1,
             CURLOPT_HTTPHEADER => [
                 'Content-Type: application/json',
-                'kbn-version: 6.6.2',
+                sprintf('kbn-version: %s', self::KIBANA_VERSION),
             ],
             CURLOPT_POSTFIELDS => json_encode([
                 'changes' => [
