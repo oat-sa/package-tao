@@ -22,6 +22,7 @@ sudo -u www-data php tao/scripts/taoInstall.php \
 --db_name taoUnitTest \
 --db_user myuser \
 --db_pass tao \
+--file_path /var/data \
 --module_namespace http://sample/first.rdf \
 --module_url http://myurl \
 --user_login admin \
@@ -34,9 +35,9 @@ sudo -u www-data php tao/scripts/taoInstall.php \
 |                  | --db_driver         | Target available sgbd : pdo_pgsql, pdo_mysql, pdo_sqlsrv, pdo_oci. |
 |                  | --db_host           | Database location. |
 |                  | --db_name           | The Database name corresponds to the Module name. |
-| Optional         | --db_pass           | Password to access the database. |
 | Required         | --db_user           | Login to access the database. |
-|                  | --file_path\|-f     | Path to where files should be stored. |
+| Optional         | --db_pass           | Password to access the database. |
+| Required         | --file_path\|-f     | Path to where files should be stored. |
 |                  | --timezone\|-t      | Timezone of the install. |
 |                  | --install_sent      | |
 |                  | --module_lang\|-l   | The default language will be used when the language parameters are not specified for the graphical interface and the data. |
@@ -49,3 +50,5 @@ sudo -u www-data php tao/scripts/taoInstall.php \
 |                  | --instance_name\|-n | The name of the instance to install. |
 |                  | --extensions\|-e    | Comma-separated list of extensions to install. |
 |                  | --verbose\|-v       | Verbose mode. |
+|                  | --operated_by_name  | Name of the organization operating the system. |
+|                  | --operated_by_email | Email of the organization operating the system. |
