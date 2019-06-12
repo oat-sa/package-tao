@@ -42,6 +42,7 @@
 	"homepage" : "http://www.taotesting.com",
 	"license" : "GPL-2.0",
 	"require" : {
+		"php" : "^7.1",
 		"oat-sa/generis" : "dev-develop",
 		"oat-sa/tao-core" : "dev-develop",
 		"oat-sa/extension-tao-community" : "dev-develop",
