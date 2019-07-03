@@ -35,7 +35,7 @@ sudo -u www-data php tao/scripts/taoInstall.php \
 |                  | --db_host           | Database location. |
 |                  | --db_name           | The Database name corresponds to the Module name. |
 | Required         | --db_user           | Login to access the database. |
-| Optional         | --db_pass           | Password to access the database. |
+|                  | --db_pass           | Password to access the database. |
 |                  | --file_path\|-f     | Path to where files should be stored. |
 |                  | --timezone\|-t      | Timezone of the install. |
 |                  | --install_sent      | |
