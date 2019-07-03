@@ -31,10 +31,10 @@ sudo -u www-data php tao/scripts/taoInstall.php \
 
 | Required | Parameter           | Description |
 | -------- | ------------------- | ----------- |
-|          | --db_driver         | Target available sgbd : pdo_pgsql, pdo_mysql, pdo_sqlsrv, pdo_oci. |
-|          | --db_host           | Database location. |
-|          | --db_name           | The Database name corresponds to the Module name. |
-| Required | --db_user           | Login to access the database. |
+| Required | --db_driver         | Target available sgbd : pdo_pgsql, pdo_mysql, pdo_sqlsrv, pdo_oci. |
+| Required | --db_host           | Database location. |
+| Required | --db_name           | The Database name corresponds to the Module name. |
+|          | --db_user           | Login to access the database. |
 |          | --db_pass           | Password to access the database. |
 |          | --file_path\|-f     | Path to where files should be stored. |
 |          | --timezone\|-t      | Timezone of the install. |
