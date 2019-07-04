@@ -1,31 +1,31 @@
 # What's new in TAO 3.3?
 
 ## General BackOffice
-- Added "Move to" and "Copy to" functionality to Items and Tests
+- Added _Move to_ and _Copy to_ functionality to Items and Tests
 - Moved custom properties editing to Manage Schema
 - Updated and added languages provided by Community Members, e.g. Dutch
 
 ## BackOffice Item Authoring
 - Added table editing in item content
-- Improved media (re)sizing functionality
-- Added tooltip options for providing glossary (ARIA describedby)
-- Added "Language" setting on item content for instruction for (external) text-to-speech tools
+- Improved _media (re)sizing_ functionality
+- Added _tooltip options_ for providing glossary (ARIA describedby)
+- Added _Language_ setting on item content for instruction for (external) _text-to-speech_ tools
 - The Translate feature will be hidden if data-language is locked 
 
 ## BackOffice Test Authoring
-- Added "Publish" action for quick delivery creation
-- New item selection tool on test-editor for easy searching and filtering of items to insert
-- You can now use scoring variables for test level feedback in Rubric Blocks
+- Added _Publish_ action for quick delivery creation
+- New _item selection tool_ in Test Authoring for easy searching and filtering of items to insert
+- You can now use _scoring variables_ for test level feedback in Rubric Blocks
 
 ## BackOffice Results Management
-- Export to CSV of entire tree structure
+- Export to _CSV_ of entire tree structure
 - Optional inclusion of delivery and test-taker metadata in CSV export
-- The platform now allows LTI launch of item review screen
+- The platform now allows _LTI launch of item review screen_
 
 ## Test Taker Experience
 - Added keyboard control on new test-runner
-- Added Security plugins: light lock-down (forced full-screen)
-- Color contrast tool available by default for accessibility
+- Added _Security plugins_: light lock-down (forced full-screen)
+- _Color contrast_ tool available by default for accessibility
 - You'll now receive a warning on submitting items in a linear test
 - You can now preserve highlighter data as part of result data
 
@@ -35,17 +35,17 @@
 - REST API to manage classes 
 
 ## General Performance & Experience 
-- Implemented task queue for additional longer running operations, such as import/export 
-- Implemented task queue: You can now cancel tasks before they are executed
-- Implemented task queue: You can now directly access resources on task completion
-- Implemented security override on LTI test launch
-- Implemented media sizer improvements to resize and reset images 
-- Implemented test runner optimisations
+- Implemented _task queue_ for additional longer running operations, such as import/export 
+- Task queue: You can now _cancel tasks_ before they are executed
+- Task queue: You can now _directly access resources_ on task completion
+- Security override on LTI test launch
+- _Media sizer improvements_ to resize and reset images 
+- _Test runner_ optimisations
 - Many bugfixes and security patches
 
 
 ## User and Administrator Guides
 
-The latest version can be found at:
+The latest versions can be found at:
 - [User Guide](https://userguide.taotesting.com)
 - [Administrator Guide](https://adminguide.taotesting.com)
