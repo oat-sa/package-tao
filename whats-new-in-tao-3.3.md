@@ -7,7 +7,7 @@
 
 ## BackOffice Item Authoring
 - Added table editing in item content
-- Improved _media (re)sizing_ functionality
+- Improved _media sizing_ functionality
 - Added _tooltip options_ for providing glossary (ARIA describedby)
 - Added _Language_ setting on item content for instruction for (external) _text-to-speech_ tools
 - The Translate feature will be hidden if data-language is locked 
