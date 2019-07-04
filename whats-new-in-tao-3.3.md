@@ -49,4 +49,5 @@ This allows you to create _LaTeX Expressions_ with a visual editor.
 Available for _Order Interaction_, _Associate Interaction_, _Gap Match Interaction_, and _Graphic Gap Match Interaction_
 
 ## Updated User Guide
-The latest version of the User Guide is available at https://userguide.taotesting.com/3.2
+
+The latest version of the User Guide is available at https://userguide.taotesting.com, the Administrator Guide can be found at https://adminguide.taotesting.com.
