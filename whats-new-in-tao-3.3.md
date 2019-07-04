@@ -24,9 +24,7 @@
 
 ## Test Taker Experience
 - Added keyboard control on new test-runner
-- Added _Security plugins_: light lock-down (forced full-screen)
-- _Color contrast_ tool available by default for accessibility
-- You'll now receive a warning on submitting items in a linear test
+- You will now receive a warning on submitting items in a linear test
 - You can now preserve highlighter data as part of result data
 
 ## New API calls 
