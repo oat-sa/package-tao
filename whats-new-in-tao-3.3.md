@@ -48,6 +48,8 @@ This allows you to create _LaTeX Expressions_ with a visual editor.
 - **Drag & Drop Functionality**
 Available for _Order Interaction_, _Associate Interaction_, _Gap Match Interaction_, and _Graphic Gap Match Interaction_
 
-## Updated User Guide
+## User and Administrator Guides
 
-The latest version of the User Guide is available at https://userguide.taotesting.com, the Administrator Guide can be found at https://adminguide.taotesting.com.
+The latest version can be found at:
+- [User Guide](https://userguide.taotesting.com)
+- [Administrator Guide](https://adminguide.taotesting.com)
