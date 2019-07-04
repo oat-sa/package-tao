@@ -1,52 +1,26 @@
 # What's new in TAO 3.3?
 
-To be updated... 
+## New API calls 
+- REST API call to delete deliveries 
+- REST API to list deliveries 
+- REST API to manage classes 
 
-## Test-Taker Tools
-The Test-taker Tools comprise a set of tools designed to aid the Test-taker in various ways during the tests.
-- **Calculator**
-Provide the test-taker with a basic calculator.
-- **Answer Eliminator**
-Allow the test-taker to eliminate answers in some interactions. 
-- **Answer Masking**
-Allow the test-taker to mask and unmask answers in choice interactions.
-- **Area Masking**
-Allow the test-taker to mask parts of the item with a movable mask.
-- **Highlighter**
-Allow the test-taker to highlight parts of the text in an item.
-- **Line Reader**
-Allow the test-taker to visually isolate a line of text.
-- **Magnifier**
-Provides the test-taker with a movable magnifier tool.
-- **Zoom Tool**
-Allow the test-taker to zoom in on an area of an item.
+## Test Taker Experience
+- You'll now receive a warning on submitting items in a linear test
+- You can now preserve highlighter data as part of result data
 
-You can add or remove all these tools during **Test Authoring**. They are accessible through the new **Test Runner Toolbar** and can be launched with **Keyboard Shortcuts**.
+## Authoring Experience
+- You can now cancel tasks before they are executed
+- You can now directly access resources on task completion
+- The platform now allows LTI launch of item review screen
+- The Translate feature will be hidden if data-language is locked 
 
-## Portable Custom Interactions (PCI)
-- **Tool Tips on Text Reader Interaction**
-Show text hints text when the test-taker hovers the mouse over a word.
+## Performance Experience 
+- Implemented task queue for additional longer running operations, such as import/export 
+- Implemented security override on LTI test launch
+- Implemented media sizer improvements to resize and reset images 
+- Implemented test runner optimisations
 
-
-## Proctoring Capabilities
-- **Granting Extra Time**
-Grant more time to one or more test-takers directly from the Proctor’s interface, even if the assessment has already begun or has been completed.
-- **Ability to Launch Proctoring Capability via LTI**
-Interconnect with other education-related tools in a secure manner.
-
-##  Improved Scoring Capabilities
-- **Advanced Test Scoring**
-The possibility to configure the _Total Score_, the _Cutoff Score_, as well as scoring _Categories_.
-- **Weighted Scoring**
-Define the weight of an item on a test, as a certain item could be twice as important as another in specific test
-
-## Other improvements
-- **Support for QTI 2.2**
-TAO 3.2 now supports the import and export of tests and items in QTI 2.2 format.
-- **WYSIWYG Math Editor in Item Authoring**
-This allows you to create _LaTeX Expressions_ with a visual editor.
-- **Drag & Drop Functionality**
-Available for _Order Interaction_, _Associate Interaction_, _Gap Match Interaction_, and _Graphic Gap Match Interaction_
 
 ## User and Administrator Guides
 
