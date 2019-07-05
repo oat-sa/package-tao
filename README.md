@@ -2,10 +2,6 @@
 
 ![TAO Logo](https://github.com/oat-sa/taohub-developer-guide/raw/master/resources/tao-logo.png)
 
-![GitHub](https://img.shields.io/github/license/oat-sa/package-tao.svg)
-![GitHub release](https://img.shields.io/github/release/oat-sa/package-tao.svg)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/oat-sa/package-tao.svg)
-
 >TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online – in any language or subject matter.
 
 TAO ("Computer-Based Testing" or *Testing Assisté par Ordinateur* in French), was created by the University of Luxembourg and is now maintained primarily by [Open Assessment Technologies (OAT)](http://www.taotesting.com/).
