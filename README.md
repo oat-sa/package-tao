@@ -10,7 +10,7 @@ TAO is the first commercial-grade Open Source assessment development software on
 
 ## Installation
 
-For a detailed documentation of the installation or upgrade process please visit our Administrator Guide:
+For a detailed documentation of the installation process please visit our Administrator Guide:
 
 - [Prerequisites](https://adminguide.taotesting.com/installation-and-upgrade/prerequisites)
 - [Centos, Redhat and Fedora](https://adminguide.taotesting.com/installation-and-upgrade/centos-redhat-and-fedora)
