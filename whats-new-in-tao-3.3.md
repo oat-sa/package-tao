@@ -23,13 +23,12 @@
 ## Test Taker Experience
 - Added keyboard control on new test-runner
 - You will now receive a warning on submitting items in a linear test
-- You can now preserve _highlighter_ data as part of result data
 - You can now use three different types of calculators, _4-functions_, _BODMAS_ or _scientific_ 
 
 ## New API calls 
-- REST API call to delete deliveries 
-- REST API to list deliveries 
-- REST API to manage classes 
+- REST API call to _delete deliveries_ 
+- REST API call to _list deliveries_ 
+- REST API call to _manage classes_ 
 
 ## General Performance & Experience 
 - Implemented _task queue_ for additional longer running operations, such as import/export 
