@@ -38,8 +38,10 @@
 - _Test runner_ optimizations
 - Many bugfixes and security patches
 
-## User and Administrator Guides
+## TAO Resources
 
-The latest versions can be found at:
-- [User Guide](https://userguide.taotesting.com)
 - [Administrator Guide](https://adminguide.taotesting.com)
+- [User Guide](https://userguide.taotesting.com)
+- [Technical Documentation](https://hub.taotesting.com)
+- [Forum](https://forum.taotesting.com)
+- [OAT website](https://www.taotesting.com)
