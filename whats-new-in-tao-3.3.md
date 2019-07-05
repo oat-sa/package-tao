@@ -19,13 +19,12 @@
 ## BackOffice Results Management
 - Export to _CSV_ of the entire tree structure
 - Optional inclusion of delivery and test-taker metadata in CSV export
-- The platform now allows _LTI launch of item review screen_
 
 ## Test Taker Experience
 - Added keyboard control on new test-runner
 - You will now receive a warning on submitting items in a linear test
-- You can now preserve highlighter data as part of result data
-- You can now use three different types of calculators, 4-functions, BODMAS or scientific 
+- You can now preserve _highlighter_ data as part of result data
+- You can now use three different types of calculators, _4-functions_, _BODMAS_ or _scientific_ 
 
 ## New API calls 
 - REST API call to delete deliveries 
