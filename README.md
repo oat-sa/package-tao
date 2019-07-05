@@ -10,13 +10,19 @@ TAO is the first commercial-grade Open Source assessment development software on
 
 ## Installation
 
-For a detailed documentation of the installation or upfgrade process please visit [our Administrator Guide](https://adminguide.taotesting.com/3.3/installation-and-upgrade/prerequisites).
+For a detailed documentation of the installation or upgrade process please visit our Administrator Guide:
 
-## Documentation
+- [Prerequisites](https://adminguide.taotesting.com/installation-and-upgrade/prerequisites)
+- [Centos, Redhat and Fedora](https://adminguide.taotesting.com/installation-and-upgrade/centos-redhat-and-fedora)
+- [MacOS Mojave](https://adminguide.taotesting.com/installation-and-upgrade/macos)
+- [Ubuntu and Debian](https://adminguide.taotesting.com/installation-and-upgrade/ubuntu-and-debian)
+- [Windows](https://adminguide.taotesting.com/installation-and-upgrade/windows)
+- [Web Installer](https://adminguide.taotesting.com/installation-and-upgrade/web-installer)
 
-- [User Guide](https://userguide.taotesting.com)
+## Other TAO Resources
+
 - [Administrator Guide](https://adminguide.taotesting.com)
+- [User Guide](https://userguide.taotesting.com)
 - [Technical Documentation](https://hub.taotesting.com)
-
-
-Visit our website https://www.taotesting.com
+- [Forum](https://forum.taotesting.com)
+- [OAT website](https://www.taotesting.com)
