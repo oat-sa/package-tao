@@ -1,5 +1,9 @@
-package-tao
-===========
+# package-tao
+
+![TAO Logo](https://github.com/oat-sa/taohub-developer-guide/raw/master/resources/tao-logo.png)
+
+![GitHub](https://img.shields.io/github/license/oat-sa/package-tao.svg)
+![GitHub release](https://img.shields.io/github/release/oat-sa/package-tao.svg)
 
 ## What is TAO?
 
