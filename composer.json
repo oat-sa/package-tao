@@ -1,8 +1,6 @@
 {
     "name": "oat-sa/tao",
     "license": "GPL-2.0",
-    "require-dev": {
-    },
     "support": {
         "issues": "http://forge.taotesting.com",
         "forum": "http://forum.taotesting.com"
@@ -48,39 +46,37 @@
     ],
     "repositories": [
         {
-            "type" : "vcs",
-            "url" : "https://github.com/oat-sa/ZendSearch"
-         }
+            "type": "vcs",
+            "url": "https://github.com/oat-sa/ZendSearch"
+        }
     ],
     "minimum-stability": "dev",
     "homepage": "http://www.taotesting.com",
     "require": {
-        "oat-sa/extension-tao-funcacl" : "master" ,
-        "oat-sa/generis" : "master" ,
-        "oat-sa/extension-tao-ltideliveryprovider" : "master" ,
-        "oat-sa/extension-tao-itemqti-pci" : "master" ,
-        "oat-sa/extension-tao-itemqti-pic" : "master" ,
-        "oat-sa/tao-core" : "master" ,
-        "oat-sa/extension-tao-backoffice" : "master" ,
-        "oat-sa/extension-tao-community" : "master" ,
-        "oat-sa/extension-tao-dac-simple" : "master" ,
-        "oat-sa/extension-tao-delivery" : "master" ,
-        "oat-sa/extension-tao-delivery-rdf" : "dev-develop" ,
-        "oat-sa/extension-tao-group" : "master" ,
-        "oat-sa/extension-tao-item" : "master" ,
-        "oat-sa/extension-tao-lti" : "master" ,
-        "oat-sa/extension-tao-outcomelti" : "master" ,
-        "oat-sa/extension-tao-itemhtml" : "master" ,
-        "oat-sa/extension-tao-mediamanager" : "master",
-        "oat-sa/extension-tao-outcome" : "master" ,
-        "oat-sa/extension-tao-outcomerds" : "master" ,
-        "oat-sa/extension-tao-outcomeui" : "master" ,
-        "oat-sa/extension-tao-itemqti" : "master" ,
-        "oat-sa/extension-tao-testqti" : "master" ,
-        "oat-sa/extension-tao-testlinear" : "master" ,
-        "oat-sa/extension-tao-test" : "master" ,
-        "oat-sa/extension-tao-testtaker" : "master" ,
+        "oat-sa/extension-tao-funcacl": "master",
+        "oat-sa/generis": "master",
+        "oat-sa/extension-tao-ltideliveryprovider": "master",
+        "oat-sa/extension-tao-itemqti-pci": "master",
+        "oat-sa/extension-tao-itemqti-pic": "master",
+        "oat-sa/tao-core": "master",
+        "oat-sa/extension-tao-backoffice": "master",
+        "oat-sa/extension-tao-community": "master",
+        "oat-sa/extension-tao-dac-simple": "master",
+        "oat-sa/extension-tao-delivery": "master",
+        "oat-sa/extension-tao-delivery-rdf": "dev-develop",
+        "oat-sa/extension-tao-group": "master",
+        "oat-sa/extension-tao-item": "master",
+        "oat-sa/extension-tao-lti": "master",
+        "oat-sa/extension-tao-outcomelti": "master",
+        "oat-sa/extension-tao-mediamanager": "master",
+        "oat-sa/extension-tao-outcome": "master",
+        "oat-sa/extension-tao-outcomerds": "master",
+        "oat-sa/extension-tao-outcomeui": "master",
+        "oat-sa/extension-tao-itemqti": "master",
+        "oat-sa/extension-tao-testqti": "master",
+        "oat-sa/extension-tao-test": "master",
+        "oat-sa/extension-tao-testtaker": "master",
         "oat-sa/extension-tao-task-queue": "master"
-     },
-    "description": "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online \u2013 in any language or subject matter."
+    },
+    "description": "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online – in any language or subject matter."
 }
