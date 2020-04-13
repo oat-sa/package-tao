@@ -76,7 +76,7 @@
         "oat-sa/extension-tao-testqti-previewer": "dev-develop"
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.4@dev",
+        "phpunit/phpunit": "^8.5",
         "sebastian/global-state": "~1.0@dev",
         "mikey179/vfsStream": "1.4.0",
         "oat-sa/tao-build": "dev-develop"
