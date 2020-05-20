@@ -26,7 +26,7 @@ if(!tao_install_utils_System::isTAOInstalled()){
 	
 } else {
     
-    $bootStrap = new oat\tao\model\mvc\Bootstrap(__DIR__.'/config/generis.conf.php');
+    $bootStrap = new oat\tao\model\mvc\Bootstrap('config/generis.conf.php');
     $bootStrap->start();
     $bootStrap->dispatch();
         
