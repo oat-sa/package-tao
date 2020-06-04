@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4600f97bf640e71cf5ac951a0eade52f",
+    "content-hash": "2c629f4e4aba2e31f69f9d955f7d6e78",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -2022,48 +2022,6 @@
                 "computer-based-assessment"
             ],
             "time": "2020-01-31T09:35:37+00:00"
-        },
-        {
-            "name": "oat-sa/extension-tao-itemqti-pic",
-            "version": "v5.3.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/oat-sa/extension-tao-itemqti-pic.git",
-                "reference": "31c0cebabb48d4f37e570d42183f6b168f654799"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti-pic/zipball/31c0cebabb48d4f37e570d42183f6b168f654799",
-                "reference": "31c0cebabb48d4f37e570d42183f6b168f654799",
-                "shasum": ""
-            },
-            "require": {
-                "oat-sa/oatbox-extension-installer": "~1.1||dev-master"
-            },
-            "type": "tao-extension",
-            "extra": {
-                "tao-extension-name": "qtiItemPic"
-            },
-            "autoload": {
-                "psr-4": {
-                    "oat\\qtiItemPic\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-only"
-            ],
-            "authors": [
-                {
-                    "name": "Open Assessment Technologies"
-                }
-            ],
-            "homepage": "http://www.taotesting.com",
-            "keywords": [
-                "TAO",
-                "computer-based-assessment"
-            ],
-            "time": "2019-08-02T10:22:38+00:00"
         },
         {
             "name": "oat-sa/extension-tao-lti",
