@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04178b4e8a20a4c11a6c7498d8f61069",
+    "content-hash": "88c19b9ca68b3bac257fdbe22598713c",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -1900,16 +1900,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v23.3.0",
+            "version": "v23.3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "0612d5a9617a0fdfeea6d48ed55f0d7924ab7c3b"
+                "reference": "ee7059c18e9196084647e655bdceb298fab4e7f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/0612d5a9617a0fdfeea6d48ed55f0d7924ab7c3b",
-                "reference": "0612d5a9617a0fdfeea6d48ed55f0d7924ab7c3b",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/ee7059c18e9196084647e655bdceb298fab4e7f9",
+                "reference": "ee7059c18e9196084647e655bdceb298fab4e7f9",
                 "shasum": ""
             },
             "require": {
@@ -1979,7 +1979,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-01-31T10:05:19+00:00"
+            "time": "2020-06-19T18:06:36+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -2813,16 +2813,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v35.9.0",
+            "version": "v35.9.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "39fe10b229bb5fdc686aabb41f0f6c6c4bb6de6a"
+                "reference": "d5e0a8d6bf68896a14f318186458fda67f9a37bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/39fe10b229bb5fdc686aabb41f0f6c6c4bb6de6a",
-                "reference": "39fe10b229bb5fdc686aabb41f0f6c6c4bb6de6a",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/d5e0a8d6bf68896a14f318186458fda67f9a37bd",
+                "reference": "d5e0a8d6bf68896a14f318186458fda67f9a37bd",
                 "shasum": ""
             },
             "require": {
@@ -2894,7 +2894,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-01-31T09:39:19+00:00"
+            "time": "2020-06-19T18:01:40+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
