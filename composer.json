@@ -73,13 +73,20 @@
         "oat-sa/extension-tao-proctoring": "dev-develop",
         "oat-sa/extension-tao-workspace": "dev-develop",
         "oat-sa/extension-tao-delivery-schedule": "dev-develop",
-        "oat-sa/extension-tao-testqti-previewer": "dev-develop"
+        "oat-sa/extension-tao-testqti-previewer": "dev-develop",
+        "oat-sa/extension-tao-newmeridian-pci": "dev-Feature/CNMC-41"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5",
         "sebastian/global-state": "^3.0.0",
-        "mikey179/vfsStream": "1.4.0",
+        "mikey179/vfsstream": "1.4.0",
         "oat-sa/tao-build": "dev-develop"
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "nmcPci"
+        }
+    ]
 }
