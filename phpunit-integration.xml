@@ -1,0 +1,79 @@
+<phpunit bootstrap="tests/bootstrap/bootstrap.php">
+    <testsuites>
+        <testsuite name="generis">
+            <directory>generis/test/integration</directory>
+        </testsuite>
+        <testsuite name="ltiDeliveryProvider">
+            <directory>ltiDeliveryProvider/test/integration</directory>
+        </testsuite>
+        <testsuite name="qtiItemPci">
+            <directory>qtiItemPci/test/integration</directory>
+        </testsuite>
+        <testsuite name="qtiItemPic">
+            <directory>qtiItemPic/test/integration</directory>
+        </testsuite>
+        <testsuite name="tao">
+            <directory>tao/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoClientDiagnostic">
+            <directory>taoClientDiagnostic/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoDelivery">
+            <directory>taoDelivery/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoDeliveryRdf">
+            <directory>taoDeliveryRdf/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoDeliverySchedule">
+            <directory>taoDeliverySchedule/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoGroups">
+            <directory>taoGroups/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoItems">
+            <directory>taoItems/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoLti">
+            <directory>taoLti/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoMediaManager">
+            <directory>taoMediaManager/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoOpenWebItem">
+            <directory>taoOpenWebItem/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoOutcomeRds">
+            <directory>taoOutcomeRds/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoOutcomeUi">
+            <directory>taoOutcomeUi/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoProctoring">
+            <directory>taoProctoring/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoQtiItem">
+            <directory>taoQtiItem/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoQtiTest">
+            <directory>taoQtiTest/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoResultServer">
+            <directory>taoResultServer/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoRevision">
+            <directory>taoRevision/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoTestCenter">
+            <directory>taoTestCenter/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoTestLinear">
+            <directory>taoTestLinear/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoTests">
+            <directory>taoTests/test/integration</directory>
+        </testsuite>
+        <testsuite name="taoTestTaker">
+            <directory>taoTestTaker/test/integration</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

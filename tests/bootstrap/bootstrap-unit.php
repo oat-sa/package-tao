@@ -23,7 +23,7 @@
  *
  */
 
-require_once __DIR__ . '/bootstrap-unit.php';
+$root_dir = __DIR__ . '/../../';
 
-//load config
-common_Config::load();
+// autoloader
+require_once $root_dir.'vendor/autoload.php';
