@@ -3,7 +3,7 @@ FROM php:7.2-fpm
 RUN usermod -u 1000 www-data
 RUN usermod -G staff www-data
 
-RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libpq-dev zip unzip sudo wget sqlite3 libsqlite3-dev && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libpq-dev zip unzip sudo wget sqlite3 libsqlite3-dev libzstd-dev && rm -rf /var/lib/apt/lists/*
 
 RUN docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr
 RUN docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
