@@ -15,19 +15,19 @@ TAO is the first commercial-grade Open Source assessment development software on
 
 For a detailed documentation of the installation process please visit our Administrator Guide:
 
-- [Prerequisites](https://adminguide.taotesting.com/installation-and-upgrade/prerequisites)
-- [Centos, Redhat and Fedora](https://adminguide.taotesting.com/installation-and-upgrade/centos-redhat-and-fedora)
-- [MacOS Mojave](https://adminguide.taotesting.com/installation-and-upgrade/macos)
-- [Ubuntu and Debian](https://adminguide.taotesting.com/installation-and-upgrade/ubuntu-and-debian)
-- [Windows](https://adminguide.taotesting.com/installation-and-upgrade/windows)
-- [Web Installer](https://adminguide.taotesting.com/installation-and-upgrade/web-installer)
+- [Prerequisites](https://www.taotesting.com/user-guide/installation-and-upgrade/prerequisites/)
+- [Centos, Redhat and Fedora](https://www.taotesting.com/user-guide/installation-and-upgrade/centos-redhat-and-fedora/)
+- [MacOS](https://www.taotesting.com/user-guide/installation-and-upgrade/macos/)
+- [Ubuntu and Debian](https://www.taotesting.com/user-guide/installation-and-upgrade/ubuntu-and-debian/)
+- [Windows](https://www.taotesting.com/user-guide/installation-and-upgrade/windows/)
+- [Web Installer](https://www.taotesting.com/user-guide/installation-and-upgrade/web-installer/)
 
 ## Other TAO Resources
 
-- [Administrator Guide](https://adminguide.taotesting.com)
-- [User Guide](https://userguide.taotesting.com)
-- [Technical Documentation](https://hub.taotesting.com)
-- [Forum](https://forum.taotesting.com)
+- [Administrator Guide](https://www.taotesting.com/user-guide/managing-tao/introduction-to-managing-tao/)
+- [User Guide](https://www.taotesting.com/user-guide/)
+- [Technical Articles](https://github.com/oat-sa/taohub-articles)
+- [User Forum](https://www.taotesting.com/forum/)
 - [OAT website](https://www.taotesting.com)
 
 ## Quickstart
@@ -36,7 +36,7 @@ Clone repository
 
     git clone https://github.com/oat-sa/package-tao.git
     
-Install via composer missing library and extensions
+Install via composer missing library and extensions.
 
     composer install
     
