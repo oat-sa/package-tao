@@ -17,7 +17,7 @@ For a detailed documentation of the installation process please visit our Admini
 
 - [Prerequisites](https://www.taotesting.com/user-guide/installation-and-upgrade/prerequisites/)
 - [Centos, Redhat and Fedora](https://www.taotesting.com/user-guide/installation-and-upgrade/centos-redhat-and-fedora/)
-- [MacOS Mojave](https://www.taotesting.com/user-guide/installation-and-upgrade/macos/)
+- [MacOS](https://www.taotesting.com/user-guide/installation-and-upgrade/macos/)
 - [Ubuntu and Debian](https://www.taotesting.com/user-guide/installation-and-upgrade/ubuntu-and-debian/)
 - [Windows](https://www.taotesting.com/user-guide/installation-and-upgrade/windows/)
 - [Web Installer](https://www.taotesting.com/user-guide/installation-and-upgrade/web-installer/)
@@ -25,9 +25,9 @@ For a detailed documentation of the installation process please visit our Admini
 ## Other TAO Resources
 
 - [Administrator Guide](https://www.taotesting.com/user-guide/managing-tao/introduction-to-managing-tao/)
-- [User Guide](https://userguide.taotesting.com)
-- [Technical Documentation](https://hub.taotesting.com)
-- [Forum](https://forum.taotesting.com)
+- [User Guide](https://www.taotesting.com/user-guide/)
+- [Technical Articles](https://github.com/oat-sa/taohub-articles)
+- [User Forum](https://www.taotesting.com/forum/)
 - [OAT website](https://www.taotesting.com)
 
 ## Quickstart
