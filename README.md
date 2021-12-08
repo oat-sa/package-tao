@@ -36,9 +36,8 @@ Clone repository
 
     git clone https://github.com/oat-sa/package-tao.git
     
-Install via composer missing library and extensions. Composer version 2 doesn't work so you've to use version 1.
+Install via composer missing library and extensions.
 
-    composer self-update --1
     composer install
     
 Add rw to www-data
