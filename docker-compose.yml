@@ -7,7 +7,7 @@ services:
     networks:
       - tao_network
     ports:
-      - "80:80"
+      - "8085:80"
     volumes_from:
       - tao_phpfpm
     volumes:
