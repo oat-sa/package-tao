@@ -1,6 +1,6 @@
 {
-  "name": "oat-sa/tao-community",
-  "description" : "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online \u2013 in any language or subject matter.",
+  "name": "oat-sa/tao-package",
+  "description": "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online \u2013 in any language or subject matter.",
   "license": "GPL-2.0-only",
   "support": {
     "issues": "http://forge.taotesting.com",
@@ -13,45 +13,17 @@
     }
   ],
   "keywords": [
-    "sprint 121",
-    "tao",
+    "TAO Community - Open Source Assessment Software ",
+    "Tao",
     "oat",
+    "open source",
+    "release 3.5",
     "computer-based-assessment"
   ],
   "homepage": "http://www.taotesting.com",
+  "minimum-stability": "stable",
+  "prefer-stable": true,
   "require": {
-    "oat-sa/generis": "12.6.4",
-    "oat-sa/tao-core": "40.7.3",
-    "oat-sa/extension-tao-community": "7.2.1",
-    "oat-sa/extension-tao-funcacl": "5.3.3.1",
-    "oat-sa/extension-tao-dac-simple": "5.1.2",
-    "oat-sa/extension-tao-testtaker": "7.2.2.1",
-    "oat-sa/extension-tao-group": "6.2.2",
-    "oat-sa/extension-tao-item": "10.2.1",
-    "oat-sa/extension-tao-itemqti": "23.3.1",
-    "oat-sa/extension-tao-itemqti-pci": "6.2.1",
-    "oat-sa/extension-tao-test": "13.4.4.1",
-    "oat-sa/extension-tao-testqti": "35.9.1",
-    "oat-sa/extension-tao-outcome": "10.2.3",
-    "oat-sa/extension-tao-outcomeui": "8.2.3",
-    "oat-sa/extension-tao-outcomerds": "6.3.1",
-    "oat-sa/extension-tao-outcomekeyvalue": "5.4.1",
-    "oat-sa/extension-tao-outcomelti": "3.2.1",
-    "oat-sa/extension-tao-delivery": "14.7.0.1",
-    "oat-sa/extension-tao-lti": "11.3.1",
-    "oat-sa/extension-tao-delivery-rdf": "10.2.3",
-    "oat-sa/extension-tao-ltideliveryprovider": "10.1.4.1",
-    "oat-sa/extension-tao-revision": "7.0.1",
-    "oat-sa/extension-tao-mediamanager": "9.0.2",
-    "oat-sa/extension-pcisample": "2.5.3.1",
-    "oat-sa/extension-tao-backoffice": "4.1.3",
-    "oat-sa/extension-tao-proctoring": "18.2.4",
-    "oat-sa/extension-tao-clientdiag": "7.3.3.1",
-    "oat-sa/extension-tao-eventlog": "2.5.1",
-    "oat-sa/extension-tao-task-queue": "5.0.1",
-    "oat-sa/extension-tao-testqti-previewer": "2.10.2"
-  },
-  "require-dev" : {
-    "phpunit/phpunit" : "~8.5"
+    "oat-sa/tao-community": "2021.11.8"
   }
 }

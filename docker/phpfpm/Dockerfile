@@ -1,11 +1,11 @@
-FROM php:7.2-fpm
+FROM php:7.4-fpm
 
 RUN usermod -u 1000 www-data
 RUN usermod -G staff www-data
 
-RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libpq-dev zip unzip sudo wget sqlite3 libsqlite3-dev libzstd-dev && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libpq-dev libzip-dev zip unzip sudo wget sqlite3 libsqlite3-dev libzstd-dev && rm -rf /var/lib/apt/lists/*
 
-RUN docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr
+RUN docker-php-ext-configure gd --with-jpeg
 RUN docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
 RUN docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql
 RUN docker-php-ext-configure mysqli --with-mysqli=mysqlnd
@@ -19,7 +19,6 @@ RUN docker-php-ext-install pdo && \
     docker-php-ext-install pdo_pgsql && \
     docker-php-ext-install pdo_sqlite && \
     docker-php-ext-install gd && \
-    docker-php-ext-install mbstring && \
     docker-php-ext-install opcache && \
     docker-php-ext-install zip && \
     docker-php-ext-install calendar && \
