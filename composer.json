@@ -1,6 +1,6 @@
 {
   "name": "oat-sa/tao-package",
-  "description": "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online \u2013 in any language or subject matter.",
+  "description": "TAO is an Open Source Assessment platform that empowers you to build, deliver, and share innovative and engaging assessments online \u2013 in any language or subject matter.",
   "license": "GPL-2.0-only",
   "support": {
     "issues": "http://forge.taotesting.com",
@@ -17,13 +17,13 @@
     "Tao",
     "oat",
     "open source",
-    "release 3.5",
+    "release 4.0",
     "computer-based-assessment"
   ],
   "homepage": "http://www.taotesting.com",
   "minimum-stability": "stable",
   "prefer-stable": true,
   "require": {
-    "oat-sa/tao-community": "2021.11.8"
+    "oat-sa/tao-community": "2022.11.6"
   }
 }

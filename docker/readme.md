@@ -2,7 +2,7 @@
 
 
 Ready to use docker set up for working with [package-tao](https://github.com/oat-sa/package-tao)
-- Php-fpm 7.2
+- Php-fpm 8.1
 - Nginx
 - MariaDB
 
@@ -33,7 +33,7 @@ Install can be done via command line interface (CLI), via browser (UI) and with 
 
 ### UI
 
-In order to start the install wizard you should access `http://localhost` on your browser.
+In order to start the installation wizard you should access `http://localhost` on your browser.
 
 Database credentials can be changed in `docker-compose.yml`, default values are these:
  - Database host name: `tao_db`
