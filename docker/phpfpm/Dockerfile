@@ -1,4 +1,4 @@
-FROM php:8.1.0-fpm
+FROM php:8.1.13-fpm
 
 RUN usermod -u 1000 www-data
 RUN usermod -G staff www-data
