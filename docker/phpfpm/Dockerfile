@@ -37,5 +37,10 @@ RUN { \
     echo 'opcache.load_comments=1'; \
 } >> /usr/local/etc/php/conf.d/docker-php-ext-opcache.ini
 
+RUN { \
+    echo 'upload_max_filesize=100M'; \
+    echo 'post_max_size=100M'; \
+} >> /usr/local/etc/php/conf.d/docker-php-core.ini
+
 RUN rm -rf /var/www/html \
     && chmod 0777 /tmp/
