@@ -13,17 +13,18 @@
     }
   ],
   "keywords": [
-    "TAO Community - Open Source Assessment Software ",
+    "TAO Community - Open Source Assessment Software",
     "Tao",
     "oat",
     "open source",
     "release 4.0",
-    "computer-based-assessment"
+    "computer-based-assessment",
+    "oat"
   ],
   "homepage": "http://www.taotesting.com",
   "minimum-stability": "stable",
   "prefer-stable": true,
   "require": {
-    "oat-sa/tao-community": "2022.11.6"
+    "oat-sa/tao-community": "2024.05"
   }
 }
