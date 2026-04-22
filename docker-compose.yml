@@ -11,7 +11,7 @@ services:
       - "--entryPoints.web.address=:80"
     ports:
       - "80:80"
-      - "8080:8080"
+      - "8087:8087"
     networks:
       - tao_network
     volumes:
@@ -39,13 +39,15 @@ services:
     image: local/phpfpm:latest
     build:
       context: ./docker/phpfpm
-    entrypoint: ["echo", "Base image only"]
+    entrypoint: [ "echo", "Base image only" ]
 
   tao_phpfpm:
     container_name: tao_phpfpm
     build:
       context: .
       dockerfile: ./docker/app/Dockerfile
+    environment:
+      FEATURE_FLAG_TABULAR_IMPORT_ENABLED: "true"
     expose:
       - 9000
     networks:
