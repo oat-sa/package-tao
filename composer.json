@@ -23,7 +23,29 @@
   "homepage": "http://www.taotesting.com",
   "minimum-stability": "stable",
   "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/joe-niland/taoExtensionTest.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/sydneysoftwaredev/taoExtensionExcelImport.git"
+    }
+  ],
   "require": {
-    "oat-sa/tao-community": "2022.11.6"
+    "oat-sa/tao-community": "2024.09.11",
+    "joe-niland/tao-extension-test": "dev-main",
+    "sydneysoftwaredev/tao-extension-excel-import": "dev-main"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": true,
+      "oat-sa/oatbox-extension-installer": true,
+      "oat-sa/composer-npm-bridge": true
+    }
+  },
+  "require-dev": {
+    "oat-sa/extension-tao-devtools": "^8.10"
   }
 }
