@@ -27,11 +27,16 @@
     {
       "type": "git",
       "url": "https://github.com/joe-niland/taoExtensionTest.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/sydneysoftwaredev/taoExtensionExcelImport.git"
     }
   ],
   "require": {
     "oat-sa/tao-community": "2024.09.11",
-    "joe-niland/tao-extension-test": "dev-main"
+    "joe-niland/tao-extension-test": "dev-main",
+    "sydneysoftwaredev/tao-extension-excel-import": "dev-main"
   },
   "config": {
     "allow-plugins": {
