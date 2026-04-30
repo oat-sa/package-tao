@@ -1,34 +1,11 @@
 services:
-  # to allow access via local DNS
-  traefik:
-    image: "traefik:v3.0"
-    container_name: "traefik"
-    command:
-      #- "--log.level=DEBUG"
-      - "--api.insecure=true"
-      - "--providers.docker=true"
-      - "--providers.docker.exposedbydefault=false"
-      - "--entryPoints.web.address=:80"
-    ports:
-      - "80:80"
-      - "8087:8087"
-    networks:
-      - tao_network
-    volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock:ro"
-
   tao_nginx:
     container_name: tao_nginx
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.whoami.rule=Host(`tao.localhost`)"
-      - "traefik.http.services.mywhoami.loadbalancer.server.port=80"
-      - "traefik.http.routers.whoami.entrypoints=web"
     image: nginx:stable
     networks:
       - tao_network
     ports:
-      - "8085:80"
+      - "${TAO_PORT:-8089}:80"
     volumes_from:
       - tao_phpfpm
     volumes:
@@ -48,6 +25,7 @@ services:
       dockerfile: ./docker/app/Dockerfile
     environment:
       FEATURE_FLAG_TABULAR_IMPORT_ENABLED: "true"
+      XDEBUG_MODE: "off"
     expose:
       - 9000
     networks:
